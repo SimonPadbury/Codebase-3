@@ -1,0 +1,10 @@
+// CODEBASE
+// ========
+
+// Layout styles
+// -------------
+// Import either `layour-grid` but not both.
+// (However, both will be included in this repository for use in the documentation.)
+
+@import 'layout/grid-classic';
+@import 'layout/grid-includers';
