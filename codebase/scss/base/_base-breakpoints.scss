@@ -1,0 +1,64 @@
+// RESPONSIVE BREAKPOINTS
+// ======================
+
+// Variables
+// ---------
+
+$breakpoint-small:      768px;
+$breakpoint-medium:     1024px;
+$breakpoint-large:      1200px;
+
+// Mixins
+// ------
+
+// Tiny
+
+@mixin breakpoint-tiny-only {
+	@media (max-width: #{$breakpoint-small - 1px}) {
+		@content
+	}
+}
+
+// Small
+
+@mixin breakpoint-small-down {
+  @media (max-width: #{$breakpoint-medium - 1px}) {
+    @content
+  }
+}
+@mixin breakpoint-small-only {
+  @media (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-medium - 1px}) {
+    @content
+  }
+}
+@mixin breakpoint-small-up {
+  @media (min-width: #{$breakpoint-small}) {
+    @content
+  }
+}
+
+// Medium
+
+@mixin breakpoint-medium-down {
+  @media (max-width: #{$breakpoint-large - 1px}) {
+    @content
+  }
+}
+@mixin breakpoint-medium-only {
+  @media (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1px}) {
+    @content
+  }
+}
+@mixin breakpoint-medium-up {
+  @media (min-width: #{$breakpoint-medium}) {
+    @content
+  }
+}
+
+// Large
+
+@mixin breakpoint-large-up {
+  @media (min-width: #{$breakpoint-large}) {
+    @content
+  }
+}
