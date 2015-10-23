@@ -1,10 +1,16 @@
 // CODEBASE
 // ========
 
-// Layout styles
+// Base Styles
+// -----------
+
+@import 'base/base-breakpoints';
+@import 'base/base-mixins';
+
+// Layout Styles
 // -------------
-// Import either `layour-grid` but not both.
+// Import either `layout-grid-classic` or `layout-grid-inclluders` but not both - your choice.
 // (However, both will be included in this repository for use in the documentation.)
 
-@import 'layout/grid-classic';
-@import 'layout/grid-includers';
+@import 'layout/layout-grid-classic';
+@import 'layout/layout-grid-includers';
