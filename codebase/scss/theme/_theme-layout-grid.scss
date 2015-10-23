@@ -1,0 +1,53 @@
+// EXAMPLE THEME GRID
+// ==================
+
+// Grid Includers Build Demo
+// -------------------------
+
+@mixin grid-includers-demo {
+  background: #fff;
+  > * {
+    background: #ddd;
+    box-shadow: inset 0 0 1px #888;
+  }
+}
+
+.grid-includers-wrapper {
+  @include grid;
+  @include grid-gutter;
+  @include grid-demo;    
+}
+
+.grid-includers-article {
+  @include column;
+  @include breakpoint-small-up {
+    @include column-span(8);
+    @include column-push(4);
+  }
+}
+
+.grid-includers-aside {
+    @include column;
+    @include breakpoint-small-up {
+      @include column-span(4);
+      @include column-pull(8);
+  }
+}
+
+.grid-includers-centered {
+  @include column;
+  @include breakpoint-medium-up {
+    @include column-centered(7);
+  }
+}
+
+.grid-includers-nested {
+  @include grid;
+  @include grid-gutter;
+  @include grid-nested;
+  @include grid-demo;    
+  div {
+    @include column;
+    @include column-span(4);
+  }
+}
