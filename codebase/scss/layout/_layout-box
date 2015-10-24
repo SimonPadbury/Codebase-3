@@ -1,0 +1,51 @@
+// BOX OBJECT
+// ==========
+// (a.k.a. media object)
+
+@mixin box {
+  @include clearfix;
+}
+
+.box {
+  @include box;
+}
+
+@mixin box-header {
+  display: block;
+}
+
+@mixin box-footer {
+  display: block;
+}
+
+.box-header,
+.box-footer {
+  display: block;
+}
+
+@mixin box-media {
+  &-left {
+    float: left;
+  }
+  &-right {
+    float: right;
+  }
+  &-center {
+    img {
+      position: relative;
+      margin: auto;
+    }
+  }
+}
+
+.box-media {
+  @include box-media
+}
+
+.box-content {
+  overflow: hidden;
+}
+
+.box-content {
+  @include box-content;
+}
