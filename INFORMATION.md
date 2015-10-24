@@ -2,7 +2,7 @@
 
 (1.) The SCSS folder/file organisation identifies what is a BASE object, a LAYOUT object, a MODULE object and THEME styling (following SMACSS and OOCSS).
 
-(2.) All objects are to be coded as **mixins**, and then an **example class** is then to be created with the same name.
+(2.) All objects are to be coded as **mixins**, and then a **class** is then to be created with the same name. _Therefore designer/developers should be able to use either mixins or classes to accomplish the same result frontend in the browser._
 
 ```
 // EXAMPLE
@@ -14,7 +14,6 @@
 	
 .menubar {
 	@include menubar;
-	@include breakpoint-menubar-up {...}
 }
 ```
 
