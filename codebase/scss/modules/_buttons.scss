@@ -1,0 +1,121 @@
+// BASE: BUTTONS
+// =============
+
+$color-button-base-text:              lighten($color-default-text, 25%);
+$color-button-base-text-hover:        $color-default-text;
+$color-button-base-background:        #e8e8e8;
+$color-button-base-background-hover:  #e0e0e0;
+$color-button-alt-text:               #fff;
+
+@mixin button-base {
+  display: inline-block;
+  width: auto;
+	border: 0;
+  font-size: $base-font-size;
+	line-height: $base-font-size;
+  text-decoration: none;
+	&:hover {
+    text-decoration: none;
+    color: $color-button-base-text-hover;
+    background: $color-button-base-background-hover;
+	}
+}
+
+@mixin button-colors {
+  color: $color-button-base-text;
+  background: $color-button-base-background;
+  &:hover {
+    color: $color-button-base-text-hover;
+    background: $color-button-base-background-hover;
+	}
+  &-primary {
+    color: $color-button-alt-text;
+    background: $color-primary;
+    &:hover {
+      background: darken($color-primary, 8%)
+    }    
+  }
+  &-secondary {
+    color: $color-button-alt-text;
+    background: $color-secondary;
+    &:hover {
+      background: darken($color-secondary, 8%)
+    }    
+  }
+  &-warning {
+    color: $color-button-alt-text;
+    background: $color-warning;
+    &:hover {
+      background: darken($color-warning, 8%)
+    }    
+  }
+  &-success {
+    color: $color-button-alt-text;
+    background: $color-success;
+    &:hover {
+      background: darken($color-success, 8%)
+    }    
+  }   
+}
+
+@mixin button-size {
+	padding: 10px 20px;
+  &-small {
+    padding: 5px 10px
+  }
+  &-large {
+    padding: 20px 30px
+  }
+}
+
+@mixin button-block {
+  &-block {
+    display: block;
+    width: 100%;
+    text-align: center
+  }	
+}
+
+@mixin button-dropdown {
+  &-dropdown {
+    &>span {
+      display: none;
+    }
+    &-is-revealed {
+      z-index: $reset-overlay-is-raised-z-index + 1;
+      &>span {
+        display: block;
+        position: absolute;
+        z-index: $reset-overlay-is-raised-z-index + 1;
+        margin: 10px 0 0 -20px;
+        padding: 10px 20px;
+        background: #eee;
+        color: $color-default-text;
+        text-align: left;
+        cursor: default;
+        .row {
+            margin-bottom: $base-font-size
+        }
+      }
+    }
+    ul, ol {
+      margin: -10px 0;
+      padding-left: 10px;
+    }
+    li {
+      padding: 10px 0
+    }
+  }
+}
+
+@mixin button {
+  @include button-base;
+  @include button-colors;
+  @include button-size;
+  @include button-block;
+  @include button-dropdown;
+}
+
+.button {
+  @include button;
+}
