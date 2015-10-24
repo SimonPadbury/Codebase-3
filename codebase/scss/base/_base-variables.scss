@@ -5,6 +5,11 @@
 
 $color-default-text:        #444;
 $color-button-text:         #fff;
+$color-hyperlink:           #08c;
+$color-primary:             $color-hyperlink;
+$color-secondary:           lighten($color-primary, 20%);
+$color-warning:             #f40;
+$color-success:             #3b3;
 
 // Base typography
 
