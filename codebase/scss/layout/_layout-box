@@ -42,7 +42,7 @@
   @include box-media
 }
 
-.box-content {
+@media box-content {
   overflow: hidden;
 }
 
