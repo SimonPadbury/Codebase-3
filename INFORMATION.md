@@ -2,10 +2,11 @@
 
 (1.) The SCSS folder/file organisation identifies what is a BASE object, a LAYOUT object, a MODULE object and THEME styling (following SMACSS and OOCSS).
 
-(2.) All objects are to be coded as **mixins**, and then a **class** is then to be created with the same name. _Therefore designers/developers should be able to use either mixins or classes to accomplish the same result frontend in the browser._
+(2.) All objects are to be coded as **mixins**, and then a **class** is then to be created with the same name.
 
 ```
 // EXAMPLE
+// =======
 
 @mixin menubar-list {...} 
 // And other mixins that style various elements and states of the menubar.
@@ -17,7 +18,10 @@
 }
 ```
 
-This is done (a.) to keep things DRY ("don't  repeat yourself"), and (b.) so that any of these mixins can easily be used or coped elsewhere.
+This is done so that:
+  (a.) things are kept DRY ("don't  repeat yourself");
+  (b.) any of these mixins can easily be used or coped elsewhere;
+  (c.) designers/developers can use either mixins or classes to accomplish the same result frontend in the browser.
 
 (3.) The mixin/class prefix **namespace** is unique to each **object**. This must be a single word; hyphens only for separating prefix, midfix and suffix. If necessary eliminate spaces within phrases to form a single word, e.g. 'menubar', 'searchform'. You may use camelCase if you prefer.
 
@@ -25,6 +29,7 @@ This is done (a.) to keep things DRY ("don't  repeat yourself"), and (b.) so tha
 
 ```
 // EXAMPLE
+// =======
 
 // Prefix denotes object
 @mixin menubar {...}
