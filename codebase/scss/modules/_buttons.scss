@@ -1,5 +1,5 @@
-// BASE: BUTTONS
-// =============
+// MODULE: BUTTONS
+// ===============
 
 $color-button-base-text:              lighten($color-default-text, 25%);
 $color-button-base-text-hover:        $color-default-text;
@@ -10,7 +10,7 @@ $color-button-alt-text:               #fff;
 @mixin button-base {
   display: inline-block;
   width: auto;
-	border: 0;
+    border: 0;
   font-size: $base-font-size;
 	line-height: $base-font-size;
   text-decoration: none;
@@ -94,7 +94,7 @@ $color-button-alt-text:               #fff;
         text-align: left;
         cursor: default;
         .row {
-            margin-bottom: $base-font-size
+          margin-bottom: $base-font-size
         }
       }
     }
