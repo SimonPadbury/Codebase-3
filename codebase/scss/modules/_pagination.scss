@@ -1,0 +1,29 @@
+// PAGINATION
+// ==========
+
+@mixin pagination {
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: $line-height 0;
+    padding: 0;
+  }
+  li {
+    float: left;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    &.current,
+    &:hover {
+      text-decoration: none;
+    }        
+    &.current:hover {
+      cursor: default
+    }
+  }
+}
+
+.pagination {
+  @include ppagination;
+}
