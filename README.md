@@ -1,3 +1,3 @@
 # Codebase
 
-CSS / SCSS / jQuery component library.
+SCSS / jQuery component library.
