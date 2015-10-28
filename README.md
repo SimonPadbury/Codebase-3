@@ -1,4 +1,3 @@
 # Codebase
-CSS / SCSS / jQuery framework
 
-Watch this space.
+CSS / SCSS / jQuery component library.
