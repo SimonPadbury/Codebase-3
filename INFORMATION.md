@@ -28,7 +28,7 @@ This is done so that:
 
 -----
 
-(3.) The mixin/class prefix **namespace** is unique to each **object**. This must be a single word; hyphens only for separating prefix, midfix and suffix. If necessary eliminate spaces within phrases to form a single word, e.g. 'menubar', 'searchform'. You may use camelCase if you prefer.
+(3.) The mixin/class prefix **namespace** is unique to each **object**. This must be a single word; hyphens are only to be used for separating prefix, midfix and suffix. If necessary eliminate spaces within phrases to form a single word, e.g. 'menubar', 'searchform'. You may use camelCase if you prefer.
 
 (4.) Objects contain multiple (often nested) **elements** within them. Elements are identified by a suffix (or sometimes midfix and suffix). Three part mixin/class names are only necessary where a **numeral** identifier is required as a suffix after the element name (e.g. in the grid system).
 
