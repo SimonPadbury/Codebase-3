@@ -1,10 +1,7 @@
 // EXAMPLE THEME GRID
 // ==================
 
-// Grid Includers Build Demo
-// -------------------------
-
-@mixin grid-includers-demo {
+@mixin grid-demo {
   background: #fff;
   > * {
     background: #ddd;
@@ -12,13 +9,16 @@
   }
 }
 
-.grid-includers-wrapper {
+// Mixers Grid Demo
+// ----------------
+
+.grid-mixers-wrapper {
   @include grid;
   @include grid-gutter;
   @include grid-demo;    
 }
 
-.grid-includers-article {
+.grid-mixers-article {
   @include column;
   @include breakpoint-small-up {
     @include column-span(8);
@@ -26,7 +26,7 @@
   }
 }
 
-.grid-includers-aside {
+.grid-mixers-aside {
     @include column;
     @include breakpoint-small-up {
       @include column-span(4);
@@ -34,20 +34,63 @@
   }
 }
 
-.grid-includers-centered {
+.grid-mixers-nested {
+  @include grid;
+  @include grid-gutter;
+  @include grid-nested;
+  @include grid-demo;    
+  > div {
+    @include column;
+    @include column-span(4);
+  }
+}
+
+.grid-mixers-centered {
   @include column;
   @include breakpoint-medium-up {
     @include column-centered(7);
   }
 }
 
-.grid-includers-nested {
-  @include grid;
+// Flexbox Grid Demo
+// -----------------
+
+.grid-flexbox-wrapper {
+  @include flex-grid;
   @include grid-gutter;
-  @include grid-nested;
-  @include grid-demo;    
-  div {
-    @include column;
+  @include grid-demo;
+}
+
+.grid-flexbox-article {
+  @include column;
+  @include breakpoint-small-up {
+    @include column-span(8);
+    @include column-push(1);
+  }
+}
+
+.grid-flexbox-aside {
+  @include column;
+  @include breakpoint-small-up {
     @include column-span(4);
+    @include column-pull(1);
+  }
+}
+
+.grid-flexbox-nested {
+  @include flex-grid;
+  @include grid-nested;
+  @include grid-gutter;
+  @include grid-demo;
+  > div {
+    @include column;
+    @include column-span(4);        
+  }
+}
+
+.grid-flexbox-centered {
+  @include column;
+  @include breakpoint-medium-up {
+    @include column-centered(7);
   }
 }
