@@ -54,4 +54,4 @@ This is done so that:
 * `gridColumnMedium-span-X` has been reduced to `medium-span-X`.
 * ... etc.
 
-Also note that the names `grid`, `column`, `offset`, `push` and `pull` are reserved class/mixin names, to be used only in the grid system and not in any other module.)
+Also note that the names `grid`, `column`, `offset`, `push`, `pull` and `centered` are reserved class/mixin names, to be used only in the grid systems and not in any other module.)
