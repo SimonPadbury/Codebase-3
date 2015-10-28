@@ -47,7 +47,7 @@ This is done so that:
 
 (5.) Unless writing **classes** that can be reused for multiple kinds of HTML tags, it is not necessary (and may unnecessarily complicate things) to assign classes to each HTML tag element.
 
-(6.) **The only deviation from these naming restrictions shall be in the grid system**, where even these simple restrictions may result in overly complicated mixin/class names. Thus:
+(6.) The only deviation from these naming restrictions shall be in the grid system, where even these simple restrictions may result in overly complicated mixin/class names. Thus:
 
 * `grid` is OK as-is, short and sweet.
 * `gridColumn` has been reduced to `column`.
