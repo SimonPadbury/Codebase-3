@@ -4,9 +4,10 @@
 // Base
 // ----
 
-@import 'base/normalize'
-@import 'base/base-breakpoints';
+@import 'base/normalize';
+@import 'base/base-variables';
 @import 'base/base-mixins';
+@import 'base/base-breakpoints';
 @import 'base/base-typography';
 
 // Layout
@@ -33,6 +34,6 @@
 // An example, bare-minimum theme is included. Codebase intends the designer/developer 
 // to swap their theme styling in here.
 
-@import 'theme/layout-grid';
-@import 'theme/module-menubar';
-@import 'theme/module-pagination';
+@import 'theme/theme-layout-grid';
+@import 'theme/theme-module-menubar';
+@import 'theme/theme-module-pagination';

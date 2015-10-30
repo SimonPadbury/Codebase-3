@@ -42,7 +42,7 @@
   @include box-media
 }
 
-@media box-content {
+@mixin box-content {
   overflow: hidden;
 }
 

@@ -10,7 +10,11 @@ $color-secondary:           lighten($color-primary, 20%);
 $color-warning:             #f40;
 $color-success:             #3b3;
 
-// Base typography
+// Base Typography
 
 $base-font-size: 18px;
 $line-height: $base-font-size * 1.618; // Golden ratio
+
+// Reset Overlay
+
+$reset-overlay-is-raised-z-index: 100;
