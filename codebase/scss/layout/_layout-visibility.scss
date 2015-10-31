@@ -1,117 +1,96 @@
 // VISIBILITY
 // ==========
-
 // Auxiliary Mixins
 // ----------------
-// (Used to generate the "show" mixins. Don't use these auxiliary mixins in your theming - 
+// (Used to generate the "show" mixins. Don't use these auxiliary mixins in your theming -
 // use the "show" and "hide" mixins or classes  below.)
-
 @mixin tiny-small-hide {
-  @media screen and (max-width: $breakpoint-medium - 1){
-    display: none !important
+  @media screen and (max-width: $breakpoint-medium - 1) {
+    display: none !important;
   }
 }
-
 @mixin small-medium-large-hide {
-  @media screen and (min-width: $breakpoint-small){
-    display: none !important
+  @media screen and (min-width: $breakpoint-small) {
+    display: none !important;
   }
 }
-
 @mixin medium-large-hide {
-  @media screen and (min-width: $breakpoint-medium){
-    display: none !important
+  @media screen and (min-width: $breakpoint-medium) {
+    display: none !important;
   }
 }
-
 @mixin tiny-small-medium-hide {
-  @media screen and (max-width: $breakpoint-large - 1){
-    display: none !important
+  @media screen and (max-width: $breakpoint-large - 1) {
+    display: none !important;
   }
 }
 
 // "Hide" Mixins
 // -------------
-
 @mixin tiny-hide {
   @media screen and (max-width: $breakpoint-small - 1) {
-    display: none !important
+    display: none !important;
   }
 }
-
 @mixin small-hide {
-  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium - 1){
-    display: none !important
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium - 1) {
+    display: none !important;
   }
 }
-
 @mixin medium-hide {
-  @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large - 1){
-    display: none !important
+  @media screen and (min-width: $breakpoint-medium) and (max-width: $breakpoint-large - 1) {
+    display: none !important;
   }
 }
-
 @mixin large-hide {
   @media screen and (min-width: $breakpoint-large) {
-    display: none !important
+    display: none !important;
   }
 }
 
 // "Show" Mixins
 // -------------
-
 @mixin tiny-show {
   @include small-medium-large-hide;
 }
-
 @mixin small-show {
   @include tiny-hide;
   @include medium-large-hide;
 }
-
 @mixin medium-show {
   @include tiny-small-hide;
   @include large-hide;
 }
-
 @mixin large-show {
   @include tiny-small-medium-hide;
 }
 
 // "Hide" Classes
 // --------------
-
 .tiny-hide {
   @include tiny-hide;
 }
-
 .small-hide {
   @include small-hide;
 }
-
 .medium-hide {
   @include medium-hide;
 }
-
 .large-show {
   @include large-show;
 }
 
 // "Show" Classes
 // --------------
-
 .tiny-show {
   @include tiny-show;
 }
-
 .small-show {
   @include small-show;
 }
-
 .medium-show {
   @include medium-show;
 }
-
 .large-hide {
   @include large-hide;
 }

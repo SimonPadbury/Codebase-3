@@ -1,7 +1,7 @@
 // TYPOGRAPHY
 // ==========
 
-// Note: The following builds off of normalize.css (included as a SCSS partial).
+// Note: The following builds off of normalize.css (which is included as a SCSS partial).
 
 body, p, li {
   font-size: $base-font-size;
@@ -78,6 +78,7 @@ h5,
 h6 {
   margin: $line-height 0;
   padding-top: $line-height;
+  font-weight: normal;
 }
 h1+h2,h1+h3,h1+h4,h1+h5,h1+h6,
 h2+h3,h2+h4,h2+h5,h2+h6,
@@ -98,4 +99,12 @@ hr {
 
 blockquote {
 	margin: $line-height;
+}
+
+a {
+    color: #08c;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }

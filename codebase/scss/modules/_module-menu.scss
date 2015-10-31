@@ -1,6 +1,5 @@
 // MODULE: MENU
 // ============
-
 @mixin menu {
   ul {
     list-style-type: none;
@@ -11,7 +10,6 @@
     }
   }
 }
-
 .menu {
   @include menu;
 }

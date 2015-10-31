@@ -8,21 +8,20 @@
 // EXAMPLE
 // =======
 
-@mixin menubar-list {...} 
+@mixin menubar-list {...}
 // And other mixins that style various elements and states of the menubar.
 
 @mixin menubar {...}
-	
+
 .menubar {
-	@include menubar;
+    @include menubar;
 }
 ```
 
 This is done so that:
-
-* things are kept DRY ("don't repeat yourself");
-* any of these mixins can easily be used or coped elsewhere;
-* designers/developers can use either mixins or classes to accomplish the same result frontend in the browser.
+- things are kept DRY ("don't repeat yourself");
+- any of these mixins can easily be used or coped elsewhere;
+- designers/developers can use either mixins or classes to accomplish the same result frontend in the browser.
 
 (3.) The mixin/class prefix **namespace** is unique to each **object**. This must be a single word; hyphens are only to be used for separating prefix, midfix and suffix. If necessary eliminate spaces within phrases to form a single word, e.g. 'menubar', 'searchform'. You may use camelCase if you prefer.
 
@@ -44,10 +43,9 @@ This is done so that:
 (5.) Unless writing **classes** that can be reused for multiple kinds of HTML tags, it is not necessary (and may unnecessarily complicate things) to assign classes to each HTML tag element.
 
 (6.) The only deviation from these naming restrictions shall be in the grid system, where even these simple restrictions may result in overly complicated mixin/class names. Thus:
-
-* `grid` is OK as-is, short and sweet.
-* `gridColumn` has been reduced to `column`.
-* `gridColumnMedium-span-X` has been reduced to `medium-span-X`.
-* ... etc.
+- `grid` is OK as-is, short and sweet.
+- `gridColumn` has been reduced to `column`.
+- `gridColumnMedium-span-X` has been reduced to `medium-span-X`.
+- ... etc.
 
 Also note that the names `grid`, `column`, `offset`, `push`, `pull` and `centered` are reserved class/mixin names, to be used only in the grid systems and not in any other module.)

@@ -1,6 +1,5 @@
 // EXAMPLE THEME GRID
 // ==================
-
 @mixin grid-demo {
   background: #fff;
   > * {
@@ -8,89 +7,99 @@
     box-shadow: inset 0 0 1px #888;
   }
 }
+.grid-demo {
+  @include grid-demo;
+}
 
 // Mixers Grid Demo
 // ----------------
-
 .grid-mixers-wrapper {
   @include grid;
   @include grid-gutter;
-  @include grid-demo;    
+  @include grid-demo;
 }
-
 .grid-mixers-article {
   @include column;
-  @include breakpoint-small-up {
+  @include breakpoint-medium-up {
     @include column-span(8);
+  }
+  @include breakpoint-large-up {
     @include column-push(4);
   }
 }
-
 .grid-mixers-aside {
-    @include column;
-    @include breakpoint-small-up {
-      @include column-span(4);
-      @include column-pull(8);
+  @include column;
+  @include breakpoint-medium-up {
+    @include column-span(4);
+  }
+  @include breakpoint-large-up {
+    @include column-pull(8);
   }
 }
-
 .grid-mixers-nested {
   @include grid;
   @include grid-gutter;
   @include grid-nested;
-  @include grid-demo;    
+  @include grid-demo;
   > div {
     @include column;
-    @include column-span(4);
+    @include breakpoint-small-up {
+      @include column-span(4);
+    }
   }
 }
-
 .grid-mixers-centered {
   @include column;
-  @include breakpoint-medium-up {
+  @include breakpoint-small-up {
     @include column-centered(7);
   }
 }
 
 // Flexbox Grid Demo
 // -----------------
-
 .grid-flexbox-wrapper {
-  @include flex-grid;
+  @include grid-no-flex;
   @include grid-gutter;
   @include grid-demo;
+  @include breakpoint-medium-up {
+    @include grid-flex;
+  }
 }
-
 .grid-flexbox-article {
-  @include column;
-  @include breakpoint-small-up {
-    @include column-span(8);
-    @include column-push(1);
+  @include column-flex;
+  @include breakpoint-medium-up {
+    @include column-flex-span(8);
+  }
+  @include breakpoint-large-up {
+    @include column-flex-push(1);
   }
 }
-
 .grid-flexbox-aside {
-  @include column;
-  @include breakpoint-small-up {
-    @include column-span(4);
-    @include column-pull(1);
+  @include column-flex;
+  @include breakpoint-medium-up {
+    @include column-flex-span(4);
+  }
+  @include breakpoint-large-up {
+    @include column-flex-pull(1);
   }
 }
-
 .grid-flexbox-nested {
-  @include flex-grid;
+  @include grid-no-flex;
   @include grid-nested;
   @include grid-gutter;
   @include grid-demo;
-  > div {
-    @include column;
-    @include column-span(4);        
+  @include breakpoint-small-up {
+    @include grid-flex;
+    @include grid-nested;
+    > div {
+      @include column-flex;
+      @include column-flex-span(4);
+    }
   }
 }
-
 .grid-flexbox-centered {
-  @include column;
-  @include breakpoint-medium-up {
-    @include column-centered(7);
+  @include column-flex;
+  @include breakpoint-small-up {
+    @include column-flex-centered(7);
   }
 }

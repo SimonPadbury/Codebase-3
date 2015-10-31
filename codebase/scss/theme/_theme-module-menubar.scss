@@ -1,12 +1,22 @@
 // EXAMPLE THEME: MENUBAR
 // ======================
-
-@mixin theme-nav-listlink {
+@mixin theme-menubar-brand {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: $base-font-size + 4;
+}
+@mixin theme-menubar-toggle {
+  width: 49px;
+  height: 49px;
+  padding: 8px 13px;
+  color: $color-hyperlink;
+}
+@mixin theme-menubar-listlink {
   display: inline-block;
   padding: 10px 15px;
 }
-
 .menubar {
+  background: #fff;
   @include breakpoint-menubar-down {
     max-height: 49px;
     padding-top: 49px;
@@ -20,13 +30,13 @@
     }
   }
   &-toggle {
-    width: 49px;
-    height: 49px;
-    padding: 8px 13px;
-    color: #08c;
+    @include theme-menubar-toggle;
+  }
+  &-brand a {
+    @include theme-menubar-brand;
   }
   &-left>ul a,
   &-right>ul a {
-    @include theme-nav-listlink;
+    @include theme-menubar-listlink;
   }
 }

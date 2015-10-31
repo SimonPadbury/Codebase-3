@@ -1,6 +1,5 @@
 // PAGINATION
 // ==========
-
 @mixin pagination {
   ul {
     display: inline-block;
@@ -17,13 +16,12 @@
     &.current,
     &:hover {
       text-decoration: none;
-    }        
+    }
     &.current:hover {
-      cursor: default
+      cursor: default;
     }
   }
 }
-
 .pagination {
   @include pagination;
 }

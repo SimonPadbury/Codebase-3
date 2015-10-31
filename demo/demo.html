@@ -2,39 +2,129 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Demo | Codebase</title>
+  <title>Demo | Codebase</title>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <link rel="stylesheet" href="../codebase/css/codebase.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+  <link rel="stylesheet" href="../codebase/css/codebase.css">
 </head>
 
 <body>
 
-    <section class="grid grid-gutter">
-        <div class="column">
-            <nav class="menubar">
-                <div class="menubar-left">
-                    <div class="menubar-brand">
-                        <a href="#">Codebase</a>
-                    </div>
-                </div>
-                <div class="menubar-right">
-                    <ul>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </section>
+  <header class="grid grid-gutter">
+    <div class="column">
+      <h1>Demo</h1>
+      <p><b>Note:</b> the body background has only been set to pale gray so that module instances can be indicated with a white background.</p>
+    </div>
+  </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="../codebase/js/codebase.js"></script>
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h3>Classic Grid</h3>
+    </div>
+  </section>
+
+  <section class="grid grid-gutter grid-demo">
+    <div class="column medium-span-8 large-push-4">
+      <span>Article</span>
+      <section class="grid grid-gutter grid-nested grid-demo">
+        <div class="column small-span-4">
+          <span>Nested</span>
+        </div>
+        <div class="column small-span-4">
+          <span>Nested</span>
+        </div>
+        <div class="column small-span-4">
+          <span>Nested</span>
+        </div>
+      </section>
+    </div>
+    <div class="column medium-span-4 large-pull-8">
+      <span>Aside</span>
+    </div>
+  </section>
+  <section class="grid grid-gutter grid-demo">
+    <div class="column small-span-7 column-centered">Centered</div>
+  </section>
+
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h3>SCSS Mixers Grid</h3>
+    </div>
+  </section>
+
+  <section class="grid-mixers-wrapper">
+    <div class="grid-mixers-article">Article
+      <section class="grid-mixers-nested">
+        <div>Nested</div>
+        <div>Nested</div>
+        <div>Nested</div>
+      </section>
+    </div>
+    <div class="grid-mixers-aside">Aside</div>
+  </section>
+  <section class="grid-mixers-wrapper">
+    <div class="grid-mixers-centered">Centered</div>
+  </section>
+
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h3>Flexbox Grid</h3>
+    </div>
+  </section>
+
+  <section class="grid-flexbox-wrapper">
+    <div class="grid-flexbox-article">Article
+      <section class="grid-flexbox-nested">
+        <div>Nested</div>
+        <div>Nested</div>
+        <div>Nested</div>
+      </section>
+    </div>
+    <div class="grid-flexbox-aside">Aside</div>
+  </section>
+  <section class="grid-flexbox-wrapper">
+    <div class="grid-flexbox-centered">Centered</div>
+  </section>
+
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h3>Menubar</h3>
+    </div>
+  </section>
+
+  <section class="grid">
+    <div class="column">
+      <nav class="menubar">
+        <div class="menubar-left">
+          <div class="menubar-brand">
+            <a href="#">Brand</a>
+          </div>
+        </div>
+        <div class="menubar-left">
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+        <div class="menubar-right">
+          <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="../codebase/js/codebase.js"></script>
 
 </body>
 

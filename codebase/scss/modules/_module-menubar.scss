@@ -1,24 +1,19 @@
 // MODULE: MENUBAR
 // ===============
-
 // Menubar variables
-
 $breakpoint-menubar: 1024px;
 
 // Menubar mixins
-
 @mixin breakpoint-menubar-down {
   @media (max-width: #{$breakpoint-menubar - 1px}) {
     @content
   }
 }
-
 @mixin breakpoint-menubar-up {
   @media (min-width: #{$breakpoint-menubar}) {
     @content
   }
 }
-
 @mixin nav-list {
   list-style-type: none;
   margin: 0;
@@ -26,48 +21,46 @@ $breakpoint-menubar: 1024px;
 }
 
 // NOTE: menubar descendant lists have not been styled for Codebase ver.1.
-
 @mixin menubar {
+  &-left>ul,
+  &-right>ul {
+    @include nav-list;
+  }
+  &-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @include breakpoint-menubar-down {
+    &-brand {
+      position: absolute;
+    }
+  }
+  @include breakpoint-menubar-up {
+    &-left,
+    &-brand {
+      float: left;
+    }
+    &-right,
+    &-search {
+      float: right;
+    }
     &-left>ul,
     &-right>ul {
-      @include nav-list;
+      float: left;
+    }
+    li {
+      display: inline-block;
     }
     &-toggle {
-      position: absolute;
-      top: 0;
-      right: 0;
-      &:hover {
-        cursor: pointer;
-      }
+      display: none;
     }
-    @include breakpoint-menubar-down {
-      &-brand {
-        position: absolute;
-      }
-    }
-    @include breakpoint-menubar-up {
-      &-left,
-      &-brand {
-        float: left;
-      }
-      &-right,
-      &-search {
-        float: right;
-      }
-      &-left>ul,
-      &-right>ul {
-        float: left;
-      }
-      li {
-        display: inline-block;
-      }
-      &-toggle {
-        display: none;
-      }
   }
   @include clearfix;
 }
-
 .menubar {
   @include menubar;
 }

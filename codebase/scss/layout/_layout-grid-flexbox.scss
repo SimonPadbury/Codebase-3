@@ -1,44 +1,46 @@
 // FLEXBOX GRID
 // ============
-
+// Similar to Mixers grid, except that the mixins use flexbox instead of floats.
 // Grid Variables
 // --------------
-// Breakpoint variables were set in `base/_base-variables.scss`.
-
-$grid-max-columns:           12;
-$grid-gutter-width-tiny:     20px;
-$grid-gutter-width-small:    24px;
-$grid-gutter-width-medium:   36px;
-$grid-gutter-width-large:    48px;
-$grid-max-width:             1280px;
+// Breakpoint variables were set in `base/_base-breakpoints.scss`.
+$grid-max-columns: 12;
+$grid-gutter-width-tiny: 20px;
+$grid-gutter-width-small: 24px;
+$grid-gutter-width-medium: 36px;
+$grid-gutter-width-large: 48px;
+$grid-max-width: 1280px;
 
 // Grid Container
 // --------------
-
-@mixin flex-grid {
+@mixin grid-no-flex {
+  display: block;
+  max-width: $grid-max-width;
+  margin: auto;
+}
+@mixin grid-flex {
   display: flex;
   max-width: $grid-max-width;
-  margin: auto;    
+  margin: auto;
 }
 
 // Grid with Gutter between Columns
 // --------------------------------
 // Include `grid-gutter` in your GRID container class, not in each column.
-
 @mixin grid-gutter {
   > * {
     padding: 0 ($grid-gutter-width-tiny / 2);
     @include breakpoint-small-up {
       padding-right: $grid-gutter-width-small / 2;
-      padding-left: $grid-gutter-width-small / 2
+      padding-left: $grid-gutter-width-small / 2;
     }
     @include breakpoint-medium-up {
       padding-right: $grid-gutter-width-medium / 2;
-      padding-left: $grid-gutter-width-medium / 2
+      padding-left: $grid-gutter-width-medium / 2;
     }
     @include breakpoint-large-up {
       padding-right: $grid-gutter-width-large / 2;
-      padding-left: $grid-gutter-width-large / 2
+      padding-left: $grid-gutter-width-large / 2;
     }
   }
 }
@@ -46,49 +48,44 @@ $grid-max-width:             1280px;
 // Nested Grid
 // -----------
 // Only include `grid-nested` on a NESTED grid container IF the parent grid has a gutter.
-
 @mixin grid-nested {
   margin-right: -($grid-gutter-width-tiny / 2);
   margin-left: -($grid-gutter-width-tiny / 2);
   @include breakpoint-small-up {
     margin-right: -($grid-gutter-width-small / 2);
-    margin-left: -($grid-gutter-width-small / 2)
+    margin-left: -($grid-gutter-width-small / 2);
   }
   @include breakpoint-medium-up {
     margin-right: -($grid-gutter-width-medium / 2);
-    margin-left: -($grid-gutter-width-medium / 2)
+    margin-left: -($grid-gutter-width-medium / 2);
   }
   @include breakpoint-large-up {
     margin-right: -($grid-gutter-width-large / 2);
-    margin-left: -($grid-gutter-width-large / 2)
+    margin-left: -($grid-gutter-width-large / 2);
   }
 }
 
 // Column Base
 // -----------
+@mixin column-flex {
 
-@mixin column {
   // box-sizing: border-box; // Has been added as a global (base) mixin already.
   min-height: 1px;
   width: 100%;
 }
-
-@mixin column-span($column-span) {
-  width: ($column-span / $grid-max-columns) * 100%;
+@mixin column-flex-span($column-flex-span) {
+  width: ($column-flex-span / $grid-max-columns) * 100%;
 }
 
 // Note: in the Codebase flex-grid system, push/pull works by column `re-ordering`.
-
-@mixin column-push($column-push) {
-  order: $column-push;
+@mixin column-flex-push($column-flex-push) {
+  order: $column-flex-push;
 }
-
-@mixin column-pull($column-pull) {
-  order: -$column-pull;
+@mixin column-flex-pull($column-flex-pull) {
+  order: -$column-flex-pull;
 }
-
-@mixin column-centered($column-centered) {
-  width: ($column-centered / $grid-max-columns) * 100%;
+@mixin column-flex-centered($column-flex-centered) {
+  width: ($column-flex-centered / $grid-max-columns) * 100%;
   margin-right: auto;
   margin-left: auto;
 }

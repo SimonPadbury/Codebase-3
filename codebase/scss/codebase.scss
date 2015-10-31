@@ -9,10 +9,11 @@
 @import 'base/base-mixins';
 @import 'base/base-breakpoints';
 @import 'base/base-typography';
+@import 'base/base-styles';
 
 // Layout
 // ------
-// Import either `layout-grid-classic`, `layout-grid-mixers` or `layout-grid-flexbox` but not both - 
+// Import either `layout-grid-classic`, `layout-grid-mixers` or `layout-grid-flexbox` but not both -
 // whatever you choose. (However, all will be included in this repository.)
 
 @import 'layout/layout-grid-classic';
@@ -31,9 +32,10 @@
 
 // Theme
 // -----
-// An example, bare-minimum theme is included. Codebase intends the designer/developer 
-// to swap their theme styling in here.
+// An example, bare-minimum theme is included. Codebase intends you
+// to swap your theme styling in here.
 
+@import 'theme/theme-base';
 @import 'theme/theme-layout-grid';
 @import 'theme/theme-module-menubar';
 @import 'theme/theme-module-pagination';
