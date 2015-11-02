@@ -85,8 +85,8 @@
 }
 .grid-flexbox-nested {
   @include grid-no-flex;
-  @include grid-nested;
   @include grid-gutter;
+  @include grid-nested;
   @include grid-demo;
   @include breakpoint-small-up {
     @include grid-flex;
