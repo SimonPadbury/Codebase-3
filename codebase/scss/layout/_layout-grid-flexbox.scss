@@ -15,13 +15,13 @@ $grid-max-width: 1280px;
 // --------------
 @mixin grid-no-flex {
   display: block;
+  margin: 0 auto;
   max-width: $grid-max-width;
-  margin: auto;
 }
 @mixin grid-flex {
   display: flex;
+  margin: 0 auto;
   max-width: $grid-max-width;
-  margin: auto;
 }
 
 // Grid with Gutter between Columns
