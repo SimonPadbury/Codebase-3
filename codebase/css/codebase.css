@@ -1027,8 +1027,8 @@ body {
 
 .grid-flexbox-wrapper {
   display: block;
+  margin: 0 auto;
   max-width: 1280px;
-  margin: auto;
   background: #fff; }
   .grid-flexbox-wrapper > * {
     padding: 0 10px; }
@@ -1050,8 +1050,8 @@ body {
   @media (min-width: 1024px) {
     .grid-flexbox-wrapper {
       display: flex;
-      max-width: 1280px;
-      margin: auto; } }
+      margin: 0 auto;
+      max-width: 1280px; } }
 
 .grid-flexbox-article {
   min-height: 1px;
@@ -1075,23 +1075,11 @@ body {
 
 .grid-flexbox-nested {
   display: block;
+  margin: 0 auto;
   max-width: 1280px;
-  margin: auto;
   margin-right: -10px;
   margin-left: -10px;
   background: #fff; }
-  @media (min-width: 768px) {
-    .grid-flexbox-nested {
-      margin-right: -12px;
-      margin-left: -12px; } }
-  @media (min-width: 1024px) {
-    .grid-flexbox-nested {
-      margin-right: -18px;
-      margin-left: -18px; } }
-  @media (min-width: 1200px) {
-    .grid-flexbox-nested {
-      margin-right: -24px;
-      margin-left: -24px; } }
   .grid-flexbox-nested > * {
     padding: 0 10px; }
     @media (min-width: 768px) {
@@ -1106,14 +1094,26 @@ body {
       .grid-flexbox-nested > * {
         padding-right: 24px;
         padding-left: 24px; } }
+  @media (min-width: 768px) {
+    .grid-flexbox-nested {
+      margin-right: -12px;
+      margin-left: -12px; } }
+  @media (min-width: 1024px) {
+    .grid-flexbox-nested {
+      margin-right: -18px;
+      margin-left: -18px; } }
+  @media (min-width: 1200px) {
+    .grid-flexbox-nested {
+      margin-right: -24px;
+      margin-left: -24px; } }
   .grid-flexbox-nested > * {
     background: #ddd;
     box-shadow: inset 0 0 1px #888; }
   @media (min-width: 768px) {
     .grid-flexbox-nested {
       display: flex;
+      margin: 0 auto;
       max-width: 1280px;
-      margin: auto;
       margin-right: -10px;
       margin-left: -10px; } }
   @media (min-width: 768px) and (min-width: 768px) {
@@ -1142,6 +1142,12 @@ body {
       width: 58.3333333333%;
       margin-right: auto;
       margin-left: auto; } }
+
+.menu {
+  background: #fff; }
+  .menu a {
+    display: inline-block;
+    padding: 10px 15px; }
 
 .menubar {
   background: #fff; }
