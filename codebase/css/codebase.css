@@ -794,34 +794,38 @@ iframe {
   line-height: 18px;
   text-decoration: none;
   color: #848484;
-  background: #e8e8e8;
+  background: #ddd;
   padding: 10px 20px; }
   .button:hover {
     text-decoration: none;
     color: #444;
-    background: #e0e0e0; }
+    background: #ccc; }
   .button:hover {
     color: #444;
-    background: #e0e0e0; }
+    background: #ccc; }
   .button-primary {
     color: #fff;
     background: #08c; }
     .button-primary:hover {
+      color: #fff;
       background: #006da3; }
   .button-secondary {
     color: #fff;
     background: #33bbff; }
     .button-secondary:hover {
-      background: #0aadff; }
+      color: #fff;
+      background: #00a3f5; }
   .button-warning {
     color: #fff;
     background: #f40; }
     .button-warning:hover {
+      color: #fff;
       background: #d63900; }
   .button-success {
     color: #fff;
     background: #3b3; }
     .button-success:hover {
+      color: #fff;
       background: #2a9b2a; }
   .button-small {
     padding: 5px 10px; }
@@ -894,14 +898,13 @@ iframe {
 .pagination ul {
   display: inline-block;
   list-style-type: none;
-  margin: 29.124px 0;
+  margin: 0;
   padding: 0; }
 .pagination li {
   float: left; }
 .pagination a {
-  display: block;
-  text-decoration: none; }
-  .pagination a.current, .pagination a:hover {
+  display: inline-block; }
+  .pagination a.current {
     text-decoration: none; }
   .pagination a.current:hover {
     cursor: default; }
@@ -1174,7 +1177,9 @@ body {
     display: inline-block;
     padding: 10px 15px; }
 
+.pagination ul {
+  background: #fff; }
 .pagination a {
   padding: 10px 15px; }
-  .pagination a.current, .pagination a:hover {
-    background: #eee; }
+  .pagination a.current {
+    background: #ddd; }

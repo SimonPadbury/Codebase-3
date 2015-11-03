@@ -2,9 +2,10 @@
 // ===============
 $color-button-base-text: lighten($color-default-text, 25%);
 $color-button-base-text-hover: $color-default-text;
-$color-button-base-background: #e8e8e8;
-$color-button-base-background-hover: #e0e0e0;
+$color-button-base-background: #ddd;
+$color-button-base-background-hover: #ccc;
 $color-button-alt-text: #fff;
+$color-button-alt-text-hover: $color-button-alt-text;
 @mixin button-base {
   display: inline-block;
   width: auto;
@@ -19,6 +20,8 @@ $color-button-alt-text: #fff;
   }
 }
 @mixin button-colors {
+
+  // Default
   color: $color-button-base-text;
   background: $color-button-base-background;
   &:hover {
@@ -29,6 +32,7 @@ $color-button-alt-text: #fff;
     color: $color-button-alt-text;
     background: $color-primary;
     &:hover {
+      color: $color-button-alt-text-hover;
       background: darken($color-primary, 8%);
     }
   }
@@ -36,13 +40,15 @@ $color-button-alt-text: #fff;
     color: $color-button-alt-text;
     background: $color-secondary;
     &:hover {
-      background: darken($color-secondary, 8%);
+      color: $color-button-alt-text-hover;
+      background: darken($color-secondary, 12%);
     }
   }
   &-warning {
     color: $color-button-alt-text;
     background: $color-warning;
     &:hover {
+      color: $color-button-alt-text-hover;
       background: darken($color-warning, 8%);
     }
   }
@@ -50,6 +56,7 @@ $color-button-alt-text: #fff;
     color: $color-button-alt-text;
     background: $color-success;
     &:hover {
+      color: $color-button-alt-text-hover;
       background: darken($color-success, 8%);
     }
   }

@@ -4,17 +4,15 @@
   ul {
     display: inline-block;
     list-style-type: none;
-    margin: $line-height 0;
+    margin: 0;
     padding: 0;
   }
   li {
     float: left;
   }
   a {
-    display: block;
-    text-decoration: none;
-    &.current,
-    &:hover {
+    display: inline-block;
+    &.current {
       text-decoration: none;
     }
     &.current:hover {

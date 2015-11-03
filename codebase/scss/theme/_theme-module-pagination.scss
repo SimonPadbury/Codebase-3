@@ -1,11 +1,13 @@
 // PAGINATION
 // ==========
 .pagination {
+  ul {
+    background: #fff;
+  }
   a {
     padding: 10px 15px;
-    &.current,
-    &:hover {
-      background: #eee;
+    &.current {
+      background: #ddd;
     }
   }
 }
