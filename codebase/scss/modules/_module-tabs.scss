@@ -1,0 +1,30 @@
+// MODULES: TABS
+// =============
+
+.tab {
+    &-group {
+        font-size: 0;
+        @include clearfix;
+    }
+    &-label {
+        display: inline-block;
+        font-size: $base-font-size;
+        &:hover {
+            cursor: pointer
+        }
+        &.is-front:hover {
+            cursor: default
+        }
+    }
+    &-card {
+        clear: both;
+        float: left;
+        width: 100%;
+        height: 0;
+        font-size: $base-font-size;
+        overflow: hidden;
+        &.is-front {
+            height: auto;
+        }
+    }
+}

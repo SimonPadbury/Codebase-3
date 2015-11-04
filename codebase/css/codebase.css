@@ -845,7 +845,7 @@ iframe {
       z-index: 101;
       margin: 10px 0 0 -20px;
       padding: 10px 20px;
-      background: #eee;
+      background: #ddd;
       color: #444;
       text-align: left;
       cursor: default; }
@@ -894,6 +894,30 @@ iframe {
   display: table; }
 .menubar:after {
   clear: both; }
+
+.tab-group {
+  font-size: 0; }
+  .tab-group:before, .tab-group:after {
+    content: '';
+    display: table; }
+  .tab-group:after {
+    clear: both; }
+.tab-label {
+  display: inline-block;
+  font-size: 18px; }
+  .tab-label:hover {
+    cursor: pointer; }
+  .tab-label.is-front:hover {
+    cursor: default; }
+.tab-card {
+  clear: both;
+  float: left;
+  width: 100%;
+  height: 0;
+  font-size: 18px;
+  overflow: hidden; }
+  .tab-card.is-front {
+    height: auto; }
 
 .pagination ul {
   display: inline-block;
@@ -1176,6 +1200,23 @@ body {
   .menubar-left > ul a, .menubar-right > ul a {
     display: inline-block;
     padding: 10px 15px; }
+
+.tab-group {
+  margin: 29.124px 0; }
+  .tab-group .tab-label {
+    position: relative;
+    margin-right: 4px;
+    padding: 10px 20px;
+    background: #ddd; }
+    .tab-group .tab-label.is-front {
+      z-index: 3;
+      background: #fff; }
+  .tab-group .tab-card {
+    position: relative;
+    z-index: 2; }
+    .tab-group .tab-card-content {
+      padding: 10px 20px;
+      background: #fff; }
 
 .pagination ul {
   background: #fff; }

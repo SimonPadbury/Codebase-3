@@ -1,0 +1,27 @@
+// THEME: TABS
+// ===========
+// Note to web designer: you may need to change the z-index of .tab-label.is-front, depending on whether you have a border or not.
+
+.tab-group {
+    margin: $line-height 0;
+    .tab {
+        &-label {
+            position: relative;
+            margin-right: 4px;
+            padding: 10px 20px;
+            background: #ddd;
+            &.is-front {
+                z-index: 3;
+                background: #fff
+            }
+        }
+        &-card {
+            position: relative;
+            z-index: 2;
+            &-content {
+                padding: 10px 20px;
+                background: #fff;
+            }
+        }
+    }
+}
