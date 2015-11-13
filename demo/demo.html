@@ -93,53 +93,107 @@
 
   <section class="grid grid-gutter">
     <div class="column">
-      <h3>Menubar</h3>
-    </div>
-  </section>
 
-  <section class="grid grid-gutter">
-    <div class="column">
+      <h3>Box Object (a.k.a. OOCSS Media Object)</h3>
+
+      <div class="box">
+        <div class="box-header">Box Header</div>
+          <div class="box-media box-media-left">
+              <a href="">
+                  <img src="placeholder-96-96.svg" alt="Square Thumbnail">
+              </a>
+          </div>
+          <div class="box-content">
+              <h3 class="box-title">Box Title</h3>
+              <div class="box-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <!-- Nested `.box` -->
+                  <div class="box">
+                      <div class="box-media box-media-left">
+                          <a href="">
+                              <img src="placeholder-96-96.svg" alt="Square Thumbnail">
+                          </a>
+                      </div>
+                      <div class="box-content">
+                          <h3 class="box-title">Box Title</h3>
+                          <div class="box-body">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Nested `.box` -->
+                  <div class="box">
+                      <div class="box-media box-media-left">
+                          <a href="">
+                              <img src="placeholder-96-96.svg" alt="Square Thumbnail">
+                          </a>
+                      </div>
+                      <div class="box-content">
+                          <h3 class="box-title">Box Title</h3>
+                          <div class="box-body">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="box-footer">Box Footer</div>
+      </div>
+
+      <h3>Menubar</h3>
+
       <nav class="menubar">
         <div class="menubar-left">
           <div class="menubar-brand">
-            <a href="#">Brand</a>
+            <a href="">Brand</a>
           </div>
         </div>
         <div class="menubar-left">
           <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li>
+              <a href="">Link</a>
+              <ul>
+                <li><a href="">Dropdown link</a></li>
+                <li><a href="">Dropdown link</a></li>
+                <li><a href="">Dropdown link</a></li>
+              </ul>
+            </li>
+            <li><a href="">Link</a></li>
           </ul>
         </div>
         <div class="menubar-right">
           <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li>
+              <a href="">Link</a>
+              <ul>
+                <li><a href="">Dropdown link</a></li>
+                <li><a href="">Dropdown link</a></li>
+                <li><a href="">Dropdown link</a></li>
+              </ul>
+            </li>
+            <li><a href="">Link</a></li>
           </ul>
         </div>
       </nav>
-    </div>
-  </section>
 
-  <section class="grid grid-gutter">
-    <div class="column">
+
       <h3>Menu</h3>
 
       <nav class="menu">
         <ul>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a>
+          <li><a href="">Link</a></li>
+          <li><a href="">Link</a></li>
+          <li><a href="">Link</a>
             <ul>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
+              <li><a href="">Link</a></li>
             </ul>
           </li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
+          <li><a href="">Link</a></li>
+          <li><a href="">Link</a></li>
         </ul>
       </nav>
 
@@ -147,39 +201,38 @@
 
       <nav class="pagination">
         <ul>
-          <li><a class="prev" href="#"><i class="octicon octicon-arrow-left"></i> Newer</a></li>
-          <li><a href="#">1</a></li>
-          <li><a class="current" href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a class="next" href="#">Older <i class="octicon octicon-arrow-right"></i></a></li>
+          <li><a class="prev" href=""><i class="octicon octicon-arrow-left"></i> Newer</a></li>
+          <li><a href="">1</a></li>
+          <li><a class="current" href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a class="next" href="">Older <i class="octicon octicon-arrow-right"></i></a></li>
         </ul>
       </nav>
 
       <h3>Buttons</h3>
 
       <!-- Button -->
-      <button class="button">Button</button>
+      <button class="button button-primary">Button</button>
 
       <!-- Input -->
-      <input class="button" type="submit" value="Input">
+      <input class="button button-primary" type="submit" value="Input">
 
       <!-- Hyperlink -->
-      <a class="button" href="">Hyperlink</a>
+      <a class="button button-primary" href="">Hyperlink</a>
 
       <p>
-        <button class="button button-small">Small button</button>
-        <button class="button">Default-size button</button>
-        <button class="button button-large">Large button</button>
+        <button class="button button-primary button-small">Small button</button>
+        <button class="button button-primary">Default-size button</button>
+        <button class="button button-primary button-large">Large button</button>
       </p>
 
       <p>
-        <button class="button button-block">Block width button</button>
+        <button class="button button-primary button-block">Block width button</button>
       </p>
 
       <p>
-        <button class="button">Default</button>
         <button class="button button-primary">Primary</button>
         <button class="button button-secondary">Secondary</button>
         <button class="button button-warning">Warning</button>
@@ -205,7 +258,6 @@
       <h3>Tabs</h3>
 
       <div class="tab-group">
-
         <div class="tab-label" data-tab="tab-e1">Tab Label 1</div>
         <div id="tab-e1" class="tab-card">
           <div class="tab-card-content">
@@ -213,7 +265,6 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
         </div>
-
         <div class="tab-label" data-tab="tab-e2">Tab Label 2</div>
         <div id="tab-e2" class="tab-card">
           <div class="tab-card-content">
@@ -221,7 +272,6 @@
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
         </div>
-
         <div class="tab-label" data-tab="tab-e3">Tab Label 3</div>
         <div id="tab-e3" class="tab-card">
           <div class="tab-card-content">
@@ -229,7 +279,6 @@
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
           </div>
         </div>
-
         <div class="tab-label" data-tab="tab-e4">Tab Label 4</div>
         <div id="tab-e4" class="tab-card">
           <div class="tab-card-content">
@@ -237,7 +286,39 @@
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </div>
         </div>
+      </div>
 
+      <h3>Side Tabs</h3>
+
+      <div class="tab-group side-tabs">
+        <div class="tab-label" data-tab="tab-e5">Tab Label 5</div>
+        <div id="tab-e5" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 5</p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-e6">Tab Label 6</div>
+        <div id="tab-e6" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 6</p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-e7">Tab Label 7</div>
+        <div id="tab-e7" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 7</p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-e8">Tab Label 8</div>
+        <div id="tab-e8" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 8</p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
       </div>
 
     </div>

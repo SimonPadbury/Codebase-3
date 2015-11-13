@@ -1,6 +1,10 @@
 // THEME: TABS
 // ===========
-// Note to web designer: you may need to change the z-index of .tab-label.is-front, depending on whether you have a border or not.
+
+$color-card-background: #fff;
+$color-tab-alt-background: #ddd;
+$color-tab-alt-background-hover: #ccc;
+$color-tab-alt-text: lighten($color-default-text, 25%);
 
 .tab-group {
     margin: $line-height 0;
@@ -8,20 +12,57 @@
         &-label {
             position: relative;
             margin-right: 4px;
-            padding: 10px 20px;
-            background: #ddd;
+            padding: 5px 15px;
+            color: $color-tab-alt-text;
+            background: $color-tab-alt-background;
+            box-shadow: inset 0 -10px 10px -10px #aaa;
+            &:hover {
+              color: $color-default-text;
+              background: $color-tab-alt-background-hover;
+            }
             &.is-front {
                 z-index: 3;
-                background: #fff
+                color: $color-default-text;
+                background: $color-card-background !important;
+                box-shadow: none;
             }
         }
         &-card {
             position: relative;
             z-index: 2;
+            margin-top: -2px;
             &-content {
                 padding: 10px 20px;
-                background: #fff;
+                background: $color-card-background;
             }
         }
     }
+}
+
+
+.side-tabs {
+  width: 100%;
+  background: yellow;
+  .tab {
+    &-label {
+      width: 150px;
+      clear: left;;
+      float: left;
+      margin-right: 0;
+      margin-bottom: 4px;
+      box-shadow: inset -10px 0 10px -10px #aaa;
+    }
+    &-card {
+      position: absolute;
+//      left: 170px;
+      float: right;
+      margin-top: 0;
+      margin-left: 150px;
+      &-content {
+        float: left;
+        width: calc(100% - 200px);
+        min-height: 200px;
+      }
+    }
+  }
 }

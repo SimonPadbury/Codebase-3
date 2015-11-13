@@ -9,7 +9,7 @@
   width: 49px;
   height: 49px;
   padding: 8px 13px;
-  color: $color-hyperlink;
+  color: $color-hyperlink-text;
 }
 @mixin theme-menubar-listlink {
   display: inline-block;
@@ -21,9 +21,11 @@
     max-height: 49px;
     padding-top: 49px;
     overflow: hidden;
-    transition: max-height 0.6s ease-in-out;
-    &-js-open {
+    transition: all 0.6s ease-in-out;
+    &-is-open {
       max-height: 568px; // iPhone 5 portrait
+      overflow-y: auto;
+      box-shadow: inset 0 -10px 10px -10px #aaa;
     }
     &-brand {
       margin-top: -49px;

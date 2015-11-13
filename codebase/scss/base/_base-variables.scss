@@ -2,15 +2,17 @@
 // ===============
 // Colors
 $color-default-text: #444;
-$color-hyperlink: #08c;
-$color-primary: $color-hyperlink;
-$color-secondary: lighten($color-primary, 20%);
-$color-warning: #f40;
-$color-success: #3b3;
+$color-alt-text: #fff; // for use on dark backgrounds e.g. in buttons
+$color-hyperlink-text: #08c;
+$color-hyperlink-text-hover: #03f;
+$color-primary-background: #08c;
+$color-secondary-background: #39f;
+$color-warning-background: #f44;
+$color-success-background: #2c4;
 
 // Base Typography
 $base-font-size: 18px;
-$line-height: $base-font-size * 1.618; // Golden ratio
+$line-height: $base-font-size * 1.618; // golden ratio
 
 // Reset Overlay
-$reset-overlay-is-raised-z-index: 100;
+$reset-overlay-is-raised-z-index: 100; // increase this if something you add causes a conflict

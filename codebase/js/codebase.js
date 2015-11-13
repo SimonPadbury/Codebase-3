@@ -12,6 +12,10 @@
     function reset_overlay() {
       // Put everything that needs .reset-overlay activity in here
       $('.reset-overlay').removeClass('reset-overlay-is-active');
+      $('.menubar').removeClass('menubar-is-open');
+      $('.menubar').animate({scrollTop:0},600);
+      $('.menubar-parent').removeClass('menubar-parent-is-toggled');
+      $('.menubar ul').removeClass('menubar-dropdown-is-revealed');
       $('.button-dropdown').removeClass('button-dropdown-is-revealed');
     }
 
@@ -27,7 +31,19 @@
 
     $('.menubar').prepend('<span class="menubar-toggle"><i class="mega-octicon octicon-three-bars"></i></span>');
     $('.menubar-toggle').click(function() {
-      $(this).closest('.menubar').toggleClass('menubar-js-open');
+      $(this).closest('.menubar').toggleClass('menubar-is-open');
+      $('.reset-overlay').toggleClass('reset-overlay-is-active');
+    });
+
+    // Menubar dropdowns
+
+    $('.menubar ul ul').parent().find('>a').addClass('menubar-parent').append('&nbsp;<i class="octicon octicon-triangle-down"></i>');
+    $('.menubar-parent').click(function(e) {
+      if (!$(this).hasClass('menubar-parent-is-toggled')) {
+        e.preventDefault();
+        $('.reset-overlay').addClass('reset-overlay-is-active');
+        $(this).toggleClass('menubar-parent-is-toggled').siblings('ul').toggleClass('menubar-dropdown-is-revealed');
+      }
     });
 
     // Button dropdowns

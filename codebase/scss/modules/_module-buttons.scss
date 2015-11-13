@@ -1,11 +1,7 @@
 // MODULE: BUTTONS
 // ===============
-$color-button-base-text: lighten($color-default-text, 25%);
-$color-button-base-text-hover: $color-default-text;
-$color-button-base-background: #ddd;
-$color-button-base-background-hover: #ccc;
-$color-button-alt-text: #fff;
-$color-button-alt-text-hover: $color-button-alt-text;
+
+// Mixins
 @mixin button-base {
   display: inline-block;
   width: auto;
@@ -13,51 +9,53 @@ $color-button-alt-text-hover: $color-button-alt-text;
   font-size: $base-font-size;
   line-height: $base-font-size;
   text-decoration: none;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
   &:hover {
     text-decoration: none;
-    color: $color-button-base-text-hover;
-    background: $color-button-base-background-hover;
+  }
+  &:active {
   }
 }
 @mixin button-colors {
-
-  // Default
-  color: $color-button-base-text;
-  background: $color-button-base-background;
-  &:hover {
-    color: $color-button-base-text-hover;
-    background: $color-button-base-background-hover;
-  }
   &-primary {
-    color: $color-button-alt-text;
-    background: $color-primary;
+    color: $color-alt-text;
+    background: $color-primary-background;
     &:hover {
-      color: $color-button-alt-text-hover;
-      background: darken($color-primary, 8%);
+      background: darken($color-primary-background, 8%);
+    }
+    &:active {
+      background: darken($color-primary-background, 12%);
     }
   }
   &-secondary {
-    color: $color-button-alt-text;
-    background: $color-secondary;
+    color: $color-alt-text;
+    background: $color-secondary-background;
     &:hover {
-      color: $color-button-alt-text-hover;
-      background: darken($color-secondary, 12%);
+      background: darken($color-secondary-background, 12%);
+    }
+    &:active {
+      background: darken($color-secondary-background, 20%);
     }
   }
   &-warning {
-    color: $color-button-alt-text;
-    background: $color-warning;
+    color: $color-alt-text;
+    background: $color-warning-background;
     &:hover {
-      color: $color-button-alt-text-hover;
-      background: darken($color-warning, 8%);
+      background: darken($color-warning-background, 8%);
+    }
+    &:active {
+      background: darken($color-warning-background, 14%);
     }
   }
   &-success {
-    color: $color-button-alt-text;
-    background: $color-success;
+    color: $color-alt-text;
+    background: $color-success-background;
     &:hover {
-      color: $color-button-alt-text-hover;
-      background: darken($color-success, 8%);
+      background: darken($color-success-background, 8%);
+    }
+    &:active {
+      background: darken($color-success-background, 12%);
     }
   }
 }
@@ -78,6 +76,7 @@ $color-button-alt-text-hover: $color-button-alt-text;
   }
 }
 @mixin button-dropdown {
+  position: relative;
   &-dropdown {
     &>span {
       display: none;

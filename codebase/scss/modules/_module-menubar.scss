@@ -20,23 +20,27 @@ $breakpoint-menubar: 1024px;
   padding: 0;
 }
 
-// NOTE: menubar descendant lists have not been styled for Codebase ver.1.
+// NOTE: menubar 'grandchild' etc. lists have not been styled for Codebase ver.1.
 @mixin menubar {
+  position: relative;
   &-left>ul,
   &-right>ul {
     @include nav-list;
   }
-  &-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    &:hover {
-      cursor: pointer;
-    }
-  }
   @include breakpoint-menubar-down {
     &-brand {
       position: absolute;
+    }
+    &-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &-is-open {
+      z-index: $reset-overlay-is-raised-z-index + 1;
     }
   }
   @include breakpoint-menubar-up {
@@ -54,6 +58,7 @@ $breakpoint-menubar: 1024px;
     }
     li {
       display: inline-block;
+      position: relative;
     }
     &-toggle {
       display: none;
@@ -61,6 +66,50 @@ $breakpoint-menubar: 1024px;
   }
   @include clearfix;
 }
+
+@mixin menubar-dropdown {
+  a {
+    position: relative;
+  }
+  .menubar-parent .octicon-triangle-down {
+    display: none;
+  }
+  ul ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: $line-height;
+  }
+  @include breakpoint-menubar-up {
+    .menubar-parent .octicon-triangle-down {
+      display: inline-block;
+    }
+    ul ul {
+      display: none;
+      position: absolute;
+      padding: 0;
+      background: #ddd;
+      li {
+        display: block;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+    &-right ul ul {
+      right: 0;
+    }
+    .menubar-parent-is-toggled {
+      background: #ddd;
+      z-index: $reset-overlay-is-raised-z-index + 1;
+    }
+    .menubar-dropdown-is-revealed {
+      display: block;
+      z-index: $reset-overlay-is-raised-z-index + 1;
+    }
+  }
+}
+
 .menubar {
   @include menubar;
+  @include menubar-dropdown;
 }
