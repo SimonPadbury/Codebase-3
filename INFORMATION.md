@@ -1,6 +1,6 @@
 #Rules for Codebase styling
 
-(1.) The SCSS folder/file organisation identifies what is a BASE object, a LAYOUT object, a MODULE object and THEME styling (following SMACSS and OOCSS).
+(1.) The SCSS folder/file organization identifies what is a BASE object, a LAYOUT object, a MODULE object and THEME styling (following SMACSS and OOCSS).
 
 (2.) All objects are to be coded as **mixins**, and then a **class** is then to be created with the same name.
 
@@ -21,7 +21,7 @@
 This is done so that:
 - things are kept DRY ("don't repeat yourself");
 - any of these mixins can easily be used or coped elsewhere;
-- designers/developers can use either mixins or classes to accomplish the same result frontend in the browser.
+- designers/developers can use either (a.) Codebase mixins included in their own classes, or (b.) Codebase classes, to accomplish the same result frontend in the browser.
 
 (3.) The mixin/class prefix **namespace** is unique to each **object**. This must be a single word; hyphens are only to be used for separating prefix, midfix and suffix. If necessary eliminate spaces within phrases to form a single word, e.g. 'menubar', 'searchform'. You may use camelCase if you prefer.
 
@@ -48,4 +48,4 @@ This is done so that:
 - `gridColumnMedium-span-X` has been reduced to `medium-span-X`.
 - ... etc.
 
-Also note that the names `grid`, `column`, `offset`, `push`, `pull` and `centered` are reserved class/mixin names, to be used only in the grid systems and not in any other module.)
+Also note that the names `grid`, `column`, `offset`, `push`, `pull` and `centered` are reserved class/mixin names, to be used only in grid systems and not in any other module.)

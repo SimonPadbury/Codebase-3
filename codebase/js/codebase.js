@@ -76,5 +76,27 @@
       $("#" + tab_id).addClass('is-front');
     });
 
+    // tabs-left
+
+    var biggestHeight = '0';
+
+    $('.tabs-left .tab-card').each(function() {
+        if ($(this).height() > biggestHeight ) {
+            biggestHeight = $(this).height();
+        }
+    });
+    
+    $('.tabs-left').height(biggestHeight);
+
+    /*
+    if ($('.tabs').hasClass('tabs-left')) {
+      var tabContentHeight = 0;
+      $.each($('.tabs-left').children('.tab-card'), function() {
+        tabContentHeight += $(this).height();
+      });
+      $('.tabs-left').height(tabContentHeight);
+    }
+    /**/
+
   });
 }(jQuery));

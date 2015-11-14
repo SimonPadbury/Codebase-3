@@ -1,13 +1,28 @@
 // MODULES: TABS
 // =============
 
-.tab {
-    &-group {
-        font-size: 0;
-        @include clearfix;
+.tabs {
+  margin: $line-height 0;
+  font-size: 0;
+  @include clearfix;
+  // Tabs Top
+  &-top {
+    .tab-label {
+      display: inline-block;
     }
+  }
+  // Tabs Left
+  &-left {
+    position: relative;
+    overflow-x: hidden;
+  }
+  // Tabs as Accordion
+  &-accordion {
+    position: relative;
+  }
+}
+.tab {
     &-label {
-        display: inline-block;
         font-size: $base-font-size;
         &:hover {
             cursor: pointer
