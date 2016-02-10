@@ -1,9 +1,12 @@
 // CODEBASE
 // ========
 
-(function($) {
+/* jslint browser: true */
+/* global $, jQuery */
+
+(function ($) {
   "use strict";
-  $(document).ready(function() {
+  $(document).ready(function () {
 
     // Reset overlay
 
@@ -13,32 +16,35 @@
       // Put everything that needs .reset-overlay activity in here
       $('.reset-overlay').removeClass('reset-overlay-is-active');
       $('.menubar').removeClass('menubar-is-open');
-      $('.menubar').animate({scrollTop:0},600);
+      $('.menubar').animate({scrollTop: 0}, 600);
       $('.menubar-parent').removeClass('menubar-parent-is-toggled');
       $('.menubar ul').removeClass('menubar-dropdown-is-revealed');
       $('.button-dropdown').removeClass('button-dropdown-is-revealed');
     }
 
-    $('.reset-overlay').click(function() {
+    $('.reset-overlay').click(function () {
       reset_overlay();
     });
 
-    $(window).resize(function() {
+    $(window).resize(function () {
       reset_overlay();
     });
 
     // Menubar
 
     $('.menubar').prepend('<span class="menubar-toggle"><i class="mega-octicon octicon-three-bars"></i></span>');
-    $('.menubar-toggle').click(function() {
+    $('.menubar-toggle').click(function () {
       $(this).closest('.menubar').toggleClass('menubar-is-open');
       $('.reset-overlay').toggleClass('reset-overlay-is-active');
     });
+    if ($('.menubar').hasClass('menubar-fixed')) {
+      $('body').css('padding-top', '50px');
+    } 
 
     // Menubar dropdowns
 
     $('.menubar ul ul').parent().find('>a').addClass('menubar-parent').append('&nbsp;<i class="octicon octicon-triangle-down"></i>');
-    $('.menubar-parent').click(function(e) {
+    $('.menubar-parent').click(function (e) {
       if (!$(this).hasClass('menubar-parent-is-toggled')) {
         e.preventDefault();
         $('.reset-overlay').addClass('reset-overlay-is-active');
@@ -46,10 +52,16 @@
       }
     });
 
+    // Pagination
+    
+    $('.pagination .current a, .pagination .current').click(function (e) {
+      e.preventDefault();
+    });
+    
     // Button dropdowns
 
     $('.button-dropdown').append('&nbsp;<i class="octicon octicon-triangle-down"></i>');
-    $('.button-dropdown').click(function(e) {
+    $('.button-dropdown').click(function (e) {
       e.preventDefault();
       if (!$(this).hasClass('button-dropdown-is-revealed')) {
         $(this).addClass('button-dropdown-is-revealed');
@@ -58,7 +70,7 @@
         reset_overlay();
       }
     });
-    $('.button-dropdown span').click(function(e) {
+    $('.button-dropdown span').click(function (e) {
       e.stopPropagation();
     });
 
@@ -67,7 +79,7 @@
     $('.tab-label:first-of-type').addClass('is-front');
     $('.tab-label:first-of-type + .tab-card').addClass('is-front');
 
-    $('.tab-label').click(function() {
+    $('.tab-label').click(function () {
       var tab_id = $(this).attr('data-tab');
 
       $(this).siblings().removeClass('is-front');
@@ -80,10 +92,10 @@
 
     var biggestHeight = '0';
 
-    $('.tabs-left .tab-card').each(function() {
-        if ($(this).height() > biggestHeight ) {
-            biggestHeight = $(this).height();
-        }
+    $('.tabs-left .tab-card').each(function () {
+      if ($(this).height() > biggestHeight) {
+        biggestHeight = $(this).height();
+      }
     });
     
     $('.tabs-left').height(biggestHeight);
@@ -96,7 +108,7 @@
       });
       $('.tabs-left').height(tabContentHeight);
     }
-    /**/
+    */
 
   });
 }(jQuery));

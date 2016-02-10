@@ -6,20 +6,21 @@
   display: inline-block;
   width: auto;
   border: 0;
+  border-radius: 4px;
   font-size: $base-font-size;
   line-height: $base-font-size;
+  color: $color-alt-text;
   text-decoration: none;
-  border-bottom: 3px solid rgba(0,0,0,0.2);
-  border-radius: 4px;
   &:hover {
+    color: $color-alt-text;
     text-decoration: none;
   }
   &:active {
+    color: $color-alt-text;
   }
 }
 @mixin button-colors {
   &-primary {
-    color: $color-alt-text;
     background: $color-primary-background;
     &:hover {
       background: darken($color-primary-background, 8%);
@@ -29,7 +30,6 @@
     }
   }
   &-secondary {
-    color: $color-alt-text;
     background: $color-secondary-background;
     &:hover {
       background: darken($color-secondary-background, 12%);
@@ -39,7 +39,6 @@
     }
   }
   &-warning {
-    color: $color-alt-text;
     background: $color-warning-background;
     &:hover {
       background: darken($color-warning-background, 8%);
@@ -49,7 +48,6 @@
     }
   }
   &-success {
-    color: $color-alt-text;
     background: $color-success-background;
     &:hover {
       background: darken($color-success-background, 8%);
@@ -89,7 +87,7 @@
         z-index: $reset-overlay-is-raised-z-index + 1;
         margin: 10px 0 0 -20px;
         padding: 10px 20px;
-        background: #ddd;
+        background: #eee;
         color: $color-default-text;
         text-align: left;
         cursor: default;

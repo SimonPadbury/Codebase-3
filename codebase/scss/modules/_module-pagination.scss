@@ -12,10 +12,13 @@
   }
   a {
     display: inline-block;
-    &.current {
-      text-decoration: none;
-    }
-    &.current:hover {
+  }
+  .current,
+  .current a {
+    color: $color-default-text;
+    text-decoration: none;
+      &:hover {
+      color: $color-default-text;
       cursor: default;
     }
   }

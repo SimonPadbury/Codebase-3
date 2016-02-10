@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Docs | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+  <link rel="stylesheet" href="codebase/css/codebase.css">
+</head>
+
+<body>
+
+  <nav class="menubar menubar-fixed codebase-docs">
+    <div class="menubar-left">
+      <div class="menubar-brand">
+        <a href="#/"><span>Codebase</span></a>
+      </div>
+    </div>
+    <div class="menubar-right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="grid grid-gutter">
+    <div class="column">
+      <h1>Codebase v.0.6 Docs</h1>
+      
+      <p>Codebase is still in "immature" development. Everything you see here is functional, committed and ready to use in your project &mdash; don't be concerned about the version zero-point- status. More components are planned to be added in future.</p>
+      
+      <p>In developing Codebase, these <a href="https://github.com/SimonPadbury/Codebase/blob/master/INFORMATION.md" target="_blank">rules for Codebase styling</a> are being followed.</p>
+      
+      <p>Currently these docs are simply a single demo page with minimum explanation.</p>
+      
+      <p>(<b>Note:</b> the docs body background has been set to pale gray so that module instances can be indicated with a white background.)</p>
+    </div>
+  </header>
+
+  <hr>
+  
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h2>Grid System</h2>
+      
+      <p>Three flavours of grid have been provided (<b>Classic</b>, <b>Semantic</b> and <b>Flexbox</b>). These all have similar display behaviour:</p>
+      
+      <ul>
+        <li>12 column, but you can change this simply by modifying the <code>$grid-max-columns</code> variable in your chosen grid flavour</li>
+        <li>Flexible &ndash; columns set using <code>max-width</code>, not <code>width</code></li>
+        <li>Responsive &ndash; media query breakpoint widths: 768px, 1024px and 1200px &ndash; you can modify these in <code>scss/base/_base-breakpoints.scss</code></li>
+        <li>Push/pullable (or in case of the flexbox grid, reorderable)</li>
+        <li>Offsetable</li>
+        <li>Nestable</li>
+        <li>(single column) centerable</li>
+      </ul>
+      
+      <p>In addition, visibility classes have been provided, for showing/hiding items at different breakpoints.</p>
+      
+      <p><b>Note:</b> while all three grids have been included in this Repo instance of Codebase, users are encouraged to <code>@include</code> only their flavour of choice.</p>
+      
+      <p>The following examples behave the same at different window widths (unless your browser is so old that cannot handle flexbox):</p>
+      
+      <h3>Classic Grid</h3>
+    </div>
+  </section>
+
+  <section class="grid grid-gutter grid-demo">
+    <div class="column medium-span-8 large-push-4">
+      <span>Article<br><code>column medium-span-8 large-push-4</code></span>
+      <section class="grid grid-gutter grid-nested grid-demo">
+        <div class="column small-span-4">
+          <span>Nested<br><code>column small-span-4</code></span>
+        </div>
+        <div class="column small-span-4">
+          <span>Nested<br><code>column small-span-4</code></span>
+        </div>
+        <div class="column small-span-4">
+          <span>Nested<br><code>column small-span-4</code></span>
+        </div>
+      </section>
+    </div>
+    <div class="column medium-span-4 large-pull-8">
+      <span>Aside<br><code>column medium-span-4 large-pull-8</code></span>
+    </div>
+  </section>
+  <section class="grid grid-gutter grid-demo">
+    <div class="column small-span-7 column-centered">Centered<br><code>column small-span-7 column-centered</code></div>
+  </section>
+
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h3>SCSS Semantic Grid</h3>
+    </div>
+  </section>
+
+  <section class="grid-semantic-wrapper">
+    <div class="grid-semantic-article">Article
+      <section class="grid-semantic-nested">
+        <div>Nested</div>
+        <div>Nested</div>
+        <div>Nested</div>
+      </section>
+    </div>
+    <div class="grid-semantic-aside">Aside</div>
+  </section>
+  <section class="grid-semantic-wrapper">
+    <div class="grid-semantic-centered">Centered</div>
+  </section>
+
+  <section class="grid grid-gutter">
+    <div class="column">
+      <h3>Flexbox Grid</h3>
+    </div>
+  </section>
+
+  <section class="grid-flexbox-wrapper">
+    <div class="grid-flexbox-article">Article
+      <section class="grid-flexbox-nested">
+        <div>Nested</div>
+        <div>Nested</div>
+        <div>Nested</div>
+      </section>
+    </div>
+    <div class="grid-flexbox-aside">Aside</div>
+  </section>
+  <section class="grid-flexbox-wrapper">
+    <div class="grid-flexbox-centered">Centered</div>
+  </section>
+
+  <section class="grid grid-gutter">
+    <div class="column">
+
+      <h2>Box Object</h2>
+      
+      <p>(a.k.a. OOCSS media object)</p>
+
+      <div class="box">
+        <div class="box-header">Box Header</div>
+        <div class="box-media box-media-left">
+          <a href="">
+            <img src="holder.js/96x96" alt="Square Thumbnail">
+          </a>
+        </div>
+        <div class="box-content">
+          <h3 class="box-title">Box Title</h3>
+          <div class="box-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <!-- Nested `.box` -->
+            <div class="box">
+              <div class="box-media box-media-left">
+                <a href="">
+                  <img src="holder.js/96x96" alt="Square Thumbnail">
+                </a>
+              </div>
+              <div class="box-content">
+                <h3 class="box-title">Box Title</h3>
+                <div class="box-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Nested `.box` -->
+            <div class="box">
+              <div class="box-media box-media-left">
+                <a href="">
+                  <img src="holder.js/96x96" alt="Square Thumbnail">
+                </a>
+              </div>
+              <div class="box-content">
+                <h3 class="box-title">Box Title</h3>
+                <div class="box-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-footer">Box Footer</div>
+      </div>
+
+      <h2>Menubar</h2>
+      
+      <p>The menubar is displayed as for Menu (below) at smaller window widths. When displated as a menubar, parent links can be <b>clicked once</b> to reveal the dropdown menu, and <b>clicked again</b> to follow the parent link.</p>
+      
+      <p>Click outside the dropdown menu to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).</p>
+
+      <p>So far, styling has only been developed as far as child links (i.e. not sub-sub menus, etc).</p>
+      
+      <nav class="menubar">
+        <div class="menubar-left">
+          <div class="menubar-brand">
+            <a href="#/">Brand</a>
+          </div>
+        </div>
+        <div class="menubar-left">
+          <ul>
+            <li><a href="#/">Link</a></li>
+            <li>
+              <a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Dropdown link</a></li>
+                <li><a href="#/">Dropdown link</a></li>
+                <li><a href="#/">Dropdown link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+        <div class="menubar-right">
+          <ul>
+            <li><a href="#/">Link</a></li>
+            <li>
+              <a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Dropdown link</a></li>
+                <li><a href="#/">Dropdown link</a></li>
+                <li><a href="#/">Dropdown link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <h2>Menu</h2>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a>
+            <ul>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+            </ul>
+          </li>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a></li>
+        </ul>
+      </nav>
+
+      <h2>Pagination</h2>
+      
+      <p>The <code>.current</code> page link is rendered unfollowable by jQuery.</p>
+      
+      <p>You can apply the <code>.current</code> class (rename it if you need to) to either the <code>&lt;li&gt;</code> or the <code>&lt;a&gt;</code> &ndash; whichever suits the CMS system you are theming.</p>
+
+      <nav class="pagination">
+        <ul>
+          <li><a class="prev" href=""><i class="octicon octicon-arrow-left"></i> Newer</a></li>
+          <li><a href="#/">1</a></li>
+          <li><a class="current" href="http://google.com">2</a></li>
+          <li><a href="#/">3</a></li>
+          <li><a href="#/">4</a></li>
+          <li><a href="#/">5</a></li>
+          <li><a class="next" href="#/">Older <i class="octicon octicon-arrow-right"></i></a></li>
+        </ul>
+      </nav>
+
+      <h2>Buttons</h2>
+
+      <!-- Button -->
+      <button class="button button-primary">Button</button>
+
+      <!-- Input -->
+      <input class="button button-primary" type="submit" value="Input">
+
+      <!-- Hyperlink -->
+      <a class="button button-primary" href="#/">Hyperlink</a>
+
+      <p>
+        <button class="button button-primary button-small">Small button</button>
+        <button class="button button-primary">Default-size button</button>
+        <button class="button button-primary button-large">Large button</button>
+      </p>
+
+      <p>
+        <button class="button button-primary button-block">Block width button</button>
+      </p>
+
+      <p>
+        <button class="button button-primary">Primary</button>
+        <button class="button button-secondary">Secondary</button>
+        <button class="button button-warning">Warning</button>
+        <button class="button button-success">Success</button>
+      </p>
+
+      <p>
+        <button class="button button-success">Call to action <i class="octicon octicon-chevron-right"></i></button>
+        <button class="button button-secondary"><i class="octicon octicon-file-directory"></i> Archive</button>
+        <button class="button button-primary"><i class="octicon octicon-person"></i> User</button>
+        <button class="button button-warning">Close <i class="octicon octicon-x"></i></button>
+      </p>
+
+      <p>
+        <button class="button button-primary button-dropdown">
+          Button with dropdown
+          <span>
+            Example dropdown
+          </span>
+        </button>
+      </p>
+      
+      <p>Besides clicking the button with dropdown again, you can click outside the dropdown to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).</p>
+
+      <h2>Tab System</h2>
+      
+      <p>The tab system comes in three flavours (<b>top</b>, <b>side</b> and <b>accordion</b>).</p>
+      
+      <h3>Top Tabs</h3>
+
+      <div class="tabs tabs-top">
+        <div class="tab-label" data-tab="tab-docs1">Tab Label 1</div>
+        <div id="tab-docs1" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 1</p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs2">Tab Label 2</div>
+        <div id="tab-docs2" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 2</p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs3">Tab Label 3</div>
+        <div id="tab-docs3" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 3</p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs4">Tab Label 4</div>
+        <div id="tab-docs4" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 4</p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+
+      <h3>Side Tabs</h3>
+
+      <div class="tabs tabs-left">
+        <div class="tab-label" data-tab="tab-docs5">Tab Label 5</div>
+        <div id="tab-docs5" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 5</p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs6">Tab Label 6</div>
+        <div id="tab-docs6" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 6</p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs7">Tab Label 7</div>
+        <div id="tab-docs7" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 7</p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs8">Tab Label 8</div>
+        <div id="tab-docs8" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 8</p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+
+      <h3>Accordion Tabs</h3>
+
+      <div class="tabs tabs-accordion">
+        <div class="tab-label" data-tab="tab-docs9">Tab Label 9</div>
+        <div id="tab-docs9" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 9</p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs10">Tab Label 10</div>
+        <div id="tab-docs10" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 10</p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs11">Tab Label 11</div>
+        <div id="tab-docs11" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 11</p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+        </div>
+        <div class="tab-label" data-tab="tab-docs12">Tab Label 12</div>
+        <div id="tab-docs12" class="tab-card">
+          <div class="tab-card-content">
+            <p>Tab Content 12</p>
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="codebase/js/codebase.js"></script>
+
+</body>
+
+</html>

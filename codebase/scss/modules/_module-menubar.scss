@@ -20,9 +20,16 @@ $breakpoint-menubar: 1024px;
   padding: 0;
 }
 
-// NOTE: menubar 'grandchild' etc. lists have not been styled for Codebase ver.1.
+// NOTE: menubar 'grandchild' etc. lists have not been styled yet.
 @mixin menubar {
   position: relative;
+  &-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $reset-overlay-is-raised-z-index + 1;
+    border-bottom: 1px solid #eee;
+  }
   &-left>ul,
   &-right>ul {
     @include nav-list;
@@ -37,6 +44,9 @@ $breakpoint-menubar: 1024px;
       right: 0;
       &:hover {
         cursor: pointer;
+      }
+      i:hover {
+        color: $color-hyperlink-text-hover;
       }
     }
     &-is-open {
@@ -87,7 +97,7 @@ $breakpoint-menubar: 1024px;
       display: none;
       position: absolute;
       padding: 0;
-      background: #ddd;
+      background: #eee;
       li {
         display: block;
       }
@@ -99,7 +109,7 @@ $breakpoint-menubar: 1024px;
       right: 0;
     }
     .menubar-parent-is-toggled {
-      background: #ddd;
+      background: #eee;
       z-index: $reset-overlay-is-raised-z-index + 1;
     }
     .menubar-dropdown-is-revealed {

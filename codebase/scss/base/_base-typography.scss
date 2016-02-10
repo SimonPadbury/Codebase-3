@@ -6,6 +6,7 @@ p,
 li {
   font-size: $base-font-size;
   line-height: $line-height;
+  color: $color-default-text;
 }
 h1 {
   font-size: $base-font-size * 1.75;
@@ -90,7 +91,7 @@ hr {
   margin: $line-height 0;
   border: 0;
   border-top: 1px solid #ddd;
-  background: #ddd;
+  background: #eee;
 }
 blockquote {
   margin: $line-height;
@@ -101,5 +102,30 @@ a {
   &:hover {
     color: $color-hyperlink-text-hover;
     text-decoration: underline;
+  }
+}
+
+// Code formatting
+
+pre,
+code {
+  font-size: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
   }
 }

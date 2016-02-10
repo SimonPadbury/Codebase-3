@@ -13,11 +13,11 @@
 
 // Layout
 // ------
-// Import either `layout-grid-classic`, `layout-grid-mixers` or `layout-grid-flexbox` but not both -
-// whatever you choose. (However, all will be included in this repository.)
+// In your final design, import EITHER `layout-grid-classic` OR `layout-grid-semanic` OR `layout-grid-flexbox` - whatever you choose. 
+// (However, all will be included in this repository for demonstration purposes.)
 
 @import 'layout/layout-grid-classic';
-@import 'layout/layout-grid-mixers';
+@import 'layout/layout-grid-semantic';
 @import 'layout/layout-grid-flexbox';
 @import 'layout/layout-visibility';
 @import 'layout/layout-box'; // a.k.a. OOCSS media object

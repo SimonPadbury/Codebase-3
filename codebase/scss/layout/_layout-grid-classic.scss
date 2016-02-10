@@ -1,198 +1,186 @@
 // CLASSIC GRID
 // ============
-
 // Grid Variables
 // --------------
 // Breakpoint variables were set in `base/_base-breakpoints.scss`.
-
-$grid-max-columns:           12;
-$grid-gutter-width-tiny:     20px;
-$grid-gutter-width-small:    24px;
-$grid-gutter-width-medium:   36px;
-$grid-gutter-width-large:    48px;
-$grid-max-width:             1280px;
-
+$grid-max-columns: 12;
+$grid-gutter-width-tiny: 20px;
+$grid-gutter-width-small: 24px;
+$grid-gutter-width-medium: 36px;
+$grid-gutter-width-large: 48px;
+$grid-max-width: 1280px;
 // Column Control Mixins
 // ---------------------
 // Used by the column builders.
-
 @mixin span($span, $grid-max-columns: 12) {
-    width: (100% / $grid-max-columns) * $span;
+  width: (100% / $grid-max-columns) * $span;
 }
 
 @mixin offset($offset, $grid-max-columns: 12) {
-    margin-left: (100% / $grid-max-columns) * $offset;
+  margin-left: (100% / $grid-max-columns) * $offset;
 }
 
 @mixin push($push, $grid-max-columns: 12) {
-    left: (100% / $grid-max-columns) * $push;
+  left: (100% / $grid-max-columns) * $push;
 }
 
 @mixin pull($pull, $grid-max-columns: 12) {
-    right: (100% / $grid-max-columns) * $pull;
+  right: (100% / $grid-max-columns) * $pull;
 }
 
 // Column Class Builder Mixins
 // ---------------------------
 // The outputted classes from these builders will be prefixed with `breakpoints` when they are @included in the Breakpoint Column Classes (below).
 // To be used on a per-column basis.
-
 @mixin column-span {
-    &-span {
-        @for $i from 1 through $grid-max-columns {
-            &-#{$i} {
-                @include span($i);
-            }
-        }
+  &-span {
+    @for $i from 1 through $grid-max-columns {
+      &-#{$i} {
+        @include span($i);
+      }
     }
+  }
 }
 
 @mixin column-offset {
-    &-offset {
-        @for $i from 1 through $grid-max-columns {
-            &-#{$i} {
-                @include offset($i);
-            }
-        }
+  &-offset {
+    @for $i from 1 through $grid-max-columns {
+      &-#{$i} {
+        @include offset($i);
+      }
     }
+  }
 }
 
 @mixin column-push {
-    &-push {
-        @for $i from 1 through $grid-max-columns {
-            &-#{$i} {
-                @include push($i);
-            }
-        }
+  &-push {
+    @for $i from 1 through $grid-max-columns {
+      &-#{$i} {
+        @include push($i);
+      }
     }
+  }
 }
 
 @mixin column-pull {
-    &-pull {
-        @for $i from 1 through $grid-max-columns {
-            &-#{$i} {
-                @include pull($i);
-            }
-        }
+  &-pull {
+    @for $i from 1 through $grid-max-columns {
+      &-#{$i} {
+        @include pull($i);
+      }
     }
+  }
 }
 
 // Grid Container
 // --------------
-
 .grid {
-    margin: 0 auto;
-    max-width: $grid-max-width;
-    @include clearfix;
+  margin: 0 auto;
+  max-width: $grid-max-width;
+  @include clearfix;
 }
 
 // Grid with Gutter between Columns
 // --------------------------------
 // Include `grid-gutter` in your GRID container class, not in each column.
-
 @mixin grid-gutter {
-    > * {
-        padding: 0 ($grid-gutter-width-tiny / 2);
-        @include breakpoint-small-up {
-            padding-right: $grid-gutter-width-small / 2;
-            padding-left: $grid-gutter-width-small / 2;
-        }
-        @include breakpoint-medium-up {
-            padding-right: $grid-gutter-width-medium / 2;
-            padding-left: $grid-gutter-width-medium / 2;
-        }
-        @include breakpoint-large-up {
-            padding-right: $grid-gutter-width-large / 2;
-            padding-left: $grid-gutter-width-large / 2;
-        }
+  > * {
+    padding: 0 ($grid-gutter-width-tiny / 2);
+    @include breakpoint-small-up {
+      padding-right: $grid-gutter-width-small / 2;
+      padding-left: $grid-gutter-width-small / 2;
     }
+    @include breakpoint-medium-up {
+      padding-right: $grid-gutter-width-medium / 2;
+      padding-left: $grid-gutter-width-medium / 2;
+    }
+    @include breakpoint-large-up {
+      padding-right: $grid-gutter-width-large / 2;
+      padding-left: $grid-gutter-width-large / 2;
+    }
+  }
 }
-.grid-gutter { 
-    @include grid-gutter;
+
+.grid-gutter {
+  @include grid-gutter;
 }
 
 // Nested Grid
 // -----------
 // Only include `grid-nested` on a NESTED grid container IF the parent grid has a gutter.
-
 @mixin grid-nested {
-    margin-right: -($grid-gutter-width-tiny / 2);
-    margin-left: -($grid-gutter-width-tiny / 2);
-    @include breakpoint-small-up {
-        margin-right: -($grid-gutter-width-small / 2);
-        margin-left: -($grid-gutter-width-small / 2);
-    }
-    @include breakpoint-medium-up {
-        margin-right: -($grid-gutter-width-medium / 2);
-        margin-left: -($grid-gutter-width-medium / 2);
-    }
-    @include breakpoint-large-up {
-        margin-right: -($grid-gutter-width-large / 2);
-        margin-left: -($grid-gutter-width-large / 2);
-    }
+  margin-right: -($grid-gutter-width-tiny / 2);
+  margin-left: -($grid-gutter-width-tiny / 2);
+  @include breakpoint-small-up {
+    margin-right: -($grid-gutter-width-small / 2);
+    margin-left: -($grid-gutter-width-small / 2);
+  }
+  @include breakpoint-medium-up {
+    margin-right: -($grid-gutter-width-medium / 2);
+    margin-left: -($grid-gutter-width-medium / 2);
+  }
+  @include breakpoint-large-up {
+    margin-right: -($grid-gutter-width-large / 2);
+    margin-left: -($grid-gutter-width-large / 2);
+  }
 }
+
 .grid-nested {
-    @include grid-nested;
+  @include grid-nested;
 }
 
 // Column Base
 // -----------
-
 .column {
-    // Relative position is required for column push/pull
-    position: relative;
-    // box-sizing: border-box; // Has been added as a global (base) mixin already.
-    min-height: 1px;
-    width: 100%;
-    float: left;
-    // for centering a (single) column
-    &-centered {
-        float: none !important;
-        margin-right: auto;
-        margin-left: auto;
-    }
+  // Relative position is required for column push/pull
+  position: relative;
+  // box-sizing: border-box; // Has been added as a global (base) mixin already.
+  min-height: 1px;
+  width: 100%;
+  float: left;
+  // for centering a (single) column
+  &-centered {
+    float: none !important;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 // Responsive Column Classes
 // -------------------------
 // @including all the machinery
-
 // Tiny
-
 .tiny {
-    @include column-span;
-    @include column-offset;
+  @include column-span;
+  @include column-offset;
 }
 
 // Small
-
 .small {
-    @include breakpoint-small-up {
-        @include column-span;
-        @include column-offset;
-        @include column-push;
-        @include column-pull;
-	}
+  @include breakpoint-small-up {
+    @include column-span;
+    @include column-offset;
+    @include column-push;
+    @include column-pull;
+  }
 }
 
 // Medium
-
 .medium {
-    @include breakpoint-medium-up {
-        @include column-span;
-        @include column-offset;
-        @include column-push;
-        @include column-pull;
-	}
+  @include breakpoint-medium-up {
+    @include column-span;
+    @include column-offset;
+    @include column-push;
+    @include column-pull;
+  }
 }
 
 // Large
-
 .large {
-    @include breakpoint-large-up {
-        @include column-span;
-        @include column-offset;
-        @include column-push;
-        @include column-pull;
-	}
+  @include breakpoint-large-up {
+    @include column-span;
+    @include column-offset;
+    @include column-push;
+    @include column-pull;
+  }
 }

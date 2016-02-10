@@ -1,5 +1,17 @@
-// THEME BASE
-// ==========
+// THEME BASE - EXAMPLE
+// ====================
+
 body {
-  background: #e9e9e9;
+  background: #f9f9f9;
+}
+
+.menubar.codebase-docs {
+  .menubar-brand a {
+    padding-left: 46px;
+    color: #4d4d4d;
+    font-size: 24px;
+    font-weight: lighter;
+    background: url(../../images/codebase-logo.svg) 9px 9px no-repeat;
+    background-size: 30px auto;
+  }
 }
