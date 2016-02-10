@@ -8,10 +8,8 @@
 // EXAMPLE
 // =======
 
-@mixin menubar-list {...}
-// And other mixins that style various elements and states of the menubar.
-
 @mixin menubar {...}
+// And other mixins that style various elements and states of the menubar.
 
 .menubar {
     @include menubar;
