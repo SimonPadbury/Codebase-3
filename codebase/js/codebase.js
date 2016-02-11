@@ -100,15 +100,5 @@
     
     $('.tabs-left').height(biggestHeight);
 
-    /*
-    if ($('.tabs').hasClass('tabs-left')) {
-      var tabContentHeight = 0;
-      $.each($('.tabs-left').children('.tab-card'), function() {
-        tabContentHeight += $(this).height();
-      });
-      $('.tabs-left').height(tabContentHeight);
-    }
-    */
-
   });
 }(jQuery));
