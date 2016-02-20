@@ -827,8 +827,7 @@ iframe {
   text-decoration: none;
   padding: 10px 20px;
   position: relative; }
-  .button input[type="button"],
-  .button input[type="submit"] {
+  .button[type="button"], .button[type="submit"] {
     -webkit-appearance: none;
     border-radius: 0; }
   .button:hover {
