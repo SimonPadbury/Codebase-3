@@ -14,7 +14,7 @@
   &[type="button"],
   &[type="submit"] {
     -webkit-appearance: none;
-    border-radius: 0;
+    border-radius: 4px;
   }
   &:hover {
     color: $color-alt-text;
