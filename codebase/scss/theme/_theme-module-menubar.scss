@@ -24,8 +24,8 @@
     transition: all 0.6s ease-in-out;
     &-is-open {
       max-height: 568px; // iPhone 5 portrait
+      border-bottom: 1px solid #eee;
       overflow-y: auto;
-      box-shadow: inset 0 -10px 10px -10px #aaa;
     }
     &-brand {
       margin-top: -49px;

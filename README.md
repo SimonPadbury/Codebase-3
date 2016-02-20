@@ -6,4 +6,6 @@ SCSS / jQuery component library.
 
 In development.
 
-Docs here: [http://simonpadbury.github.io/Codebase/](http://simonpadbury.github.io/Codebase/)
+Codebase docs: [http://simonpadbury.github.io/Codebase/](http://simonpadbury.github.io/Codebase/)
+
+My blog: [http://simonpadbury.github.io](http://simonpadbury.github.io)
