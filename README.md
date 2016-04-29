@@ -1,6 +1,6 @@
 # Codebase
 
-**v.0.6**
+**v.0.7**
 
 SCSS / jQuery component library.
 
