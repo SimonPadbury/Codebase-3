@@ -1,0 +1,52 @@
+// MODULES: FORMS
+// ==============
+
+form.stacked {
+	input, textarea {
+		margin-bottom: 10px
+	}
+}
+
+@mixin form-element {
+  outline: 0 none;
+	border: 1px solid #ddd;
+	padding: 8px 10px;
+	color: #999;
+	&:focus {
+		border-color: #999
+	}
+}
+
+input[type="text"],
+input[type="password"] {
+  @include form-element;
+  line-height: 1;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 10px
+}
+
+textarea {
+  @include form-element;
+	display: block;
+	width: 100%;
+	vertical-align: top;
+	line-height: 1.25;
+	overflow: auto;
+}
+
+select {
+  @include form-element;
+}
+
+// Hide form placeholders on focus
+
+input:focus::-webkit-input-placeholder { color: transparent }
+input:focus:-moz-placeholder { color: transparent }
+input:focus::-moz-placeholder { color: transparent }
+textarea:focus::-webkit-input-placeholder { color: transparent }
+textarea:focus:-moz-placeholder { color: transparent }
+textarea:focus::-moz-placeholder { color: transparent }
