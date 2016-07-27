@@ -22,7 +22,7 @@
 }
 
 @mixin reset-overlay--darken {
-  background: rgba(0,0,0,0.6);
+  background: $color-reset-overlay--darken;
 }
 
 // Prevent body scrolling of page content behind the reset overlay

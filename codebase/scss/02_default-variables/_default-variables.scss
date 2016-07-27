@@ -115,11 +115,11 @@ $box-shadow-inner-left: inset 5px 0 5px -5px rgba(0,0,0,0.2) !default;
 
 $reset-overlay--z-index: 100 !default;
 // Increase this if something you add causes a conflict.
-
 $reset-overlay--z-index-higher: $reset-overlay--z-index + 10 !default;
 // Use $reset-overlay--z-index-higher on occasions when you know you need
 // the overlay to also cover something on a layer above the webpage (e.g.
 // over a fixed menubar).
+$color-reset-overlay--darken: rgba(0,0,0,0.6);
 
 // ******
 // Layout
