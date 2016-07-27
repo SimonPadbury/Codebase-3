@@ -1,0 +1,21 @@
+// DECORATION MIXINS: SHADOWS
+// ==========================
+
+.deco-bs {
+  box-shadow: $box-shadow;
+}
+.deco-bs-inner {
+  box-shadow: $box-shadow-inner;
+}
+.deco-bs-inner-top {
+  box-shadow: $box-shadow-inner-top;
+}
+.deco-bs-inner-right {
+  box-shadow: $box-shadow-inner-right;
+}
+.deco-bs-inner-bottom {
+  box-shadow: $box-shadow-inner-bottom;
+}
+.deco-bs-inner-left {
+  box-shadow: $box-shadow-inner-left;
+}

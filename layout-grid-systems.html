@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Grid systems | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <div class="codebase-docs__page">
+
+<nav class="menubar codebase-docs__menubar">
+  <div class="menubar__brand">
+    <a href="index.html"><span>Codebase</span></a>
+  </div>
+  <div class="menubar__content show--tiny-only">
+    <div class="menubar__right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="codebase-docs__header">
+    <div class="grid grid--gutter">
+      <div class="column small--span-12">
+        <h1>Grid Systems</h1>
+      </div>
+    </div>
+  </header>
+
+  <div class="codebase-docs__main">
+
+  <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
+    <ul class="menu hide--small-up">
+      <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+    </ul>
+
+    <h4> Codebase Docs</h4>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classless-defaults.html">Classless defaults</a>
+        <ul>
+            <li><a href="classless-typography.html">Typography</a></li>
+            <li><a href="classless-forms.html">Forms</a></li>
+        </ul>
+      </li>
+      <li><a href="decoration.html">Decoration</a></li>
+      <li><a href="layout.html">Layout</a>
+        <ul>
+          <li><a href="layout-classic-grid.html">Classic grid</a></li>
+          <li><a href="layout-semantic-grid.html">Semantic grid</a></li>
+          <li><a href="layout-flexbox-grid.html">Flexbox grid</a></li>
+        </ul>
+      </li>
+      <li><a href="utilities.html">Utilities</a>
+        <ul>
+          <li><a href="utilities-typography.html">Typography</a></li>
+          <li><a href="utilities-forms.html">Forms</a></li>
+          <li><a href="utilities-images.html">Images</a></li>
+          <li><a href="utilities-buttons.html">Buttons</a></li>
+          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+          <li><a href="utilities-visibility.html">Visibility </a></li>
+        </ul>
+      </li>
+      <li><a href="components.html">Components</a>
+        <ul>
+          <li><a href="components-menus.html">Menus</a></li>
+          <li><a href="components-menubar.html">Menubar</a></li>
+          <li><a href="components-off-canvas.html">Off-canvas sidebar</a></li>
+          <li><a href="components-pagination.html">Pagination</a></li>
+          <li><a href="components-media-object.html">Media object</a></li>
+          <li><a href="components-tables.html">Tables</a></li>
+          <li><a href="components-tab-systems.html">Tab systems</a></li>
+          <li><a href="components-modals.html">Modals</a></li>
+        </ul>
+    </ul>
+  </div>
+
+  <div class="codebase-docs__main-article">
+
+  <p>Three flavours of grid have been provided (<b>Classic</b>, <b>Semantic</b> and <b>Flexbox</b>). These all have similar display behaviour:</p>
+
+  <ul>
+    <li>12 columns &ndash; you can change this simply by modifying the <code>$grid-max-columns</code> variable in your chosen grid flavour</li>
+    <li>Flexible &ndash; column width is set using <code>max-width</code>, not <code>width</code></li>
+    <li>Responsive &ndash; media query breakpoint widths: 768px, 1024px and 1200px &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
+    <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
+    <li>Offsetting</li>
+    <li>Nesting</li>
+    <li>(single column) centering</li>
+  </ul>
+
+  <p>In addition, visibility classes have been provided, for showing/hiding items at different breakpoints.</p>
+
+  <p><b>Note:</b> while all three grids have been included in this Repo instance of Codebase, users are encouraged to <code>@include</code> only their grid flavour of choice.</p>
+
+  <p>The following grid examples behave the same at different window widths (unless your browser is so old that it cannot handle flexbox):</p>
+
+  <h3>Classic Grid</h3>
+
+  <section class="grid grid--gutter">
+    <div class="column medium--span-8 large--push-4 deco-b-thin-solid">
+      <span>Article<br><code>column medium--span-8 large--push-4</code></span>
+      <section class="grid grid--gutter grid--nested">
+        <div class="column small--span-4 deco-b-thin-solid">
+          <span>Nested<br><code>column small--span-4</code></span>
+        </div>
+        <div class="column small--span-4 deco-b-thin-solid">
+          <span>Nested<br><code>column small--span-4</code></span>
+        </div>
+        <div class="column small--span-4 deco-b-thin-solid">
+          <span>Nested<br><code>column small--span-4</code></span>
+        </div>
+      </section>
+    </div>
+    <div class="column medium--span-4 large--pull-8 deco-b-thin-solid">
+      <span>Aside<br><code>column medium--span-4 large--pull-8</code></span>
+    </div>
+  </section>
+  <section class="grid grid--gutter">
+    <div class="column small--span-7 column--centered deco-b-thin-solid">Centered
+      <br><code>column small--span-7 column--centered</code></div>
+  </section>
+
+  <h3>Semantic Grid</h3>
+
+  <section class="semgrid-wrapper">
+    <div class="semgrid-article deco-b-thin-solid">Article
+      <section class="semgrid--nested">
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+      </section>
+    </div>
+    <div class="semgrid-aside deco-b-thin-solid">Aside</div>
+  </section>
+  <section class="semgrid-wrapper grid-example">
+    <div class="semgrid-centered deco-b-thin-solid">Centered</div>
+  </section>
+
+  <h3>Flexbox Grid</h3>
+
+  <section class="flexgrid-wrapper">
+    <div class="flexgrid-article deco-b-thin-solid">Article
+      <section class="flexgrid--nested">
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+      </section>
+    </div>
+    <div class="flexgrid-aside deco-b-thin-solid">Aside</div>
+  </section>
+  <section class="flexgrid-wrapper">
+    <div class="flexgrid-centered deco-b-thin-solid">Centered</div>
+  </section>
+
+      </div>
+  </div>
+</main>
+
+<footer class="codebase-docs__footer deco-bg-charcoal">
+  <span class="deco-text-light-gray">
+    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built by <a href="http://simonpadbury.github.io" target="_blank">Simon Padbury</a>
+  </span>
+</footer>
+
+<!--</div> /.codebase-docs__page -->
+
+<script src="jquery-2.2.4.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>-->
+<script src="codebase/js/codebase.js"></script>
+
+</body>
+
+</html>

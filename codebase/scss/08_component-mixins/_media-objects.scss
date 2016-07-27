@@ -1,0 +1,45 @@
+// COMPONENT MIXINS: MEDIA OBJECT
+// ==============================
+
+@mixin media {
+  @include clearfix;
+  margin-bottom: $line-height-px;
+}
+
+@mixin media__header {
+  display: block;
+}
+@mixin media__footer {
+  display: block;
+}
+
+@mixin media__image-wrap--left {
+  float: left;
+  & > a,
+  & > img {
+    display: inline-block;
+  }
+}
+@mixin media__image-wrap--right {
+  float: right;
+  & > a,
+  & > img {
+    display: inline-block;
+  }
+}
+@mixin media__image-wrap--top {
+  & > a,
+  & > img {
+    display: block;
+    text-align: center;
+  }
+}
+
+@mixin media__content-wrap {
+  overflow: hidden;
+}
+
+@mixin media__title {
+  margin-top: 0;
+  padding-top: 0;
+}

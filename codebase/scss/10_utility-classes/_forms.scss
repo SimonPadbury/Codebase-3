@@ -1,0 +1,15 @@
+// CLASS BUILDER: FORM CLASSES
+// ===========================
+
+input,
+textarea {
+  @include form__placeholder--hide;
+}
+
+.form__radio {
+  @include form__radio;
+}
+
+.form__checkbox {
+  @include form__checkbox;
+}

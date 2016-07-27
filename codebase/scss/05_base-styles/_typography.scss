@@ -1,0 +1,80 @@
+// DEFAULT STYLES: TYPOGRAPHY
+// ==========================
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $line-height;
+  color: $color-text-default;
+  text-rendering: optimizeLegibility;
+}
+p {
+  margin: $line-height-px 0;
+}
+p + p {
+  margin-top: 0;
+}
+h1 {
+  font-size: $base-font-size * 2.125;
+}
+h2 {
+  font-size: $base-font-size * 1.75;
+}
+h3 {
+  font-size: $base-font-size * 1.35;
+}
+h4 {
+  font-size: $base-font-size * 1.25;
+}
+h5 {
+  font-size: $base-font-size * 1.1;
+}
+h6 {
+  font-size: $base-font-size * 1;
+}
+@include breakpoint__small--up {
+  h1 {
+    font-size: $base-font-size * 3;
+  }
+  h2 {
+    font-size: $base-font-size * 2.25;
+  }
+  h3 {
+    font-size: $base-font-size * 1.75;
+  }
+  h4 {
+    font-size: $base-font-size * 1.35;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $line-height-px;
+  margin-bottom: $line-height-px;
+  padding: 0;
+  font-weight: normal;
+}
+
+hr {
+  height: 0;
+  margin: $line-height-px 0;
+  border: 0;
+  border-top: $border-thin-solid;
+}
+blockquote {
+  margin: $line-height-px 0;
+  border-left: $border-thick-solid;
+  padding: $spacing-medium $spacing-medium $spacing-medium $spacing-large; 
+  font-size: $base-font-size * 1.2;
+}
+a {
+  color: $color-text-hyperlink;
+  text-decoration: none;
+  &:hover {
+    color: $color-text-hyperlink-hover;
+    text-decoration: underline;
+  }
+}

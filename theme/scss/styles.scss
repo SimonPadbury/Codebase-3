@@ -1,0 +1,197 @@
+// Import Codebase
+@import '../../codebase/scss/codebase';
+
+// Codebase docs theme
+
+@import 'grid-semantic';
+@import 'grid-flexbox';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: $color-silver;
+}
+
+.codebase-docs {
+  position: relative;
+  max-width: 1340px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+  background: $color-white;
+  box-shadow: $box-shadow;
+}
+
+.codebase-docs__menubar {
+  .menubar__brand a {
+    padding-left: 50px;
+    color: $color-charcoal;
+    font-weight: normal;
+    background: $color-body url('../../images/codebase-logo.svg') 10px 6px no-repeat;
+    background-size: 30px auto;
+    &:hover {
+      color: $color-charcoal;
+      background-color: $color-silver;
+    }
+  }
+//  .menubar__js-navicon {
+//    display: inline-block;
+//    padding-top: 2px;
+//  }
+}
+
+.codebase-docs__header {
+  color: $color-mid-gray;
+  background-color: $color-charcoal;
+  padding: $spacing-small 0 ;
+  h1 {
+    max-width: $grid-max-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-small;
+    padding-left: $spacing-small;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+  span {
+    display: block;
+    max-width: $grid-max-width;
+    margin: 30px auto -30px auto;
+    padding-right: $spacing-small;
+    padding-left: $spacing-small;
+    font-weight: 200;
+    color: $color-dark-gray;
+    @include breakpoint__small--up {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// Layout
+
+.codebase-docs__main {
+  //@include grid;
+  //@include grid--gutter;
+  @include breakpoint__small--up {
+    @include grid-flexbox;
+  }
+  padding-bottom: 100px; // this 100px is *behind* the .codebase-docs__footer
+}
+
+.codebase-docs__sidebar {
+  &>ul {
+    font-weight: bold;
+    ul {
+      font-weight: normal;
+    }
+  }
+  @include breakpoint__tiny--only {
+    padding: 0;
+    background: $color-charcoal;
+    .brand {
+      &:before {
+        display: block;
+        position: relative;
+        top: 3px;
+        float: left;
+        content: '';
+        width: 18px;
+        height: 18px;
+        background: url('../../images/codebase-logo-sidebar.svg') 0 0 no-repeat;
+        background-size: 18px auto;
+      }
+      span {
+        margin-left: 5px;
+      }
+      &:hover {
+        color: $color-light-gray;
+        &:before {
+          background-position: 0 -20px;
+        }
+      }
+    }
+    h4 {
+      margin: 10px;
+      font-weight: bold;
+      color: $color-dark-gray;
+    }
+    &>ul {
+      border-top: $border-thin-solid;
+      border-color: $color-dark-gray;
+    }
+    li {
+      a {
+        display: block !important;
+        border-bottom: $border-thin-solid;
+        border-color: $color-dark-gray;
+        padding-left: $spacing-small;
+        color: $color-mid-gray;
+        &:hover {
+          text-decoration: none;
+          color: $color-light-gray;
+          background-color: $color-dark-gray;
+        }
+      }
+      li {
+        margin: 0;
+        a {
+          padding-left: $spacing-medium;
+        }
+      }
+    }
+  }
+  @include breakpoint__small--up {
+    @include column-flexbox;
+    @include column-flexbox--push(1);
+    flex: 0 0 220px;
+    border-left: 1px solid $color-light-gray;
+    padding-bottom: 40px;
+    padding-left: 20px;
+  }
+}
+
+.codebase-docs__main-article {
+  padding: $spacing-medium $spacing-small $spacing-large $spacing-small;
+  @include breakpoint__small--up {
+    @include column-flexbox;
+    margin-right: 20px;
+  }
+}
+
+.codebase-docs__footer {
+  // Sticks to the bottom of the screen if the page doesn't have much content.
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding: 40px 10px;
+  text-align: center;
+}
+
+// Styling
+
+.codebase-docs__sidebar-menu {
+  @include menu;
+  li {
+    @include menu__item;
+  }
+  a {
+    @include menu__link;
+  }
+  ul {
+    @include menu;
+    @include breakpoint__small--up {
+      margin-left: $spacing-medium;
+    }
+  }
+}
+
+.example {
+  @include button;
+  @include button--secondary;
+  @include button--gradient;
+  @include button--pressable;
+}

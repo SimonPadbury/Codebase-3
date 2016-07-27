@@ -1,0 +1,19 @@
+// COMPONENT CLASSES: PAGINATION
+// =============================
+
+.pagination {
+  @include pagination;
+}
+
+.pagination__item {
+  @include pagination__item;
+}
+
+.pagination__link {
+  @include pagination__link;
+}
+
+.pagination__item--current a,
+.pagination__link--current {
+  @include pagination__link--current;
+}

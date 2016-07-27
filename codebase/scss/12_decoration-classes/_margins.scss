@@ -1,0 +1,100 @@
+// DECORATION MIXINS: MARGINS
+// ==========================
+
+// Margin All
+
+.deco-m-zero {
+  margin: 0;
+}
+.deco-m-tiny {
+  margin: $spacing-tiny;
+}
+.deco-m-small {
+  margin: $spacing-small;
+}
+.deco-m-medium {
+  margin: $spacing-medium;
+}
+.deco-m-large {
+  margin: $spacing-large;
+}
+
+// Margin Top
+
+.deco-mt-zero {
+  margin-top: 0;
+}
+.deco-mt-tiny {
+  margin-top: $spacing-tiny;
+}
+.deco-mt-small {
+  margin-top: $spacing-small;
+}
+.deco-mt-medium {
+  margin-top: $spacing-medium;
+}
+.deco-mt-large {
+  margin-top: $spacing-large;
+}
+
+// Margin Right
+
+.deco-mr-zero {
+  margin-right: 0;
+}
+.deco-mr-tiny {
+  margin-right: $spacing-tiny;
+}
+.deco-mr-small {
+  margin-right: $spacing-small;
+}
+.deco-mr-medium {
+  margin-right: $spacing-medium;
+}
+.deco-mr-large {
+  margin-right: $spacing-large;
+}
+
+// Margin Bottom
+
+.deco-mb-zero {
+  margin-bottom: 0;
+}
+.deco-mb-tiny {
+  margin-bottom: $spacing-tiny;
+}
+.deco-mb-small {
+  margin-bottom: $spacing-small;
+}
+.deco-mb-medium {
+  margin-bottom: $spacing-medium;
+}
+.deco-mb-large {
+  margin-bottom: $spacing-large;
+}
+
+// Margin Left
+
+.deco-ml-zero {
+  margin-left: 0;
+}
+.deco-ml-tiny {
+  margin-left: $spacing-tiny;
+}
+.deco-ml-small {
+  margin-left: $spacing-small;
+}
+.deco-ml-medium {
+  margin-left: $spacing-medium;
+}
+.deco-ml-large {
+  margin-left: $spacing-large;
+}
+
+// Horizontal Centering by margin:auto
+
+.deco-mh-auto {
+  display: block !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}

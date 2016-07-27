@@ -1,0 +1,36 @@
+// COMPONENT CLASSES: BUTTONS
+// ==========================
+
+.button {
+  @include button;
+  &--primary {
+    @include button--primary;
+  }
+  &--secondary {
+    @include button--secondary;
+  }
+  &--warning {
+    @include button--warning;
+  }
+  &--success {
+    @include button--success;
+  }
+  &--error {
+    @include button--error;
+  }
+  &--small {
+    @include button--small;
+  }
+  &--default {
+    @include button--default;
+  }
+  &--medium {
+    @include button--medium;
+  }
+  &--large {
+    @include button--large;
+  }
+  @include button--gradient;
+  @include button--pressable;
+  @include button--block;
+}

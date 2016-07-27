@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Decoration | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  
 
 </head>
 
@@ -32,7 +33,7 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <h1>Decoration</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +93,25 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
+  <p>For consistency throughout Codebase, some <code>$deco-</code> variables have been defined. Where necessary, a few of these variables have been used in the various utilities and components.</p>
   
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
+  <p>These same variables have been incoporated into a set of simple <code>.deco-</code> decoration classes. These classes can be used to quickly add consistent styling to your HTML directly.</p>
   
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <p>You can modify these <code>$deco*</code> variables and <code>.deco-</code> classes, and add to them, in accordance with the style guide or visual identity of your website project.</p>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <ol>
+    <li><a href="decoration-margins.html">Margins</a></li>
+    <li><a href="decoration-borders.html">Borders</a></li>
+    <li><a href="decoration-paddings.html">Paddings</a></li>
+    <li><a href="decoration-colors.html">Colors</a></li>
+    <li><a href="decoration-shadows.html">Shadows</a></li>
+  </ol>
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
+  <div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-medium deco-bg-silver">
+    <i class="fa fa-thumbs-o-up deco-text-primary"></i> <b>Hat tip:</b><br>the idea for Codebase decoration was inspired by <a href="http://www.basscss.com" target="_blank">BASCSS</a> and <a href="http://tachyons.io" target="_blank">Tachyons</a>.
+  </div>
   
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
       </div>
   </div>
 </main>

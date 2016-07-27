@@ -1,0 +1,30 @@
+// UTILITY: COMBO 
+// ==============
+// Use for combo buttons and/or inputs to reset rounded corners IF you have them.
+
+@mixin combo--first {
+  display: inline-block;
+  width: auto !important;
+  float: left;
+  margin-right: 1px;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+@mixin combo--middle {
+  display: inline-block;
+  width: auto !important;
+  float: left;
+  margin-right: 1px;
+  margin-left: 1px;
+  border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+@mixin combo--last {
+  display: inline-block;
+  width: auto !important;
+  margin-left: 1px;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}

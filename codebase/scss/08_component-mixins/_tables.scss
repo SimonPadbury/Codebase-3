@@ -1,0 +1,34 @@
+// COMPONENT MIXINS: TABLES
+// ========================
+
+@mixin table {
+  border-collapse: collapse;
+  min-width: 100%;
+  margin: 0;
+	caption {
+		padding: $spacing-block;
+	}
+	th {
+		background: rgba(204,204,204,0.2);
+	}
+	th, td {
+    border: $border-thin-solid;
+		padding: $spacing-small;
+    vertical-align: top;
+	}
+  &--wrap-outer {
+    position: relative;
+    margin: auto;
+  }
+  &--wrap-inner {
+    position: relative;
+    overflow-x: auto;
+    margin: $spacing-small 0;
+  }
+  &--wide {
+    box-shadow: $box-shadow-inner;
+  }
+  &--nowrap {
+    white-space: nowrap;
+  }
+}

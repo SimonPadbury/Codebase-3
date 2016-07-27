@@ -1,0 +1,48 @@
+// CLASS BUILDER: VISIBILITY
+// =========================
+
+.hide--tiny-only,
+.show--small-up {
+  @include hide--tiny-only;
+}
+
+.hide--small-only {
+  @include hide--small-only;
+}
+
+.hide--small-up,
+.show--tiny-only {
+  @include hide--small-up
+}
+
+.hide--medium-only {
+  @include hide--medium-only;
+}
+
+.hide--medium-up,
+.show--small-down {
+  @include hide--medium-up;
+}
+
+.hide--medium-down,
+.show--large-only {
+  @include hide--medium-down;
+}
+
+.hide--large-only,
+.show--medium-down {
+  @include hide--large-only;
+}
+
+.show--small-only {
+  @include show--small-only;
+}
+
+.show--medium-only {
+  @include show--medium-only;
+}
+
+.hide--small-down,
+.show--medium-up {
+  @include hide--small-down;
+}

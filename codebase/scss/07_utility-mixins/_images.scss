@@ -1,0 +1,14 @@
+// UTILITY: IMAGES
+// ===============
+
+@mixin image-align--left {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+@mixin image-align--right {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}

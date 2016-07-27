@@ -1,0 +1,56 @@
+// CLASS BUILDER: CLASSIC GRID
+// ===========================
+
+// Grid Container
+.grid {
+  @include grid;
+}
+
+// Grid with Gutter between Columns
+// Include `grid--gutter` in your GRID container class, not in each column.
+.grid--gutter {
+  @include grid--gutter;
+}
+
+// Nested Grid
+// Only include `grid--nested` on a NESTED grid container IF the parent grid has a gutter.
+.grid--nested {
+  @include grid--nested;
+}
+
+// Column Base
+.column {
+  @include column-classic;
+}
+
+// Responsive Column Classes
+.tiny {
+  @include classic-column--span;
+  @include classic-column--offset;
+}
+.small {
+  @include breakpoint__small--up {
+    @include classic-column--span;
+    @include classic-column--offset;
+    @include classic-column--push;
+    @include classic-column--pull;
+  }
+}
+.medium {
+  @include breakpoint__medium--up {
+    @include classic-column--span;
+    @include classic-column--offset;
+    @include classic-column--push;
+    @include classic-column--pull;
+  }
+}
+.large {
+  @include breakpoint__large--up {
+    @include classic-column--span;
+    @include classic-column--offset;
+    @include classic-column--push;
+    @include classic-column--pull;
+  }
+}
+
+// Incomplete rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).

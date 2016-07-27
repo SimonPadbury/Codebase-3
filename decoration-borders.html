@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Decoration: Borders | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  
 
 </head>
 
@@ -32,7 +33,8 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <span><a href="decoration.html">Decoration</a>:</span>
+    <h1>Borders</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +94,110 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
+  <p>(Note: in all the 'border zero' examples below I have first added a thin border and then applied the 'border zero' classes.)</p>
   
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-  
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <p><b>Equal borders on all sides:</b></p>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-p-small deco-b-thin-solid deco-b-zero">
+      .deco-b-zero
+    </div>
+    <div class="deco-mb-small deco-p-small deco-b-thin-solid">
+      .deco-b-thin-solid
+    </div>
+    <div class="deco-mb-small deco-p-small deco-b-thin-dashed">
+      .deco-b-thin-dashed
+    </div>
+    <div class="deco-mb-small deco-p-small deco-b-thick-solid">
+      .deco-b-thick-solid
+    </div>
+  </div>
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
-  
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
+  <p><b>Top border only:</b></p>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-p-small deco-b-thin-solid deco-bt-zero">
+      .deco-bt-zero
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bt-thin-solid">
+      .deco-bt-thin-solid
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bt-thin-dashed">
+      .deco-bt-thin-dashed
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bt-thick-solid">
+      .deco-bt-thick-solid
+    </div>
+  </div>
+
+  <p><b>Right border only:</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-p-small deco-b-thin-solid deco-br-zero">
+      .deco-br-zero
+    </div>
+    <div class="deco-mb-small deco-p-small deco-br-thin-solid">
+      .deco-br-thin-solid
+    </div>
+    <div class="deco-mb-small deco-p-small deco-br-thin-dashed">
+      .deco-br-thin-dashed
+    </div>
+    <div class="deco-mb-small deco-p-small deco-br-thick-solid">
+      .deco-br-thick-solid
+    </div>
+  </div>
+
+  <p><b>Bottom border only:</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-p-small deco-b-thin-solid deco-bb-zero">
+      .deco-bb-zero
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bb-thin-solid">
+      .deco-bb-thin-solid
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bb-thin-dashed">
+      .deco-bb-thin-dashed
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bb-thick-solid">
+      .deco-bb-thick-solid
+    </div>
+  </div>
+
+  <p><b>Left border only</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-p-small deco-b-thin-solid deco-bl-zero">
+      .deco-bl-zero
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bl-thin-solid">
+      .deco-bl-thin-solid
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bl-thin-dashed">
+      .deco-bl-thin-dashed
+    </div>
+    <div class="deco-mb-small deco-p-small deco-bl-thick-solid">
+      .deco-bl-thick-solid
+    </div>
+  </div>
+
+  <p>Borders can also be colored. See <code>deco-</code> <a href="decoration-colors.html">colors</a>.</p>
+
+  <p><b>Border enhancements:</b></p>
+
+  <section class="grid grid--gutter grid--nested">
+    <div class="column small--span-6">
+      <div class="deco-mh-auto deco-mb-small deco-p-large deco-b-thin-solid deco-b-radius" style="width:250px;height:250px;">
+        .deco-b-radius
+      </div>
+    </div>
+    <div class="column small--span-6">
+      <div class="deco-mh-auto deco-mb-small deco-p-large deco-b-thin-solid deco-b-circle" style="width:250px;height:250px;">
+        .deco-b-circle
+      </div>
+    </div>
+  </section>
+
       </div>
   </div>
 </main>

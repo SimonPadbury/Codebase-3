@@ -1,0 +1,111 @@
+// UTILITY MIXINS: BUTTONS
+// =======================
+
+@mixin button {
+  display: inline-block;
+  width: auto;
+  border: 0;
+  border-radius: $button-border-radius;
+  padding: $button-padding-default;
+  font-size: $base-font-size;
+  line-height: $base-font-size;
+  text-decoration: none;
+  &[type="button"],
+  &[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: $button-border-radius;
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+// Button colors
+
+@mixin button--primary {
+  color: $color-primary-text;
+  background: $color-primary;
+  &:hover {
+    color: $color-primary-text-dark;
+    background: $color-primary-dark;
+  }
+}
+
+@mixin button--secondary {
+  color: $color-secondary-text;
+  background: $color-secondary;
+  &:hover {
+    color: $color-secondary-text-dark;
+    background: $color-secondary-dark;
+  }
+}
+
+@mixin button--warning {
+  color: $color-warning-text;
+  background: $color-warning;
+  &:hover {
+    color: $color-warning-text-dark;
+    background: $color-warning-dark;
+  }
+}
+
+@mixin button--success {
+  color: $color-success-text;
+  background: $color-success;
+  &:hover {
+    color: $color-success-text-dark;
+    background: $color-success-dark;
+  }
+}
+
+@mixin button--error {
+  color: $color-error-text;
+  background: $color-error;
+  &:hover {
+    color: $color-error-text-dark;
+    background: $color-error-dark;
+  }
+}
+
+@mixin button--gradient {
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.5),
+    inset 0 0 1px rgba(0,0,0,0.5),
+    inset 0 10px 10px -10px rgb(255,255,255),
+    inset 0 -20px 20px -20px rgba(0,0,0,0.4);
+}
+
+@mixin button--pressable {
+  &:active {
+    box-shadow: 
+      0 0 0 transparent,
+      inset 0 -50px 50px -50px rgba(0,0,0,0.4),
+      inset 0 0 4px rgba(0,0,0,0.8);
+    text-shadow: 0 0 3px rgba(0,0,0,0.8);
+  }
+}
+
+@mixin button--small {
+  padding: $button-padding-small;
+}
+
+@mixin button--default {
+  padding: $button-padding-default;
+}
+
+@mixin button--medium {
+  padding: $button-padding-default;
+}
+
+@mixin button--large {
+  padding: $button-padding-large;
+}
+
+@mixin button--block {
+  &--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

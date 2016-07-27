@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Utilities | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  
 
 </head>
 
@@ -32,7 +33,7 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <h1>Utilities</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +93,142 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
-  
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-  
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <p>
+    In Codebase, utilities are HTML/CSS patterns that can be used on different elements and in different components (applicability depends on what the utility is). These utilities have been developed as mixins and some of them have also been used to build classes of the same name.
+  </p>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Utility
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Mixin(s)
+        </th>
+        <th>
+          Class(es)
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Combos
+        </td>
+        <td>
+          Used to un-round rounded corners on buttons and form elements when used inline.
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Decoration
+        </td>
+        <td>
+          A small set of simple styles (for margins, borders, paddings, rounded corners, box shadows, background colors and text colors) that can be applied to various elements and components by adding .deco-* classes. Each was first set up as a $deco-* variable. These variables combined to create a more complex decoration classes (e.g. .deco-card).
+        </td>
+        <td>
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
-  
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Dropdown
+        </td>
+        <td>
+          Used to create menubar dropdowns (include the dropdown mixins) or dropdowns on any element (e.g. use dropdown classes to create dropdowns for buttons).
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Forms
+        </td>
+        <td>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Images
+        </td>
+        <td>
+          Mixins and classes that control alignment, rounded corners and borders.
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Reset&nbsp;overlay
+        </td>
+        <td>
+          A transparent whole-page layer that is raised above the webpage during the operation of dropdowns, menubar operation on phones, etc., providing a "click outside the opened thing to dismiss it" option. (The overlay component is prepended to the <code>&lt;body&gt;</code> by codebase.js &ndash; so you don't need add it yourself.)
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+        <td>
+          (<i class="fa fa-check"></i>)
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Typography
+        </td>
+        <td>
+          Some useful (mixins and) classes for controling lead paragraphs, drop caps and text alignment. (Color can also be controlled by .deco-* classes; see above.)
+        </td>
+        <td>
+          (<i class="fa fa-check"></i>)
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Visibility
+        </td>
+        <td>
+          Show and hide mixins and classes that operate at different media query breakpoints.
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+        <td>
+          <i class="fa fa-check"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
       </div>
   </div>
 </main>

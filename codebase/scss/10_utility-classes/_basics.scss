@@ -1,0 +1,15 @@
+// CLASS-BUILDERS: BASICS
+// ======================
+
+.clearfix {
+  @include clearfix;
+}
+
+.float {
+  &--right {
+    float: right;
+  }
+  &--left {
+    float: left;
+  }
+}

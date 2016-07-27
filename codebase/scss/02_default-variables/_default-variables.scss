@@ -1,0 +1,181 @@
+// DEFAULT VARIABLES
+// =================
+
+// How To Use:
+// In your project SCSS, before your import of `codebase.scss`, 
+// copy the variable names you wish to modify and set your own values.
+// If your variable overrides are upstream of `codebase.scss`, then
+// your preprocessor will preferentially use them instead of these
+// `!default` values.
+
+// ***********
+// Breakpoints
+// ***********
+
+$breakpoint-small: 768px !default;
+$breakpoint-medium: 1024px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-menubar: 768px !default;
+
+// ******
+// Colors
+// ******
+
+$color-white: #fff !default;
+$color-silver: #f5f5f5 !default;
+$color-light-gray: #ddd !default;
+$color-mid-gray: #aaa !default;
+$color-dark-gray : #777 !default;
+$color-charcoal: #444 !default;
+
+$color-primary: #09c !default;
+$color-primary-dark: #07a !default;
+$color-primary-text: $color-white !default;
+$color-primary-text-dark: $color-primary-text !default;
+
+$color-secondary: $color-mid-gray !default;
+$color-secondary-dark: $color-dark-gray !default;
+$color-secondary-text: $color-white !default;
+$color-secondary-text-dark: $color-secondary-text !default;
+
+$color-warning: #f80 !default;
+$color-warning-dark: #e60 !default;
+$color-warning-text: $color-white !default;
+$color-warning-text-dark: $color-warning-text !default;
+
+$color-success: #2b4 !default;
+$color-success-dark: #092 !default;
+$color-success-text: $color-white !default;
+$color-success-text-dark: $color-success-text !default;
+
+$color-error: #f44 !default;
+$color-error-dark: #c22 !default;
+$color-error-text: $color-white !default;
+$color-error-text-dark: $color-error-text !default;
+
+// ****
+// Body
+// ****
+
+$color-body: $color-white !default;
+
+// **********
+// Typography
+// **********
+
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-size: 16px !default;
+$line-height: 1.5 !default;
+$line-height-px: $base-font-size * $line-height !default;
+
+$color-text-default: $color-charcoal !default;
+$color-text-muted: $color-secondary !default;
+$color-text-hyperlink: $color-primary !default;
+$color-text-hyperlink-hover: $color-primary-dark !default;
+
+// ******
+// Images
+// ******
+
+$color-image-frame: $color-white !default;
+$color-image-frame-edge: $color-dark-gray !default;
+
+// **********
+// Decoration
+// **********
+
+// Spacing (used in margins and paddings)
+
+$spacing-tiny: 5px !default;
+$spacing-small: 10px !default;
+$spacing-medium: 20px !default;
+$spacing-large: 40px !default;
+//$spacing-line-height: $line-height-px !default;
+$spacing-block: 5px 10px !default; // e.g. menu links
+
+// Borders
+
+$border-thin-solid: 1px solid $color-light-gray !default;
+$border-thin-dashed: 1px dashed $color-light-gray !default;
+$border-thick-solid: 4px solid $color-light-gray !default;
+$border-radius: 4px !default;
+
+// Shadows
+
+$box-shadow: 0 2px 5px rgba(0,0,0,0.3) !default;
+$box-shadow-inner: inset 0 0 5px rgba(0,0,0,0.2) !default;
+$box-shadow-inner-top: inset 0 5px 5px -5px rgba(0,0,0,0.2) !default;
+$box-shadow-inner-right: inset -5px 0 5px -5px rgba(0,0,0,0.2) !default;
+$box-shadow-inner-bottom: inset 0 -5px 5px -5px rgba(0,0,0,0.2) !default;
+$box-shadow-inner-left: inset 5px 0 5px -5px rgba(0,0,0,0.2) !default;
+
+// =============
+// Reset Overlay
+// =============
+
+$reset-overlay--z-index: 100 !default;
+// Increase this if something you add causes a conflict.
+
+$reset-overlay--z-index-higher: $reset-overlay--z-index + 10 !default;
+// Use $reset-overlay--z-index-higher on occasions when you know you need
+// the overlay to also cover something on a layer above the webpage (e.g.
+// over a fixed menubar).
+
+// ******
+// Layout
+// ******
+
+$grid-max-columns: 12 !default;
+$grid-gutter-width--tiny: 20px !default;
+$grid-gutter-width--small: 30px !default;
+$grid-gutter-width--medium: 40px !default;
+$grid-gutter-width--large: 50px !default;
+$grid-max-width: 1280px !default;
+
+// Off-Canvas Column
+
+$off-canvas-width: 250px !default;
+$off-canvas-background: $color-white !default;
+$off-canvas-transition: transform 400ms ease !default;
+$off-canvas-navicon-background: $color-white !default;
+$off-canvas-navicon-color: $color-text-hyperlink !default;
+$off-canvas-navicon-color-hover: $color-text-hyperlink-hover !default;
+
+// *******
+// Buttons
+// *******
+
+$button-border-radius: $border-radius !default;
+$button-padding-small: $spacing-tiny $spacing-small !default;
+$button-padding-default: $spacing-small $spacing-medium !default;
+$button-padding-large: $spacing-medium $spacing-large !default;
+
+// *****
+// Forms
+// *****
+
+$form-input-border-radius: $border-radius !default;
+
+// *******
+// Menubar
+// *******
+
+$menubar-padding: 10px 15px !default;
+$menubar-height: 44px !default; // = line-height (24px) + (2 * 10px for the padding)
+$color-menu-block-hover-background: $color-silver !default;
+// See also the menubar breakpoint default variable in `Breakpoints`
+
+// ***********
+// Tab Systems
+// ***********
+
+$color-tabs-background: $color-white !default;
+$color-tabs-dark-background: $color-silver !default;
+$color-tabs-dark-background-hover: $color-light-gray !default;
+$color-tabs-dark-text: lighten($color-text-default, 25%) !default;
+
+// ==========
+// Pagination
+// ==========
+
+$color-pagination-current-background: $color-menu-block-hover-background !default;

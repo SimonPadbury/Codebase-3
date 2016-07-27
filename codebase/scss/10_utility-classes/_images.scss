@@ -1,0 +1,10 @@
+// CLASS BUILDER: IMAGE
+// ====================
+
+.image-align--left {
+  @include image-align--left;
+}
+
+.image-align--right {
+  @include image-align--right;
+}
