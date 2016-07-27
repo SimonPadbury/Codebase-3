@@ -963,15 +963,15 @@ html.js-scroll-lock {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background: transparent;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s; }
   .reset-overlay--is-raised {
     z-index: 100; }
   .reset-overlay--is-raised-higher {
     z-index: 110; }
   .reset-overlay--darken {
-    background: rgba(0, 0, 0, 0.6); }
+    background-color: rgba(0, 0, 0, 0.6); }
 
 html, body {
   height: 100% !important; }
