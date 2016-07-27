@@ -12,15 +12,10 @@ Thumbs.db
 
 .sass-cache
 **.sass-cache
+*.scssc
 
 # CodeKit
 
 config.codekit
 .codekit-cache
 kit
-
-*.scssc
-
-*.scssc
-
-codebase/scss/.sass-cache/ece3939901e7bbb21ab5d112be5add6a9d19f7bd/_layout-grid-classic.scssc
