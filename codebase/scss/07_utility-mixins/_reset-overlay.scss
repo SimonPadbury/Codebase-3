@@ -1,0 +1,45 @@
+// UTILITY: RESET OVERLAY
+// ======================
+// Used to close things that are opened by jQuery script by "clicking outside" it.
+
+@mixin reset-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0,0,0,0);
+  transition: all 0.3s;
+}
+
+@mixin reset-overlay--is-raised {
+  z-index: $reset-overlay--z-index;
+}
+
+@mixin reset-overlay--is-raised-higher {
+  z-index: $reset-overlay--z-index-higher;
+}
+
+@mixin reset-overlay--darken {
+  background: rgba(0,0,0,0.6);
+}
+
+// Prevent body scrolling of page content behind the reset overlay
+// ---------------------------------------------------------------
+// Deploy only when necessary. E.g. 
+// * yes for modals and off-canvas sidebars; 
+// * not for dropdowns.
+//
+// Based on: http://luxiyalu.com/playground/overlay/
+
+html.js-scroll-lock {
+  height: 100%;
+  body {
+    height: 100%;
+  }
+  .body-inner-wrap {
+    height: 100vh;
+    overflow: hidden;
+  }
+}

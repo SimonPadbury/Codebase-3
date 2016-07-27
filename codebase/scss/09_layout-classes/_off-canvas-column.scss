@@ -1,0 +1,55 @@
+// CLASS-BUILDER: OFF-CANVAS COLUMN
+// ================================
+
+.tiny--off-canvas {
+  @media (max-width: 767px) {
+    &.off-canvas--right {
+      @include off-canvas-right;
+    }
+    &.off-canvas--left {
+      @include off-canvas-left;
+    }
+    @include off-canvas;
+  }
+}
+.small--off-canvas {
+  @media (max-width: 1023px) {
+    &.off-canvas--right {
+      @include off-canvas-right;
+    }
+    &.off-canvas--left {
+      @include off-canvas-left;
+    }
+    @include off-canvas;
+  }
+}
+.medium--off-canvas {
+  @media (max-width: 1199px) {
+    &.off-canvas--right {
+      @include off-canvas-right;
+    }
+    &.off-canvas--left {
+      @include off-canvas-left;
+    }
+    @include off-canvas;
+  }
+}
+
+.off-canvas-navicon {
+  @include off-canvas-navicon;
+  &--right {
+    @include off-canvas-navicon--right;
+  }
+  &--left {
+    @include off-canvas-navicon--left;
+  }
+}
+
+.body--menubar-is-fixed {
+  .off-canvas-navicon--right,
+  .off-canvas--right,
+  .off-canvas-navicon--left,
+  .off-canvas--left {
+    margin-top: $menubar-height;
+  }
+}

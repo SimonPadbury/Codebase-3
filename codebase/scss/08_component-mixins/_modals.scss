@@ -1,0 +1,71 @@
+// MIXINS: MODAL
+// =============
+
+@mixin modal__wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  overflow: visible;
+  z-index: $reset-overlay--z-index-higher + 5;
+  transition: all 0.3s;
+  background-color: transparent;
+  text-align: center;
+  cursor: default;
+}
+
+@mixin modal {
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s;
+  transform: translateY(-150%);
+  // (The extra 50% translateY accounts for top margins, borders and drop shadows on modals.)
+  text-align: left;
+  overflow: auto;
+}
+
+@mixin modal__header {
+  h2,
+  h3,
+  h4 {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+@mixin modal--narrow {
+  min-width: 290px;
+  max-height: 90vh;
+  margin-right: 15px;
+  margin-left: 15px;
+  @include breakpoint__small--up {
+    width: 600px;
+  }
+}
+
+@mixin modal--contains-grid {
+  width: auto;
+  max-width: $grid-max-width;
+  max-height: 90vh;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@mixin modal--cover {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+}
+
+@mixin modal--is-revealed {
+  top: 0;
+  transform: translateY(0);
+}
+
+@mixin modal__close {
+  &:hover {
+    cursor: pointer;
+  }
+}

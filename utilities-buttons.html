@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Utilities: Buttons | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  
 
 </head>
 
@@ -32,7 +33,8 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <span><a href="utilities.html">Utilities</a>:</span>
+    <h1>Buttons</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +94,60 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
-  
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-  
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <!-- Button -->
+  <button class="button button--primary">Button</button>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <!-- Input -->
+  <input class="button button--primary" type="submit" value="Input">
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
-  
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
+  <!-- Hyperlink -->
+  <a class="button button--primary" href="#/">Hyperlink</a>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
+  <p>
+    <button class="button button--primary button--small">Small button</button>
+    <button class="button button--primary">Default-size button</button>
+    <button class="button button--primary button--large">Large button</button>
+  </p>
+
+  <p>
+    <button class="button button--primary button--block">Block width button</button>
+  </p>
+
+  <p>
+    <button class="button button--primary">Primary</button>
+    <button class="button button--secondary">Secondary</button>
+    <button class="button button--warning">Warning</button>
+    <button class="button button--success">Success</button>
+    <button class="button button--error">Error</button>
+  </p>
+
+  <p>
+    <button class="button button--success">Call to action <i class="fa fa-arrow-right"></i></button>
+    <button class="button button--secondary"><i class="fa fa-folder-open-o"></i> Archive</button>
+    <button class="button button--primary"><i class="fa fa-user"></i> User</button>
+    <button class="button button--warning">Are you sure <i class="fa fa-question-circle"></i></button>
+    <button class="button button--error">Close <i class="fa fa-times"></i></button>
+  </p>
+
+  <p>
+    <button class="button button--primary combo--first">.combo--first</button>
+    <button class="button button--primary combo--middle">.combo--middle</button>
+    <button class="button button--primary combo--middle">.combo--middle</button>
+    <button class="button button--primary combo--last">.combo--last</button>
+  </p>
+
+  <p>
+    <button class="button button--primary dropdown__toggle">
+      Button with dropdown utility
+    </button>
+    <span class="dropdown__content">
+              Example dropdown utility content
+            </span>
+  </p>
+
+  <p>Besides clicking the button again to dismiss the dropdown, you can click anywhere outside the dropdown to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).</p>
+
+
       </div>
   </div>
 </main>

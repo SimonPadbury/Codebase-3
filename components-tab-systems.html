@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components: Tab Systems | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <div class="codebase-docs">
+
+<nav class="menubar codebase-docs__menubar">
+  <div class="menubar__brand">
+    <a href="index.html"><span>Codebase</span></a>
+  </div>
+  <div class="menubar__content">
+    <div class="menubar__right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="codebase-docs__header">
+    <span><a href="components.html">Components</a>:</span>
+    <h1>Tab Systems</h1>
+  </header>
+
+  <div class="codebase-docs__main">
+
+  <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--small-up">
+      <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+      <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+    </ul>
+
+    <h4>Codebase Docs</h4>
+
+    <ul class="codebase-docs__sidebar-menu">
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+      <li><a href="decoration.html">Decoration</a>
+        <ul>
+          <li><a href="decoration-margins.html">Margins</a>
+          <li><a href="decoration-borders.html">Borders</a>
+          <li><a href="decoration-paddings.html">Paddings</a>
+          <li><a href="decoration-colors.html">Colors</a>
+          <li><a href="decoration-shadows.html">Shadows</a>
+        </ul>
+      </li>
+      <li><a href="layout.html">Layout</a>
+        <ul>
+          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        </ul>
+      </li>
+      <li><a href="utilities.html">Utilities</a>
+        <ul>
+          <li><a href="utilities-typography.html">Typography</a></li>
+          <li><a href="utilities-forms.html">Forms</a></li>
+          <li><a href="utilities-images.html">Images</a></li>
+          <li><a href="utilities-buttons.html">Buttons</a></li>
+          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+          <li><a href="utilities-visibility.html">Visibility </a></li>
+        </ul>
+      </li>
+      <li><a href="components.html">Components</a>
+        <ul>
+          <li><a href="components-menus.html">Menus</a></li>
+          <li><a href="components-menubar.html">Menubar</a></li>
+          <li><a href="components-media-object.html">Media Object</a></li>
+          <li><a href="components-modals.html">Modals</a></li>
+          <li><a href="components-tables.html">Tables</a></li>
+          <li><a href="components-tab-systems.html">Tab Systems</a></li>
+          <li><a href="components-pagination.html">Pagination</a></li>
+        </ul>
+    </ul>
+  </div>
+
+  <div class="codebase-docs__main-article">
+
+  <p>The Cosebase tab system comes in three types (<b>top</b>, <b>side</b> and <b>accordion</b>). Their HTML is the same; only a class on the containing DIV needs to be altered to swap from one tab type to another.</p>
+
+  <h2>Top Tabs</h2>
+
+  <div class="tabs tabs--top">
+    <div class="tabs__label" data-tabs="tabs-docs1">Tab Label 1</div>
+    <div id="tabs-docs1" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 1</p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs2">Tab Label 2</div>
+    <div id="tabs-docs2" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 2</p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs3">Tab Label 3</div>
+    <div id="tabs-docs3" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 3</p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs4">Tab Label 4</div>
+    <div id="tabs-docs4" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 4</p>
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+
+  <p>
+    Within Codebase tab systems, each tab label and their respective tab card can be placed <em>next to each other</em> in pairs. The label's <code>data-tabs=""</code> refers to its respective card's <code>id=""</code>.
+  </p>
+
+  <pre><code>&lt;div class="tabs tabs--top"&gt;
+
+  &lt;div class="tabs__label" data-tabs="tabs-example-1"&gt;Tab Label 1&lt;/div&gt;
+  &lt;div id="tabs-example-1" class="tabs__card"&gt;
+    &lt;div class="tabs__card-content"&gt;
+      &lt;p&gt;Tab Content 1&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="tabs__label" data-tabs="tabs-example-2"&gt;Tab Label 2&lt;/div&gt;
+  &lt;div id="tabs-example-2" class="tabs__card"&gt;
+    &lt;div class="tabs__card-content"&gt;
+      &lt;p&gt;Tab Content 2&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Other tabs ... --&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+  <p>
+    Simply swap the tabs modifier class to alter the appearance of the tab system:
+  </p>
+
+  <pre><code>&lt;div class="tabs tabs--top"&gt; ... &lt;/div&gt;
+
+&lt;div class="tabs tabs--side"&gt; ... &lt;/div&gt;
+
+&lt;div class="tabs tabs--accordion"&gt; ... &lt;/div&gt;
+</code></pre>
+
+  <h2>Side Tabs</h2>
+
+  <div class="tabs tabs--left">
+    <div class="tabs__label" data-tabs="tabs-docs5">Tab Label 5</div>
+    <div id="tabs-docs5" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 5</p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs6">Tab Label 6</div>
+    <div id="tabs-docs6" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 6</p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs7">Tab Label 7</div>
+    <div id="tabs-docs7" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 7</p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs8">Tab Label 8</div>
+    <div id="tabs-docs8" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 8</p>
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+
+  <h2>Accordion Tabs</h2>
+
+  <div class="tabs tabs--accordion">
+    <div class="tabs__label" data-tabs="tabs-docs9">Tab Label 9</div>
+    <div id="tabs-docs9" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 9</p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs10">Tab Label 10</div>
+    <div id="tabs-docs10" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 10</p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs11">Tab Label 11</div>
+    <div id="tabs-docs11" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 11</p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      </div>
+    </div>
+    <div class="tabs__label" data-tabs="tabs-docs12">Tab Label 12</div>
+    <div id="tabs-docs12" class="tabs__card">
+      <div class="tabs__card-content">
+        <p>Tab Content 12</p>
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</main>
+
+<footer class="codebase-docs__footer deco-bg-charcoal">
+  <span class="deco-text-light-gray">
+    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+  </span>
+</footer>
+
+</div> <!-- /.codebase-docs -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+
+</body>
+
+</html>

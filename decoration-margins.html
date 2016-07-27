@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Decoration: Margins | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <div class="codebase-docs">
+
+<nav class="menubar codebase-docs__menubar">
+  <div class="menubar__brand">
+    <a href="index.html"><span>Codebase</span></a>
+  </div>
+  <div class="menubar__content">
+    <div class="menubar__right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="codebase-docs__header">
+    <span><a href="decoration.html">Decoration</a>:</span>
+    <h1>Margins</h1>
+  </header>
+
+  <div class="codebase-docs__main">
+
+  <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--small-up">
+      <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+      <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+    </ul>
+
+    <h4>Codebase Docs</h4>
+
+    <ul class="codebase-docs__sidebar-menu">
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+      <li><a href="decoration.html">Decoration</a>
+        <ul>
+          <li><a href="decoration-margins.html">Margins</a>
+          <li><a href="decoration-borders.html">Borders</a>
+          <li><a href="decoration-paddings.html">Paddings</a>
+          <li><a href="decoration-colors.html">Colors</a>
+          <li><a href="decoration-shadows.html">Shadows</a>
+        </ul>
+      </li>
+      <li><a href="layout.html">Layout</a>
+        <ul>
+          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        </ul>
+      </li>
+      <li><a href="utilities.html">Utilities</a>
+        <ul>
+          <li><a href="utilities-typography.html">Typography</a></li>
+          <li><a href="utilities-forms.html">Forms</a></li>
+          <li><a href="utilities-images.html">Images</a></li>
+          <li><a href="utilities-buttons.html">Buttons</a></li>
+          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+          <li><a href="utilities-visibility.html">Visibility </a></li>
+        </ul>
+      </li>
+      <li><a href="components.html">Components</a>
+        <ul>
+          <li><a href="components-menus.html">Menus</a></li>
+          <li><a href="components-menubar.html">Menubar</a></li>
+          <li><a href="components-media-object.html">Media Object</a></li>
+          <li><a href="components-modals.html">Modals</a></li>
+          <li><a href="components-tables.html">Tables</a></li>
+          <li><a href="components-tab-systems.html">Tab Systems</a></li>
+          <li><a href="components-pagination.html">Pagination</a></li>
+        </ul>
+    </ul>
+  </div>
+
+  <div class="codebase-docs__main-article">
+
+  <p><b>Horizontal centering by margin:auto</b> (also sets the element to display:block)</p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mh-auto deco-b-thin-solid" style="width:75%;">.deco-mh-auto</div>
+    </div>
+  </div>
+
+  <p><b>Codebase default margin sizes</b> (modify these according to your project's needs)</p>
+
+  <div style="max-width:400px;margin:auto;">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name (as used in variable and class)</th>
+          <th>Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>*-zero</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>*-tiny</td>
+          <td>5px</td>
+        </tr>
+        <tr>
+          <td>*-small</td>
+          <td>10px</td>
+        </tr>
+        <tr>
+          <td>*-medium</td>
+          <td>20px</td>
+        </tr>
+        <tr>
+          <td>*-large</td>
+          <td>40px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <p><b>Equal margins on all sides</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-m-zero deco-b-thin-solid">.deco-m-zero</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-m-tiny deco-b-thin-solid">.deco-m-tiny</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-m-small deco-b-thin-solid">.deco-m-small</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-m-medium deco-b-thin-solid">.deco-m-medium</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-m-large deco-b-thin-solid">.deco-m-large</div>
+    </div>
+  </div>
+
+  <p><b>Top margin only</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mt-zero deco-b-thin-solid">.deco-mt-zero</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mt-tiny deco-b-thin-solid">.deco-mt-tiny</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mt-small deco-b-thin-solid">.deco-mt-small</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mt-medium deco-b-thin-solid">.deco-mt-medium</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mt-large deco-b-thin-solid">.deco-mt-large</div>
+    </div>
+  </div>
+
+  <p><b>Right margin only</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mr-zero deco-b-thin-solid">.deco-mr-zero</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mr-tiny deco-b-thin-solid">.deco-mr-tiny</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mr-small deco-b-thin-solid">.deco-mr-small</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mr-medium deco-b-thin-solid">.deco-mr-medium</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mr-large deco-b-thin-solid">.deco-mr-large</div>
+    </div>
+  </div>
+
+  <p><b>Bottom margin only</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mb-zero deco-b-thin-solid">.deco-mb-zero</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mb-tiny deco-b-thin-solid">.deco-mb-tiny</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mb-small deco-b-thin-solid">.deco-mb-small</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mb-medium deco-b-thin-solid">.deco-mb-medium</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-mb-large deco-b-thin-solid">.deco-mb-large</div>
+    </div>
+  </div>
+
+  <p><b>Left margin only</b></p>
+
+  <div style="max-width:400px;margin:auto;">
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-ml-zero deco-b-thin-solid">.deco-ml-zero</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-ml-tiny deco-b-thin-solid">.deco-ml-tiny</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-ml-small deco-b-thin-solid">.deco-ml-small</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-ml-medium deco-b-thin-solid">.deco-ml-medium</div>
+    </div>
+    <div class="deco-mb-small deco-b-thin-dashed">
+      <div class="deco-ml-large deco-b-thin-solid">.deco-ml-large</div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</main>
+
+<footer class="codebase-docs__footer deco-bg-charcoal">
+  <span class="deco-text-light-gray">
+    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+  </span>
+</footer>
+
+</div> <!-- /.codebase-docs -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+
+</body>
+
+</html>

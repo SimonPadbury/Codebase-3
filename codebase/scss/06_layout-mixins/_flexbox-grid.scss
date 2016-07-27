@@ -1,0 +1,46 @@
+// LAYOUT MIXINS: FLEXBOX GRID
+// ===========================
+// Similar to Semantic grid, except that the mixins use flexbox instead of floats.
+
+// Grid Container
+
+@mixin grid-no-flexbox {
+  display: block;
+  margin: 0 auto;
+  max-width: $grid-max-width;
+  -webkit-backface-visibility: hidden;
+}
+@mixin grid-flexbox {
+  display: flex;
+  margin: 0 auto;
+  max-width: $grid-max-width;
+  -webkit-backface-visibility: hidden;
+}
+
+// Column Base
+
+@mixin column-flexbox {
+  // Note: box-sizing: border-box; // Has been added as a global (base) mixin already.
+  min-height: 1px;
+  width: 100%;
+  overflow-x: hidden;
+}
+@mixin column-flexbox--span($column-flexbox--span) {
+  width: ($column-flexbox--span / $grid-max-columns) * 100%;
+}
+
+// Note: in the Codebase flexbox grid, push/pull works by column `re-ordering`.
+
+@mixin column-flexbox--push($column-flexbox--push) {
+  order: $column-flexbox--push;
+}
+@mixin column-flexbox--pull($column-flexbox--pull) {
+  order: -$column-flexbox--pull;
+}
+@mixin column-flexbox--centered($column-flexbox--centered) {
+  width: ($column-flexbox--centered / $grid-max-columns) * 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Incomplete rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).

@@ -1,47 +1,113 @@
-// CODEBASE
-// ========
+/*
+Codebase v.1.0 -- July 2016
+===========================
+http://simonpadbury.github.io/Codebase/
+*/
 
-// Base
-// ----
+// Third Party Stylesheets
+@import '01_third-party/normalize';
 
-@import 'base/normalize';
-@import 'base/base-variables';
-@import 'base/base-mixins';
-@import 'base/base-breakpoints';
-@import 'base/base-typography';
-@import 'base/base-styles';
+// =================
+// DEFAULT VARIABLES
+// =================
 
-// Layout
-// ------
-// In your final design, import EITHER `layout-grid-classic` OR `layout-grid-semanic` OR `layout-grid-flexbox` - whatever you choose. 
-// (However, all will be included in this repository for demonstration purposes.)
+/*@import '02_default-variables/base';
+@import '02_default-variables/colors';
+@import '02_default-variables/decoration';
+@import '02_default-variables/breakpoints';
+@import '02_default-variables/reset-overlay';
+@import '02_default-variables/layout';
+@import '02_default-variables/typography';
+@import '02_default-variables/forms';
+@import '02_default-variables/buttons';
+@import '02_default-variables/menubar';
+@import '02_default-variables/off-canvas-column';
+@import '02_default-variables/tab-systems';
+@import '02_default-variables/pagination';*/
 
-@import 'layout/layout-grid-classic';
-@import 'layout/layout-grid-semantic';
-@import 'layout/layout-grid-flexbox';
-@import 'layout/layout-visibility';
-@import 'layout/layout-box'; // a.k.a. OOCSS media object
+@import '02_default-variables/default-variables';
 
-// Modules
-// -------
+// =================
+// BREAKPOINT MIXINS
+// =================
 
-@import 'modules/module-buttons';
-@import 'modules/module-menu';
-@import 'modules/module-menubar';
-@import 'modules/module-pagination';
-@import 'modules/module-tabs';
-@import 'modules/module-forms';
+@import '03_breakpoint-mixins/layout';
+@import '03_breakpoint-mixins/menubar';
 
-// Theme
-// -----
-// An example, bare-minimum theme is included. 
-// Codebase intends you to modify and add to these SCSS files.
+// Decoration Mixins
+// Not required. See: '04_decoration-mixins/notes.md';
 
-@import 'theme/theme-base';
-@import 'theme/theme-layout-grid';
-@import 'theme/theme-layout-box';
-@import 'theme/theme-module-menu';
-@import 'theme/theme-module-menubar';
-@import 'theme/theme-module-pagination';
-@import 'theme/theme-module-tabs';
-@import 'theme/theme-module-forms';
+// =====================
+// CLASSLESS BASE STYLES
+// =====================
+
+@import '05_base-styles/base';
+@import '05_base-styles/typography';
+@import '05_base-styles/code';
+@import '05_base-styles/forms';
+
+// ===============
+// CODEBASE MIXINS
+// ===============
+
+// Layout Mixins
+@import '06_layout-mixins/grid-base';
+@import '06_layout-mixins/classic-grid';
+@import '06_layout-mixins/semantic-grid';
+@import '06_layout-mixins/flexbox-grid';
+@import '06_layout-mixins/off-canvas-column';
+
+// Utility Mixins
+@import '07_utility-mixins/basics';
+@import '07_utility-mixins/reset-overlay';
+@import '07_utility-mixins/visibility';
+@import '07_utility-mixins/typography';
+@import '07_utility-mixins/forms';
+@import '07_utility-mixins/images';
+@import '07_utility-mixins/buttons';
+@import '07_utility-mixins/combo';
+@import '07_utility-mixins/dropdowns';
+
+// Component Mixins
+@import '08_component-mixins/media-objects';
+@import '08_component-mixins/menus';
+@import '08_component-mixins/menubar';
+@import '08_component-mixins/pagination';
+@import '08_component-mixins/tabs';
+@import '08_component-mixins/tables';
+@import '08_component-mixins/modals';
+
+// ================
+// CODEBASE CLASSES
+// ================
+
+// Layout Classes
+@import '09_layout-classes/classic-grid';
+@import '09_layout-classes/off-canvas-column';
+
+// Utility Classes
+@import '10_utility-classes/basics';
+@import '10_utility-classes/reset-overlay';
+@import '10_utility-classes/visibility';
+@import '10_utility-classes/typography';
+@import '10_utility-classes/forms';
+@import '10_utility-classes/images';
+@import '10_utility-classes/buttons';
+@import '10_utility-classes/combo';
+@import '10_utility-classes/dropdowns';
+
+// Component Classes
+@import '11_component-classes/media-objects';
+@import '11_component-classes/menus';
+@import '11_component-classes/menubar';
+@import '11_component-classes/pagination';
+@import '11_component-classes/tabs';
+@import '11_component-classes/tables';
+@import '11_component-classes/modals';
+
+// Decoration Classes
+@import '12_decoration-classes/margins';
+@import '12_decoration-classes/borders';
+@import '12_decoration-classes/paddings';
+@import '12_decoration-classes/colors';
+@import '12_decoration-classes/shadows';

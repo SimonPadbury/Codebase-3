@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Layout: Flexbox Grid | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <div class="codebase-docs">
+
+<nav class="menubar codebase-docs__menubar">
+  <div class="menubar__brand">
+    <a href="index.html"><span>Codebase</span></a>
+  </div>
+  <div class="menubar__content">
+    <div class="menubar__right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="codebase-docs__header">
+    <span><a href="layout.html">Layout</a>:</span>
+    <h1>Flexbox Grid</h1>
+  </header>
+
+  <div class="codebase-docs__main">
+
+  <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--small-up">
+      <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+      <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+    </ul>
+
+    <h4>Codebase Docs</h4>
+
+    <ul class="codebase-docs__sidebar-menu">
+      <li><a href="getting-started.html">Getting Started</a></li>
+      <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+      <li><a href="decoration.html">Decoration</a>
+        <ul>
+          <li><a href="decoration-margins.html">Margins</a>
+          <li><a href="decoration-borders.html">Borders</a>
+          <li><a href="decoration-paddings.html">Paddings</a>
+          <li><a href="decoration-colors.html">Colors</a>
+          <li><a href="decoration-shadows.html">Shadows</a>
+        </ul>
+      </li>
+      <li><a href="layout.html">Layout</a>
+        <ul>
+          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        </ul>
+      </li>
+      <li><a href="utilities.html">Utilities</a>
+        <ul>
+          <li><a href="utilities-typography.html">Typography</a></li>
+          <li><a href="utilities-forms.html">Forms</a></li>
+          <li><a href="utilities-images.html">Images</a></li>
+          <li><a href="utilities-buttons.html">Buttons</a></li>
+          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+          <li><a href="utilities-visibility.html">Visibility </a></li>
+        </ul>
+      </li>
+      <li><a href="components.html">Components</a>
+        <ul>
+          <li><a href="components-menus.html">Menus</a></li>
+          <li><a href="components-menubar.html">Menubar</a></li>
+          <li><a href="components-media-object.html">Media Object</a></li>
+          <li><a href="components-modals.html">Modals</a></li>
+          <li><a href="components-tables.html">Tables</a></li>
+          <li><a href="components-tab-systems.html">Tab Systems</a></li>
+          <li><a href="components-pagination.html">Pagination</a></li>
+        </ul>
+    </ul>
+  </div>
+
+  <div class="codebase-docs__main-article">
+
+  <div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-medium deco-bg-silver">
+    <i class="fa fa-exclamation-circle deco-text-primary"></i> All three grids have been included in this repository instance of Codebase for demonstration purposes. But users will only need to <code>@include</code> the grid system of their choice.
+  </div>
+
+  <p>Example:</p>
+
+  <section class="flexgrid-wrapper">
+    <div class="flexgrid-article deco-b-thin-solid">Article
+      <section class="flexgrid--nested">
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+      </section>
+    </div>
+    <div class="flexgrid-aside deco-b-thin-solid">Aside</div>
+  </section>
+  <section class="flexgrid-wrapper">
+    <div class="flexgrid-centered deco-b-thin-solid">Centered</div>
+  </section>
+
+  <p>
+    Incorporate the Codebase flexbox grid mixins into your own layout, using your own choice of class names.
+  </p>
+
+  <p>
+    The Codebase flexbox grid mixins are named similar to the Codebase classic grid classes, except that the column numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
+  </p>
+
+  <p>
+    You can also control the media query breakpoints using the Codebase breakpoint mixins, as below.
+  </p>
+
+  <pre><code>.your-flexbox-grid-wrapper-class {
+  @include grid-no-flexbox;
+  @include grid--gutter;
+  @include breakpoint__medium--up {
+    @include grid-flexbox;
+  }
+}
+
+.your-flexbox-grid-article-class {
+  @include column-flexbox;
+  @include breakpoint__medium--up {
+    @include column-flexbox--span(8);
+  }
+  @include breakpoint__large--up {
+    @include column-flexbox--push(1);
+  }
+}
+
+.your-flexbox-grid-sidebar-class {
+  @include column-flexbox;
+  @include breakpoint__medium--up {
+    @include column-flexbox--span(4);
+  }
+  @include breakpoint__large--up {
+    @include column-flexbox--pull(1);
+  }
+}
+
+.your-flexbox-grid-nested-class {
+  @include grid-no-flexbox;
+  @include grid--gutter;
+  @include grid--nested;
+  @include breakpoint__small--up {
+    @include grid-flexbox;
+    @include grid--nested;
+    &gt; div {
+      @include column-flexbox;
+      @include column-flexbox--span(4);
+    }
+  }
+}
+
+.your-flexbox-grid-centered-class {
+  @include column-flexbox;
+  @include breakpoint__small--up {
+    @include column-flexbox--centered(7);
+  }
+}
+</code></pre>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:290px">Mixin</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>@mixin grid-no-flexbox</td>
+        <td>Container mixin, with <b>display:block</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
+      </tr>
+      <tr>
+        <td>@mixin grid-flexbox</td>
+        <td>Container mixin, with <b>display:flex</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
+      </tr>
+      <tr>
+        <td>@mixin grid--gutter</td>
+        <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
+      </tr>
+      <tr>
+        <td>@mixin grid--nested</td>
+        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
+      </tr>
+      <tr>
+        <td>@mixin column-flexbox</td>
+        <td>(Min height 1px.)</td>
+      </tr>
+      <tr>
+        <td>@mixin column-flexbox--centered(X)</td>
+        <td>Centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin column-flexbox--span(X)</td>
+        <td>Column spanning, as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin column-flexbox--push(X)</td>
+        <td>Column pushing to the right using flexbox re-ordering. <code>*--push(1)</code> moves a column to the right by increasing its column order by 1. <br><br>E.g. pushing column [A] by 1 while pullng column [B] by 1 will result in the column order being swapped to [B][A].)</td>
+      </tr>
+      <tr>
+        <td>@mixin column-flexbox--pull(X)</td>
+        <td>Column pulling to the left using flexbox re-ordering). <code>*--pull(1)</code> moves a column to the left by decreasing its column order by 1.</td>
+      </tr>
+    </tbody>
+  </table>
+
+      </div>
+  </div>
+</main>
+
+<footer class="codebase-docs__footer deco-bg-charcoal">
+  <span class="deco-text-light-gray">
+    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+  </span>
+</footer>
+
+</div> <!-- /.codebase-docs -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+
+</body>
+
+</html>

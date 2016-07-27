@@ -1,11 +1,21 @@
-# Codebase
+# Codebase v.1.0
 
-**v.0.7**
+Yet another SCSS / jQuery component library.
 
-SCSS / jQuery component library.
+### Codebase itself is (in) the `codebase/` folder:
 
-In development.
+```
+codebase/
+  ├── css/
+  ├── js/
+  └── scss/
+```
 
-Codebase docs: [http://simonpadbury.github.io/Codebase/](http://simonpadbury.github.io/Codebase/)
+### Codebase docs:
+
+[http://simonpadbury.github.io/Codebase/](http://simonpadbury.github.io/Codebase/)
+
+
+---
 
 My blog: [http://simonpadbury.github.io](http://simonpadbury.github.io)

@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Components: Menus | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+
 
 </head>
 
@@ -32,7 +33,8 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <span><a href="components.html">Components</a>:</span>
+    <h1>Menus</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +94,70 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
-  
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-  
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <p>
+    Inline-block menu links:
+  </p>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+        <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+        <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+      </ul>
+    </li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+  </ul>
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
-  
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
+  <p>
+    HTML with Codebase classes:
+  </p>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
+  <pre><code>&lt;ul class=&quot;menu&quot;&gt;
+  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+      &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+  <p>
+    Block menu links:
+  </p>
+
+  <ul class="menu menu--block">
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+      <ul class="menu menu--block">
+        <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+        <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+        <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+      </ul>
+    </li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+    <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+  </ul>
+
+  <p>
+    HTML with Codebase classes:
+  </p>
+
+  <pre><code>&lt;ul class=&quot;menu menu--block&quot;&gt;
+  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;
+    &lt;ul class=&quot;menu menu--block&quot;&gt;
+      &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
       </div>
   </div>
 </main>

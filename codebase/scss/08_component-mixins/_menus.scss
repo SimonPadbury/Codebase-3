@@ -1,0 +1,25 @@
+// COMPONENT MIXINS: MENUS
+// =======================
+
+@mixin menu {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin menu__item {
+  list-style-type: none;
+}
+
+@mixin menu__link {
+  display: inline-block;
+  padding: $spacing-tiny 0;
+}
+
+@mixin menu__link--block {
+  display: block;
+  padding: $spacing-block;
+  &:hover {
+    text-decoration: none;
+    background: $color-menu-block-hover-background;
+  } 
+}

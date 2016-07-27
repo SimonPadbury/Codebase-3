@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Components: Tables | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  
 
 </head>
 
@@ -32,7 +33,8 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <span><a href="components.html">Components</a>:</span>
+    <h1>Tables</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +94,132 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
-  
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-  
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <p>
+    Add <code>class="table"</code> to tables. This adds the styles that you see below. <code>codebase.js</code> adds a wrapper around tables with this class, enabling responsive overflow (horizontal scrolling). If the table width is wider than the width allowed in the webpage layout, then an inner shadow is added around the table to indicate that there is more to the table than what is visible.
+  </p>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <p>
+    A table that is horizontally scrollable on narrow screens:
+  </p>
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
-  
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
+  <table class="table table--nowrap">
+    <thead>
+      <tr>
+        <th>Table header 1</th>
+        <th>Table header 2</th>
+        <th>Table header 3</th>
+        <th>Table header 4</th>
+        <th>Table header 5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table content 1 A</td>
+        <td>Table content 2 A</td>
+        <td>Table content 3 A</td>
+        <td>Table content 4 A</td>
+        <td>Table content 5 A</td>
+      </tr>
+      <tr>
+        <td>Table content 1 B</td>
+        <td>Table content 2 B</td>
+        <td>Table content 3 B</td>
+        <td>Table content 4 B</td>
+        <td>Table content 5 B</td>
+      </tr>
+      <tr>
+        <td>Table content 1 C</td>
+        <td>Table content 2 C</td>
+        <td>Table content 3 C</td>
+        <td>Table content 4 C</td>
+        <td>Table content 5 C</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
+  <p>
+    (The table above also has class <code>table--nowrap</code>.)
+  </p>
+
+  <p>
+    A table that is horizontally scrollable at all screen widths:
+  </p>
+
+  <table class="table" id="table2">
+    <thead>
+      <tr>
+        <th>Table header 1</th>
+        <th>Table header 2</th>
+        <th>Table header 3</th>
+        <th>Table header 4</th>
+        <th>Table header 5</th>
+        <th>Table header 6</th>
+        <th>Table header 7</th>
+        <th>Table header 8</th>
+        <th>Table header 9</th>
+        <th>Table header 10</th>
+        <th>Table header 11</th>
+        <th>Table header 12</th>
+        <th>Table header 13</th>
+        <th>Table header 14</th>
+        <th>Table header 15</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table content 1 A</td>
+        <td>Table content 2 A</td>
+        <td>Table content 3 A</td>
+        <td>Table content 4 A</td>
+        <td>Table content 5 A</td>
+        <td>Table content 6 A</td>
+        <td>Table content 7 A</td>
+        <td>Table content 8 A</td>
+        <td>Table content 9 A</td>
+        <td>Table content 10 A</td>
+        <td>Table content 11 A</td>
+        <td>Table content 12 A</td>
+        <td>Table content 13 A</td>
+        <td>Table content 14 A</td>
+        <td>Table content 15 A</td>
+      </tr>
+      <tr>
+        <td>Table content 1 B</td>
+        <td>Table content 2 B</td>
+        <td>Table content 3 B</td>
+        <td>Table content 4 B</td>
+        <td>Table content 5 B</td>
+        <td>Table content 6 B</td>
+        <td>Table content 7 B</td>
+        <td>Table content 8 B</td>
+        <td>Table content 9 B</td>
+        <td>Table content 10 B</td>
+        <td>Table content 11 B</td>
+        <td>Table content 12 B</td>
+        <td>Table content 13 B</td>
+        <td>Table content 14 B</td>
+        <td>Table content 15 B</td>
+      </tr>
+      <tr>
+        <td>Table content 1 C</td>
+        <td>Table content 2 C</td>
+        <td>Table content 3 C</td>
+        <td>Table content 4 C</td>
+        <td>Table content 5 C</td>
+        <td>Table content 6 C</td>
+        <td>Table content 7 C</td>
+        <td>Table content 8 B</td>
+        <td>Table content 9 B</td>
+        <td>Table content 10 B</td>
+        <td>Table content 11 B</td>
+        <td>Table content 12 B</td>
+        <td>Table content 13 B</td>
+        <td>Table content 14 B</td>
+        <td>Table content 15 B</td>
+      </tr>
+    </tbody>
+  </table>
+
       </div>
   </div>
 </main>

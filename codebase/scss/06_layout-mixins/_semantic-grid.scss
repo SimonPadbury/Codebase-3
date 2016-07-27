@@ -1,0 +1,37 @@
+// LAYOUT MIXINS: SEMANTIC GRID
+// ============================
+
+// Column Base
+
+@mixin column-semantic {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+@mixin column--span($column--span) {
+  float: left;
+  width: ($column--span / $grid-max-columns) * 100%;
+}
+
+@mixin column--offset($column--offset) {
+  margin-left: ($column--offset / $grid-max-columns) * 100%;
+}
+
+@mixin column--push($column--push) {
+  position: relative;
+  left: ($column--push / $grid-max-columns) * 100%;
+}
+
+@mixin column--pull($column--pull) {
+  right: ($column--pull / $grid-max-columns) * 100%;
+}
+
+@mixin column--centered($column--centered) {
+  width: ($column--centered / $grid-max-columns) * 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Incomplete rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).

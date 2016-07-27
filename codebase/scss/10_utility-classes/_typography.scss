@@ -1,0 +1,34 @@
+// CLASS BUILDER: TYPOGRAPHY CLASSES
+// =========================
+
+// Lead paragraph
+
+.lead {
+  @include lead;
+}
+
+// Drop cap
+
+.dropcap {
+  @include dropcap;
+}
+
+// Drop cap
+
+.initial-icon {
+  @include initial-icon;
+}
+
+// Text alignment
+
+.text--left {
+  @include text--left;
+}
+
+.text--center {
+  @include text--center;
+}
+
+.text--right {
+  @include text--right;
+}

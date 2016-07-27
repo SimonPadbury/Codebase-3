@@ -1,0 +1,26 @@
+// COMPONENT MIXINS: PAGINATION
+// ============================
+
+@mixin pagination {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin pagination__item {
+  display: inline-block;
+  list-style-type: none;
+  margin: $spacing-small 0;
+}
+
+@mixin pagination__link {
+  padding: $spacing-small;
+}
+
+@mixin pagination__link--current {
+  color: $color-dark-gray;
+  background: $color-silver;
+  &:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+}

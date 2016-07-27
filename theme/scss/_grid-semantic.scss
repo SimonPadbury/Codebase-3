@@ -1,0 +1,43 @@
+// CLASS BUILDER: SEMANTIC GRID (DEMO) CLASSES
+// ===========================================
+// Note: You can class your grid `<div>`s anything you like, semantially to suit your web design. You don't have to use `semgrid` as in this demo.
+
+.semgrid-wrapper {
+  @include grid;
+  @include grid--gutter;
+}
+.semgrid-article {
+  @include column-semantic;
+  @include breakpoint__medium--up {
+    @include column--span(8);
+  }
+  @include breakpoint__large--up {
+    @include column--push(4);
+  }
+}
+.semgrid-aside {
+  @include column-semantic;
+  @include breakpoint__medium--up {
+    @include column--span(4);
+  }
+  @include breakpoint__large--up {
+    @include column--pull(8);
+  }
+}
+.semgrid--nested {
+  @include grid;
+  @include grid--gutter;
+  @include grid--nested;
+  > div {
+    @include column-semantic;
+    @include breakpoint__small--up {
+      @include column--span(4);
+    }
+  }
+}
+.semgrid-centered {
+  @include column-semantic;
+  @include breakpoint__small--up {
+    @include column--centered(7);
+  }
+}

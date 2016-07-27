@@ -1,0 +1,26 @@
+// UTILITY: DROPDOWNS
+// ==================
+
+@mixin dropdown__toggle {
+  &--is-toggled {
+    position: relative;
+    z-index: $reset-overlay--z-index + 1;
+  }
+}
+
+@mixin dropdown__content {
+  display: none;
+  position: absolute;
+  z-index: $reset-overlay--z-index + 2;
+  margin: 0;
+  padding: $spacing-small $spacing-medium;
+  border-radius: $border-radius;
+  color: $color-text-default;
+  background: #fff;
+  text-align: left;
+  cursor: default;
+  box-shadow: $box-shadow;
+  &--is-revealed {
+    display: block;
+  }
+}

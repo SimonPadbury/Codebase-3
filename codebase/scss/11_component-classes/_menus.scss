@@ -1,0 +1,28 @@
+// COMPONENT CLASSES: MENUS
+// ========================
+
+// Basic links
+
+.menu {
+  @include menu;
+}
+
+.menu__item {
+  @include menu__item;
+}
+
+.menu__link {
+  @include menu__link;
+}
+
+.menu .menu {
+  margin-left: $spacing-medium;
+}
+
+// Block links
+
+.menu--block {
+  .menu__link {
+    @include menu__link--block;
+  }
+}

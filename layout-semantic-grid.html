@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Docs | Codebase</title>
+  <title>Layout: Semantic Grid | Codebase</title>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  
 
 </head>
 
@@ -32,7 +33,8 @@
 </nav>
 
   <header class="codebase-docs__header">
-    <h1>Codebase v.1.0</h1>
+    <span><a href="layout.html">Layout</a>:</span>
+    <h1>Semantic Grid</h1>
   </header>
 
   <div class="codebase-docs__main">
@@ -92,24 +94,128 @@
 
   <div class="codebase-docs__main-article">
 
-  <p>Yet another (S)CSS / jQuery component library.</p>
-  
-  <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-  
-  <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+  <p>
+    Example:
+  </p>
 
-  <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
+  <section class="semgrid-wrapper">
+    <div class="semgrid-article deco-b-thin-solid">Article
+      <section class="semgrid--nested">
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+      </section>
+    </div>
+    <div class="semgrid-aside deco-b-thin-solid">Aside</div>
+  </section>
+  <section class="semgrid-wrapper grid-example">
+    <div class="semgrid-centered deco-b-thin-solid">Centered</div>
+  </section>
 
-  <p>So although the docs demonstrate the Codebase classes, SCSS users can also <code>@include</code> Codebase mixins in their own mixins and classes.</p>
-  
-  <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
-  
-  <pre><code>&lt;a class="button button--success button--large" href="getting-started.html"&gt;
-  Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
-&lt;/a&gt;</code></pre>
+  <p>
+    Incorporate the Codebase semantic grid mixins into your own layout, using your own choice of class names.
+  </p>
 
-  <p><a class="button button--success button--large" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></p>
-  
+  <p>
+    The Codebase semantic grid mixins are named similar to the Codebase classic grid classes, except that the column numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
+  </p>
+
+  <p>
+    You can also control the media query breakpoints using the Codebase breakpoint mixins, as below.
+  </p>
+
+  <pre><code>.your-grid-wrapper-class {
+  @include grid;
+  @include grid--gutter;
+}
+
+.your-article-column-class {
+  @include column-semantic;
+  @include breakpoint__medium--up {
+    @include column--span(8);
+  }
+  @include breakpoint__large--up {
+    @include column--push(4);
+  }
+}
+
+.your-sidebar-column-class {
+  @include column-semantic;
+  @include breakpoint__medium--up {
+    @include column--span(4);
+  }
+  @include breakpoint__large--up {
+    @include column--pull(8);
+  }
+}
+
+.your-nested-grid-wrapper-class {
+  @include grid;
+  @include grid--gutter;
+  @include grid--nested;
+  &gt; div {
+    @include column-semantic;
+    @include breakpoint__small--up {
+      @include column--span(4);
+    }
+  }
+}
+
+.your-centered-column-class {
+  @include column-semantic;
+  @include breakpoint__small--up {
+    @include column--centered(7);
+  }
+}
+</code></pre>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:230px">Mixin</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>@mixin grid</td>
+        <td>The container mixin. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left. <br><br>If a containing wrapper doesn't have this grid mixin included, then a grid system will expand to whatever the width of the container is, without maxing out at $grid-max-width. E.g. it could expand to he BODY width.</td>
+      </tr>
+      <tr>
+        <td>@mixin grid--gutter</td>
+        <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
+      </tr>
+      <tr>
+        <td>@mixin grid--nested</td>
+        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
+      </tr>
+      <tr>
+        <td>@mixin column-semantic</td>
+        <td>Float left. (Min height 1px.)</td>
+      </tr>
+      <tr>
+        <td>@mixin column--centered(X)</td>
+        <td>No float. Instead, centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin column--span(X)</td>
+        <td>Column spanning, as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin column--push(X)</td>
+        <td>Column pushing to the right, as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin column--pull(X)</td>
+        <td>Column pulling to the left, as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin column--offset(X)</td>
+        <td>Column offsetting from the left, as calculated out of $grid-max-columns (default is 12).</td>
+      </tr>
+    </tbody>
+  </table>
+
       </div>
   </div>
 </main>

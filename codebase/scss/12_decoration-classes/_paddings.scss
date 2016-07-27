@@ -1,0 +1,98 @@
+// DECORATION MIXINS: PADDINGS
+// ===========================
+
+// @include deco-p-block in block menu items and menubar items
+
+.deco-p-block {
+  padding: $spacing-tiny $spacing-small;
+}
+
+// Padding All
+
+.deco-p-zero {
+  padding: 0;
+}
+.deco-p-tiny {
+  padding: $spacing-tiny;
+}
+.deco-p-small {
+  padding: $spacing-small;
+}
+.deco-p-medium {
+  padding: $spacing-medium;
+}
+.deco-p-large {
+  padding: $spacing-large;
+}
+
+// Padding Top
+
+.deco-pt-zero {
+  padding-top: 0;
+}
+.deco-pt-tiny {
+  padding-top: $spacing-tiny;
+}
+.deco-pt-small {
+  padding-top: $spacing-small;
+}
+.deco-pt-medium {
+  padding-top: $spacing-medium;
+}
+.deco-pt-large {
+  padding-top: $spacing-large;
+}
+
+// Padding Right
+
+.deco-pr-zero {
+  padding-right: 0;
+}
+.deco-pr-tiny {
+  padding-right: $spacing-tiny;
+}
+.deco-pr-small {
+  padding-right: $spacing-small;
+}
+.deco-pr-medium {
+  padding-right: $spacing-medium;
+}
+.deco-pr-large {
+  padding-right: $spacing-large;
+}
+
+// Padding Bottom
+
+.deco-pb-zero {
+  padding-bottom: 0;
+}
+.deco-pb-tiny {
+  padding-bottom: $spacing-tiny;
+}
+.deco-pb-small {
+  padding-bottom: $spacing-small;
+}
+.deco-pb-medium {
+  padding-bottom: $spacing-medium;
+}
+.deco-pb-large {
+  padding-bottom: $spacing-large;
+}
+
+// Padding Left
+
+.deco-pl-zero {
+  padding-left: 0;
+}
+.deco-pl-tiny {
+  padding-left: $spacing-tiny;
+}
+.deco-pl-small {
+  padding-left: $spacing-small;
+}
+.deco-pl-medium {
+  padding-left: $spacing-medium;
+}
+.deco-pl-large {
+  padding-left: $spacing-large;
+}
