@@ -1,0 +1,26 @@
+# OSX
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# SCSS
+
+.sass-cache
+**.sass-cache
+
+# CodeKit
+
+config.codekit
+.codekit-cache
+kit
+
+*.scssc
+
+*.scssc
+
+codebase/scss/.sass-cache/ece3939901e7bbb21ab5d112be5add6a9d19f7bd/_layout-grid-classic.scssc
