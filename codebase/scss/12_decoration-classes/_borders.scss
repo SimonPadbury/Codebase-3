@@ -4,7 +4,7 @@
 // Border All
 
 .deco-b-zero {
-  border: 0;
+  border: 0 !important;
 }
 .deco-b-thin-solid {
   border: $border-thin-solid;
@@ -19,7 +19,7 @@
 // Border Top
 
 .deco-bt-zero {
-  border-top: 0;
+  border-top: 0 !important;
 }
 .deco-bt-thin-solid {
   border-top: $border-thin-solid;
@@ -34,7 +34,7 @@
 // Border Right
 
 .deco-br-zero {
-  border-right: 0;
+  border-right: 0 !important;
 }
 .deco-br-thin-dashed {
   border-right: $border-thin-dashed;
@@ -49,7 +49,7 @@
 // Border Bottom
 
 .deco-bb-zero {
-  border-bottom: 0;
+  border-bottom: 0 !important;
 }
 .deco-bb-thin-solid {
   border-bottom: $border-thin-solid;
@@ -64,7 +64,7 @@
 // Border Left
 
 .deco-bl-zero {
-  border-left: 0;
+  border-left: 0 !important;
 }
 .deco-bl-thin-solid {
   border-left: $border-thin-solid;

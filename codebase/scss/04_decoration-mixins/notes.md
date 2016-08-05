@@ -9,7 +9,7 @@ In this folder (`02_mixins-decoration/`) you may develop mixins as composites va
 
 For example: in the Codebase docs I have build simple info boxes such as:
 
-<div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-medium deco-bg-silver">
+<div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-md deco-bg-silver">
   <i class="fa fa-thumbs-o-up deco-text-primary"></i> <b>Hat tip:</b>...
 </div>
 

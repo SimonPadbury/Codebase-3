@@ -1,4 +1,4 @@
-# Codebase v.1.0
+# Codebase v.1.1
 
 Yet another SCSS / jQuery component library.
 

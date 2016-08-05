@@ -13,15 +13,3 @@
     @include reset-overlay--darken;
   }
 }
-
-
-// The code below immobilizes body scrolling when the reset-overlay is raised
-
-html, body {
-    height: 100% !important;
-}
-
-.body-inner-wrap {
-  height: 100%;
-  overflow: auto;
-}

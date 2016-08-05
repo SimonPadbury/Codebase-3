@@ -1,37 +1,37 @@
 // LAYOUT MIXINS: SEMANTIC GRID
 // ============================
 
-// Column Base
+// Semantic Column Base
 
-@mixin column-semantic {
+@mixin col-semantic {
   position: relative;
   min-height: 1px;
   width: 100%;
   -webkit-backface-visibility: hidden;
+  overflow: visible;
 }
 
-@mixin column--span($column--span) {
+@mixin col--span($col--span) {
   float: left;
-  width: ($column--span / $grid-max-columns) * 100%;
+  width: ($col--span / $grid-max-cols) * 100%;
 }
 
-@mixin column--offset($column--offset) {
-  margin-left: ($column--offset / $grid-max-columns) * 100%;
+@mixin col--offset($col--offset) {
+  margin-left: ($col--offset / $grid-max-cols) * 100%;
 }
 
-@mixin column--push($column--push) {
-  position: relative;
-  left: ($column--push / $grid-max-columns) * 100%;
+@mixin col--push($col--push) {
+  left: ($col--push / $grid-max-cols) * 100%;
 }
 
-@mixin column--pull($column--pull) {
-  right: ($column--pull / $grid-max-columns) * 100%;
+@mixin col--pull($col--pull) {
+  right: ($col--pull / $grid-max-cols) * 100%;
 }
 
-@mixin column--centered($column--centered) {
-  width: ($column--centered / $grid-max-columns) * 100%;
+@mixin col--centered($col--centered) {
+  width: ($col--centered / $grid-max-cols) * 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
-// Incomplete rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).
+// Incomplete grid rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).

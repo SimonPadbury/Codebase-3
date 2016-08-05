@@ -5,44 +5,44 @@
 .flexgrid-wrapper {
   @include grid-no-flexbox;
   @include grid--gutter;
-  @include breakpoint__medium--up {
+  @include break__md--up {
     @include grid-flexbox;
   }
 }
 .flexgrid-article {
-  @include column-flexbox;
-  @include breakpoint__medium--up {
-    @include column-flexbox--span(8);
+  @include col-flexbox;
+  @include break__md--up {
+    @include col-flexbox--span(8);
   }
-  @include breakpoint__large--up {
-    @include column-flexbox--push(1);
+  @include break__lg--up {
+    @include col-flexbox--push(1);
   }
 }
 .flexgrid-aside {
-  @include column-flexbox;
-  @include breakpoint__medium--up {
-    @include column-flexbox--span(4);
+  @include col-flexbox;
+  @include break__md--up {
+    @include col-flexbox--span(4);
   }
-  @include breakpoint__large--up {
-    @include column-flexbox--pull(1);
+  @include break__lg--up {
+    @include col-flexbox--pull(1);
   }
 }
 .flexgrid--nested {
   @include grid-no-flexbox;
   @include grid--gutter;
   @include grid--nested;
-  @include breakpoint__small--up {
+  @include break__sm--up {
     @include grid-flexbox;
     @include grid--nested;
     > div {
-      @include column-flexbox;
-      @include column-flexbox--span(4);
+      @include col-flexbox;
+      @include col-flexbox--span(4);
     }
   }
 }
 .flexgrid-centered {
-  @include column-flexbox;
-  @include breakpoint__small--up {
-    @include column-flexbox--centered(7);
+  @include col-flexbox;
+  @include break__sm--up {
+    @include col-flexbox--centered(7);
   }
 }

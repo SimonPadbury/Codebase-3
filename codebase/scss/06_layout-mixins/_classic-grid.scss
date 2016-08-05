@@ -1,11 +1,12 @@
 // LAYOUT MIXINS: CLASSIC GRID
 // ===========================
 
-@mixin column-classic {
+@mixin col-classic {
   position: relative;
   min-height: 1px;
   width: 100%;
   float: left;
+  overflow: visible;
   &--centered {
     float: none !important;
     margin-right: auto;
@@ -13,30 +14,30 @@
   }
 }
 
-// Column Control Mixins
-// Used by the column builder mixins.
+// col Control Mixins
+// Used by the col builder mixins.
 
-@mixin span($span, $grid-max-columns: 12) {
-  width: (100% / $grid-max-columns) * $span;
+@mixin span($span, $grid-max-cols: 12) {
+  width: (100% / $grid-max-cols) * $span;
 }
 
-@mixin offset($offset, $grid-max-columns: 12) {
-  margin-left: (100% / $grid-max-columns) * $offset;
+@mixin offset($offset, $grid-max-cols: 12) {
+  margin-left: (100% / $grid-max-cols) * $offset;
 }
 
-@mixin push($push, $grid-max-columns: 12) {
-  left: (100% / $grid-max-columns) * $push;
+@mixin push($push, $grid-max-cols: 12) {
+  left: (100% / $grid-max-cols) * $push;
 }
 
-@mixin pull($pull, $grid-max-columns: 12) {
-  right: (100% / $grid-max-columns) * $pull;
+@mixin pull($pull, $grid-max-cols: 12) {
+  right: (100% / $grid-max-cols) * $pull;
 }
 
 // Column Class Builder Mixins
 
-@mixin classic-column--span {
+@mixin classic-col--span {
   &--span {
-    @for $i from 1 through $grid-max-columns {
+    @for $i from 1 through $grid-max-cols {
       &-#{$i} {
         @include span($i);
       }
@@ -44,9 +45,9 @@
   }
 }
 
-@mixin classic-column--offset {
+@mixin classic-col--offset {
   &--offset {
-    @for $i from 1 through $grid-max-columns {
+    @for $i from 1 through $grid-max-cols {
       &-#{$i} {
         @include offset($i);
       }
@@ -54,9 +55,9 @@
   }
 }
 
-@mixin classic-column--push {
+@mixin classic-col--push {
   &--push {
-    @for $i from 1 through $grid-max-columns {
+    @for $i from 1 through $grid-max-cols {
       &-#{$i} {
         @include push($i);
       }
@@ -64,9 +65,9 @@
   }
 }
 
-@mixin classic-column--pull {
+@mixin classic-col--pull {
   &--pull {
-    @for $i from 1 through $grid-max-columns {
+    @for $i from 1 through $grid-max-cols {
       &-#{$i} {
         @include pull($i);
       }

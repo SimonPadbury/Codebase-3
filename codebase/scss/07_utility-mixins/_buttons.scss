@@ -1,29 +1,46 @@
 // UTILITY MIXINS: BUTTONS
 // =======================
 
-@mixin button {
+@mixin btn {
   display: inline-block;
   width: auto;
+  margin: 0;
   border: 0;
-  border-radius: $button-border-radius;
-  padding: $button-padding-default;
+  border-radius: $btn-border-radius;
+  padding: $btn-padding-default;
   font-size: $base-font-size;
   line-height: $base-font-size;
+  color: $color-dark-gray;
   text-decoration: none;
+  background: transparent;
+  &::-moz-focus-inner { 
+    border: 0; 
+    padding: 0; 
+  }
   &[type="button"],
   &[type="submit"] {
     -webkit-appearance: none;
-    border-radius: $button-border-radius;
   }
   &:hover {
     cursor: pointer;
+    color: $color-text-default;
     text-decoration: none;
+    background: $color-silver;
   }
+}
+
+// Icon-only Buttons (default/md size only)
+
+@mixin btn--icon {
+  width: 36px;
+  height: 36px;
+  padding: $spacing-sm 0;
+  text-align: center;
 }
 
 // Button colors
 
-@mixin button--primary {
+@mixin btn--primary {
   color: $color-primary-text;
   background: $color-primary;
   &:hover {
@@ -32,7 +49,7 @@
   }
 }
 
-@mixin button--secondary {
+@mixin btn--secondary {
   color: $color-secondary-text;
   background: $color-secondary;
   &:hover {
@@ -41,7 +58,7 @@
   }
 }
 
-@mixin button--warning {
+@mixin btn--warning {
   color: $color-warning-text;
   background: $color-warning;
   &:hover {
@@ -50,7 +67,7 @@
   }
 }
 
-@mixin button--success {
+@mixin btn--success {
   color: $color-success-text;
   background: $color-success;
   &:hover {
@@ -59,7 +76,7 @@
   }
 }
 
-@mixin button--error {
+@mixin btn--error {
   color: $color-error-text;
   background: $color-error;
   &:hover {
@@ -68,41 +85,42 @@
   }
 }
 
-@mixin button--gradient {
-  box-shadow: 
+@mixin btn--gradient {
+  box-shadow:
     0 1px 1px rgba(0,0,0,0.5),
     inset 0 0 1px rgba(0,0,0,0.5),
     inset 0 10px 10px -10px rgb(255,255,255),
     inset 0 -20px 20px -20px rgba(0,0,0,0.4);
 }
 
-@mixin button--pressable {
+@mixin btn--pressable {
   &:active {
-    box-shadow: 
+    box-shadow:
       0 0 0 transparent,
       inset 0 -50px 50px -50px rgba(0,0,0,0.4),
       inset 0 0 4px rgba(0,0,0,0.8);
-    text-shadow: 0 0 3px rgba(0,0,0,0.8);
   }
 }
 
-@mixin button--small {
-  padding: $button-padding-small;
+@mixin btn--sm {
+  height: auto;
+  padding: $btn-padding-sm;
 }
 
-@mixin button--default {
-  padding: $button-padding-default;
+@mixin btn--default {
+  padding: $btn-padding-default;
 }
 
-@mixin button--medium {
-  padding: $button-padding-default;
+@mixin btn--md {
+  padding: $btn-padding-default;
 }
 
-@mixin button--large {
-  padding: $button-padding-large;
+@mixin btn--lg {
+  height: auto;
+  padding: $btn-padding-lg;
 }
 
-@mixin button--block {
+@mixin btn--block {
   &--block {
     display: block;
     width: 100%;

@@ -1,48 +1,48 @@
 // CLASS BUILDER: VISIBILITY
 // =========================
 
-.hide--tiny-only,
-.show--small-up {
-  @include hide--tiny-only;
+.hide--xs-only,
+.show--sm-up {
+  @include hide--xs-only;
 }
 
-.hide--small-only {
-  @include hide--small-only;
+.hide--sm-only {
+  @include hide--sm-only;
 }
 
-.hide--small-up,
-.show--tiny-only {
-  @include hide--small-up
+.hide--sm-up,
+.show--xs-only {
+  @include hide--sm-up
 }
 
-.hide--medium-only {
-  @include hide--medium-only;
+.hide--md-only {
+  @include hide--md-only;
 }
 
-.hide--medium-up,
-.show--small-down {
-  @include hide--medium-up;
+.hide--md-up,
+.show--sm-down {
+  @include hide--md-up;
 }
 
-.hide--medium-down,
-.show--large-only {
-  @include hide--medium-down;
+.hide--md-down,
+.show--lg-only {
+  @include hide--md-down;
 }
 
-.hide--large-only,
-.show--medium-down {
-  @include hide--large-only;
+.hide--lg-only,
+.show--md-down {
+  @include hide--lg-only;
 }
 
-.show--small-only {
-  @include show--small-only;
+.show--sm-only {
+  @include show--sm-only;
 }
 
-.show--medium-only {
-  @include show--medium-only;
+.show--md-only {
+  @include show--md-only;
 }
 
-.hide--small-down,
-.show--medium-up {
-  @include hide--small-down;
+.hide--sm-down,
+.show--md-up {
+  @include hide--sm-down;
 }

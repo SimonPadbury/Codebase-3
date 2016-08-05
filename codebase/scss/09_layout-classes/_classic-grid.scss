@@ -6,8 +6,8 @@
   @include grid;
 }
 
-// Grid with Gutter between Columns
-// Include `grid--gutter` in your GRID container class, not in each column.
+// Grid with Gutter between cols
+// Include `grid--gutter` in your GRID container class, not in each col.
 .grid--gutter {
   @include grid--gutter;
 }
@@ -19,38 +19,38 @@
 }
 
 // Column Base
-.column {
-  @include column-classic;
+.col {
+  @include col-classic;
 }
 
 // Responsive Column Classes
-.tiny {
-  @include classic-column--span;
-  @include classic-column--offset;
+.col-xs {
+  @include classic-col--span;
+  @include classic-col--offset;
 }
-.small {
-  @include breakpoint__small--up {
-    @include classic-column--span;
-    @include classic-column--offset;
-    @include classic-column--push;
-    @include classic-column--pull;
+.col-sm {
+  @include break__sm--up {
+    @include classic-col--span;
+    @include classic-col--offset;
+    @include classic-col--push;
+    @include classic-col--pull;
   }
 }
-.medium {
-  @include breakpoint__medium--up {
-    @include classic-column--span;
-    @include classic-column--offset;
-    @include classic-column--push;
-    @include classic-column--pull;
+.col-md {
+  @include break__md--up {
+    @include classic-col--span;
+    @include classic-col--offset;
+    @include classic-col--push;
+    @include classic-col--pull;
   }
 }
-.large {
-  @include breakpoint__large--up {
-    @include classic-column--span;
-    @include classic-column--offset;
-    @include classic-column--push;
-    @include classic-column--pull;
+.col-lg {
+  @include break__lg--up {
+    @include classic-col--span;
+    @include classic-col--offset;
+    @include classic-col--push;
+    @include classic-col--pull;
   }
 }
 
-// Incomplete rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).
+// Incomplete grid rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).

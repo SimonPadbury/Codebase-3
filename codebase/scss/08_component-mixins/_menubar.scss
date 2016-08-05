@@ -8,7 +8,7 @@
   &--is-open {
     z-index: $reset-overlay--z-index + 2;
   }
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     padding-top: 0;
   }
 }
@@ -27,7 +27,7 @@
       background: $color-silver;
     }
   }
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     position: relative;
     top: auto;
     float: left;
@@ -48,7 +48,7 @@
     color: $color-text-hyperlink-hover;
     background: $color-silver;
     cursor: pointer;
-  }  @include breakpoint__menubar--up {
+  }  @include break__menubar--up {
     display: none;
   }
 }
@@ -70,7 +70,7 @@
       }
     }
   }
-  @include breakpoint__menubar--down {
+  @include break__menubar--down {
     .dropdown__toggle .dropdown__caret {
       display: none;
     }
@@ -84,7 +84,7 @@
       }
     }
   }
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     display: block !important; // Overrides the jQuery display: none
     li {
       position: relative;
@@ -108,7 +108,7 @@
       }
     }
   }
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     li {
       position: relative;
     }
@@ -119,19 +119,19 @@
 }
 
 @mixin menubar__left {
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     float: left;
   }
 }
 
 @mixin menubar__center {
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     text-align: center;
   }
 }
 
 @mixin menubar__right {
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     float: right;
     >ul {
       float: left;
@@ -145,19 +145,19 @@
 @mixin menubar__search {
   padding: 4px 15px;
   input {
-    margin-bottom: 0 !important;
-    @include breakpoint__menubar--up {
+    width: auto !important;
+    @include break__menubar--up {
       max-width: 160px;
     }
   }
-  @include breakpoint__menubar--up {
+  @include break__menubar--up {
     float: right;
-    padding-right: $spacing-tiny;
-    padding-left: $spacing-tiny;
+    padding-right: $spacing-xs;
+    padding-left: $spacing-xs;
   }
 }
 
-// The `.menubar` always gets a .wrap() called `.menubar__has-wrap` (this is used to enable the navicon toggle to be absolutely positioned over the menubar on smaller screens).
+// The `.menubar` always gets a .wrap() called `.menubar__has-wrap` (this is used to enable the navicon toggle to be absolutely positioned over the menubar on smer screens).
 // If you add `.menubar--fixed` to the menubar, then the wrap will also get class `.menubar__has-wrap--fixed`.
 
 @mixin menubar__has-wrap {
@@ -173,5 +173,5 @@
 }
 
 @mixin body--menubar-is-fixed {
-  padding-top: $line-height-px + ($spacing-tiny * 2);
+  padding-top: $line-height-px + ($spacing-xs * 2);
 }

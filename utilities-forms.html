@@ -41,8 +41,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -97,10 +97,10 @@
   <p>Inline form elements, using <code>.combo--*</code> on input field and button:</p>
 
   <div class="grid grid--gutter grid--nested">
-    <div class="column medium--offset-3 medium--span-6">
+    <div class="col col-md--offset-3 col-md--span-6">
       <form action="">
         <input class="combo--first" type="search" name="" placeholder="Search">
-        <button class="button button--primary combo--last"><i class="fa fa-search"></i> Go</button>
+        <button class="btn btn--primary combo--last"><i class="fa fa-search"></i> Go</button>
       </form>
 
     </div>
@@ -109,7 +109,7 @@
   <p>Utility-class styled Radio and checkboxes (using Font Awesome):</p>
 
   <div class="grid grid--gutter grid--nested">
-    <div class="column tiny--span-6 medium--offset-3 medium--span-3">
+    <div class="col col-xs--span-6 col-md--offset-3 col-md--span-3">
       <form>
         <input class="form__radio" type="radio" id="radio-4" name="radio" checked>
         <label for="radio-4">One</label>
@@ -121,7 +121,7 @@
         <label for="radio-6">Three</label>
       </form>
     </div>
-    <div class="column tiny--span-6 small--span-3">
+    <div class="col col-xs--span-6 col-sm--span-3">
       <form>
         <input class="form__checkbox" type="checkbox" id="check-4" name="check" checked>
         <label for="check-4">One</label>
@@ -141,7 +141,7 @@
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -149,6 +149,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

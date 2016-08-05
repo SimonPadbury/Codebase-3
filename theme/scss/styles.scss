@@ -8,6 +8,8 @@
 
 html, body {
   height: 100%;
+  // Enables .codebase-docs__footer to stick to the bottom of the screen
+  // if the page doesn't have much content.
 }
 
 body {
@@ -37,22 +39,24 @@ body {
       background-color: $color-silver;
     }
   }
-//  .menubar__js-navicon {
-//    display: inline-block;
-//    padding-top: 2px;
-//  }
+  @include break__sm--up {
+    padding: $spacing-sm 0;
+  }
+  @include break__lg--up {
+    padding: $spacing-md $spacing-sm;
+  }
 }
 
 .codebase-docs__header {
   color: $color-mid-gray;
   background-color: $color-charcoal;
-  padding: $spacing-small 0 ;
+  padding: $spacing-sm 0;
   h1 {
     max-width: $grid-max-width;
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-small;
-    padding-left: $spacing-small;
+    padding-right: $spacing-sm;
+    padding-left: $spacing-sm;
     font-weight: 200;
     letter-spacing: 1px;
   }
@@ -60,11 +64,11 @@ body {
     display: block;
     max-width: $grid-max-width;
     margin: 30px auto -30px auto;
-    padding-right: $spacing-small;
-    padding-left: $spacing-small;
+    padding-right: $spacing-sm;
+    padding-left: $spacing-sm;
     font-weight: 200;
     color: $color-dark-gray;
-    @include breakpoint__small--up {
+    @include break__sm--up {
       font-size: 1.5rem;
     }
   }
@@ -73,10 +77,9 @@ body {
 // Layout
 
 .codebase-docs__main {
-  //@include grid;
-  //@include grid--gutter;
-  @include breakpoint__small--up {
-    @include grid-flexbox;
+  @include break__sm--up {
+    @include grid;
+    @include grid--gutter;
   }
   padding-bottom: 100px; // this 100px is *behind* the .codebase-docs__footer
 }
@@ -88,7 +91,7 @@ body {
       font-weight: normal;
     }
   }
-  @include breakpoint__tiny--only {
+  @include break__xs--only {
     padding: 0;
     background: $color-charcoal;
     .brand {
@@ -127,7 +130,7 @@ body {
         display: block !important;
         border-bottom: $border-thin-solid;
         border-color: $color-dark-gray;
-        padding-left: $spacing-small;
+        padding-left: $spacing-sm;
         color: $color-mid-gray;
         &:hover {
           text-decoration: none;
@@ -138,31 +141,38 @@ body {
       li {
         margin: 0;
         a {
-          padding-left: $spacing-medium;
+          padding-left: $spacing-md;
         }
       }
     }
   }
-  @include breakpoint__small--up {
-    @include column-flexbox;
-    @include column-flexbox--push(1);
-    flex: 0 0 220px;
-    border-left: 1px solid $color-light-gray;
+  @include break__sm--up {
+    @include col-semantic;
+    @include col--span(3);
+    @include col--push(9);
     padding-bottom: 40px;
-    padding-left: 20px;
+  }
+  @include break__lg--up {
+    @include col--span(2);
+    @include col--push(10);
   }
 }
 
 .codebase-docs__main-article {
-  padding: $spacing-medium $spacing-small $spacing-large $spacing-small;
-  @include breakpoint__small--up {
-    @include column-flexbox;
-    margin-right: 20px;
+  padding: $spacing-md $spacing-sm $spacing-lg $spacing-sm;
+  @include break__sm--up {
+    @include col-semantic;
+    @include col--span(9);
+    @include col--pull(3);
+  }
+  @include break__lg--up {
+    @include col--span(10);
+    @include col--pull(2);
   }
 }
 
 .codebase-docs__footer {
-  // Sticks to the bottom of the screen if the page doesn't have much content.
+  // Sticks to the bottom of the screen (if the page doesn't have much content).
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -183,15 +193,12 @@ body {
   }
   ul {
     @include menu;
-    @include breakpoint__small--up {
-      margin-left: $spacing-medium;
+    @include break__sm--up {
+      margin-left: $spacing-md;
     }
   }
 }
 
-.example {
-  @include button;
-  @include button--secondary;
-  @include button--gradient;
-  @include button--pressable;
+.off-canvas-navicon {
+  box-shadow: $box-shadow;
 }

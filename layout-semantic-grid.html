@@ -41,8 +41,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -117,7 +117,7 @@
   </p>
 
   <p>
-    The Codebase semantic grid mixins are named similar to the Codebase classic grid classes, except that the column numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
+    The Codebase semantic grid mixins are named similar to the Codebase classic grid classes, except that the col numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
   </p>
 
   <p>
@@ -129,23 +129,23 @@
   @include grid--gutter;
 }
 
-.your-article-column-class {
-  @include column-semantic;
-  @include breakpoint__medium--up {
-    @include column--span(8);
+.your-article-col-class {
+  @include col-semantic;
+  @include break__md--up {
+    @include col--span(8);
   }
-  @include breakpoint__large--up {
-    @include column--push(4);
+  @include break__lg--up {
+    @include col--push(4);
   }
 }
 
-.your-sidebar-column-class {
-  @include column-semantic;
-  @include breakpoint__medium--up {
-    @include column--span(4);
+.your-sidebar-col-class {
+  @include col-semantic;
+  @include break__md--up {
+    @include col--span(4);
   }
-  @include breakpoint__large--up {
-    @include column--pull(8);
+  @include break__lg--up {
+    @include col--pull(8);
   }
 }
 
@@ -154,17 +154,17 @@
   @include grid--gutter;
   @include grid--nested;
   &gt; div {
-    @include column-semantic;
-    @include breakpoint__small--up {
-      @include column--span(4);
+    @include col-semantic;
+    @include break__sm--up {
+      @include col--span(4);
     }
   }
 }
 
-.your-centered-column-class {
-  @include column-semantic;
-  @include breakpoint__small--up {
-    @include column--centered(7);
+.your-centered-col-class {
+  @include col-semantic;
+  @include break__sm--up {
+    @include col--centered(7);
   }
 }
 </code></pre>
@@ -183,35 +183,35 @@
       </tr>
       <tr>
         <td>@mixin grid--gutter</td>
-        <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
+        <td>Gives right and left padding to all immediate child block elements (i.e. cols).</td>
       </tr>
       <tr>
         <td>@mixin grid--nested</td>
-        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
+        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing col.</td>
       </tr>
       <tr>
-        <td>@mixin column-semantic</td>
+        <td>@mixin col-semantic</td>
         <td>Float left. (Min height 1px.)</td>
       </tr>
       <tr>
-        <td>@mixin column--centered(X)</td>
-        <td>No float. Instead, centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col--centered(X)</td>
+        <td>No float. Instead, centering is accomplished by auto margin right and left. col spanning is as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
-        <td>@mixin column--span(X)</td>
-        <td>Column spanning, as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col--span(X)</td>
+        <td>col spanning, as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
-        <td>@mixin column--push(X)</td>
-        <td>Column pushing to the right, as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col--push(X)</td>
+        <td>col pushing to the right, as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
-        <td>@mixin column--pull(X)</td>
-        <td>Column pulling to the left, as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col--pull(X)</td>
+        <td>col pulling to the left, as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
-        <td>@mixin column--offset(X)</td>
-        <td>Column offsetting from the left, as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col--offset(X)</td>
+        <td>col offsetting from the left, as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
     </tbody>
   </table>
@@ -222,7 +222,7 @@
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -230,6 +230,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

@@ -1,54 +1,54 @@
 // LAYOUT BREAKPOINT MIXINS
 // ========================
 
-// Tiny
+// Extra Small (xs)
 
-@mixin breakpoint__tiny--only {
-  @media (max-width: #{$breakpoint-small - 1px}) {
+@mixin break__xs--only {
+  @media (max-width: #{$break-sm - 1px}) {
     @content
   }
 }
 
-// Small
+// Small (sm)
 
-@mixin breakpoint__small--down {
-  @media (max-width: #{$breakpoint-medium - 1px}) {
+@mixin break__sm--down {
+  @media (max-width: #{$break-md - 1px}) {
     @content
   }
 }
-@mixin breakpoint__small--only {
-  @media (min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-medium - 1px}) {
+@mixin break__sm--only {
+  @media (min-width: #{$break-sm}) and (max-width: #{$break-md - 1px}) {
     @content
   }
 }
-@mixin breakpoint__small--up {
-  @media (min-width: #{$breakpoint-small}) {
-    @content
-  }
-}
-
-// Medium
-
-@mixin breakpoint__medium--down {
-  @media (max-width: #{$breakpoint-large - 1px}) {
-    @content
-  }
-}
-@mixin breakpoint__medium--only {
-  @media (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1px}) {
-    @content
-  }
-}
-@mixin breakpoint__medium--up {
-  @media (min-width: #{$breakpoint-medium}) {
+@mixin break__sm--up {
+  @media (min-width: #{$break-sm}) {
     @content
   }
 }
 
-// Large
+// Medium (md)
 
-@mixin breakpoint__large--up {
-  @media (min-width: #{$breakpoint-large}) {
+@mixin break__md--down {
+  @media (max-width: #{$break-lg - 1px}) {
+    @content
+  }
+}
+@mixin break__md--only {
+  @media (min-width: #{$break-md}) and (max-width: #{$break-lg - 1px}) {
+    @content
+  }
+}
+@mixin break__md--up {
+  @media (min-width: #{$break-md}) {
+    @content
+  }
+}
+
+// Large (lg)
+
+@mixin break__lg--up {
+  @media (min-width: #{$break-lg}) {
     @content
   }
 }

@@ -12,9 +12,10 @@
   &--cover {
     @include modal--cover;
   }
-  .modal__wrap--is-open > & {
-    @include modal--is-revealed;
-  }
+}
+
+.modal__wrap--is-open {
+  @include modal__wrap--is-open;
 }
 
 .modal__header {

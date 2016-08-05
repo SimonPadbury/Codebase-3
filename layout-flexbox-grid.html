@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-  
+
 
 </head>
 
@@ -41,8 +41,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -94,10 +94,6 @@
 
   <div class="codebase-docs__main-article">
 
-  <div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-medium deco-bg-silver">
-    <i class="fa fa-exclamation-circle deco-text-primary"></i> All three grids have been included in this repository instance of Codebase for demonstration purposes. But users will only need to <code>@include</code> the grid system of their choice.
-  </div>
-
   <p>Example:</p>
 
   <section class="flexgrid-wrapper">
@@ -119,7 +115,7 @@
   </p>
 
   <p>
-    The Codebase flexbox grid mixins are named similar to the Codebase classic grid classes, except that the column numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
+    The Codebase flexbox grid mixins are named similar to the Codebase classic grid classes, except that the col numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
   </p>
 
   <p>
@@ -129,28 +125,28 @@
   <pre><code>.your-flexbox-grid-wrapper-class {
   @include grid-no-flexbox;
   @include grid--gutter;
-  @include breakpoint__medium--up {
+  @include break__md--up {
     @include grid-flexbox;
   }
 }
 
 .your-flexbox-grid-article-class {
-  @include column-flexbox;
-  @include breakpoint__medium--up {
-    @include column-flexbox--span(8);
+  @include col-flexbox;
+  @include break__md--up {
+    @include col-flexbox--span(8);
   }
-  @include breakpoint__large--up {
-    @include column-flexbox--push(1);
+  @include break__lg--up {
+    @include col-flexbox--push(1);
   }
 }
 
 .your-flexbox-grid-sidebar-class {
-  @include column-flexbox;
-  @include breakpoint__medium--up {
-    @include column-flexbox--span(4);
+  @include col-flexbox;
+  @include break__md--up {
+    @include col-flexbox--span(4);
   }
-  @include breakpoint__large--up {
-    @include column-flexbox--pull(1);
+  @include break__lg--up {
+    @include col-flexbox--pull(1);
   }
 }
 
@@ -158,20 +154,20 @@
   @include grid-no-flexbox;
   @include grid--gutter;
   @include grid--nested;
-  @include breakpoint__small--up {
+  @include break__sm--up {
     @include grid-flexbox;
     @include grid--nested;
     &gt; div {
-      @include column-flexbox;
-      @include column-flexbox--span(4);
+      @include col-flexbox;
+      @include col-flexbox--span(4);
     }
   }
 }
 
 .your-flexbox-grid-centered-class {
-  @include column-flexbox;
-  @include breakpoint__small--up {
-    @include column-flexbox--centered(7);
+  @include col-flexbox;
+  @include break__sm--up {
+    @include col-flexbox--centered(7);
   }
 }
 </code></pre>
@@ -186,11 +182,15 @@
     <tbody>
       <tr>
         <td>@mixin grid-no-flexbox</td>
-        <td>Container mixin, with <b>display:block</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
+        <td>Container mixin, with <b>display: block</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
       </tr>
       <tr>
         <td>@mixin grid-flexbox</td>
-        <td>Container mixin, with <b>display:flex</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
+        <td>Container mixin, with <b>display: flex</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
+      </tr>
+      <tr>
+        <td>@mixin grid-flexbox--wrap</td>
+        <td>Adds <b>flex-wrap: wrap</b> to the continer. For use if you have a surplus of columns at any time.</td>
       </tr>
       <tr>
         <td>@mixin grid--gutter</td>
@@ -201,23 +201,23 @@
         <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
       </tr>
       <tr>
-        <td>@mixin column-flexbox</td>
+        <td>@mixin col-flexbox</td>
         <td>(Min height 1px.)</td>
       </tr>
       <tr>
-        <td>@mixin column-flexbox--centered(X)</td>
-        <td>Centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col-flexbox--centered(X)</td>
+        <td>Centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
-        <td>@mixin column-flexbox--span(X)</td>
-        <td>Column spanning, as calculated out of $grid-max-columns (default is 12).</td>
+        <td>@mixin col-flexbox--span(X)</td>
+        <td>Column spanning, as calculated out of $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
-        <td>@mixin column-flexbox--push(X)</td>
-        <td>Column pushing to the right using flexbox re-ordering. <code>*--push(1)</code> moves a column to the right by increasing its column order by 1. <br><br>E.g. pushing column [A] by 1 while pullng column [B] by 1 will result in the column order being swapped to [B][A].)</td>
+        <td>@mixin col-flexbox--push(X)</td>
+        <td>Column pushing to the right using flexbox re-ordering. <code>*--push(1)</code> moves a column to the right by increasing its column order by 1. <br><br>E.g. pushing col [A] by 1 while pullng column [B] by 1 will result in the column order being swapped to [B][A].)</td>
       </tr>
       <tr>
-        <td>@mixin column-flexbox--pull(X)</td>
+        <td>@mixin col-flexbox--pull(X)</td>
         <td>Column pulling to the left using flexbox re-ordering). <code>*--pull(1)</code> moves a column to the left by decreasing its column order by 1.</td>
       </tr>
     </tbody>
@@ -229,7 +229,7 @@
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -237,6 +237,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

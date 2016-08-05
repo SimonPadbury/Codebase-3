@@ -1,106 +1,106 @@
 // UTILITY MIXINS: VISIBILITY
 // ==========================
 
-@mixin hide--tiny-only {
-  @media screen and (max-width: $breakpoint-small - 1) {
+@mixin hide--xs-only {
+  @media screen and (max-width: $break-sm - 1) {
     display: none !important;
   }
 }
-@mixin show--small-up {
-  @include hide--tiny-only;
+@mixin show--sm-up {
+  @include hide--xs-only;
 }
 
 //
 
-@mixin hide--small-only {
-  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-medium - 1) {
-    display: none !important;
-  }
-}
-
-//
-@mixin hide--small-up {
-  @media screen and (min-width: $breakpoint-small) {
-    display: none !important;
-  }
-}
-@mixin show--tiny-only {
-  @include hide--small-up;
-}
-
-//
-
-@mixin hide--medium-only {
-  @media screen and (max-width: $breakpoint-medium - 1) and (min-width: $breakpoint-large) {
+@mixin hide--sm-only {
+  @media screen and (min-width: $break-sm) and (max-width: $break-md - 1) {
     display: none !important;
   }
 }
 
 //
-
-@mixin hide--medium-up {
-  @media screen and (min-width: $breakpoint-medium) {
+@mixin hide--sm-up {
+  @media screen and (min-width: $break-sm) {
     display: none !important;
   }
 }
-@mixin show--small-down {
-  @include hide--medium-up;
+@mixin show--xs-only {
+  @include hide--sm-up;
 }
 
 //
 
-@mixin hide--medium-down {
-  @media screen and (max-width: $breakpoint-medium - 1) {
-    display: none !important;
-  }
-}
-@mixin show--large-only {
-  @include hide--medium-down;
-}
-
-//
-
-@mixin hide--large-only {
-  @media screen and (max-width: $breakpoint-large - 1) {
+@mixin hide--md-only {
+  @media screen and (max-width: $break-md - 1) and (min-width: $break-lg) {
     display: none !important;
   }
 }
 
 //
 
-@mixin show--medium-down {
-  @include hide--large-only;
+@mixin hide--md-up {
+  @media screen and (min-width: $break-md) {
+    display: none !important;
+  }
+}
+@mixin show--sm-down {
+  @include hide--md-up;
 }
 
 //
 
-@mixin show--small-only {
-  @media screen and (max-width: $breakpoint-small - 1) {
+@mixin hide--md-down {
+  @media screen and (max-width: $break-md - 1) {
     display: none !important;
   }
-  @media screen and (min-width: $breakpoint-medium) {
+}
+@mixin show--lg-only {
+  @include hide--md-down;
+}
+
+//
+
+@mixin hide--lg-only {
+  @media screen and (max-width: $break-lg - 1) {
     display: none !important;
   }
 }
 
 //
 
-@mixin show--medium-only {
-  @media screen and (max-width: $breakpoint-medium - 1) {
+@mixin show--md-down {
+  @include hide--lg-only;
+}
+
+//
+
+@mixin show--sm-only {
+  @media screen and (max-width: $break-sm - 1) {
     display: none !important;
   }
-  @media screen and (min-width: $breakpoint-large) {
+  @media screen and (min-width: $break-md) {
     display: none !important;
   }
 }
 
 //
 
-@mixin hide--small-down {
-  @media screen and (max-width: $breakpoint-small - 1) {
+@mixin show--md-only {
+  @media screen and (max-width: $break-md - 1) {
+    display: none !important;
+  }
+  @media screen and (min-width: $break-lg) {
     display: none !important;
   }
 }
-@mixin show--medium-up {
-  @include hide--small-down;
+
+//
+
+@mixin hide--sm-down {
+  @media screen and (max-width: $break-sm - 1) {
+    display: none !important;
+  }
+}
+@mixin show--md-up {
+  @include hide--sm-down;
 }

@@ -41,8 +41,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -107,22 +107,22 @@
   </p>
 
   <div class="grid">
-    <div class="column medium--span-8 medium--offset-2">
+    <div class="col md--span-8 md--offset-2">
 
       <table class="table table--nowrap">
         <thead>
           <tr>
             <th>Mixin / Class</th>
-            <th>Tiny</th>
-            <th>Small</th>
-            <th>Medium</th>
-            <th>Large</th>
+            <th>xs</th>
+            <th>sm</th>
+            <th>md</th>
+            <th>lg</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              hide--tiny-only, show--small-up
+              hide--xs-only, show--sm-up
             </td>
             <td></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
@@ -130,14 +130,14 @@
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
           </tr>
           <tr>
-            <td>hide--small-only</td>
+            <td>hide--sm-only</td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
           </tr>
           <tr>
-            <td>hide--medium-only</td>
+            <td>hide--md-only</td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td></td>
@@ -145,7 +145,7 @@
           </tr>
           <tr>
             <td>
-              hide--large-only, show--medium-down
+              hide--lg-only, show--md-down
             </td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
@@ -155,21 +155,21 @@
 
           <tr>
             <td>
-              show--tiny-only, hide--small-up</td>
+              show--xs-only, hide--sm-up</td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>show--small-only</td>
+            <td>show--sm-only</td>
             <td></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>show--medium-only</td>
+            <td>show--md-only</td>
             <td></td>
             <td></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
@@ -177,7 +177,7 @@
           </tr>
           <tr>
             <td>
-              show--large-only, hide--medium-down
+              show--lg-only, hide--md-down
             </td>
             <td></td>
             <td></td>
@@ -186,7 +186,7 @@
           </tr>
           <tr>
             <td>
-              hide--medium-up, show--small-down
+              hide--md-up, show--sm-down
             </td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
             <td class="deco-bg-dark-gray deco-text-white"><i class="fa fa-check"></i></td>
@@ -195,7 +195,7 @@
           </tr>
           <tr>
             <td>
-              hide--small-down, show--medium-up
+              hide--sm-down, show--md-up
             </td>
             <td></td>
             <td></td>
@@ -214,7 +214,7 @@
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -222,6 +222,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

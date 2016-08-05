@@ -1,6 +1,10 @@
 // CLASS BUILDER: DROPDOWNS
 // ========================
 
+.dropdown {
+  @include dropdown;
+}
+
 .dropdown__toggle {
   @include dropdown__toggle;
 }

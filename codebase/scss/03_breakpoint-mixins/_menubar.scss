@@ -1,13 +1,13 @@
 // MENUBAR BREAKPOINT MIXINS
 // =========================
 
-@mixin breakpoint__menubar--down {
-  @media (max-width: #{$breakpoint-menubar - 1px}) {
+@mixin break__menubar--down {
+  @media (max-width: #{$break-menubar - 1px}) {
     @content
   }
 }
-@mixin breakpoint__menubar--up {
-  @media (min-width: #{$breakpoint-menubar}) {
+@mixin break__menubar--up {
+  @media (min-width: #{$break-menubar}) {
     @content
   }
 }

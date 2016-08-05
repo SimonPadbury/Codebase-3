@@ -4,26 +4,15 @@ Codebase v.1.0 -- July 2016
 http://simonpadbury.github.io/Codebase/
 */
 
-// Third Party Stylesheets
+// =======================
+// THIRD PARTY STYLESHEETS
+// =======================
+
 @import '01_third-party/normalize';
 
 // =================
 // DEFAULT VARIABLES
 // =================
-
-/*@import '02_default-variables/base';
-@import '02_default-variables/colors';
-@import '02_default-variables/decoration';
-@import '02_default-variables/breakpoints';
-@import '02_default-variables/reset-overlay';
-@import '02_default-variables/layout';
-@import '02_default-variables/typography';
-@import '02_default-variables/forms';
-@import '02_default-variables/buttons';
-@import '02_default-variables/menubar';
-@import '02_default-variables/off-canvas-column';
-@import '02_default-variables/tab-systems';
-@import '02_default-variables/pagination';*/
 
 @import '02_default-variables/default-variables';
 

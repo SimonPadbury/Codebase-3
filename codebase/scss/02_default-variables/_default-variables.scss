@@ -2,7 +2,7 @@
 // =================
 
 // How To Use:
-// In your project SCSS, before your import of `codebase.scss`, 
+// In your project SCSS, before your import of `codebase.scss`,
 // copy the variable names you wish to modify and set your own values.
 // If your variable overrides are upstream of `codebase.scss`, then
 // your preprocessor will preferentially use them instead of these
@@ -12,10 +12,10 @@
 // Breakpoints
 // ***********
 
-$breakpoint-small: 768px !default;
-$breakpoint-medium: 1024px !default;
-$breakpoint-large: 1200px !default;
-$breakpoint-menubar: 768px !default;
+$break-sm: 768px !default;
+$break-md: 1024px !default;
+$break-lg: 1200px !default;
+$break-menubar: 768px !default;
 
 // ******
 // Colors
@@ -29,27 +29,32 @@ $color-dark-gray : #777 !default;
 $color-charcoal: #444 !default;
 
 $color-primary: #09c !default;
-$color-primary-dark: #07a !default;
+$color-primary-light: lighten($color-primary, 25%) !default;
+$color-primary-dark: darken($color-primary, 10%) !default;
 $color-primary-text: $color-white !default;
 $color-primary-text-dark: $color-primary-text !default;
 
 $color-secondary: $color-mid-gray !default;
+$color-secondary-light: $color-light-gray !default;
 $color-secondary-dark: $color-dark-gray !default;
 $color-secondary-text: $color-white !default;
 $color-secondary-text-dark: $color-secondary-text !default;
 
 $color-warning: #f80 !default;
-$color-warning-dark: #e60 !default;
+$color-warning-light: lighten($color-warning, 25%) !default;
+$color-warning-dark: darken($color-warning, 7%) !default;
 $color-warning-text: $color-white !default;
 $color-warning-text-dark: $color-warning-text !default;
 
 $color-success: #2b4 !default;
-$color-success-dark: #092 !default;
+$color-success-light: lighten($color-success, 25%) !default;
+$color-success-dark: darken($color-success, 10%) !default;
 $color-success-text: $color-white !default;
 $color-success-text-dark: $color-success-text !default;
 
 $color-error: #f44 !default;
-$color-error-dark: #c22 !default;
+$color-error-light: lighten($color-error, 25%) !default;
+$color-error-dark: darken($color-error, 20%) !default;
 $color-error-text: $color-white !default;
 $color-error-text-dark: $color-error-text !default;
 
@@ -86,10 +91,10 @@ $color-image-frame-edge: $color-dark-gray !default;
 
 // Spacing (used in margins and paddings)
 
-$spacing-tiny: 5px !default;
-$spacing-small: 10px !default;
-$spacing-medium: 20px !default;
-$spacing-large: 40px !default;
+$spacing-xs: 5px !default;
+$spacing-sm: 10px !default;
+$spacing-md: 20px !default;
+$spacing-lg: 40px !default;
 //$spacing-line-height: $line-height-px !default;
 $spacing-block: 5px 10px !default; // e.g. menu links
 
@@ -109,27 +114,28 @@ $box-shadow-inner-right: inset -5px 0 5px -5px rgba(0,0,0,0.2) !default;
 $box-shadow-inner-bottom: inset 0 -5px 5px -5px rgba(0,0,0,0.2) !default;
 $box-shadow-inner-left: inset 5px 0 5px -5px rgba(0,0,0,0.2) !default;
 
-// =============
+// *************
 // Reset Overlay
-// =============
+// *************
 
 $reset-overlay--z-index: 100 !default;
 // Increase this if something you add causes a conflict.
-
 $reset-overlay--z-index-higher: $reset-overlay--z-index + 10 !default;
 // Use $reset-overlay--z-index-higher on occasions when you know you need
 // the overlay to also cover something on a layer above the webpage (e.g.
 // over a fixed menubar).
+$color-reset-overlay--darken: rgba(0,0,0,0.4);
+// E.g. use behind modals.
 
 // ******
 // Layout
 // ******
 
-$grid-max-columns: 12 !default;
-$grid-gutter-width--tiny: 20px !default;
-$grid-gutter-width--small: 30px !default;
-$grid-gutter-width--medium: 40px !default;
-$grid-gutter-width--large: 50px !default;
+$grid-max-cols: 12 !default;
+$grid-gutter-width--xs: 20px !default;
+$grid-gutter-width--sm: 30px !default;
+$grid-gutter-width--md: 40px !default;
+$grid-gutter-width--lg: 50px !default;
 $grid-max-width: 1280px !default;
 
 // Off-Canvas Column
@@ -142,13 +148,14 @@ $off-canvas-navicon-color: $color-text-hyperlink !default;
 $off-canvas-navicon-color-hover: $color-text-hyperlink-hover !default;
 
 // *******
-// Buttons
+// btns
 // *******
 
-$button-border-radius: $border-radius !default;
-$button-padding-small: $spacing-tiny $spacing-small !default;
-$button-padding-default: $spacing-small $spacing-medium !default;
-$button-padding-large: $spacing-medium $spacing-large !default;
+$btn-border-radius: $border-radius !default;
+$btn-padding-sm: $spacing-xs $spacing-sm !default;
+$btn-padding-default: $spacing-sm $spacing-md !default;
+$btn-padding-lg: $spacing-md $spacing-lg !default;
+$btn-padding-icon: $spacing-sm;
 
 // *****
 // Forms
@@ -174,8 +181,8 @@ $color-tabs-dark-background: $color-silver !default;
 $color-tabs-dark-background-hover: $color-light-gray !default;
 $color-tabs-dark-text: lighten($color-text-default, 25%) !default;
 
-// ==========
+// **********
 // Pagination
-// ==========
+// **********
 
 $color-pagination-current-background: $color-menu-block-hover-background !default;
