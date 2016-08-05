@@ -24,22 +24,3 @@
 @mixin reset-overlay--darken {
   background-color: $color-reset-overlay--darken;
 }
-
-// Prevent body scrolling of page content behind the reset overlay
-// ---------------------------------------------------------------
-// Deploy only when necessary. E.g. 
-// * yes for modals and off-canvas sidebars; 
-// * not for dropdowns.
-//
-// Based on: http://luxiyalu.com/playground/overlay/
-
-html.js-scroll-lock {
-  height: 100%;
-  body {
-    height: 100%;
-  }
-  .body-inner-wrap {
-    height: 100vh;
-    overflow: hidden;
-  }
-}

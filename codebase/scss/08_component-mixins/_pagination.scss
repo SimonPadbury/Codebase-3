@@ -9,11 +9,11 @@
 @mixin pagination__item {
   display: inline-block;
   list-style-type: none;
-  margin: $spacing-small 0;
+  margin: $spacing-sm 0;
 }
 
 @mixin pagination__link {
-  padding: $spacing-small;
+  padding: $spacing-sm;
 }
 
 @mixin pagination__link--current {

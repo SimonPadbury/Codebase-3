@@ -12,7 +12,7 @@
 
 @mixin menu__link {
   display: inline-block;
-  padding: $spacing-tiny 0;
+  padding: $spacing-xs 0;
 }
 
 @mixin menu__link--block {

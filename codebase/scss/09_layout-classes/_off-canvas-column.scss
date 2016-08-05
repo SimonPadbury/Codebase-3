@@ -1,7 +1,7 @@
-// CLASS-BUILDER: OFF-CANVAS COLUMN
+// CLASS-BUILDER: OFF-CANVAS col
 // ================================
 
-.tiny--off-canvas {
+.xs--off-canvas {
   @media (max-width: 767px) {
     &.off-canvas--right {
       @include off-canvas-right;
@@ -12,7 +12,7 @@
     @include off-canvas;
   }
 }
-.small--off-canvas {
+.sm--off-canvas {
   @media (max-width: 1023px) {
     &.off-canvas--right {
       @include off-canvas-right;
@@ -23,7 +23,7 @@
     @include off-canvas;
   }
 }
-.medium--off-canvas {
+.md--off-canvas {
   @media (max-width: 1199px) {
     &.off-canvas--right {
       @include off-canvas-right;

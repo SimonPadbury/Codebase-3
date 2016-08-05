@@ -4,7 +4,7 @@
 // @include deco-p-block in block menu items and menubar items
 
 .deco-p-block {
-  padding: $spacing-tiny $spacing-small;
+  padding: $spacing-xs $spacing-sm;
 }
 
 // Padding All
@@ -12,17 +12,17 @@
 .deco-p-zero {
   padding: 0;
 }
-.deco-p-tiny {
-  padding: $spacing-tiny;
+.deco-p-xs {
+  padding: $spacing-xs;
 }
-.deco-p-small {
-  padding: $spacing-small;
+.deco-p-sm {
+  padding: $spacing-sm;
 }
-.deco-p-medium {
-  padding: $spacing-medium;
+.deco-p-md {
+  padding: $spacing-md;
 }
-.deco-p-large {
-  padding: $spacing-large;
+.deco-p-lg {
+  padding: $spacing-lg;
 }
 
 // Padding Top
@@ -30,17 +30,17 @@
 .deco-pt-zero {
   padding-top: 0;
 }
-.deco-pt-tiny {
-  padding-top: $spacing-tiny;
+.deco-pt-xs {
+  padding-top: $spacing-xs;
 }
-.deco-pt-small {
-  padding-top: $spacing-small;
+.deco-pt-sm {
+  padding-top: $spacing-sm;
 }
-.deco-pt-medium {
-  padding-top: $spacing-medium;
+.deco-pt-md {
+  padding-top: $spacing-md;
 }
-.deco-pt-large {
-  padding-top: $spacing-large;
+.deco-pt-lg {
+  padding-top: $spacing-lg;
 }
 
 // Padding Right
@@ -48,17 +48,17 @@
 .deco-pr-zero {
   padding-right: 0;
 }
-.deco-pr-tiny {
-  padding-right: $spacing-tiny;
+.deco-pr-xs {
+  padding-right: $spacing-xs;
 }
-.deco-pr-small {
-  padding-right: $spacing-small;
+.deco-pr-sm {
+  padding-right: $spacing-sm;
 }
-.deco-pr-medium {
-  padding-right: $spacing-medium;
+.deco-pr-md {
+  padding-right: $spacing-md;
 }
-.deco-pr-large {
-  padding-right: $spacing-large;
+.deco-pr-lg {
+  padding-right: $spacing-lg;
 }
 
 // Padding Bottom
@@ -66,17 +66,17 @@
 .deco-pb-zero {
   padding-bottom: 0;
 }
-.deco-pb-tiny {
-  padding-bottom: $spacing-tiny;
+.deco-pb-xs {
+  padding-bottom: $spacing-xs;
 }
-.deco-pb-small {
-  padding-bottom: $spacing-small;
+.deco-pb-sm {
+  padding-bottom: $spacing-sm;
 }
-.deco-pb-medium {
-  padding-bottom: $spacing-medium;
+.deco-pb-md {
+  padding-bottom: $spacing-md;
 }
-.deco-pb-large {
-  padding-bottom: $spacing-large;
+.deco-pb-lg {
+  padding-bottom: $spacing-lg;
 }
 
 // Padding Left
@@ -84,15 +84,15 @@
 .deco-pl-zero {
   padding-left: 0;
 }
-.deco-pl-tiny {
-  padding-left: $spacing-tiny;
+.deco-pl-xs {
+  padding-left: $spacing-xs;
 }
-.deco-pl-small {
-  padding-left: $spacing-small;
+.deco-pl-sm {
+  padding-left: $spacing-sm;
 }
-.deco-pl-medium {
-  padding-left: $spacing-medium;
+.deco-pl-md {
+  padding-left: $spacing-md;
 }
-.deco-pl-large {
-  padding-left: $spacing-large;
+.deco-pl-lg {
+  padding-left: $spacing-lg;
 }

@@ -13,7 +13,7 @@
 	}
 	th, td {
     border: $border-thin-solid;
-		padding: $spacing-small;
+		padding: $spacing-sm;
     vertical-align: top;
 	}
   &--wrap-outer {
@@ -23,7 +23,7 @@
   &--wrap-inner {
     position: relative;
     overflow-x: auto;
-    margin: $spacing-small 0;
+    margin: $spacing-sm 0;
   }
   &--wide {
     box-shadow: $box-shadow-inner;

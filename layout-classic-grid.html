@@ -41,8 +41,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -99,47 +99,43 @@
   </p>
 
   <section class="grid grid--gutter">
-    <div class="column medium--span-8 large--push-4 deco-b-thin-solid">Article
+    <div class="col col-md--span-8 col-lg--push-4 deco-b-thin-solid">Article
       <section class="grid grid--gutter grid--nested">
-        <div class="column small--span-4 deco-b-thin-solid">Nested</div>
-        <div class="column small--span-4 deco-b-thin-solid">Nested</div>
-        <div class="column small--span-4 deco-b-thin-solid">Nested</div>
+        <div class="col col-sm--span-4 deco-b-thin-solid">Nested</div>
+        <div class="col col-sm--span-4 deco-b-thin-solid">Nested</div>
+        <div class="col col-sm--span-4 deco-b-thin-solid">Nested</div>
       </section>
     </div>
-    <div class="column medium--span-4 large--pull-8 deco-b-thin-solid">Aside</div>
+    <div class="col col-md--span-4 col-lg--pull-8 deco-b-thin-solid">Aside</div>
   </section>
   <section class="grid grid--gutter">
-    <div class="column small--span-7 column--centered deco-b-thin-solid">Centered</div>
+    <div class="col col-sm--span-7 col--centered deco-b-thin-solid">Centered</div>
   </section>
 
-  <p>
-    Incorporate the Codebase semantic grid mixins into your own layout, using your own choice of class names.
-  </p>
-
   <pre><code>&lt;section class="grid grid--gutter"&gt;
-  &lt;div class="column medium--span-8 large--push-4"&gt;
+  &lt;div class="col col-md--span-8 col-lg--push-4"&gt;
     Article
 
     &lt;section class="grid grid--gutter grid--nested"&gt;
-      &lt;div class="column small--span-4"&gt;
+      &lt;div class="col col-sm--span-4"&gt;
         Nested
       &lt;/div&gt;
-      &lt;div class="column small--span-4"&gt;
+      &lt;div class="col col-sm--span-4"&gt;
         Nested
       &lt;/div&gt;
-      &lt;div class="column small--span-4"&gt;
+      &lt;div class="col col-sm--span-4"&gt;
         Nested
       &lt;/div&gt;
     &lt;/section&gt;
 
   &lt;/div&gt;
-  &lt;div class="column medium--span-4 large--pull-8"&gt;
+  &lt;div class="col col-md--span-4 col-lg--pull-8"&gt;
     Aside
   &lt;/div&gt;
 &lt;/section&gt;
 
 &lt;section class="grid grid--gutter"&gt;
-  &lt;div class="column small--span-7 column--centered"&gt;
+  &lt;div class="col col-sm--span-7 col--centered"&gt;
     Centered
   &lt;/div&gt;
 &lt;/section&gt;
@@ -159,44 +155,44 @@
       </tr>
       <tr>
         <td>.grid--gutter</td>
-        <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
+        <td>Gives right and left padding to all immediate child block elements (i.e. cols).</td>
       </tr>
       <tr>
         <td>.grid--nested</td>
-        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
+        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing col.</td>
       </tr>
       <tr>
-        <td>.column</td>
+        <td>.col</td>
         <td>Float left.</td>
       </tr>
       <tr>
-        <td>.column--centered</td>
+        <td>.col--centered</td>
         <td>No float. Instead, centering is accomplished by auto margin right and left.</td>
       </tr>
       <tr>
-        <td>.tiny--*<br>
-          .small--*<br>
-          .medium--*<br>
-          .large--*
+        <td>.col-xs--*<br>
+          .col-sm--*<br>
+          .col-md--*<br>
+          .col-lg--*
         </td>
-        <td>Controlling the column behaviour at different breakpoints.<br>
-          Except for .tiny--* all columns expand to 100% of their container width below their breakpoint.</td>
+        <td>Controlling the colukm behaviour at different breakpoints.<br>
+          Except for .xs--* all columns expand to 100% of their container width below their breakpoint.</td>
       </tr>
       <tr>
         <td>*--span-*</td>
-        <td>Column spanning (at different breakpoints), as calculated out of max $grid-max-columns (default is 12).</td>
+        <td>Column spanning (at different breakpoints), as calculated out of max $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
         <td>*--push-*</td>
-        <td>Column pushing to the right (at different breakpoints), as calculated out of max $grid-max-columns (default is 12).</td>
+        <td>Column pushing to the right (at different breakpoints), as calculated out of max $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
         <td>*--pull-*</td>
-        <td>Column pullling to the left (at different breakpoints), as calculated out of max $grid-max-columns (default is 12).</td>
+        <td>Column pullling to the left (at different breakpoints), as calculated out of max $grid-max-cols (default is 12).</td>
       </tr>
       <tr>
         <td>*--offset-*</td>
-        <td>Column offsetting from the left (at different breakpoints), as calculated out of max $grid-max-columns (default is 12).</td>
+        <td>Column offsetting from the left (at different breakpoints), as calculated out of max $grid-max-cols (default is 12).</td>
       </tr>
     </tbody>
   </table>
@@ -207,7 +203,7 @@
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -215,6 +211,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

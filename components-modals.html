@@ -41,8 +41,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -103,7 +103,7 @@
   </p>
 
   <div id="modal-1" class="modal modal--narrow deco-bs">
-    <div class="modal__body deco-p-large deco-bg-white">
+    <div class="modal__body deco-p-lg deco-bg-white">
       Modal body content.
       <hr />
       <a class="modal__close float--right">Close</a>
@@ -111,40 +111,29 @@
   </div>
 
   <p>
-    <button class="button button--primary modal__open" data-modal="modal-1">Show modal (1): simple</button>
+    <button class="btn modal__open" data-modal="modal-1">Show modal (1): simple</button>
   </p>
-
-  <pre><code class="language-none">&lt;div id="modal-1" class="modal modal--narrow"&gt;
-  &lt;div class="modal__body"&gt;
-    Modal body content.
-    &lt;hr /&gt;
-    &lt;a class="modal__close float--right"&gt;Close&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;button class="button button--primary modal__open" data-modal="modal-1"&gt;Show modal 1&lt;/button&gt;</code></pre>
-
 
   <p>
     Modal with header and footer and more decoration:
   </p>
 
-  <div id="modal-2" class="modal modal--narrow deco-mt-large deco-b-thick-solid deco-b-warning deco-b-radius deco-bs deco-bg-white">
-    <div class="modal__header deco-bb-thin-solid deco-p-small">
+  <div id="modal-2" class="modal modal--narrow deco-mt-lg deco-b-thick-solid deco-b-warning deco-b-radius deco-bs deco-bg-white">
+    <div class="modal__header deco-bb-thin-solid deco-p-sm">
       <span class="modal__close float--right"><i class="fa fa-times fa-border"></i></span>
       <h4>Modal header</h4>
     </div>
     <div class="modal__body deco-p-block">
       Modal body content
     </div>
-    <div class="modal__footer deco-bt-thin-solid deco-p-small clearfix">
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
       Modal footer
-      <button class="button button--secondary modal__close float--right">Close</button>
+      <button class="btn btn--secondary modal__close float--right">Close</button>
     </div>
   </div>
 
   <p>
-    <button class="button button--primary modal__open" data-modal="modal-2">Show modal (2): with header and footer</button>
+    <button class="btn modal__open" data-modal="modal-2">Show modal (2): with header and footer</button>
   </p>
 
   <pre><code class="language-none">&lt;div id="modal-2" class="modal modal--narrow"&gt;
@@ -160,61 +149,61 @@
 
   &lt;div class="modal__footer clearfix"&gt;
     Modal footer
-    &lt;button class="button button--secondary modal__close float--right"&gt;Close&lt;/button&gt;
+    &lt;button class="btn btn--secondary modal__close float--right"&gt;Close&lt;/button&gt;
   &lt;/div&gt;
 
 &lt;/div&gt;
 
-&lt;button class="button button--primary modal__open" data-modal="modal-2"&gt;Show modal 2&lt;/button&gt;</code></pre>
+&lt;button class="btn modal__open" data-modal="modal-2"&gt;Show modal 2&lt;/button&gt;</code></pre>
 
   <p>
     Remove the modifier class <code>.modal--narrow</code> and instead add <code>.modal--contains-grid</code> if you require your modal to expand to contain a grid system:
   </p>
 
-  <div id="modal-3" class="modal modal--contains-grid deco-mt-large deco-m-gutter deco-mb-large deco-b-radius deco-bs deco-bg-white">
-    <div class="modal__header deco-bb-thin-solid deco-p-small">
+  <div id="modal-3" class="modal modal--contains-grid deco-mt-lg deco-m-gutter deco-mb-lg deco-b-radius deco-bs deco-bg-white">
+    <div class="modal__header deco-bb-thin-solid deco-p-sm">
       <span class="modal__close float--right"><i class="fa fa-times fa-border"></i></span>
       <h4>Modal header</h4>
     </div>
-    <div class="modal__body deco-p-small">
+    <div class="modal__body deco-p-sm">
       <section class="grid grid--gutter">
-        <div class="column small--span-6">
+        <div class="col col-sm--span-6">
           <img src="holder.js/800x600" alt="">
         </div>
-        <div class="column small--span-6">
+        <div class="col col-sm--span-6">
           <h2>Image Title</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           <p>
-            <button class="button button--primary">Activate</button>
-            <button class="button button--secondary">Delete</button>
+            <button class="btn btn--primary">Activate</button>
+            <button class="btn btn--secondary">Delete</button>
           </p>
         </div>
       </section>
       <section class="grid grid--gutter">
-        <div class="column small--span-6 deco-b-thin-solid">
-          <span><code>column small--span-6</code></span>
+        <div class="col col-sm--span-6 deco-b-thin-solid">
+          <span><code>col col-sm--span-6</code></span>
         </div>
-        <div class="column small--span-6 deco-b-thin-solid">
-          <span><code>column small--span-6</code></span>
+        <div class="col col-sm--span-6 deco-b-thin-solid">
+          <span><code>col col-sm--span-6</code></span>
         </div>
       </section>
 
     </div>
-    <div class="modal__footer deco-bt-thin-solid deco-p-small clearfix">
-      <button class="button button--secondary modal__close float--right">Cancel</button>
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
+      <button class="btn btn--secondary modal__close float--right">Cancel</button>
     </div>
   </div>
 
   <p>
-    <button class="button button--primary modal__open" data-modal="modal-3">Show modal (3): containing a grid system</button>
+    <button class="btn modal__open" data-modal="modal-3">Show modal (3): containing a grid system</button>
   </p>
 
   <p>
     Extra-tall modals don't protrude off the screen, but allow their content to scroll:
   </p>
 
-  <div id="modal-4" class="modal modal--narrow deco-mt-large deco-mb-large deco-b-radius deco-bs deco-bg-white">
-    <div class="modal__header deco-bb-thin-solid deco-p-small">
+  <div id="modal-4" class="modal modal--narrow deco-mt-lg deco-mb-lg deco-b-radius deco-bs deco-bg-white">
+    <div class="modal__header deco-bb-thin-solid deco-p-sm">
       <span class="modal__close float--right"><i class="fa fa-times fa-border"></i></span>
       <h4>Modal header</h4>
     </div>
@@ -238,14 +227,14 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <div class="modal__footer deco-bt-thin-solid deco-p-small clearfix">
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
       Modal footer
-      <button class="button button--secondary modal__close float--right">Close</button>
+      <button class="btn btn--secondary modal__close float--right">Close</button>
     </div>
   </div>
 
   <p>
-    <button class="button button--primary modal__open" data-modal="modal-4">Show modal (4): extra-tall</button>
+    <button class="btn modal__open" data-modal="modal-4">Show modal (4): extra-tall</button>
   </p>
 
   <p>
@@ -253,16 +242,16 @@
   </p>
 
   <div id="modal-5" class="modal modal--cover deco-bg-white">
-    <span class="modal__close float--right deco-p-medium"><i class="fa fa-times fa-2x"></i></span>
-    <div class="modal__body deco-p-large">
+    <span class="modal__close float--right deco-p-md"><i class="fa fa-times fa-2x"></i></span>
+    <div class="modal__body deco-p-lg">
       <section class="grid grid--gutter">
-        <div class="column">
+        <div class="col">
           <h2>Sitemap</h2>
           <hr />
         </div>
       </section>
       <section class="grid grid--gutter">
-        <div class="column small--span-4">
+        <div class="col col-sm--span-4">
           <h4>Department 1</h4>
           <ul class="menu">
             <li><a href="#/">Link</a></li>
@@ -278,7 +267,7 @@
             <li><a href="#/">Link</a></li>
           </ul>
         </div>
-        <div class="column small--span-4">
+        <div class="col col-sm--span-4">
           <h4>Department 2</h4>
           <ul class="menu">
             <li><a href="#/">Link</a></li>
@@ -294,7 +283,7 @@
             <li><a href="#/">Link</a></li>
           </ul>
         </div>
-        <div class="column small--span-4">
+        <div class="col col-sm--span-4">
           <h4>Department 3</h4>
           <ul class="menu">
             <li><a href="#/">Link</a></li>
@@ -312,7 +301,7 @@
         </div>
       </section>
       <section class="grid grid--gutter">
-        <div class="column small--span-4">
+        <div class="col col-sm--span-4">
           <h4>Department 4</h4>
           <ul class="menu">
             <li><a href="#/">Link</a></li>
@@ -328,7 +317,7 @@
             <li><a href="#/">Link</a></li>
           </ul>
         </div>
-        <div class="column small--span-4">
+        <div class="col col-sm--span-4">
           <h4>Department 5</h4>
           <ul class="menu">
             <li><a href="#/">Link</a></li>
@@ -344,7 +333,7 @@
             <li><a href="#/">Link</a></li>
           </ul>
         </div>
-        <div class="column small--span-4">
+        <div class="col col-sm--span-4">
           <h4>Department 6</h4>
           <ul class="menu">
             <li><a href="#/">Link</a></li>
@@ -362,14 +351,14 @@
         </div>
       </section>
     </div>
-    <div class="modal__footer deco-bt-thin-solid deco-p-small clearfix">
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
       Modal footer
       <a href="#" class="modal__close float--right">Close</a>
     </div>
   </div>
 
   <p>
-    <button class="button button--primary modal__open" data-modal="modal-5">Show modal (5): full cover</button>
+    <button class="btn modal__open" data-modal="modal-5">Show modal (5): full cover</button>
   </p>
 
       </div>
@@ -378,7 +367,7 @@
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -386,6 +375,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

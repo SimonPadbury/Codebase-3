@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-  
+
 
 </head>
 
@@ -40,8 +40,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -94,7 +94,7 @@
   <div class="codebase-docs__main-article">
 
   <h2>Simple Setup</h2>
-  
+
   <p>
     First, copy the <code>codebase/</code> folder (containing the <code>css/</code>, <code>js/</code> and <code>scss/</code> folders) into your project.
   </p>
@@ -119,6 +119,10 @@
 
     &lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
     &lt;script src="path/to/codebase/js/codebase.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      $(document).codebase();
+    &lt;/script&gt;
+    &lt;script src="path/to/your-theme/js/scripts.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
@@ -126,12 +130,14 @@
     Note that jQuery needs to be sourced first, so that the Codebase jQuery scrips can work.
   </p>
 
-  <h2>Advanced (SCSS) Setup</h2>
-  
+  <h2>Advanced Setup</h2>
+
+  <h3>(1.) SCSS</h3>
+
   <p>
     After copying in the <code>codebase/</code> folder as above, build your project theme structure, e.g.:
   </p>
-  
+
   <pre><code>codebase/
   ├── css/
   ├── js/
@@ -141,26 +147,44 @@ theme/
   ├── css/
   ├── js/
   └── scss/</code></pre>
-  
+
   <p>
-    You can import Codebase into your project base SCSS file. But before you do that, you may wish to override any/all of the SCSS variables in Codebase. This can easily be done because they are all set as <code>!default</code> variables. To override them, declare or import your overrides (i.e. variables with the same names but your preferred values) overrides <b>before</b> importing Codebase.
+    You can import Codebase into your project base SCSS file. But before you do that, you may wish to override any/all of the SCSS variables in Codebase. This can easily be done because they are all set as <code>!default</code> variables. To override them, declare or import your overrides (i.e. variables with the same names but your preferred values) <b>before</b> importing Codebase.
   </p>
-  
-  <p>  
+
+  <p>
     So for example, if you have copied the Codebase folder as a sibling folder beside your project theme folder (as I have done for this documentation 'theme'), then you can set up as follows:
   </p>
-  
-  
+
+
   <pre><code>// YOUR PROJECT BASE SCSS FILE
 // ===========================
 
-// Your overrides of Codebase default variables
+// Your overrides of Codebase !default variables
+
 ...
-  
+
 @import '../../codebase/scss/codebase';
 
 // Your project
+
 ...</code></pre>
+
+  <h3>(2.) JS / jQuery</h3>
+
+  <p>
+    The Codebase jQuery script is a set of (<code>cb_</code>-prefixed) plugins &ndash; each of which you can call &ndash; and a "master" (document ready setup) plugin <code>codebase();</code> that is called by...
+  </p>
+
+  <pre><code>$(document).codebase();</code></pre>
+
+  <p>
+    ...on the last line of <code>codebase/js/codebase.js</code>.
+  </p>
+
+  <p>
+    If instead you wish to call <code>codebase()</code> from within your own theme/app jQuery script or you wish to create your own master function (or plugin), then simply comment out the <code>$(document)</code> call.
+  </p>
 
       </div>
   </div>
@@ -168,7 +192,7 @@ theme/
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -176,6 +200,9 @@ theme/
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

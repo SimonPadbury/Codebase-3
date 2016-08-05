@@ -1,36 +1,39 @@
 // COMPONENT CLASSES: BUTTONS
 // ==========================
 
-.button {
-  @include button;
+.btn {
+  @include btn;
   &--primary {
-    @include button--primary;
+    @include btn--primary;
   }
   &--secondary {
-    @include button--secondary;
+    @include btn--secondary;
   }
   &--warning {
-    @include button--warning;
+    @include btn--warning;
   }
   &--success {
-    @include button--success;
+    @include btn--success;
   }
   &--error {
-    @include button--error;
+    @include btn--error;
   }
-  &--small {
-    @include button--small;
+  &--sm {
+    @include btn--sm;
   }
   &--default {
-    @include button--default;
+    @include btn--default;
   }
-  &--medium {
-    @include button--medium;
+  &--md {
+    @include btn--md;
   }
-  &--large {
-    @include button--large;
+  &--lg {
+    @include btn--lg;
   }
-  @include button--gradient;
-  @include button--pressable;
-  @include button--block;
+  &--icon {
+    @include btn--icon;
+  }
+  @include btn--gradient;
+  @include btn--pressable;
+  @include btn--block;
 }

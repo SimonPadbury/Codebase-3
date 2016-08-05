@@ -9,7 +9,7 @@
 
 @mixin tabs__label {
   z-index: 0;
-  padding: $spacing-tiny $spacing-small;
+  padding: $spacing-xs $spacing-sm;
   font-size: $base-font-size;
   color: $color-tabs-dark-text;
   background: $color-tabs-dark-background;
@@ -38,7 +38,7 @@
   opacity: 0;
   &-content {
     border: $border-thin-solid;
-    padding: $spacing-small $spacing-medium;
+    padding: $spacing-sm $spacing-md;
     background: $color-tabs-background;
   }
   &--is-front {
@@ -52,7 +52,7 @@
 @mixin tabs--top__label {
   @include tabs__label;
   display: inline-block;
-  margin-right: $spacing-tiny;
+  margin-right: $spacing-xs;
   border-top: $border-thin-solid;
   border-right: $border-thin-solid;
   border-left: $border-thin-solid;
@@ -76,7 +76,7 @@
   border-top: $border-thin-solid;
   border-bottom: $border-thin-solid;
   border-left: $border-thin-solid;
-  margin-bottom: $spacing-tiny;
+  margin-bottom: $spacing-xs;
   box-shadow: $box-shadow-inner-right;
 }
 
@@ -110,7 +110,7 @@
   @include tabs__card;
   margin-top: 0 !important;
   &--is-front {
-    margin-bottom: $spacing-tiny;
+    margin-bottom: $spacing-xs;
     &:last-of-type {
       margin-bottom: 0;
     }

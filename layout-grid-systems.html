@@ -23,7 +23,7 @@
   <div class="menubar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content show--tiny-only">
+  <div class="menubar__content show--xs-only">
     <div class="menubar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
@@ -34,7 +34,7 @@
 
   <header class="codebase-docs__header">
     <div class="grid grid--gutter">
-      <div class="column small--span-12">
+      <div class="col sm--span-12">
         <h1>Grid Systems</h1>
       </div>
     </div>
@@ -44,8 +44,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="menu hide--sm-up">
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
 
@@ -72,7 +72,7 @@
           <li><a href="utilities-typography.html">Typography</a></li>
           <li><a href="utilities-forms.html">Forms</a></li>
           <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
+          <li><a href="utilities-btns.html">btns</a></li>
           <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
           <li><a href="utilities-visibility.html">Visibility </a></li>
         </ul>
@@ -96,13 +96,13 @@
   <p>Three flavours of grid have been provided (<b>Classic</b>, <b>Semantic</b> and <b>Flexbox</b>). These all have similar display behaviour:</p>
 
   <ul>
-    <li>12 columns &ndash; you can change this simply by modifying the <code>$grid-max-columns</code> variable in your chosen grid flavour</li>
-    <li>Flexible &ndash; column width is set using <code>max-width</code>, not <code>width</code></li>
+    <li>12 cols &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
+    <li>Flexible &ndash; col width is set using <code>max-width</code>, not <code>width</code></li>
     <li>Responsive &ndash; media query breakpoint widths: 768px, 1024px and 1200px &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
     <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
     <li>Offsetting</li>
     <li>Nesting</li>
-    <li>(single column) centering</li>
+    <li>(single col) centering</li>
   </ul>
 
   <p>In addition, visibility classes have been provided, for showing/hiding items at different breakpoints.</p>
@@ -114,27 +114,27 @@
   <h3>Classic Grid</h3>
 
   <section class="grid grid--gutter">
-    <div class="column medium--span-8 large--push-4 deco-b-thin-solid">
-      <span>Article<br><code>column medium--span-8 large--push-4</code></span>
+    <div class="col md--span-8 lg--push-4 deco-b-thin-solid">
+      <span>Article<br><code>col md--span-8 lg--push-4</code></span>
       <section class="grid grid--gutter grid--nested">
-        <div class="column small--span-4 deco-b-thin-solid">
-          <span>Nested<br><code>column small--span-4</code></span>
+        <div class="col sm--span-4 deco-b-thin-solid">
+          <span>Nested<br><code>col sm--span-4</code></span>
         </div>
-        <div class="column small--span-4 deco-b-thin-solid">
-          <span>Nested<br><code>column small--span-4</code></span>
+        <div class="col sm--span-4 deco-b-thin-solid">
+          <span>Nested<br><code>col sm--span-4</code></span>
         </div>
-        <div class="column small--span-4 deco-b-thin-solid">
-          <span>Nested<br><code>column small--span-4</code></span>
+        <div class="col sm--span-4 deco-b-thin-solid">
+          <span>Nested<br><code>col sm--span-4</code></span>
         </div>
       </section>
     </div>
-    <div class="column medium--span-4 large--pull-8 deco-b-thin-solid">
-      <span>Aside<br><code>column medium--span-4 large--pull-8</code></span>
+    <div class="col md--span-4 lg--pull-8 deco-b-thin-solid">
+      <span>Aside<br><code>col md--span-4 lg--pull-8</code></span>
     </div>
   </section>
   <section class="grid grid--gutter">
-    <div class="column small--span-7 column--centered deco-b-thin-solid">Centered
-      <br><code>column small--span-7 column--centered</code></div>
+    <div class="col sm--span-7 col--centered deco-b-thin-solid">Centered
+      <br><code>col sm--span-7 col--centered</code></div>
   </section>
 
   <h3>Semantic Grid</h3>

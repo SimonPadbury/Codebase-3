@@ -32,7 +32,7 @@ h5 {
 h6 {
   font-size: $base-font-size * 1;
 }
-@include breakpoint__small--up {
+@include break__sm--up {
   h1 {
     font-size: $base-font-size * 3;
   }
@@ -67,7 +67,7 @@ hr {
 blockquote {
   margin: $line-height-px 0;
   border-left: $border-thick-solid;
-  padding: $spacing-medium $spacing-medium $spacing-medium $spacing-large; 
+  padding: $spacing-md $spacing-md $spacing-md $spacing-lg; 
   font-size: $base-font-size * 1.2;
 }
 a {

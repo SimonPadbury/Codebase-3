@@ -40,8 +40,8 @@
 
   <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar tiny--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--small-up">
+  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+    <ul class="codebase-docs__sidebar-menu hide--sm-up">
       <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
       <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
     </ul>
@@ -99,9 +99,9 @@
     The Codebase media query breakpoints are specified by three mixins. The breakpoint values can easiy be modified.
   </p>
 
-  <pre><code>$breakpoint-small:   768px;
-$breakpoint-medium: 1024px;
-$breakpoint-large:  1200px;
+  <pre><code>$break-sm:  768px;
+$break-md: 1024px;
+$break-lg: 1200px;
 </code></pre>
 
   <h2>Grid Systems</h2>
@@ -109,9 +109,9 @@ $breakpoint-large:  1200px;
   <p>In Codebase three grid systems have been provided (<a href="layout-classic-grid.html">Classic</a>, <a href="layout-semantic-grid.html">Semantic</a> and <a href="layout-flex-grid.html">Flexbox</a>). These all have the same characteristics:</p>
 
   <ul>
-    <li>12 columns &ndash; you can change this simply by modifying the <code>$grid-max-columns</code> variable in your chosen grid flavour</li>
-    <li>Flexible &ndash; column width is set using <code>max-width</code>, not <code>width</code></li>
-    <li>Responsive &ndash; media query breakpoint widths: 768px, 1024px and 1200px &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
+    <li>12 cols &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
+    <li>Flexible &ndash; col width is set using <code>max-width</code>, not <code>width</code></li>
+    <li>Responsive &ndash; media query breakpoint widths &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
     <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
     <li>Offsetting</li>
     <li>Nesting</li>
@@ -119,7 +119,7 @@ $breakpoint-large:  1200px;
   </ul>
 
   <p>
-     These three grid systems all display essentially the same in browsers new enough to cope with flexbox (the only significant difference being that the flexbox columns are the full height of their containers, not merely the height of their own content).
+     These three grid systems all display essentially the same in browsers new enough to cope with flexbox (the only significant difference being that the flexbox cols are the full height of their containers, not merely the height of their own content).
   </p>
 
   <h2>Visibility at Different Breakpoints</h2>
@@ -134,7 +134,7 @@ $breakpoint-large:  1200px;
 
 <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.0 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
 
@@ -142,6 +142,9 @@ $breakpoint-large:  1200px;
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
 
 </body>
 

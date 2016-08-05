@@ -16,31 +16,37 @@
   max-width: $grid-max-width;
   -webkit-backface-visibility: hidden;
 }
+// If you have a surplus of columns at any time, use @include grid-flexbox--wrap.
+@mixin grid-flexbox--wrap {
+  flex-wrap: wrap;
+}
 
-// Column Base
+// Flexbox Column Base
 
-@mixin column-flexbox {
+@mixin col-flexbox {
+  position: relative;
   // Note: box-sizing: border-box; // Has been added as a global (base) mixin already.
   min-height: 1px;
   width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
 }
-@mixin column-flexbox--span($column-flexbox--span) {
-  width: ($column-flexbox--span / $grid-max-columns) * 100%;
+@mixin col-flexbox--span($col-flexbox--span) {
+  width: ($col-flexbox--span / $grid-max-cols) * 100%;
 }
 
-// Note: in the Codebase flexbox grid, push/pull works by column `re-ordering`.
+// Note: in the Codebase flexbox grid, push/pull works by col `re-ordering`.
 
-@mixin column-flexbox--push($column-flexbox--push) {
-  order: $column-flexbox--push;
+@mixin col-flexbox--push($col-flexbox--push) {
+  order: $col-flexbox--push;
 }
-@mixin column-flexbox--pull($column-flexbox--pull) {
-  order: -$column-flexbox--pull;
+@mixin col-flexbox--pull($col-flexbox--pull) {
+  order: -$col-flexbox--pull;
 }
-@mixin column-flexbox--centered($column-flexbox--centered) {
-  width: ($column-flexbox--centered / $grid-max-columns) * 100%;
+@mixin col-flexbox--centered($col-flexbox--centered) {
+  width: ($col-flexbox--centered / $grid-max-cols) * 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
-// Incomplete rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).
+// Incomplete grid rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).
+// If you have a surplus of columns at any time, use @include grid-flexbox--wrap.

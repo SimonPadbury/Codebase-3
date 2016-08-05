@@ -13,25 +13,25 @@
   -webkit-backface-visibility: hidden;
 }
 
-// Grid with Gutter between Columns
+// Grid with Gutter between cols
 // --------------------------------
-// Include `grid--gutter` in your GRID container class, not in each column.
+// Include `grid--gutter` in your GRID container class, not in each col.
 
 @mixin grid--gutter {
   > * {
-    padding-right: ($grid-gutter-width--tiny / 2);
-    padding-left: ($grid-gutter-width--tiny / 2);
-    @include breakpoint__small--up {
-      padding-right: $grid-gutter-width--small / 2;
-      padding-left: $grid-gutter-width--small / 2;
+    padding-right: ($grid-gutter-width--xs / 2);
+    padding-left: ($grid-gutter-width--xs / 2);
+    @include break__sm--up {
+      padding-right: $grid-gutter-width--sm / 2;
+      padding-left: $grid-gutter-width--sm / 2;
     }
-    @include breakpoint__medium--up {
-      padding-right: $grid-gutter-width--medium / 2;
-      padding-left: $grid-gutter-width--medium / 2;
+    @include break__md--up {
+      padding-right: $grid-gutter-width--md / 2;
+      padding-left: $grid-gutter-width--md / 2;
     }
-    @include breakpoint__large--up {
-      padding-right: $grid-gutter-width--large / 2;
-      padding-left: $grid-gutter-width--large / 2;
+    @include break__lg--up {
+      padding-right: $grid-gutter-width--lg / 2;
+      padding-left: $grid-gutter-width--lg / 2;
     }
   }
 }
@@ -40,18 +40,18 @@
 // -----------
 // Only include `grid--nested` on a NESTED grid container IF the parent grid has a gutter.
 @mixin grid--nested {
-  margin-right: -($grid-gutter-width--tiny / 2);
-  margin-left: -($grid-gutter-width--tiny / 2);
-  @include breakpoint__small--up {
-    margin-right: -($grid-gutter-width--small / 2);
-    margin-left: -($grid-gutter-width--small / 2);
+  margin-right: -($grid-gutter-width--xs / 2);
+  margin-left: -($grid-gutter-width--xs / 2);
+  @include break__sm--up {
+    margin-right: -($grid-gutter-width--sm / 2);
+    margin-left: -($grid-gutter-width--sm / 2);
   }
-  @include breakpoint__medium--up {
-    margin-right: -($grid-gutter-width--medium / 2);
-    margin-left: -($grid-gutter-width--medium / 2);
+  @include break__md--up {
+    margin-right: -($grid-gutter-width--md / 2);
+    margin-left: -($grid-gutter-width--md / 2);
   }
-  @include breakpoint__large--up {
-    margin-right: -($grid-gutter-width--large / 2);
-    margin-left: -($grid-gutter-width--large / 2);
+  @include break__lg--up {
+    margin-right: -($grid-gutter-width--lg / 2);
+    margin-left: -($grid-gutter-width--lg / 2);
   }
 }
