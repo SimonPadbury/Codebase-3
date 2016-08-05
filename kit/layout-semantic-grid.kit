@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Layout: Semantic Grid | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <!-- @import "site-menubar.kit" -->
+
+  <header class="codebase-docs__header">
+    <span><a href="layout.html">Layout</a>:</span>
+    <h1>Semantic Grid</h1>
+  </header>
+
+  <!-- @import "site-sidebar.kit" -->
+
+  <p>
+    Example:
+  </p>
+
+  <section class="semgrid-wrapper">
+    <div class="semgrid-article deco-b-thin-solid">Article
+      <section class="semgrid--nested">
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+        <div class="deco-b-thin-solid">Nested</div>
+      </section>
+    </div>
+    <div class="semgrid-aside deco-b-thin-solid">Aside</div>
+  </section>
+  <section class="semgrid-wrapper grid-example">
+    <div class="semgrid-centered deco-b-thin-solid">Centered</div>
+  </section>
+
+  <p>
+    Incorporate the Codebase semantic grid mixins into your own layout, using your own choice of class names.
+  </p>
+
+  <p>
+    The Codebase semantic grid mixins are named similar to the Codebase classic grid classes, except that the col numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
+  </p>
+
+  <p>
+    You can also control the media query breakpoints using the Codebase breakpoint mixins, as below.
+  </p>
+
+  <pre><code>.your-grid-wrapper-class {
+  @include grid;
+  @include grid--gutter;
+}
+
+.your-article-col-class {
+  @include col-semantic;
+  @include break__md--up {
+    @include col--span(8);
+  }
+  @include break__lg--up {
+    @include col--push(4);
+  }
+}
+
+.your-sidebar-col-class {
+  @include col-semantic;
+  @include break__md--up {
+    @include col--span(4);
+  }
+  @include break__lg--up {
+    @include col--pull(8);
+  }
+}
+
+.your-nested-grid-wrapper-class {
+  @include grid;
+  @include grid--gutter;
+  @include grid--nested;
+  &gt; div {
+    @include col-semantic;
+    @include break__sm--up {
+      @include col--span(4);
+    }
+  }
+}
+
+.your-centered-col-class {
+  @include col-semantic;
+  @include break__sm--up {
+    @include col--centered(7);
+  }
+}
+</code></pre>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="width:230px">Mixin</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>@mixin grid</td>
+        <td>The container mixin. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left. <br><br>If a containing wrapper doesn't have this grid mixin included, then a grid system will expand to whatever the width of the container is, without maxing out at $grid-max-width. E.g. it could expand to he BODY width.</td>
+      </tr>
+      <tr>
+        <td>@mixin grid--gutter</td>
+        <td>Gives right and left padding to all immediate child block elements (i.e. cols).</td>
+      </tr>
+      <tr>
+        <td>@mixin grid--nested</td>
+        <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing col.</td>
+      </tr>
+      <tr>
+        <td>@mixin col-semantic</td>
+        <td>Float left. (Min height 1px.)</td>
+      </tr>
+      <tr>
+        <td>@mixin col--centered(X)</td>
+        <td>No float. Instead, centering is accomplished by auto margin right and left. col spanning is as calculated out of $grid-max-cols (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin col--span(X)</td>
+        <td>col spanning, as calculated out of $grid-max-cols (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin col--push(X)</td>
+        <td>col pushing to the right, as calculated out of $grid-max-cols (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin col--pull(X)</td>
+        <td>col pulling to the left, as calculated out of $grid-max-cols (default is 12).</td>
+      </tr>
+      <tr>
+        <td>@mixin col--offset(X)</td>
+        <td>col offsetting from the left, as calculated out of $grid-max-cols (default is 12).</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- @import "site-footer.kit" -->
+
+</body>
+
+</html>
