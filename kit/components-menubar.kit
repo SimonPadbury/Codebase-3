@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components: Menubar | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <!-- @import "site-menubar.kit" -->
+
+  <header class="codebase-docs__header">
+    <span><a href="components.html">Components</a>:</span>
+    <h1>Menubar</h1>
+  </header>
+
+  <!-- @import "site-sidebar.kit" -->
+
+  <p>The menubar is displayed as a collapsed Menu at smer window widths, with a toggleble "hamburger" navicon.</p>
+
+  <p>Simplest example:</p>
+
+  <nav class="menubar deco-b-thin-dashed">
+    <div class="menubar__navicon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="menubar__content">
+      <div class="menubar__left">
+        <ul>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <br>
+      
+  <pre><code>&lt;nav class="menubar"&gt;
+  &lt;div class="menubar__navicon"&gt;&lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="menubar__content"&gt;
+    &lt;div class="menubar__left"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+  <p>Complex example:</p>
+
+  <nav class="menubar deco-b-thin-dashed">
+    <div class="menubar__brand">
+      <a>Brand</a>
+    </div>
+    <div class="menubar__navicon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="menubar__content">
+      <div class="menubar__left">
+        <ul>
+          <li><a href="#/">Link</a></li>
+          <li>
+            <a href="http://google.com">Link</a>
+            <ul>
+              <li><a href="#/">Dropdown link</a></li>
+              <li><a href="#/">Dropdown link</a></li>
+              <li><a href="#/">Dropdown link</a></li>
+            </ul>
+          </li>
+          <li><a href="#/">Link</a></li>
+        </ul>
+      </div>
+      <div class="menubar__right">
+        <ul>
+          <li><a href="#/">Link</a></li>
+          <li>
+            <a href="#/">Link</a>
+            <ul>
+              <li><a href="#/">Dropdown link</a></li>
+              <li><a href="#/">Dropdown link</a></li>
+              <li><a href="#/">Dropdown link</a></li>
+            </ul>
+          </li>
+          <li><a href="#/">Link</a></li>
+        </ul>
+        <div class="menubar__search">
+          <form action="">
+            <span>
+              <input class="combo--first" type="search" name="" placeholder="Search">
+              <button class="btn btn--primary combo--last"><i class="fa fa-search"></i></button>
+            </span>
+          </form>
+        </div>
+      </div>
+    </div><!-- /.menubar__content -->
+  </nav>
+
+  <p>Notes:</p>
+  
+  <ol>
+    <li>
+      It it not necessary to add the dropdown utility classes into the menubar. (The dropdown mixins have already been applied to the parent list item, the parent link and the child list.)
+    </li>
+    <li>
+      Dropdown menu behavior only happens above the menubar media query breakpoint. When the nemubar is collapsed on smaller screens, the child lists are displayed as indented lists within the stacked menu.
+    </li>
+    <li>
+      On screens narrower than the menubar breakpoint (i.e. for collapsed menubars), all links are followable (including parent links).
+    </li>
+    <li>
+      On screens at or wider than the menubar breakpoint (i.e. for menubars as menubars), child menus are hidden by default (using the <a href="utilities-dropdowns.html">dropdown utility</a>). <em>Clicking the parent link once</em> will open the dropdown, and <em>clicking the parent link a second time</em> will follow the parent link. (Clicking anywhere outside the dropdown <em>except the parent link</em> will dismiss the dropdown.)
+    </li>
+  </ol>  
+  <p>
+    Menubar styling has therefore only been done as far as child menus (i.e. not sub-sub menus, etc).
+  </p>
+      
+  <pre><code>&lt;nav class="menubar"&gt;
+  &lt;div class="menubar__brand"&gt;
+    &lt;a&gt;Brand&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="menubar__navicon"&gt;&lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="menubar__content"&gt;
+    &lt;div class="menubar__left"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=""&gt;Link&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="menubar__right"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=""&gt;Link&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="menubar__search"&gt;
+        &lt;form action=""&gt;
+          &lt;span&gt;
+            &lt;input class="combo--first" type="search" name="" placeholder="Search"&gt;
+            &lt;button class="btn btn--primary combo--last"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;/span&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- /.menubar__content --&gt;
+&lt;/nav&gt;
+</code></pre>
+
+  <p>Menubars can incorporate dropdown child-menus (using the dropdown utility, same as for button dropdowns). But in menubars this functionality has been added: when displayed as a menubar (i.e. above the menubar breakpoint), dropdown parent links can be <b>clicked once</b> to reveal the dropdown menu and <b>clicked again</b> to follow the parent link. <b>Click outside</b> a revealed dropdown to dismiss it.</p>
+  
+  <p>Center example (can also contain drodown child-menus):</p>
+
+  <nav class="menubar deco-b-thin-dashed">
+    <div class="menubar__navicon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="menubar__content">
+      <div class="menubar__center">
+        <ul>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a></li>
+          <li><a href="#/">Link</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <br>
+      
+  <pre><code>&lt;nav class="menubar"&gt;
+  &lt;div class="menubar__navicon"&gt;&lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="menubar__content"&gt;
+    &lt;div class="menubar__center"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+  
+  <!-- @import "site-footer.kit" -->
+
+</body>
+
+</html>

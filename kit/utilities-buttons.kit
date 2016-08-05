@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Utilities: Buttons | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+
+
+</head>
+
+<body>
+
+  <!-- @import "site-menubar.kit" -->
+
+  <header class="codebase-docs__header">
+    <span><a href="utilities.html">Utilities</a>:</span>
+    <h1>Buttons</h1>
+  </header>
+
+  <!-- @import "site-sidebar.kit" -->
+
+  <p>
+    Button classes can be applied to button tags, input-button tags and hyperlink anchor tags:
+  </p>
+
+  <!-- Button -->
+  <p>
+    <button class="btn">Button</button> .btn
+  </p>
+
+  <!-- Input -->
+  <p>
+    <input class="btn" type="submit" value="Input"> .btn (Note: input-buttons get margin-bottom: 10px from the form input tag styling.)
+  </p>
+
+  <!-- Hyperlink -->
+  <p>
+    <a class="btn" href="#/">Hyperlink</a> .btn
+  </p>
+
+  <p>
+    Three sizes (text stays the same size):
+  </p>
+
+  <p>
+    <button class="btn btn--sm">Small button</button> .btn .btn--sm
+  </p>
+  <p>
+    <button class="btn">Default (medium) button</button> .btn
+  </p>
+  <p>
+    <button class="btn btn--lg">Large button</button> .btn .btn--lg
+  </p>
+
+  <p>
+    Block width button: .btn .btn--block
+  </p>
+
+  <p>
+    <button class="btn btn--block">Block width button</button>
+  </p>
+
+  <p>
+    Button colors (note: the default is uncolored, i.e. transparent):
+  </p>
+
+  <p>
+    <button class="btn">Default</button> .btn
+  </p>
+  <p>
+    <button class="btn btn--primary">Primary</button> .btn .btn--primary
+  </p>
+  <p>
+    <button class="btn btn--secondary">Secondary</button> .btn .btn--secondary
+  </p>
+  <p>
+    <button class="btn btn--warning">Warning</button> .btn .btn--warning
+  </p>
+  <p>
+    <button class="btn btn--success">Success</button> .btn .btn--success
+  </p>
+  <p>
+    <button class="btn btn--error">Error</button> .btn .btn--error
+  </p>
+
+  <p>
+    <button class="btn btn--success">Call to action <i class="fa fa-arrow-right"></i></button>
+    <button class="btn btn--secondary"><i class="fa fa-folder-open-o"></i> Archive</button>
+    <button class="btn btn--primary"><i class="fa fa-user"></i> User</button>
+    <button class="btn btn--warning">Are you sure <i class="fa fa-question-circle"></i></button>
+    <button class="btn btn--error">Reset <i class="fa fa-times-circle"></i></button>
+    <button class="btn">Cancel <i class="fa fa-times"></i></button>
+  </p>
+
+  <p>
+    The .btn--icon class can be used to make square buttons when only a (Font Awesome) icon is present within the button (note: .btn--icon cannot be used in conjunction with .btn--sm or .btn--lg).
+  </p>
+
+  <p>
+    <button class="btn btn--success">Call to action <i class="fa fa-arrow-right"></i></button>
+    <button class="btn btn--success btn--icon"><i class="fa fa-arrow-right"></i></button>
+    <button class="btn btn--secondary btn--icon"><i class="fa fa-folder-open-o"></i></button>
+    <button class="btn btn--primary btn--icon"><i class="fa fa-user"></i></button>
+    <button class="btn btn--warning btn--icon"><i class="fa fa-question-circle"></i></button>
+    <button class="btn btn--error btn--icon"><i class="fa fa-times-circle"></i></button>
+    <button class="btn btn--icon"><i class="fa fa-times"></i></button>
+  </p>
+
+  <p>
+    .combo--* utility classes have the effect of removing some of the rounded forners of buttons (or form input boxes).
+  </p>
+
+  <p>
+    <button class="btn btn--primary combo--first">.combo--first</button>
+    <button class="btn btn--primary combo--middle">.combo--middle</button>
+    <button class="btn btn--primary combo--middle">.combo--middle</button>
+    <button class="btn btn--primary combo--last">.combo--last</button>
+  </p>
+
+  <p>
+    The dropdown utility can be used in buttons:
+  </p>
+
+  <div class="dropdown">
+    <button class="btn btn--primary dropdown__toggle">
+      Button with dropdown utility 1
+    </button>
+    <span class="dropdown__content">
+      Example dropdown utility content (that wraps by default)
+    </span>
+  </div>
+
+  <div class="dropdown">
+    <button class="btn btn--primary dropdown__toggle">
+      Button with dropdown utility 2
+    </button>
+    <span class="dropdown__content dropdown__content--nowrap">
+      Example dropdown utility content (that doesn't wrap)
+    </span>
+  </div>
+  
+  <p>
+    See the <a href="utilities-dropdowns.html">dropdown utility</a>.
+  </p>
+  
+  <p>
+    Example: button icons, combos and a dropdown (with added float wrappers and spacing to make everything appear in a line):
+  </p>
+  
+  <div class="float--left">
+    <button class="btn btn--icon combo--first"><i class="fa fa-bold" aria-hidden="true"></i></button>
+    <button class="btn btn--icon combo--middle"><i class="fa fa-italic" aria-hidden="true"></i></button>
+    <button class="btn btn--icon combo--last float--left"><i class="fa fa-underline" aria-hidden="true"></i></button>
+    <span class="float--left">&nbsp;</span>
+    <div class="dropdown">
+      <button class="btn btn--icon dropdown__toggle"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+      <span class="dropdown__content deco-p-block">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link"><i class="fa fa-align-center" aria-hidden="true"></i></a></li>
+          <li class="menu__item"><a class="menu__link"><i class="fa fa-align-right" aria-hidden="true"></i></a></li>
+          <li class="menu__item"><a class="menu__link"><i class="fa fa-align-justify" aria-hidden="true"></i></a></li>
+        </ul>
+      </span>
+    </div>
+  </div>
+  <span class="float--left">&nbsp;</span>
+  <div class="float--left">
+    <button class="btn btn--icon combo--first"><i class="fa fa-cut" aria-hidden="true"></i></button>
+    <button class="btn btn--icon combo--middle"><i class="fa fa-copy" aria-hidden="true"></i></button>
+    <button class="btn btn--icon combo--last float--left"><i class="fa fa-paste" aria-hidden="true"></i></button>
+    <span class="float--left">&nbsp;</span>
+    <div class="dropdown">
+      <button class="btn btn--icon dropdown__toggle"><i class="fa fa-list" aria-hidden="true"></i></button>
+      <span class="dropdown__content deco-p-block">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link"><i class="fa fa-list-ol" aria-hidden="true"></i></a></li>
+          <li class="menu__item"><a class="menu__link"><i class="fa fa-list-ul" aria-hidden="true"></i></a></li>
+        </ul>
+      </span>
+    </div>
+  </div>
+  
+  <!-- @import "site-footer.kit" -->
+
+</body>
+
+</html>

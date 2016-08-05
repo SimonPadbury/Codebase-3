@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components: Modals | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <!-- @import "site-menubar.kit" -->
+
+  <header class="codebase-docs__header">
+    <span><a href="components.html">Components</a>:</span>
+    <h1>Modals</h1>
+  </header>
+
+  <!-- @import "site-sidebar.kit" -->
+
+  <p>
+    All modals in Codebase slide in from the top and appear flush with the top of the window (but you can move them in by adding a margin (or <code>.deco-margin-top</code>) to the modal body). The reset-overlay is raised and darkened, Modals can be dismissed by clicking their <code>.modal__close</code> button (or icon) or by clicking the reset-overlay.
+  </p>
+
+  <p>
+    The simplest modal is <code>.modal--narrow</code> with no modal header or footer:
+  </p>
+
+  <div id="modal-1" class="modal modal--narrow deco-bs">
+    <div class="modal__body deco-p-lg deco-bg-white">
+      Modal body content.
+      <hr />
+      <a class="modal__close float--right">Close</a>
+    </div>
+  </div>
+
+  <p>
+    <button class="btn modal__open" data-modal="modal-1">Show modal (1): simple</button>
+  </p>
+
+  <p>
+    Modal with header and footer and more decoration:
+  </p>
+
+  <div id="modal-2" class="modal modal--narrow deco-mt-lg deco-b-thick-solid deco-b-warning deco-b-radius deco-bs deco-bg-white">
+    <div class="modal__header deco-bb-thin-solid deco-p-sm">
+      <span class="modal__close float--right"><i class="fa fa-times fa-border"></i></span>
+      <h4>Modal header</h4>
+    </div>
+    <div class="modal__body deco-p-block">
+      Modal body content
+    </div>
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
+      Modal footer
+      <button class="btn btn--secondary modal__close float--right">Close</button>
+    </div>
+  </div>
+
+  <p>
+    <button class="btn modal__open" data-modal="modal-2">Show modal (2): with header and footer</button>
+  </p>
+
+  <pre><code class="language-none">&lt;div id="modal-2" class="modal modal--narrow"&gt;
+
+  &lt;div class="modal__header"&gt;
+    &lt;span class="modal__close float--right"&gt;&lt;i class="fa fa-times fa-border"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;h4&gt;Modal header&lt;/h4&gt;
+  &lt;/div&gt;
+
+  &lt;div class="modal__body deco-p-block"&gt;
+    Modal body content
+  &lt;/div&gt;
+
+  &lt;div class="modal__footer clearfix"&gt;
+    Modal footer
+    &lt;button class="btn btn--secondary modal__close float--right"&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;button class="btn modal__open" data-modal="modal-2"&gt;Show modal 2&lt;/button&gt;</code></pre>
+
+  <p>
+    Remove the modifier class <code>.modal--narrow</code> and instead add <code>.modal--contains-grid</code> if you require your modal to expand to contain a grid system:
+  </p>
+
+  <div id="modal-3" class="modal modal--contains-grid deco-mt-lg deco-m-gutter deco-mb-lg deco-b-radius deco-bs deco-bg-white">
+    <div class="modal__header deco-bb-thin-solid deco-p-sm">
+      <span class="modal__close float--right"><i class="fa fa-times fa-border"></i></span>
+      <h4>Modal header</h4>
+    </div>
+    <div class="modal__body deco-p-sm">
+      <section class="grid grid--gutter">
+        <div class="col col-sm--span-6">
+          <img src="holder.js/800x600" alt="">
+        </div>
+        <div class="col col-sm--span-6">
+          <h2>Image Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>
+            <button class="btn btn--primary">Activate</button>
+            <button class="btn btn--secondary">Delete</button>
+          </p>
+        </div>
+      </section>
+      <section class="grid grid--gutter">
+        <div class="col col-sm--span-6 deco-b-thin-solid">
+          <span><code>col col-sm--span-6</code></span>
+        </div>
+        <div class="col col-sm--span-6 deco-b-thin-solid">
+          <span><code>col col-sm--span-6</code></span>
+        </div>
+      </section>
+
+    </div>
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
+      <button class="btn btn--secondary modal__close float--right">Cancel</button>
+    </div>
+  </div>
+
+  <p>
+    <button class="btn modal__open" data-modal="modal-3">Show modal (3): containing a grid system</button>
+  </p>
+
+  <p>
+    Extra-tall modals don't protrude off the screen, but allow their content to scroll:
+  </p>
+
+  <div id="modal-4" class="modal modal--narrow deco-mt-lg deco-mb-lg deco-b-radius deco-bs deco-bg-white">
+    <div class="modal__header deco-bb-thin-solid deco-p-sm">
+      <span class="modal__close float--right"><i class="fa fa-times fa-border"></i></span>
+      <h4>Modal header</h4>
+    </div>
+    <div class="modal__body deco-p-block">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
+      Modal footer
+      <button class="btn btn--secondary modal__close float--right">Close</button>
+    </div>
+  </div>
+
+  <p>
+    <button class="btn modal__open" data-modal="modal-4">Show modal (4): extra-tall</button>
+  </p>
+
+  <p>
+    If you require a modal to cover the entire window, add <code>.modal--cover</code>. For example, use this for a navigation system or sitemap. (Of course, full-cover modals can contain a grid, so there is no need to add <code>.modal--contains-grid</code>.)
+  </p>
+
+  <div id="modal-5" class="modal modal--cover deco-bg-white">
+    <span class="modal__close float--right deco-p-md"><i class="fa fa-times fa-2x"></i></span>
+    <div class="modal__body deco-p-lg">
+      <section class="grid grid--gutter">
+        <div class="col">
+          <h2>Sitemap</h2>
+          <hr />
+        </div>
+      </section>
+      <section class="grid grid--gutter">
+        <div class="col col-sm--span-4">
+          <h4>Department 1</h4>
+          <ul class="menu">
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm--span-4">
+          <h4>Department 2</h4>
+          <ul class="menu">
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm--span-4">
+          <h4>Department 3</h4>
+          <ul class="menu">
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="grid grid--gutter">
+        <div class="col col-sm--span-4">
+          <h4>Department 4</h4>
+          <ul class="menu">
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm--span-4">
+          <h4>Department 5</h4>
+          <ul class="menu">
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+        <div class="col col-sm--span-4">
+          <h4>Department 6</h4>
+          <ul class="menu">
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a>
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="#/">Link</a></li>
+            <li><a href="#/">Link</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="modal__footer deco-bt-thin-solid deco-p-sm clearfix">
+      Modal footer
+      <a href="#" class="modal__close float--right">Close</a>
+    </div>
+  </div>
+
+  <p>
+    <button class="btn modal__open" data-modal="modal-5">Show modal (5): full cover</button>
+  </p>
+
+  <!-- @import "site-footer.kit" -->
+
+</body>
+
+</html>

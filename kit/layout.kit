@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Layout | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  
+
+</head>
+
+<body>
+
+  <!-- @import "site-menubar.kit" -->
+
+  <header class="codebase-docs__header">
+    <h1>Layout</h1>
+  </header>
+
+  <!-- @import "site-sidebar.kit" -->
+
+  <h2>Media Query Breakpoints</h2>
+
+  <p>
+    The Codebase media query breakpoints are specified by three mixins. The breakpoint values can easiy be modified.
+  </p>
+
+  <pre><code>$break-sm:  768px;
+$break-md: 1024px;
+$break-lg: 1200px;
+</code></pre>
+
+  <h2>Grid Systems</h2>
+
+  <p>In Codebase three grid systems have been provided (<a href="layout-classic-grid.html">Classic</a>, <a href="layout-semantic-grid.html">Semantic</a> and <a href="layout-flex-grid.html">Flexbox</a>). These all have the same characteristics:</p>
+
+  <ul>
+    <li>12 cols &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
+    <li>Flexible &ndash; col width is set using <code>max-width</code>, not <code>width</code></li>
+    <li>Responsive &ndash; media query breakpoint widths &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
+    <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
+    <li>Offsetting</li>
+    <li>Nesting</li>
+    <li>(single column) centering</li>
+  </ul>
+
+  <p>
+     These three grid systems all display essentially the same in browsers new enough to cope with flexbox (the only significant difference being that the flexbox cols are the full height of their containers, not merely the height of their own content).
+  </p>
+
+  <h2>Visibility at Different Breakpoints</h2>
+
+  <p>
+    In addition, <a href="utilities-visibility.html">visibility utilities</a> (mixins and classes) have been provided, for showing or hiding items at different breakpoints.
+  </p>
+
+  <!-- @import "site-footer.kit" -->
+
+</body>
+
+</html>
