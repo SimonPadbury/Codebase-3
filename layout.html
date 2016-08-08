@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-  
+
 
 </head>
 
@@ -19,7 +19,7 @@
 
   <div class="codebase-docs">
 
-<nav class="menubar codebase-docs__menubar">
+    <nav class="menubar codebase-docs__menubar">
   <div class="menubar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
@@ -32,33 +32,33 @@
   </div>
 </nav>
 
-  <header class="codebase-docs__header">
-    <h1>Layout</h1>
-  </header>
+    <header class="codebase-docs__header">
+      <h1>Layout</h1>
+    </header>
 
-  <div class="codebase-docs__main">
+    <div class="codebase-docs__main">
 
-  <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
 
-  <div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
-    <ul class="codebase-docs__sidebar-menu hide--sm-up">
-      <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
-      <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-    </ul>
+<div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+  <ul class="codebase-docs__sidebar-menu hide--sm-up">
+    <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+  </ul>
 
-    <h4>Codebase Docs</h4>
+  <h4>Codebase Docs</h4>
 
-    <ul class="codebase-docs__sidebar-menu">
-      <li><a href="getting-started.html">Getting Started</a></li>
-      <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
-      <li><a href="decoration.html">Decoration</a>
-        <ul>
-          <li><a href="decoration-margins.html">Margins</a>
+  <ul class="codebase-docs__sidebar-menu">
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="decoration.html">Decoration</a>
+      <ul>
+        <li><a href="decoration-margins.html">Margins</a>
           <li><a href="decoration-borders.html">Borders</a>
-          <li><a href="decoration-paddings.html">Paddings</a>
-          <li><a href="decoration-colors.html">Colors</a>
-          <li><a href="decoration-shadows.html">Shadows</a>
-        </ul>
+            <li><a href="decoration-paddings.html">Paddings</a>
+              <li><a href="decoration-colors.html">Colors</a>
+                <li><a href="decoration-shadows.html">Shadows</a>
+      </ul>
       </li>
       <li><a href="layout.html">Layout</a>
         <ul>
@@ -88,63 +88,62 @@
           <li><a href="components-tab-systems.html">Tab Systems</a></li>
           <li><a href="components-pagination.html">Pagination</a></li>
         </ul>
-    </ul>
-  </div>
+  </ul>
+</div>
 
-  <div class="codebase-docs__main-article">
+      <div class="codebase-docs__main-article">
 
-  <h2>Media Query Breakpoints</h2>
+        <h2>Media Query Breakpoints</h2>
 
-  <p>
-    The Codebase media query breakpoints are specified by three mixins. The breakpoint values can easiy be modified.
-  </p>
+        <p>
+          The Codebase media query breakpoints are specified by three mixins. The breakpoint values can easiy be modified.
+        </p>
 
-  <pre><code>$break-sm:  768px;
+        <pre><code>$break-sm:  768px;
 $break-md: 1024px;
 $break-lg: 1200px;
 </code></pre>
 
-  <h2>Grid Systems</h2>
+        <h2>Grid Systems</h2>
 
-  <p>In Codebase three grid systems have been provided (<a href="layout-classic-grid.html">Classic</a>, <a href="layout-semantic-grid.html">Semantic</a> and <a href="layout-flex-grid.html">Flexbox</a>). These all have the same characteristics:</p>
+        <p>In Codebase three grid systems have been provided (<a href="layout-classic-grid.html">Classic</a>, <a href="layout-semantic-grid.html">Semantic</a> and <a href="layout-flex-grid.html">Flexbox</a>). These all have the same characteristics:</p>
 
-  <ul>
-    <li>12 cols &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
-    <li>Flexible &ndash; col width is set using <code>max-width</code>, not <code>width</code></li>
-    <li>Responsive &ndash; media query breakpoint widths &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
-    <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
-    <li>Offsetting</li>
-    <li>Nesting</li>
-    <li>(single column) centering</li>
-  </ul>
+        <ul>
+          <li>12 cols &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
+          <li>Flexible &ndash; col width is set using <code>max-width</code>, not <code>width</code></li>
+          <li>Responsive &ndash; media query breakpoint widths &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
+          <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
+          <li>Offsetting</li>
+          <li>Nesting</li>
+          <li>(single column) centering</li>
+        </ul>
 
-  <p>
-     These three grid systems all display essentially the same in browsers new enough to cope with flexbox (the only significant difference being that the flexbox cols are the full height of their containers, not merely the height of their own content).
-  </p>
+        <p>
+          These three grid systems all display essentially the same in browsers new enough to cope with flexbox (the only significant difference being that the flexbox cols are the full height of their containers, not merely the height of their own content).
+        </p>
 
-  <h2>Visibility at Different Breakpoints</h2>
+        <h2>Visibility at Different Breakpoints</h2>
 
-  <p>
-    In addition, <a href="utilities-visibility.html">visibility utilities</a> (mixins and classes) have been provided, for showing or hiding items at different breakpoints.
-  </p>
+        <p>
+          In addition, <a href="utilities-visibility.html">visibility utilities</a> (mixins and classes) have been provided, for showing or hiding items at different breakpoints.
+        </p>
 
       </div>
+    </div>
+    </main>
+
+    <nav class="menubar codebase-docs__menubar">
+  <div class="menubar__brand">
+    <a href="index.html"><span>Codebase</span></a>
   </div>
-</main>
-
-<footer class="codebase-docs__footer deco-bg-charcoal">
-  <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-  </span>
-</footer>
-
-</div> <!-- /.codebase-docs -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="codebase/js/codebase.js"></script>
-<script>
-  $(document).codebase();
-</script>
+  <div class="menubar__content">
+    <div class="menubar__right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 </body>
 
