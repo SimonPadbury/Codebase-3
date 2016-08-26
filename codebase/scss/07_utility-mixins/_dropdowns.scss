@@ -1,8 +1,9 @@
 // UTILITY: DROPDOWNS
 // ==================
+// File: 07_utillity-mixins/_dropdpwns.scss
 
 @mixin dropdown {
-  display: inline-block; 
+  display: inline-block;
   position: relative;
   overflow: visible;
 }
@@ -19,16 +20,14 @@
   position: absolute;
   z-index: $reset-overlay--z-index + 2;
   margin: 0;
-  padding: $spacing-sm $spacing-md;
-  border-radius: $border-radius;
+  padding: $deco-spacing-sm $deco-spacing-md;
+  border-radius: $deco-border-radius;
   color: $color-text-default;
   background: #fff;
   text-align: left;
+  white-space: nowrap;
   cursor: default;
-  box-shadow: $box-shadow;
-  &--nowrap {
-    white-space: nowrap;
-  }
+  box-shadow: $deco-box-shadow;
   &--is-revealed {
     display: block;
   }

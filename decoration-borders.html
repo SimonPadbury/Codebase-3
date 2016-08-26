@@ -19,12 +19,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,9 +32,9 @@
   </div>
 </nav>
 
-    <header class="codebase-docs__header">
-      <span><a href="decoration.html">Decoration</a>:</span>
-      <h1>Borders</h1>
+    <header class="codebase-docs__header deco-bg-error">
+      <span class="deco-text-gray">Decoration:</span>
+      <h1 class="deco-text-white">Borders</h1>
     </header>
 
     <div class="codebase-docs__main">
@@ -52,45 +52,48 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
         <p>(Note: in all the 'border zero' examples below I have first added a thin border and then applied the 'border zero' classes.)</p>
@@ -203,17 +206,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
+<script src="theme/prism/prism.js"></script>
 
 
 </body>

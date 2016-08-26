@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components: Slideshow | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  <link href="theme/prism/prism.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="codebase-docs">
+
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
+    <a href="index.html"><span>Codebase</span></a>
+  </div>
+  <div class="navbar__content">
+    <div class="navbar__right">
+      <ul>
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <header class="codebase-docs__header deco-bg-dark-warning">
+      <span class="deco-text-light-gray">Components:</span>
+      <h1 class="deco-text-white">Slideshow</h1>
+    </header>
+
+    <div class="codebase-docs__main">
+
+      <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+<div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
+  <ul class="codebase-docs__sidebar-menu hide--sm-up">
+    <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+  </ul>
+
+  <h4>Codebase Docs</h4>
+
+  <ul class="codebase-docs__sidebar-menu">
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
+    <li><a href="decoration.html">Decoration</a>
+      <ul>
+        <li><a href="decoration-margins.html">Margins</a></li>
+        <li><a href="decoration-borders.html">Borders</a></li>
+        <li><a href="decoration-paddings.html">Paddings</a></li>
+        <li><a href="decoration-colors.html">Colors</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+      <div class="codebase-docs__main-article">
+
+        <p>
+          An easy-setup, lightweight, responsive slideshow. Capable of handling images or text, the Codebase slideshow component is suitable for displaying simple slideshow presentations, step-by-step tutorials, etc.
+        </p>
+
+        <p>
+          Example:
+        </p>
+
+        <div class="slideshow">
+          <div class="slideshow__inner">
+
+            <div class="slideshow__item">
+              <img src="holder.js/960x200?bg=000" />
+              <h4>Title for Slide 1</h4>
+              <p>Plus some descriptive text.</p>
+            </div>
+
+            <div class="slideshow__item">
+              <img src="holder.js/960x200?bg=333" />
+              <h4>Title for Slide 2</h4>
+              <p>Plus some descriptive text.</p>
+            </div>
+
+            <div class="slideshow__item">
+              <img src="holder.js/960x200?bg=666" />
+              <h4>Title for Slide 3</h4>
+              <p>Plus some descriptive text.</p>
+            </div>
+
+            <div class="slideshow__item">
+              <img src="holder.js/960x200?bg=999" />
+              <h4>Title for Slide 4</h4>
+              <p>Plus some descriptive text.</p>
+            </div>
+
+            <div class="slideshow__item">
+              <img src="holder.js/960x200?bg=ccc" />
+              <h4>Title for Slide 5</h4>
+              <p>Plus some descriptive text.</p>
+            </div>
+
+            <div class="slideshow__item">
+              <img src="holder.js/960x200?bg=fff" />
+              <h4>Title for Slide 6</h4>
+              <p>Plus some descriptive text.</p>
+            </div>
+
+          </div><!-- /.slideshow__inner -->
+        </div><!-- /.slideshow -->
+
+        <div class="tabs tabs--top codebase-docs__code">
+
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+        <pre><code class="language-html">&lt;div class="slideshow"&gt;
+  &lt;div class="slideshow__inner"&gt;
+
+    &lt;div class="slideshow__item"&gt; ... &lt;/div&gt;
+
+    &lt;div class="slideshow__item"&gt; ... &lt;/div&gt;
+
+    &lt;div class="slideshow__item"&gt; ... &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/08_component-mixins/_slideshow.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/11_component-classes/_slideshow.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="js-1">JS (jQuery)</div>
+          <div id="js-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/js/scripts/slideshow.js"></pre>
+            </div>
+          </div>
+
+        </div><!-- / .codebase-docs__code -->
+
+        <p>
+          Notes:
+        </p>
+
+        <ol>
+          <li>
+            The simple setup consists of two outer block elements (<code>.slideshow</code> and <code>.slideshow__inner</code>) The inner block serves as the 'slider trolley' containing all the <code>.slideshow__item</code> blocks.
+          </li>
+          <li>
+            The Codebase slideshow adds its own prev/next arrows and pager dots. It calculates the number of dots by counting your slides, i.e. counting your <code>.slideshow__item</code> blocks.
+          </li>
+          <li>
+            The Slideshow will remain the height of your tallest slide plus the pager height. (The height does not auto-adjust while changing between slides of different heights).
+          </li>
+          <li>
+            Only one instance of the Codebase slidershow component can be used per webpage.
+          </li>
+          <li>
+            The Codebase slideshow component is not capable of looping or auto-run.
+          </li>
+        </ol>
+
+        <p>
+          If you are need a slideshow with more capabilities, I recommend <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick</a> by Ken Wheeler.
+        </p>
+
+      </div>
+    </div>
+    </main>
+
+    <footer class="codebase-docs__footer deco-bg-charcoal">
+  <span class="deco-text-light-gray">
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+  </span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
+<script src="theme/prism/prism.js"></script>
+
+</body>
+
+</html>

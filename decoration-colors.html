@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-  
+
 
 </head>
 
@@ -19,12 +19,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,10 +32,10 @@
   </div>
 </nav>
 
-  <header class="codebase-docs__header">
-    <span><a href="decoration.html">Decoration</a>:</span>
-    <h1>Colors</h1>
-  </header>
+    <header class="codebase-docs__header deco-bg-error">
+      <span class="deco-text-gray">Decoration:</span>
+      <h1 class="deco-text-white">Colors</h1>
+    </header>
 
   <div class="codebase-docs__main">
 
@@ -52,54 +52,57 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
   <div class="codebase-docs__main-article">
 
-  <p>The Codebase swatch:</p>
+  <h2>The Codebase swatch</h2>
 
   <style>
     .swatch {
       margin: 10px auto 40px;
     }
-    
+
     .legend {
       padding: 0 4px;
       font-weight: bold;
@@ -108,13 +111,13 @@
       text-align: center;
       vertical-align: middle;
     }
-    
+
     .square {
       width: 50px !important;
       height: 50px !important;
-      border: 1px solid #ddd;
+      border: 1px solid #aaa;
     }
-    
+
     .diagonal {
       background: url('images/diagonal.svg') -1px -1px;
     }
@@ -136,174 +139,149 @@
           </tr>
           <tr>
             <td class="legend">A</td>
-            <td class="square diagonal"></td>
-            <td class="square diagonal"></td>
-            <td class="square deco-bg-primary-light"></td>
-            <td class="square deco-bg-primary"></td>
-            <td class="square deco-bg-primary-dark"></td>
-            <td class="square diagonal"></td>
+            <td class="square deco-bg-white"></td>
+            <td class="square deco-bg-silver"></td>
+            <td class="square deco-bg-light-gray"></td>
+            <td class="square deco-bg-gray"></td>
+            <td class="square deco-bg-dark-gray"></td>
+            <td class="square deco-bg-charcoal"></td>
           </tr>
           <tr>
             <td class="legend">B</td>
-            <td class="square deco-bg-white"></td>
-            <td class="square deco-bg-silver"></td>
-            <td class="square deco-bg-secondary-light"></td>
-            <td class="square deco-bg-secondary"></td>
-            <td class="square deco-bg-secondary-dark"></td>
-            <td class="square deco-bg-charcoal"></td>
+            <td class="square diagonal"></td>
+            <td class="square diagonal"></td>
+            <td class="square deco-bg-light-primary"></td>
+            <td class="square deco-bg-primary"></td>
+            <td class="square deco-bg-dark-primary"></td>
+            <td class="square diagonal"></td>
           </tr>
           <tr>
             <td class="legend">C</td>
             <td class="square diagonal"></td>
             <td class="square diagonal"></td>
-            <td class="square deco-bg-warning-light"></td>
-            <td class="square deco-bg-warning"></td>
-            <td class="square deco-bg-warning-dark"></td>
+            <td class="square deco-bg-light-secondary"></td>
+            <td class="square deco-bg-secondary"></td>
+            <td class="square deco-bg-dark-secondary"></td>
             <td class="square diagonal"></td>
           </tr>
           <tr>
             <td class="legend">D</td>
             <td class="square diagonal"></td>
             <td class="square diagonal"></td>
-            <td class="square deco-bg-success-light"></td>
-            <td class="square deco-bg-success"></td>
-            <td class="square deco-bg-success-dark"></td>
+            <td class="square deco-bg-light-warning"></td>
+            <td class="square deco-bg-warning"></td>
+            <td class="square deco-bg-dark-warning"></td>
             <td class="square diagonal"></td>
           </tr>
           <tr>
             <td class="legend">E</td>
             <td class="square diagonal"></td>
             <td class="square diagonal"></td>
-            <td class="square deco-bg-error-light"></td>
+            <td class="square deco-bg-light-error"></td>
             <td class="square deco-bg-error"></td>
-            <td class="square deco-bg-error-dark"></td>
+            <td class="square deco-bg-dark-error"></td>
+            <td class="square diagonal"></td>
+          </tr>
+          <tr>
+            <td class="legend">F</td>
+            <td class="square diagonal"></td>
+            <td class="square diagonal"></td>
+            <td class="square deco-bg-light-success"></td>
+            <td class="square deco-bg-success"></td>
+            <td class="square deco-bg-dark-success"></td>
             <td class="square diagonal"></td>
           </tr>
         </tbody>
       </table>
 
-      <h3>Grayscale</h3>
-      
       <table class="table">
         <tr>
-          <td class="legend" style="width:46px;"><b>B1</b></td>
+          <td class="legend" style="width:46px;"><b>A1</b></td>
           <td class="deco-bg-white" style="width:46px;"></td>
           <td>$color-white</td>
         </tr>
         <tr>
-          <td class="legend"><b>B2</b></td>
+          <td class="legend"><b>A2</b></td>
           <td class="deco-bg-silver"></td>
           <td>$color-silver</td>
         </tr>
         <tr>
-          <td class="legend"><b>B3</b></td>
+          <td class="legend"><b>A3</b></td>
           <td class="deco-bg-light-gray"></td>
-          <td>$color-light-gray ($color-secondary-light)</td>
+          <td>$color-light-gray</td>
         </tr>
         <tr>
-          <td class="legend"><b>B4</b></td>
-          <td class="deco-bg-secondary"></td>
-          <td>$color-mid-gray ($color-secondary)</td>
+          <td class="legend"><b>A4</b></td>
+          <td class="deco-bg-gray"></td>
+          <td>$color-gray</td>
         </tr>
         <tr>
-          <td class="legend"><b>B5</b></td>
-          <td class="deco-bg-secondary-dark"></td>
-          <td>$color-dark-gray ($color-secondary-dark)</td>
+          <td class="legend"><b>A5</b></td>
+          <td class="deco-bg-dark-gray"></td>
+          <td>$color-dark-gray</td>
         </tr>
         <tr>
-          <td class="legend"><b>B6</b></td>
+          <td class="legend"><b>A6</b></td>
           <td class="deco-bg-charcoal"></td>
           <td>$color-charcoal</td>
         </tr>
         </tbody>
       </table>
 
-      
+
     </div>
     <div class="col col-md--span-6">
-      
-      <h3>All colors</h3>
-
       <table class="table">
         <tr>
-          <td class="legend" style="width:46px;"><b>A3</b></td>
-          <td class="deco-bg-primary-light" style="width:46px;"></td>
-          <td>$color-primary-light</td>
+          <td class="legend" style="width:46px;"><b>B3</b></td>
+          <td class="deco-bg-light-primary" style="width:46px;"></td>
+          <td>$color-light-primary</td>
         </tr>
         <tr>
-          <td class="legend"><b>A4</b></td>
+          <td class="legend"><b>B4</b></td>
           <td class="deco-bg-primary"></td>
           <td>$color-primary</td>
         </tr>
         <tr>
-          <td class="legend"><b>A5</b></td>
-          <td class="deco-bg-primary-dark"></td>
-          <td>$color-primary-dark</td>
-        </tr>
-        <tr>
-          <td class="legend"><b>B1</b></td>
-          <td class="deco-bg-white"></td>
-          <td>$color-white</td>
-        </tr>
-        <tr>
-          <td class="legend"><b>B2</b></td>
-          <td class="deco-bg-silver"></td>
-          <td>$color-silver</td>
-        </tr>
-        <tr>
-          <td class="legend"><b>B3</b></td>
-          <td class="deco-bg-light-gray"></td>
-          <td>$color-secondary-light ($color-light-gray)</td>
-        </tr>
-        <tr>
-          <td class="legend"><b>B4</b></td>
-          <td class="deco-bg-secondary"></td>
-          <td>$color-secondary ($color-mid-gray)</td>
-        </tr>
-        <tr>
           <td class="legend"><b>B5</b></td>
-          <td class="deco-bg-secondary-dark"></td>
-          <td>$color-secondary-dark ($color-dark-gray)</td>
+          <td class="deco-bg-dark-primary"></td>
+          <td>$color-dark-primary</td>
         </tr>
-        <tr>
-          <td class="legend"><b>B6</b></td>
-          <td class="deco-bg-charcoal"></td>
-          <td>$color-charcoal</td>
-        </tr>
+
         <tr>
           <td class="legend"><b>C3</b></td>
-          <td class="deco-bg-warning-light"></td>
-          <td>$color-warning-light</td>
+          <td class="deco-bg-light-secondary"></td>
+          <td>$color-light-secondary</td>
         </tr>
         <tr>
           <td class="legend"><b>C4</b></td>
+          <td class="deco-bg-secondary"></td>
+          <td>$color-secondary</td>
+        </tr>
+        <tr>
+          <td class="legend"><b>C5</b></td>
+          <td class="deco-bg-dark-secondary"></td>
+          <td>$color-dark-secondary</td>
+        </tr>
+        <tr>
+          <td class="legend"><b>D3</b></td>
+          <td class="deco-bg-light-warning"></td>
+          <td>$color-light-warning</td>
+        </tr>
+        <tr>
+          <td class="legend"><b>D4</b></td>
           <td class="deco-bg-warning"></td>
           <td>$color-warning</td>
         </tr>
         <tr>
-          <td class="legend"><b>C5</b></td>
-          <td class="deco-bg-warning-dark"></td>
-          <td>$color-warning-dark</td>
-        </tr>
-        <tr>
-          <td class="legend"><b>D3</b></td>
-          <td class="deco-bg-success-light"></td>
-          <td>$color-success-light</td>
-        </tr>
-        <tr>
-          <td class="legend"><b>D4</b></td>
-          <td class="deco-bg-success"></td>
-          <td>$color-success</td>
-        </tr>
-        <tr>
           <td class="legend"><b>D5</b></td>
-          <td class="deco-bg-success-dark"></td>
-          <td>$color-success-dark</td>
+          <td class="deco-bg-dark-warning"></td>
+          <td>$color-dark-warning</td>
         </tr>
         <tr>
           <td class="legend"><b>E3</b></td>
-          <td class="deco-bg-error-light"></td>
-          <td>$color-error-light</td>
+          <td class="deco-bg-light-error"></td>
+          <td>$color-light-error</td>
         </tr>
         <tr>
           <td class="legend"><b>E4</b></td>
@@ -312,8 +290,23 @@
         </tr>
         <tr>
           <td class="legend"><b>E5</b></td>
-          <td class="deco-bg-error-dark"></td>
-          <td>$color-error-dark</td>
+          <td class="deco-bg-dark-error"></td>
+          <td>$color-dark-error</td>
+        </tr>
+        <tr>
+          <td class="legend"><b>F3</b></td>
+          <td class="deco-bg-light-success"></td>
+          <td>$color-light-success</td>
+        </tr>
+        <tr>
+          <td class="legend"><b>F4</b></td>
+          <td class="deco-bg-success"></td>
+          <td>$color-success</td>
+        </tr>
+        <tr>
+          <td class="legend"><b>F5</b></td>
+          <td class="deco-bg-dark-success"></td>
+          <td>$color-dark-success</td>
         </tr>
         </tbody>
       </table>
@@ -324,7 +317,7 @@
   <div class="grid grid--gutter grid--nested">
     <div class="col col-sm--span-4">
 
-      <p><b>Background colors</b></p>
+      <h3>Background colors</h3>
 
       <div class="deco-p-sm deco-b-thin-dashed deco-bg-white">
         .deco-bg-white
@@ -333,60 +326,67 @@
         .deco-bg-silver
       </div>
       <div class="deco-p-sm deco-bg-light-gray">
-        .deco-bg-secondary-light, .deco-bg-light-gray
+        .deco-bg-light-gray
       </div>
-      <div class="deco-p-sm deco-text-white deco-bg-mid-gray">
-        .deco-bg-secondary,
-        <br>.deco-bg-mid-gray
+      <div class="deco-p-sm deco-text-white deco-bg-gray">
+        .deco-bg-gray
       </div>
       <div class="deco-p-sm deco-text-white deco-bg-dark-gray">
-        .deco-bg-secondary-dark,
-        <br>.deco-bg-dark-gray
+        .deco-bg-dark-gray
       </div>
       <div class="deco-p-sm deco-text-white deco-bg-charcoal">
         .deco-bg-charcoal
       </div>
-      <div class="deco-p-sm deco-bg-primary-light">
-        .deco-bg-primary-light
+      <div class="deco-p-sm deco-bg-light-primary">
+        .deco-bg-light-primary
       </div>
       <div class="deco-p-sm deco-text-white deco-bg-primary">
         .deco-bg-primary
       </div>
-      <div class="deco-p-sm deco-text-white deco-bg-primary-dark">
-        .deco-bg-primary-dark
+      <div class="deco-p-sm deco-text-white deco-bg-dark-primary">
+        .deco-bg-dark-primary
       </div>
-      <div class="deco-p-sm deco-bg-warning-light">
-        .deco-bg-warning-light
+      <div class="deco-p-sm deco-bg-light-secondary">
+        .deco-bg-light-secondary
+      </div>
+      <div class="deco-p-sm deco-text-white deco-bg-secondary">
+        .deco-bg-secondary
+      </div>
+      <div class="deco-p-sm deco-text-white deco-bg-dark-secondary">
+        .deco-bg-dark-secondary
+      </div>
+      <div class="deco-p-sm deco-bg-light-warning">
+        .deco-bg-light-warning
       </div>
       <div class="deco-p-sm deco-text-white deco-bg-warning">
         .deco-bg-warning
       </div>
-      <div class="deco-p-sm deco-text-white deco-bg-warning-dark">
-        .deco-bg-warning-dark
+      <div class="deco-p-sm deco-text-white deco-bg-dark-warning">
+        .deco-bg-dark-warning
       </div>
-      <div class="deco-p-sm deco-bg-success-light">
-        .deco-bg-success-light
+      <div class="deco-p-sm deco-bg-light-success">
+        .deco-bg-light-success
       </div>
       <div class="deco-p-sm deco-text-white deco-bg-success">
         .deco-bg-success
       </div>
-      <div class="deco-p-sm deco-text-white deco-bg-success-dark">
-        .deco-bg-success-dark
+      <div class="deco-p-sm deco-text-white deco-bg-dark-success">
+        .deco-bg-dark-success
       </div>
-      <div class="deco-p-sm deco-bg-error-light">
-        .deco-bg-error-light
+      <div class="deco-p-sm deco-bg-light-error">
+        .deco-bg-light-error
       </div>
       <div class="deco-p-sm deco-text-white deco-bg-error">
         .deco-bg-error
       </div>
-      <div class="deco-p-sm deco-text-white deco-bg-error-dark">
-        .deco-bg-error-dark
+      <div class="deco-p-sm deco-text-white deco-bg-dark-error">
+        .deco-bg-dark-error
       </div>
 
     </div>
     <div class="col col-sm--span-4">
 
-      <p><b>Text colors</b></p>
+      <h3>Text colors</h3>
 
       <div class="deco-p-sm deco-text-white deco-bg-charcoal">
         .deco-text-white
@@ -395,61 +395,67 @@
         .deco-text-silver
       </div>
       <div class="deco-p-sm deco-text-light-gray deco-bg-charcoal">
-        .deco-text-secondary-light,
         .deco-text-light-gray
       </div>
-      <div class="deco-p-sm deco-text-mid-gray deco-bg-charcoal">
-        .deco-text-secondary,
-        <br>.deco-text-mid-gray
+      <div class="deco-p-sm deco-text-gray deco-bg-charcoal">
+        .deco-text-gray
       </div>
       <div class="deco-p-sm deco-text-dark-gray">
-        .deco-text-secondary-dark,
-        <br>.deco-text-dark-gray
+        .deco-text-dark-gray
       </div>
       <div class="deco-p-sm deco-text-charcoal">
         .deco-text-charcoal
       </div>
-      <div class="deco-p-sm deco-text-primary-light deco-bg-charcoal">
-        .deco-text-primary-light
+      <div class="deco-p-sm deco-text-light-primary deco-bg-charcoal">
+        .deco-text-light-primary
       </div>
       <div class="deco-p-sm deco-text-primary">
         .deco-text-primary
       </div>
-      <div class="deco-p-sm deco-text-primary-dark">
-        .deco-text-primary-dark
+      <div class="deco-p-sm deco-text-dark-primary">
+        .deco-text-dark-primary
       </div>
-      <div class="deco-p-sm deco-text-warning-light deco-bg-charcoal">
-        .deco-text-warning-light
+      <div class="deco-p-sm deco-text-light-secondary deco-bg-charcoal">
+        .deco-text-light-secondary
+      </div>
+      <div class="deco-p-sm deco-text-secondary">
+        .deco-text-secondary
+      </div>
+      <div class="deco-p-sm deco-text-dark-secondary">
+        .deco-text-dark-secondary
+      </div>
+      <div class="deco-p-sm deco-text-light-warning deco-bg-charcoal">
+        .deco-text-light-warning
       </div>
       <div class="deco-p-sm deco-text-warning">
         .deco-text-warning
       </div>
-      <div class="deco-p-sm deco-text-warning-dark">
-        .deco-text-warning-dark
+      <div class="deco-p-sm deco-text-dark-warning">
+        .deco-text-dark-warning
       </div>
-      <div class="deco-p-sm deco-text-success-light deco-bg-charcoal">
-        .deco-text-success-light
+      <div class="deco-p-sm deco-text-light-success deco-bg-charcoal">
+        .deco-text-light-success
       </div>
       <div class="deco-p-sm deco-text-success">
         .deco-text-success
       </div>
-      <div class="deco-p-sm deco-text-success-dark">
-        .deco-text-success-dark
+      <div class="deco-p-sm deco-text-dark-success">
+        .deco-text-dark-success
       </div>
-      <div class="deco-p-sm deco-text-error-light deco-bg-charcoal">
-        .deco-text-error-light
+      <div class="deco-p-sm deco-text-light-error deco-bg-charcoal">
+        .deco-text-light-error
       </div>
       <div class="deco-p-sm deco-text-error">
         .deco-text-error
       </div>
-      <div class="deco-p-sm deco-text-error-dark">
-        .deco-text-error-dark
+      <div class="deco-p-sm deco-text-dark-error">
+        .deco-text-dark-error
       </div>
 
     </div>
     <div class="col col-sm--span-4">
 
-      <p><b>Border colors</b></p>
+      <h3>Border colors</h3>
 
       <div class="deco-b-thin-dashed">
         <div class="deco-p-sm deco-b-thick-solid deco-b-white deco-bg-light-gray">
@@ -460,55 +466,61 @@
         .deco-b-silver
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-light-gray">
-        .deco-b-secondary-light,
         .deco-b-light-gray
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-mid-gray">
-        .deco-b-secondary,
-        <br>.deco-b-mid-gray
+      <div class="deco-p-sm deco-b-thick-solid deco-b-gray">
+        .deco-b-gray
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-dark-gray">
-        .deco-b-secondary-dark,
-        <br>.deco-b-dark-gray
+        .deco-b-dark-gray
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-charcoal">
         .deco-b-charcoal
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-primary-light">
-        .deco-b-primary-light
+      <div class="deco-p-sm deco-b-thick-solid deco-b-light-primary">
+        .deco-b-light-primary
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-primary">
         .deco-b-primary
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-primary-dark">
-        .deco-b-primary-dark
+      <div class="deco-p-sm deco-b-thick-solid deco-b-dark-primary">
+        .deco-b-dark-primary
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-warning-light">
-        .deco-b-warning-light
+      <div class="deco-p-sm deco-b-thick-solid deco-b-light-secondary">
+        .deco-b-light-secondary
+      </div>
+      <div class="deco-p-sm deco-b-thick-solid deco-b-secondary">
+        .deco-b-secondary
+      </div>
+      <div class="deco-p-sm deco-b-thick-solid deco-b-dark-secondary">
+        .deco-b-dark-secondary
+      </div>
+      <div class="deco-p-sm deco-b-thick-solid deco-b-light-warning">
+        .deco-b-light-warning
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-warning">
         .deco-b-warning
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-warning-dark">
-        .deco-b-warning-dark
+      <div class="deco-p-sm deco-b-thick-solid deco-b-dark-warning">
+        .deco-b-dark-warning
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-success-light">
-        .deco-b-success-light
+      <div class="deco-p-sm deco-b-thick-solid deco-b-light-success">
+        .deco-b-light-success
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-success">
         .deco-b-success
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-success-dark">
-        .deco-b-success-dark
+      <div class="deco-p-sm deco-b-thick-solid deco-b-dark-success">
+        .deco-b-dark-success
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-error-light">
-        .deco-b-error-light
+      <div class="deco-p-sm deco-b-thick-solid deco-b-light-error">
+        .deco-b-light-error
       </div>
       <div class="deco-p-sm deco-b-thick-solid deco-b-error">
         .deco-b-error
       </div>
-      <div class="deco-p-sm deco-b-thick-solid deco-b-error-dark">
-        .deco-b-error-dark
+      <div class="deco-p-sm deco-b-thick-solid deco-b-dark-error">
+        .deco-b-dark-error
       </div>
 
     </div>
@@ -520,17 +532,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
+<script src="theme/prism/prism.js"></script>
 
 
 </body>

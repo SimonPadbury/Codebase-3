@@ -11,28 +11,29 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="codebase-docs">
 
-  <div class="codebase-docs">
+  <!--<div class="codebase-docs">-->
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
-    <header class="codebase-docs__header">
-      <h1>Getting Started</h1>
+
+    <header class="codebase-docs__header deco-bg-dark-primary">
+      <h1 class="deco-text-white">Getting Started</h1>
     </header>
 
     <div class="codebase-docs__main">
@@ -50,45 +51,48 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
         <h2>Simple Setup</h2>
@@ -101,7 +105,7 @@
           Example simple HTML to get started:
         </p>
 
-        <pre><code class="language-none">&lt;!doctype html&gt;
+        <pre class="codebase-docs__code"><code class="language-html">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -136,15 +140,16 @@
           After copying in the <code>codebase/</code> folder as above, build your project theme structure, e.g.:
         </p>
 
-        <pre><code>codebase/
-  ├── css/
-  ├── js/
-  └── scss/
-
-theme/
-  ├── css/
-  ├── js/
-  └── scss/</code></pre>
+        <pre class="codebase-docs__code"><code class="language-md">your-project/
+  ├── codebase/
+  │     ├── css/
+  │     ├── js/
+  │     └── scss/
+  │
+  └── your-theme/
+        ├── css/
+        ├── js/
+        └── scss/</code></pre>
 
         <p>
           You can import Codebase into your project base SCSS file. But before you do that, you may wish to override any/all of the SCSS variables in Codebase. This can easily be done because they are all set as <code>!default</code> variables. To override them, declare or import your overrides (i.e. variables with the same names but your preferred values) <b>before</b> importing Codebase.
@@ -155,54 +160,53 @@ theme/
         </p>
 
 
-        <pre><code>// YOUR PROJECT BASE SCSS FILE
+        <pre class="codebase-docs__code"><code class="language-scss">// YOUR PROJECT BASE SCSS FILE
 // ===========================
 
-// Your overrides of Codebase !default variables
+// Put your overrides of Codebase `!default` variables here
 
-...
-
+// Then import Codebase
 @import '../../codebase/scss/codebase';
 
-// Your project
-
+// Your project styles here
 ...</code></pre>
 
         <h3>(2.) JS / jQuery</h3>
 
         <p>
-          The Codebase jQuery script is a set of (<code>cb_</code>-prefixed) plugins &ndash; each of which you can call &ndash; and a "master" (document ready setup) plugin <code>codebase();</code> that is called by...
-        </p>
-
-        <pre><code>$(document).codebase();</code></pre>
-
-        <p>
-          ...on the last line of <code>codebase/js/codebase.js</code>.
+          The Codebase jQuery script is a set of (<code>cb_</code>-prefixed) plugins &ndash; each of which you can call &ndash; and a "master" (document ready setup) plugin named <code>codebase();</code>.
         </p>
 
         <p>
-          If instead you wish to call <code>codebase()</code> from within your own theme/app jQuery script or you wish to create your own master function (or plugin), then simply comment out the <code>$(document)</code> call.
+          You will need to call <code>codebase();</code>. The simplest way to do this is as in the example (here repeated):
         </p>
 
+        <pre class="codebase-docs__code"><code class="language-html">&lt;script&gt;
+  $(document).codebase();
+&lt;/script&gt;</code></pre>
+
+        <p>
+          Alternatively, you could move that call into your own theme script.
+        </p>
       </div>
     </div>
     </main>
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
-
-
+<script src="theme/prism/prism.js"></script>
+    <script>
+      Prism.highlightAll();
+    </script>
 </body>
 
 </html>

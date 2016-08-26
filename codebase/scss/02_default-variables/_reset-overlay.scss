@@ -1,0 +1,12 @@
+// DEFAULT VARIABLES: RESET-OVERLAY
+// ================================
+// File: 02_default-variables/_reset-overlay.scss
+
+$reset-overlay--z-index: 100 !default;
+// Increase this if something you add causes a conflict.
+$reset-overlay--z-index-higher: $reset-overlay--z-index + 10 !default;
+// Use $reset-overlay--z-index-higher on occasions when you know you need
+// the overlay to also cover something on a layer above the webpage (e.g.
+// over a fixed menubar).
+$color-reset-overlay--darken: rgba(0,0,0,0.4);
+// E.g. use behind popovers, lightboxes and modals.

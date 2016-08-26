@@ -1,28 +1,43 @@
 // COMPONENT CLASSES: MENUS
 // ========================
+// File: 11_component-classes/_menus.scss
 
 // Basic links
-
 .menu {
   @include menu;
-}
-
-.menu__item {
-  @include menu__item;
-}
-
-.menu__link {
-  @include menu__link;
-}
-
-.menu .menu {
-  margin-left: $spacing-md;
+  li {
+    @include menu__item;
+  }
+  a {
+    @include menu__link;
+  }
+  // Child menus
+  .menu {
+    margin-left: $deco-spacing-md;
+  }
 }
 
 // Block links
-
 .menu--block {
-  .menu__link {
+  a {
     @include menu__link--block;
+  }
+  // Child menus
+  .menu--block {
+    margin-left: 0;
+    a {
+      padding-left: $deco-spacing-lg;
+    }
+  }
+}
+
+// Horizontal menu (a.k.a. menubar)
+.menu--horizontal,
+.menubar {
+  @include menu--horizontal;
+  &.menu--block {
+    li {
+      padding-right: 0;
+    }
   }
 }

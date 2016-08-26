@@ -2,20 +2,20 @@
 // ==========================
 
 .deco-bs {
-  box-shadow: $box-shadow;
+  box-shadow: $deco-box-shadow;
 }
-.deco-bs-inner {
-  box-shadow: $box-shadow-inner;
+.deco-bs-inset {
+  box-shadow: $deco-box-shadow-inset;
 }
-.deco-bs-inner-top {
-  box-shadow: $box-shadow-inner-top;
+.deco-bs-inset-top {
+  box-shadow: $deco-box-shadow-inset-top;
 }
-.deco-bs-inner-right {
-  box-shadow: $box-shadow-inner-right;
+.deco-bs-inset-right {
+  box-shadow: $deco-box-shadow-inset-right;
 }
-.deco-bs-inner-bottom {
-  box-shadow: $box-shadow-inner-bottom;
+.deco-bs-inset-bottom {
+  box-shadow: $deco-box-shadow-inset-bottom;
 }
-.deco-bs-inner-left {
-  box-shadow: $box-shadow-inner-left;
+.deco-bs-inset-left {
+  box-shadow: $deco-box-shadow-inset-left;
 }

@@ -13,7 +13,7 @@
   -webkit-backface-visibility: hidden;
 }
 
-// Grid with Gutter between cols
+// Grid with gutter between columns
 // --------------------------------
 // Include `grid--gutter` in your GRID container class, not in each col.
 
@@ -54,4 +54,16 @@
     margin-right: -($grid-gutter-width--lg / 2);
     margin-left: -($grid-gutter-width--lg / 2);
   }
+}
+
+// Column Base
+// Used by Classic and Semantic Grid Systems
+
+@mixin col {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  overflow: visible;
 }

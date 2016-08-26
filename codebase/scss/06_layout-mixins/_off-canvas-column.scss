@@ -1,5 +1,5 @@
-// COMPONENT: OFF-CANVAS col
-// ============================
+// LAYOUT MIXIN: OFF-CANVAS COLUMN
+// ===============================
 
 // The extra 10px hides the box-shadow while off-canvas
 @mixin off-canvas-right {
@@ -24,7 +24,7 @@
   z-index: $reset-overlay--z-index + 1;
   overflow: auto;
   background: $off-canvas-background;
-  box-shadow: $box-shadow;
+  box-shadow: $deco-box-shadow;
   transition: $off-canvas-transition;
   transform: translate3d(0, 0, 0);
 }
@@ -35,7 +35,7 @@
   position: fixed;
   top: 0;
   z-index: $reset-overlay--z-index + 2;
-  padding: $spacing-block;
+  padding: $deco-spacing-xs $deco-spacing-sm;
   font-size: 24px;
   line-height: 34px;
   color: $off-canvas-navicon-color;

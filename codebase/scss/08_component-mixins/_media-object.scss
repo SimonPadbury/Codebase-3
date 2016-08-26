@@ -1,0 +1,52 @@
+// COMPONENT MIXINS: MEDIA OBJECT
+// ==============================
+// File: `codebase/scss/08_component-mixins/_media-object.scss`
+
+@mixin media {
+  @include clearfix;
+}
+
+@mixin media__header {
+  display: block;
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@mixin media__footer {
+  @include clearfix;
+  display: block;
+}
+
+@mixin media__image-wrap--left {
+  float: left;
+  & > a,
+  & > img {
+    display: inline-block;
+  }
+}
+@mixin media__image-wrap--right {
+  float: right;
+  & > a,
+  & > img {
+    display: inline-block;
+  }
+}
+@mixin media__image-wrap--top {
+  & > a,
+  & > img {
+    display: block;
+    text-align: center;
+  }
+}
+
+@mixin media__content-wrap {
+  overflow: hidden;
+}
+
+@mixin media__title {
+  margin-top: $deco-spacing-sm;
+}

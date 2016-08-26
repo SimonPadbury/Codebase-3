@@ -16,12 +16,13 @@ label {
   width: 100%;
   min-height: 36px;
   outline: 0 none;
-  border: $border-thin-solid;
-  border-radius: $border-radius;
+  border: $deco-border-thin-solid;
+  @if $form-input-rounded == true {
+    border-radius: $form-input-border-radius;
+  }
 	padding: 5px;
-  //margin-bottom: 10px;
   font-size: $base-font-size;
-  line-height: $line-height-px;
+  line-height: $base-line-height-px;
 	color: $color-text-default;
   &::-webkit-input-placeholder,
   &::-moz-placeholder,

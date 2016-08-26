@@ -11,6 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
@@ -18,20 +19,21 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
-    <header class="codebase-docs__header">
-      <h1>Codebase <small class="deco-text-dark-gray">v.1.1</small></h1>
+
+    <header class="codebase-docs__header deco-bg-dark-primary">
+      <h1 class="deco-text-white">Codebase <small class="deco-text-gray">v.1.2</small></h1>
     </header>
 
     <div class="codebase-docs__main">
@@ -49,52 +51,53 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
-        <p>Yet another (S)CSS / jQuery component library.</p>
+        <p class="lead dropcap"><b>Yet another (S)CSS / jQuery component library!</b> Since 2014 Codebase has occasionally been added to and improved. An earlier version had another name – until I hit upon the idea of calling my code base &ldquo;Codebase&rdquo;.</p>
 
-        <p>Since 2014 Codebase and these docs have been added to and overhauled whenever.</p>
-
-        <p>As of v.1 Codebase somewhat follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
+        <p>As of version 1.0 Codebase follows the <a href="http://getbem.com/">BEM</a> naming methodology for its mixins and classes.</p>
 
         <p>All layout, utilities and components have been created first as <code>@mixin</code>s and then classes have been built from these mixins.</p>
 
@@ -102,7 +105,7 @@
 
         <p>All the Codebase <code>!default</code> variables can be easily overridden.</p>
 
-        <pre><code>&lt;a class="btn btn--success btn--lg" href="getting-started.html"&gt;
+        <pre class="codebase-docs__code"><code class="language-html">&lt;a class="btn btn--success btn--lg" href="getting-started.html"&gt;
   Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
 &lt;/a&gt;</code></pre>
 
@@ -114,17 +117,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
+<script src="theme/prism/prism.js"></script>
 
 </body>
 

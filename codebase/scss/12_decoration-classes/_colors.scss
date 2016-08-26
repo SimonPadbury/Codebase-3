@@ -12,8 +12,8 @@
 .deco-bg-light-gray {
   background-color: $color-light-gray;
 }
-.deco-bg-mid-gray {
-  background-color: $color-mid-gray;
+.deco-bg-gray {
+  background-color: $color-gray;
 }
 .deco-bg-dark-gray {
   background-color: $color-dark-gray;
@@ -22,54 +22,54 @@
   background-color: $color-charcoal;
 }
 
-.deco-bg-primary-light {
-  background-color: $color-primary-light;
+.deco-bg-light-primary {
+  background-color: $color-light-primary;
 }
 .deco-bg-primary {
   background-color: $color-primary;
 }
-.deco-bg-primary-dark {
-  background-color: $color-primary-dark;
+.deco-bg-dark-primary {
+  background-color: $color-dark-primary;
 }
 
-.deco-bg-secondary-light {
-  background-color: $color-secondary-light;
+.deco-bg-light-secondary {
+  background-color: $color-light-secondary;
 }
 .deco-bg-secondary {
   background-color: $color-secondary;
 }
-.deco-bg-secondary-dark {
-  background-color: $color-secondary-dark;
+.deco-bg-dark-secondary {
+  background-color: $color-dark-secondary;
 }
 
-.deco-bg-warning-light {
-  background-color: $color-warning-light;
+.deco-bg-light-warning {
+  background-color: $color-light-warning;
 }
 .deco-bg-warning {
   background-color: $color-warning;
 }
-.deco-bg-warning-dark {
-  background-color: $color-warning-dark;
+.deco-bg-dark-warning {
+  background-color: $color-dark-warning;
 }
 
-.deco-bg-success-light {
-  background-color: $color-success-light;
+.deco-bg-light-success {
+  background-color: $color-light-success;
 }
 .deco-bg-success {
   background-color: $color-success;
 }
-.deco-bg-success-dark {
-  background-color: $color-success-dark;
+.deco-bg-dark-success {
+  background-color: $color-dark-success;
 }
 
-.deco-bg-error-light {
-  background-color: $color-error-light;
+.deco-bg-light-error {
+  background-color: $color-light-error;
 }
 .deco-bg-error {
   background-color: $color-error;
 }
-.deco-bg-error-dark {
-  background-color: $color-error-dark;
+.deco-bg-dark-error {
+  background-color: $color-dark-error;
 }
 
 // Text colors
@@ -83,8 +83,8 @@
 .deco-text-light-gray {
   color: $color-light-gray;
 }
-.deco-text-mid-gray {
-  color: $color-mid-gray;
+.deco-text-gray {
+  color: $color-gray;
 }
 .deco-text-dark-gray {
   color: $color-dark-gray;
@@ -93,54 +93,54 @@
   color: $color-charcoal;
 }
 
-.deco-text-primary-light {
-  color: $color-primary-light;
+.deco-text-light-primary {
+  color: $color-light-primary;
 }
 .deco-text-primary {
   color: $color-primary;
 }
-.deco-text-primary-dark {
-  color: $color-primary-dark;
+.deco-text-dark-primary {
+  color: $color-dark-primary;
 }
 
-.deco-text-secondary-light {
-  color: $color-secondary-light;
+.deco-text-light-secondary {
+  color: $color-light-secondary;
 }
 .deco-text-secondary {
   color: $color-secondary;
 }
-.deco-text-secondary-dark {
-  color: $color-secondary-dark;
+.deco-text-dark-secondary {
+  color: $color-dark-secondary;
 }
 
-.deco-text-warning-light {
-  color: $color-warning-light;
+.deco-text-light-warning {
+  color: $color-light-warning;
 }
 .deco-text-warning {
   color: $color-warning;
 }
-.deco-text-warning-dark {
-  color: $color-warning-dark;
+.deco-text-dark-warning {
+  color: $color-dark-warning;
 }
 
-.deco-text-success-light {
-  color: $color-success-light;
+.deco-text-light-success {
+  color: $color-light-success;
 }
 .deco-text-success {
   color: $color-success;
 }
-.deco-text-success-dark {
-  color: $color-success-dark;
+.deco-text-dark-success {
+  color: $color-dark-success;
 }
 
-.deco-text-error-light {
-  color: $color-error-light;
+.deco-text-light-error {
+  color: $color-light-error;
 }
 .deco-text-error {
   color: $color-error;
 }
-.deco-text-error-dark {
-  color: $color-error-dark;
+.deco-text-dark-error {
+  color: $color-dark-error;
 }
 
 // Border colors
@@ -154,8 +154,8 @@
 .deco-b-light-gray {
   border-color: $color-light-gray;
 }
-.deco-b-mid-gray {
-  border-color: $color-mid-gray;
+.deco-b-gray {
+  border-color: $color-gray;
 }
 .deco-b-dark-gray {
   border-color: $color-dark-gray;
@@ -164,52 +164,52 @@
   border-color: $color-charcoal;
 }
 
-.deco-b-primary-light {
-  border-color: $color-primary-light;
+.deco-b-light-primary {
+  border-color: $color-light-primary;
 }
 .deco-b-primary {
   border-color: $color-primary;
 }
-.deco-b-primary-dark {
-  border-color: $color-primary-dark;
+.deco-b-dark-primary {
+  border-color: $color-dark-primary;
 }
 
-.deco-b-secondary-light {
-  border-color: $color-secondary-light;
+.deco-b-light-secondary {
+  border-color: $color-light-secondary;
 }
 .deco-b-secondary {
   border-color: $color-secondary;
 }
-.deco-b-secondary-dark {
-  border-color: $color-secondary-dark;
+.deco-b-dark-secondary {
+  border-color: $color-dark-secondary;
 }
 
-.deco-b-warning-light {
-  border-color: $color-warning-light;
+.deco-b-light-warning {
+  border-color: $color-light-warning;
 }
 .deco-b-warning {
   border-color: $color-warning;
 }
-.deco-b-warning-dark {
-  border-color: $color-warning-dark;
+.deco-b-dark-warning {
+  border-color: $color-dark-warning;
 }
 
-.deco-b-success-light {
-  border-color: $color-success-light;
+.deco-b-light-success {
+  border-color: $color-light-success;
 }
 .deco-b-success {
   border-color: $color-success;
 }
-.deco-b-success-dark {
-  border-color: $color-success-dark;
+.deco-b-dark-success {
+  border-color: $color-dark-success;
 }
 
-.deco-b-error-light {
-  border-color: $color-error-light;
+.deco-b-light-error {
+  border-color: $color-light-error;
 }
 .deco-b-error {
   border-color: $color-error;
 }
-.deco-b-error-dark {
-  border-color: $color-error-dark;
+.deco-b-dark-error {
+  border-color: $color-dark-error;
 }

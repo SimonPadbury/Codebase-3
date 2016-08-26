@@ -1,0 +1,49 @@
+// CLASS BUILDER: VISIBILITY
+// =========================
+// File: 09_layout-classes/_visibility.scss
+
+// Hiding 'only'
+.hide--xs-only,
+.show--sm-up {
+  @include hide--xs-only;
+}
+
+.hide--sm-only {
+  @include hide--sm-only;
+}
+
+.hide--md-only {
+  @include hide--md-only;
+}
+
+.hide--lg-only,
+.show--md-down {
+  @include hide--lg-only;
+}
+
+// Showing 'only'
+.show--xs-only,
+.hide--sm-up {
+  @include show--xs-only;
+}
+.show--sm-only {
+  @include show--sm-only;
+}
+
+.show--md-only {
+  @include show--md-only;
+}
+.show--lg-only,
+.hide--md-down {
+  @include show--lg-only;
+}
+
+// Others
+.hide--md-up,
+.show--sm-down {
+  @include hide--md-up;
+}
+.hide--sm-down,
+.show--md-up {
+  @include hide--sm-down;
+}

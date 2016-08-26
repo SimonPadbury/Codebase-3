@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
@@ -19,12 +19,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,9 +32,9 @@
   </div>
 </nav>
 
-    <header class="codebase-docs__header">
-      <span><a href="layout.html">Layout</a>:</span>
-      <h1>Semantic Grid</h1>
+    <header class="codebase-docs__header deco-bg-dark-secondary">
+      <span class="deco-text-light-gray">Layout:</span>
+      <h1 class="deco-text-white">Semantic Grid</h1>
     </header>
 
     <div class="codebase-docs__main">
@@ -52,63 +52,80 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
         <p>
           Example:
         </p>
 
-        <section class="semgrid-wrapper">
-          <div class="semgrid-article deco-b-thin-solid">Article
-            <section class="semgrid--nested">
+        <section class="your-grid-wrapper">
+          <div class="your-article-column deco-b-thin-solid">Article
+            <section class="your-nested-grid-wrapper">
               <div class="deco-b-thin-solid">Nested</div>
               <div class="deco-b-thin-solid">Nested</div>
               <div class="deco-b-thin-solid">Nested</div>
             </section>
           </div>
-          <div class="semgrid-aside deco-b-thin-solid">Aside</div>
+          <div class="your-sidebar-column deco-b-thin-solid">Aside</div>
         </section>
-        <section class="semgrid-wrapper grid-example">
-          <div class="semgrid-centered deco-b-thin-solid">Centered</div>
+        <section class="your-grid-wrapper">
+          <div class="your-centered-column deco-b-thin-solid">Centered</div>
+        </section>
+        <section class="your-grid-wrapper">
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="semantic-twelth deco-b-thin-solid">&nbsp;</div>
         </section>
 
         <p>
@@ -123,55 +140,90 @@
           You can also control the media query breakpoints using the Codebase breakpoint mixins, as below.
         </p>
 
-        <pre><code>.your-grid-wrapper-class {
-  @include grid;
-  @include grid--gutter;
-}
+        <div class="tabs tabs--top codebase-docs__code">
 
-.your-article-col-class {
-  @include col-semantic;
-  @include break__md--up {
-    @include col--span(8);
-  }
-  @include break__lg--up {
-    @include col--push(4);
-  }
-}
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+        <pre><code class="language-html">&lt;section class="your-grid-wrapper"&gt;
+  &lt;div class="your-article-column"&gt;
+    Article
 
-.your-sidebar-col-class {
-  @include col-semantic;
-  @include break__md--up {
-    @include col--span(4);
-  }
-  @include break__lg--up {
-    @include col--pull(8);
-  }
-}
+    &lt;section class="your-nested-grid-wrapper"&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+    &lt;/section&gt;
 
-.your-nested-grid-wrapper-class {
-  @include grid;
-  @include grid--gutter;
-  @include grid--nested;
-  &gt; div {
-    @include col-semantic;
-    @include break__sm--up {
-      @include col--span(4);
-    }
-  }
-}
+  &lt;/div&gt;
+  &lt;div class="your-sidebar-column"&gt;
+    Aside
+  &lt;/div&gt;
+&lt;/section&gt;
 
-.your-centered-col-class {
-  @include col-semantic;
-  @include break__sm--up {
-    @include col--centered(7);
-  }
-}
-</code></pre>
+&lt;section class="your-grid-wrapper"&gt;
+  &lt;div class="your-centered-column"&gt;
+    Centered
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="your-grid-wrapper"&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="semantic-twelth"&gt;&nbsp;&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="variables-1">Variables</div>
+          <div id="variables-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="codebase-docs__code" data-src="codebase/scss/02_default-variables/_breakpoints.scss"></pre>
+              <pre class="codebase-docs__code" data-src="codebase/scss/02_default-variables/_grid-systems.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-1">Grid base mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="codebase-docs__code" data-src="codebase/scss/06_layout-mixins/_grid-base.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-2">Flexbox grid mixins</div>
+          <div id="mixins-2" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="codebase-docs__code" data-src="codebase/scss/06_layout-mixins/_semantic-grid.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Example classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="codebase-docs__code" data-src="theme/scss/_semantic-grid-example.scss"></pre>
+            </div>
+          </div>
+
+        </div><!-- / .codebase-docs__code -->
 
         <table class="table">
           <thead>
             <tr>
-              <th style="width:230px">Mixin</th>
+              <th style="width:285px">Mixin</th>
               <th>Explanation</th>
             </tr>
           </thead>
@@ -180,39 +232,39 @@
               <td>@mixin grid</td>
               <td>The container mixin. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.
                 <br>
-                <br>If a containing wrapper doesn't have this grid mixin included, then a grid system will expand to whatever the width of the container is, without maxing out at $grid-max-width. E.g. it could expand to he BODY width.</td>
+                <br>If a containing wrapper doesn't have this grid mixin included, then a grid system will expand to whatever the width of the container is, without maxing out at $grid-max-width. E.g. it could expand to the BODY width.</td>
             </tr>
             <tr>
               <td>@mixin grid--gutter</td>
-              <td>Gives right and left padding to all immediate child block elements (i.e. cols).</td>
+              <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
             </tr>
             <tr>
               <td>@mixin grid--nested</td>
-              <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing col.</td>
+              <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
             </tr>
             <tr>
-              <td>@mixin col-semantic</td>
-              <td>Float left. (Min height 1px.)</td>
-            </tr>
-            <tr>
-              <td>@mixin col--centered(X)</td>
-              <td>No float. Instead, centering is accomplished by auto margin right and left. col spanning is as calculated out of $grid-max-cols (default is 12).</td>
+              <td>@mixin col</td>
+              <td>Float left. Min height 1px. (Applies padding gutter.)</td>
             </tr>
             <tr>
               <td>@mixin col--span(X)</td>
-              <td>col spanning, as calculated out of $grid-max-cols (default is 12).</td>
+              <td>Column spanning, as calculated out of $grid-max-cols (default is 12).</td>
             </tr>
             <tr>
               <td>@mixin col--push(X)</td>
-              <td>col pushing to the right, as calculated out of $grid-max-cols (default is 12).</td>
+              <td>Column pushing to the right, as calculated out of $grid-max-cols (default is 12).</td>
             </tr>
             <tr>
               <td>@mixin col--pull(X)</td>
-              <td>col pulling to the left, as calculated out of $grid-max-cols (default is 12).</td>
+              <td>Column pulling to the left, as calculated out of $grid-max-cols (default is 12).</td>
             </tr>
             <tr>
               <td>@mixin col--offset(X)</td>
-              <td>col offsetting from the left, as calculated out of $grid-max-cols (default is 12).</td>
+              <td>Column offsetting from the left, as calculated out of $grid-max-cols (default is 12).</td>
+            </tr>
+            <tr>
+              <td>@mixin col--centered(X)</td>
+              <td>No float. Instead, centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-cols (default is 12).</td>
             </tr>
           </tbody>
         </table>
@@ -223,18 +275,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
-
+<script src="theme/prism/prism.js"></script>
 
 </body>
 

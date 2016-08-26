@@ -9,14 +9,14 @@
 @mixin pagination__item {
   display: inline-block;
   list-style-type: none;
-  margin: $spacing-sm 0;
+  margin: $deco-spacing-sm 0;
 }
 
 @mixin pagination__link {
-  padding: $spacing-sm;
+  padding: $deco-spacing-sm;
 }
 
-@mixin pagination__link--current {
+@mixin pagination__current {
   color: $color-dark-gray;
   background: $color-silver;
   &:hover {

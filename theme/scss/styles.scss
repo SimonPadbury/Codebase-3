@@ -1,10 +1,13 @@
+// Codebase DOCS THEME
+// ===================
+
 // Import Codebase
 @import '../../codebase/scss/codebase';
 
 // Codebase docs theme
 
-@import 'grid-semantic';
-@import 'grid-flexbox';
+@import 'semantic-grid-example';
+@import 'flexbox-grid-example';
 
 html, body {
   height: 100%;
@@ -13,22 +16,20 @@ html, body {
 }
 
 body {
-  background: $color-silver;
+//  background: $color-silver;
+  background: $color-white;
 }
 
 .codebase-docs {
   position: relative;
-  max-width: 1340px;
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto;
-  background: $color-white;
-  box-shadow: $box-shadow;
 }
 
-.codebase-docs__menubar {
-  .menubar__brand a {
+.codebase-docs__navbar {
+  .navbar__brand a {
     padding-left: 50px;
     color: $color-charcoal;
     font-weight: normal;
@@ -39,35 +40,35 @@ body {
       background-color: $color-silver;
     }
   }
-  @include break__sm--up {
-    padding: $spacing-sm 0;
-  }
-  @include break__lg--up {
-    padding: $spacing-md $spacing-sm;
-  }
 }
 
 .codebase-docs__header {
-  color: $color-mid-gray;
-  background-color: $color-charcoal;
-  padding: $spacing-sm 0;
+  padding: 20px 0;
+  @include break__sm--up {
+    padding: 40px 0;
+  }
+  @include break__md--up {
+    padding: 70px 0;
+  }
+  @include break__lg--up {
+    padding: 100px 0;
+  }
   h1 {
-    max-width: $grid-max-width;
+    max-width: $grid-max-width - 30px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-sm;
-    padding-left: $spacing-sm;
+    padding-right: $deco-spacing-sm;
+    padding-left: $deco-spacing-sm;
     font-weight: 200;
     letter-spacing: 1px;
   }
   span {
     display: block;
-    max-width: $grid-max-width;
-    margin: 30px auto -30px auto;
-    padding-right: $spacing-sm;
-    padding-left: $spacing-sm;
+    max-width: $grid-max-width - 30px;
+    margin: 20px auto -20px auto;
+    padding-right: $deco-spacing-sm;
+    padding-left: $deco-spacing-sm;
     font-weight: 200;
-    color: $color-dark-gray;
     @include break__sm--up {
       font-size: 1.5rem;
     }
@@ -77,10 +78,8 @@ body {
 // Layout
 
 .codebase-docs__main {
-  @include break__sm--up {
-    @include grid;
-    @include grid--gutter;
-  }
+  @include grid;
+  @include grid--gutter;
   padding-bottom: 100px; // this 100px is *behind* the .codebase-docs__footer
 }
 
@@ -103,7 +102,7 @@ body {
         content: '';
         width: 18px;
         height: 18px;
-        background: url('../../images/codebase-logo-sidebar.svg') 0 0 no-repeat;
+        background: url('../../images/codebase-logo-sprite.svg') 0 0 no-repeat;
         background-size: 18px auto;
       }
       span {
@@ -122,16 +121,16 @@ body {
       color: $color-dark-gray;
     }
     &>ul {
-      border-top: $border-thin-solid;
+      border-top: $deco-border-thin-solid;
       border-color: $color-dark-gray;
     }
     li {
       a {
         display: block !important;
-        border-bottom: $border-thin-solid;
+        border-bottom: $deco-border-thin-solid;
         border-color: $color-dark-gray;
-        padding-left: $spacing-sm;
-        color: $color-mid-gray;
+        padding-left: $deco-spacing-sm;
+        color: $color-gray;
         &:hover {
           text-decoration: none;
           color: $color-light-gray;
@@ -141,13 +140,13 @@ body {
       li {
         margin: 0;
         a {
-          padding-left: $spacing-md;
+          padding-left: $deco-spacing-md;
         }
       }
     }
   }
   @include break__sm--up {
-    @include col-semantic;
+    @include col;
     @include col--span(3);
     @include col--push(9);
     padding-bottom: 40px;
@@ -159,9 +158,10 @@ body {
 }
 
 .codebase-docs__main-article {
-  padding: $spacing-md $spacing-sm $spacing-lg $spacing-sm;
+  @include col;
+  padding-top: $deco-spacing-md;
+  padding-bottom: $deco-spacing-lg;
   @include break__sm--up {
-    @include col-semantic;
     @include col--span(9);
     @include col--pull(3);
   }
@@ -194,11 +194,22 @@ body {
   ul {
     @include menu;
     @include break__sm--up {
-      margin-left: $spacing-md;
+      margin-left: $deco-spacing-md;
     }
   }
 }
 
 .off-canvas-navicon {
-  box-shadow: $box-shadow;
+  box-shadow: $deco-box-shadow;
+}
+
+// codebase-docs__code
+
+.codebase-docs__code {
+  margin: $deco-spacing-lg 0;
+  code {
+    border: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

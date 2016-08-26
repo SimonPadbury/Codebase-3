@@ -3,6 +3,7 @@
 
 .btn {
   @include btn;
+  @include btn--block;
   &--primary {
     @include btn--primary;
   }
@@ -33,7 +34,4 @@
   &--icon {
     @include btn--icon;
   }
-  @include btn--gradient;
-  @include btn--pressable;
-  @include btn--block;
 }

@@ -4,7 +4,7 @@
 // @include deco-p-block in block menu items and menubar items
 
 .deco-p-block {
-  padding: $spacing-xs $spacing-sm;
+  padding: $deco-spacing-xs $deco-spacing-sm;
 }
 
 // Padding All
@@ -13,16 +13,16 @@
   padding: 0;
 }
 .deco-p-xs {
-  padding: $spacing-xs;
+  padding: $deco-spacing-xs;
 }
 .deco-p-sm {
-  padding: $spacing-sm;
+  padding: $deco-spacing-sm;
 }
 .deco-p-md {
-  padding: $spacing-md;
+  padding: $deco-spacing-md;
 }
 .deco-p-lg {
-  padding: $spacing-lg;
+  padding: $deco-spacing-lg;
 }
 
 // Padding Top
@@ -31,16 +31,16 @@
   padding-top: 0;
 }
 .deco-pt-xs {
-  padding-top: $spacing-xs;
+  padding-top: $deco-spacing-xs;
 }
 .deco-pt-sm {
-  padding-top: $spacing-sm;
+  padding-top: $deco-spacing-sm;
 }
 .deco-pt-md {
-  padding-top: $spacing-md;
+  padding-top: $deco-spacing-md;
 }
 .deco-pt-lg {
-  padding-top: $spacing-lg;
+  padding-top: $deco-spacing-lg;
 }
 
 // Padding Right
@@ -49,16 +49,16 @@
   padding-right: 0;
 }
 .deco-pr-xs {
-  padding-right: $spacing-xs;
+  padding-right: $deco-spacing-xs;
 }
 .deco-pr-sm {
-  padding-right: $spacing-sm;
+  padding-right: $deco-spacing-sm;
 }
 .deco-pr-md {
-  padding-right: $spacing-md;
+  padding-right: $deco-spacing-md;
 }
 .deco-pr-lg {
-  padding-right: $spacing-lg;
+  padding-right: $deco-spacing-lg;
 }
 
 // Padding Bottom
@@ -67,16 +67,16 @@
   padding-bottom: 0;
 }
 .deco-pb-xs {
-  padding-bottom: $spacing-xs;
+  padding-bottom: $deco-spacing-xs;
 }
 .deco-pb-sm {
-  padding-bottom: $spacing-sm;
+  padding-bottom: $deco-spacing-sm;
 }
 .deco-pb-md {
-  padding-bottom: $spacing-md;
+  padding-bottom: $deco-spacing-md;
 }
 .deco-pb-lg {
-  padding-bottom: $spacing-lg;
+  padding-bottom: $deco-spacing-lg;
 }
 
 // Padding Left
@@ -85,14 +85,14 @@
   padding-left: 0;
 }
 .deco-pl-xs {
-  padding-left: $spacing-xs;
+  padding-left: $deco-spacing-xs;
 }
 .deco-pl-sm {
-  padding-left: $spacing-sm;
+  padding-left: $deco-spacing-sm;
 }
 .deco-pl-md {
-  padding-left: $spacing-md;
+  padding-left: $deco-spacing-md;
 }
 .deco-pl-lg {
-  padding-left: $spacing-lg;
+  padding-left: $deco-spacing-lg;
 }

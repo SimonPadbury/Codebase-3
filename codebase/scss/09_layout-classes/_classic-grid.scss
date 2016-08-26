@@ -1,12 +1,14 @@
 // CLASS BUILDER: CLASSIC GRID
 // ===========================
+// File: 09_layout-classes/_classic-grid.scss
+
 
 // Grid Container
 .grid {
   @include grid;
 }
 
-// Grid with Gutter between cols
+// Grid with Gutter between columns
 // Include `grid--gutter` in your GRID container class, not in each col.
 .grid--gutter {
   @include grid--gutter;
@@ -20,13 +22,21 @@
 
 // Column Base
 .col {
-  @include col-classic;
+  @include col;
+  @include classic-col--span;
+  @include classic-col--offset;
+  @include classic-col--push;
+  @include classic-col--pull;
 }
 
 // Responsive Column Classes
 .col-xs {
-  @include classic-col--span;
-  @include classic-col--offset;
+  @include break__xs--up {
+    @include classic-col--span;
+    @include classic-col--offset;
+    @include classic-col--push;
+    @include classic-col--pull;
+  }
 }
 .col-sm {
   @include break__sm--up {
@@ -51,6 +61,12 @@
     @include classic-col--push;
     @include classic-col--pull;
   }
+}
+
+// Centered Column
+
+.col--centered {
+  @include classic-col--centered;
 }
 
 // Incomplete grid rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).

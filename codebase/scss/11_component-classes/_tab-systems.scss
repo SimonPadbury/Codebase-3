@@ -1,0 +1,42 @@
+// CLASS BUILDER: TABS
+// ===================
+
+.tabs {
+  @include tabs;
+}
+
+.tabs--top {
+  //@include tabs--top; // Not needed
+  .tabs__label {
+    @include tabs--top__label;
+  }
+  .tabs__card {
+    @include tabs--top__card;
+  }
+}
+
+.tabs--left {
+  @include tabs--left;
+  .tabs__label {
+    @include tabs--left__label;
+  }
+  .tabs__card {
+    @include tabs--left__card;
+  }
+}
+
+.tabs--accordion {
+  @include tabs--accordion;
+  .tabs__label {
+    @include tabs--accordion__label;
+  }
+  .tabs__card {
+    @include tabs--accordion__card;
+  }
+}
+
+.tabs__card-content--menubar {
+  .menubar {
+    margin: -10px -15px;
+  }
+}

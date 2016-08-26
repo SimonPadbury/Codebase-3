@@ -1,0 +1,10 @@
+// DEFAULT VARIABLES: TAB-SYSTEMS
+// ==============================
+// File: 02_default-variables/_tab-systems.scss
+
+$tabs-label-padding: $deco-spacing-block !default;
+$tabs-card-padding: $deco-spacing-block !default;
+$color-tabs-background: $color-white !default;
+$color-tabs-dark-background: $color-silver !default;
+$color-tabs-dark-background-hover: $color-light-gray !default;
+$color-tabs-dark-text: lighten($color-text-default, 25%) !default;

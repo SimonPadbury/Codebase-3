@@ -1,0 +1,52 @@
+// FLEXBOX GRID EXAMPLE CLASS-BUILDER
+// ==================================
+// Note: Name the classes of your grid `&lt;div&gt;`s anything you like.
+
+.your-flexbox-grid-wrapper {
+  @include grid;
+  @include grid--gutter;
+  @include break__md--up {
+    @include grid--flexbox;
+  }
+}
+.your-flexbox-article-column {
+  @include col--flexbox;
+  @include break__md--up {
+    @include col--flexbox--span(8);
+  }
+  @include break__lg--up {
+    @include col--flexbox--push(1);
+  }
+}
+.your-flexbox-sidebar-column {
+  @include col--flexbox;
+  @include break__md--up {
+    @include col--flexbox--span(4);
+  }
+  @include break__lg--up {
+    @include col--flexbox--pull(1);
+  }
+}
+.your-nested-flexbox-grid-wrapper {
+  @include grid;
+  @include grid--gutter;
+  @include grid--nested;
+  @include break__sm--up {
+    @include grid--flexbox;
+    @include grid--nested;
+    > div {
+      @include col--flexbox;
+      @include col--flexbox--span(4);
+    }
+  }
+}
+.your-flexbox-centered-column {
+  @include col--flexbox;
+  @include break__sm--up {
+    @include col--flexbox--centered(7);
+  }
+}
+.flexbox-twelth {
+  @include col;
+  @include col--flexbox--span(1);  
+}

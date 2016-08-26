@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
@@ -19,12 +19,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,9 +32,9 @@
   </div>
 </nav>
 
-    <header class="codebase-docs__header">
-      <span><a href="components.html">Components</a>:</span>
-      <h1>Media Object</h1>
+    <header class="codebase-docs__header deco-bg-dark-warning">
+      <span class="deco-text-light-gray">Components:</span>
+      <h1 class="deco-text-white">Media Object</h1>
     </header>
 
     <div class="codebase-docs__main">
@@ -52,45 +52,48 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
         <p>
@@ -150,7 +153,12 @@
           <div class="media__footer deco-bt-thin-solid deco-p-block">Media Footer</div>
         </div>
 
-        <pre><code>&lt;div class="media"&gt;
+        <div class="tabs tabs--top codebase-docs__code">
+
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+<pre><code class="language-html">&lt;div class="media"&gt;
   &lt;div class="media__header"&gt;Media Header&lt;/div&gt;
   &lt;div class="media__image-wrap media__image-wrap--left"&gt;
     &lt;a href=""&gt;
@@ -158,17 +166,37 @@
     &lt;/a&gt;
   &lt;/div&gt;
   &lt;div class="media__content-wrap"&gt;
-    &lt;div class="media__content"&gt;
-      &lt;h3 class="media__title"&gt;Media Title&lt;/h3&gt;
-      &lt;p class="media__text"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
-      &lt;!-- Nested `.media` --&gt;
+  &lt;div class="media__content"&gt;
+    &lt;h3 class="media__title"&gt;Media Title&lt;/h3&gt;
+    &lt;p class="media__text"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+    &lt;!-- Nested `.media` --&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="media__footer"&gt;Media Footer&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+            </div>
+          </div>
 
-        <p>Three media objects in grid columns:</p>
+          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/08_component-mixins/_media-object.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/11_component-classes/_media-object.scss"></pre>
+            </div>
+          </div>
+
+        </div><!-- / .codebase-docs__code -->
+
+        <p>
+          Media object images can have <code>media__image-wrap--left</code>, <code>media__image-wrap--right</code> or <code>media__image-wrap--center</code>. Use <code>media__image-wrap--center</code> if you require a "card" layout as below (these media objects below are wrapped in grid columns).
+        </p>
 
         <div class="grid grid--gutter grid--nested">
           <div class="col col-md--span-4 col-sm--span-6">
@@ -224,39 +252,22 @@
           </div>
         </div>
 
-        <pre><code>&lt;div class="media"&gt;
-  &lt;div class="media__image-wrap media__image-wrap--center"&gt;
-    &lt;a href=""&gt;
-      &lt;img src="" alt=""&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class="media__content-wrap"&gt;
-    &lt;div class="media__content"&gt;
-      &lt;h3 class="media__title"&gt;Media Title&lt;/h3&gt;
-      &lt;p class="media__text"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
       </div>
     </div>
     </main>
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
-
+<script src="theme/prism/prism.js"></script>
 
 </body>
 

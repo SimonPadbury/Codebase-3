@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
@@ -19,12 +19,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,8 +32,8 @@
   </div>
 </nav>
 
-    <header class="codebase-docs__header">
-      <h1>Layout</h1>
+    <header class="codebase-docs__header deco-bg-dark-secondary">
+      <h1 class="deco-text-white">Layout</h1>
     </header>
 
     <div class="codebase-docs__main">
@@ -51,66 +51,58 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
 
+
       <div class="codebase-docs__main-article">
-
-        <h2>Media Query Breakpoints</h2>
-
-        <p>
-          The Codebase media query breakpoints are specified by three mixins. The breakpoint values can easiy be modified.
-        </p>
-
-        <pre><code>$break-sm:  768px;
-$break-md: 1024px;
-$break-lg: 1200px;
-</code></pre>
 
         <h2>Grid Systems</h2>
 
         <p>In Codebase three grid systems have been provided (<a href="layout-classic-grid.html">Classic</a>, <a href="layout-semantic-grid.html">Semantic</a> and <a href="layout-flex-grid.html">Flexbox</a>). These all have the same characteristics:</p>
 
         <ul>
-          <li>12 cols &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
-          <li>Flexible &ndash; col width is set using <code>max-width</code>, not <code>width</code></li>
+          <li>12 columns &ndash; you can change this simply by modifying the <code>$grid-max-cols</code> variable in your chosen grid flavour</li>
+          <li>Flexible &ndash; column width is set using <code>max-width</code>, not <code>width</code></li>
           <li>Responsive &ndash; media query breakpoint widths &ndash; you can change these in <code>scss/base/_base-breakpoints.scss</code></li>
           <li>Pushing/pulling (or in case of the flexbox grid, re-ordering)</li>
           <li>Offsetting</li>
@@ -119,31 +111,123 @@ $break-lg: 1200px;
         </ul>
 
         <p>
-          These three grid systems all display essentially the same in browsers new enough to cope with flexbox (the only significant difference being that the flexbox cols are the full height of their containers, not merely the height of their own content).
+          These three grid systems all display essentially the same in browsers new enough to cope with flexbox (i.e. above IE9) &ndash; the only significant difference being that the flexbox columns are the full height of their containers, not merely the height of their own content.
         </p>
+
+        <h2>Grids at different Media Query Breakpoints</h2>
+
+        <p>
+          The Codebase media query breakpoints are specified by four variables. The breakpoint values can easiy be modified.
+        </p>
+
+        <pre class="codebase-docs__code" data-src="codebase/scss/02_default-variables/_breakpoints.scss"></pre>
+
+        <p>
+          The Codebase grid systems can be used without specifying media query breakpoints (so the columns will be displayed the same whatever the window width). But if you use the breakpoint-classes in the Classic grid, or if you wrap your semantic grid mixins or flexbox grid mixins in media queries, then you can control the columnar layout differently at different screen widths.
+        </p>
+
+        <p>
+          So, each Codebase grid system can have up to five window-width configurations:
+        </p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+
+              </th>
+              <th>
+                Classic grid
+              </th>
+              <th>
+                Semantic grid
+              </th>
+              <th>
+                Flexbox grid
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Multi-column below <code>$break-xs</code>
+              </td>
+              <td>
+                Set columns using <code>.col--</code> (without breakpoint classes).
+              </td>
+              <td colspan="2">
+                Use column mixins without wrapping them in breakpoint mixins.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Multi-column above <code>$break-xs</code>
+              </td>
+              <td>
+                Set columns using <code>.col-xs--*</code>
+              </td>
+              <td colspan="2">
+                Wrap column mixins in <code>@include break__xs-up {...}</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Multi-column above <code>$break-sm</code>
+              </td>
+              <td>
+                Set columns using <code>.col-sm--*</code>
+              </td>
+              <td colspan="2">
+                Wrap column mixins in <code>@include break__sm-up {...}</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Multi-column above <code>$break-md</code>
+              </td>
+              <td>
+                Set columns using <code>.col-md--*</code>
+              </td>
+              <td colspan="2">
+                Wrap column mixins in <code>@include break__md-up {...}</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Multi-column above <code>$break-lg</code>
+              </td>
+              <td>
+                Set columns using <code>.col-lg--*</code>
+              </td>
+              <td colspan="2">
+                Wrap column mixins in <code>@include break__lg-up {...}</code>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
         <h2>Visibility at Different Breakpoints</h2>
 
         <p>
-          In addition, <a href="utilities-visibility.html">visibility utilities</a> (mixins and classes) have been provided, for showing or hiding items at different breakpoints.
+          In addition, <a href="layout-visibility.html">layout visibility</a> (mixins and classes) have been provided, for showing or hiding items at different breakpoints.
         </p>
 
       </div>
     </div>
     </main>
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
-    <a href="index.html"><span>Codebase</span></a>
-  </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
-      <ul>
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <footer class="codebase-docs__footer deco-bg-charcoal">
+  <span class="deco-text-light-gray">
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+  </span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
+<script src="theme/prism/prism.js"></script>
 
 </body>
 

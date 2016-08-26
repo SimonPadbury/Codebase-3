@@ -1,7 +1,9 @@
 // COMPONENT MIXINS: MENUS
 // =======================
+// File: 08_component-mixins/_menus.scss
 
 @mixin menu {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
@@ -12,14 +14,25 @@
 
 @mixin menu__link {
   display: inline-block;
-  padding: $spacing-xs 0;
+  padding: $deco-spacing-sm 0;
 }
 
 @mixin menu__link--block {
   display: block;
-  padding: $spacing-block;
+  padding: $deco-spacing-block;
   &:hover {
     text-decoration: none;
     background: $color-menu-block-hover-background;
-  } 
+  }
+}
+
+@mixin menu--horizontal {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    padding-right: $deco-spacing-md;
+    &last-of-type {
+      padding-right: 0;
+    }
+  }
 }

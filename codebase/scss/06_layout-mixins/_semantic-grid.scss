@@ -1,18 +1,8 @@
 // LAYOUT MIXINS: SEMANTIC GRID
 // ============================
-
-// Semantic Column Base
-
-@mixin col-semantic {
-  position: relative;
-  min-height: 1px;
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-  overflow: visible;
-}
+// File: 06_layout-mixins/_semantic-grid.scss
 
 @mixin col--span($col--span) {
-  float: left;
   width: ($col--span / $grid-max-cols) * 100%;
 }
 
@@ -30,8 +20,10 @@
 
 @mixin col--centered($col--centered) {
   width: ($col--centered / $grid-max-cols) * 100%;
+  float: none;
   margin-right: auto;
   margin-left: auto;
 }
 
-// Incomplete grid rows? No problem. Rows can be incomplete (no `.end` or `.omega` classes required).
+// Incomplete grid rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).

@@ -14,14 +14,41 @@ http://simonpadbury.github.io/Codebase/
 // DEFAULT VARIABLES
 // =================
 
-@import '02_default-variables/default-variables';
+@import '02_default-variables/colors';
+@import '02_default-variables/reset-overlay';
+@import '02_default-variables/base';
+@import '02_default-variables/breakpoints';
+@import '02_default-variables/typography';
+@import '02_default-variables/decoration';
+@import '02_default-variables/grid-systems';
+@import '02_default-variables/off-canvas-sidebar';
+@import '02_default-variables/buttons';
+@import '02_default-variables/forms';
+@import '02_default-variables/menus';
+@import '02_default-variables/navbar';
+@import '02_default-variables/tab-systems';
+@import '02_default-variables/pagination';
+
+// How to override the default variables:
+// --------------------------------------
+// To overide any of these `!default` variables in your own design, you must:
+//
+// FIRST: copy (whichever of) these same variable names into your own
+// code and assign them your own preferred values (be sure to declare your
+// variables in the same order as they are imported above); and then
+//
+// SECOND: import `codebase.scss`.
+//
+// If your variable overrides are declared *before* `codebase.scss` in this way,
+// then your preprocessor will preferentially use your values instead of these
+// `!default` values.
 
 // =================
 // BREAKPOINT MIXINS
 // =================
 
 @import '03_breakpoint-mixins/layout';
-@import '03_breakpoint-mixins/menubar';
+@import '03_breakpoint-mixins/navbar';
 
 // Decoration Mixins
 // Not required. See: '04_decoration-mixins/notes.md';
@@ -32,6 +59,7 @@ http://simonpadbury.github.io/Codebase/
 
 @import '05_base-styles/base';
 @import '05_base-styles/typography';
+@import '05_base-styles/images';
 @import '05_base-styles/code';
 @import '05_base-styles/forms';
 
@@ -44,12 +72,12 @@ http://simonpadbury.github.io/Codebase/
 @import '06_layout-mixins/classic-grid';
 @import '06_layout-mixins/semantic-grid';
 @import '06_layout-mixins/flexbox-grid';
-@import '06_layout-mixins/off-canvas-column';
+@import '06_layout-mixins/off-canvas-sidebar';
+@import '06_layout-mixins/visibility';
 
 // Utility Mixins
 @import '07_utility-mixins/basics';
 @import '07_utility-mixins/reset-overlay';
-@import '07_utility-mixins/visibility';
 @import '07_utility-mixins/typography';
 @import '07_utility-mixins/forms';
 @import '07_utility-mixins/images';
@@ -58,13 +86,14 @@ http://simonpadbury.github.io/Codebase/
 @import '07_utility-mixins/dropdowns';
 
 // Component Mixins
-@import '08_component-mixins/media-objects';
+@import '08_component-mixins/media-object';
 @import '08_component-mixins/menus';
-@import '08_component-mixins/menubar';
+@import '08_component-mixins/navbar';
 @import '08_component-mixins/pagination';
-@import '08_component-mixins/tabs';
+@import '08_component-mixins/popover';
+@import '08_component-mixins/slideshow';
+@import '08_component-mixins/tab-systems';
 @import '08_component-mixins/tables';
-@import '08_component-mixins/modals';
 
 // ================
 // CODEBASE CLASSES
@@ -72,12 +101,12 @@ http://simonpadbury.github.io/Codebase/
 
 // Layout Classes
 @import '09_layout-classes/classic-grid';
-@import '09_layout-classes/off-canvas-column';
+@import '09_layout-classes/off-canvas-sidebar';
+@import '09_layout-classes/visibility';
 
 // Utility Classes
 @import '10_utility-classes/basics';
 @import '10_utility-classes/reset-overlay';
-@import '10_utility-classes/visibility';
 @import '10_utility-classes/typography';
 @import '10_utility-classes/forms';
 @import '10_utility-classes/images';
@@ -86,13 +115,14 @@ http://simonpadbury.github.io/Codebase/
 @import '10_utility-classes/dropdowns';
 
 // Component Classes
-@import '11_component-classes/media-objects';
+@import '11_component-classes/media-object';
 @import '11_component-classes/menus';
-@import '11_component-classes/menubar';
+@import '11_component-classes/navbar';
 @import '11_component-classes/pagination';
-@import '11_component-classes/tabs';
+@import '11_component-classes/popover';
+@import '11_component-classes/slideshow';
+@import '11_component-classes/tab-systems';
 @import '11_component-classes/tables';
-@import '11_component-classes/modals';
 
 // Decoration Classes
 @import '12_decoration-classes/margins';

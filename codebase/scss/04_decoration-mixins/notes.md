@@ -16,7 +16,7 @@ For example: in the Codebase docs I have build simple info boxes such as:
 These deco classes all refer to deco variables, and the `initial-icon` class includes the `initial-icon` mixin. So these could have been combined thus:
 
 .message-box--primary {
-  border-left: $border-thick-solid;
+  border-left: $deco-border-thick-solid;
   border-color: $color-primary;
   background: $color-silver;
   @include initial-icon;

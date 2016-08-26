@@ -1,0 +1,46 @@
+// SEMANTIC GRID EXAMPLE CLASS-BUILDER
+// ===================================
+// Note: Name the classes of your grid `&lt;div&gt;`s anything you like.
+
+.your-grid-wrapper {
+  @include grid;
+  @include grid--gutter;
+}
+.your-article-column {
+  @include col;
+  @include break__md--up {
+    @include col--span(8);
+  }
+  @include break__lg--up {
+    @include col--push(4);
+  }
+}
+.your-sidebar-column {
+  @include col;
+  @include break__md--up {
+    @include col--span(4);
+  }
+  @include break__lg--up {
+    @include col--pull(8);
+  }
+}
+.your-nested-grid-wrapper {
+  @include grid;
+  @include grid--gutter;
+  @include grid--nested;
+  > div {
+    @include col;
+    @include break__sm--up {
+      @include col--span(4);
+    }
+  }
+}
+.your-centered-column {
+  @include break__sm--up {
+    @include col--centered(7);
+  }
+}
+.semantic-twelth {
+  @include col;
+  @include col--span(1);  
+}

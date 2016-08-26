@@ -1,32 +1,38 @@
 // COMPONENT MIXINS: TABLES
 // ========================
+// File: 08_component-mixins/_tables.scss
 
 @mixin table {
+  position: relative;
   border-collapse: collapse;
   min-width: 100%;
   margin: 0;
 	caption {
-		padding: $spacing-block;
+		padding: $deco-spacing-block;
 	}
 	th {
+    text-align: left;
 		background: rgba(204,204,204,0.2);
 	}
 	th, td {
-    border: $border-thin-solid;
-		padding: $spacing-sm;
+    border: $deco-border-thin-solid;
+		padding: $deco-spacing-sm;
     vertical-align: top;
 	}
   &--wrap-outer {
     position: relative;
+    z-index: 1;
     margin: auto;
+    background: transparent;
   }
   &--wrap-inner {
     position: relative;
     overflow-x: auto;
-    margin: $spacing-sm 0;
+    z-index: -1;
+    margin: $deco-spacing-sm 0;
   }
   &--wide {
-    box-shadow: $box-shadow-inner;
+    box-shadow: $deco-box-shadow-inset;
   }
   &--nowrap {
     white-space: nowrap;

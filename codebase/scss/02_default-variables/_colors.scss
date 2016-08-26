@@ -1,0 +1,54 @@
+// DEFAULT VARIABLES: COLORS
+// =============================
+// File: 02_default-variables/_colors.scss
+
+// Colors copied from Material Design color pallette, https://material.google.com/style/color.html
+
+// Grayscale
+
+$color-white: #ffffff !default;
+$color-silver: #f5f5f5 !default;
+$color-light-gray: #ddd !default;
+$color-gray: #aaa !default;
+$color-dark-gray : #777 !default;
+$color-charcoal: #444 !default;
+
+// Primary
+
+$color-primary: #09c !default;
+$color-light-primary: lighten($color-primary, 25%) !default;
+$color-dark-primary: darken($color-primary, 10%) !default;
+$color-primary-text: $color-white !default;
+$color-primary-text-dark: $color-primary-text !default;
+
+// Secondary
+
+$color-secondary: #3cc !default;
+$color-light-secondary: lighten($color-secondary, 25%) !default;
+$color-dark-secondary: darken($color-secondary, 7%) !default;
+$color-secondary-text: $color-white !default;
+$color-secondary-text-dark: $color-secondary-text !default;
+
+// Warning
+
+$color-warning: #f80 !default;
+$color-light-warning: lighten($color-warning, 25%) !default;
+$color-dark-warning: darken($color-warning, 7%) !default;
+$color-warning-text: $color-white !default;
+$color-warning-text-dark: $color-warning-text !default;
+
+// Error
+
+$color-error: #f44 !default;
+$color-light-error: lighten($color-error, 25%) !default;
+$color-dark-error: darken($color-error, 20%) !default;
+$color-error-text: $color-white !default;
+$color-error-text-dark: $color-error-text !default;
+
+// Success
+
+$color-success: #2b4 !default;
+$color-light-success: lighten($color-success, 25%) !default;
+$color-dark-success: darken($color-success, 10%) !default;
+$color-success-text: $color-white !default;
+$color-success-text-dark: $color-success-text !default;

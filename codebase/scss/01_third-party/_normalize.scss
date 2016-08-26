@@ -4,8 +4,8 @@ $black: #000;
 $silver: #c0c0c0;
 
 //fonts
-$font_0: sans-serif;
-$font_1: monospace;
+$base-font_0: sans-serif;
+$base-font_1: monospace;
 
 //@extend-elements
 //original selectors
@@ -19,7 +19,7 @@ $font_1: monospace;
 
 
 html {
-	font-family: $font_0;
+	font-family: $base-font_0;
 	[type="button"] {
 	}
 }
@@ -134,19 +134,19 @@ img {
 	border-style: none;
 }
 code {
-	font-family: $font_1, $font_1;
+	font-family: $base-font_1, $base-font_1;
 	font-size: 1em;
 }
 kbd {
-	font-family: $font_1, $font_1;
+	font-family: $base-font_1, $base-font_1;
 	font-size: 1em;
 }
 pre {
-	font-family: $font_1, $font_1;
+	font-family: $base-font_1, $base-font_1;
 	font-size: 1em;
 }
 samp {
-	font-family: $font_1, $font_1;
+	font-family: $base-font_1, $base-font_1;
 	font-size: 1em;
 }
 hr {

@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-  
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
@@ -19,12 +19,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,10 +32,10 @@
   </div>
 </nav>
 
-  <header class="codebase-docs__header">
-    <span><a href="utilities.html">Utilities</a>:</span>
-    <h1>Dropdowns</h1>
-  </header>
+    <header class="codebase-docs__header deco-bg-dark-success">
+      <span class="deco-text-light-gray">Utilities:</span>
+      <h1 class="deco-text-white">Dropdowns</h1>
+    </header>
 
   <div class="codebase-docs__main">
 
@@ -52,45 +52,48 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
   <div class="codebase-docs__main-article">
 
   <p>Dropdowns can be added to buttons or menubar items (for creating child menus).</p>
@@ -100,34 +103,92 @@
   </p>
 
   <div class="dropdown">
-    <button class="btn btn--primary dropdown__toggle">
-      Button with dropdown utility 1
+    <button class="btn dropdown__toggle" data-dropdown-content="dropdown-1" data-icon="fa fa-caret-down">
+      Example 1
     </button>
-    <span class="dropdown__content">
-      Example dropdown utility content (that wraps by default)
+    <span id="dropdown-1" class="dropdown__content">
+      Example dropdown utility content
     </span>
   </div>
+
+  &nbsp;
 
   <div class="dropdown">
-    <button class="btn btn--primary dropdown__toggle">
-      Button with dropdown utility 2
+    <button class="btn combo--first">
+      Example 2 (combo)
     </button>
-    <span class="dropdown__content dropdown__content--nowrap">
-      Example dropdown utility content (that doesn't wrap)
+    <button class="btn btn--icon combo--last dropdown__toggle" data-dropdown-content="dropdown-2" data-icon="fa fa-bars"></button>
+    <span id="dropdown-2" class="dropdown__content">
+      Example dropdown utility content
     </span>
   </div>
-  
-  <p>Besides clicking the button again to dismiss the dropdown, you can click anywhere outside the dropdown to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).</p>
 
-  <pre><code>&lt;div class="dropdown"&gt;
-  &lt;button class="button dropdown__toggle"&gt;
-    Button with dropdown utility
+  <p>
+    Besides clicking the button again to dismiss the dropdown, you can click anywhere outside the dropdown to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).
+  </p>
+
+  <p>
+    Use <code>data-dropdown-content</code> to point to the <code>id</code> of the <code>dropdown__content</code> that you wish to activate. As only <code>data-dropdown-content</code> will trigger the dropdown, this means that combo-sets can be put together (as above, example 2).
+  </p>
+
+  <p>
+    Use <code>data-icon</code> to specify the class(es) you wish to assign to the dropdown indicator icon. Here <a href="http://fontawesome.io/" target="blank">Font Awesome</a> classes have been used. The Codebase dropowns jQuery script will read this and append the icon to the dropdown toggler (in these examples, the togglers are buttons).
+  </p>
+
+  <p>
+    The <code>.dropdown</code> wrapper ensures that the dropdown appears flush left of the button. The wrapper has <code>display: inline-block</code> so that you can easily build a row of dropdowns and other inline elements.
+  </p>
+
+  <div class="tabs tabs--top codebase-docs__code">
+
+    <div class="tabs__label" data-tabs="html-1">HTML</div>
+    <div id="html-1" class="tabs__card">
+      <div class="tabs__card-content">
+  <pre><code class="language-html">&lt;div class="dropdown"&gt;
+  &lt;button class="btn dropdown__toggle" data-dropdown-content="dropdown-1" data-icon="fa fa-caret-down"&gt;
+    Example 1
   &lt;/button&gt;
-  &lt;span class="dropdown__content dropdown__content--nowrap"&gt;
-    Example dropdown utility content (that doesn't wrap)
+  &lt;span id="dropdown-1" class="dropdown__content"&gt;
+    Example dropdown utility content
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&amp;nbsp;
+
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn combo--first"&gt;
+    Example 2 (combo)
+  &lt;/button&gt;
+  &lt;button class="btn btn--icon combo--last dropdown__toggle" data-dropdown-content="dropdown-2" data-icon="fa fa-bars"&gt;&lt;/button&gt;
+  &lt;span id="dropdown-2" class="dropdown__content"&gt;
+    Example dropdown utility content
   &lt;/span&gt;
 &lt;/div&gt;</code></pre>
-  
+      </div>
+    </div>
+
+    <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+    <div id="mixins-1" class="tabs__card">
+      <div class="tabs__card-content">
+        <pre data-src="codebase/scss/07_utility-mixins/_dropdowns.scss"></pre>
+      </div>
+    </div>
+
+    <div class="tabs__label" data-tabs="classes-1">Classes</div>
+    <div id="classes-1" class="tabs__card">
+      <div class="tabs__card-content">
+        <pre data-src="codebase/scss/10_utility-classes/_dropdowns.scss"></pre>
+      </div>
+    </div>
+
+    <div class="tabs__label" data-tabs="js-1">JS (jQuery)</div>
+    <div id="js-1" class="tabs__card">
+      <div class="tabs__card-content">
+        <pre data-src="codebase/js/scripts/dropdowns.js"></pre>
+      </div>
+    </div>
+
+  </div><!-- / .codebase-docs__code -->
 
       </div>
   </div>
@@ -135,18 +196,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
-
+<script src="theme/prism/prism.js"></script>
 
 </body>
 

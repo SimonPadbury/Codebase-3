@@ -11,6 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 
 </head>
@@ -19,12 +20,12 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
@@ -32,10 +33,11 @@
   </div>
 </nav>
 
-    <header class="codebase-docs__header">
-      <span><a href="components.html">Components</a>:</span>
-      <h1>Menus</h1>
+    <header class="codebase-docs__header deco-bg-dark-warning">
+      <span class="deco-text-light-gray">Components:</span>
+      <h1 class="deco-text-white">Menus</h1>
     </header>
+
 
     <div class="codebase-docs__main">
 
@@ -52,110 +54,340 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
-        <p>
-          Inline-block menu links:
-        </p>
+        <div class="grid grid--gutter grid--nested">
+          <div class="col col-sm--span-6">
+            <p>
+              ul.menu
+            </p>
 
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
             <ul class="menu">
-              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a>
+                <ul class="menu">
+                  <li><a href="#/">Link</a></li>
+                  <li><a href="#/">Link</a></li>
+                  <li><a href="#/">Link</a></li>
+                </ul>
+              </li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
             </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-        </ul>
+          </div>
+          <div class="col col-sm--span-6">
+            <p>
+              ul.menu.menu--block
+            </p>
 
-        <p>
-          HTML with Codebase classes:
-        </p>
-
-        <pre><code>&lt;ul class=&quot;menu&quot;&gt;
-  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;
-    &lt;ul class=&quot;menu&quot;&gt;
-      &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-
-        <p>
-          Block menu links:
-        </p>
-
-        <ul class="menu menu--block">
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
             <ul class="menu menu--block">
-              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a>
+                <ul class="menu menu--block">
+                  <li><a href="#/">Link</a></li>
+                  <li><a href="#/">Link</a></li>
+                  <li><a href="#/">Link</a></li>
+                </ul>
+              </li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
             </ul>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
-        </ul>
+          </div>
+        </div>
 
-        <p>
-          HTML with Codebase classes:
-        </p>
+        <div class="grid grid--gutter grid--nested">
+          <div class="col col-sm--span-6">
 
-        <pre><code>&lt;ul class=&quot;menu menu--block&quot;&gt;
-  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;
-    &lt;ul class=&quot;menu menu--block&quot;&gt;
-      &lt;li class=&quot;menu__item&quot;&gt;&lt;a class=&quot;menu__link&quot; href=&quot;#/&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+            <p>
+              ul.menu.menu--horizontal
+            </p>
+
+            <ul class="menu menu--horizontal">
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+            </ul>
+
+            <p>
+              ul.menubar
+            </p>
+
+            <ul class="menubar">
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+            </ul>
+
+          </div>
+          <div class="col col-sm--span-6">
+            <p>
+              ul.menu.menu--horizontal.menu--block
+            </p>
+
+            <ul class="menu menu--horizontal menu--block">
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+            </ul>
+
+            <p>
+              ul.menubar.menubar--block
+            </p>
+
+            <ul class="menubar menu--block">
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+              <li><a href="#/">Link</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="tabs tabs--top codebase-docs__code">
+
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+<pre><code class="language-html">&lt;ul class=&quot;menu&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;
+
+    &lt;ul class=&quot;menu&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
+
   &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="variables-1">Variables</div>
+          <div id="variables-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/02_default-variables/_menus.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/08_component-mixins/_menus.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/11_component-classes/_menus.scss"></pre>
+            </div>
+          </div>
+
+        </div><!-- // Codebase -->
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Menu is displayed as:</th>
+              <th>
+                <code>&lt;ul&gt;</code> classes:
+              </th>
+              <th>
+                Alias <code>&lt;ul&gt;</code> classes:
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Vertical inline-block
+              </td>
+              <td>
+                .menu
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                Vertical block
+              </td>
+              <td>
+                .menu.menu--block
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                Horizontal inline-block
+              </td>
+              <td>
+                .menu.menu--horizontal
+              </td>
+              <td>
+                .menubar
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Horizontal block
+              </td>
+              <td>
+                .menu.menu--horizontal.menu--block
+              </td>
+              <td>
+                .menubar.menubar--block
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="initial-icon deco-mt-lg deco-bl-thick-solid deco-b-primary deco-p-md deco-bg-light-primary">
+          <i class="fa fa-info-circle deco-text-primary"></i> <b>Looking for a more powerful, collapsing menubar?</b>
+          <br>Codebase has this too. Go here: <a href="components-navbar.html">Navbar</a>.
+        </div>
+
+        <h2>Tabbed menubar</h2>
+
+        <p>
+          Add the modifier class <code>tabs__card-content--menubar</code> to remove each <code>tabs__card-content</code> padding.
+        </p>
+
+        <div class="tabs tabs--top">
+
+          <div class="tabs__label" data-tabs="world">World News</div>
+          <div id="world" class="tabs__card">
+            <div class="tabs__card-content tabs__card-content--menubar">
+              <ul class="menubar menu--block">
+                <li><a href="#/">World 1</a></li>
+                <li><a href="#/">World 2</a></li>
+                <li><a href="#/">World 3</a></li>
+                <li><a href="#/">World 4</a></li>
+                <li><a href="#/">World 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="local">Local News</div>
+          <div id="local" class="tabs__card">
+            <div class="tabs__card-content tabs__card-content--menubar">
+              <ul class="menubar menu--block">
+                <li><a href="#/">Local 1</a></li>
+                <li><a href="#/">Local 2</a></li>
+                <li><a href="#/">Local 3</a></li>
+                <li><a href="#/">Local 4</a></li>
+                <li><a href="#/">Local 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="science">Science</div>
+          <div id="science" class="tabs__card">
+            <div class="tabs__card-content tabs__card-content--menubar">
+              <ul class="menubar menu--block">
+                <li><a href="#/">Science 1</a></li>
+                <li><a href="#/">Science 2</a></li>
+                <li><a href="#/">Science 3</a></li>
+                <li><a href="#/">Science 4</a></li>
+                <li><a href="#/">Science 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="health">Health</div>
+          <div id="health" class="tabs__card">
+            <div class="tabs__card-content tabs__card-content--menubar">
+              <ul class="menubar menu--block">
+                <li><a href="#/">Health 1</a></li>
+                <li><a href="#/">Health 2</a></li>
+                <li><a href="#/">Health 3</a></li>
+                <li><a href="#/">Health 4</a></li>
+                <li><a href="#/">Health 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="technology">Technology</div>
+          <div id="technology" class="tabs__card">
+            <div class="tabs__card-content tabs__card-content--menubar">
+              <ul class="menubar menu--block">
+                <li><a href="#/">Technology 1</a></li>
+                <li><a href="#/">Technology 2</a></li>
+                <li><a href="#/">Technology 3</a></li>
+                <li><a href="#/">Technology 4</a></li>
+                <li><a href="#/">Technology 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="sport">Sport</div>
+          <div id="sport" class="tabs__card">
+            <div class="tabs__card-content tabs__card-content--menubar">
+              <ul class="menubar menu--block">
+                <li><a href="#/">Sport 1</a></li>
+                <li><a href="#/">Sport 2</a></li>
+                <li><a href="#/">Sport 3</a></li>
+                <li><a href="#/">Sport 4</a></li>
+                <li><a href="#/">Sport 5</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div><!-- // Tabbed menubar -->
 
       </div>
     </div>
@@ -163,18 +395,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
-
+<script src="theme/prism/prism.js"></script>
 
 </body>
 

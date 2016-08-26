@@ -1,4 +1,4 @@
-# Codebase v.1.1
+# Codebase v.1.2
 
 Yet another SCSS / jQuery component library.
 
@@ -14,7 +14,6 @@ codebase/
 ### Codebase docs:
 
 [http://simonpadbury.github.io/Codebase/](http://simonpadbury.github.io/Codebase/)
-
 
 ---
 

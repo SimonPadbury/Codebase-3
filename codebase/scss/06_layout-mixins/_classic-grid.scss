@@ -1,45 +1,12 @@
 // LAYOUT MIXINS: CLASSIC GRID
 // ===========================
-
-@mixin col-classic {
-  position: relative;
-  min-height: 1px;
-  width: 100%;
-  float: left;
-  overflow: visible;
-  &--centered {
-    float: none !important;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-
-// col Control Mixins
-// Used by the col builder mixins.
-
-@mixin span($span, $grid-max-cols: 12) {
-  width: (100% / $grid-max-cols) * $span;
-}
-
-@mixin offset($offset, $grid-max-cols: 12) {
-  margin-left: (100% / $grid-max-cols) * $offset;
-}
-
-@mixin push($push, $grid-max-cols: 12) {
-  left: (100% / $grid-max-cols) * $push;
-}
-
-@mixin pull($pull, $grid-max-cols: 12) {
-  right: (100% / $grid-max-cols) * $pull;
-}
-
-// Column Class Builder Mixins
+// File: 06_layout-mixins/_classic-grid.scss
 
 @mixin classic-col--span {
   &--span {
     @for $i from 1 through $grid-max-cols {
       &-#{$i} {
-        @include span($i);
+        width: (100% / $grid-max-cols) * $i;
       }
     }
   }
@@ -49,7 +16,7 @@
   &--offset {
     @for $i from 1 through $grid-max-cols {
       &-#{$i} {
-        @include offset($i);
+        margin-left: (100% / $grid-max-cols) * $i;
       }
     }
   }
@@ -59,7 +26,7 @@
   &--push {
     @for $i from 1 through $grid-max-cols {
       &-#{$i} {
-        @include push($i);
+        left: (100% / $grid-max-cols) * $i;
       }
     }
   }
@@ -69,8 +36,17 @@
   &--pull {
     @for $i from 1 through $grid-max-cols {
       &-#{$i} {
-        @include pull($i);
+        right: (100% / $grid-max-cols) * $i;
       }
     }
   }
 }
+
+@mixin classic-col--centered {
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Incomplete grid rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).

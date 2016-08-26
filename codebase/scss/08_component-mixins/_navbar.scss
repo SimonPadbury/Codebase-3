@@ -1,0 +1,178 @@
+// COMPONENT MIXINS: NAVBAR
+// ========================
+
+@mixin navbar {
+  @include clearfix;
+  position: relative;
+  padding-top: $navbar-height;
+  padding-left: 0;
+  &--is-open {
+    z-index: $reset-overlay--z-index + 2;
+  }
+  @include break__navbar--up {
+    padding-top: 0;
+  }
+}
+
+@mixin navbar__brand {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+    a {
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px 12px;
+    &:hover {
+      text-decoration: none;
+      background: $color-menu-block-hover-background;
+    }
+  }
+  @include break__navbar--up {
+    position: relative;
+    top: auto;
+    float: left;
+  }
+}
+
+@mixin navbar__navicon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-text-hyperlink;
+  text-align: center;
+  &:hover {
+    color: $color-text-hyperlink-hover;
+    background: $color-navbar-link-hover-background;
+    cursor: pointer;
+  }  @include break__navbar--up {
+    display: none;
+  }
+}
+
+@mixin navbar__content {
+  display: none;
+  // Override dropdown styles for collapsed menubar
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: $navbar-padding;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: none;
+        background: $color-menu-block-hover-background;
+      }
+    }
+  }
+  @include break__navbar--down {
+    .dropdown__toggle .dropdown__caret {
+      display: none;
+    }
+    .dropdown__content {
+      display: block;
+      position: relative;
+      border-radius: 0;
+      box-shadow: none;
+      a {
+        padding-left: $deco-spacing-lg;
+      }
+    }
+  }
+  @include break__navbar--up {
+    display: block !important; // Overrides the jQuery display: none
+    li {
+      position: relative;
+      display: inline-block;
+    }
+  }
+}
+
+@mixin navbar__setup {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: $navbar-padding;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: none;
+        background: $color-menu-block-hover-background;
+      }
+    }
+  }
+  @include break__menubar--up {
+    li {
+      position: relative;
+    }
+    > ul > li {
+      display: inline-block;
+    }
+  }
+}
+
+@mixin navbar__left {
+  @include break__navbar--up {
+    float: left;
+  }
+}
+
+@mixin navbar__center {
+  @include break__navbar--up {
+    text-align: center;
+  }
+}
+
+@mixin navbar__right {
+  @include break__navbar--up {
+    float: right;
+    >ul {
+      float: left;
+    }
+    .dropdown__content {
+      right: 0;
+    }
+  }
+}
+
+@mixin navbar__search {
+  padding: 4px 15px;
+  input {
+    width: auto !important;
+    @include break__navbar--up {
+      max-width: 160px;
+    }
+  }
+  @include break__navbar--up {
+    float: right;
+    padding-right: $deco-spacing-xs;
+    padding-left: $deco-spacing-xs;
+  }
+}
+
+// The `.navbar` always gets a .wrap() called `.navbar__has-wrap` (this is used to enable the navicon toggle to be absolutely positioned over the menubar on smaller screens).
+// If you add `.navbar--fixed` to the menubar, then the wrap will also get class `.navbar__has-wrap--fixed`.
+
+@mixin navbar__has-wrap {
+  position: relative;
+  width: 100%;
+  &--is-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $reset-overlay--z-index + 3;
+    box-shadow: $deco-box-shadow;
+  }
+}
+
+@mixin body--navbar-is-fixed {
+  padding-top: $base-line-height-px + ($deco-spacing-xs * 2);
+}

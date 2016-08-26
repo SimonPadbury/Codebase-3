@@ -1,91 +1,7 @@
 // UTILITY MIXINS: BUTTONS
 // =======================
 
-@mixin btn {
-  display: inline-block;
-  width: auto;
-  margin: 0;
-  border: 0;
-  border-radius: $btn-border-radius;
-  padding: $btn-padding-default;
-  font-size: $base-font-size;
-  line-height: $base-font-size;
-  color: $color-dark-gray;
-  text-decoration: none;
-  background: transparent;
-  &::-moz-focus-inner { 
-    border: 0; 
-    padding: 0; 
-  }
-  &[type="button"],
-  &[type="submit"] {
-    -webkit-appearance: none;
-  }
-  &:hover {
-    cursor: pointer;
-    color: $color-text-default;
-    text-decoration: none;
-    background: $color-silver;
-  }
-}
-
-// Icon-only Buttons (default/md size only)
-
-@mixin btn--icon {
-  width: 36px;
-  height: 36px;
-  padding: $spacing-sm 0;
-  text-align: center;
-}
-
-// Button colors
-
-@mixin btn--primary {
-  color: $color-primary-text;
-  background: $color-primary;
-  &:hover {
-    color: $color-primary-text-dark;
-    background: $color-primary-dark;
-  }
-}
-
-@mixin btn--secondary {
-  color: $color-secondary-text;
-  background: $color-secondary;
-  &:hover {
-    color: $color-secondary-text-dark;
-    background: $color-secondary-dark;
-  }
-}
-
-@mixin btn--warning {
-  color: $color-warning-text;
-  background: $color-warning;
-  &:hover {
-    color: $color-warning-text-dark;
-    background: $color-warning-dark;
-  }
-}
-
-@mixin btn--success {
-  color: $color-success-text;
-  background: $color-success;
-  &:hover {
-    color: $color-success-text-dark;
-    background: $color-success-dark;
-  }
-}
-
-@mixin btn--error {
-  color: $color-error-text;
-  background: $color-error;
-  &:hover {
-    color: $color-error-text-dark;
-    background: $color-error-dark;
-  }
-}
-
-@mixin btn--gradient {
+@mixin btn--3d {
   box-shadow:
     0 1px 1px rgba(0,0,0,0.5),
     inset 0 0 1px rgba(0,0,0,0.5),
@@ -99,6 +15,99 @@
       0 0 0 transparent,
       inset 0 -50px 50px -50px rgba(0,0,0,0.4),
       inset 0 0 4px rgba(0,0,0,0.8);
+  }
+}
+
+@mixin btn {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  border: 0;
+  padding: $btn-padding-default;
+  font-size: $base-font-size;
+  line-height: $base-font-size;
+  color: $color-dark-gray;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  &[type="button"],
+  &[type="submit"] {
+    -webkit-appearance: none;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $color-text-default;
+    text-decoration: none;
+    background: $color-silver;
+  }
+  @if $btn-rounded == true {
+    border-radius: $btn-border-radius;
+  }
+  @if $btn-3d == true { // `false` gives flat buttons
+    @include btn--3d;
+  }
+  @if $btn-pressable == true {
+    @include btn--pressable;
+  }
+}
+
+// Icon-only Buttons (default/md size only)
+
+@mixin btn--icon {
+  width: 36px;
+  height: 36px;
+  padding: $deco-spacing-sm 0;
+  text-align: center;
+}
+
+// Button colors
+
+@mixin btn--primary {
+  color: $color-primary-text;
+  background: $color-primary;
+  &:hover {
+    color: $color-primary-text-dark;
+    background: $color-dark-primary;
+  }
+}
+
+@mixin btn--secondary {
+  color: $color-secondary-text;
+  background: $color-secondary;
+  &:hover {
+    color: $color-secondary-text-dark;
+    background: $color-dark-secondary;
+  }
+}
+
+@mixin btn--warning {
+  color: $color-warning-text;
+  background: $color-warning;
+  &:hover {
+    color: $color-warning-text-dark;
+    background: $color-dark-warning;
+  }
+}
+
+@mixin btn--success {
+  color: $color-success-text;
+  background: $color-success;
+  &:hover {
+    color: $color-success-text-dark;
+    background: $color-dark-success;
+  }
+}
+
+@mixin btn--error {
+  color: $color-error-text;
+  background: $color-error;
+  &:hover {
+    color: $color-error-text-dark;
+    background: $color-dark-error;
   }
 }
 

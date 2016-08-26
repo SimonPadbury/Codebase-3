@@ -1,0 +1,8 @@
+// DEFAULT VARIABLES: NAVBAR
+// =========================
+// File: 02_default-variables/_navbar.scss
+
+$break-navbar: $break-sm !default;
+$navbar-padding: $deco-spacing-block !default;
+$navbar-height: 44px !default; // = line-height (24px) + (2 * 10px for the padding)
+$color-navbar-link-hover-background: $color-silver !default;

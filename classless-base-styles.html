@@ -11,7 +11,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="theme/css/styles.css">
-
+  <link href="theme/prism/prism.css" rel="stylesheet">
 
 </head>
 
@@ -19,21 +19,23 @@
 
   <div class="codebase-docs">
 
-    <nav class="menubar codebase-docs__menubar">
-  <div class="menubar__brand">
+    <nav class="navbar codebase-docs__navbar">
+  <div class="navbar__brand">
     <a href="index.html"><span>Codebase</span></a>
   </div>
-  <div class="menubar__content">
-    <div class="menubar__right">
+  <div class="navbar__content">
+    <div class="navbar__right">
       <ul>
         <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
-    <header class="codebase-docs__header">
-      <h1>Classless Base Styles</h1>
+
+    <header class="codebase-docs__header deco-bg-dark-primary">
+      <h1 class="deco-text-white">Classless Base Styles</h1>
     </header>
+
 
     <div class="codebase-docs__main">
 
@@ -50,45 +52,48 @@
   <ul class="codebase-docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
     <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
+        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
+        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
+        <li><a href="layout-visibility.html">Visibility </a></li>
+        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-images.html">Images</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popover.html">Popovers</a></li>
+        <li><a href="components-slideshow.html">Slideshow</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+      </ul>
+    </li>
     <li><a href="decoration.html">Decoration</a>
       <ul>
         <li><a href="decoration-margins.html">Margins</a></li>
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Shadows</a></li>
+        <li><a href="decoration-shadows.html">Box shadows</a></li>
       </ul>
-      </li>
-      <li><a href="layout.html">Layout</a>
-        <ul>
-          <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-          <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-          <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-          <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
-        </ul>
-      </li>
-      <li><a href="utilities.html">Utilities</a>
-        <ul>
-          <li><a href="utilities-typography.html">Typography</a></li>
-          <li><a href="utilities-forms.html">Forms</a></li>
-          <li><a href="utilities-images.html">Images</a></li>
-          <li><a href="utilities-buttons.html">Buttons</a></li>
-          <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-          <li><a href="utilities-visibility.html">Visibility </a></li>
-        </ul>
-      </li>
-      <li><a href="components.html">Components</a>
-        <ul>
-          <li><a href="components-menus.html">Menus</a></li>
-          <li><a href="components-menubar.html">Menubar</a></li>
-          <li><a href="components-media-object.html">Media Object</a></li>
-          <li><a href="components-modals.html">Modals</a></li>
-          <li><a href="components-tables.html">Tables</a></li>
-          <li><a href="components-tab-systems.html">Tab Systems</a></li>
-          <li><a href="components-pagination.html">Pagination</a></li>
-        </ul>
+    </li>
   </ul>
 </div>
+
       <div class="codebase-docs__main-article">
 
         <p>Starting from an @import of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> and building upon it, Codebase sets some typographic and form element base styles.</p>
@@ -107,7 +112,7 @@
         <p>PARAGRAPH Lorem ipsum dolor sit amet, usu in odio gubergren conclusionemque. Eu putant reprehendunt cum, tacimates platonem per at. Deserunt consulatu cu sea, discere intellegam conclusionemque mei an, nec ex soluta alterum cotidieque. Quis nonumes delectus mei ne, eum et amet sanctus perfecto. Ad verear scripta usu.</p>
 
         <div class="grid grid--gutter grid--nested">
-          <div class="col sm--span-6">
+          <div class="col col-sm--span-6">
             <p>
               <i>italics</i>
               <br>
@@ -155,7 +160,7 @@
             <pre><code>Code in a preformatted text block</code></pre>
 
           </div>
-          <div class="col sm--span-6">
+          <div class="col col-sm--span-6">
 
             <p>Ordered list:</p>
 
@@ -217,95 +222,119 @@
           Lorem ipsum dolor sit amet, usu in odio gubergren conclusionemque. Eu putant reprehendunt cum, tacimates platonem per at. Deserunt consulatu cu sea, discere intellegam conclusionemque mei an, nec ex soluta alterum cotidieque. Quis nonumes delectus mei ne, eum et amet sanctus perfecto. Ad verear scripta usu.
         </blockquote>
 
+        <div class="tabs tabs--top codebase-docs__code">
+
+          <div class="tabs__label" data-tabs="variables-1">Variables</div>
+          <div id="variables-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/02_default-variables/_typography.scss"></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="base-1">Base Styles</div>
+          <div id="base-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/scss/05_base-styles/_typography.scss"></pre>
+            </div>
+          </div>
+
+        </div><!-- / .codebase-docs__code -->
+
+
         <h2>Base Form Styles</h2>
 
         <p>(Further form styling can be added using <a href="utilities-forms.html">form utilities</a>.)</p>
 
         <p>Form elements expand to 100% of their container width. Give them structure by wrapping them in grid columns.</p>
 
+        <p>
+          There is no added margin or padding around form elements &ndash; so nothing you need to override. Add whatever margin or padding (or not) as suits your own design.
+        </p>
+
         <div class="grid grid--gutter grid--nested">
-          <div class="col col-md--offset-3 col-md--span-6">
+          <div class="col col-sm--span-6">
+
+            <p>Input boxes:</p>
 
             <form action="">
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="text">Text:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="text" id="text" name="" placeholder="Text">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="email-2">Email:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="email" id="email-2" name="" placeholder="Email">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="tel">Tel:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="tel" id="tel" name="" placeholder="Tel">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="search-2">Search:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="search" id="search-2" name="" results="5" placeholder="Search">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="number">Number:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="number" id="number" name="" placeholder="Number">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="date">Date:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="date" id="date" name="" placeholder="Date">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="month">Month:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="month" id="month" name="" placeholder="Month">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-3">
+                <div class="col col--span-3">
                   <label for="password">Password:</label>
                 </div>
-                <div class="col col-xs--span-9">
+                <div class="col col--span-9">
                   <input type="password" id="password" name="" placeholder="Password">
                 </div>
               </div>
               <div class="grid">
-                <div class="col col-xs--span-12">
+                <div class="col col--span-12">
                   <label for="textarea">Textarea:</label>
                   <textarea rows="4" id="textarea" placeholder="Your comment"></textarea>
                   <input class="btn btn--primary" type="submit" value="Submit">
                 </div>
               </div>
             </form>
+
           </div>
-        </div>
+          <div class="col col-sm--span-6">
 
-        <p>Select boxes:</p>
+            <p>Select boxes:</p>
 
-        <div class="grid grid--gutter grid--nested">
-          <div class="col col-xs--span-6 col-md--offset-3 col-md--span-3">
             <form>
               <select name="">
                 <option value="First">First option</option>
@@ -313,8 +342,7 @@
                 <option value="Third">Third option</option>
               </select>
             </form>
-          </div>
-          <div class="col col-xs--span-6 col-md--span-3">
+
             <form>
               <select multiple name="">
                 <option value="First">First option</option>
@@ -322,35 +350,40 @@
                 <option value="Third">Third option</option>
               </select>
             </form>
-          </div>
-        </div>
 
-        <p>Radio and checkboxes:</p>
+            <div class="col col--span-6">
 
-        <div class="grid grid--gutter grid--nested">
-          <div class="col col-xs--span-6 col-md--offset-3 col-md--span-3">
-            <form>
-              <input type="radio" id="radio-1" name="radio" checked>
-              <label for="radio-1">One</label>
-              <br>
-              <input type="radio" id="radio-2" name="radio">
-              <label for="radio-2">Two</label>
-              <br>
-              <input type="radio" id="radio-3" name="radio">
-              <label for="radio-3">Three</label>
-            </form>
-          </div>
-          <div class="col col-xs--span-6 col-md--span-3">
-            <form>
-              <input type="checkbox" id="check-1" name="check" checked>
-              <label for="check-1">One</label>
-              <br>
-              <input type="checkbox" id="check-2" name="check">
-              <label for="check-2">Two</label>
-              <br>
-              <input type="checkbox" id="check-3" name="check">
-              <label for="check-3">Three</label>
-            </form>
+            <p>Radio boxes:</p>
+
+              <form>
+                <input type="radio" id="radio-1" name="radio" checked>
+                <label for="radio-1">One</label>
+                <br>
+                <input type="radio" id="radio-2" name="radio">
+                <label for="radio-2">Two</label>
+                <br>
+                <input type="radio" id="radio-3" name="radio">
+                <label for="radio-3">Three</label>
+              </form>
+
+            </div>
+            <div class="col col--span-6">
+
+            <p>Check boxes:</p>
+
+              <form>
+                <input type="checkbox" id="check-1" name="check" checked>
+                <label for="check-1">One</label>
+                <br>
+                <input type="checkbox" id="check-2" name="check">
+                <label for="check-2">Two</label>
+                <br>
+                <input type="checkbox" id="check-3" name="check">
+                <label for="check-3">Three</label>
+              </form>
+
+            </div>
+
           </div>
         </div>
 
@@ -360,18 +393,16 @@
 
     <footer class="codebase-docs__footer deco-bg-charcoal">
   <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
   </span>
 </footer>
-
-</div> <!-- /.codebase-docs -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
 </script>
-
+<script src="theme/prism/prism.js"></script>
 
 </body>
 
