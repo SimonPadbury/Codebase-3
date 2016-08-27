@@ -206,7 +206,7 @@ body {
 // codebase-docs__code
 
 .codebase-docs__code {
-  margin: $deco-spacing-lg 0;
+  margin: $deco-spacing-lg 0 !important;
   code {
     border: 0;
     font-size: 16px;

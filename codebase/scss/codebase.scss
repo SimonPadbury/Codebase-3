@@ -50,50 +50,50 @@ http://simonpadbury.github.io/Codebase/
 @import '03_breakpoint-mixins/layout';
 @import '03_breakpoint-mixins/navbar';
 
-// Decoration Mixins
-// Not required. See: '04_decoration-mixins/notes.md';
-
 // =====================
 // CLASSLESS BASE STYLES
 // =====================
 
-@import '05_base-styles/base';
-@import '05_base-styles/typography';
-@import '05_base-styles/images';
-@import '05_base-styles/code';
-@import '05_base-styles/forms';
+@import '04_base-styles/base';
+@import '04_base-styles/typography';
+@import '04_base-styles/images';
+@import '04_base-styles/code';
+@import '04_base-styles/forms';
 
 // ===============
 // CODEBASE MIXINS
 // ===============
 
 // Layout Mixins
-@import '06_layout-mixins/grid-base';
-@import '06_layout-mixins/classic-grid';
-@import '06_layout-mixins/semantic-grid';
-@import '06_layout-mixins/flexbox-grid';
-@import '06_layout-mixins/off-canvas-sidebar';
-@import '06_layout-mixins/visibility';
+@import '05_layout-mixins/grid-base';
+@import '05_layout-mixins/classic-grid';
+@import '05_layout-mixins/semantic-grid';
+@import '05_layout-mixins/flexbox-grid';
+@import '05_layout-mixins/off-canvas-sidebar';
+@import '05_layout-mixins/visibility';
 
 // Utility Mixins
-@import '07_utility-mixins/basics';
-@import '07_utility-mixins/reset-overlay';
-@import '07_utility-mixins/typography';
-@import '07_utility-mixins/forms';
-@import '07_utility-mixins/images';
-@import '07_utility-mixins/buttons';
-@import '07_utility-mixins/combo';
-@import '07_utility-mixins/dropdowns';
+@import '06_utility-mixins/basics';
+@import '06_utility-mixins/reset-overlay';
+@import '06_utility-mixins/typography';
+@import '06_utility-mixins/forms';
+@import '06_utility-mixins/images';
+@import '06_utility-mixins/buttons';
+@import '06_utility-mixins/combo';
+@import '06_utility-mixins/dropdowns';
 
 // Component Mixins
-@import '08_component-mixins/media-object';
-@import '08_component-mixins/menus';
-@import '08_component-mixins/navbar';
-@import '08_component-mixins/pagination';
-@import '08_component-mixins/popover';
-@import '08_component-mixins/slideshow';
-@import '08_component-mixins/tab-systems';
-@import '08_component-mixins/tables';
+@import '07_component-mixins/media-object';
+@import '07_component-mixins/menus';
+@import '07_component-mixins/navbar';
+@import '07_component-mixins/pagination';
+@import '07_component-mixins/popover';
+@import '07_component-mixins/slideshow';
+@import '07_component-mixins/tab-systems';
+@import '07_component-mixins/tables';
+
+// Decoration Mixins
+// Not required. See: '08_decoration-mixins/notes.md';
 
 // ================
 // CODEBASE CLASSES

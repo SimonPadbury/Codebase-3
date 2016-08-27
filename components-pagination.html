@@ -105,12 +105,7 @@
           <li><a href="#/">Older <i class="fa fa-arrow-right"></i></a></li>
         </ul>
 
-        <div class="tabs tabs--top codebase-docs__code">
-
-          <div class="tabs__label" data-tabs="html-1">HTML</div>
-          <div id="html-1" class="tabs__card">
-            <div class="tabs__card-content">
-<pre><code class="language-html">&lt;ul class="pagination"&gt;
+<pre class="codebase-docs__code"><code class="language-html">&lt;ul class="pagination"&gt;
   &lt;li&gt;&lt;a href=""&gt;&lt;i class="fa fa-arrow-left"&gt;&lt;/i&gt; Newer&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a class="cb-pagination__current" href=""&gt;2&lt;/a&gt;&lt;/li&gt;
@@ -118,31 +113,6 @@
   &lt;li&gt;&lt;a href=""&gt;Older &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-            </div>
-          </div>
-
-          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
-          <div id="mixins-1" class="tabs__card">
-            <div class="tabs__card-content">
-              <pre data-src="codebase/scss/08_component-mixins/_pagination.scss"></pre>
-            </div>
-          </div>
-
-          <div class="tabs__label" data-tabs="classes-1">Classes</div>
-          <div id="classes-1" class="tabs__card">
-            <div class="tabs__card-content">
-              <pre data-src="codebase/scss/11_component-classes/_pagination.scss"></pre>
-            </div>
-          </div>
-
-          <div class="tabs__label" data-tabs="js-1">JS (jQuery)</div>
-          <div id="js-1" class="tabs__card">
-            <div class="tabs__card-content">
-              <pre data-src="codebase/js/scripts/pagination.js"></pre>
-            </div>
-          </div>
-
-        </div><!-- / .codebase-docs__code -->
 
       </div>
     </div>
@@ -160,7 +130,11 @@
   $(document).codebase();
 </script>
 <script src="theme/prism/prism.js"></script>
-
+    <script>
+    $('.tabs__label').on('click', function(){
+      Prism.highlightAll();
+    });
+    </script>
 </body>
 
 </html>
