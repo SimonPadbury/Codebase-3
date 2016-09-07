@@ -1,5 +1,6 @@
 // UTILITY MIXINS: BUTTONS
 // =======================
+// File: codebase/scss/06_utility-mixins/_buttons.scss
 
 @mixin btn--3d {
   box-shadow:
@@ -26,7 +27,7 @@
   padding: $btn-padding-default;
   font-size: $base-font-size;
   line-height: $base-font-size;
-  color: $color-dark-gray;
+  color: $base-text-color-muted;
   text-decoration: none;
   background: transparent;
   box-shadow: inset 0 0 1px rgba(0,0,0,0.2);
@@ -40,9 +41,9 @@
   }
   &:hover {
     cursor: pointer;
-    color: $color-text-default;
+    color: $base-text-color;
     text-decoration: none;
-    background: $color-silver;
+    background: $deco-silver;
   }
   @if $btn-rounded == true {
     border-radius: $btn-border-radius;
@@ -67,47 +68,47 @@
 // Button colors
 
 @mixin btn--primary {
-  color: $color-primary-text;
-  background: $color-primary;
+  color: $btn-color-primary-text;
+  background: $btn-color-primary;
   &:hover {
-    color: $color-primary-text-dark;
-    background: $color-dark-primary;
+    color: $btn-color-primary-text-dark;
+    background: $btn-color-dark-primary;
   }
 }
 
 @mixin btn--secondary {
-  color: $color-secondary-text;
-  background: $color-secondary;
+  color: $btn-color-secondary-text;
+  background: $btn-color-secondary;
   &:hover {
-    color: $color-secondary-text-dark;
-    background: $color-dark-secondary;
+    color: $btn-color-secondary-text-dark;
+    background: $btn-color-dark-teal;
   }
 }
 
 @mixin btn--warning {
-  color: $color-warning-text;
-  background: $color-warning;
+  color: $btn-color-warning-text;
+  background: $btn-color-warning;
   &:hover {
-    color: $color-warning-text-dark;
-    background: $color-dark-warning;
+    color: $btn-color-warning-text-dark;
+    background: $btn-color-dark-orange;
   }
 }
 
 @mixin btn--success {
-  color: $color-success-text;
-  background: $color-success;
+  color: $btn-color-success-text;
+  background: $btn-color-success;
   &:hover {
-    color: $color-success-text-dark;
-    background: $color-dark-success;
+    color: $btn-color-success-text-dark;
+    background: $btn-color-dark-green;
   }
 }
 
 @mixin btn--error {
-  color: $color-error-text;
-  background: $color-error;
+  color: $btn-color-error-text;
+  background: $btn-color-error;
   &:hover {
-    color: $color-error-text-dark;
-    background: $color-dark-error;
+    color: $btn-color-error-text-dark;
+    background: $btn-color-dark-red;
   }
 }
 

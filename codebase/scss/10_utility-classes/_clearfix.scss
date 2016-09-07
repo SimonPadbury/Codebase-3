@@ -1,0 +1,7 @@
+// UTILITY CLASS-BUILDER: CLEARFIX
+// ===============================
+// File: codebase/scss/10_utility-mixins/_clearfix.scss
+
+.clearfix {
+  @include clearfix;
+}

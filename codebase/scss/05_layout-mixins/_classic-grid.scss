@@ -1,8 +1,9 @@
 // LAYOUT MIXINS: CLASSIC GRID
 // ===========================
-// File: 06_layout-mixins/_classic-grid.scss
+// File: codebase/scss/05_layout-mixins/_classic-grid.scss
 
 @mixin classic-col--span {
+  float: left;
   &--span {
     @for $i from 1 through $grid-max-cols {
       &-#{$i} {

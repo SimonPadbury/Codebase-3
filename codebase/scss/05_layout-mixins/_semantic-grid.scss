@@ -1,8 +1,9 @@
 // LAYOUT MIXINS: SEMANTIC GRID
 // ============================
-// File: 06_layout-mixins/_semantic-grid.scss
+// File: codebase/scss/05_layout-mixins/_semantic-grid.scss
 
 @mixin col--span($col--span) {
+  float: left;
   width: ($col--span / $grid-max-cols) * 100%;
 }
 
@@ -20,7 +21,6 @@
 
 @mixin col--centered($col--centered) {
   width: ($col--centered / $grid-max-cols) * 100%;
-  float: none;
   margin-right: auto;
   margin-left: auto;
 }

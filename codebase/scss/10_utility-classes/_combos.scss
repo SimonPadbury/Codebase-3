@@ -1,0 +1,23 @@
+// UTILITY CLASS-BUILDER: COMBOS
+// =============================
+// File: codebase/scss/10_utility-mixins/_combos.scss
+
+.combo {
+  &--first {
+    @include combo--first;
+  }
+  &--middle {
+    @include combo--middle;
+  }
+  &--last {
+    @include combo--last;
+  }
+}
+
+input.combo {
+  &--first,
+  &--middle,
+  &--last {
+    width: auto;
+  }
+}

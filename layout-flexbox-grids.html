@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Layout: Flexbox Grids | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  <link href="theme/prism/prism.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+
+<nav class="navbar docs__navbar deco-bb-thin-solid">
+  <div class="navbar__brand">
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3</small></a>
+  </div>
+  <div class="navbar__content">
+    <div class="navbar__right">
+      <ul class="show--md-up">
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="docs docs--layout">
+
+    <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+
+<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
+
+  <ul class="docs__sidebar-menu hide--md-up">
+    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+  </ul>
+
+  <h4>Docs</h4>
+
+  <ul class="docs__sidebar-menu">
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a>
+      <ul>
+        <li><a href="classless-typography.html">Typography</a></li>
+        <li><a href="classless-forms.html">Forms</a></li>
+      </ul>
+    </li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
+        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
+        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
+        <li><a href="layout-visibility.html">Visibility</a></li>
+        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-objects.html">Media Objects</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbars.html">Navbars</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popovers.html">Popovers</a></li>
+        <li><a href="components-slideshows.html">Slideshows</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+      </ul>
+    </li>
+    <li><a href="decoration.html">Decoration</a>
+      <ul>
+        <li><a href="decoration-margins.html">Margins</a></li>
+        <li><a href="decoration-borders.html">Borders</a></li>
+        <li><a href="decoration-paddings.html">Paddings</a></li>
+        <li><a href="decoration-colors.html">Colors</a></li>
+        <li><a href="decoration-shadows.html">Box Shadows</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+<!-- /.docs__sidebar -->
+
+    <main class="docs__main">
+
+      <header class="docs__header">
+        <span>Layout:</span>
+        <h1>Flexbox Grids</h1>
+      </header>
+
+      <div class="docs__content">
+
+        <p>Example:</p>
+
+        <section class="your-flexbox-grid-wrapper">
+          <div class="your-flexbox-article-column deco-b-thin-solid">Article
+            <section class="your-nested-flexbox-grid-wrapper">
+              <div class="deco-b-thin-solid">Nested</div>
+              <div class="deco-b-thin-solid">Nested</div>
+              <div class="deco-b-thin-solid">Nested</div>
+            </section>
+          </div>
+          <div class="your-flexbox-sidebar-column deco-b-thin-solid">Aside</div>
+        </section>
+        <section class="your-flexbox-grid-wrapper grid-example">
+          <div class="your-flexbox-centered-column deco-b-thin-solid">Centered</div>
+        </section>
+        <section class="your-flexbox-grid-wrapper">
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+          <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
+        </section>
+
+        <br/>
+        
+        <p>
+          Incorporate the Codebase flexbox grid mixins into your own layout, using your own choice of class names.
+        </p>
+
+        <p>
+          The Codebase flexbox grid mixins are named similar to the Codebase classic grid classes, except that the col numerals are used as in the example SCSS stylesheet below (this arrangement of mixins would give you the example layout above).
+        </p>
+
+        <p>
+          You can also control the media query breakpoints using the Codebase breakpoint mixins, as below.
+        </p>
+
+        <div class="tabs tabs--top docs__code">
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-html"><code>&lt;section class="your-flexbox-grid-wrapper"&gt;
+  &lt;div class="your-flexbox-article-column"&gt;
+    Article
+    &lt;section class="your-flexbox-nested-grid-wrapper"&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;/div&gt;
+    &lt;div class="your-flexbox-sidebar-column"&gt;
+      Aside
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="your-flexbox-grid-wrapper"&gt;
+  &lt;div class="your-flexbox-centered-column"&gt;
+    Centered
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="your-grid-wrapper"&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+  &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="variables-1">Variables</div>
+          <div id="variables-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// DEFAULT VARIABLES: BREAKPOINTS
+// ==============================
+// File: codebase/scss/01_default-variables/_breakpoints.scss
+
+$break-xs: 320px !default;
+$break-sm: 640px !default;
+$break-md: 960px !default;
+$break-lg: 1280px !default;
+</code></pre>
+              <pre class="language-scss"><code>// DEFAULT VARIABLES: GRID-SYSTEMS
+// ===============================
+// File: codebase/scss/01_default-variables/_grid-systems.scss
+
+$grid-max-cols: 12 !default;
+$grid-max-width: 1280px !default;
+
+$column-gutter-width--xs: 20px !default;
+$column-gutter-width--sm: 30px !default;
+$column-gutter-width--md: 40px !default;
+$column-gutter-width--lg: 50px !default;
+
+// Column gutter values are used for generating margins 
+// (50% either side of each column in the grid). 
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// LAYOUT MIXINS: GRID BASE
+// ========================
+// File: codebase/scss/05_layout-mixins/_grid-base.scss
+
+// Grid Container
+// --------------
+// For Classic and Semantic grids
+
+@mixin grid {
+  max-width: $grid-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  @include clearfix;
+  -webkit-backface-visibility: hidden;
+}
+
+// Grid with gutter between columns
+// --------------------------------
+// Include `grid--gutter` in your GRID container class, not in each col.
+
+@mixin grid--gutter {
+  > * {
+    padding-right: ($column-gutter-width--xs / 2);
+    padding-left: ($column-gutter-width--xs / 2);
+    @include break__sm--up {
+      padding-right: $column-gutter-width--sm / 2;
+      padding-left: $column-gutter-width--sm / 2;
+    }
+    @include break__md--up {
+      padding-right: $column-gutter-width--md / 2;
+      padding-left: $column-gutter-width--md / 2;
+    }
+    @include break__lg--up {
+      padding-right: $column-gutter-width--lg / 2;
+      padding-left: $column-gutter-width--lg / 2;
+    }
+  }
+}
+
+// Nested Grid
+// -----------
+// Only include `grid--nested` on a NESTED grid container IF the parent grid has a gutter.
+@mixin grid--nested {
+  margin-right: -($column-gutter-width--xs / 2);
+  margin-left: -($column-gutter-width--xs / 2);
+  @include break__sm--up {
+    margin-right: -($column-gutter-width--sm / 2);
+    margin-left: -($column-gutter-width--sm / 2);
+  }
+  @include break__md--up {
+    margin-right: -($column-gutter-width--md / 2);
+    margin-left: -($column-gutter-width--md / 2);
+  }
+  @include break__lg--up {
+    margin-right: -($column-gutter-width--lg / 2);
+    margin-left: -($column-gutter-width--lg / 2);
+  }
+}
+
+// Column Base
+// Used by Classic, Semantic and Flexbox Grid Systems
+
+@mixin col {
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  overflow: visible;
+}
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-2">Mixins (2)</div>
+          <div id="mixins-2" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// LAYOUT MIXINS: FLEXBOX GRID
+// ===========================
+// File: codebase/scss/05_layout-mixins/_flexbox-grid.scss
+
+// Similar to Semantic grid, except that the mixins use flexbox instead of floats.
+
+// Flexbox Grid Wrapper
+// Include this instead of the `grid` mixin when you are deploying the flexbox grid system
+// (i.e. at <= your lowest flexbox grid breakpoint).
+
+@mixin grid--flexbox {
+  display: flex;
+  max-width: $grid-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  @include clearfix;
+  -webkit-backface-visibility: hidden;
+}
+// If you have a surplus of columns at any time, use @include grid--flexbox--wrap.
+@mixin grid--flexbox--wrap {
+  flex-wrap: wrap;
+}
+
+@mixin col--flexbox--span($flexbox-col--span) {
+  width: ($flexbox-col--span / $grid-max-cols) * 100%;
+}
+
+// Note: in the Codebase flexbox grid, push/pull works by col `re-ordering`.
+
+@mixin col--flexbox--push($col--flexbox--push) {
+  order: $col--flexbox--push;
+}
+
+@mixin col--flexbox--pull($col--flexbox--pull) {
+  order: -$col--flexbox--pull;
+}
+
+@mixin col--flexbox--centered($col--flexbox--centered) {
+  width: ($col--flexbox--centered / $grid-max-cols) * 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Incomplete grid rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).
+// However, if you have a surplus of columns at any time, then @include grid--flexbox--wrap.
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// FLEXBOX GRID EXAMPLE CLASS-BUILDER
+// ==================================
+// Note: Name the classes of your grid `&lt;div&gt;`s anything you like.
+
+.your-flexbox-grid-wrapper {
+  @include grid;
+  @include grid--gutter;
+  @include break__md--up {
+    @include grid--flexbox;
+  }
+}
+.your-flexbox-article-column {
+  @include col;
+  @include break__md--up {
+    @include col--flexbox--span(9);
+  }
+  @include break__lg--up {
+    @include col--flexbox--push(1);
+  }
+}
+.your-flexbox-sidebar-column {
+  @include col;
+  @include break__md--up {
+    @include col--flexbox--span(3);
+  }
+  @include break__lg--up {
+    @include col--flexbox--pull(1);
+  }
+}
+.your-nested-flexbox-grid-wrapper {
+  @include grid;
+  @include grid--gutter;
+  @include grid--nested;
+  @include break__sm--up {
+    @include grid--flexbox;
+    @include grid--nested;
+    > div {
+      @include col;
+      @include col--flexbox--span(4);
+    }
+  }
+}
+.your-flexbox-centered-column {
+  @include col;
+  @include break__sm--up {
+    @include col--flexbox--centered(7);
+  }
+}
+.flexbox-twelth {
+  @include col;
+  @include col--flexbox--span(1);
+}
+</code></pre>
+            </div>
+          </div>
+
+        </div>
+        <!-- / .docs__code -->
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:290px">Mixin</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>@mixin grid</td>
+              <td>The container mixin. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.
+                <br>
+                <br>If a containing wrapper doesn't have this grid mixin included, then a grid system will expand to whatever the width of the container is, without maxing out at $grid-max-width. E.g. it could expand to the BODY width.</td>
+            </tr>
+            <tr>
+              <td>@mixin grid--flexbox</td>
+              <td>Container mixin, with <b>display: flex</b>. Sets the max width (from variable $grid-max-width), does centering by auto margin right and left.</td>
+            </tr>
+            <tr>
+              <td>@mixin grid--flexbox--wrap</td>
+              <td>Adds <b>flex-wrap: wrap</b> to the continer. For use if you have a surplus of columns at any time.</td>
+            </tr>
+            <tr>
+              <td>@mixin grid--gutter</td>
+              <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
+            </tr>
+            <tr>
+              <td>@mixin grid--nested</td>
+              <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
+            </tr>
+            <tr>
+              <td>@mixin col</td>
+              <td>(Min height 1px.)</td>
+            </tr>
+            <tr>
+              <td>@mixin col--flexbox--centered(X)</td>
+              <td>Centering is accomplished by auto margin right and left. Column spanning is as calculated out of $grid-max-cols (default is 12).</td>
+            </tr>
+            <tr>
+              <td>@mixin col--flexbox--span(X)</td>
+              <td>Column spanning, as calculated out of $grid-max-cols (default is 12).</td>
+            </tr>
+            <tr>
+              <td>@mixin col--flexbox--push(X)</td>
+              <td>Column pushing to the right using flexbox re-ordering. <code>*--push(1)</code> moves a column to the right by increasing its column order by 1.
+                <br>
+                <br>E.g. pushing col [A] by 1 while pullng column [B] by 1 will result in the column order being swapped to [B][A].)</td>
+            </tr>
+            <tr>
+              <td>@mixin col--flexbox--pull(X)</td>
+              <td>Column pulling to the left using flexbox re-ordering). <code>*--pull(1)</code> moves a column to the left by decreasing its column order by 1.</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </main>
+  </div>
+
+  
+  <footer class="docs__footer deco-bg-charcoal">
+    <span class="deco-text-light-gray">
+      <a href="index.html">Codebase</a> v.1.3 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    </span>
+  </footer>
+
+</div><!-- /.docs -->
+</div><!-- /.page-wrap -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
+<script src="theme/prism/prism.js"></script>
+
+</body>
+
+</html>

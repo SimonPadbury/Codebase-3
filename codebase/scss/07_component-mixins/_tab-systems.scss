@@ -1,27 +1,26 @@
 // COMPONENT: TABS
 // ===============
+// File: codebase/scss/07_component-mixins/_tab-systems.scss
 
 @mixin tabs {
-  margin: $base-line-height 0;
-  font-size: 0;
+  margin: $base-line-height-rem 0;
   @include clearfix;
 }
 
 @mixin tabs__label {
   z-index: 0;
   padding: $tabs-label-padding;
-  font-size: $base-font-size;
-  color: $color-tabs-dark-text;
-  background: $color-tabs-dark-background;
+  color: $deco-tabs-dark-text;
+  background: $deco-tabs-dark-background;
   &:hover {
-    color: $color-text-default;
-    background: $color-tabs-dark-background-hover;
+    color: $base-text-color;
+    background: $deco-tabs-dark-background-hover;
     cursor: pointer
   }
   &--is-front {
     z-index: 2;
-    color: $color-text-default;
-    background: $color-tabs-background !important;
+    color: $base-text-color;
+    background: $deco-tabs-background !important;
     box-shadow: none;
     cursor: default
   }
@@ -33,13 +32,13 @@
   float: left;
   width: 100%;
   height: 0;
-  font-size: $base-font-size;
+  //font-size: $base-font-size;
   overflow: hidden;
   opacity: 0;
   &-content {
     border: $deco-border-thin-solid;
     padding: $tabs-card-padding;
-    background: $color-tabs-background;
+    background: $deco-tabs-background;
   }
   &--is-front {
     height: auto;
@@ -52,7 +51,6 @@
 @mixin tabs--top__label {
   @include tabs__label;
   display: inline-block;
-  margin-right: $deco-spacing-xs;
   border-top: $deco-border-thin-solid;
   border-right: $deco-border-thin-solid;
   border-left: $deco-border-thin-solid;
@@ -102,7 +100,7 @@
   border-left: $deco-border-thin-solid;
   box-shadow: $deco-box-shadow-inset-bottom;
   &--is-front {
-    background: $color-tabs-background;
+    background: $deco-tabs-background;
   }
 }
 

@@ -1,51 +1,50 @@
-/*
-Dropdown (Utility)
-------------------
-• Uses the Reset Overlay utility.
-• Can be applied to `<button>` or or any block element.
-• Also used for menubar dropdowns.
-*/
+// DROPDOWNS (Utilities)
+// =====================
+// • Uses the Reset Overlay utility.
+// • Can be applied to `<button>` or or any block element.
+// • Also used for menubar dropdowns.
 
 (function ($) {
   'use strict';
   $.fn.cb_dropdown_toggle = function () {
     // called by $('.dropdown__toggle').cb_dropdown_toggle()
 
-    $(this).each(function () {
-      var icon = $(this).data('icon');
-
-      $(this).append('<i class="' + icon + '"></i>');
-    });
-
     function cb_dropdown(e) {
 
-      if (!$('.reset-overlay').hasClass('reset-overlay--is-raised')) {
-        e.preventDefault();
-      }
-      /*jshint validthis: true */
-      var dropdownContent = $(this).data('dropdown-content');
+      if ($('.reset-overlay').hasClass('reset-overlay--is-raised')) {
 
-      if (!$('#' + dropdownContent).hasClass('dropdown__content--is-revealed')) {
-
-        $('#' + dropdownContent).addClass('dropdown__toggle--is-toggled');
-        $('#' + dropdownContent).addClass('dropdown__content--is-revealed');
-        $('.reset-overlay').addClass('reset-overlay--is-raised');
-
-        $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
-        $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
-
-        $('.dropdown__content').click(function (e) {
-          e.stopPropagation();
-        });
-
-        $('.dropdown__content').touchstart(function (e) {
-          e.stopPropagation();
-        });
-
-      } else {
         $.fn.cb_reset();
-      }
+        
+      } else {
+        
+        if ($('.dropdown__toggle').hasClass('dropdown__toggle--is-toggled')) {
+          
+          $.fn.cb_reset();
+          
+        } else {
 
+          e.preventDefault();
+
+          /* jshint validthis: true */
+          $(this)
+            .addClass('dropdown__toggle--is-toggled')
+            .next('.dropdown__content')
+            .addClass('dropdown__content--is-revealed');
+          $('.reset-overlay').addClass('reset-overlay--is-raised');
+
+          $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
+          $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
+
+          $('.dropdown__content').click(function (e) {
+            e.stopPropagation();
+          });
+
+          $('.dropdown__content').touchstart(function (e) {
+            e.stopPropagation();
+          });
+
+        }       
+      }
     }
 
     $(this).on('click', cb_dropdown);

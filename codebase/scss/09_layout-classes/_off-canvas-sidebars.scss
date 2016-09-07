@@ -1,0 +1,75 @@
+// LAYOUT CLASSES-BUILDER: OFF-CANVAS SIDEBAR
+// ==========================================
+// File: codebase/scss/09_layout-classes/_off-canvas-sidebar.scss
+
+// Off-canvas navicon
+
+.off-canvas-navicon {
+  @include off-canvas-navicon;
+  &--right {
+    @include off-canvas-navicon--right;
+  }
+  &--left {
+    @include off-canvas-navicon--left;
+  }
+}
+
+// Off-canvas sidebar
+
+.xs--off-canvas {
+  @include break__xs--only {
+    &.off-canvas--right {
+      @include off-canvas-right;
+    }
+    &.off-canvas--left {
+      @include off-canvas-left;
+    }
+    @include off-canvas;
+  }
+}
+
+.sm--off-canvas {
+  @include break__sm--down {
+    &.off-canvas--right {
+      @include off-canvas-right;
+    }
+    &.off-canvas--left {
+      @include off-canvas-left;
+    }
+    @include off-canvas;
+  }
+}
+
+.md--off-canvas {
+  @include break__md--down {
+    &.off-canvas--right {
+      @include off-canvas-right;
+    }
+    &.off-canvas--left {
+      @include off-canvas-left;
+    }
+    @include off-canvas;
+  }
+}
+
+.lg--off-canvas {
+  &.off-canvas--right {
+    @include off-canvas-right;
+  }
+  &.off-canvas--left {
+    @include off-canvas-left;
+  }
+  @include off-canvas;
+}
+
+// Compensation for use if navbar is position:fixed;
+// (`.body--navbar-is-fixed` gets added by the jQuery script.)
+
+.body--navbar-is-fixed {
+  .off-canvas-navicon--right,
+  .off-canvas--right,
+  .off-canvas-navicon--left,
+  .off-canvas--left {
+    margin-top: $navbar-height;
+  }
+}

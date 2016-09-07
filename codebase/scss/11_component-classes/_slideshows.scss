@@ -1,0 +1,25 @@
+// COMPONENT CLASS-BUILDER: SLIDESHOW
+// ==================================
+// File: codebase/scss/11_component-classes/_slideshow.scss
+
+.slideshow {
+  @include slideshow;
+  &__inner {
+    @include slideshow__inner;
+  }
+  &__item {
+    @include slideshow__item;
+  }
+  &__prev {
+    @include slideshow__prev;
+  }
+  &__next {
+    @include slideshow__next;
+  }
+  &__pager-wrap {
+    @include slideshow__pager-wrap;
+  }
+  &__pager {
+    @include slideshow__pager;
+  }
+}

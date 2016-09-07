@@ -1,6 +1,6 @@
 // UTILITY: TYPOGRAPHY MIXINS
 // ==========================
-// File: 07_utility-mixins/_typography.scss
+// File: codebase/scss/06_utility-mixins/_typography.scss
 
 // Lead paragraph
 
@@ -30,7 +30,7 @@
     font-weight: 300;
     line-height: 90%;
   }
-  min-height: $base-line-height-px * 2;
+  min-height: $base-line-height * 2;
 }
 
 // Text alignment

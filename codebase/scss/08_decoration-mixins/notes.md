@@ -10,18 +10,18 @@ In this folder (`02_mixins-decoration/`) you may develop mixins as composites va
 For example: in the Codebase docs I have build simple info boxes such as:
 
 <div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-md deco-bg-silver">
-  <i class="fa fa-thumbs-o-up deco-text-primary"></i> <b>Hat tip:</b>...
+  <i class="fa fa-thumbs-o-up deco-text-blue"></i> <b>Hat tip:</b>...
 </div>
 
 These deco classes all refer to deco variables, and the `initial-icon` class includes the `initial-icon` mixin. So these could have been combined thus:
 
 .message-box--primary {
   border-left: $deco-border-thick-solid;
-  border-color: $color-primary;
-  background: $color-silver;
+  border-color: $deco-primary;
+  background: $deco-silver;
   @include initial-icon;
   > i:first-of-type {
-    color: $color-primary;
+    color: $deco-primary;
   }
 }
 

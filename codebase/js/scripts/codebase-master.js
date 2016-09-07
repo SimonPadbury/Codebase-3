@@ -1,10 +1,10 @@
-// CODEBASE v.1.2
+// CODEBASE v.1.3
 // ==============
 // Notes:
-// • the `` prefix identifies a Codebase JS module file, that is `@codekit-prepend`ed in here.
+// • Codebase JS module files are `@codekit-prepend`ed in here.
 // • the `cb_` prefix identifies a Codebase function.
 
-// @codekit-prepend "debounce.js", "reset-overlay.js", "dropdowns.js", "off-canvas-sidebar.js", "navbar.js", "popover.js", "lightbox.js", "modal.js", "slideshow.js", "tab-systems.js", "responsive-table.js", "pagination.js";
+// @codekit-prepend "debounce.js", "reset-overlay.js", "dropdowns.js", "off-canvas-sidebars.js", "navbars.js", "popovers.js", "slideshows.js", "tab-systems.js", "responsive-tables.js", "pagination.js";
 
 /*
 ********************************************************************************
@@ -35,12 +35,6 @@
 
       // Popover (Component)
       $('.popover').cb_popover();
-
-      // Lightbox (Component)
-      $('.lightbox').cb_lightbox();
-
-      // Modal (Component)
-      $('.modal').cb_modal();
 
       // Slideshow (Component)
       $('.slideshow').cb_slideshow();

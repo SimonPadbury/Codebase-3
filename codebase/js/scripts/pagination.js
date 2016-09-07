@@ -1,8 +1,6 @@
-/*
-Pagination
-----------
-• Just making the current link unfollowable.
-*/
+// PAGINATION (Components)
+// =======================
+// • Just making the current link unfollowable.
 
 (function ($) {
 

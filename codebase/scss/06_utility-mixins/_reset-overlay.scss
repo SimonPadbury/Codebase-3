@@ -1,5 +1,7 @@
 // UTILITY: RESET OVERLAY
 // ======================
+// File: codebase/scss/06_utility-mixins/_reset-overlay.scss
+
 // Used to close things that are opened by jQuery script by "clicking outside" it.
 
 @mixin reset-overlay {
@@ -22,5 +24,5 @@
 }
 
 @mixin reset-overlay--darken {
-  background-color: $color-reset-overlay--darken;
+  background-color: $deco-reset-overlay--darken;
 }

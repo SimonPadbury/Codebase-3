@@ -1,6 +1,5 @@
-/*
-Debounce (Utility)
-*/
+// DEBOUNCE (Utilities)
+// ====================
 
 (function ($) {
   'use strict';
@@ -21,40 +20,41 @@ Debounce (Utility)
 }(jQuery));
 
 
-/*
-Reset Overlay (Utility)
------------------------
-• Used by modals, dropdowns, off-canvas sidebar and anything else that needs
-to be dismissed by "clicking outside" the open/active element.
-• Put everything that needs `.reset-overlay` activity in this function.
-*/
+// RESET OVERLAY (Utilities)
+// =========================
+// • Used by modals, dropdowns, off-canvas sidebar and anything else that
+// needs to be dismissed by "clicking outside" the open/active element.
+// • Put everything that needs `.reset-overlay` activity in this function.
 
-// Reset
-// -----
+// The reset
 
 (function ($) {
   'use strict';
   $.fn.cb_reset = function () {
 
-    $('body').removeClass('off-canvas--is-open');
-    $('.reset-overlay')
-      .removeClass('reset-overlay--darken')
-      .removeClass('reset-overlay--is-raised')
-      .removeClass('reset-overlay--is-raised-higher');
+    $('.off-canvas-navicon, .off-canvas--right, .off-canvas--left').removeClass('off-canvas--is-open');
+
     $('.navbar').removeClass('navbar--is-open');
     if ($('.navbar__navicon').is(':visible')) {
       $('.navbar__content').slideUp();
     }
     $('.dropdown__toggle').removeClass('dropdown__toggle--is-toggled');
     $('.dropdown__content').removeClass('dropdown__content--is-revealed');
+
     $('.popover__wrap').removeClass('popover__wrap--is-open');
-    $('.lightbox__wrap').removeClass('lightbox__wrap--is-open');
-    $('.modal__wrap').removeClass('modal__wrap--is-open');
+
+    $('.reset-overlay').removeClass('reset-overlay--darken');
+
+    setTimeout(function () {
+      $('.reset-overlay')
+        .removeClass('reset-overlay--is-raised')
+        .removeClass('reset-overlay--is-raised-higher');
+    }, 300);
+
   };
 }(jQuery));
 
-// Reset Overlay
-// -------------
+// The reset-overlay
 
 (function ($) {
 
@@ -73,54 +73,53 @@ to be dismissed by "clicking outside" the open/active element.
 }(jQuery));
 
 
-/*
-Dropdown (Utility)
-------------------
-• Uses the Reset Overlay utility.
-• Can be applied to `<button>` or or any block element.
-• Also used for menubar dropdowns.
-*/
+// DROPDOWNS (Utilities)
+// =====================
+// • Uses the Reset Overlay utility.
+// • Can be applied to `<button>` or or any block element.
+// • Also used for menubar dropdowns.
 
 (function ($) {
   'use strict';
   $.fn.cb_dropdown_toggle = function () {
     // called by $('.dropdown__toggle').cb_dropdown_toggle()
 
-    $(this).each(function () {
-      var icon = $(this).data('icon');
-
-      $(this).append('<i class="' + icon + '"></i>');
-    });
-
     function cb_dropdown(e) {
 
-      if (!$('.reset-overlay').hasClass('reset-overlay--is-raised')) {
-        e.preventDefault();
-      }
-      /*jshint validthis: true */
-      var dropdownContent = $(this).data('dropdown-content');
+      if ($('.reset-overlay').hasClass('reset-overlay--is-raised')) {
 
-      if (!$('#' + dropdownContent).hasClass('dropdown__content--is-revealed')) {
-
-        $('#' + dropdownContent).addClass('dropdown__toggle--is-toggled');
-        $('#' + dropdownContent).addClass('dropdown__content--is-revealed');
-        $('.reset-overlay').addClass('reset-overlay--is-raised');
-
-        $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
-        $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
-
-        $('.dropdown__content').click(function (e) {
-          e.stopPropagation();
-        });
-
-        $('.dropdown__content').touchstart(function (e) {
-          e.stopPropagation();
-        });
-
-      } else {
         $.fn.cb_reset();
-      }
+        
+      } else {
+        
+        if ($('.dropdown__toggle').hasClass('dropdown__toggle--is-toggled')) {
+          
+          $.fn.cb_reset();
+          
+        } else {
 
+          e.preventDefault();
+
+          /* jshint validthis: true */
+          $(this)
+            .addClass('dropdown__toggle--is-toggled')
+            .next('.dropdown__content')
+            .addClass('dropdown__content--is-revealed');
+          $('.reset-overlay').addClass('reset-overlay--is-raised');
+
+          $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
+          $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
+
+          $('.dropdown__content').click(function (e) {
+            e.stopPropagation();
+          });
+
+          $('.dropdown__content').touchstart(function (e) {
+            e.stopPropagation();
+          });
+
+        }       
+      }
     }
 
     $(this).on('click', cb_dropdown);
@@ -130,11 +129,10 @@ Dropdown (Utility)
 }(jQuery));
 
 
-/*
-Off-Canvas Sidebar (Layout)
----------------------------
-• Using the Reset Overlay utility.
-*/
+// OFF-CANVAS SIDEBARS (Layout)
+// ============================
+// Using the Reset Overlay utility.
+
 
 (function ($) {
   'use strict';
@@ -146,39 +144,42 @@ Off-Canvas Sidebar (Layout)
     $('[class*="md--off-canvas"]').prev().addClass('show--md-down');
     $('[class*="lg--off-canvas"]').prev().addClass('show--lg-down');
 
-    function cb_off_canvas_open() {
-      $('body').addClass('off-canvas--is-open');
-      $('.reset-overlay').addClass('reset-overlay--is-raised');
-      $('.xs--off-canvas').scrollTop(0);
-      $('.sm--off-canvas').scrollTop(0);
-      $('.md--off-canvas').scrollTop(0);
-      $('.lg--off-canvas').scrollTop(0);
+    function cb_off_canvas_open(e) {
+      if (!$('.off-canvas-navicon').hasClass('off-canvas--is-open')) {
 
-      $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
-      $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
-    }
+        /* jshint validthis: true */
+        var offCanvas = $(this).data('off-canvas');
 
-    function cb_off_canvas_navicon(e) {
-      if (!$('body').hasClass('off-canvas--is-open')) {
-        cb_off_canvas_open();
+        $('.reset-overlay').addClass('reset-overlay--is-raised');
+
+        $('[data-off-canvas=' + offCanvas + ']').addClass('off-canvas--is-open');
+        $('#' + offCanvas).addClass('off-canvas--is-open');
+
+        $('.xs--off-canvas').scrollTop(0);
+        $('.sm--off-canvas').scrollTop(0);
+        $('.md--off-canvas').scrollTop(0);
+        $('.lg--off-canvas').scrollTop(0);
+
+        $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
+        $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
+
       } else {
         $.fn.cb_reset();
       }
       e.preventDefault();
     }
-    $('.off-canvas-navicon').on('click', cb_off_canvas_navicon);
-    $('.off-canvas-navicon').on('touchstart', cb_off_canvas_navicon);
+
+    $('.off-canvas-navicon').on('click', cb_off_canvas_open);
+    $('.off-canvas-navicon').on('touchstart', cb_off_canvas_open);
 
 
   };
 }(jQuery));
 
 
-/*
-Navbar (Component)
--------------------
-• Using navbar dropdowns (see herein below).
-*/
+// NAVBARS (Components)
+// ====================
+// • Using navbar dropdowns (see herein below).
 
 (function ($) {
 
@@ -198,11 +199,15 @@ Navbar (Component)
     // For revealing collapsed navbar on sm screens.
 
     function cb_navbar_navicon(e) {
-      /*jshint validthis: true */
+      /* jshint validthis: true */
       if (!$(this).parent('.navbar').hasClass('navbar--is-open')) {
         $(this).parent('.navbar').addClass('navbar--is-open');
         $('.reset-overlay').addClass('reset-overlay--is-raised');
         $(this).siblings('.navbar__content').slideDown();
+        
+        $('.reset-overlay--is-raised').on('click', $.fn.cb_reset);
+          $('.reset-overlay--is-raised').on('touchstart', $.fn.cb_reset);
+        
       } else {
         $.fn.cb_reset();
       }
@@ -221,25 +226,18 @@ Navbar (Component)
 
     $('.navbar ul ul')
       .addClass('dropdown__content')
-      .parent().find('>a').addClass('dropdown__toggle').cb_dropdown_toggle();
-
-    $('.navbar .dropdown__toggle').on('click', function () {
-      location.href = $(this).attr('href');
-    });
+      .parent().find('>a')
+      .addClass('dropdown__toggle')
+      .append('&nbsp;<i class="dropdown__caret fa fa-caret-down"/>')
+      .cb_dropdown_toggle();
 
   };
 }(jQuery));
 
 
-/*
-Popover (Component)
--------------------
-In Codebase, popovers, lightboxes and modals are essentially the same thing.
-• The classes are different but they all use the same 'popover' mixins.
-• The lightbox and modal JS are cloned from the popover JS, but then their
-variable names, function names and class names were changed.
-• Using the Reset Overlay utility.
-*/
+// POPOVERS (Components)
+// =====================
+// • Using the Reset Overlay utility.
 
 (function ($) {
 
@@ -254,7 +252,7 @@ variable names, function names and class names were changed.
 
       e.preventDefault();
 
-      /*jshint validthis: true */
+      /* jshint validthis: true */
       $(this).blur();
 
       var popover_id = $(this).attr('data-popover');
@@ -262,8 +260,8 @@ variable names, function names and class names were changed.
       $('#' + popover_id).scrollTop(0).parent().addClass('popover__wrap--is-open');
       $('.reset-overlay').addClass('reset-overlay--is-raised-higher reset-overlay--darken');
 
-      $('.reset-overlay--is-raised-higher').on('click', $.fn.cb_reset);
-
+      $('.popover__wrap--is-open').on('click', $.fn.cb_reset);
+      
       $('.popover__close').on('click', $.fn.cb_reset);
 
       popover_id = null;
@@ -275,97 +273,8 @@ variable names, function names and class names were changed.
 }(jQuery));
 
 
-/*
-Lightbox (Component)
--------------------
-In Codebase, popovers, lightboxes and modals are essentially the same thing.
-• The classes are different but they all use the same 'popover' mixins.
-• The lightbox and modal JS are cloned from the popover JS, but then their
-variable names, function names and class names were changed.
-• Using the Reset Overlay utility.
-*/
-
-(function ($) {
-
-  'use strict';
-
-  $.fn.cb_lightbox = function () {
-    // called by $('.lightbox').cb_lightbox();
-
-    $(this).wrap('<div class="lightbox__wrap" />');
-
-    function cb_lightbox_open(e) {
-
-      e.preventDefault();
-
-      /*jshint validthis: true */
-      $(this).blur();
-
-      var lightbox_id = $(this).attr('data-lightbox');
-
-      $('#' + lightbox_id).scrollTop(0).parent().addClass('lightbox__wrap--is-open');
-      $('.reset-overlay').addClass('reset-overlay--is-raised-higher reset-overlay--darken');
-
-      $('.reset-overlay--is-raised-higher').on('click', $.fn.cb_reset);
-
-      $('.lightbox__close').on('click', $.fn.cb_reset);
-
-      lightbox_id = null;
-    }
-
-    $('.lightbox__open').on('click', cb_lightbox_open);
-
-  };
-}(jQuery));
-
-
-/*
-Modal (Component)
--------------------
-In Codebase, popovers, lightboxes and modals are essentially the same thing.
-• The classes are different but they all use the same 'popover' mixins.
-• The lightbox and modal JS are cloned from the popover JS, but then their
-variable names, function names and class names were changed.
-• Using the Reset Overlay utility.
-*/
-
-(function ($) {
-
-  'use strict';
-
-  $.fn.cb_modal = function () {
-    // called by $('.modal').cb_modal();
-
-    $(this).wrap('<div class="modal__wrap" />');
-
-    function cb_modal_open(e) {
-
-      e.preventDefault();
-
-      /*jshint validthis: true */
-      $(this).blur();
-
-      var modal_id = $(this).attr('data-modal');
-
-      $('#' + modal_id).scrollTop(0).parent().addClass('modal__wrap--is-open');
-      $('.reset-overlay').addClass('reset-overlay--is-raised-higher reset-overlay--darken');
-
-      $('.reset-overlay--is-raised-higher').on('click', $.fn.cb_reset);
-
-      $('.modal__close').on('click', $.fn.cb_reset);
-
-      modal_id = null;
-    }
-
-    $('.modal__open').on('click', cb_modal_open);
-
-  };
-}(jQuery));
-
-
-/*
-Slideshow (Component)
-*/
+// SLIDESHOWS (Components)
+// =======================
 
 (function ($) {
   'use strict';
@@ -461,9 +370,8 @@ Slideshow (Component)
 }(jQuery));
 
 
-/*
-Tab Systems (Components)
-*/
+// TAB SYSTEMS (Components)
+// ========================
 
 (function ($) {
   'use strict';
@@ -475,7 +383,7 @@ Tab Systems (Components)
 
     function cb_tabs_operation() {
 
-      /*jshint validthis: true */
+      /* jshint validthis: true */
       var tab_id = $(this).attr('data-tabs');
 
       $(this).siblings().removeClass('tabs__label--is-front').removeClass('tabs__card--is-front');
@@ -486,7 +394,7 @@ Tab Systems (Components)
     $('.tabs__label').on('click', cb_tabs_operation);
     $('.tabs__label').on('touchstart', cb_tabs_operation);
 
-    // .tabs-left
+    // `.tabs--left`
 
     var tabsLeft_minHeight = 0;
 
@@ -518,13 +426,11 @@ Tab Systems (Components)
 }(jQuery));
 
 
-/*
-Responsive Table (Component)
-----------------------------
-• `.table--wrap-outer.table--wide`: adds an inset shadow to indicate that
-there is more table available (horizontally) that what can be seen.
-• `.table--wrap-inner`: the horizontal scrolling container.
-*/
+// RESPONSIVE TABLES (Components)
+// ==============================
+// • `.table--wrap-outer.table--wide`: adds an inset shadow to indicate that
+// there is more table available (horizontally) that what can be seen.
+// • `.table--wrap-inner`: the horizontal scrolling container.
 
 (function ($) {
 
@@ -567,11 +473,9 @@ there is more table available (horizontally) that what can be seen.
 }(jQuery));
 
 
-/*
-Pagination
-----------
-• Just making the current link unfollowable.
-*/
+// PAGINATION (Components)
+// =======================
+// • Just making the current link unfollowable.
 
 (function ($) {
 
@@ -588,13 +492,13 @@ Pagination
 }(jQuery));
 
 
-// CODEBASE v.1.2
+// CODEBASE v.1.3
 // ==============
 // Notes:
-// • the `` prefix identifies a Codebase JS module file, that is `@codekit-prepend`ed in here.
+// • Codebase JS module files are `@codekit-prepend`ed in here.
 // • the `cb_` prefix identifies a Codebase function.
 
-// @codekit-prepend "debounce.js", "reset-overlay.js", "dropdowns.js", "off-canvas-sidebar.js", "navbar.js", "popover.js", "lightbox.js", "modal.js", "slideshow.js", "tab-systems.js", "responsive-table.js", "pagination.js";
+// @codekit-prepend "debounce.js", "reset-overlay.js", "dropdowns.js", "off-canvas-sidebars.js", "navbars.js", "popovers.js", "slideshows.js", "tab-systems.js", "responsive-tables.js", "pagination.js";
 
 /*
 ********************************************************************************
@@ -625,12 +529,6 @@ Pagination
 
       // Popover (Component)
       $('.popover').cb_popover();
-
-      // Lightbox (Component)
-      $('.lightbox').cb_lightbox();
-
-      // Modal (Component)
-      $('.modal').cb_modal();
 
       // Slideshow (Component)
       $('.slideshow').cb_slideshow();

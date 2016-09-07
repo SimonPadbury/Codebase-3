@@ -1,86 +1,101 @@
-// DECORATION MIXINS: BORDERS
-// ==========================
+// DECORATION CLASS-BUILDER: BORDERS
+// =================================
+// File: codebase/scss/12_decoration-classes/_borders.scss
 
 // Border All
 
-.deco-b-zero {
-  border: 0 !important;
-}
-.deco-b-thin-solid {
-  border: $deco-border-thin-solid;
-}
-.deco-b-thin-dashed {
-  border: $deco-border-thin-dashed;
-}
-.deco-b-thick-solid {
-  border: $deco-border-thick-solid;
+.deco-b {
+  &-zero {
+    border: 0 !important;
+  }
+  &-thin-solid {
+    border: $deco-border-thin-solid;
+  }
+  &-thin-dashed {
+    border: $deco-border-thin-dashed;
+  }
+  &-thick-solid {
+    border: $deco-border-thick-solid;
+  }
 }
 
 // Border Top
 
-.deco-bt-zero {
-  border-top: 0 !important;
-}
-.deco-bt-thin-solid {
-  border-top: $deco-border-thin-solid;
-}
-.deco-bt-thin-dashed {
-  border-top: $deco-border-thin-dashed;
-}
-.deco-bt-thick-solid {
-  border-top: $deco-border-thick-solid;
+.deco-bt {
+  &-zero {
+    border-top: 0 !important;
+  }
+  &-thin-solid {
+    border-top: $deco-border-thin-solid;
+  }
+  &-thin-dashed {
+    border-top: $deco-border-thin-dashed;
+  }
+  &-thick-solid {
+    border-top: $deco-border-thick-solid;
+  }
 }
 
 // Border Right
 
-.deco-br-zero {
-  border-right: 0 !important;
-}
-.deco-br-thin-dashed {
-  border-right: $deco-border-thin-dashed;
-}
-.deco-br-thick-solid {
-  border-right: $deco-border-thick-solid;
-}
-.deco-br-thin-solid {
-  border-right: $deco-border-thin-solid;
+.deco-br {
+  &-zero {
+    border-right: 0 !important;
+  }
+  &-thin-solid {
+    border-right: $deco-border-thin-solid;
+  }
+  &-thin-dashed {
+    border-right: $deco-border-thin-dashed;
+  }
+  &-thick-solid {
+    border-right: $deco-border-thick-solid;
+  }
 }
 
 // Border Bottom
 
-.deco-bb-zero {
-  border-bottom: 0 !important;
-}
-.deco-bb-thin-solid {
-  border-bottom: $deco-border-thin-solid;
-}
-.deco-bb-thin-dashed {
-  border-bottom: $deco-border-thin-dashed;
-}
-.deco-bb-thick-solid {
-  border-bottom: $deco-border-thick-solid;
+.deco-bb {
+  &-zero {
+    border-bottom: 0 !important;
+  }
+  &-thin-solid {
+    border-bottom: $deco-border-thin-solid;
+  }
+  &-thin-dashed {
+    border-bottom: $deco-border-thin-dashed;
+  }
+  &-thick-solid {
+    border-bottom: $deco-border-thick-solid;
+  }
 }
 
 // Border Left
 
-.deco-bl-zero {
-  border-left: 0 !important;
-}
-.deco-bl-thin-solid {
-  border-left: $deco-border-thin-solid;
-}
-.deco-bl-thin-dashed {
-  border-left: $deco-border-thin-dashed;
-}
-.deco-bl-thick-solid {
-  border-left: $deco-border-thick-solid;
+.deco-bl {
+  &-zero {
+    border-left: 0 !important;
+  }
+  &-thin-solid {
+    border-left: $deco-border-thin-solid;
+  }
+  &-thin-dashed {
+    border-left: $deco-border-thin-dashed;
+  }
+  &-thick-solid {
+    border-left: $deco-border-thick-solid;
+  }
 }
 
 // Other Enhancements
 
-.deco-b-radius {
-  border-radius: $deco-border-radius;
-}
-.deco-b-circle {
-  border-radius: 50%;
+.deco-b {
+  &-radius {
+    border-radius: $deco-border-radius;
+    overflow: hidden;
+  }
+  &-circle {
+    border-radius: 50%;
+    overflow: hidden;
+  }
 }

@@ -17,70 +17,70 @@
 
 <body>
 
-  <div class="codebase-docs">
+  <div class="page-wrap">
 
-    <nav class="navbar codebase-docs__navbar">
+<nav class="navbar docs__navbar deco-bb-thin-solid">
   <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span></a>
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3</small></a>
   </div>
   <div class="navbar__content">
     <div class="navbar__right">
-      <ul>
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      <ul class="show--md-up">
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <header class="codebase-docs__header deco-bg-dark-warning">
-      <span class="deco-text-light-gray">Components:</span>
-      <h1 class="deco-text-white">Tables</h1>
-    </header>
+  <div class="docs docs--components">
 
+    <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
 
-  <div class="codebase-docs__main">
+<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
 
-    <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
-
-<div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
-  <ul class="codebase-docs__sidebar-menu hide--sm-up">
-    <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+  <ul class="docs__sidebar-menu hide--md-up">
     <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
   </ul>
 
-  <h4>Codebase Docs</h4>
+  <h4>Docs</h4>
 
-  <ul class="codebase-docs__sidebar-menu">
+  <ul class="docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a>
+      <ul>
+        <li><a href="classless-typography.html">Typography</a></li>
+        <li><a href="classless-forms.html">Forms</a></li>
+      </ul>
+    </li>
     <li><a href="layout.html">Layout</a>
       <ul>
-        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-        <li><a href="layout-visibility.html">Visibility </a></li>
-        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
+        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
+        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
+        <li><a href="layout-visibility.html">Visibility</a></li>
+        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
       </ul>
     </li>
     <li><a href="utilities.html">Utilities</a>
       <ul>
         <li><a href="utilities-typography.html">Typography</a></li>
         <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-images.html">Images</a></li>
         <li><a href="utilities-buttons.html">Buttons</a></li>
         <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
       </ul>
     </li>
     <li><a href="components.html">Components</a>
       <ul>
-        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-media-objects.html">Media Objects</a></li>
         <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-navbars.html">Navbars</a></li>
         <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popover.html">Popovers</a></li>
-        <li><a href="components-slideshow.html">Slideshow</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-popovers.html">Popovers</a></li>
+        <li><a href="components-slideshows.html">Slideshows</a></li>
         <li><a href="components-tab-systems.html">Tab Systems</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
       </ul>
     </li>
     <li><a href="decoration.html">Decoration</a>
@@ -89,141 +89,151 @@
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box shadows</a></li>
+        <li><a href="decoration-shadows.html">Box Shadows</a></li>
       </ul>
     </li>
   </ul>
+
 </div>
+<!-- /.docs__sidebar -->
 
-  <div class="codebase-docs__main-article">
+    <main class="docs__main">
 
-  <p>
-    Add <code>class="cb-table"</code> to tables. This adds the styles that you see below. <code>codebase.js</code> adds a wrapper around tables that have this class, enabling responsive overflow (horizontal scrolling). If the table width is wider than the width allowed in the webpage layout, then a thick border is added to the right of the table to indicate that there is more to the table than what is visible.
-  </p>
+      <header class="docs__header">
+        <span>Components:</span>
+        <h1>Tables</h1>
+      </header>
 
-  <p>
-    A table that is horizontally scrollable on narrow screens:
-  </p>
+      <div class="docs__content">
 
-  <table class="table table--nowrap">
-    <thead>
-      <tr>
-        <th>Table header 1</th>
-        <th>Table header 2</th>
-        <th>Table header 3</th>
-        <th>Table header 4</th>
-        <th>Table header 5</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Table content 1 A</td>
-        <td>Table content 2 A</td>
-        <td>Table content 3 A</td>
-        <td>Table content 4 A</td>
-        <td>Table content 5 A</td>
-      </tr>
-      <tr>
-        <td>Table content 1 B</td>
-        <td>Table content 2 B</td>
-        <td>Table content 3 B</td>
-        <td>Table content 4 B</td>
-        <td>Table content 5 B</td>
-      </tr>
-      <tr>
-        <td>Table content 1 C</td>
-        <td>Table content 2 C</td>
-        <td>Table content 3 C</td>
-        <td>Table content 4 C</td>
-        <td>Table content 5 C</td>
-      </tr>
-    </tbody>
-  </table>
+        <p>
+          Add <code>class="cb-table"</code> to tables. This adds the styles that you see below. <code>codebase.js</code> adds a wrapper around tables that have this class, enabling responsive overflow (horizontal scrolling). If the table width is wider than the width allowed in the webpage layout, then a thick border is added to the right of the table to indicate that there is more to the table than what is visible.
+        </p>
 
-  <p>
-    (The table above also has class <code>table--nowrap</code>.)
-  </p>
+        <p>
+          A table that is horizontally scrollable on narrow screens:
+        </p>
 
-  <p>
-    A table that is horizontally scrollable at all screen widths:
-  </p>
+        <table class="table table--nowrap">
+          <thead>
+            <tr>
+              <th>Table header 1</th>
+              <th>Table header 2</th>
+              <th>Table header 3</th>
+              <th>Table header 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Table content 1 A</td>
+              <td>Table content 2 A</td>
+              <td>Table content 3 A</td>
+              <td>Table content 4 A</td>
+            </tr>
+            <tr>
+              <td>Table content 1 B</td>
+              <td>Table content 2 B</td>
+              <td>Table content 3 B</td>
+              <td>Table content 4 B</td>
+            </tr>
+            <tr>
+              <td>Table content 1 C</td>
+              <td>Table content 2 C</td>
+              <td>Table content 3 C</td>
+              <td>Table content 4 C</td>
+            </tr>
+          </tbody>
+        </table>
 
-  <table class="table" id="table2">
-    <thead>
-      <tr>
-        <th>Table header 1</th>
-        <th>Table header 2</th>
-        <th>Table header 3</th>
-        <th>Table header 4</th>
-        <th>Table header 5</th>
-        <th>Table header 6</th>
-        <th>Table header 7</th>
-        <th>Table header 8</th>
-        <th>Table header 9</th>
-        <th>Table header 10</th>
-        <th>Table header 11</th>
-        <th>Table header 12</th>
-        <th>Table header 13</th>
-        <th>Table header 14</th>
-        <th>Table header 15</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Table content 1 A</td>
-        <td>Table content 2 A</td>
-        <td>Table content 3 A</td>
-        <td>Table content 4 A</td>
-        <td>Table content 5 A</td>
-        <td>Table content 6 A</td>
-        <td>Table content 7 A</td>
-        <td>Table content 8 A</td>
-        <td>Table content 9 A</td>
-        <td>Table content 10 A</td>
-        <td>Table content 11 A</td>
-        <td>Table content 12 A</td>
-        <td>Table content 13 A</td>
-        <td>Table content 14 A</td>
-        <td>Table content 15 A</td>
-      </tr>
-      <tr>
-        <td>Table content 1 B</td>
-        <td>Table content 2 B</td>
-        <td>Table content 3 B</td>
-        <td>Table content 4 B</td>
-        <td>Table content 5 B</td>
-        <td>Table content 6 B</td>
-        <td>Table content 7 B</td>
-        <td>Table content 8 B</td>
-        <td>Table content 9 B</td>
-        <td>Table content 10 B</td>
-        <td>Table content 11 B</td>
-        <td>Table content 12 B</td>
-        <td>Table content 13 B</td>
-        <td>Table content 14 B</td>
-        <td>Table content 15 B</td>
-      </tr>
-      <tr>
-        <td>Table content 1 C</td>
-        <td>Table content 2 C</td>
-        <td>Table content 3 C</td>
-        <td>Table content 4 C</td>
-        <td>Table content 5 C</td>
-        <td>Table content 6 C</td>
-        <td>Table content 7 C</td>
-        <td>Table content 8 B</td>
-        <td>Table content 9 B</td>
-        <td>Table content 10 B</td>
-        <td>Table content 11 B</td>
-        <td>Table content 12 B</td>
-        <td>Table content 13 B</td>
-        <td>Table content 14 B</td>
-        <td>Table content 15 B</td>
-      </tr>
-    </tbody>
-  </table>
+        <p>
+          (The table above also has class <code>table--nowrap</code>.)
+        </p>
 
-  <pre class="codebase-docs__code"><code class="language-html">&lt;table class="table"&gt;
+        <p>
+          A table that is horizontally scrollable at all screen widths:
+        </p>
+
+        <table class="table" id="table2">
+          <thead>
+            <tr>
+              <th>Table header 1</th>
+              <th>Table header 2</th>
+              <th>Table header 3</th>
+              <th>Table header 4</th>
+              <th>Table header 5</th>
+              <th>Table header 6</th>
+              <th>Table header 7</th>
+              <th>Table header 8</th>
+              <th>Table header 9</th>
+              <th>Table header 10</th>
+              <th>Table header 11</th>
+              <th>Table header 12</th>
+              <th>Table header 13</th>
+              <th>Table header 14</th>
+              <th>Table header 15</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Table content 1 A</td>
+              <td>Table content 2 A</td>
+              <td>Table content 3 A</td>
+              <td>Table content 4 A</td>
+              <td>Table content 5 A</td>
+              <td>Table content 6 A</td>
+              <td>Table content 7 A</td>
+              <td>Table content 8 A</td>
+              <td>Table content 9 A</td>
+              <td>Table content 10 A</td>
+              <td>Table content 11 A</td>
+              <td>Table content 12 A</td>
+              <td>Table content 13 A</td>
+              <td>Table content 14 A</td>
+              <td>Table content 15 A</td>
+            </tr>
+            <tr>
+              <td>Table content 1 B</td>
+              <td>Table content 2 B</td>
+              <td>Table content 3 B</td>
+              <td>Table content 4 B</td>
+              <td>Table content 5 B</td>
+              <td>Table content 6 B</td>
+              <td>Table content 7 B</td>
+              <td>Table content 8 B</td>
+              <td>Table content 9 B</td>
+              <td>Table content 10 B</td>
+              <td>Table content 11 B</td>
+              <td>Table content 12 B</td>
+              <td>Table content 13 B</td>
+              <td>Table content 14 B</td>
+              <td>Table content 15 B</td>
+            </tr>
+            <tr>
+              <td>Table content 1 C</td>
+              <td>Table content 2 C</td>
+              <td>Table content 3 C</td>
+              <td>Table content 4 C</td>
+              <td>Table content 5 C</td>
+              <td>Table content 6 C</td>
+              <td>Table content 7 C</td>
+              <td>Table content 8 B</td>
+              <td>Table content 9 B</td>
+              <td>Table content 10 B</td>
+              <td>Table content 11 B</td>
+              <td>Table content 12 B</td>
+              <td>Table content 13 B</td>
+              <td>Table content 14 B</td>
+              <td>Table content 15 B</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="tabs tabs--top docs__code">
+
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre><code class="language-html">&lt;table class="table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Table header 1&lt;/th&gt;
@@ -249,16 +259,96 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// COMPONENT MIXINS: TABLES
+// ========================
+// File: codebase/scss/07_component-mixins/_tables.scss
+
+@mixin table {
+  position: relative;
+  border-collapse: collapse;
+  min-width: 100%;
+  margin-top: 0;
+  margin-bottom: $base-line-height-rem;
+	caption {
+		padding: $deco-spacing-block;
+	}
+	th {
+    text-align: left;
+		background: rgba(204,204,204,0.2);
+	}
+	th, td {
+    border: $deco-border-thin-solid;
+		padding: $deco-spacing-sm;
+    vertical-align: top;
+	}
+  &--wrap-outer {
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    background: transparent;
+  }
+  &--wrap-inner {
+    position: relative;
+    overflow-x: auto;
+    z-index: -1;
+    margin: $deco-spacing-sm 0;
+  }
+  &--wide {
+    box-shadow: $deco-box-shadow-inset;
+  }
+  &--nowrap {
+    white-space: nowrap;
+  }
+}
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// COMPONENT CLASS-BUILDER: TABLES
+// ===============================
+// File: codebase/scss/11_component-classes/_tables.scss
+
+.table {
+  @include table;
+}
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="js-1">JS (jQuery)</div>
+          <div id="js-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/js/scripts/responsive-tables.js"></pre>
+            </div>
+          </div>
+
+        </div>
+        <!-- / .docs__code -->
 
       </div>
+    </main>
   </div>
-</main>
 
-    <footer class="codebase-docs__footer deco-bg-charcoal">
-  <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-  </span>
-</footer>
+  
+  <footer class="docs__footer deco-bg-charcoal">
+    <span class="deco-text-light-gray">
+      <a href="index.html">Codebase</a> v.1.3 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    </span>
+  </footer>
+
+</div><!-- /.docs -->
+</div><!-- /.page-wrap -->
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>

@@ -1,6 +1,6 @@
 // COMPONENT MIXINS: MENUS
 // =======================
-// File: 08_component-mixins/_menus.scss
+// File: codebase/scss/07_component-mixins/_menus.scss
 
 @mixin menu {
   list-style-type: none;
@@ -22,7 +22,7 @@
   padding: $deco-spacing-block;
   &:hover {
     text-decoration: none;
-    background: $color-menu-block-hover-background;
+    background: $deco-menu-block-hover-background;
   }
 }
 

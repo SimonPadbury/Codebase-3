@@ -1,5 +1,7 @@
 // LAYOUT MIXINS: FLEXBOX GRID
 // ===========================
+// File: codebase/scss/05_layout-mixins/_flexbox-grid.scss
+
 // Similar to Semantic grid, except that the mixins use flexbox instead of floats.
 
 // Flexbox Grid Wrapper
@@ -15,20 +17,11 @@
   @include clearfix;
   -webkit-backface-visibility: hidden;
 }
-// If you have a surplus of columns at any time, 
-// use @include grid-flexbox--wrap.
+// If you have a surplus of columns at any time, use @include grid--flexbox--wrap.
 @mixin grid--flexbox--wrap {
   flex-wrap: wrap;
 }
 
-// Flexbox Column Base
-
-@mixin col--flexbox {
-  position: relative;
-  min-height: 1px;
-  width: 100%;
-  overflow: visible;
-}
 @mixin col--flexbox--span($flexbox-col--span) {
   width: ($flexbox-col--span / $grid-max-cols) * 100%;
 }
@@ -38,9 +31,11 @@
 @mixin col--flexbox--push($col--flexbox--push) {
   order: $col--flexbox--push;
 }
+
 @mixin col--flexbox--pull($col--flexbox--pull) {
   order: -$col--flexbox--pull;
 }
+
 @mixin col--flexbox--centered($col--flexbox--centered) {
   width: ($col--flexbox--centered / $grid-max-cols) * 100%;
   margin-right: auto;
@@ -48,5 +43,5 @@
 }
 
 // Incomplete grid rows? No problem. Rows can simply be incomplete (no `.end` or
-// `.omega` classes required). 
+// `.omega` classes required).
 // However, if you have a surplus of columns at any time, then @include grid--flexbox--wrap.

@@ -17,69 +17,70 @@
 
 <body>
 
-  <div class="codebase-docs">
+  <div class="page-wrap">
 
-    <nav class="navbar codebase-docs__navbar">
+<nav class="navbar docs__navbar deco-bb-thin-solid">
   <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span></a>
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3</small></a>
   </div>
   <div class="navbar__content">
     <div class="navbar__right">
-      <ul>
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      <ul class="show--md-up">
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <header class="codebase-docs__header deco-bg-error">
-      <span class="deco-text-gray">Decoration:</span>
-      <h1 class="deco-text-white">Margins</h1>
-    </header>
+  <div class="docs docs--decoration">
 
-    <div class="codebase-docs__main">
+    <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
 
-      <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
 
-<div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
-  <ul class="codebase-docs__sidebar-menu hide--sm-up">
-    <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+  <ul class="docs__sidebar-menu hide--md-up">
     <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
   </ul>
 
-  <h4>Codebase Docs</h4>
+  <h4>Docs</h4>
 
-  <ul class="codebase-docs__sidebar-menu">
+  <ul class="docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a>
+      <ul>
+        <li><a href="classless-typography.html">Typography</a></li>
+        <li><a href="classless-forms.html">Forms</a></li>
+      </ul>
+    </li>
     <li><a href="layout.html">Layout</a>
       <ul>
-        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-        <li><a href="layout-visibility.html">Visibility </a></li>
-        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
+        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
+        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
+        <li><a href="layout-visibility.html">Visibility</a></li>
+        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
       </ul>
     </li>
     <li><a href="utilities.html">Utilities</a>
       <ul>
         <li><a href="utilities-typography.html">Typography</a></li>
         <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-images.html">Images</a></li>
         <li><a href="utilities-buttons.html">Buttons</a></li>
         <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
       </ul>
     </li>
     <li><a href="components.html">Components</a>
       <ul>
-        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-media-objects.html">Media Objects</a></li>
         <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-navbars.html">Navbars</a></li>
         <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popover.html">Popovers</a></li>
-        <li><a href="components-slideshow.html">Slideshow</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-popovers.html">Popovers</a></li>
+        <li><a href="components-slideshows.html">Slideshows</a></li>
         <li><a href="components-tab-systems.html">Tab Systems</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
       </ul>
     </li>
     <li><a href="decoration.html">Decoration</a>
@@ -88,166 +89,171 @@
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box shadows</a></li>
+        <li><a href="decoration-shadows.html">Box Shadows</a></li>
       </ul>
     </li>
   </ul>
+
 </div>
+<!-- /.docs__sidebar -->
 
-      <div class="codebase-docs__main-article">
+    <main class="docs__main">
 
-        <p><b>Horizontal centering by margin:auto</b> (also sets the element to display:block)</p>
+      <header class="docs__header">
+        <span>Decoration:</span>
+        <h1>Margins</h1>
+      </header>
 
-        <div style="max-width:400px;margin:auto;">
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mh-auto deco-b-thin-solid" style="width:75%;">.deco-mh-auto</div>
-          </div>
+      <div class="docs__content">
+
+        <h2>Horizontal centering by margin:auto</h2>
+
+        <p>also sets the element to display:block</p>
+
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mh-auto deco-b-thin-solid" style="width:75%;">.deco-mh-auto</div>
         </div>
 
-        <p><b>Codebase default margin sizes</b> (modify these according to your project's needs)</p>
+        <h2>Codebase default margin sizes</h2>
 
-        <div style="max-width:400px;margin:auto;">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Name (as used in variable and class)</th>
-                <th>Size</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>*-zero</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>*-xs</td>
-                <td>5px</td>
-              </tr>
-              <tr>
-                <td>*-sm</td>
-                <td>10px</td>
-              </tr>
-              <tr>
-                <td>*-md</td>
-                <td>20px</td>
-              </tr>
-              <tr>
-                <td>*-lg</td>
-                <td>40px</td>
-              </tr>
-            </tbody>
-          </table>
+        <p>Modify these according to your project's needs.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name (as used in variable and class)</th>
+              <th>Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>*-zero</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>*-xs</td>
+              <td>5px</td>
+            </tr>
+            <tr>
+              <td>*-sm</td>
+              <td>10px</td>
+            </tr>
+            <tr>
+              <td>*-md</td>
+              <td>20px</td>
+            </tr>
+            <tr>
+              <td>*-lg</td>
+              <td>40px</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Equal margins on all sides</h2>
+
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-m-zero deco-b-thin-solid">.deco-m-zero</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-m-xs deco-b-thin-solid">.deco-m-xs</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-m-sm deco-b-thin-solid">.deco-m-sm</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-m-md deco-b-thin-solid">.deco-m-md</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-m-lg deco-b-thin-solid">.deco-m-lg</div>
         </div>
 
-        <p><b>Equal margins on all sides</b></p>
+        <h2>Top margin only</h2>
 
-        <div style="max-width:400px;margin:auto;">
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-m-zero deco-b-thin-solid">.deco-m-zero</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-m-xs deco-b-thin-solid">.deco-m-xs</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-m-sm deco-b-thin-solid">.deco-m-sm</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-m-md deco-b-thin-solid">.deco-m-md</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-m-lg deco-b-thin-solid">.deco-m-lg</div>
-          </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mt-zero deco-b-thin-solid">.deco-mt-zero</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mt-xs deco-b-thin-solid">.deco-mt-xs</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mt-sm deco-b-thin-solid">.deco-mt-sm</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mt-md deco-b-thin-solid">.deco-mt-md</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mt-lg deco-b-thin-solid">.deco-mt-lg</div>
         </div>
 
-        <p><b>Top margin only</b></p>
+        <h2>Right margin only</h2>
 
-        <div style="max-width:400px;margin:auto;">
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mt-zero deco-b-thin-solid">.deco-mt-zero</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mt-xs deco-b-thin-solid">.deco-mt-xs</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mt-sm deco-b-thin-solid">.deco-mt-sm</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mt-md deco-b-thin-solid">.deco-mt-md</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mt-lg deco-b-thin-solid">.deco-mt-lg</div>
-          </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mr-zero deco-b-thin-solid">.deco-mr-zero</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mr-xs deco-b-thin-solid">.deco-mr-xs</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mr-sm deco-b-thin-solid">.deco-mr-sm</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mr-md deco-b-thin-solid">.deco-mr-md</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mr-lg deco-b-thin-solid">.deco-mr-lg</div>
         </div>
 
-        <p><b>Right margin only</b></p>
+        <h2>Bottom margin only</h2>
 
-        <div style="max-width:400px;margin:auto;">
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mr-zero deco-b-thin-solid">.deco-mr-zero</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mr-xs deco-b-thin-solid">.deco-mr-xs</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mr-sm deco-b-thin-solid">.deco-mr-sm</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mr-md deco-b-thin-solid">.deco-mr-md</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mr-lg deco-b-thin-solid">.deco-mr-lg</div>
-          </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mb-zero deco-b-thin-solid">.deco-mb-zero</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mb-xs deco-b-thin-solid">.deco-mb-xs</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mb-sm deco-b-thin-solid">.deco-mb-sm</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mb-md deco-b-thin-solid">.deco-mb-md</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-mb-lg deco-b-thin-solid">.deco-mb-lg</div>
         </div>
 
-        <p><b>Bottom margin only</b></p>
+        <h2>Left margin only</h2>
 
-        <div style="max-width:400px;margin:auto;">
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mb-zero deco-b-thin-solid">.deco-mb-zero</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mb-xs deco-b-thin-solid">.deco-mb-xs</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mb-sm deco-b-thin-solid">.deco-mb-sm</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mb-md deco-b-thin-solid">.deco-mb-md</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-mb-lg deco-b-thin-solid">.deco-mb-lg</div>
-          </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-ml-zero deco-b-thin-solid">.deco-ml-zero</div>
         </div>
-
-        <p><b>Left margin only</b></p>
-
-        <div style="max-width:400px;margin:auto;">
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-ml-zero deco-b-thin-solid">.deco-ml-zero</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-ml-xs deco-b-thin-solid">.deco-ml-xs</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-ml-sm deco-b-thin-solid">.deco-ml-sm</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-ml-md deco-b-thin-solid">.deco-ml-md</div>
-          </div>
-          <div class="deco-mb-sm deco-b-thin-dashed">
-            <div class="deco-ml-lg deco-b-thin-solid">.deco-ml-lg</div>
-          </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-ml-xs deco-b-thin-solid">.deco-ml-xs</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-ml-sm deco-b-thin-solid">.deco-ml-sm</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-ml-md deco-b-thin-solid">.deco-ml-md</div>
+        </div>
+        <div class="deco-mb-sm deco-b-thin-dashed">
+          <div class="deco-ml-lg deco-b-thin-solid">.deco-ml-lg</div>
         </div>
 
       </div>
-    </div>
     </main>
+  </div>
 
-    <footer class="codebase-docs__footer deco-bg-charcoal">
-  <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-  </span>
-</footer>
+  
+  <footer class="docs__footer deco-bg-charcoal">
+    <span class="deco-text-light-gray">
+      <a href="index.html">Codebase</a> v.1.3 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    </span>
+  </footer>
+
+</div><!-- /.docs -->
+</div><!-- /.page-wrap -->
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
@@ -255,8 +261,6 @@
   $(document).codebase();
 </script>
 <script src="theme/prism/prism.js"></script>
-
-
 </body>
 
 </html>

@@ -1,16 +1,17 @@
 // UTILITIES: FORM MIXINS
 // ======================
+// File: codebase/scss/06_utility-mixins/_forms.scss
 
 // Hide form placeholders on focus
 
 @mixin form__placeholder--hide {
-  &:focus::-webkit-input-placeholder { 
+  &:focus::-webkit-input-placeholder {
     color: transparent !important;
   }
-  &:focus:-moz-placeholder { 
+  &:focus:-moz-placeholder {
     color: transparent !important;
   }
-  &:focus::-moz-placeholder { 
+  &:focus::-moz-placeholder {
     color: transparent !important;
   }
 }
@@ -25,12 +26,22 @@
     width: 30px;
     font-family: FontAwesome;
     content: '\f1db';
-    & + :checked + & {
-      content: '\f111';
-    }
   }
   &:checked + label:before {
     content: ' \f111';
+  }
+}
+
+@mixin form__toggle {
+  display: none !important;
+  + label:before {
+    display: inline-block;
+    width: 30px;
+    font-family: FontAwesome;
+    content: '\f204';
+  }
+  &:checked + label:before {
+    content: ' \f205';
   }
 }
 
@@ -48,4 +59,12 @@
   &:checked + label:before {
     content: '\f046';
   }
+}
+
+@mixin form__radio--toggle {
+  @include form__toggle;
+}
+
+@mixin form__checkbox--toggle {
+  @include form__toggle;
 }

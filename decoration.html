@@ -17,68 +17,70 @@
 
 <body>
 
-  <div class="codebase-docs">
+  <div class="page-wrap">
 
-    <nav class="navbar codebase-docs__navbar">
+<nav class="navbar docs__navbar deco-bb-thin-solid">
   <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span></a>
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3</small></a>
   </div>
   <div class="navbar__content">
     <div class="navbar__right">
-      <ul>
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      <ul class="show--md-up">
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <header class="codebase-docs__header deco-bg-error">
-      <h1 class="deco-text-white">Decoration</h1>
-    </header>
+<div class="docs docs--decoration">
 
-    <div class="codebase-docs__main">
+  <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
 
-      <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
 
-<div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
-  <ul class="codebase-docs__sidebar-menu hide--sm-up">
-    <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+  <ul class="docs__sidebar-menu hide--md-up">
     <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
   </ul>
 
-  <h4>Codebase Docs</h4>
+  <h4>Docs</h4>
 
-  <ul class="codebase-docs__sidebar-menu">
+  <ul class="docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a>
+      <ul>
+        <li><a href="classless-typography.html">Typography</a></li>
+        <li><a href="classless-forms.html">Forms</a></li>
+      </ul>
+    </li>
     <li><a href="layout.html">Layout</a>
       <ul>
-        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-        <li><a href="layout-visibility.html">Visibility </a></li>
-        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
+        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
+        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
+        <li><a href="layout-visibility.html">Visibility</a></li>
+        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
       </ul>
     </li>
     <li><a href="utilities.html">Utilities</a>
       <ul>
         <li><a href="utilities-typography.html">Typography</a></li>
         <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-images.html">Images</a></li>
         <li><a href="utilities-buttons.html">Buttons</a></li>
         <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
       </ul>
     </li>
     <li><a href="components.html">Components</a>
       <ul>
-        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-media-objects.html">Media Objects</a></li>
         <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-navbars.html">Navbars</a></li>
         <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popover.html">Popovers</a></li>
-        <li><a href="components-slideshow.html">Slideshow</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-popovers.html">Popovers</a></li>
+        <li><a href="components-slideshows.html">Slideshows</a></li>
         <li><a href="components-tab-systems.html">Tab Systems</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
       </ul>
     </li>
     <li><a href="decoration.html">Decoration</a>
@@ -87,13 +89,21 @@
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box shadows</a></li>
+        <li><a href="decoration-shadows.html">Box Shadows</a></li>
       </ul>
     </li>
   </ul>
-</div>
 
-      <div class="codebase-docs__main-article">
+</div>
+<!-- /.docs__sidebar -->
+
+  <main class="docs__main">
+
+    <header class="docs__header">
+      <h1>Decoration</h1>
+    </header>
+
+    <div class="docs__content">
 
         <p>For consistency throughout Codebase, some <code>$deco-</code> variables have been defined. Where necessary, a few of these variables have been used in the various utilities and components.</p>
 
@@ -109,21 +119,25 @@
           <li><a href="decoration-shadows.html">Shadows</a></li>
         </ol>
 
-        <div class="initial-icon deco-bl-thick-solid deco-b-primary deco-p-md deco-bg-light-primary">
-          <i class="fa fa-thumbs-o-up deco-text-primary"></i> <b>Hat tip:</b>
-          <br>the idea for Codebase decoration was inspired by <a href="http://www.basscss.com" target="_blank">BASCSS</a> and <a href="http://tachyons.io" target="_blank">Tachyons</a>.
+        <div class="initial-icon deco-bl-thick-solid deco-b-blue deco-p-md deco-bg-light-blue">
+          <i class="fa fa-thumbs-o-up deco-text-blue"></i> <b>Hat tip:</b> the idea for Codebase decoration was inspired by <a href="http://www.basscss.com" target="_blank">BASCSS</a> and <a href="http://tachyons.io" target="_blank">Tachyons</a>.
         </div>
-
 
       </div>
     </div>
     </main>
 
-    <footer class="codebase-docs__footer deco-bg-charcoal">
-  <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-  </span>
-</footer>
+    
+  <footer class="docs__footer deco-bg-charcoal">
+    <span class="deco-text-light-gray">
+      <a href="index.html">Codebase</a> v.1.3 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    </span>
+  </footer>
+
+</div><!-- /.docs -->
+</div><!-- /.page-wrap -->
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
@@ -131,8 +145,6 @@
   $(document).codebase();
 </script>
 <script src="theme/prism/prism.js"></script>
-
-
 </body>
 
 </html>
