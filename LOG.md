@@ -1,6 +1,6 @@
 # Codebase Version Log
 
-### v.1.3 - DATE REQUIRED
+### v.1.3 - 07 September 2016
 
 * Removed the `.img--*` left and right align classes as redundant. Use the `.float--` utility classes instead.
 * Removed the lightbox and modal styles and scripts. Simply use popovers in future.
