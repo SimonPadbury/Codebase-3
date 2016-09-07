@@ -1,0 +1,19 @@
+// DEFAULT VARIABLES: TYPOGRAPHY
+// =============================
+// File: codebase/scss/01_default-variables/_typography.scss
+
+$base-font-family:
+  -apple-system, // Apple
+  BlinkMacSystemFont, // Chrome for OSX (San Francisco)
+  "Segoe UI", // Windows
+  "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", // Android, Chrome, Linux
+  "Helvetica Neue", sans-serif // Fallback
+  !default;
+$base-font-size: 1rem !default;
+$base-line-height: 1.5 !default;
+$base-line-height-rem: $base-font-size * $base-line-height !default;
+
+$base-text-color: $deco-charcoal !default;
+$base-text-color-muted: $deco-dark-gray !default;
+$base-text-color-hyperlink: $deco-blue !default;
+$base-text-color-hyperlink-hover: $deco-dark-blue !default;

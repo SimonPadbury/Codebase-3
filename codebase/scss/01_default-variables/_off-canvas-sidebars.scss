@@ -1,0 +1,10 @@
+// DEFAULT VARIABLES: OFF-CANVAS SIDEBAR
+// =====================================
+// File: codebase/scss/01_default-variables/_off-canvas-sidebar.scss
+
+$off-canvas-width: 250px !default;
+$off-canvas-background: $deco-white !default;
+$off-canvas-transition: transform 400ms ease !default;
+$off-canvas-navicon-background: $deco-white !default;
+$off-canvas-navicon-color: $base-text-color-hyperlink !default;
+$off-canvas-navicon-color-hover: $base-text-color-hyperlink-hover !default;

@@ -1,0 +1,68 @@
+// LAYOUT MIXINS: OFF-CANVAS SIDEBAR
+// =================================
+// File: codebase/scss/05_layout-mixins/_off-canvas-sidebar.scss
+
+// Off-canvas navicon
+
+@mixin off-canvas-navicon {
+  position: fixed;
+  top: 0;
+  z-index: $reset-overlay--z-index + 2;
+  padding: $deco-spacing-xs $deco-spacing-sm;
+  font-size: 24px;
+  line-height: 34px;
+  color: $off-canvas-navicon-color;
+  background: $off-canvas-navicon-background;
+  transition: $off-canvas-transition;
+  transform: translate3d(0, 0, 0);
+  &:hover {
+    color: $off-canvas-navicon-color-hover;
+    cursor: pointer;
+  }
+}
+
+@mixin off-canvas-navicon--right {
+  right: 0;
+  &.off-canvas--is-open {
+    transform: translate3d(-$off-canvas-width, 0, 0);
+  }
+}
+
+@mixin off-canvas-navicon--left {
+  left: 0;
+  &.off-canvas--is-open {
+    transform: translate3d($off-canvas-width, 0, 0);
+  }
+}
+
+// Off-canvas sidebar
+// The extra 10px hides the box-shadow while off-canvas
+
+@mixin off-canvas-right {
+  right: -($off-canvas-width + 10px);
+  &.off-canvas--is-open {
+    transform: translate3d(-($off-canvas-width + 10px), 0, 0);
+  }
+}
+
+@mixin off-canvas-left {
+  left: -($off-canvas-width + 10px);
+  &.off-canvas--is-open {
+    transform: translate3d(($off-canvas-width + 10px), 0, 0);
+  }
+}
+
+@mixin off-canvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: $off-canvas-width;
+  max-height: 100vh;
+  z-index: $reset-overlay--z-index + 1;
+  overflow: auto;
+  background: $off-canvas-background;
+  box-shadow: $deco-box-shadow-2x;
+  transition: $off-canvas-transition;
+  transform: translate3d(0, 0, 0);
+}
+

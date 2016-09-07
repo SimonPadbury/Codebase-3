@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Components: Navbars | Codebase</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="theme/css/styles.css">
+  <link href="theme/prism/prism.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="page-wrap">
+
+<nav class="navbar docs__navbar deco-bb-thin-solid">
+  <div class="navbar__brand">
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3</small></a>
+  </div>
+  <div class="navbar__content">
+    <div class="navbar__right">
+      <ul class="show--md-up">
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="docs docs--components">
+
+    <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+
+<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
+
+  <ul class="docs__sidebar-menu hide--md-up">
+    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+  </ul>
+
+  <h4>Docs</h4>
+
+  <ul class="docs__sidebar-menu">
+    <li><a href="getting-started.html">Getting Started</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a>
+      <ul>
+        <li><a href="classless-typography.html">Typography</a></li>
+        <li><a href="classless-forms.html">Forms</a></li>
+      </ul>
+    </li>
+    <li><a href="layout.html">Layout</a>
+      <ul>
+        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
+        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
+        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
+        <li><a href="layout-visibility.html">Visibility</a></li>
+        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
+      </ul>
+    </li>
+    <li><a href="utilities.html">Utilities</a>
+      <ul>
+        <li><a href="utilities-typography.html">Typography</a></li>
+        <li><a href="utilities-forms.html">Forms</a></li>
+        <li><a href="utilities-buttons.html">Buttons</a></li>
+        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
+      </ul>
+    </li>
+    <li><a href="components.html">Components</a>
+      <ul>
+        <li><a href="components-media-objects.html">Media Objects</a></li>
+        <li><a href="components-menus.html">Menus</a></li>
+        <li><a href="components-navbars.html">Navbars</a></li>
+        <li><a href="components-pagination.html">Pagination</a></li>
+        <li><a href="components-popovers.html">Popovers</a></li>
+        <li><a href="components-slideshows.html">Slideshows</a></li>
+        <li><a href="components-tab-systems.html">Tab Systems</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
+      </ul>
+    </li>
+    <li><a href="decoration.html">Decoration</a>
+      <ul>
+        <li><a href="decoration-margins.html">Margins</a></li>
+        <li><a href="decoration-borders.html">Borders</a></li>
+        <li><a href="decoration-paddings.html">Paddings</a></li>
+        <li><a href="decoration-colors.html">Colors</a></li>
+        <li><a href="decoration-shadows.html">Box Shadows</a></li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+<!-- /.docs__sidebar -->
+
+    <main class="docs__main">
+
+      <header class="docs__header">
+        <span>Components:</span>
+        <h1>Navbars</h1>
+      </header>
+
+      <div class="docs__content">
+
+        <p>The navbar is displayed as a hidden stacked menu at smaller window widths, revealed by clicking a "hamburger" navicon.</p>
+
+        <p>Simplest example using <code>.navbar__left</code>:</p>
+
+        <nav class="navbar deco-b-thin-dashed">
+          <div class="navbar__navicon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+          <div class="navbar__content">
+            <div class="navbar__left">
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.navbar__content -->
+        </nav>
+
+        <br/>
+        
+        <p>
+          Also available: <code>.navbar__right</code> and <code>.navbar__center</code>. The left and right elements can be combined, but the center element must only be used alone.
+        </p>
+
+        <p>Complex example:</p>
+
+        <nav id="navbar-1" class="navbar deco-b-thin-dashed">
+          <div class="navbar__brand">
+            <a>Brand</a>
+          </div>
+          <div class="navbar__navicon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+          <div class="navbar__content">
+            <div class="navbar__left">
+              <ul>
+                <li>
+                  <a href="http://google.com">Link</a>
+                  <ul>
+                    <li><a href="#/">Dropdown link</a></li>
+                    <li><a href="#/">Dropdown link</a></li>
+                    <li><a href="#/">Dropdown link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#/">Link</a></li>
+              </ul>
+            </div>
+            <div class="navbar__right">
+              <ul>
+                <li><a href="#/">Link</a></li>
+                <li>
+                  <a href="#/">Link</a>
+                  <ul>
+                    <li><a href="#/">Dropdown link</a></li>
+                    <li><a href="#/">Dropdown link</a></li>
+                    <li><a href="#/">Dropdown link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="navbar__search">
+                <form action="">
+                  <span>
+              <input class="combo--first" type="search" name="" placeholder="Search">
+              <button class="btn btn--primary combo--last"><i class="fa fa-search"></i></button>
+            </span>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- /.navbar__content -->
+        </nav>
+
+        <br/>
+        
+        <p>Notes:</p>
+
+        <ol>
+          <li>
+            Dropdown menu behavior only happens on window widths above the navbar media query breakpoint. When the nemubar is collapsed on smaller screens, the child lists are displayed as indented lists within the stacked menu.
+          </li>
+          <li>
+            On window widths narrower than the navbar breakpoint (i.e. for collapsed navbars), all links are followable (including parent links).
+          </li>
+          <li>
+            On screens at or wider than the navbar breakpoint (i.e. for navbars as navbars), child menus are hidden by default (using the <a href="utilities-dropdowns.html">dropdown utility</a>). <strong>Clicking the parent link <mark>once</mark> will open the dropdown, and clicking the parent link <mark>again</mark> will follow the parent link</strong>.
+          </li>
+          <li>
+            Clicking anywhere outside the dropdown will dismiss the dropdown. Where no parent link <code>href</code> has been set, clicking the parent 'link' will also dismiss the dropdown.
+          </li>
+        </ol>
+        <p>
+          navbar styling has therefore only been done as far as child menus (i.e. not sub-sub menus, etc).
+        </p>
+
+
+        <div class="tabs tabs--top docs__code">
+
+          <div class="tabs__label" data-tabs="html-1">HTML</div>
+          <div id="html-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-html"><code>&lt;nav class="navbar"&gt;
+  &lt;div class="navbar__brand"&gt;
+    &lt;a&gt;Brand&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="navbar__navicon"&gt;&lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="navbar__content"&gt;
+    &lt;div class="navbar__left"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=""&gt;Link&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="navbar__right"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=""&gt;Link&lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;Dropdown link&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div class="navbar__search"&gt;
+        &lt;form action=""&gt;
+          &lt;span&gt;
+            &lt;input class="combo--first" type="search" name="" placeholder="Search"&gt;
+            &lt;button class="btn btn--primary combo--last"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;/span&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- /.navbar__content --&gt;
+&lt;/nav&gt;</code></pre>
+
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="variables-1">Variables</div>
+          <div id="variables-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// DEFAULT VARIABLES: NAVBAR
+// =========================
+// File: codebase/scss/01_default-variables/_navbar.scss
+
+$break-navbar: $break-xs !default;
+$navbar-padding: $deco-spacing-block !default;
+$navbar-height: 44px !default; // = line-height (24px) + (2 * 10px for the padding)
+$deco-navbar-link-hover-background: $deco-silver !default;
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="mixins-1">Mixins</div>
+          <div id="mixins-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// COMPONENT MIXINS: NAVBAR
+// ========================
+// File: codebase/scss/07_component-mixins/_navbar.scss
+
+@mixin navbar {
+  @include clearfix;
+  position: relative;
+  padding-top: $navbar-height;
+  padding-left: 0;
+  &--is-open {
+    z-index: $reset-overlay--z-index + 2;
+  }
+  @include break__navbar--up {
+    padding-top: 0;
+  }
+}
+
+@mixin navbar__brand {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+    a {
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 10px 12px;
+    &:hover {
+      text-decoration: none;
+      background: $deco-menu-block-hover-background;
+    }
+  }
+  @include break__navbar--up {
+    position: relative;
+    top: auto;
+    float: left;
+  }
+}
+
+@mixin navbar__navicon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  color: $base-text-color-hyperlink;
+  text-align: center;
+  &:hover {
+    color: $base-text-color-hyperlink-hover;
+    background: $deco-navbar-link-hover-background;
+    cursor: pointer;
+  }  @include break__navbar--up {
+    display: none;
+  }
+}
+
+@mixin navbar__content {
+  display: none;
+  // Override dropdown styles for collapsed menubar
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: $navbar-padding;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: none;
+        background: $deco-menu-block-hover-background;
+      }
+    }
+  }
+  @include break__navbar--down {
+    .dropdown__toggle .dropdown__caret {
+      display: none;
+    }
+    .dropdown__content {
+      display: block;
+      position: relative;
+      border-radius: 0;
+      box-shadow: none;
+      a {
+        padding-left: $deco-spacing-lg;
+      }
+    }
+  }
+  @include break__navbar--up {
+    display: block !important; // Overrides the jQuery display: none
+    li {
+      position: relative;
+      display: inline-block;
+    }
+  }
+}
+
+@mixin navbar__setup {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: $navbar-padding;
+      white-space: nowrap;
+      &:hover {
+        text-decoration: none;
+        background: $deco-menu-block-hover-background;
+      }
+    }
+  }
+  @include break__menubar--up {
+    li {
+      position: relative;
+    }
+    > ul > li {
+      display: inline-block;
+    }
+  }
+}
+
+@mixin navbar__left {
+  @include break__navbar--up {
+    float: left;
+  }
+}
+
+@mixin navbar__center {
+  @include break__navbar--up {
+    text-align: center;
+  }
+}
+
+@mixin navbar__right {
+  @include break__navbar--up {
+    float: right;
+    >ul {
+      float: left;
+    }
+    .dropdown__content {
+      right: 0;
+    }
+  }
+}
+
+@mixin navbar__search {
+  padding: 4px 15px;
+  input {
+    width: auto !important;
+    @include break__navbar--up {
+      max-width: 160px;
+    }
+  }
+  @include break__navbar--up {
+    float: right;
+    padding-right: $deco-spacing-xs;
+    padding-left: $deco-spacing-xs;
+  }
+}
+
+// The `.navbar` always gets a .wrap() called `.navbar__has-wrap` (this is used to enable the navicon toggle to be absolutely positioned over the menubar on smaller screens).
+// If you add `.navbar--fixed` to the menubar, then the wrap will also get class `.navbar__has-wrap--fixed`.
+
+@mixin navbar__has-wrap {
+  position: relative;
+  width: 100%;
+  &--is-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $reset-overlay--z-index + 3;
+    box-shadow: $deco-box-shadow;
+  }
+}
+
+@mixin body--navbar-is-fixed {
+  padding-top: calc($base-line-height + $deco-spacing-sm);
+}
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="classes-1">Classes</div>
+          <div id="classes-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre class="language-scss"><code>// COMPONENT CLASS BUILDER: NAVBAR
+// ===============================
+// File: codebase/scss/11_component-classes/_navbar.scss
+
+.body--navbar-is-fixed {
+  @include body--navbar-is-fixed;
+}
+
+.navbar {
+  @include navbar;
+}
+
+.navbar__brand {
+  @include navbar__brand;
+}
+
+.navbar__navicon {
+  @include navbar__navicon;
+}
+
+.navbar__content {
+  @include navbar__content;
+}
+
+.navbar__left {
+  @include navbar__left;
+}
+
+.navbar__center {
+  @include navbar__center;
+}
+
+.navbar__right {
+  @include navbar__right;
+}
+
+.navbar__search {
+  @include navbar__search;
+}
+
+.navbar__has-wrap {
+  @include navbar__has-wrap;
+}
+</code></pre>
+            </div>
+          </div>
+
+          <div class="tabs__label" data-tabs="js-1">JS (jQuery)</div>
+          <div id="js-1" class="tabs__card">
+            <div class="tabs__card-content">
+              <pre data-src="codebase/js/scripts/navbars.js"></pre>
+            </div>
+          </div>
+
+        </div>
+        <!-- / .docs__code -->
+
+      </div>
+    </main>
+  </div>
+
+  
+  <footer class="docs__footer deco-bg-charcoal">
+    <span class="deco-text-light-gray">
+      <a href="index.html">Codebase</a> v.1.3 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    </span>
+  </footer>
+
+</div><!-- /.docs -->
+</div><!-- /.page-wrap -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="codebase/js/codebase.js"></script>
+<script>
+  $(document).codebase();
+</script>
+<script src="theme/prism/prism.js"></script>
+
+</body>
+
+</html>

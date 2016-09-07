@@ -1,0 +1,14 @@
+// UTILITY MIXINS: FLOATS
+// ======================
+// File: codebase/scss/06_utility-mixins/_clearfix.scss
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

@@ -1,6 +1,5 @@
-/*
-Debounce (Utility)
-*/
+// DEBOUNCE (Utilities)
+// ====================
 
 (function ($) {
   'use strict';

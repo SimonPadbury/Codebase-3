@@ -1,6 +1,6 @@
-// COMPONENT CLASSES: MEDIA OBJECT
-// ===============================
-// File: 11_component-classes/_media-object.scss
+// COMPONENT CLASS-BUILDER: MEDIA OBJECT
+// =====================================
+// File: codebase/scss/11_component-classes/_media-object.scss
 
 .media {
   @include media;
@@ -10,18 +10,16 @@
   @include media__header;
 }
 
-//.media__image-wrap {}
-
-.media__image-wrap--left {
-  @include media__image-wrap--left;
-}
-
-.media__image-wrap--right {
-  @include media__image-wrap--right;
-}
-
-.media__image-wrap--top {
-  @include media__image-wrap--top;
+.media__image-wrap {  
+  &--left {
+    @include media__image-wrap--left;
+  }
+  &--right {
+    @include media__image-wrap--right;
+  }
+  &--top {
+    @include media__image-wrap--top;
+  }
 }
 
 .media__content-wrap {

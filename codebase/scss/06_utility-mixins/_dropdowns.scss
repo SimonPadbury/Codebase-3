@@ -1,6 +1,6 @@
 // UTILITY: DROPDOWNS
 // ==================
-// File: 07_utillity-mixins/_dropdpwns.scss
+// File: codebase/scss/06_utillity-mixins/_dropdowns.scss
 
 @mixin dropdown {
   display: inline-block;
@@ -22,13 +22,15 @@
   margin: 0;
   padding: $deco-spacing-sm $deco-spacing-md;
   border-radius: $deco-border-radius;
-  color: $color-text-default;
+  color: $base-text-color;
   background: #fff;
   text-align: left;
-  white-space: nowrap;
   cursor: default;
   box-shadow: $deco-box-shadow;
   &--is-revealed {
     display: block;
+  }
+  &--nowrap {
+    white-space: nowrap;
   }
 }

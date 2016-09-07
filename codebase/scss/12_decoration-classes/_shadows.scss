@@ -1,21 +1,28 @@
-// DECORATION MIXINS: SHADOWS
-// ==========================
+// DECORATION CLASS-BUILDER: SHADOWS
+// =================================
 
 .deco-bs {
   box-shadow: $deco-box-shadow;
+  &-2x {
+    box-shadow: $deco-box-shadow-2x;
+  }
+  &-3x {
+    box-shadow: $deco-box-shadow-3x;
+  }
 }
+
 .deco-bs-inset {
   box-shadow: $deco-box-shadow-inset;
-}
-.deco-bs-inset-top {
-  box-shadow: $deco-box-shadow-inset-top;
-}
-.deco-bs-inset-right {
-  box-shadow: $deco-box-shadow-inset-right;
-}
-.deco-bs-inset-bottom {
-  box-shadow: $deco-box-shadow-inset-bottom;
-}
-.deco-bs-inset-left {
-  box-shadow: $deco-box-shadow-inset-left;
+  &-top {
+    box-shadow: $deco-box-shadow-inset-top;
+  }
+  &-right {
+    box-shadow: $deco-box-shadow-inset-right;
+  }
+  &-bottom {
+    box-shadow: $deco-box-shadow-inset-bottom;
+  }
+  &-left {
+    box-shadow: $deco-box-shadow-inset-left;
+  }
 }

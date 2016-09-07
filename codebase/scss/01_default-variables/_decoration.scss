@@ -1,0 +1,31 @@
+// DEFAULT VARIABLES: DECORATION
+// =============================
+// File: codebase/scss/01_default-variables/_decoration.scss
+
+
+// Spacing (used in margins and paddings)
+
+$deco-spacing-xs: 5px !default;
+$deco-spacing-sm: 10px !default;
+$deco-spacing-md: 20px !default;
+$deco-spacing-lg: 40px !default;
+$deco-spacing-block: 10px 15px !default; // e.g. menu links
+
+// Borders
+
+$deco-border-thin-solid: 1px solid $deco-light-gray !default;
+$deco-border-thin-dashed: 1px dashed $deco-light-gray !default;
+$deco-border-thick-solid: 4px solid $deco-light-gray !default;
+$deco-border-radius: 4px !default;
+
+// Shadows
+
+$deco-box-shadow: 0 2px 4px rgba(0,0,0,0.3) !default;
+$deco-box-shadow-2x: 0 4px 8px rgba(0,0,0,0.4) !default;
+$deco-box-shadow-3x: 0 6px 12px rgba(0,0,0,0.5) !default;
+
+$deco-box-shadow-inset: inset 0 0 5px rgba(0,0,0,0.2) !default;
+$deco-box-shadow-inset-top: inset 0 5px 5px -5px rgba(0,0,0,0.2) !default;
+$deco-box-shadow-inset-right: inset -5px 0 5px -5px rgba(0,0,0,0.2) !default;
+$deco-box-shadow-inset-bottom: inset 0 -5px 5px -5px rgba(0,0,0,0.2) !default;
+$deco-box-shadow-inset-left: inset 5px 0 5px -5px rgba(0,0,0,0.2) !default;

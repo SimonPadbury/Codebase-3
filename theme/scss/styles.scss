@@ -1,5 +1,9 @@
-// Codebase DOCS THEME
+// CODEBASE DOCS THEME
 // ===================
+
+// Codebase default variable overrides
+
+$break-navbar: 640px; // = $break-sm
 
 // Import Codebase
 @import '../../codebase/scss/codebase';
@@ -9,90 +13,67 @@
 @import 'semantic-grid-example';
 @import 'flexbox-grid-example';
 
+// Docs styles
+
 html, body {
-  height: 100%;
-  // Enables .codebase-docs__footer to stick to the bottom of the screen
-  // if the page doesn't have much content.
+  height: 100%; // Necessary for "sticky footer"
 }
 
 body {
-//  background: $color-silver;
-  background: $color-white;
+  background: $deco-white;
 }
 
-.codebase-docs {
-  position: relative;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto;
-}
 
-.codebase-docs__navbar {
+// =============================================================================
+// Navbar
+// =============================================================================
+
+.docs__navbar {
   .navbar__brand a {
+    height: 44px;
     padding-left: 50px;
-    color: $color-charcoal;
+    color: $deco-charcoal;
     font-weight: normal;
-    background: $color-body url('../../images/codebase-logo.svg') 10px 6px no-repeat;
+    background: $deco-body url('../../images/codebase-logo.svg') 10px 6px no-repeat;
     background-size: 30px auto;
     &:hover {
-      color: $color-charcoal;
-      background-color: $color-silver;
+      color: $deco-charcoal;
+      background-color: $deco-silver;
     }
   }
 }
 
-.codebase-docs__header {
-  padding: 20px 0;
-  @include break__sm--up {
-    padding: 40px 0;
-  }
+// =============================================================================
+// Page wrap
+// =============================================================================
+
+.page-wrap {
+  min-height:100%;
+	position:relative;
   @include break__md--up {
-    padding: 70px 0;
-  }
-  @include break__lg--up {
-    padding: 100px 0;
-  }
-  h1 {
-    max-width: $grid-max-width - 30px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $deco-spacing-sm;
-    padding-left: $deco-spacing-sm;
-    font-weight: 200;
-    letter-spacing: 1px;
-  }
-  span {
-    display: block;
-    max-width: $grid-max-width - 30px;
-    margin: 20px auto -20px auto;
-    padding-right: $deco-spacing-sm;
-    padding-left: $deco-spacing-sm;
-    font-weight: 200;
-    @include break__sm--up {
-      font-size: 1.5rem;
-    }
+//    padding-bottom: 100px; // Necessary for "sticky footer"
   }
 }
 
-// Layout
+// =============================================================================
+// Docs page body setup (contains sidebar and main)
+// =============================================================================
 
-.codebase-docs__main {
-  @include grid;
-  @include grid--gutter;
-  padding-bottom: 100px; // this 100px is *behind* the .codebase-docs__footer
+.docs {
+  @include break__md--up {
+    display: flex;
+    padding-bottom: 100px; // Necessary for "sticky footer"
+  }
 }
 
-.codebase-docs__sidebar {
-  &>ul {
-    font-weight: bold;
-    ul {
-      font-weight: normal;
-    }
-  }
-  @include break__xs--only {
+// =============================================================================
+// Sidebar
+// =============================================================================
+
+.docs__sidebar {
+  @include break__sm--down {
     padding: 0;
-    background: $color-charcoal;
+    background: $deco-charcoal;
     .brand {
       &:before {
         display: block;
@@ -109,7 +90,7 @@ body {
         margin-left: 5px;
       }
       &:hover {
-        color: $color-light-gray;
+        color: $deco-light-gray;
         &:before {
           background-position: 0 -20px;
         }
@@ -118,23 +99,23 @@ body {
     h4 {
       margin: 10px;
       font-weight: bold;
-      color: $color-dark-gray;
+      color: $deco-gray;
     }
     &>ul {
       border-top: $deco-border-thin-solid;
-      border-color: $color-dark-gray;
+      border-color: $deco-dark-gray;
     }
     li {
       a {
         display: block !important;
         border-bottom: $deco-border-thin-solid;
-        border-color: $color-dark-gray;
+        border-color: $deco-dark-gray;
         padding-left: $deco-spacing-sm;
-        color: $color-gray;
+        color: $deco-gray;
         &:hover {
           text-decoration: none;
-          color: $color-light-gray;
-          background-color: $color-dark-gray;
+          color: $deco-light-gray;
+          background-color: $deco-dark-gray;
         }
       }
       li {
@@ -145,45 +126,62 @@ body {
       }
     }
   }
-  @include break__sm--up {
+  @include break__md--up {
     @include col;
-    @include col--span(3);
-    @include col--push(9);
-    padding-bottom: 40px;
-  }
-  @include break__lg--up {
-    @include col--span(2);
-    @include col--push(10);
-  }
-}
-
-.codebase-docs__main-article {
-  @include col;
-  padding-top: $deco-spacing-md;
-  padding-bottom: $deco-spacing-lg;
-  @include break__sm--up {
-    @include col--span(9);
-    @include col--pull(3);
-  }
-  @include break__lg--up {
-    @include col--span(10);
-    @include col--pull(2);
+    max-width: 250px;
+    margin-top: -1px;
+    padding: 0 $deco-spacing-sm $deco-spacing-lg;
+    h4 {
+      padding-top: $deco-spacing-lg;
+      color: $deco-white;
+      font-weight: bold;
+    }
+    a {
+      color: $deco-light-gray;
+      &:hover {
+        color: $deco-white;
+      }
+    }
   }
 }
 
-.codebase-docs__footer {
-  // Sticks to the bottom of the screen (if the page doesn't have much content).
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  padding: 40px 10px;
-  text-align: center;
+.docs {
+  @include break__md--up {
+    &--base {
+      .docs__sidebar {
+        background: $deco-dark-blue;
+      }
+    }
+    &--layout {
+      .docs__sidebar {
+        background: $deco-dark-teal;
+        a {
+          color: $deco-silver;
+          &:hover {
+            color: $deco-white;
+          }
+        }
+      }
+    }
+    &--utilities {
+      .docs__sidebar {
+        background: $deco-dark-orange;
+      }
+    }
+    &--components {
+      .docs__sidebar {
+        background: $deco-dark-green;
+      }
+    }
+    &--decoration {
+      .docs__sidebar {
+        background: $deco-dark-red;
+      }
+    }
+  }
 }
 
-// Styling
-
-.codebase-docs__sidebar-menu {
+.docs__sidebar-menu {
   @include menu;
   li {
     @include menu__item;
@@ -193,23 +191,104 @@ body {
   }
   ul {
     @include menu;
-    @include break__sm--up {
+    @include break__md--up {
       margin-left: $deco-spacing-md;
     }
   }
 }
 
 .off-canvas-navicon {
-  box-shadow: $deco-box-shadow;
+  background: rgba(255,255,255,0.3);
 }
 
-// codebase-docs__code
+// =============================================================================
+// Main
+// =============================================================================
 
-.codebase-docs__code {
+.docs__main {
+  @include grid--gutter;
+  @include break__md--up {
+    @include col;
+    flex-grow: 1;
+  }
+}
+
+.docs__header {
+  margin-bottom: 60px;
+  border-bottom: $deco-border-thin-solid;
+  padding: 20px 0;
+  text-align: center;
+  @include break__sm--up {
+    padding: 30px 0;
+  }
+  @include break__md--up {
+    padding: 50px 0;
+  }
+  @include break__lg--up {
+    padding: 70px 0;
+  }
+  h1 {
+    max-width: $grid-max-width - 30px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-right: $deco-spacing-sm;
+    padding-left: $deco-spacing-sm;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  span {
+    display: block;
+    max-width: $grid-max-width - 30px;
+    margin: 20px auto 0 auto;
+    padding-right: $deco-spacing-sm;
+    padding-left: $deco-spacing-sm;
+    color: $deco-gray;
+    font-weight: 200;
+    @include break__sm--up {
+      font-size: 1.5rem;
+    }
+  }
+  small {
+    display: block;
+    color: $deco-gray;
+  }
+}
+
+.docs__content {
+  max-width: 700px;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+}
+
+// =============================================================================
+// Footer
+// =============================================================================
+
+.docs__footer {
+  // "Sticky footer" (sticks to the bottom of the screen if the page doesn't have much content).
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: $deco-spacing-lg $deco-spacing-sm;
+  text-align: center;
+  @include break__md--up {
+    bottom: 0;
+  }
+}
+
+// =============================================================================
+// Prism Code Blocks
+// =============================================================================
+
+.docs__code {
   margin: $deco-spacing-lg 0 !important;
   code {
     border: 0;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }

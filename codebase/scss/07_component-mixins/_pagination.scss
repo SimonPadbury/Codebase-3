@@ -1,5 +1,6 @@
 // COMPONENT MIXINS: PAGINATION
 // ============================
+// File: codebase/scss/07_component-mixins/_pagination.scss
 
 @mixin pagination {
   margin: 0;
@@ -17,8 +18,8 @@
 }
 
 @mixin pagination__current {
-  color: $color-dark-gray;
-  background: $color-silver;
+  color: $deco-dark-gray;
+  background: $deco-silver;
   &:hover {
     text-decoration: none;
     cursor: default;

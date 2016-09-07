@@ -1,5 +1,6 @@
-// DECORATION MIXINS: PADDINGS
-// ===========================
+// DECORATION CLASS-BUILDER: PADDINGS
+// ==================================
+// File: codebase/scss/12_decoration-classes/_paddings.scss
 
 // @include deco-p-block in block menu items and menubar items
 
@@ -9,90 +10,100 @@
 
 // Padding All
 
-.deco-p-zero {
-  padding: 0;
-}
-.deco-p-xs {
-  padding: $deco-spacing-xs;
-}
-.deco-p-sm {
-  padding: $deco-spacing-sm;
-}
-.deco-p-md {
-  padding: $deco-spacing-md;
-}
-.deco-p-lg {
-  padding: $deco-spacing-lg;
+.deco-p {
+  &-zero {
+    padding: 0;
+  }
+  &-xs {
+    padding: $deco-spacing-xs;
+  }
+  &-sm {
+    padding: $deco-spacing-sm;
+  }
+  &-md {
+    padding: $deco-spacing-md;
+  }
+  &-lg {
+    padding: $deco-spacing-lg;
+  }  
 }
 
 // Padding Top
 
-.deco-pt-zero {
-  padding-top: 0;
-}
-.deco-pt-xs {
-  padding-top: $deco-spacing-xs;
-}
-.deco-pt-sm {
-  padding-top: $deco-spacing-sm;
-}
-.deco-pt-md {
-  padding-top: $deco-spacing-md;
-}
-.deco-pt-lg {
-  padding-top: $deco-spacing-lg;
+.deco-pt {
+  &-zero {
+    padding-top: 0;
+  }
+  &-xs {
+    padding-top: $deco-spacing-xs;
+  }
+  &-sm {
+    padding-top: $deco-spacing-sm;
+  }
+  &-md {
+    padding-top: $deco-spacing-md;
+  }
+  &-lg {
+    padding-top: $deco-spacing-lg;
+  }  
 }
 
 // Padding Right
 
-.deco-pr-zero {
-  padding-right: 0;
-}
-.deco-pr-xs {
-  padding-right: $deco-spacing-xs;
-}
-.deco-pr-sm {
-  padding-right: $deco-spacing-sm;
-}
-.deco-pr-md {
-  padding-right: $deco-spacing-md;
-}
-.deco-pr-lg {
-  padding-right: $deco-spacing-lg;
+.deco-pr {
+  &-zero {
+    padding-right: 0;
+  }
+  &-xs {
+    padding-right: $deco-spacing-xs;
+  }
+  &-sm {
+    padding-right: $deco-spacing-sm;
+  }
+  &-md {
+    padding-right: $deco-spacing-md;
+  }
+  &-lg {
+    padding-right: $deco-spacing-lg;
+  }  
 }
 
 // Padding Bottom
 
-.deco-pb-zero {
-  padding-bottom: 0;
-}
-.deco-pb-xs {
-  padding-bottom: $deco-spacing-xs;
-}
-.deco-pb-sm {
-  padding-bottom: $deco-spacing-sm;
-}
-.deco-pb-md {
-  padding-bottom: $deco-spacing-md;
-}
-.deco-pb-lg {
-  padding-bottom: $deco-spacing-lg;
+.deco-pb {
+  &-zero {
+    padding: 0;
+  }
+  &-xs {
+    padding-bottom: $deco-spacing-xs;
+  }
+  &-sm {
+    padding-bottom: $deco-spacing-sm;
+  }
+  &-md {
+    padding-bottom: $deco-spacing-md;
+  }
+  &-lg {
+    padding-bottom: $deco-spacing-lg;
+  }  
 }
 
 // Padding Left
 
-.deco-pl-zero {
-  padding-left: 0;
-}
-.deco-pl-xs {
-  padding-left: $deco-spacing-xs;
-}
-.deco-pl-sm {
-  padding-left: $deco-spacing-sm;
-}
-.deco-pl-md {
-  padding-left: $deco-spacing-md;
-}
-.deco-pl-lg {
-  padding-left: $deco-spacing-lg;
+.deco-pl {
+  &-zero {
+    padding-left: 0;
+  }
+  &-xs {
+    padding-left: $deco-spacing-xs;
+  }
+  &-sm {
+    padding-left: $deco-spacing-sm;
+  }
+  &-md {
+    padding-left: $deco-spacing-md;
+  }
+  &-lg {
+    padding-left: $deco-spacing-lg;
+  }  
 }

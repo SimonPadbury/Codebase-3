@@ -1,94 +1,105 @@
-// DECORATION MIXINS: MARGINS
-// ==========================
+// DECORATION CLASS-BUILDER: MARGINS
+// =================================
+// File: codebase/scss/12_decoration-classes/_margins.scss
 
 // Margin All
 
-.deco-m-zero {
-  margin: 0;
-}
-.deco-m-xs {
-  margin: $deco-spacing-xs;
-}
-.deco-m-sm {
-  margin: $deco-spacing-sm;
-}
-.deco-m-md {
-  margin: $deco-spacing-md;
-}
-.deco-m-lg {
-  margin: $deco-spacing-lg;
+.deco-m {
+  &-zero {
+    margin: 0;
+  }
+  &-xs {
+    margin: $deco-spacing-xs;
+  }
+  &-sm {
+    margin: $deco-spacing-sm;
+  }
+  &-md {
+    margin: $deco-spacing-md;
+  }
+  &-lg {
+    margin: $deco-spacing-lg;
+  }
 }
 
 // Margin Top
 
-.deco-mt-zero {
-  margin-top: 0;
-}
-.deco-mt-xs {
-  margin-top: $deco-spacing-xs;
-}
-.deco-mt-sm {
-  margin-top: $deco-spacing-sm;
-}
-.deco-mt-md {
-  margin-top: $deco-spacing-md;
-}
-.deco-mt-lg {
-  margin-top: $deco-spacing-lg;
+.deco-mt {
+  &-zero {
+    margin-top: 0;
+  }
+  &-xs {
+    margin-top: $deco-spacing-xs;
+  }
+  &-sm {
+    margin-top: $deco-spacing-sm;
+  }
+  &-md {
+    margin-top: $deco-spacing-md;
+  }
+  &-lg {
+    margin-top: $deco-spacing-lg;
+  }
 }
 
 // Margin Right
 
-.deco-mr-zero {
-  margin-right: 0;
-}
-.deco-mr-xs {
-  margin-right: $deco-spacing-xs;
-}
-.deco-mr-sm {
-  margin-right: $deco-spacing-sm;
-}
-.deco-mr-md {
-  margin-right: $deco-spacing-md;
-}
-.deco-mr-lg {
-  margin-right: $deco-spacing-lg;
+.deco-mr {
+  &-zero {
+    margin-right: 0;
+  }
+  &-xs {
+    margin-right: $deco-spacing-xs;
+  }
+  &-sm {
+    margin-right: $deco-spacing-sm;
+  }
+  &-md {
+    margin-right: $deco-spacing-md;
+  }
+  &-lg {
+    margin-right: $deco-spacing-lg;
+  }
 }
 
 // Margin Bottom
 
-.deco-mb-zero {
-  margin-bottom: 0;
-}
-.deco-mb-xs {
-  margin-bottom: $deco-spacing-xs;
-}
-.deco-mb-sm {
-  margin-bottom: $deco-spacing-sm;
-}
-.deco-mb-md {
-  margin-bottom: $deco-spacing-md;
-}
-.deco-mb-lg {
-  margin-bottom: $deco-spacing-lg;
+.deco-mb {
+  &-zero {
+    margin-bottom: 0;
+  }
+  &-xs {
+    margin-bottom: $deco-spacing-xs;
+  }
+  &-sm {
+    margin-bottom: $deco-spacing-sm;
+  }
+  &-md {
+    margin-bottom: $deco-spacing-md;
+  }
+  &-lg {
+    margin-bottom: $deco-spacing-lg;
+  }
 }
 
 // Margin Left
 
-.deco-ml-zero {
-  margin-left: 0;
-}
-.deco-ml-xs {
-  margin-left: $deco-spacing-xs;
-}
-.deco-ml-sm {
-  margin-left: $deco-spacing-sm;
-}
-.deco-ml-md {
-  margin-left: $deco-spacing-md;
-}
-.deco-ml-lg {
-  margin-left: $deco-spacing-lg;
+.deco-ml {
+  &-zero {
+    margin-left: 0;
+  }
+  &-xs {
+    margin-left: $deco-spacing-xs;
+  }
+  &-sm {
+    margin-left: $deco-spacing-sm;
+  }
+  &-md {
+    margin-left: $deco-spacing-md;
+  }
+  &-lg {
+    margin-left: $deco-spacing-lg;
+  }
 }
 
 // Horizontal Centering by margin:auto

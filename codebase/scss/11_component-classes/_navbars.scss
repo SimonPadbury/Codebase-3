@@ -1,0 +1,43 @@
+// COMPONENT CLASS BUILDER: NAVBAR
+// ===============================
+// File: codebase/scss/11_component-classes/_navbar.scss
+
+.body--navbar-is-fixed {
+  @include body--navbar-is-fixed;
+}
+
+.navbar {
+  @include navbar;
+}
+
+.navbar__brand {
+  @include navbar__brand;
+}
+
+.navbar__navicon {
+  @include navbar__navicon;
+}
+
+.navbar__content {
+  @include navbar__content;
+}
+
+.navbar__left {
+  @include navbar__left;
+}
+
+.navbar__center {
+  @include navbar__center;
+}
+
+.navbar__right {
+  @include navbar__right;
+}
+
+.navbar__search {
+  @include navbar__search;
+}
+
+.navbar__has-wrap {
+  @include navbar__has-wrap;
+}

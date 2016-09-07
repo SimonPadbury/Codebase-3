@@ -15,70 +15,72 @@
 
 </head>
 
-<body class="codebase-docs">
+<body>
 
-  <!--<div class="codebase-docs">-->
+  <div class="page-wrap">
 
-    <nav class="navbar codebase-docs__navbar">
+<nav class="navbar docs__navbar deco-bb-thin-solid">
   <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span></a>
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3</small></a>
   </div>
   <div class="navbar__content">
     <div class="navbar__right">
-      <ul>
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+      <ul class="show--md-up">
+        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-    <header class="codebase-docs__header deco-bg-dark-primary">
-      <h1 class="deco-text-white">Getting Started</h1>
-    </header>
+  <div class="docs docs--base">
 
-    <div class="codebase-docs__main">
+    <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
+  <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
 
-      <div class="off-canvas-navicon off-canvas-navicon--right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
 
-<div class="codebase-docs__sidebar xs--off-canvas off-canvas--right">
-  <ul class="codebase-docs__sidebar-menu hide--sm-up">
-    <li><a class="brand" href="index.html"><span>Codebase</span></a></li>
+  <ul class="docs__sidebar-menu hide--md-up">
     <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
   </ul>
 
-  <h4>Codebase Docs</h4>
+  <h4>Docs</h4>
 
-  <ul class="codebase-docs__sidebar-menu">
+  <ul class="docs__sidebar-menu">
     <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a></li>
+    <li><a href="classless-base-styles.html">Classless Base Styles</a>
+      <ul>
+        <li><a href="classless-typography.html">Typography</a></li>
+        <li><a href="classless-forms.html">Forms</a></li>
+      </ul>
+    </li>
     <li><a href="layout.html">Layout</a>
       <ul>
-        <li><a href="layout-classic-grid.html">Classic Grid</a></li>
-        <li><a href="layout-semantic-grid.html">Semantic Grid</a></li>
-        <li><a href="layout-flexbox-grid.html">Flexbox Grid</a></li>
-        <li><a href="layout-visibility.html">Visibility </a></li>
-        <li><a href="layout-off-canvas-sidebar.html">Off-canvas Sidebar</a></li>
+        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
+        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
+        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
+        <li><a href="layout-visibility.html">Visibility</a></li>
+        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
       </ul>
     </li>
     <li><a href="utilities.html">Utilities</a>
       <ul>
         <li><a href="utilities-typography.html">Typography</a></li>
         <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-images.html">Images</a></li>
         <li><a href="utilities-buttons.html">Buttons</a></li>
         <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
       </ul>
     </li>
     <li><a href="components.html">Components</a>
       <ul>
-        <li><a href="components-media-object.html">Media Object</a></li>
+        <li><a href="components-media-objects.html">Media Objects</a></li>
         <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbar.html">Navbar</a></li>
+        <li><a href="components-navbars.html">Navbars</a></li>
         <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popover.html">Popovers</a></li>
-        <li><a href="components-slideshow.html">Slideshow</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
+        <li><a href="components-popovers.html">Popovers</a></li>
+        <li><a href="components-slideshows.html">Slideshows</a></li>
         <li><a href="components-tab-systems.html">Tab Systems</a></li>
+        <li><a href="components-tables.html">Tables</a></li>
       </ul>
     </li>
     <li><a href="decoration.html">Decoration</a>
@@ -87,13 +89,21 @@
         <li><a href="decoration-borders.html">Borders</a></li>
         <li><a href="decoration-paddings.html">Paddings</a></li>
         <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box shadows</a></li>
+        <li><a href="decoration-shadows.html">Box Shadows</a></li>
       </ul>
     </li>
   </ul>
-</div>
 
-      <div class="codebase-docs__main-article">
+</div>
+<!-- /.docs__sidebar -->
+
+    <main class="docs__main">
+
+      <header class="docs__header">
+        <h1>Getting Started</h1>
+      </header>
+
+      <div class="docs__content">
 
         <h2>Simple Setup</h2>
 
@@ -105,7 +115,7 @@
           Example simple HTML to get started:
         </p>
 
-        <pre class="codebase-docs__code"><code class="language-html">&lt;!doctype html&gt;
+        <pre class="docs__code"><code class="language-html">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -140,7 +150,7 @@
           After copying in the <code>codebase/</code> folder as above, build your project theme structure, e.g.:
         </p>
 
-        <pre class="codebase-docs__code"><code class="language-md">your-project/
+        <pre class="docs__code"><code class="language-md">your-project/
   ├── codebase/
   │     ├── css/
   │     ├── js/
@@ -152,15 +162,20 @@
         └── scss/</code></pre>
 
         <p>
-          You can import Codebase into your project base SCSS file. But before you do that, you may wish to override any/all of the SCSS variables in Codebase. This can easily be done because they are all set as <code>!default</code> variables. To override them, declare or import your overrides (i.e. variables with the same names but your preferred values) <b>before</b> importing Codebase.
+          You can import <code>codebase.scss</code> directly into your project base SCSS file.
         </p>
 
         <p>
-          So for example, if you have copied the Codebase folder as a sibling folder beside your project theme folder (as I have done for this documentation 'theme'), then you can set up as follows:
+          There are two ways that you can override the Codebase default variables &ndash; the choice is yours:
         </p>
 
+        <h4>"Non-interventionist" variable overrides</h4>
 
-        <pre class="codebase-docs__code"><code class="language-scss">// YOUR PROJECT BASE SCSS FILE
+        <p>
+          This is where you declare your variable overrides <mark>before you import Codebase</mark>. All Codebase variables have the <code>!default</code> flag, so if you name your overrides the same as the Codebase variable names, then your SCSS pre-processor will preferentially use your values instead of the Codebase defaults. For example:
+        </p>
+
+        <pre class="docs__code"><code class="language-scss">// YOUR PROJECT BASE SCSS FILE
 // ===========================
 
 // Put your overrides of Codebase `!default` variables here
@@ -171,6 +186,26 @@
 // Your project styles here
 ...</code></pre>
 
+        <p>
+          This "non-interventionist" override approach has this advantage: you can later easily drop into your project a newer version of Codebase. But the disadvantage is that you can't use any of the the Codebase variables <i>within</i> your variables. (E.g. you couldn't change the navbar breakpoint from <code>$break-xs</code> to <code>$break-sm</code> <i>unless</i> you had previously declared <code>$break-sm</code>. )
+        </p>
+
+        <h4>"Interventionist" variable overrides</h4>
+
+        <p>
+          This is where you actually declare your overrides <mark>within Codebase, after the default variables.</mark> Codebase imports an empty file named <code>_variable-overrides.scss</code> for this purpose:
+        </p>
+
+        <pre class="docs__code"><code class="language-scss">@import '01_default-variables/ ...
+
+@import '02_variable-overrides/_variable-overrides.scss
+
+...</code></pre>
+
+        <p>
+          The advantage of this "interventionist" approach is that you have full use of everything. The disadvantage is, you must remember to copy or backup your <code>_variable-overrides.scss</code> before you update Codebase.
+        </p>
+
         <h3>(2.) JS / jQuery</h3>
 
         <p>
@@ -178,25 +213,32 @@
         </p>
 
         <p>
-          You will need to call <code>codebase();</code>. The simplest way to do this is as in the example (here repeated):
+          You will need to call <code>codebase();</code>. The simplest way to do this is:
         </p>
 
-        <pre class="codebase-docs__code"><code class="language-html">&lt;script&gt;
+        <pre class="docs__code"><code class="language-html">&lt;script&gt;
   $(document).codebase();
 &lt;/script&gt;</code></pre>
 
         <p>
           Alternatively, you could move that call into your own theme script.
         </p>
-      </div>
-    </div>
-    </main>
 
-    <footer class="codebase-docs__footer deco-bg-charcoal">
-  <span class="deco-text-light-gray">
-    <a href="index.html">Codebase</a> v.1.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-  </span>
-</footer>
+      </div>
+    </main>
+  </div>
+
+  
+  <footer class="docs__footer deco-bg-charcoal">
+    <span class="deco-text-light-gray">
+      <a href="index.html">Codebase</a> v.1.3 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+    </span>
+  </footer>
+
+</div><!-- /.docs -->
+</div><!-- /.page-wrap -->
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="codebase/js/codebase.js"></script>
@@ -204,9 +246,6 @@
   $(document).codebase();
 </script>
 <script src="theme/prism/prism.js"></script>
-    <script>
-      Prism.highlightAll();
-    </script>
 </body>
 
 </html>

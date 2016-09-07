@@ -1,5 +1,6 @@
 // DEFAULT STYLES: FORMS
 // =====================
+// File: codebase/scss/04_base-styles/_forms.scss
 
 form {
   //@include clearfix;
@@ -20,20 +21,18 @@ label {
   @if $form-input-rounded == true {
     border-radius: $form-input-border-radius;
   }
-	padding: 5px;
-  font-size: $base-font-size;
-  line-height: $base-line-height-px;
-	color: $color-text-default;
+  padding: 5px;
+  color: $base-text-color;
   &::-webkit-input-placeholder,
   &::-moz-placeholder,
   &:-ms-input-placeholder,
   &:-moz-placeholder,
   &:placeholder {
-    color: $color-text-muted;
+    color: $base-text-color-muted;
   }
-	&:focus {
-		border-color: $color-text-hyperlink;
-	}
+  &:focus {
+    border-color: $base-text-color-hyperlink;
+  }
 }
 
 input,
@@ -43,7 +42,7 @@ select {
 
 select {
   padding: 5px;
-  color: $color-text-muted;
+  color: $base-text-color-muted;
 }
 
 select:not([multiple]) {

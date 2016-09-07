@@ -1,6 +1,5 @@
-/*
-Tab Systems (Components)
-*/
+// TAB SYSTEMS (Components)
+// ========================
 
 (function ($) {
   'use strict';
@@ -12,7 +11,7 @@ Tab Systems (Components)
 
     function cb_tabs_operation() {
 
-      /*jshint validthis: true */
+      /* jshint validthis: true */
       var tab_id = $(this).attr('data-tabs');
 
       $(this).siblings().removeClass('tabs__label--is-front').removeClass('tabs__card--is-front');
@@ -23,7 +22,7 @@ Tab Systems (Components)
     $('.tabs__label').on('click', cb_tabs_operation);
     $('.tabs__label').on('touchstart', cb_tabs_operation);
 
-    // .tabs-left
+    // `.tabs--left`
 
     var tabsLeft_minHeight = 0;
 

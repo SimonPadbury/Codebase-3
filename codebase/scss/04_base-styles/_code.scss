@@ -1,5 +1,6 @@
 // DEFAULT STYLES: CODE
 // ====================
+// File: codebase/scss/04_base-styles/_code.scss
 
 pre,
 code {
@@ -12,7 +13,7 @@ code {
   border: $deco-border-thin-solid;
   border-radius: $deco-border-radius;
   padding: 1px 5px;
-  background: $color-silver;
+  background: $deco-silver;
 }
 
 pre {

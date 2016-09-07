@@ -1,12 +1,13 @@
 // COMPONENT MIXINS: TABLES
 // ========================
-// File: 08_component-mixins/_tables.scss
+// File: codebase/scss/07_component-mixins/_tables.scss
 
 @mixin table {
   position: relative;
   border-collapse: collapse;
   min-width: 100%;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: $base-line-height-rem;
 	caption {
 		padding: $deco-spacing-block;
 	}

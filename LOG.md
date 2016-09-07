@@ -1,5 +1,17 @@
 # Codebase Version Log
 
+### v.1.3 - DATE REQUIRED
+
+* Removed the `.img--*` left and right align classes as redundant. Use the `.float--` utility classes instead.
+* Removed the lightbox and modal styles and scripts. Simply use popovers in future.
+* Reverted to the simpler version of the dropdown utility (v.1.1 that didn't use data-content="" and data-icon=""), because this was easier to integrate with the navbar.
+* Removed `.img--align-*` because `.float--*` does the same thing.
+* Added more deco box shadows (2x and 3x).
+* Simplified the typography.
+* Added `_variable-overrides.scss`.
+* Various bug fixes.
+* Totally redesigned the docs.
+
 ### v.1.2 - 26 August 2016
 
 * Changed the default media query breakpoint widths to:
@@ -7,7 +19,7 @@
 	*	 sm = 640px
 	*	 md = 960px
 	*	 lg = 1280px
-* Changed the swatch secondary color to teal (was gray). Now the grayscale and the secondary color don't overlap.
+* Changed the swatch secondary color to teal (was gray). Now the grayscale and the secondary color do not overlap.
 * Added a horizontal version of the menu component, and also named it as `menubar`. Therefore the collapsing menubar component has been renamed as `navbar`.
 * Split the Codebase JS into partials.
 * Improved the usefulness of the Codebase docs by implementing tabs into which the actual SCSS and JS (jQuery) partials are loaded.
@@ -35,7 +47,6 @@
 * Adding `col-` prefix to some grid system class names bring them into accord with BEM. E.g. `col col-sm--span-6` (was `column small--span-6`).
 * Reflecting these changes in the docs.
 * `margin-bottom` has been removed from form elements. Now you don't have to overrive it when you don't need it.
-
 
 ### v.1.0 - 27 July 2016
 

@@ -1,0 +1,43 @@
+// DEFAULT VARIABLES: BUTTON COLORS
+// ================================
+// File: codebase/scss/01_default-variables/_button-colors.scss
+
+// Primary
+
+$btn-color-primary: $deco-blue !default;
+$btn-color-light-primary: lighten($btn-color-primary, 25%) !default;
+$btn-color-dark-primary: darken($btn-color-primary, 10%) !default;
+$btn-color-primary-text: $deco-white !default;
+$btn-color-primary-text-dark: $btn-color-primary-text !default;
+
+// Secondary
+
+$btn-color-secondary: $deco-teal !default;
+$btn-color-light-secondary: lighten($btn-color-secondary, 25%) !default;
+$btn-color-dark-teal: darken($btn-color-secondary, 7%) !default;
+$btn-color-secondary-text: $deco-white !default;
+$btn-color-secondary-text-dark: $btn-color-secondary-text !default;
+
+// Warning
+
+$btn-color-warning: $deco-orange !default;
+$btn-color-light-warning: lighten($btn-color-warning, 25%) !default;
+$btn-color-dark-orange: darken($btn-color-warning, 7%) !default;
+$btn-color-warning-text: $deco-white !default;
+$btn-color-warning-text-dark: $btn-color-warning-text !default;
+
+// Error
+
+$btn-color-error: $deco-red !default;
+$btn-color-light-error: lighten($btn-color-error, 25%) !default;
+$btn-color-dark-red: darken($btn-color-error, 20%) !default;
+$btn-color-error-text: $deco-white !default;
+$btn-color-error-text-dark: $btn-color-error-text !default;
+
+// Success
+
+$btn-color-success: $deco-green !default;
+$btn-color-light-success: lighten($btn-color-success, 25%) !default;
+$btn-color-dark-green: darken($btn-color-success, 10%) !default;
+$btn-color-success-text: $deco-white !default;
+$btn-color-success-text-dark: $btn-color-success-text !default;

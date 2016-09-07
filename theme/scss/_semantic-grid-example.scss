@@ -9,19 +9,19 @@
 .your-article-column {
   @include col;
   @include break__md--up {
-    @include col--span(8);
+    @include col--span(9);
   }
   @include break__lg--up {
-    @include col--push(4);
+    @include col--push(3);
   }
 }
 .your-sidebar-column {
   @include col;
   @include break__md--up {
-    @include col--span(4);
+    @include col--span(3);
   }
   @include break__lg--up {
-    @include col--pull(8);
+    @include col--pull(9);
   }
 }
 .your-nested-grid-wrapper {
@@ -42,5 +42,5 @@
 }
 .semantic-twelth {
   @include col;
-  @include col--span(1);  
+  @include col--span(1);
 }
