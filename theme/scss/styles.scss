@@ -60,9 +60,10 @@ body {
 // =============================================================================
 
 .docs {
+  padding-bottom: 100px; // Necessary for "sticky footer"
   @include break__md--up {
     display: flex;
-    padding-bottom: 100px; // Necessary for "sticky footer"
+
   }
 }
 
@@ -275,9 +276,6 @@ body {
   height: 100px;
   padding: $deco-spacing-lg $deco-spacing-sm;
   text-align: center;
-  @include break__md--up {
-    bottom: 0;
-  }
 }
 
 // =============================================================================
