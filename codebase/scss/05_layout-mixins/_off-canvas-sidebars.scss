@@ -24,14 +24,14 @@
 @mixin off-canvas-navicon--right {
   right: 0;
   &.off-canvas--is-open {
-    transform: translate3d(-$off-canvas-width, 0, 0);
+    right: $off-canvas-width;
   }
 }
 
 @mixin off-canvas-navicon--left {
   left: 0;
   &.off-canvas--is-open {
-    transform: translate3d($off-canvas-width, 0, 0);
+    left: $off-canvas-width;
   }
 }
 
@@ -41,14 +41,15 @@
 @mixin off-canvas-right {
   right: -($off-canvas-width + 10px);
   &.off-canvas--is-open {
-    transform: translate3d(-($off-canvas-width + 10px), 0, 0);
+    right: 0;
   }
 }
 
 @mixin off-canvas-left {
   left: -($off-canvas-width + 10px);
+  transition: all 0.4s;
   &.off-canvas--is-open {
-    transform: translate3d(($off-canvas-width + 10px), 0, 0);
+    left: 0;
   }
 }
 
@@ -65,4 +66,3 @@
   transition: $off-canvas-transition;
   transform: translate3d(0, 0, 0);
 }
-

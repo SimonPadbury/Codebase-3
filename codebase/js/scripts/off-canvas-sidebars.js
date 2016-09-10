@@ -2,7 +2,6 @@
 // ============================
 // Using the Reset Overlay utility.
 
-
 (function ($) {
   'use strict';
   $.fn.cb_off_canvas_sidebar = function () {

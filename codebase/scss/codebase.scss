@@ -143,3 +143,48 @@ new Codebase (the log file should inform you of the changes).
 @import '12_decoration-classes/paddings';
 @import '12_decoration-classes/colors';
 @import '12_decoration-classes/shadows';
+
+// ==================================================
+// EXPERIMENTAL OC (OFF-CANVAS)
+// ==================================================
+
+.exp--off-canvas {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: yellow;
+  overflow: auto;
+}
+
+// Navicon
+.oc-navicon {
+  position: absolute;
+  top: 0;
+  z-index: 300;
+  right: 260px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Off-canvas
+.sm--oc {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: yellow;
+  overflow: auto;
+}
+
+.oc--right {
+  right: -250px;
+  transition: all 0.4s;
+  .oc--is-open & {
+    right: 0;
+  }
+}

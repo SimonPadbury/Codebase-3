@@ -17,13 +17,15 @@
 }
 
 @mixin popover {
+  position: relative;
   display: inline-block;
   max-height: 85vh;
-  transition: all 0.5s;
-  transform: translate3d(0, -150%, 0);
-  // (The extra 50% translateY accounts for top margins, borders and drop shadows on popovers.)
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 100vh;
   text-align: left;
   overflow: auto !important;
+  transition: all 0.5s;
   img {
     max-height: 70vh !important;
     width: auto !important;
@@ -50,7 +52,7 @@
   bottom: 0;
   height: auto;
   & > * {
-    transform: translate3d(0, 0, 0);
+    bottom: auto;
   }
 }
 
