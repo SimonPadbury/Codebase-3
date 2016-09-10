@@ -43,7 +43,6 @@
   <ul class="docs__sidebar-menu hide--md-up">
     <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
   </ul>
-
   <h4>Docs</h4>
 
   <ul class="docs__sidebar-menu">
@@ -156,7 +155,7 @@
 
 $off-canvas-width: 250px !default;
 $off-canvas-background: $deco-white !default;
-$off-canvas-transition: transform 400ms ease !default;
+$off-canvas-transition: all 400ms ease !default;
 $off-canvas-navicon-background: $deco-white !default;
 $off-canvas-navicon-color: $base-text-color-hyperlink !default;
 $off-canvas-navicon-color-hover: $base-text-color-hyperlink-hover !default;
@@ -193,14 +192,14 @@ $off-canvas-navicon-color-hover: $base-text-color-hyperlink-hover !default;
 @mixin off-canvas-navicon--right {
   right: 0;
   &.off-canvas--is-open {
-    transform: translate3d(-$off-canvas-width, 0, 0);
+    right: $off-canvas-width;
   }
 }
 
 @mixin off-canvas-navicon--left {
   left: 0;
   &.off-canvas--is-open {
-    transform: translate3d($off-canvas-width, 0, 0);
+    left: $off-canvas-width;
   }
 }
 
@@ -210,14 +209,15 @@ $off-canvas-navicon-color-hover: $base-text-color-hyperlink-hover !default;
 @mixin off-canvas-right {
   right: -($off-canvas-width + 10px);
   &.off-canvas--is-open {
-    transform: translate3d(-($off-canvas-width + 10px), 0, 0);
+    right: 0;
   }
 }
 
 @mixin off-canvas-left {
   left: -($off-canvas-width + 10px);
+  transition: all 0.4s;
   &.off-canvas--is-open {
-    transform: translate3d(($off-canvas-width + 10px), 0, 0);
+    left: 0;
   }
 }
 
@@ -234,7 +234,6 @@ $off-canvas-navicon-color-hover: $base-text-color-hyperlink-hover !default;
   transition: $off-canvas-transition;
   transform: translate3d(0, 0, 0);
 }
-
 </code></pre>
             </div>
           </div>

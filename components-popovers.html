@@ -43,7 +43,6 @@
   <ul class="docs__sidebar-menu hide--md-up">
     <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
   </ul>
-
   <h4>Docs</h4>
 
   <ul class="docs__sidebar-menu">
@@ -113,7 +112,7 @@
         </div>
 
         <br/>
-        
+
         <p>
           Example: The simplest <code>.popover--narrow</code> popover with no header or footer:
         </p>
@@ -145,7 +144,7 @@
 
         <!-- Ex 2 -->
 
-        <div id="popover-2" class="popover popover--narrow deco-mt-lg deco-bs-2x">
+        <div id="popover-2" class="popover popover--narrow deco-mt-lg deco-mr-sm deco-ml-sm deco-bs-2x">
           <div class="media deco-b-radius deco-bg-white">
             <div class="media__header deco-p-sm deco-bg-blue">
               <span class="popover__close float--right"><i class="fa fa-times"></i></span>
@@ -204,13 +203,15 @@
 }
 
 @mixin popover {
+  position: relative;
   display: inline-block;
   max-height: 85vh;
-  transition: all 0.5s;
-  transform: translate3d(0, -150%, 0);
-  // (The extra 50% translateY accounts for top margins, borders and drop shadows on popovers.)
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 100vh;
   text-align: left;
   overflow: auto !important;
+  transition: all 0.5s;
   img {
     max-height: 70vh !important;
     width: auto !important;
@@ -237,7 +238,7 @@
   bottom: 0;
   height: auto;
   & > * {
-    transform: translate3d(0, 0, 0);
+    bottom: auto;
   }
 }
 
@@ -413,7 +414,7 @@
 
         <!-- Ex 4 -->
 
-        <div id="popover-4" class="popover deco-mt-lg deco-mr-md deco-ml-md deco-bs-2x">
+        <div id="popover-4" class="popover deco-mt-lg deco-mr-sm deco-ml-sm deco-bs-2x">
           <div class="media deco-bg-white">
             <div class="media__body deco-p-sm">
               <img src="holder.js/1500x400">
@@ -431,7 +432,7 @@
 
         <!-- Ex 5 -->
 
-        <div id="popover-5" class="popover deco-mt-lg deco-bs-2x">
+        <div id="popover-5" class="popover deco-mt-lg deco-mr-sm deco-ml-sm deco-bs-2x">
           <div class="media deco-bg-white">
             <div class="media__body deco-p-sm">
               <img src="holder.js/3000x1500">
@@ -457,7 +458,7 @@
 
         <!-- Ex 6 -->
 
-        <div id="popover-6" class="popover deco-mt-lg deco-bs-2x">
+        <div id="popover-6" class="popover deco-mt-lg deco-mr-sm deco-ml-sm deco-bs-2x">
           <div class="media deco-m-gutter deco-b-radius deco-bs deco-bg-white">
             <div class="media__header deco-bb-thin-solid deco-p-sm">
               <span class="popover__close float--right"><i class="fa fa-times"></i></span>
@@ -499,7 +500,7 @@
 
         <!-- Ex 7 -->
 
-        <div id="popover-7" class="popover popover--narrow deco-mt-lg deco-bs-2x">
+        <div id="popover-7" class="popover popover--narrow deco-mt-lg deco-mr-sm deco-ml-sm deco-bs-2x">
           <div class="media deco-b-radius deco-bg-white">
             <div class="media__header deco-bb-thin-solid deco-p-sm">
               <span class="popover__close float--right"><i class="fa fa-times"></i></span>
@@ -557,7 +558,7 @@
               <section class="grid grid--gutter">
                 <div class="col col-sm--span-4">
                   <h4>Department 1</h4>
-                  <ul class="menu">
+                  <ul class="menu deco-mb-md">
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a>
@@ -573,7 +574,7 @@
                 </div>
                 <div class="col col-sm--span-4">
                   <h4>Department 2</h4>
-                  <ul class="menu">
+                  <ul class="menu deco-mb-md">
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a>
@@ -589,7 +590,7 @@
                 </div>
                 <div class="col col-sm--span-4">
                   <h4>Department 3</h4>
-                  <ul class="menu">
+                  <ul class="menu deco-mb-md">
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a>
@@ -607,7 +608,7 @@
               <section class="grid grid--gutter">
                 <div class="col col-sm--span-4">
                   <h4>Department 4</h4>
-                  <ul class="menu">
+                  <ul class="menu deco-mb-md">
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a>
@@ -623,7 +624,7 @@
                 </div>
                 <div class="col col-sm--span-4">
                   <h4>Department 5</h4>
-                  <ul class="menu">
+                  <ul class="menu deco-mb-md">
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a>
@@ -639,7 +640,7 @@
                 </div>
                 <div class="col col-sm--span-4">
                   <h4>Department 6</h4>
-                  <ul class="menu">
+                  <ul class="menu deco-mb-md">
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
                     <li class="menu__item"><a class="menu__link" href="#/">Link</a>

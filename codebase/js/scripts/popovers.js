@@ -23,6 +23,10 @@
       $('#' + popover_id).scrollTop(0).parent().addClass('popover__wrap--is-open');
       $('.reset-overlay').addClass('reset-overlay--is-raised-higher reset-overlay--darken');
 
+      $('.popover').click(function (e) {
+        e.stopPropagation();
+      });
+      
       $('.popover__wrap--is-open').on('click', $.fn.cb_reset);
       
       $('.popover__close').on('click', $.fn.cb_reset);
