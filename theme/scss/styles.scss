@@ -75,28 +75,6 @@ body {
   @include break__sm--down {
     padding: 0;
     background: $deco-charcoal;
-    .brand {
-      &:before {
-        display: block;
-        position: relative;
-        top: 3px;
-        float: left;
-        content: '';
-        width: 18px;
-        height: 18px;
-        background: url('../../images/codebase-logo-sprite.svg') 0 0 no-repeat;
-        background-size: 18px auto;
-      }
-      span {
-        margin-left: 5px;
-      }
-      &:hover {
-        color: $deco-light-gray;
-        &:before {
-          background-position: 0 -20px;
-        }
-      }
-    }
     h4 {
       margin: 10px;
       font-weight: bold;
@@ -113,8 +91,9 @@ body {
         border-color: $deco-dark-gray;
         padding-left: $deco-spacing-sm;
         color: $deco-gray;
-        &:hover {
-          text-decoration: none;
+        text-decoration: none;
+        &:active,
+        &.current {
           color: $deco-light-gray;
           background-color: $deco-dark-gray;
         }
@@ -137,12 +116,35 @@ body {
       color: $deco-white;
       font-weight: bold;
     }
-    a {
+    li {
+      margin: 0 -10px;
+      a {
+        display: block !important;
+        padding-left: $deco-spacing-sm;
+        color: $deco-light-gray;
+        &:active,
+        &.current {
+          color: $deco-white;
+          background-color: rgba(0,0,0,0.1);
+        }
+      }
+      li {
+        margin: 0 0 0 -20px;
+        a {
+          padding-left: $deco-spacing-md;
+        }
+      }
+    }
+/*    a {
+      display: block !important;
       color: $deco-light-gray;
       &:hover {
         color: $deco-white;
       }
-    }
+      &.current {
+        background: $deco-light-gray;
+      }
+    }*/
   }
 }
 

@@ -352,8 +352,17 @@ a {
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
+  
+  $(document).ready(function() {
+      $("[href]").each(function() {
+      if (this.href == window.location.href) {
+          $(this).addClass("current");
+          }
+      });
+  });
 </script>
 <script src="theme/prism/prism.js"></script>
+
 
 </body>
 
