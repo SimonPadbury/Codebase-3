@@ -13,10 +13,10 @@
   max-width: $grid-max-width;
   margin-right: auto;
   margin-left: auto;
-  float: none;
-  @include clearfix;
+  flex-direction: row;
   -webkit-backface-visibility: hidden;
 }
+
 // If you have a surplus of columns at any time, use @include grid--flexbox--wrap.
 @mixin grid--flexbox--wrap {
   flex-wrap: wrap;

@@ -31,7 +31,7 @@
   li {
     display: inline-block;
     padding-right: $deco-spacing-md;
-    &last-of-type {
+    &:last-of-type {
       padding-right: 0;
     }
   }

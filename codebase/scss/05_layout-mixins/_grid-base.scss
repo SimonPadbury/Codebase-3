@@ -62,7 +62,5 @@
 
 @mixin col {
   position: relative;
-  min-height: 1px;
   width: 100%;
-  overflow: visible;
 }

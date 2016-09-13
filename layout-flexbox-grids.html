@@ -21,7 +21,7 @@
 
 <nav class="navbar docs__navbar deco-bb-thin-solid">
   <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3.1</small></a>
+    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3.2</small></a>
   </div>
   <div class="navbar__content">
     <div class="navbar__right">
@@ -117,10 +117,10 @@
           </div>
           <div class="your-flexbox-sidebar-column deco-b-thin-solid">Aside</div>
         </section>
-        <section class="your-flexbox-grid-wrapper grid-example">
+        <section class="your-flexbox-grid-wrapper">
           <div class="your-flexbox-centered-column deco-b-thin-solid">Centered</div>
         </section>
-        <section class="your-flexbox-grid-wrapper">
+        <section class="your-flexbox-twelths-grid-wrapper">
           <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
           <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
           <div class="flexbox-twelth deco-b-thin-solid">&nbsp;</div>
@@ -136,7 +136,7 @@
         </section>
 
         <br/>
-        
+
         <p>
           Incorporate the Codebase flexbox grid mixins into your own layout, using your own choice of class names.
         </p>
@@ -179,7 +179,7 @@
   &lt;/div&gt;
 &lt;/section&gt;
 
-&lt;section class="your-grid-wrapper"&gt;
+&lt;section class="your-flexbox-twelths-grid-wrapper"&gt;
   &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
   &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
   &lt;div class="flexbox-twelth"&gt;&nbsp;&lt;/div&gt;
@@ -294,9 +294,7 @@ $column-gutter-width--lg: 50px !default;
 
 @mixin col {
   position: relative;
-  min-height: 1px;
   width: 100%;
-  overflow: visible;
 }
 </code></pre>
             </div>
@@ -320,10 +318,10 @@ $column-gutter-width--lg: 50px !default;
   max-width: $grid-max-width;
   margin-right: auto;
   margin-left: auto;
-  float: none;
-  @include clearfix;
+  flex-direction: row;
   -webkit-backface-visibility: hidden;
 }
+
 // If you have a surplus of columns at any time, use @include grid--flexbox--wrap.
 @mixin grid--flexbox--wrap {
   flex-wrap: wrap;
@@ -407,6 +405,12 @@ $column-gutter-width--lg: 50px !default;
     @include col--flexbox--centered(7);
   }
 }
+
+.your-flexbox-twelths-grid-wrapper {
+  @include grid--flexbox;
+  @include grid--gutter;
+}
+
 .flexbox-twelth {
   @include col;
   @include col--flexbox--span(1);
@@ -480,7 +484,7 @@ $column-gutter-width--lg: 50px !default;
   
   <footer class="docs__footer deco-bg-charcoal">
     <span class="deco-text-light-gray">
-      <a href="index.html">Codebase</a> v.1.3.1 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
+      <a href="index.html">Codebase</a> v.1.3.2 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
     </span>
   </footer>
 
@@ -493,7 +497,7 @@ $column-gutter-width--lg: 50px !default;
 <script src="codebase/js/codebase.js"></script>
 <script>
   $(document).codebase();
-  
+
   $(document).ready(function() {
       $("[href]").each(function() {
       if (this.href == window.location.href) {
