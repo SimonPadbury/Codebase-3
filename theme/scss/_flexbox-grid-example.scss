@@ -46,6 +46,12 @@
     @include col--flexbox--centered(7);
   }
 }
+
+.your-flexbox-twelths-grid-wrapper {
+  @include grid--flexbox;
+  @include grid--gutter;
+}
+
 .flexbox-twelth {
   @include col;
   @include col--flexbox--span(1);
