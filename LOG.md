@@ -1,5 +1,11 @@
 # Codebase Version Log
 
+### v.1.3.3 -- DATE REQUIRED
+
+### v.1.3.2 - 13 Septemver 2016
+
+* Bug fixes.
+
 ### v.1.3.1 - 10 September 2016
 
 * Removed the `transform3d` movement/positioning from off-canvas sidebars and from popovers – because this was preventing Mac Safari **overflow scrolling** in popovers and sidebar layers. (But it was working OK for Firefox, Chrome, IE10, Edge, and iOS Safari).
