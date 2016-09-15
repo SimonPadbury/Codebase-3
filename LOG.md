@@ -1,6 +1,8 @@
 # Codebase Version Log
 
-### v.1.3.3 -- DATE REQUIRED
+### v.1.3.3 -- 15 September 2016
+
+* Bug fixes
 
 ### v.1.3.2 - 13 Septemver 2016
 
