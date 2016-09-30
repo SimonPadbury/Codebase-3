@@ -22,7 +22,7 @@
   max-height: 85vh;
   margin-right: auto;
   margin-left: auto;
-  bottom: 100vh;
+  bottom: 110vh; // extra 10% to account for popover box shadows
   text-align: left;
   overflow: auto !important;
   transition: all 0.5s;
@@ -51,8 +51,8 @@
 @mixin popover__wrap--is-open {
   bottom: 0;
   height: auto;
-  & > * {
-    bottom: auto;
+  & > * { // the popover itself
+    bottom: 0;
   }
 }
 
