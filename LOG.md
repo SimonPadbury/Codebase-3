@@ -1,5 +1,9 @@
 # Codebase Version Log
 
+### v.1.3.5 -- 5 Oct 2016
+
+* Removed outer drop-shadow from buttons, so that form element+button combos look better together.
+
 ### v.1.3.4 -- 30 September 2016
 
 * Bug fixes.
