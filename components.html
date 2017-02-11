@@ -1,373 +1,1237 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Components | Codebase</title>
-
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="codebase/css/codebase.css">-->
-  <link rel="stylesheet" href="theme/css/styles.css">
-  <link rel="stylesheet" href="theme/prism/prism.css">
-
-</head>
-
-<body>
-
-<div class="page-wrap">
-
-<nav class="navbar docs__navbar deco-bb-thin-solid">
-  <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3.5</small></a>
-  </div>
-  <div class="navbar__content">
-    <div class="navbar__right">
-      <ul class="show--md-up">
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="docs docs--components">
-
-  <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
-  <i class="fa fa-bars" aria-hidden="true"></i>
-</div>
-
-<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
-
-  <ul class="docs__sidebar-menu hide--md-up">
-    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-  </ul>
-  <h4>Docs</h4>
-
-  <ul class="docs__sidebar-menu">
-    <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a>
-      <ul>
-        <li><a href="classless-typography.html">Typography</a></li>
-        <li><a href="classless-forms.html">Forms</a></li>
-      </ul>
-    </li>
-    <li><a href="layout.html">Layout</a>
-      <ul>
-        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
-        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
-        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
-        <li><a href="layout-visibility.html">Visibility</a></li>
-        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
-      </ul>
-    </li>
-    <li><a href="utilities.html">Utilities</a>
-      <ul>
-        <li><a href="utilities-typography.html">Typography</a></li>
-        <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-buttons.html">Buttons</a></li>
-        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-      </ul>
-    </li>
-    <li><a href="components.html">Components</a>
-      <ul>
-        <li><a href="components-media-objects.html">Media Objects</a></li>
-        <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbars.html">Navbars</a></li>
-        <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popovers.html">Popovers</a></li>
-        <li><a href="components-slideshows.html">Slideshows</a></li>
-        <li><a href="components-tab-systems.html">Tab Systems</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
-      </ul>
-    </li>
-    <li><a href="decoration.html">Decoration</a>
-      <ul>
-        <li><a href="decoration-margins.html">Margins</a></li>
-        <li><a href="decoration-borders.html">Borders</a></li>
-        <li><a href="decoration-paddings.html">Paddings</a></li>
-        <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box Shadows</a></li>
-      </ul>
-    </li>
-  </ul>
-
-</div>
-<!-- /.docs__sidebar -->
-
-  <main class="docs__main">
-
-    <header class="docs__header">
-      <h1>Components</h1>
-    </header>
-
-    <div class="docs__content">
-
-        <p>
-          Codebase components are common webpage HTML/CSS patterns. Some components are partly comprised of Codebase utilities. Some have added functionality from a small jQuery script (e.g. popover, slideshow, tabs).
-        </p>
-
-        <div class="initial-icon deco-bl-thick-solid deco-b-blue deco-p-md deco-bg-light-blue">
-          <i class="fa fa-info-circle deco-text-blue"></i> Codebase components attempt to be "unopinionated" in styling, as much as possible (meaning that there is less for designers to need to override).
-        </div>
-
-      <br/>
-        <p>
-          Only where necessary, some decorative styling has been built in &ndash; all of which can be easily modified by overriding the decoration variables at <code>codebase/scss/01_default-variables/_decoration.scss</code>. In addition, in order to properly display some of these components, a few <code>deco-*</code> <a html="decoration.html">decoration classes</a> have been employed &ndash; all of which are entirely optional.
-        </p>
-
-        <p>
-          So far, the Codebase components are these:
-        </p>
-
-        <!-- Media Objects-->
-      <h2><a href="components-media-objects.html">Media Objects</a></h2>
-
-        <style>
-          @media (max-width: 767px) {
-            .media__image-wrap--left {
-              max-width: 50px !important;
-            }
-          }
-        </style>
-
-        <div class="media  deco-b-thin-solid deco-b-radius">
-          <div class="media__header deco-bb-thin-solid deco-p-block">Media Header</div>
-          <div class="media__image-wrap media__image-wrap--left  deco-p-sm">
-            <a href="">
-              <img src="holder.js/96x96" alt="Square Thumbnail">
-            </a>
-          </div>
-          <div class="media__content-wrap">
-            <div class="media__content">
-              <h3 class="media__title">Media Title</h3>
-              <p class="media__text">Lorem ipsum dolor sit amet...</p>
-              <!-- Nested `.media` -->
-            </div>
-          </div>
-          <div class="media__footer deco-mt-md deco-bt-thin-solid deco-p-block">Media Footer</div>
-        </div>
-
-      <!-- Menus -->
-      <br/>
-      <h2><a href="components-menus.html">Menus</a></h2>
-
-      <ul class="menu">
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a>
-
-          <ul class="menu">
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
+<!DOCTYPE (doctype)>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"/>
+    <meta name="author"/>
+    <link rel="icon"/>
+    <title>Components</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+  </head>
+  <body>
+    <div class="body__inner">
+      <nav class="navbar navbar--fixed docs__navbar">
+        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
+        <div class="navbar--right show--md-up">
+          <ul>
+            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
           </ul>
-
-        </li>
-      </ul>
-
-      <!-- Navbars -->
-      <br/>
-      <h2><a href="components-navbars.html">Navbars</a></h2>
-
-      <nav class="navbar deco-b-thin-dashed">
-        <div class="navbar__brand">
-          <a>Brand</a>
         </div>
-        <div class="navbar__navicon"><i class="fa fa-bars" aria-hidden="true"></i></div>
-        <div class="navbar__content">
-          <div class="navbar__left">
+      </nav>
+      <div class="docs__main">
+        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
+          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div class="docs__sidebar-menu">
+            <h4>Docs</h4>
             <ul>
-              <li>
-                <a href="">Link</a>
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="basics.html">Basics</a></li>
+              <li><a href="layout.html">Layout</a></li>
+              <li class="current menu-marker"><a href="#components">Components</a>
                 <ul>
-                  <li><a href="">Dropdown link</a></li>
-                  <li><a href="">Dropdown link</a></li>
-                  <li><a href="">Dropdown link</a></li>
+                  <li><a href="#components-showhide">Showhide</a></li>
+                  <li><a href="#components-dropdowns">Dropdowns</a></li>
+                  <li><a href="#components-menus-and-menubars">Menus and Menubars</a></li>
+                  <li><a href="#components-navbars">Navbars</a></li>
+                  <li><a href="#components-menu-marker">Menu Marker</a></li>
+                  <li><a href="#components-off-canvas-sidebars">Off-canvas Sidebars</a></li>
+                  <li><a href="#components-slideshows">Slideshows</a></li>
+                  <li><a href="#components-media-objects">Media Objects</a></li>
+                  <li><a href="#components-popovers">Popovers</a></li>
+                  <li><a href="#components-tab-systems">Tab Systems</a></li>
+                  <li><a href="#components-pagination">Pagination</a></li>
                 </ul>
               </li>
-              <li><a href="">Link</a></li>
+              <li><a href="decoration.html">Decoration</a></li>
+              <li><a href="examples.html">Examples</a></li>
+              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
             </ul>
           </div>
-          <div class="navbar__right">
-            <ul>
-              <li><a href="">Link</a></li>
-              <li>
-                <a href="">Link</a>
-                <ul>
-                  <li><a href="">Dropdown link</a></li>
-                  <li><a href="">Dropdown link</a></li>
-                  <li><a href="">Dropdown link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="navbar__search">
-              <form action="">
-                <span>
-                  <input class="combo--first" type="search" name="" placeholder="Search">
-                  <button class="btn btn--primary combo--last"><i class="fa fa-search"></i></button>
-                </span>
-              </form>
+        </div>
+        <div class="docs__content menu-marker-wrap">
+          <header class="docs__header menu-marker-section" id="components">
+            <h1>Components</h1>
+            <p class="lead">
+              Codebase components are common HTML/CSS patterns. Some have added functionality from a small jQuery script (e.g. popover, slideshow, tabs).
+              
+            </p>
+            <p class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2">
+              <i class="fa fa-info-circle text--teal-darken-1"></i> Components examples have been built first as Pug mixins, in order to be useful in rapid prototyping or style guide composition.
+              
+            </p>
+            <h3>Component Mixins and Class Builders</h3>
+            <p>Almost everything in Codebase, including all components, were created first as a set of SCSS mixins. These were then combined and included in their respective <b>class builder</b> mixins. And these class builders are under the control of a set of <code>true !default</code> variables in <a href='codebase/sass/02_default-variables/_default-variables.sass'> codebase/sass/02_default-variables/_default-variables.sass</a>.
+              
+            </p>
+            <p>
+              So you can toggle component classes for inclusion (true) or exclusion (false) in your advanced theme build by overriding these defaults.
+              
+            </p>
+            <p>
+              This may be useful for reducing your final CSS file size (by exclusing what you don't need). And if you are combining various frameworks with similar named CSS classes, you can duplicate and edit the Codebase class names, giving them a unique (e.g. prefixed) namespace to avoid clashes.
+              
+            </p>
+            <h3>Components and Media Queries</h3>
+            <p>
+              Except for the navbar (which appears as a navbar at widths above the navbar breakpoint, and collapsed for smaller screens), Codebase components do not involve media queries. If you require components to have different behavior at different screen widths, you can include the component mixins within media queries in your own theme.
+              
+            </p>
+            <p>
+              For example, you may have a tab-system appear as an accordion for small screens down and as side-tabs on medium screens up.
+              
+            </p>
+            <h3>Component Styling</h3>
+            <p>
+              Codebase components attempt to be as minimally styled as possible. The styling is based on a common set of <b>decoration variables</b>, and is built into the Codebase component mixins.
+              
+            </p>
+            <p>
+              However, even this minimal styling in the components can be switched off by overriding a set of <b>Component Decoration</b> <code>true !default</code> variables in <a href='codebase/sass/02_default-variables/_default-variables.sass'> codebase/sass/02_default-variables/_default-variables.sass</a>. With these set to false, Codebase components are as "style agnostic" as possible, so that you can style them any way you want without CSS bloat.
+              
+            </p>
+            <p>
+              The Codebase component mixins can easily be included and combined and re-styled in your own theme (see
+              <a href='getting-started.html#advanced-setup')>Getting Started: Advanced Setup</a>).
+              
+            </p>
+            <p>
+              (These variables are also used in the <a href='decoration.html'>decoration classes</a>.)
+              
+            </p>
+            <h3>Reset Overlay</h3>
+            <p>
+              Several Codebase components (e.g. dropdowns, navbars, popovers and off-canvas sidebar require a "click outside to dismiss" function. This is accomplished by raising a full-page panel (called a reset overlay) to cover the page, and to raise the component to a z-index higher than the panel.
+              
+            </p>
+            <p>
+              The reset overlay serves as a "button" covering the entire page (except for the active component, which is in ffont of the overlay). All components requiring the reset overlay have reset-functions which are triggered by clicking/tapping the reset overlay.</p>
+              
+            </p>
+            <p>Usually the reset overlay is transparent. But for <a  href="#components-popovers">popovers</a> it is rendered semi-transparent black.</p>
+          </header>
+          <div class="docs__body">
+            <div class="menu-marker-section" id="components-showhide">
+              <h2 class="docs-section">Showhide</h2>
+              <p>
+                Use <code>.showhide</code> to show and hide content. Click or tap the toggle to change the state.
+                
+              </p>
+              <div class="showhide">
+                <button class="showhide__toggle btn">Showhide <i class="fa fa-sort"></i></button>
+                <div class="showhide__content p--block bg--gray-lighten-3">Example showhide component content</div>
+              </div>
+              <pre><code>&lt;div class="showhide"&gt;
+  &lt;button class="showhide__toggle btn"&gt;Showhide &lt;i class="fa fa-sort"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class="showhide__content"&gt;Example showhide component content&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              <div class="showhide">
+                <button class="btn combo--first">Combo example</button>
+                <button class="btn btn--icon fa fa-sort showhide__toggle combo--last"></button>
+                <div class="showhide__content p--block bg--gray-lighten-3">Content</div>
+              </div><br/><br/>
+              <p>
+                Simply place the <code>showhide__content</code> block before the toggle in the HTML (i.e. reverse the order of the toggle and the content) and it will be shown and hidden above the toggle.
+                
+              </p>
+              <div class="showhide">
+                <div class="showhide__content p--block bg--gray-lighten-3">Example showhide component content</div>
+                <button class="showhide__toggle btn">Showhide above <i class="fa fa-sort"></i></button>
+              </div>
+              <h3>Showhide blocks</h3>
+              <p>Showhides are inline-block by default, so that you can use several in a row (and so that the same showhide mixins can also be used in dropdowns). If you require the showhides to operate as blocks (with their content to occupy 100% block width), then add <code>showhide--block</code> to the wrapper.</p>
+              <div class="showhide showhide--block">
+                <button class="showhide__toggle btn">Showhide block <i class="fa fa-sort"></i></button>
+                <div class="showhide__content p--block bg--gray-lighten-3">Example showhide component content</div>
+              </div>
+              <h3>Showhide with "click outside to dismiss"</h3>
+              <p>
+                Add class <code> showhide--is-resettable</code> to the wrapper for "click outside to dismiss" functionality.
+                
+              </p>
+              <div class="showhide showhide--is-resettable">
+                <button class="showhide__toggle btn">Showhide <i class="fa fa-sort"></i></button>
+                <div class="showhide__content p--block bg--gray-lighten-3">Example showhide component content. Click anywhere outside to dismiss this content.</div>
+              </div>
+              <h3>Showhide at breakpoints</h3>
+              <p>Sometimes you may require showhide not to operate above or below a particular breakpoint.</p>
+              <div class="showhide showhide--md-up">
+                <button class="showhide__toggle btn">Showhide <i class="fa fa-sort"></i></button>
+                <div class="showhide__content p--block bg--gray-lighten-3">Example showhide component content.</div>
+              </div>
+              <h3>Dismissable panels</h3>
+              <p>
+                <Add>class <code>showhide--show-start</code> to the wrapper, and move the toggle inside the content for a dismissable panel.</Add>
+              </p>
+              <div class="showhide showhide--show-start showhide--block">
+                <div class="showhide__content bg--teal-lighten-2"><span class="showhide__dismiss float--right text--muted pr--1u"><b>Close <i class="fa fa-times"></i></b></span>
+                  <p class="initial-icon p--3u">
+                    <i class="fa fa-check-circle text--teal-darken-1" aria-hidden="true"></i>
+                    <b>Showhide showing at start</b><br/> The dismiss toggle is within showhide content block.
+                  </p>
+                </div>
+              </div>
+              <h3>Showhide accordions</h3>
+              <p>
+                Add class <code>showhide--accordion</code> (and <code>showhide--block</code>) to the wrapper, and use more than one toggle/content pair for an accordion.
+                
+              </p>
+              <p>
+                (In showhide accordions, the toggles must precede their respective content block in the HTML.)
+                
+              </p>
+              <div class="showhide showhide--accordion showhide--block">
+                <div class="showhide__toggle"><span>Showhide tab 1 <i class="fa fa-caret-down"></i></span></div>
+                <div class="showhide__content"> Example 1 showhide component content</div>
+                <div class="showhide__toggle"><span>Showhide tab 2 <i class="fa fa-caret-down"></i></span></div>
+                <div class="showhide__content"> Example 2 showhide component content</div>
+                <div class="showhide__toggle"><span>Showhide tab 3 <i class="fa fa-caret-down"></i></span></div>
+                <div class="showhide__content"> Example 3 showhide component content</div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="components-dropdowns">
+              <h2 class="docs-section">Dropdowns</h2>
+              <p>
+                In Codebase, dropdown components are a derivative of <a href='components.html#components-showhide'>showhide components</a>, sharing some of the same mixins.
+                
+              </p>
+              <div class="dropdown">
+                <button class="btn btn--sm dropdown__toggle">Dropdown <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown__content dropdown__content--nowrap">Long content with <code>dropdown__content--nowrap</code></div>
+              </div>
+              <pre><code>&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn--sm dropdown__toggle"&gt;Dropdown &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class="dropdown__content dropdown__content--nowrap"&gt;Long content with &lt;code&gt;dropdown__content--nowrap&lt;/code&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              <div class="dropdown">
+                <button class="btn btn--sm combo--first">Dropdown combo</button>
+                <button class="btn btn--sm btn--icon fa fa-caret-down dropdown__toggle combo--last"></button>
+                <div class="dropdown__content">Content</div>
+              </div><br/><br/>
+              <p>
+                Besides clicking the button again to dismiss the dropdown, you can click anywhere outside the dropdown to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).
+                
+              </p>
+              <p>The <code>.dropdown</code> wrapper ensures that the dropdown content appears flush left of the button. The wrapper has <code>display: inline-block</code> so that you can easily build a row of dropdowns and other inline elements.
+                
+              </p>
+              <p>Complex example:</p>
+              <div class="clearfix">
+                <div class="float--left">
+                  <button class="btn btn--sm btn--icon combo--first"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                  <button class="btn btn--sm btn--icon combo--middle"><i class="fa fa-italic" aria-hidden="true"></i></button>
+                  <button class="btn btn--sm btn--icon combo--last float--left"><i class="fa fa-underline" aria-hidden="true"></i></button>&nbsp;
+                </div>
+                <div class="float--left">
+                  <div class="dropdown">
+                    <button class="btn btn--sm btn--icon dropdown__toggle"><i class="fa fa-align-left"></i></button><span class="dropdown__content p--zero bg--white bs">
+                      <ul class="menu">
+                        <li>
+                          <button class="btn btn--sm btn--icon btn--link"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                        </li>
+                        <li>
+                          <button class="btn btn--sm btn--icon btn--link"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+                        </li>
+                        <li>
+                          <button class="btn btn--sm btn--icon btn--link"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+                        </li>
+                      </ul></span>
+                  </div>&nbsp;
+                </div>
+                <div class="float--left">
+                  <button class="btn btn--sm btn--icon combo--first"><i class="fa fa-cut" aria-hidden="true"></i></button>
+                  <button class="btn btn--sm btn--icon combo--middle"><i class="fa fa-copy" aria-hidden="true"></i></button>
+                  <button class="btn btn--sm btn--icon combo--last float--left"><i class="fa fa-paste" aria-hidden="true"></i></button>&nbsp;
+                </div>
+                <div class="float--left">
+                  <div class="dropdown">
+                    <button class="btn btn--sm btn--icon dropdown__toggle"><i class="fa fa-list"></i></button><span class="dropdown__content p--zero bg--white bs">
+                      <ul class="menu">
+                        <li>
+                          <button class="btn btn--sm btn--icon btn--link"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+                        </li>
+                        <li>
+                          <button class="btn btn--sm btn--icon btn--link"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+                        </li>
+                      </ul></span>
+                  </div>
+                </div>
+              </div><br/>
+              <p>
+                However, the downside of the <code>.dropdown</code> wrapper having
+                <code>display: inline-block</code> is that the dropdown content is constrained to the width of the <code>.dropdown__toggle</code> element. But there are various ways around this, which you can apply. One option is to add the modifier class <code>.dropdown__content--nowrap</code> (as used in example 1). Another option is for you to specify your required width for the dropdown content.
+                
+              </p>
+              <h3>Dropdown at breakpoints</h3>
+              <p>Sometimes you may require showhide not to operate above or below a particular breakpoint.</p>
+              <p>The example below operates as a dropdown on medium viewports up. Below that media query breakpoint, the toggle is hidden and the content is displayed as part of the page.</p>
+              <div class="dropdown dropdown--md-up">
+                <button class="dropdown__toggle btn">Dropdown <i class="fa fa-sort"></i></button>
+                <div class="dropdown__content">Content</div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="components-menus-and-menubars">
+              <h2 class="docs-section">Menus and menubars</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Menu is displayed as</th>
+                    <th><code>&lt;ul&gt;</code> classes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> Vertical links</td>
+                    <td> .menu</td>
+                  </tr>
+                  <tr>
+                    <td> Vertical block-links</td>
+                    <td> .menu.menu--block</td>
+                  </tr>
+                  <tr>
+                    <td> Horizontal links</td>
+                    <td> .menubar</td>
+                  </tr>
+                  <tr>
+                    <td> Horizontal block-links</td>
+                    <td> .menubar.menubar--block</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Menus</h3>
+              <p>Menu with links:</p>
+              <ul class="menu">
+                <li><a href="#/">Menu link 1</a></li>
+                <li><a href="#/">Menu link 2</a></li>
+                <li><a href="#/">Menu link 3</a></li>
+                <li><a href="#/">Menu link 4</a></li>
+                <li><a href="#/">Menu link 5</a></li>
+              </ul>
+              <pre><code>&lt;ul class="menu"&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Menu link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Menu link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Menu link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Menu link 4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Menu link 5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+              <p>For a menu with block links, add <code>.menu--block</code>:</p>
+              <ul class="menu menu--block">
+                <li><a href="#/">Menu link 1</a></li>
+                <li><a href="#/">Menu link 2</a></li>
+                <li><a href="#/">Menu link 3</a></li>
+                <li><a href="#/">Menu link 4</a></li>
+                <li><a href="#/">Menu link 5</a></li>
+              </ul>
+              <h3>Menubars</h3>
+              <p>Menubar with links:</p>
+              <ul class="menubar">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul>
+              <pre><code>&lt;ul class="menubar"&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+              <p>For a menu with block links, add <code>.menubar--block</code>:</p>
+              <ul class="menubar menubar--block">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul>
+              <h3>Menubar position</h3>
+              <p><code>menubar--left</code></p>
+              <ul class="menubar menubar--left">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul><br/><br/>
+              <p><code>menubar--right</code></p>
+              <ul class="menubar menubar--right">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul><br/><br/>
+              <p><code>menubar--center</code></p>
+              <ul class="menubar menubar--center">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul><br/><br/>
+              <p><code>menubar--jusify</code></p>
+              <ul class="menubar menubar--justify">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul>
+              <h3>Collapsible menubar</h3>
+              <p>Use <code>menubar--collapse-*</code> if you require a menubar to behave as a menu below a particular breakpoint (<code>xs</code>, <code>sm</code> or <code>md</code>).</p>
+              <p>Example <code>.menubar.menubar--block.menubar--collapse-sm</code>:</p>
+              <ul class="menubar menubar--block menubar--collapse-sm">
+                <li><a href="#/">Link 1</a></li>
+                <li><a href="#/">Link 2</a></li>
+                <li><a href="#/">Link 3</a></li>
+                <li><a href="#/">Link 4</a></li>
+                <li><a href="#/">Link 5</a></li>
+              </ul>
+            </div>
+            <div class="menu-marker-section" id="components-navbars">
+              <h2 class="docs-section">Navbars</h2>
+              <p>
+                In Codebase, a navbar is a composite of various menubars, sharing some of the same mixins.
+                
+              </p>
+              <p>
+                If you require a navbar to be "collapsed hidden" on smaller viewports, simply wrap the whole thing in a <a href="components.html#components-showhide">showhide</a>.
+                
+              </p>
+              <p>
+                If you require your menubar to have sub-menus, then you can add <a href="components.html#components-dropdowns"> dropdown components</a>.
+                
+              </p>
+              <div class="showhide showhide--block showhide--sm-down showhide--is-resettable">
+                <button class="showhide__toggle btn btn--icon btn--lt"><i class="fa fa-bars"></i></button>
+                <div class="showhide__content">
+                  <div class="navbar mb--3u b--1px-dashed">
+                    <div class="navbar--left"><a href="#/"><b>Brand</b></a>
+                      <div class="navbar--left">
+                        <li><a href="#/">Left 1</a></li>
+                        <li class="dropdown dropdown--md-up"><a class="dropdown__toggle">Left 2 <i class="fa fa-caret-down"></i></a>
+                          <ul class="dropdown__content dropdown__content--nowrap menu">
+                            <li><a href="#/">Left child 2.1</a></li>
+                            <li><a href="#/">Left child 2.2</a></li>
+                            <li><a href="#/">Left child 2.3</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#/">Left 3</a></li>
+                      </div>
+                    </div>
+                    <form class="navbar--right">
+                      <input class="combo--first" id="search-example" name="examplename" type="text" placeholder="Search..."/>
+                      <button class="btn btn--sm btn--icon combo--last" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <pre><code>&lt;div class="showhide showhide--block showhide--sm-down showhide--is-resettable"&gt;
+  &lt;button class="showhide__toggle btn btn--icon btn--lt"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;div class="showhide__content"&gt;
+
+    &lt;div class="navbar"&gt;
+      &lt;div class="navbar--left"&gt;
+
+        &lt;a href="#/"&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/a&gt;
+
+        &lt;div class="navbar--left"&gt;
+          &lt;li&gt;&lt;a href="#/"&gt;Left 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="dropdown dropdown--md-up"&gt;&lt;a class="dropdown__toggle"&gt;Left 2 &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;ul class="dropdown__content dropdown__content--nowrap menu"&gt;
+              &lt;li&gt;&lt;a href="#/"&gt;Left child 2.1&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#/"&gt;Left child 2.2&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#/"&gt;Left child 2.3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href="#/"&gt;Left 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;form class="navbar--right"&gt;
+        &lt;input class="combo--first" id="search-example" name="examplename" placeholder="Search..." type="text"&gt;
+        &lt;button class="btn btn--sm btn--icon combo--last" type="submit"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;/form&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="menu-marker-section" id="components-menu-marker">
+              <h2 class="docs-section">Menu Marker</h2>
+              <p>
+                If you have a menu (or menubar) that has links to several sections on your page (as in these docs, for example), you need to add the class <code>.menu-marker</code> to your menu wrapper, and then set up your page content as follows:
+                
+              </p>
+              <pre><code>&lt;div class="menu-marker-wrap"&gt;
+
+  &lt;div class="menu-marker-section" id="your-section-id-1&gt;...&lt;/div&gt;
+
+  &lt;div class="menu-marker-section" id="your-section-id-2&gt;...&lt;/div&gt;
+
+  &lt;div class="menu-marker-section" id="your-section-id-3&gt;...&lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="menu-marker-section" id="components-off-canvas-sidebars">
+              <h2 class="docs-section">Off-Canvas Sidebars</h2>
+              <p>The Codebase off-canvas sidebar can be used indepentently, or as a modification to a Codebase grid system.</p>
+              <p>If you use the off-canvas sidebar as a modification of a grid system, then instead of setting the<code>col-[size]--span-*</code> of a sidebar column on your lowest grid setting (xs, sm, md or lg), use the class<code>col-[size]--off-canvas</code>. You can also specify whether the off-canvas is to the left or right.</p>
+              <p> You will also need to add a navicon for toggling the sidebar.</p>
+              <p>Be sure to set the off-canvas navicon<code>data-off-canvas=&quot;&quot;</code> to point to its respective off-canvas sidebar<code>id=&quot;&quot;</code>.</p>
+              <p>It is possible to have more than one off-canvas sidebar. But only one can be activated at a time.</p>
+              <p><i>Example: see the sidebar on this page at different screen widths.</i></p>
+              <pre><code>&lt;div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1"&gt;
+  &lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;div id="sidebar-1" class="xs--off-canvas off-canvas--right"&gt;
+
+  &lt;div class="off-canvas__close off-canvas__close--left"&gt;
+    &lt;i class="fa fa-times" aria-hidden="true"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Off-canvas sidebar content --&gt;
+
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="menu-marker-section" id="components-slideshows">
+              <h2 class="docs-section">Slideshows</h2>
+              <p>
+                An easy-setup, lightweight, responsive slideshow. Capable of handling images or text, the Codebase slideshow component is suitable for displaying simple slideshow presentations, step-by-step tutorials, etc.
+                
+              </p>
+              <p> Example:</p>
+              <div class="slideshow slideshow--looping">
+                <div class="slideshow__inner">
+                  <div class="slideshow__item"><img src="holder.js/1000x400?bg=#eeeeee"/>
+                    <h4>Title for Slide 1</h4>
+                    <p>Plus some descriptive text.</p>
+                  </div>
+                  <div class="slideshow__item"><img src="holder.js/1000x400?bg=#cccccc"/>
+                    <h4>Title for Slide 2</h4>
+                    <p>Plus some descriptive text.</p>
+                  </div>
+                  <div class="slideshow__item"><img src="holder.js/1000x400?bg=#aaaaaa"/>
+                    <h4>Title for Slide 3</h4>
+                    <p>Plus some descriptive text.</p>
+                  </div>
+                  <div class="slideshow__item"><img src="holder.js/1000x400?bg=#888888"/>
+                    <h4>Title for Slide 4</h4>
+                    <p>Plus some descriptive text.</p>
+                  </div>
+                  <div class="slideshow__item"><img src="holder.js/1000x400?bg=#666666"/>
+                    <h4>Title for Slide 5</h4>
+                    <p>Plus some descriptive text.</p>
+                  </div>
+                  <div class="slideshow__item"><img src="holder.js/1000x400?bg=#444444"/>
+                    <h4>Title for Slide 6</h4>
+                    <p>Plus some descriptive text.</p>
+                  </div>
+                </div>
+              </div>
+              <pre><code>&lt;div class="slideshow slideshow--looping"&gt;
+
+  &lt;div class="slideshow__item"&gt;
+    &lt;img src="slide-1.png"&gt;
+    &lt;h4&gt;Title for Slide 1&lt;/h4&gt;
+    &lt;p&gt;Plus some descriptive text.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="slideshow__item"&gt;
+    &lt;img src="slide-2.png"&gt;
+    &lt;h4&gt;Title for Slide 2&lt;/h4&gt;
+    &lt;p&gt;Plus some descriptive text.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="slideshow__item"&gt;
+    &lt;img src="slide-3.png"&gt;
+    &lt;h4&gt;Title for Slide 3&lt;/h4&gt;
+    &lt;p&gt;Plus some descriptive text.&lt;/p&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+              <p> Notes:</p>
+              <ol>
+                <li>The simple setup consists of two outer block elements <code>.slideshow</code> and <code>.slideshow__inner</code>. The inner block serves as the 'slider trolley'&apos;' containing all the <code>.slideshow__item</code> blocks.</li>
+                <li>
+                  The Codebase slideshow adds its own prev/next arrows and pager dots. It calculates the number of dots by counting your slides, i.e. counting your
+                  <code>.slideshow__item</code> blocks.
+                </li>
+                <li>
+                  If you require your slideshow to have looping behavior, add class
+                  <code>.slideshow--looping</code> to the wrapper. Looping works both forwards and backwards. Hitting the forward arrow on the last slide will send the slideshow to the first slide. Hitting the back arrow on the first slide will send the slideshow to the last slide.
+                </li>
+                <li>The Slideshow will remain the height of your tallest slide plus the pager height. (The height does not auto-adjust while changing between slides of different heights).</li>
+                <li><b>Note:</b> only one instance of the Codebase slidershow component can be used per webpage.</li>
+                <li>
+                  <b>Note:</b> The Codebase slideshow component is not capable of auto-run.
+                  
+                </li>
+              </ol>
+              <p>
+                If you are need a slideshow with more capabilities, I recommend
+                <a href='http://kenwheeler.github.io/slick/', target='_blank' rel='noopener noreferrer'>Slick</a> by Ken Wheeler.
+              </p>
+            </div>
+            <div class="menu-marker-section" id="components-media-objects">
+              <h2 class="docs-section">Media Objects</h2>
+              <p> Example:</p>
+              <div class="media media--border">
+                <div class="media__header">Header
+                </div>
+                <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/96x96"/>
+                </div>
+                <div class="media__content-wrap">
+                  <div class="media__content">
+                    <div class="media__title">
+                      <h4 class="mt--zero">Media Object Title</h4>
+                    </div>
+                    <div class="media__title">
+                      <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                      <div class="media media--border-top">
+                        <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/96x96"/>
+                        </div>
+                        <div class="media__content-wrap">
+                          <div class="media__content">
+                            <div class="media__title">
+                              <h4 class="mt--zero">Media Object Title</h4>
+                            </div>
+                            <div class="media__title">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media__footer">Footer
+                </div>
+              </div>
+              <pre><code>&lt;div class="media"&gt;
+  &lt;div class="media__header"&gt;Media Header&lt;/div&gt;
+  &lt;div class="media__image-wrap media__image-wrap--left"&gt;
+    &lt;a href=""&gt;
+      &lt;img src="" alt="Square Thumbnail"&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="media__content-wrap"&gt;
+  &lt;div class="media__content"&gt;
+    &lt;h3 class="media__title"&gt;Media Title&lt;/h3&gt;
+    &lt;p class="media__text"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+    &lt;!-- Nested `.media` --&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="media__footer"&gt;Media Footer&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+              <p>
+                Media object images can have <code>media__image-wrap--left</code>, <code>media__image-wrap--right</code> or <code>media__image-wrap--center</code>.
+                
+              </p>
+              <p>
+                Use <code>media__image-wrap--center</code> if you require a "card" layout as below (these media objects below are wrapped in grid columns).
+                
+                
+              </p>
+              <div class="grid grid--gutter grid--nested">
+                <div class="col col-xs--span-6">
+                  <div class="media media--border">
+                    <div class="media__image-wrap media__image-wrap--center"><img src="holder.js/750x500"/>
+                    </div>
+                    <div class="media__content-wrap">
+                      <div class="media__content">
+                        <div class="media__title">
+                          <h4 class="mt--zero">Media Object Title</h4>
+                        </div>
+                        <div class="media__title">
+                          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-xs--span-6">
+                  <div class="media media--border">
+                    <div class="media__image-wrap media__image-wrap--center"><img src="holder.js/750x500"/>
+                    </div>
+                    <div class="media__content-wrap">
+                      <div class="media__content">
+                        <div class="media__title">
+                          <h4 class="mt--zero">Media Object Title</h4>
+                        </div>
+                        <div class="media__title">
+                          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="components-popovers">
+              <h2 class="docs-section">Popovers</h2>
+              <p>
+                A codebase popover is what is sometimes known as a <b>modal</b> in othe frameworks, or as a <b>lightbox</b> (if the main content is an image and the 'background' is darkened). These are essentially all the same things, so 'popover' has been chosen as the most generic name.
+                
+              </p>
+              <div class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-info-circle text--teal-darken-1"></i>If you need your popovers, lightboxes and modals to diverge and be styled differently, add your own supplemental class(es) and apply your styles to these (e.g. <code>.popover--lightbox</code>).</div><br/>
+              <p>Example: The simplest <code>.popover--narrow</code> popover, with no header or footer:</p>
+              <div class="popover popover--narrow bs-2x p--3u bg--white" id="popover-example-1">
+                <p>Lorem ipsum dolor sit amet usu in odio gubergren conclusionemque.</p><a class="popover__close float--right">Close</a><br/>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-example-1">Popover example 1</button>
+              </p>
+              <pre><code>&lt;div class="popover popover--narrow " id="popover-example-1"&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet usu in odio gubergren conclusionemque.&lt;/p&gt;
+  &lt;a class="popover__close float--right"&gt;
+    Close
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;button class="btn popover__open" data-popover="popover-example-1"&gt;Popover example 1&lt;/button&gt;
+</code></pre>
+              <p>
+                All popovers in Codebase slide in from the top and appear flush with the top of the window (but you can move them in by adding a margin to the <code>.popover</code> block). The reset-overlay is raised and darkened, and the popover pops over in front of the overlay. Popovers can be dismissed by clicking their <code>.popover__close</code> 'link' (or button or icon), or by clicking the darkened reset-overlay.
+                
+              </p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th> Class</th>
+                    <th> Explanation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> .popover</td>
+                    <td>Container. (A unique ID is also required, of your choice &ndash; see data-popover=&quot;{ID}&quot; below.)</td>
+                  </tr>
+                  <td colspan="2">By default the popover width is unconstrained &ndash; so the width becomes whatever the content needs.</td>
+                  <tr>
+                    <td> .popover--narrow</td>
+                    <td> Narrow constrained layout (optional)</td>
+                  </tr>
+                  <tr>
+                    <td> .popover--cover</td>
+                    <td> Full-page cover layout (optional)</td>
+                  </tr>
+                  <tr>
+                    <td>.popover__open<br/> data-popover=&quot;{ID}&quot;</td>
+                    <td> Opening control (e.g. button)</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"> {ID} = the ID of the popover to be opened</td>
+                  </tr>
+                  <tr>
+                    <td> .popover__close</td>
+                    <td> Onboard close control</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Another close control is already built into the darkened reset-overlay, for &quot;click outside to dismiss&quot;.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Popover Incorporating a Media Object</h3>
+              <p>
+                Codebase popovers come with (almost) no styling of their own &ndash; so you can do whatever you like with them. If you require a block header, body and footer then you can easily integrate a Codebase media object.
+                
+              </p>
+              <p> Example 2: popover containing a media object (and some extra styling).</p>
+              <div class="popover popover--narrow mt--4u mr--2u ml--2u bs-2u" id="popover-2">
+                <div class="media b--radius bg--white">
+                  <div class="media__header p--2u bg--blue"><span class="popover__close float--right"><i class="fa fa-times"></i></span>
+                    <h4 class="text--white">Popover header</h4>
+                  </div>
+                  <div class="media__body p--block">
+                    <h3 class="mt--2u">Popover body content</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+                  <div class="media__footer bt-1px-solid p--2u"> Popover footer</div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-2">Example 2: media object, with header and footer</button>
+              </p>
+              <pre><code>&lt;div id="popover-2" class="popover"&gt;
+  &lt;div class="media"&gt;
+
+    &lt;div class="media__header"&gt;
+      &lt;a class="popover__close float--right"&gt; x &lt;/a&gt;
+      Header content
+    &lt;/div&gt;
+    &lt;div class="media__body"&gt;
+      Body content
+    &lt;/div&gt;
+    &lt;div class="media__footer"&gt;
+      Footer content
+    &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- /.media --&gt;
+&lt;/div&gt;&lt;!-- /.popover --&gt;
+
+&lt;button class="btn popover__open" data-popover="popover-2"&gt;Show popover 3&lt;/button&gt;
+</code></pre>
+              <h3>Responsive popover</h3>
+              <p>
+                If you don't use any layout constraint classes, then you get a "shrink wrap" popover &ndash; the popover will take the with of its content (plus paddings). Extra-wide images and extra-tall images are scaled down so that the entire image always fits in the browser window, and allows room for a small amount of text (for a title, caption or explanation). This gives you the typical "lightbox" functionality.
+                
+              </p>
+              <div class="popover mt--4u bs-2u" id="popover-3">
+                <div class="media bg--white">
+                  <div class="media__body p--2u"><img src="holder.js/500x1000"/></div>
+                  <div class="media__footer p--2u"><b>Image Title</b><a class="popover__close float--right">Close</a></div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-3">Example 3: tall narrow image</button>
+              </p>
+              <div class="popover mt--4u mr--2u ml--2u bs-2u" id="popover-4">
+                <div class="media bg--white">
+                  <div class="media__body p--2u"><img src="holder.js/1500x400"/></div>
+                  <div class="media__footer p--2u"><b>Image Title</b><a class="popover__close float--right">Close</a></div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-4">Example 4: short wide image</button>
+              </p>
+              <div class="popover mt--4u mr--2u ml--2u bs-2u" id="popover-5">
+                <div class="media bg--white">
+                  <div class="media__body p--2u"><img src="holder.js/3000x1500"/></div>
+                  <div class="media__footer p--2u"><b>Image Title</b><a class="popover__close float--right">Close</a></div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-5">Example 5: tall wide image</button>
+              </p>
+              <h3> Incorporating a grid system</h3>
+              <p>
+                Simply don't use any constraint classes, so that the popover takes its width from its content &ndash; in this case, a grid system.
+                
+              </p>
+              <div class="popover mt--4u mr--2u ml--2u bs-2u" id="popover-6">
+                <div class="media m--gutter b--radius bs bg--white">
+                  <div class="media__header bb-1px-solid p--2u"><span class="popover__close float--right"><i class="fa fa-times"></i></span>
+                    <h4>Header</h4>
+                  </div>
+                  <div class="media__body p--2u">
+                    <section class="grid grid--gutter">
+                      <div class="col col-sm--span-6"><img src="holder.js/800x600" alt=""/></div>
+                      <div class="col col-sm--span-6">
+                        <h2>Image Title</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>
+                          <button class="btn btn--primary">Activate</button>
+                          <button class="btn btn--secondary">Delete</button>
+                        </p>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="media__footer bt-1px-solid p--2u">
+                    <button class="btn btn--secondary popover__close float--right">Cancel</button>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-6">Example 6: grid system</button>
+              </p>
+              <h3> Extra-tall content</h3>
+              <p>
+                Extra-tall popovers don't protrude off the screen, but allow their content to scroll. (However, if an image is extra-tall, it is scaled down so that its height fits in your popover/ popover/ popover).
+                
+              </p>
+              <div class="popover popover--narrow mt--4u mr--2u ml--2u bs-2u" id="popover-7">
+                <div class="media b--radius bg--white">
+                  <div class="media__header media__header--fixed bb-1px-solid p--2u"><span class="popover__close float--right"><i class="fa fa-times"></i></span>
+                    <h4>Header</h4>
+                  </div>
+                  <div class="media__body p--block">
+                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                    <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
+                    <p>Utroque habemus moderatius cum cu, no sea persius assueverit, eam id ipsum ridens urbanitas. Ex ridens tibique duo. Ne vim error percipit, his in duis ullamcorper, id sed vero vidisse labores. Eos cu habeo oratio, habeo dicit ad per. Nam nulla vocibus temporibus ea, et melius electram ius, nec putent moderatius appellantur et. Ea vix saperet tincidunt.</p>
+                    <p>Eruditi omittam usu et, ea sed animal detraxit. Pro aperiam efficiendi suscipiantur at, at vis epicurei verterem corrumpit, cu probatus tincidunt mel. Ei nibh officiis qui, pri minim ubique ne. Tritani liberavisse ad duo. Deleniti menandri nam ea, alienum sadipscing id quo, congue gubergren mnesarchum mei ad.</p>
+                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                    <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
+                    <p>Utroque habemus moderatius cum cu, no sea persius assueverit, eam id ipsum ridens urbanitas. Ex ridens tibique duo. Ne vim error percipit, his in duis ullamcorper, id sed vero vidisse labores. Eos cu habeo oratio, habeo dicit ad per. Nam nulla vocibus temporibus ea, et melius electram ius, nec putent moderatius appellantur et. Ea vix saperet tincidunt.</p>
+                    <p>Eruditi omittam usu et, ea sed animal detraxit. Pro aperiam efficiendi suscipiantur at, at vis epicurei verterem corrumpit, cu probatus tincidunt mel. Ei nibh officiis qui, pri minim ubique ne. Tritani liberavisse ad duo. Deleniti menandri nam ea, alienum sadipscing id quo, congue gubergren mnesarchum mei ad.</p>
+                  </div>
+                  <div class="media__footer bt-1px-solid p--2u">Footer
+                    <button class="btn btn--secondary popover__close float--right">Close</button>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-7">Example 7: narrow, with a lot of content</button>
+              </p>
+              <h3> Full cover popover</h3>
+              <p>
+                If you require a popover to cover the entire window, add <code>.popover--cover</code> . For example, use this for a navigation system or sitemap. (Of course, full-cover popovers can contain a grid, so there is no need to add <code>.popover--contains-grid</code> .)
+                
+              </p>
+              <div class="popover popover--cover" id="popover-8">
+                <div class="media bg--white"><a class="popover__close float--right p--3u">Close<i class="fa fa-times"></i></a>
+                  <div class="media__body p--4u">
+                    <section class="grid grid--gutter">
+                      <div class="col">
+                        <h2>Sitemap</h2>
+                        <hr/>
+                      </div>
+                    </section>
+                    <section class="grid grid--gutter">
+                      <div class="col col-sm--span-4">
+                        <h4>Department 1</h4>
+                        <ul class="menu mb--3u">
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+                            <ul class="menu">
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-sm--span-4">
+                        <h4>Department 2</h4>
+                        <ul class="menu mb--3u">
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+                            <ul class="menu">
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-sm--span-4">
+                        <h4>Department 3</h4>
+                        <ul class="menu mb--3u">
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+                            <ul class="menu">
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                        </ul>
+                      </div>
+                    </section>
+                    <section class="grid grid--gutter">
+                      <div class="col col-sm--span-4">
+                        <h4>Department 4</h4>
+                        <ul class="menu mb--3u">
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+                            <ul class="menu">
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-sm--span-4">
+                        <h4>Department 5</h4>
+                        <ul class="menu mb--3u">
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+                            <ul class="menu">
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                        </ul>
+                      </div>
+                      <div class="col col-sm--span-4">
+                        <h4>Department 6</h4>
+                        <ul class="menu mb--3u">
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a>
+                            <ul class="menu">
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                              <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                            </ul>
+                          </li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                          <li class="menu__item"><a class="menu__link" href="#/">Link</a></li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="media__footer bt-1px-solid p--2u">Footer<a class="popover__close float--right" href="#">Close<i class="fa fa-times"></i></a></div>
+                </div>
+              </div>
+              <p>
+                <button class="btn popover__open" data-popover="popover-8">Example 8: full cover</button>
+              </p>
+              <div class="initial-icon mt--4u bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-info-circle text--teal-darken-1"></i> Some browsers (particularly iOS Safari)<i>correctly</i> restrict the z-index of<code>position:absolute</code> elements<b>if they are contained within</b><code>position:relative</code><b>elements</b>. So although popovers are intended to pop over in front of the darkened reset-overlay (i.e. popovers have a higher z-index), it cannot do so on these browsers. Thus if you are using<code>position:relative</code> to control your page payout you may find it necessary to place your popovers, etc.<i>later</i> in the DOM, outside of all other elements. (The Codebase layout grid systems do not use<code>position:relative</code>.)</div>
+            </div>
+            <div class="menu-marker-section" id="components-tab-systems">
+              <h2 class="docs-section">Tab Systems</h2>
+              <p>
+                The Cosebase tab system comes in three types (<b>top</b>, <b>side</b> and <b>accordion</b>). Their HTML is the same; only a modifier class on the containing DIV needs to be altered to swap from one tab type to another.
+                
+              </p>
+              <h3>Top Tabs</h3>
+              <div class="tabs tabs--top">
+                <div class="tabs__label" data-tabs="tabs-docs1">Tab Label 1</div>
+                <div class="tabs__card" id="tabs-docs1">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 1</p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs2">Tab Label 2</div>
+                <div class="tabs__card" id="tabs-docs2">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 2</p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs3">Tab Label 3</div>
+                <div class="tabs__card" id="tabs-docs3">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 3</p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs4">Tab Label 4</div>
+                <div class="tabs__card" id="tabs-docs4">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 4</p> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                </div>
+              </div>
+              <p>
+                Within Codebase tab systems, each tab label and their respective tab card can be placed next to each other, in pairs.
+                
+              </p>
+              <p>
+                A tab label's <code>data-tabs=""</code> refers to its respective card's <code>id=""</code>.
+                
+              </p>
+              <pre><code>&lt;div class="tabs tabs--top"&gt;
+
+  &lt;div class="tabs__label" data-tabs="tabs-example-1"&gt;Tab Label 1&lt;/div&gt;
+    &lt;div id="tabs-example-1" class="tabs__card"&gt;
+    &lt;div class="tabs__card-content"&gt;
+      &lt;p&gt;Tab Content 1&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="tabs__label" data-tabs="tabs-example-2"&gt;Tab Label 2&lt;/div&gt;
+    &lt;div id="tabs-example-2" class="tabs__card"&gt;
+    &lt;div class="tabs__card-content"&gt;
+      &lt;p&gt;Tab Content 2&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Other tabs ... --&gt;
+
+&lt;/div&gt;
+</code></pre>
+              <h3 id="components-tab-systems-menubar">Tabbed menubar</h3>
+              <p>
+                Add the modifier class <code>tabs__card-content--menubar</code> to remove each <code>tabs__card-content</code> padding.
+                
+              </p>
+              <div class="tabs tabs--top">
+                <div class="tabs__label" data-tabs="world">World News</div>
+                <div class="tabs__card" id="world">
+                  <div class="tabs__card-content tabs__card-content--menubar">
+                    <ul class="menubar menu--block">
+                      <li><a href="#/">World 1</a></li>
+                      <li><a href="#/">World 2</a></li>
+                      <li><a href="#/">World 3</a></li>
+                      <li><a href="#/">World 4</a></li>
+                      <li><a href="#/">World 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="local">Local News</div>
+                <div class="tabs__card" id="local">
+                  <div class="tabs__card-content tabs__card-content--menubar">
+                    <ul class="menubar menu--block">
+                      <li><a href="#/">Local 1</a></li>
+                      <li><a href="#/">Local 2</a></li>
+                      <li><a href="#/">Local 3</a></li>
+                      <li><a href="#/">Local 4</a></li>
+                      <li><a href="#/">Local 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="science">Science</div>
+                <div class="tabs__card" id="science">
+                  <div class="tabs__card-content tabs__card-content--menubar">
+                    <ul class="menubar menu--block">
+                      <li><a href="#/">Science 1</a></li>
+                      <li><a href="#/">Science 2</a></li>
+                      <li><a href="#/">Science 3</a></li>
+                      <li><a href="#/">Science 4</a></li>
+                      <li><a href="#/">Science 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="health">Health</div>
+                <div class="tabs__card" id="health">
+                  <div class="tabs__card-content tabs__card-content--menubar">
+                    <ul class="menubar menu--block">
+                      <li><a href="#/">Health 1</a></li>
+                      <li><a href="#/">Health 2</a></li>
+                      <li><a href="#/">Health 3</a></li>
+                      <li><a href="#/">Health 4</a></li>
+                      <li><a href="#/">Health 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="technology">Technology</div>
+                <div class="tabs__card" id="technology">
+                  <div class="tabs__card-content tabs__card-content--menubar">
+                    <ul class="menubar menu--block">
+                      <li><a href="#/">Technology 1</a></li>
+                      <li><a href="#/">Technology 2</a></li>
+                      <li><a href="#/">Technology 3</a></li>
+                      <li><a href="#/">Technology 4</a></li>
+                      <li><a href="#/">Technology 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="sport">Sport</div>
+                <div class="tabs__card" id="sport">
+                  <div class="tabs__card-content tabs__card-content--menubar">
+                    <ul class="menubar menu--block">
+                      <li><a href="#/">Sport 1</a></li>
+                      <li><a href="#/">Sport 2</a></li>
+                      <li><a href="#/">Sport 3</a></li>
+                      <li><a href="#/">Sport 4</a></li>
+                      <li><a href="#/">Sport 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <h3>Tabs system appearance</h3>
+              <p> Simply swap the tabs modifier class to alter the appearance of the tab system:</p>
+              <pre><code>&lt;div class="tabs tabs--top"&gt; ... &lt;/div&gt;
+
+&lt;div class="tabs tabs--left"&gt; ... &lt;/div&gt;
+
+&lt;div class="tabs tabs--accordion"&gt; ... &lt;/div&gt;
+</code></pre>
+              <h3>Left Side Tabs</h3>
+              <div class="tabs tabs--left">
+                <div class="tabs__label" data-tabs="tabs-docs5">Tab Label 5</div>
+                <div class="tabs__card" id="tabs-docs5">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 5</p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs6">Tab Label 6</div>
+                <div class="tabs__card" id="tabs-docs6">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 6</p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs7">Tab Label 7</div>
+                <div class="tabs__card" id="tabs-docs7">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 7</p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs8">Tab Label 8</div>
+                <div class="tabs__card" id="tabs-docs8">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 8</p> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                </div>
+              </div>
+              <h3>Accordion Tabs</h3>
+              <div class="tabs tabs--accordion">
+                <div class="tabs__label" data-tabs="tabs-docs9">Tab Label 9</div>
+                <div class="tabs__card" id="tabs-docs9">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 9</p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs10">Tab Label 10</div>
+                <div class="tabs__card" id="tabs-docs10">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 10</p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs11">Tab Label 11</div>
+                <div class="tabs__card" id="tabs-docs11">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 11</p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </div>
+                </div>
+                <div class="tabs__label" data-tabs="tabs-docs12">Tab Label 12</div>
+                <div class="tabs__card" id="tabs-docs12">
+                  <div class="tabs__card-content">
+                    <p>Tab Content 12</p> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="components-pagination">
+              <h2 class="docs-section">Pagination</h2>
+              <ul class="pagination">
+                <li><a href="#/"><i class="fa fa-arrow-left"></i> Newer</a></li>
+                <li><a href="#/">1</a></li>
+                <li><a class="pagination__current" href="#/">2</a></li>
+                <li><a href="#/">3</a></li>
+                <li><a href="#/">4</a></li>
+                <li><a href="#/">5</a></li>
+                <li><a href="#/">Older <i class="fa fa-arrow-right"></i></a></li>
+              </ul>
+              <pre><code>&lt;ul class="pagination"&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;&lt;i class="fa fa-arrow-left"&gt;&lt;/i&gt; Newer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class="pagination__current" href="#/"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;5&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#/"&gt;Older &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             </div>
           </div>
-        </div><!-- /.navbar__content -->
-      </nav>
-
-      <!-- Pagination -->
-      <br/>
-      <h2><a href="components-pagination.html">Pagination</a></h2>
-
-      <ul class="pagination">
-        <li><a href=""><i class="fa fa-arrow-left"></i> Newer</a></li>
-        <li><a href="">1</a></li>
-        <li><a class="cb-pagination__current" href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">Older <i class="fa fa-arrow-right"></i></a></li>
-      </ul>
-
-      <!-- Popovers -->
-      <br/>
-      <h2><a href="components-popovers.html">Popovers</a></h2>
-
-      <div id="popover-1" class="popover popover--narrow deco-mt-lg deco-bs-3x">
-        <div class="media deco-b-thick-solid deco-b-orange deco-b-radius deco-bg-white">
-          <div class="media__header deco-bb-thin-solid deco-p-sm">
-            <span class="popover__close float--right"><i class="fa fa-times fa-border"></i></span>
-            <h4>Header</h4>
-          </div>
-
-          <div class="media__body deco-p-block">
-            Content
-          </div>
-
-          <div class="media__footer deco-bt-thin-solid deco-p-sm clearfix">
-            Footer
-            <button class="btn btn--primary popover__close float--right">Close</button>
-          </div>
+          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
+               version 2.x PREVIEW
+              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
         </div>
-      </div><!-- /.popover -->
-
-      <button class="btn popover__open" data-popover="popover-1">Show popover 1</button>
-
-      <!-- Slideshows -->
-      <br/>
-      <br/>
-      <h2><a href="components-slideshows.html">Slideshows</a></h2>
-
-      <div class="slideshow">
-        <div class="slideshow__inner">
-
-          <div class="slideshow__item">
-            <img src="holder.js/960x200?bg=000" /><br />
-            Slide 1 Text
-          </div>
-
-          <div class="slideshow__item">
-            <img src="holder.js/960x200?bg=555" /><br />
-            Slide 2 Text
-          </div>
-
-          <div class="slideshow__item">
-            <img src="holder.js/960x200?bg=aaa" /><br />
-            Slide 3 Text
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Tab Systems -->
-      <h2><a href="components-tab-systems.html">Tab Systems</a></h2>
-
-      <div class="tabs tabs--top">
-
-      <div class="tabs__label" data-tabs="tabs-example-1">Tab Label 1</div>
-      <div id="tabs-example-1" class="tabs__card">
-        <div class="tabs__card-content">
-          <p>Tab Content 1</p>
-        </div>
-      </div>
-
-      <div class="tabs__label" data-tabs="tabs-example-2">Tab Label 2</div>
-      <div id="tabs-example-2" class="tabs__card">
-        <div class="tabs__card-content">
-          <p>Tab Content 2</p>
-        </div>
-      </div>
-
-      <div class="tabs__label" data-tabs="tabs-example-3">Tab Label 3</div>
-      <div id="tabs-example-3" class="tabs__card">
-        <div class="tabs__card-content">
-          <p>Tab Content 3</p>
-        </div>
-      </div>
-
-      </div>
-
-      <!-- Tables -->
-      <h2><a href="components-tables.html">Tables</a></h2>
-
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Table header 1</th>
-            <th>Table header 2</th>
-            <th>Table header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Table content 1 A</td>
-            <td>Table content 2 A</td>
-            <td>Table content 3 A</td>
-          </tr>
-          <tr>
-            <td>Table content 1 B</td>
-            <td>Table content 2 B</td>
-            <td>Table content 3 B</td>
-          </tr>
-          <tr>
-            <td>Table content 1 C</td>
-            <td>Table content 2 C</td>
-            <td>Table content 3 C</td>
-          </tr>
-        </tbody>
-      </table>
-
       </div>
     </div>
-    </main>
-
-      
-  <footer class="docs__footer deco-bg-charcoal">
-    <span class="deco-text-light-gray">
-      <a href="index.html">Codebase</a> v.1.3.5 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-    </span>
-  </footer>
-
-</div><!-- /.docs -->
-</div><!-- /.page-wrap -->
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="codebase/js/codebase.js"></script>
-<script>
-  $(document).codebase();
-
-  $(document).ready(function() {
-      $("[href]").each(function() {
-      if (this.href == window.location.href) {
-          $(this).addClass("current");
-          }
-      });
-  });
-</script>
-<script src="theme/prism/prism.js"></script>
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="codebase/js/codebase.js"></script>
+  </body>
 </html>

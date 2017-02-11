@@ -1,0 +1,206 @@
+//- Example Gallery
+
+extends ../codebase/pug/_codebase
+
+block vars
+  - var title='Gallery Example'
+
+block append head-addins
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js')
+
+block body
+  include _corner-codebase
+  include example-partials/_example-partials-index
+
+  +example-navbar
+
+  .grid.grid--gutter.mv-6u
+    .col.col-md--span-9
+
+      //- Gallery
+      .grid.grid--gutter.grid--nested
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-01').mb--6u
+            +image('holder.js/150x150?text=Exibit 01', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-02').mb--6u
+            +image('holder.js/150x150?text=Exibit 02', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-03').mb--6u
+            +image('holder.js/150x150?text=Exibit 03', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-04').mb--6u
+            +image('holder.js/150x150?text=Exibit 04', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-05').mb--6u
+            +image('holder.js/150x150?text=Exibit 05', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-06').mb--6u
+            +image('holder.js/150x150?text=Exibit 06', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-07').mb--6u
+            +image('holder.js/150x150?text=Exibit 07', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-08').mb--6u
+            +image('holder.js/150x150?text=Exibit 08', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-09').mb--6u
+            +image('holder.js/150x150?text=Exibit 09', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-10').mb--6u
+            +image('holder.js/150x150?text=Exibit 10', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-11').mb--6u
+            +image('holder.js/150x150?text=Exibit 11', '', 'bs')
+
+        .col.col-xs--span-6.col-sm--span-4.col-lg--span-3.text--center
+          .popover__open(data-popover='exhibit-12').mb--6u
+            +image('holder.js/150x150?text=Exibit 12', '', 'bs')
+
+    .col.col-md--span-3
+      h4 Sidebar
+
+      +menu('Sidebar link', 6)
+
+  #exhibit-01.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 01', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-02.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 02', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-03.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 03', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-04.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 04', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-05.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 05', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-06.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 06', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-07.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 07', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-08.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 08', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-09.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 09', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-10.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 10', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-11.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 11', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>
+
+  #exhibit-12.popover.mt--4u.mr--2u.ml--2u.bs-2u
+    .media.m--gutter.b--radius.bs.bg--white
+      .media__body.p--3u.grid.grid--gutter
+          .col.col-md--span-9
+            img(src='holder.js/1000x600?text=Exhibit 12', alt='Exhibit 01')
+          .col.col-md--span-3
+            h2 Image Title
+            +paragraph(1)
+      .media__footer.bt-1px-solid.p--2u
+        button.btn.btn--secondary.btn--sm.popover__close.float--right Cancel <i class="fa fa-times"></i>

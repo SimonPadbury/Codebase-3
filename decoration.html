@@ -1,160 +1,428 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Decoration | Codebase</title>
-
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="codebase/css/codebase.css">-->
-  <link rel="stylesheet" href="theme/css/styles.css">
-  <link rel="stylesheet" href="theme/prism/prism.css">
-
-</head>
-
-<body>
-
-<div class="page-wrap">
-
-<nav class="navbar docs__navbar deco-bb-thin-solid">
-  <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3.5</small></a>
-  </div>
-  <div class="navbar__content">
-    <div class="navbar__right">
-      <ul class="show--md-up">
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="docs docs--decoration">
-
-  <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
-  <i class="fa fa-bars" aria-hidden="true"></i>
-</div>
-
-<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
-
-  <ul class="docs__sidebar-menu hide--md-up">
-    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-  </ul>
-  <h4>Docs</h4>
-
-  <ul class="docs__sidebar-menu">
-    <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a>
-      <ul>
-        <li><a href="classless-typography.html">Typography</a></li>
-        <li><a href="classless-forms.html">Forms</a></li>
-      </ul>
-    </li>
-    <li><a href="layout.html">Layout</a>
-      <ul>
-        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
-        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
-        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
-        <li><a href="layout-visibility.html">Visibility</a></li>
-        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
-      </ul>
-    </li>
-    <li><a href="utilities.html">Utilities</a>
-      <ul>
-        <li><a href="utilities-typography.html">Typography</a></li>
-        <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-buttons.html">Buttons</a></li>
-        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-      </ul>
-    </li>
-    <li><a href="components.html">Components</a>
-      <ul>
-        <li><a href="components-media-objects.html">Media Objects</a></li>
-        <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbars.html">Navbars</a></li>
-        <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popovers.html">Popovers</a></li>
-        <li><a href="components-slideshows.html">Slideshows</a></li>
-        <li><a href="components-tab-systems.html">Tab Systems</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
-      </ul>
-    </li>
-    <li><a href="decoration.html">Decoration</a>
-      <ul>
-        <li><a href="decoration-margins.html">Margins</a></li>
-        <li><a href="decoration-borders.html">Borders</a></li>
-        <li><a href="decoration-paddings.html">Paddings</a></li>
-        <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box Shadows</a></li>
-      </ul>
-    </li>
-  </ul>
-
-</div>
-<!-- /.docs__sidebar -->
-
-  <main class="docs__main">
-
-    <header class="docs__header">
-      <h1>Decoration</h1>
-    </header>
-
-    <div class="docs__content">
-
-        <p>For consistency throughout Codebase, some <code>$deco-</code> variables have been defined. Where necessary, a few of these variables have been used in the various utilities and components.</p>
-
-        <p>These same variables have been incoporated into a set of simple <code>.deco-</code> decoration classes. These classes can be used to quickly add consistent styling to your HTML directly.</p>
-
-        <p>You can modify these <code>$deco*</code> variables and <code>.deco-</code> classes, and add to them, in accordance with the style guide or visual identity of your website project.</p>
-
-        <ol>
-          <li><a href="decoration-margins.html">Margins</a></li>
-          <li><a href="decoration-borders.html">Borders</a></li>
-          <li><a href="decoration-paddings.html">Paddings</a></li>
-          <li><a href="decoration-colors.html">Colors</a></li>
-          <li><a href="decoration-shadows.html">Shadows</a></li>
-        </ol>
-
-        <div class="initial-icon deco-bl-thick-solid deco-b-blue deco-p-md deco-bg-light-blue">
-          <i class="fa fa-thumbs-o-up deco-text-blue"></i> <b>Hat tip:</b> the idea for Codebase decoration was inspired by <a href="http://www.basscss.com" target="_blank">BASCSS</a> and <a href="http://tachyons.io" target="_blank">Tachyons</a>.
+<!DOCTYPE (doctype)>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"/>
+    <meta name="author"/>
+    <link rel="icon"/>
+    <title>Decoration</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+  </head>
+  <body>
+    <div class="body__inner">
+      <nav class="navbar navbar--fixed docs__navbar">
+        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
+        <div class="navbar--right show--md-up">
+          <ul>
+            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+          </ul>
         </div>
-
+      </nav>
+      <div class="docs__main">
+        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
+          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div class="docs__sidebar-menu">
+            <h4>Docs</h4>
+            <ul>
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li><a href="basics.html">Basics</a></li>
+              <li><a href="layout.html">Layout</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li class="current menu-marker"><a href="#decoration">Decoration</a>
+                <ul class="menu">
+                  <li><a href="#decoration-element-grid">Element Grid</a></li>
+                  <li><a href="#decoration-margins">Margins</a></li>
+                  <li><a href="#decoration-borders">Borders</a></li>
+                  <li><a href="#decoration-paddings">Paddings</a></li>
+                  <li><a href="#decoration-colors">Colors</a></li>
+                  <li><a href="#decoration-box-shadows">Box Shadows</a></li>
+                </ul>
+                <li><a href="examples.html">Examples</a></li>
+              </li>
+              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="docs__content menu-marker-wrap">
+          <header class="docs__header menu-marker-section" id="decoration">
+            <h1>Decoration</h1>
+            <p>
+              For consistency throughout Codebase, some decoration variables have been defined. Where necessary, a few of these variables have been used in the various components.
+              
+            </p>
+            <p>
+              These same variables have been incoporated into a set of simple decoration classes. These classes can be used to quickly add consistent styling to your HTML directly.
+              
+            </p>
+            <p>
+              You can modify the decoration variables and classes, and add to them, in accordance with the style guide or visual identity of your website project.
+              
+            </p>
+            <div class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-thumbs-o-up text--teal-darken-1"></i><b>Hat tip:</b><br/>the idea for Codebase decoration was inspired by <a href="http://www.basscss.com" target="_blank">BASCSS</a>, <a href="http://tachyons.io" target="_blank">Tachyons</a> and the <a href="https://spec.fm/specifics/8-pt--grid" target="_blank">8-Point Grid</a>.</div>
+          </header>
+          <div class="docs__body">
+            <div class="menu-marker-section" id="decoration-element-grid">
+              <h2 class="docs-section">Element Grid</h2>
+              <p>Since version 2.0 Codebase uses a <a href="https://spec.fm/specifics/8-pt--grid">"soft" 8-point grid system</a> for consistently positioning things relative to each other. (This is also known as an <a href="http://www.bbc.co.uk/gel/web/foundations/universal-grid/baseline">8px baseline grid</a> or an <a href="https://material.io/guidelines/layout/metrics-keylines.html">8dp square baseline grid</a>.
+                
+              </p>
+              <p>The <strong>Codebase element grid</strong> has been deployed a follows: in setting typographic line-heights, margins, and paddings for components, multiples of 8px* have been used. Also by default, the base typography vertical rhythm (line-height) is set at 1.5rem = 24px = 3 &times; 8 element grid units. (And the layout grid gutters have been set to multiples of 8px.)
+                
+              </p>
+              <p>
+                [*
+                <a href="https://en.wikipedia.org/wiki/Device-independent_pixel">Device independent pixels</a>, also known as <a href="https://www.w3.org/Style/Examples/007/units.en.html">CSS pixels</a>.]
+                
+              </p>
+              <p>All Codebase margins, paddings and line-heights have been set using <code>$spacing-*</code> variables as in the table below. The base 8px is a <code>!default</code> setting &ndash; you can override this simply by changing the value of <code>$spacing-1u</code>.
+                
+              </p>
+              <div class="initial-icon mb--3u bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-info-circle text--teal-darken-1"></i>
+                <The>element grid system can be used in combination with any Codebase <em>layout</em> grid system.</The>
+              </div>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Element Grid Variable</th>
+                    <th>Calculation</th>
+                    <th>Size</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>$spacing-1u</td>
+                    <td>Base = 8px <code>!default</code></td>
+                    <td>8px</td>
+                  </tr>
+                  <tr>
+                    <td>$spacing-2u</td>
+                    <td>Base &times; 2</td>
+                    <td>16px</td>
+                  </tr>
+                  <tr>
+                    <td>$spacing-3u</td>
+                    <td>Base &times; 3</td>
+                    <td>24px</td>
+                  </tr>
+                  <tr>
+                    <td>$spacing-4u</td>
+                    <td>Base &times; 4</td>
+                    <td>32px</td>
+                  </tr>
+                  <tr>
+                    <td>$spacing-5u</td>
+                    <td>Base &times; 5</td>
+                    <td>40px</td>
+                  </tr>
+                  <tr>
+                    <td>$spacing-6u</td>
+                    <td>Base &times; 6</td>
+                    <td>48px</td>
+                  </tr>
+                  <tr>
+                    <td>$spacing-7u</td>
+                    <td>Base &times; 7</td>
+                    <td>56px</td>
+                  </tr>
+                  <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>The <code>$spacing-</code> variables go up to 20&times;. The decoration classes that use them (margins, paddings) also go up to 20&times;
+                
+              </p>
+              <p>[Note: Since Codebase v.1.4, <i>decoration</i> variables/classes named <code>*-sm</code>, <code>*-md</code> etc. have been removed.]</p>
+            </div>
+            <div class="menu-marker-section" id="decoration-margins">
+              <h2 class="docs-section">Margins</h2>
+              <p>Element grid units (8px) designated <code>-1u</code> to <code>-20u</code>, plus <code>-zero</code> (for removing unwanted margin).
+                
+              </p>
+              <ul>
+                <li>Margins all: <code>m--*</code></li>
+                <li>Margin top: <code>mt--*</code></li>
+                <li>Margin right: <code>mr--*</code></li>
+                <li>Margin bottom: <code>mb--*</code></li>
+                <li>Margin left: <code>ml--*</code></li>
+                <li>Margins vertical: <code>mv-*</code> (top and bottom)</li>
+                <li>Margins horizontal: <code>mh-*</code>(left and right)</li>
+              </ul>
+              <p>Examples:</p>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--zero b--1px-solid">.mr--zero</div>
+              </div>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--1u b--1px-solid">.mr--1u</div>
+              </div>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--2u b--1px-solid">.mr--2u</div>
+              </div>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--3u b--1px-solid">.mr--3u</div>
+              </div>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--4u b--1px-solid">.mr--4u</div>
+              </div>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--5u b--1px-solid">.mr--5u</div>
+              </div>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--6u b--1px-solid">.mr--6u</div>
+              </div>
+              <p>...</p>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mr--20u b--1px-solid">.mr--20u</div>
+              </div><br/>
+              <h3>Horizontal centering by margin:auto</h3>
+              <p>This also sets the element to <code>display:block !important</code>
+                
+              </p>
+              <div class="mb--2u b--1px-dashed">
+                <div class="mh-auto b--1px-solid" style="width:75%">.mh-auto</div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="decoration-borders">
+              <h2 class="docs-section">Borders</h2>
+              <p>A few simple border styles.</p>
+              <ul>
+                <li>Borders all <code>b-*</code></li>
+                <li>Border top <code>bt-*</code></li>
+                <li>Border right <code>br-*</code></li>
+                <li>Border bottom <code>bb-*</code></li>
+                <li>Border-left <code>bl--*</code></li>
+              </ul>
+              <p>Examples:</p>
+              <div class="mb--2u p--2u b--1px-solid b--zero"> .b--zero</div>
+              <div class="mb--2u p--2u b--1px-dashed"> .b--1px-dashed</div>
+              <div class="mb--2u p--2u b--1px-solid"> .b--1px-solid</div>
+              <div class="mb--2u p--2u b--4px-solid"> .b--4px-solid</div>
+              <div class="mb--2u p--2u b--8px-solid"> .b--8px-solid</div>
+              <p>By default, borders have color #code $color-gray-lighten-2]. Borders can be assigned other colors in the Codebase swatch using <code>b-</code>[color] classes. See <a href="#decoration-colors">colors</a>.
+                
+              </p>
+              <h3>Border enhancements:</h3>
+              <section class="grid grid--gutter">
+                <div class="col col-sm--span-6">
+                  <div class="mh-auto mb--2u p--4u b--1px-solid b--radius" style="width:250px;height:250px"> .b--radius</div>
+                </div>
+                <div class="col col-sm--span-6">
+                  <div class="mh-auto mb--2u p--4u b--1px-solid b--circle" style="width:250px;height:250px"> .b--circle</div>
+                </div>
+              </section>
+            </div>
+            <div class="menu-marker-section" id="decoration-paddings">
+              <h2 class="docs-section">Paddings</h2>
+              <p>Element grid units (8px) designated <code>-1u</code> to <code>-20u</code>, plus <code>-zero</code> (for removing unwanted padding).
+                
+              </p>
+              <ul>
+                <li>Paddings all: <code>p-*</code></li>
+                <li>Padding top: <code>pt--*</code></li>
+                <li>Padding right: <code>pr--*</code></li>
+                <li>Padding bottom: <code>pb--*</code></li>
+                <li>Padding left: <code>pl--*</code></li>
+                <li>Paddings vertical: <code>pv-*</code> (top and bottom)</li>
+                <li>Paddings horizontal: <code>ph-*</code>(left and right)</li>
+              </ul>
+              <p>Examples:</p>
+              <div class="mb--2u pr--zero b--1px-solid">
+                <div class="b--1px-dashed">.pr--zero</div>
+              </div>
+              <div class="mb--2u pr--1u b--1px-solid">
+                <div class="b--1px-dashed">.pr--1u</div>
+              </div>
+              <div class="mb--2u pr--2u b--1px-solid">
+                <div class="b--1px-dashed">.pr--2u</div>
+              </div>
+              <div class="mb--2u pr--3u b--1px-solid">
+                <div class="b--1px-dashed">.pr--3u</div>
+              </div>
+              <div class="mb--2u pr--4u b--1px-solid">
+                <div class="b--1px-dashed">.pr--4u</div>
+              </div>
+              <div class="mb--2u pr--5u b--1px-solid">
+                <div class="b--1px-dashed">.pr--5u</div>
+              </div>
+              <div class="mb--2u pr--6u b--1px-solid">
+                <div class="b--1px-dashed">.pr--6u</div>
+              </div>
+              <p>...</p>
+              <div class="mb--2u pr--20u b--1px-solid">
+                <div class="b--1px-dashed">.pr--20u</div>
+              </div>
+              <h3>Block padding</h3>
+              <p>E.g. used for menu items, navbar items, tab labels and table cells. Equal to <code>pv-1u ph-2u</code>
+                
+              </p>
+              <div class="mb--2u p--block b--1px-solid">
+                <div class="b--1px-dashed">.p--block</div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="decoration-colors">
+              <h2 class="docs-section">Colors</h2>
+              <h3>The Codebase swatch</h3>
+              <p>
+                The default Codebase swatch re-purposes the control colors (<span class="label label--primary">primary</span>, <span class="label label--secondary">secondary</span>, <span class="label label--warning">warning</span>, <span class="label label--error">error</span>, <span class="label label--success">success</span>) as decoration colors (<span class="text-blue">blue</span>, <span class="text-blue">teal</span>, <span class="text-orange">orange</span>, <span class="text-red">red</span>, <span class="text-green">green</span> respectively), and adds black, gray and white. A series of lighter and darker variants of each color have been generated (except for black and white).
+                
+              </p>
+              <p>You can override and add to these colors in your own theme.</p>
+              <p>The Codebase swatch displayed as background colors in a table:</p>
+              <style>
+                .colors td {
+                min-width: 50px;
+                border: 0;
+                }
+                
+              </style>
+              <table class="table colors">
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="height: 100%; margin: -8px; border: 1px dashed #ddd"></td>
+                    <td><code>$color-white</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue-lighten-3"></td>
+                    <td class="bg--teal-lighten-3"></td>
+                    <td class="bg--orange-lighten-3"></td>
+                    <td class="bg--red-lighten-3"></td>
+                    <td class="bg--green-lighten-3"></td>
+                    <td class="bg--gray-lighten-3"></td>
+                    <td><code>$color-[color]-lighten-3</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue-lighten-2"></td>
+                    <td class="bg--teal-lighten-2"></td>
+                    <td class="bg--orange-lighten-2"></td>
+                    <td class="bg--red-lighten-2"></td>
+                    <td class="bg--green-lighten-2"></td>
+                    <td class="bg--gray-lighten-2"></td>
+                    <td><code>$color-[color]-lighten-2</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue-lighten-1"></td>
+                    <td class="bg--teal-lighten-1"></td>
+                    <td class="bg--orange-lighten-1"></td>
+                    <td class="bg--red-lighten-1"></td>
+                    <td class="bg--green-lighten-1"></td>
+                    <td class="bg--gray-lighten-1"></td>
+                    <td><code>$color-[color]-lighten-1</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue"></td>
+                    <td class="bg--teal"></td>
+                    <td class="bg--orange"></td>
+                    <td class="bg--red"></td>
+                    <td class="bg--green"></td>
+                    <td class="bg--gray"></td>
+                    <td><code>$color-[color]</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue-darken-1"></td>
+                    <td class="bg--teal-darken-1"></td>
+                    <td class="bg--orange-darken-1"></td>
+                    <td class="bg--red-darken-1"></td>
+                    <td class="bg--green-darken-1"></td>
+                    <td class="bg--gray-darken-1"></td>
+                    <td><code>$color-[color]-darken-1</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue-darken-2"></td>
+                    <td class="bg--teal-darken-2"></td>
+                    <td class="bg--orange-darken-2"></td>
+                    <td class="bg--red-darken-2"></td>
+                    <td class="bg--green-darken-2"></td>
+                    <td class="bg--gray-darken-2"></td>
+                    <td><code>$color-[color]-darken-2</code></td>
+                  </tr>
+                  <tr>
+                    <td class="bg--blue-darken-3"></td>
+                    <td class="bg--teal-darken-3"></td>
+                    <td class="bg--orange-darken-3"></td>
+                    <td class="bg--red-darken-3"></td>
+                    <td class="bg--green-darken-3"></td>
+                    <td class="bg--gray-darken-3"></td>
+                    <td><code>$color-[color]-darken-3</code></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="bg--black"></td>
+                    <td><code>$color-black</code></td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                In each color series there are 7 colors: the base color (middle row above) plus 3 incrementally lighter and 3 incrementally darker.
+                
+              </p>
+              <h3>Applying colors to elements</h3>
+              <p>In addition to the colors (optionally) used in the typography and components, Codebase also has a set of <b>decoration classes</b> for setting colors of text, backgrounds and borders.
+                
+              </p>
+              <div class="grid grid--gutter b--1px-solid pt--3u">
+                <div class="col col-sm--span-6"><b>Backgrounds <code>bg-</code>[color]</b></div>
+                <div class="col col-sm--span-6">
+                  <div class="p--2u bg--blue-lighten-3"> Example .bg--blue-lighten-3</div><br/>
+                </div>
+                <div class="col col-sm--span-6"><b>Borders <code>b-</code>[color]</b></div>
+                <div class="col col-sm--span-6">
+                  <div class="mb--3u p--2u b--4px-solid b--orange"> Example .b--orange</div>
+                </div>
+                <div class="col col-sm--span-6"><b>Text <code>text-</code>[color]</b></div>
+                <div class="col col-sm--span-6">
+                  <p class="text--teal-darken-1"> Example .text--teal-darken-1</p>
+                </div>
+              </div>
+              <p>The swatch color class options are as follows:</p>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>.bg<br/> .text<br/> .b</td>
+                    <td>--blue<br/> --teal<br/> --orange<br/> --red<br/> --green<br/> --gray</td>
+                    <td>(-lighten)<br/> (-darken)</td>
+                    <td>(-1)<br/> (-2)<br/> (-3)<br/> (-4)<br/> (-5)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="menu-marker-section" id="decoration-box-shadows">
+              <h2 class="docs-section">Box Shadows</h2>
+              <h3>Box shadow</h3>
+              <div class="mb--3u p--2u bs">.bs</div>
+              <div class="mb--3u p--2u bs-2u">.bs-2u</div>
+              <div class="mb--3u p--2u bs-3u">.bs-3u</div>
+              <h3>Inset box shadow</h3>
+              <div class="mb--3u p--2u bs-inset">.bs-inset</div>
+              <h3>Inset box shadows on one side only</h3>
+              <div class="mb--3u p--2u bs-inset-top">.bs-inset-top</div>
+              <div class="mb--3u p--2u bs-inset-right">.bs-inset-right</div>
+              <div class="mb--3u p--2u bs-inset-bottom">.bs-inset-bottom</div>
+              <div class="mb--3u p--2u bs-inset-left">.bs-inset-left</div>
+            </div>
+          </div>
+          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
+               version 2.x PREVIEW
+              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
+        </div>
       </div>
     </div>
-    </main>
-
-    
-  <footer class="docs__footer deco-bg-charcoal">
-    <span class="deco-text-light-gray">
-      <a href="index.html">Codebase</a> v.1.3.5 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-    </span>
-  </footer>
-
-</div><!-- /.docs -->
-</div><!-- /.page-wrap -->
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="codebase/js/codebase.js"></script>
-<script>
-  $(document).codebase();
-
-  $(document).ready(function() {
-      $("[href]").each(function() {
-      if (this.href == window.location.href) {
-          $(this).addClass("current");
-          }
-      });
-  });
-</script>
-<script src="theme/prism/prism.js"></script>
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="codebase/js/codebase.js"></script>
+  </body>
 </html>

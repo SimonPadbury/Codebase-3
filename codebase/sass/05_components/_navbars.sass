@@ -1,0 +1,50 @@
+// COMPONENT MIXINS: NAVBARS
+// =========================
+
+=navbar
+  +menubar
+  +menubar--collapse-sm
+  ul
+    margin: 0
+  li
+    +menu__item
+  a
+    +menu__link
+    +menu__link--block
+
+=navbar--left
+  +menubar
+  +menubar--left
+  +menubar--collapse-sm
+
+=navbar--right
+  +menubar
+  +menubar--right
+  +menubar--collapse-sm
+
+=navbar--fixed
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: $reset-overlay--z-index - 1
+
+
+// CLASS BUILDER
+// =============
+
+=components-navbars
+
+  .navbar
+    +navbar
+
+  .navbar--left
+    +navbar--left
+
+  .navbar--right
+    +navbar--right
+
+  .navbar--fixed
+    +navbar--fixed
+
+@if $include-css-navbars == true
+  +components-navbars

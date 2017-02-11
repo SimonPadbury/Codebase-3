@@ -1,0 +1,50 @@
+//- Docs Basics: Enlarged Typography Wrapper
+
+.menu-marker-section(id="basics-enlarged-typography")
+
+  h2.docs-section Enlarged Typography
+
+  p.
+    By defult, Codebase has its font sizes for everything based on a set of <code>$base-font-*</code> variables. But there is also a set of <code>$enlarged-font-*</code> variables. (You can override both the base and enlarged variables because each are set as <code>!default</code> variables.)
+
+  p.
+    There are three ways to use the enlarged typography in Codebase:
+
+  h4 1. Toggle enlarged typography
+
+  p.
+    You can toggle on the enlarged typography everywhere, by overriding one variable from false to true:
+
+  pre
+    code.
+      $enlarged-typography-everywhere: true !default;
+
+  h4 2. Overriding enlarged typography defaults
+
+  p.
+    You can override the <code>$enlarged-font-size</code> and <code>$enlarged-line-height</code> default variables within your theme (see <a href="getting-started.html#advanced-setup">Getting Started: Advanced Setup</a>).
+
+  p.
+    Overriding these variables will affect everything (if you toggle on enlarged typography) or only stuff contained in a  <code>.enlarged</code> (see below).
+
+  h4 3. Enlarged typography wrapper class
+
+  p.
+    Codebase can render enlarged typography simply by placing any Codebase-styled HTML in a wrapper that has class <code>.enlarge</code>.
+
+  p This may be useful e.g. for long-read articles.
+
+  .grid.grid--gutter.grid--nested
+    .col.col-sm--span-6
+
+      h2 Normal h2 Header
+
+      +paragraph(1)
+
+    .col.col-sm--span-6
+
+      .enlarge
+
+        h2 Enlarged h2 Header
+
+        +paragraph(1)

@@ -1,0 +1,51 @@
+//- Components Navbars
+
+.menu-marker-section(id="components-navbars")
+
+  h2.docs-section Navbars
+
+  p.
+    In Codebase, a navbar is a composite of various menubars, sharing some of the same mixins.
+
+  p.
+    If you require a navbar to be "collapsed hidden" on smaller viewports, simply wrap the whole thing in a <a href="components.html#components-showhide">showhide</a>.
+
+  p.
+    If you require your menubar to have sub-menus, then you can add <a href="components.html#components-dropdowns"> dropdown components</a>.
+
+  +navbar
+
+  pre
+    code.
+      &lt;div class="showhide showhide--block showhide--sm-down showhide--is-resettable"&gt;
+        &lt;button class="showhide__toggle btn btn--icon btn--lt"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;div class="showhide__content"&gt;
+
+          &lt;div class="navbar"&gt;
+            &lt;div class="navbar--left"&gt;
+
+              &lt;a href="#/"&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/a&gt;
+
+              &lt;div class="navbar--left"&gt;
+                &lt;li&gt;&lt;a href="#/"&gt;Left 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown dropdown--md-up"&gt;&lt;a class="dropdown__toggle"&gt;Left 2 &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;ul class="dropdown__content dropdown__content--nowrap menu"&gt;
+                    &lt;li&gt;&lt;a href="#/"&gt;Left child 2.1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#/"&gt;Left child 2.2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#/"&gt;Left child 2.3&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href="#/"&gt;Left 3&lt;/a&gt;&lt;/li&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+
+            &lt;form class="navbar--right"&gt;
+              &lt;input class="combo--first" id="search-example" name="examplename" placeholder="Search..." type="text"&gt;
+              &lt;button class="btn btn--sm btn--icon combo--last" type="submit"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/form&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+        
+      &lt;/div&gt;

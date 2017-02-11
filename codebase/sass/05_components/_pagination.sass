@@ -1,0 +1,41 @@
+// COMPONENT MIXINS: PAGINATION
+// ============================
+
+=pagination
+  margin: 0
+  padding: 0
+
+=pagination__item
+  display: inline-block
+  list-style-type: none
+  @if $decoration-pagination == true
+    margin: $spacing-2u 0
+
+=pagination__link
+  @if $decoration-pagination == true
+    padding: $spacing-1u
+
+=pagination__current
+  @if $decoration-pagination == true
+    color: $color-gray-darken-1
+    background: $color-gray-lighten-3
+  &:hover
+    text-decoration: none
+    cursor: default
+
+// CLASS BUILDER: PAGINATION
+// =========================
+
+=components-pagination
+
+  .pagination
+    +pagination
+    li
+      +pagination__item
+    a
+      +pagination__link
+    .pagination__current
+      +pagination__current
+
+@if $include-css-pagination == true
+  +components-pagination

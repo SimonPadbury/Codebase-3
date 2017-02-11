@@ -1,0 +1,161 @@
+//- Layout Grid Systems
+
+.menu-marker-section(id="layout-grid-systems")
+
+  h2.docs-section Grid Systems
+
+  p In Codebase four grid systems have been provided:
+
+  h3
+    a(href='layout.html#layout-grid-classes') Layout grid classes
+
+  ul
+    li
+      b Flexbox (default)
+      |  &ndash; since Codebase 2.0, the layout grid is built using flexbox by default.
+    li
+      b Float (deprecated)
+      |  &ndash; the older float grid system still exists, but it is unavailable because of a
+      code $grid-flexbox: true !default
+      |  toggle. Override this variable if you prefer to use a float grid.
+
+  p
+    | Both flexbox and float grids use the same classes (set them up the same way). The only difference visible in the browser is that in the flexbox grid, all columns within the
+    code .grid
+    |  wrapper are the same height.
+
+  h3
+    a(href='layout.html#layout-grid-mixins') Layout grid mixins
+
+  p  (For &quot;semantic&quot; grids.)
+
+  ul
+    li
+      b Flexbox mixins
+      |  &ndash; mixins specific to the flexbox grid are prefixed
+      code flexbox-col--
+    li
+      b Float mixins
+      |  &ndash; mixins specific to the float grid are prefixed
+      code float-col--
+
+  p
+    | Mixins used by both are
+    code grid
+    | ,
+    code grid--gutter
+    | ,
+    code grid--nested
+    |  and
+    code col
+    | .
+
+  h3 Common features of Codebase layout grids
+
+  p
+    | All four layout grid systems share the same
+    code $grid-
+    |  variables for controlling the maximum width, number of columns and the size of the gutter. The gutter is controlled by its own class/mixin, so that you can choose whether or not a particular grid instance has a gutter or not.
+
+  p
+    | The grid systems are flexible (column width is set using
+    code max-width
+    | , not
+    code width
+    | ) and responsive (controlled by a set of media query breakpoint widths, which are in turn set by overridable
+    code $break-
+    |  variables.)
+
+  p All the usual variations are supported:
+
+  ul
+    li column span
+    li column offset
+    li column order (flexbox grids only)
+    li column push/pull (float grids only)
+    li column centering (single column only)
+
+  p
+    | The four Codebase layout grid systems all display essentially the same in browsers new enough to handle flexbox (i.e. above IE9). The only significant difference being that the flexbox columns are the full height of their containers, not merely the height of their own content.
+
+  p
+    | Incomplete grid rows? No problem. Rows can be incomplete (no &grave;.end&grave; or &grave;.omega&grave; classes required).
+
+  p
+    | Surplus grid columns? No problem. Columns will wrap if they extend beyond the grid max width.
+
+  h3 Grids at different Media Query Breakpoints
+
+  p
+    | The Codebase media query breakpoint widths are specified by four
+    code !default
+    |  variables.
+
+  p
+    | The four grid systems can be used with or without specifying breakpoints (and with or without using grid breakpoint classes). Without breakpoints, the columns will be displayed the same (% width) whatever the window width.
+
+  p
+    | This means that each grid system can have up to five window-width configurations:
+
+  table.table
+    thead
+      tr
+        th
+        th
+        th  Grid classes
+        th  Grid mixins
+    tbody
+      tr
+        td 1
+        td
+          | Multi-column below
+          code $break-xs
+        td
+          | Set columns using
+          code .col--
+          | .
+        td(colspan='2')  Use column mixins without wrapping them in breakpoint mixins.
+      tr
+        td 2
+        td
+          | Multi-column above
+          code $break-xs
+        td
+          | Set columns using
+          code .col-xs--*
+        td(colspan='2')
+          | Wrap column mixins in
+          code @include break__xs-up {...}
+      tr
+        td 3
+        td
+          | Multi-column above
+          code $break-sm
+        td
+          | Set columns using
+          code .col-sm--*
+        td(colspan='2')
+          | Wrap column mixins in
+          code @include break__sm-up {...}
+      tr
+        td 4
+        td
+          | Multi-column above
+          code $break-md
+        td
+          | Set columns using
+          code .col-md--*
+        td(colspan='2')
+          | Wrap column mixins in
+          code @include break__md-up {...}
+      tr
+        td 5
+        td
+          | Multi-column above
+          code $break-lg
+        td
+          | Set columns using
+          code .col-lg--*
+        td(colspan='2')
+          | Wrap column mixins in
+          code @include break__lg-up {...}

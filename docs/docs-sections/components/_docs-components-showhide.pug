@@ -1,0 +1,63 @@
+//- Components Showhide
+
+.menu-marker-section(id="components-showhide")
+
+  h2.docs-section Showhide
+
+  p.
+    Use <code>.showhide</code> to show and hide content. Click or tap the toggle to change the state.
+
+  +showhide
+
+  pre
+    code.
+      &lt;div class="showhide"&gt;
+        &lt;button class="showhide__toggle btn"&gt;Showhide &lt;i class="fa fa-sort"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;div class="showhide__content"&gt;Example showhide component content&lt;/div&gt;
+      &lt;/div&gt;
+
+  +showhide-combo
+
+  br
+  br
+
+  p.
+    Simply place the <code>showhide__content</code> block before the toggle in the HTML (i.e. reverse the order of the toggle and the content) and it will be shown and hidden above the toggle.
+
+  +showhide-above
+
+  h3 Showhide blocks
+
+  p Showhides are inline-block by default, so that you can use several in a row (and so that the same showhide mixins can also be used in dropdowns). If you require the showhides to operate as blocks (with their content to occupy 100% block width), then add <code>showhide--block</code> to the wrapper.
+
+  +showhide-block
+
+  h3 Showhide with "click outside to dismiss"
+
+  p.
+    Add class <code> showhide--is-resettable</code> to the wrapper for "click outside to dismiss" functionality.
+
+  +showhide-resettable
+
+  h3 Showhide at breakpoints
+
+  p Sometimes you may require showhide not to operate above or below a particular breakpoint.
+
+  +showhide-md-up
+
+  h3 Dismissable panels
+
+  p
+    Add class <code>showhide--show-start</code> to the wrapper, and move the toggle inside the content for a dismissable panel.
+
+  +showhide-dismissable-panel
+
+  h3 Showhide accordions
+
+  p.
+    Add class <code>showhide--accordion</code> (and <code>showhide--block</code>) to the wrapper, and use more than one toggle/content pair for an accordion.
+
+  p.
+    (In showhide accordions, the toggles must precede their respective content block in the HTML.)
+
+  +showhide-accordion

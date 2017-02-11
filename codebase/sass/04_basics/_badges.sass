@@ -1,0 +1,31 @@
+// BASICS MIXINS: BADGES
+// =====================
+
+=badge
+  position: relative
+  display: inline-block
+  top: -0.4em
+  min-width: 1.5em
+  min-height: 1.5em
+  border-radius: 2em
+  line-height: 1
+  background: #eee
+  padding: 0.22em 0.3em
+  font-size: 0.86em
+  color: #888
+  text-align: center
+  white-space: nowrap
+
+// See also Control Colors
+
+// CLASS BUILDER: BADGES
+// =====================
+
+=basics-badges
+  
+  .badge
+    +badge
+    +control-colors
+
+@if $include-css-badges == true
+  +basics-badges

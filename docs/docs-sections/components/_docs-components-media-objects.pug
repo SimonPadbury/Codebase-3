@@ -1,0 +1,70 @@
+//- Components Media Objects
+
+.menu-marker-section(id="components-media-objects")
+
+  h2.docs-section Media Objects
+
+  p  Example:
+
+  +media(border)
+    +media__header
+      | Header
+    +media__image('left')
+      +image('holder.js/96x96')
+    +media__content
+      +media__title
+        h4.mt--zero Media Object Title
+      +media__title
+        +paragraph(1)
+        +media__example--border-top
+    +media__footer
+      | Footer
+
+  pre
+    code.
+      &lt;div class="media"&gt;
+        &lt;div class="media__header"&gt;Media Header&lt;/div&gt;
+        &lt;div class="media__image-wrap media__image-wrap--left"&gt;
+          &lt;a href=""&gt;
+            &lt;img src="" alt="Square Thumbnail"&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="media__content-wrap"&gt;
+        &lt;div class="media__content"&gt;
+          &lt;h3 class="media__title"&gt;Media Title&lt;/h3&gt;
+          &lt;p class="media__text"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+          &lt;!-- Nested `.media` --&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="media__footer"&gt;Media Footer&lt;/div&gt;
+      &lt;/div&gt;
+
+  p.
+    Media object images can have <code>media__image-wrap--left</code>, <code>media__image-wrap--right</code> or <code>media__image-wrap--center</code>.
+
+  p.
+    Use <code>media__image-wrap--center</code> if you require a "card" layout as below (these media objects below are wrapped in grid columns).
+
+
+  .grid.grid--gutter.grid--nested
+    .col.col-xs--span-6
+
+      +media
+        +media__image('center')
+          +image('holder.js/750x500')
+        +media__content
+          +media__title
+            h4.mt--zero Media Object Title
+          +media__title
+            +paragraph(1)
+
+    .col.col-xs--span-6
+
+      +media
+        +media__image('center')
+          +image('holder.js/750x500')
+        +media__content
+          +media__title
+            h4.mt--zero Media Object Title
+          +media__title
+            +paragraph(1)

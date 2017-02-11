@@ -1,0 +1,136 @@
+// COMPONENT MIXINS: OFF-CANVAS SIDEBARS
+// =====================================
+
+// Off-canvas navicon
+
+=off-canvas-navicon
+  display: inline-block
+  margin-top: 0
+  z-index: $reset-overlay--z-index + 1
+  &--left
+    position: absolute
+    left: 0
+  &--right
+    position: absolute
+    right: 0
+  &--fixed
+    position: fixed !important // overrides the two absolutes above
+  @if $decoration-off-canvas-sidebars == true
+    font-size: 1.5rem
+    color: $base-text-color-hyperlink
+    @if $enlarged-typography-everywhere == true
+      height: $spacing-6u
+      padding: $spacing-1u $spacing-2u
+      line-height: $spacing-4u
+    @else
+      height: $spacing-5u
+      padding: $spacing-1u
+      line-height: $spacing-3u
+    .enlarged &  &
+      height: $spacing-6u
+      padding: $spacing-1u $spacing-2u
+      line-height: $spacing-4u
+  &:hover
+    cursor: pointer
+    @if $decoration-off-canvas-sidebars == true
+      color: $base-text-color-hyperlink-hover
+
+=off-canvas__close
+  display: block
+  max-width: $spacing-8u
+  &:hover
+    cursor: pointer
+  &--left
+    margin-right: auto
+    margin-left: 0
+    text-align: left
+  &--right
+    margin-right: 0
+    margin-left: auto
+    text-align: right
+  @if $decoration-off-canvas-sidebars == true
+    padding: $spacing-1u
+    font-size: 1.5em
+    color: $base-text-color-hyperlink
+    &:hover
+      color: $base-text-color-hyperlink-hover
+
+// Off-canvas sidebar
+// The extra `$spacing-1u` hides the box-shadow while the
+// off-canvas sidebar is off-canvas.
+
+=off-canvas-right
+  right: -$off-canvas-width
+  &.off-canvas--is-open
+    right: 0
+
+=off-canvas-left
+  margin-left: -$off-canvas-width
+  margin-right: auto
+  &.off-canvas--is-open
+    margin-left: 0
+
+=off-canvas
+  position: fixed
+  top: 0
+  bottom: 0
+  width: $off-canvas-width
+  height: 100%
+  max-height: 100vh
+  z-index: $reset-overlay--z-index + 3
+  overflow: auto
+  @if $decoration-off-canvas-sidebars == true
+    background: $color-white
+    &.off-canvas--is-open
+      box-shadow: $box-shadow-2x
+  transition: $off-canvas-transition
+  transform: translate3d(0, 0, 0)
+
+// CLASS-BUILDER: OFF-CANVAS SIDEBARS
+// ==================================
+
+=components-off-canvas-sidebars
+
+  // Off-canvas navicon
+
+  .off-canvas-navicon
+    +off-canvas-navicon
+
+  // Off-canvas sidebar
+
+  .off-canvas
+    &--xs
+      +break__xs--only
+        &.off-canvas--right
+          +off-canvas-right
+        &.off-canvas--left
+          +off-canvas-left
+        +off-canvas
+    &--sm
+      +break__sm-down
+        &.off-canvas--right
+          +off-canvas-right
+        &.off-canvas--left
+          +off-canvas-left
+        +off-canvas
+    &--md
+      +break__md--down
+        &.off-canvas--right
+          +off-canvas-right
+        &.off-canvas--left
+          +off-canvas-left
+        +off-canvas
+    &--lg
+      &.off-canvas--right
+        +off-canvas-right
+      &.off-canvas--left
+        +off-canvas-left
+      +off-canvas
+
+  // Off-canvas close
+
+  .off-canvas__close
+    +off-canvas__close
+
+@if $include-css-off-canvas-sidebars == true
+  +components-off-canvas-sidebars

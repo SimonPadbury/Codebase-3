@@ -1,0 +1,101 @@
+//- Components Menus
+
+.menu-marker-section(id="components-menus-and-menubars")
+
+  h2.docs-section Menus and menubars
+
+  table.table
+    thead
+      tr
+        th Menu is displayed as
+        th
+          code &lt;ul&gt;
+          |  classes
+    tbody
+      tr
+        td  Vertical links
+        td  .menu
+      tr
+        td  Vertical block-links
+        td  .menu.menu--block
+      tr
+        td  Horizontal links
+        td  .menubar
+      tr
+        td  Horizontal block-links
+        td  .menubar.menubar--block
+
+  h3 Menus
+
+  p Menu with links:
+
+  +menu('Menu link', 5)
+
+  pre
+    code.
+      &lt;ul class="menu"&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Menu link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Menu link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Menu link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Menu link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Menu link 5&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+
+  p For a menu with block links, add <code>.menu--block</code>:
+
+  +menu('Menu link', 5, 'menu--block')
+
+  h3 Menubars
+
+  p Menubar with links:
+
+  +menubar('Link', 5)
+
+  pre
+    code.
+      &lt;ul class="menubar"&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#/"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+
+  p For a menu with block links, add <code>.menubar--block</code>:
+
+  +menubar('Link', 5, 'menubar--block')
+
+  h3 Menubar position
+
+  p <code>menubar--left</code>
+
+  +menubar('Link', 5, 'menubar--left')
+
+  br
+  br
+
+  p <code>menubar--right</code>
+
+  +menubar('Link', 5, 'menubar--right')
+
+  br
+  br
+
+  p <code>menubar--center</code>
+
+  +menubar('Link', 5, 'menubar--center')
+
+  br
+  br
+
+  p <code>menubar--jusify</code>
+
+  +menubar('Link', 5, 'menubar--justify')
+
+  h3 Collapsible menubar
+
+  p Use <code>menubar--collapse-*</code> if you require a menubar to behave as a menu below a particular breakpoint (<code>xs</code>, <code>sm</code> or <code>md</code>).
+
+  p Example <code>.menubar.menubar--block.menubar--collapse-sm</code>:
+
+  +menubar('Link', 5, 'menubar--block menubar--collapse-sm')

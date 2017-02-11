@@ -1,0 +1,164 @@
+//- Decoration Colors
+
+.menu-marker-section(id="decoration-colors")
+
+  h2.docs-section Colors
+
+  h3 The Codebase swatch
+
+  p.
+    The default Codebase swatch re-purposes the control colors (<span class="label label--primary">primary</span>, <span class="label label--secondary">secondary</span>, <span class="label label--warning">warning</span>, <span class="label label--error">error</span>, <span class="label label--success">success</span>) as decoration colors (<span class="text-blue">blue</span>, <span class="text-blue">teal</span>, <span class="text-orange">orange</span>, <span class="text-red">red</span>, <span class="text-green">green</span> respectively), and adds black, gray and white. A series of lighter and darker variants of each color have been generated (except for black and white).
+
+  p You can override and add to these colors in your own theme.
+  p The Codebase swatch displayed as background colors in a table:
+
+  style.
+    .colors td {
+    min-width: 50px;
+    border: 0;
+    }
+
+  table.table.colors
+    tbody
+      tr
+        td
+        td
+        td
+        td
+        td
+        td(style='height: 100%; margin: -8px; border: 1px dashed #ddd;')
+        td
+          code $color-white
+      tr
+        td.bg--blue-lighten-3
+        td.bg--teal-lighten-3
+        td.bg--orange-lighten-3
+        td.bg--red-lighten-3
+        td.bg--green-lighten-3
+        td.bg--gray-lighten-3
+        td
+          code $color-[color]-lighten-3
+      tr
+        td.bg--blue-lighten-2
+        td.bg--teal-lighten-2
+        td.bg--orange-lighten-2
+        td.bg--red-lighten-2
+        td.bg--green-lighten-2
+        td.bg--gray-lighten-2
+        td
+          code $color-[color]-lighten-2
+      tr
+        td.bg--blue-lighten-1
+        td.bg--teal-lighten-1
+        td.bg--orange-lighten-1
+        td.bg--red-lighten-1
+        td.bg--green-lighten-1
+        td.bg--gray-lighten-1
+        td
+          code $color-[color]-lighten-1
+      tr
+        td.bg--blue
+        td.bg--teal
+        td.bg--orange
+        td.bg--red
+        td.bg--green
+        td.bg--gray
+        td
+          code $color-[color]
+      tr
+        td.bg--blue-darken-1
+        td.bg--teal-darken-1
+        td.bg--orange-darken-1
+        td.bg--red-darken-1
+        td.bg--green-darken-1
+        td.bg--gray-darken-1
+        td
+          code $color-[color]-darken-1
+      tr
+        td.bg--blue-darken-2
+        td.bg--teal-darken-2
+        td.bg--orange-darken-2
+        td.bg--red-darken-2
+        td.bg--green-darken-2
+        td.bg--gray-darken-2
+        td
+          code $color-[color]-darken-2
+      tr
+        td.bg--blue-darken-3
+        td.bg--teal-darken-3
+        td.bg--orange-darken-3
+        td.bg--red-darken-3
+        td.bg--green-darken-3
+        td.bg--gray-darken-3
+        td
+          code $color-[color]-darken-3
+      tr
+        td
+        td
+        td
+        td
+        td
+        td.bg--black
+        td
+          code $color-black
+
+  p.
+    In each color series there are 7 colors: the base color (middle row above) plus 3 incrementally lighter and 3 incrementally darker.
+
+  h3 Applying colors to elements
+
+  p.
+    In addition to the colors (optionally) used in the typography and components, Codebase also has a set of #[b decoration classes] for setting colors of text, backgrounds and borders.
+
+  .grid.grid--gutter.b--1px-solid.pt--3u
+    .col.col-sm--span-6
+      b Backgrounds #[code bg-][color]
+    .col.col-sm--span-6
+      .p--2u.bg--blue-lighten-3  Example .bg--blue-lighten-3
+      br
+    .col.col-sm--span-6
+      b Borders #[code b-][color]
+    .col.col-sm--span-6
+      .mb--3u.p--2u.b--4px-solid.b--orange  Example .b--orange
+    .col.col-sm--span-6
+      b Text #[code text-][color]
+    .col.col-sm--span-6
+      p.text--teal-darken-1  Example .text--teal-darken-1
+
+  p The swatch color class options are as follows:
+
+  table.table
+    tbody
+      tr
+        td
+          | .bg
+          br
+          |  .text
+          br
+          |  .b
+        td
+          | --blue
+          br
+          |  --teal
+          br
+          |  --orange
+          br
+          |  --red
+          br
+          |  --green
+          br
+          |  --gray
+        td
+          | (-lighten)
+          br
+          |  (-darken)
+        td
+          | (-1)
+          br
+          |  (-2)
+          br
+          |  (-3)
+          br
+          |  (-4)
+          br
+          |  (-5)

@@ -1,0 +1,26 @@
+//- Docs Basics: Combos
+
+.menu-marker-section(id="basics-combos")
+
+  h2.docs-section Combos
+
+  p.
+    <code>.combo--*</code> utility classes enable buttons and form elements to be used inline. Besides rendering these elements as inline-blocks, some of the rounded corners are removed (if present).
+
+  <form action="" class="clearfix">
+    <input class="combo--first" name="" placeholder="Search" type="search">
+    <button class="btn btn--sm btn--primary combo--last"><i class="fa fa-search"></i> Go</button>
+  </form>
+
+  br
+
+  <p>
+    <button class="btn combo--first">.combo--first</button>
+    <button class="btn combo--middle">.combo--middle</button>
+    <button class="btn combo--last">.combo--last</button>
+  </p>
+
+  <div class="dropdown">
+    <button class="btn btn--sm combo--first">Dropdown combo</button>
+    <button class="btn btn--sm btn--icon combo--last dropdown__toggle fa fa-caret-down"></button><span class="dropdown__content">Example dropdown component content</span>
+  </div>

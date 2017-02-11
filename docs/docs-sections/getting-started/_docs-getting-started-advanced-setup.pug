@@ -1,0 +1,48 @@
+//- Getting Started Advanced Setup
+
+.menu-marker-section(id="getting-started-advanced-setup")
+
+  h2.docs-section Advanced Setup
+
+  p Example project folder structure:
+
+  pre
+    code.
+      your-project/
+      ├── codebase/
+      │     ├── (css/) /* Unrequired if you are importing Codebase into your theme */
+      │     ├── coffee/
+      │     ├── js/
+      │     └── sass/
+      │
+      ├── your-dev/
+      │     ├── coffee/
+      │     └── sass/
+      │
+      └── your-build/
+            ├── css/
+            └── js/
+
+  h3 Import Codebase into your theme SASS
+
+  p.
+    All Codebase variables have the <code>!default</code> flag. To override any of these, you <strong>first</strong> declare your your overrides using the same Codebase variable names (but with your preferred values), then import Codebase. Your SASS pre-processor will preferentially use your values instead of the Codebase defaults.
+
+  pre
+    code.
+      // YOUR PROJECT BASE SASS FILE
+      // ===========================
+
+      // (1.) Override Codebase `!default` variables here...
+
+      // (2.) Import Codebase
+      @import '../../codebase/scss/codebase';
+
+      // (3.) Begin your project styles here...
+
+  p.initial-icon.bl--4px-solid.b--teal-darken-1.p--3u.bg--teal-lighten-2.
+    <i class="fa fa-info-circle text--teal-darken-1"></i> Whenever you use any of the the Codebase variables <strong>within your own variables</strong>, you will need to declare these first, before you use them.
+    <br>
+    <br> For example: if you need to change the navbar breakpoint from <code>$break-xs</code> to <code>$break-sm</code> then you need <i>pre-</i>declare <code>$break-sm</code> in your own variables.
+    <br>
+    <br> You could copy the entire Codebase default variables file (<a href="codebase/scss/02_default-variables/_default-variables.scss">codebase/scss/02_default-variables/_default-variables.scss</a>) into your theme (remove all the <code>!default</code> flags) and set your chosen variable values there.

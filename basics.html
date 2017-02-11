@@ -1,0 +1,846 @@
+<!DOCTYPE (doctype)>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"/>
+    <meta name="author"/>
+    <link rel="icon"/>
+    <title>Basics</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+  </head>
+  <body>
+    <div class="body__inner">
+      <nav class="navbar navbar--fixed docs__navbar">
+        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
+        <div class="navbar--right show--md-up">
+          <ul>
+            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="docs__main">
+        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
+          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div class="docs__sidebar-menu">
+            <h4>Docs</h4>
+            <ul>
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li class="current menu-marker"><a href="#basics">Basics</a>
+                <ul>
+                  <li><a href="#basics-headings">Headings</a></li>
+                  <li><a href="#basics-paragraphs">Paragraphs</a></li>
+                  <li><a href="#basics-blockquotes">Blockquotes</a></li>
+                  <li><a href="#basics-text-alignment">Text Alignment</a></li>
+                  <li><a href="#basics-text-columns">Text Columns</a></li>
+                  <li><a href="#basics-enlarged-typography">Enlarged Typography</a></li>
+                  <li><a href="#basics-initial-icons">Initial Icons</a></li>
+                  <li><a href="#basics-text-elements">Simple Text Elements</a></li>
+                  <li><a href="#basics-lists">Lists</a></li>
+                  <li><a href="#basics-tables">Tables</a></li>
+                  <li><a href="#basics-horizontal-rules">Horizontal Rules</a></li>
+                  <li><a href="#basics-form--elements">Form Elements</a></li>
+                  <li><a href="#basics-buttons">Buttons</a></li>
+                  <li><a href="#basics-combos">Combos</a></li>
+                  <li><a href="#basics-floats-and-clearfix">Floats and Clearfix</a></li>
+                  <li><a href="#basics-badges">Badges</a></li>
+                  <li><a href="#basics-labels">Labels</a></li>
+                  <li><a href="#basics-images">Images</a></li>
+                </ul>
+              </li>
+              <li><a href="layout.html">Layout</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li><a href="decoration.html">Decoration</a></li>
+              <li><a href="examples.html">Examples</a></li>
+              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="docs__content menu-marker-wrap">
+          <header class="docs__header menu-marker-section" id="basics">
+            <h1>Basics</h1>
+            <p class="lead">
+              Starting from an <code>@import</code> of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> and building upon it, Codebase adds some basic styling and other interestng features.
+              
+            </p>
+            <p class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2">
+              <i class="fa fa-info-circle text--teal-darken-1"></i> Some of these Basics examples have been built first as Pug mixins, in order to be useful in rapid prototyping or style guide composition.
+              <br><br>
+              (Some basics really can't be more rapidly created by calling a mixin than by actually hand-coding them. E.g. there are no mixins for horizontal rules, floats, clearfix, badges, labels, text columns or enlarged typography.)
+            </p>
+          </header>
+          <div class="docs__body">
+            <div class="menu-marker-section" id="basics-headings">
+              <h2 class="docs-section">Headings</h2>
+              <p>
+                By default, h1 has zero top margin whereas h2-h6 headings ordinarily have top margin equal to 2× the default line height, i.e. 48px, or 6x element grid units. (This top margin is removed in header pairings.)
+                
+              </p>
+              <p>
+                Headings h1-h4 are given increasted font-size for medium screens up. All headings are rendered <code>font-weight: normal</code> so that you can choose to emphasize some word(s) in bold.
+                
+              </p>
+              <h1>Heading h1</h1>
+              <h2>Heading h2</h2>
+              <h3>Heading h3</h3>
+              <h4>Heading h4</h4>
+              <h5>Heading h5</h5>
+              <h6>Heading h6</h6>
+            </div>
+            <div class="menu-marker-section" id="basics-paragraphs">
+              <h2 class="docs-section">Paragraphs</h2>
+              <p>A simple paragraph:</p>
+              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              <p><code>p.lead</code></p>
+              <p class="lead">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              <p><code>p.dropcap</code></p>
+              <p class="dropcap">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+            </div>
+            <div class="menu-marker-section" id="basics-blockquotes">
+              <h2 class="docs-section">Blockquotes</h2>
+              <p><code>&lt;blockquote cite=""&gt;</code></p>
+              <blockquote cite="Example">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</blockquote>
+            </div>
+            <div class="menu-marker-section" id="basics-text-alignment">
+              <h2 class="docs-section">Text Alignment</h2>
+              <p><code>.text--left</code></p>
+              <p class="text--left">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              <p><code>.text--center</code></p>
+              <p class="text--center">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              <p><code>.text--right</code></p>
+              <p class="text--right">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+            </div>
+            <div class="menu-marker-section" id="basics-text-columns">
+              <h2 class="docs-section">Text Columns</h2>
+              <p>
+                The Codebase <code>.text--columns</code> wrapper class cause text to be displayed in a number of columns, depending on (a.) viewport width and (b.) the set value for the minimum column width variable, <code>$text-columns-min-width</code>.
+                
+              </p>
+              <p>Example:</p>
+              <div class="text--columns">
+                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
+                <p>Utroque habemus moderatius cum cu, no sea persius assueverit, eam id ipsum ridens urbanitas. Ex ridens tibique duo. Ne vim error percipit, his in duis ullamcorper, id sed vero vidisse labores. Eos cu habeo oratio, habeo dicit ad per. Nam nulla vocibus temporibus ea, et melius electram ius, nec putent moderatius appellantur et. Ea vix saperet tincidunt.</p>
+                <p>Eruditi omittam usu et, ea sed animal detraxit. Pro aperiam efficiendi suscipiantur at, at vis epicurei verterem corrumpit, cu probatus tincidunt mel. Ei nibh officiis qui, pri minim ubique ne. Tritani liberavisse ad duo. Deleniti menandri nam ea, alienum sadipscing id quo, congue gubergren mnesarchum mei ad.</p>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="basics-enlarged-typography">
+              <h2 class="docs-section">Enlarged Typography</h2>
+              <p>
+                By defult, Codebase has its font sizes for everything based on a set of <code>$base-font-*</code> variables. But there is also a set of <code>$enlarged-font-*</code> variables. (You can override both the base and enlarged variables because each are set as <code>!default</code> variables.)
+                
+              </p>
+              <p>
+                There are three ways to use the enlarged typography in Codebase:
+                
+              </p>
+              <h4>1. Toggle enlarged typography</h4>
+              <p>
+                You can toggle on the enlarged typography everywhere, by overriding one variable from false to true:
+                
+              </p>
+              <pre><code>$enlarged-typography-everywhere: true !default;
+</code></pre>
+              <h4>2. Overriding enlarged typography defaults</h4>
+              <p>
+                You can override the <code>$enlarged-font-size</code> and <code>$enlarged-line-height</code> default variables within your theme (see <a href="getting-started.html#advanced-setup">Getting Started: Advanced Setup</a>).
+                
+              </p>
+              <p>
+                Overriding these variables will affect everything (if you toggle on enlarged typography) or only stuff contained in a  <code>.enlarged</code> (see below).
+                
+              </p>
+              <h4>3. Enlarged typography wrapper class</h4>
+              <p>
+                Codebase can render enlarged typography simply by placing any Codebase-styled HTML in a wrapper that has class <code>.enlarge</code>.
+                
+              </p>
+              <p>This may be useful e.g. for long-read articles.</p>
+              <div class="grid grid--gutter grid--nested">
+                <div class="col col-sm--span-6">
+                  <h2>Normal h2 Header</h2>
+                  <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                </div>
+                <div class="col col-sm--span-6">
+                  <div class="enlarge">
+                    <h2>Enlarged h2 Header</h2>
+                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="basics-initial-icons">
+              <h2 class="docs-section">Initial Icons</h2>
+              <p>For when you want to make a note or statement stand out.</p>
+              <div class="initial-icon"><i class="fa fa-info-circle" aria-hidden="true"></i>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</div><br/>
+              <p class="initial-icon mb--4u bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-check-circle text--teal-darken-1"></i>
+                <b>Further styling</b><br>
+                Add color, padding, etc (e.g. by decoration classes) for greater effect.
+              </p>
+            </div>
+            <div class="menu-marker-section" id="basics-text-elements">
+              <h2 class="docs-section">Simple Text Elements</h2>
+              <div class="text--columns">
+                <p><i>italics</i><br/><em>emphasis</em><br/><b>bold</b><br/><strong>strong</strong><br/>
+                  <cite>citation</cite><br/>
+                  <del>deleted text (strikethough)</del><br/>
+                  <dfn title="title">definition</dfn><br/><abbr title="This stands for something">abbreviation</abbr><br/><ins>inserted text</ins><br/><kbd>user input</kbd><br/><samp>sample output</samp><br/>
+                  <mark>marked (highlighted) text</mark><br/><small>small</small><br/> Superscript: e.g. E = mc<sup>2</sup><br/> Subscript: e.g. H<sub>2</sub>O<br/>
+                  <var>variable or placeholder text</var><br/> ndash &ndash;<br/> mdash &mdash;<br/><a href="">hyperlink</a><br/><code>inline code</code>
+                </p>
+                <address>Address</address>
+                <pre>Preformatted text
+</pre>
+                <pre><code>// &lt;pre&gt;&lt;code&gt;
+&nbsp;
+10 print "Hello world";
+20 goto 10
+&nbsp;
+Run</code></pre>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="basics-lists">
+              <h2 class="docs-section">Lists</h2>
+              <ol>
+                <li>List item 1
+                </li>
+                <li>List item 2
+                </li>
+                <li>List item 3
+                </li>
+                <li>List item 4
+                </li>
+                <li>List item 5
+                </li>
+              </ol>
+              <ul>
+                <li>List item 1
+                </li>
+                <li>List item 2
+                </li>
+                <li>List item 3
+                </li>
+                <li>List item 4
+                </li>
+                <li>List item 5
+                </li>
+              </ul>
+              <dl>
+                <dt>Title</dt>
+                <dd>Data1
+                </dd>
+                <dt>Title</dt>
+                <dd>Data2
+                </dd>
+                <dt>Title</dt>
+                <dd>Data3
+                </dd>
+              </dl>
+            </div>
+            <div class="menu-marker-section" id="basics-tables">
+              <h2 class="docs-section">Tables</h2>
+              <p>Simply add class <code>.table</code>to tables. This adds the styles that you see below.</p>
+              <p>The <code>codebase.js</code> adds two wrappers around tables that enables responsive overflow by horizontal scrolling: <code>table-wrap--outer</code> and <code>table-wrap--inner</code>. (Note: you don't need to add these wrappers yourself.)</p>
+              <p>
+                Also, if the table width is wider than the width allowed in the webpage layout, then an inset box shadow is added to indicate that there is more to the table than what is visible.
+                
+              </p>
+              <p>A table that is horizontally scrollable on narrow screens:</p>
+              <table class="table table--nowrap">
+                <thead>
+                  <tr>
+                    <th>Table Header 1
+                    </th>
+                    <th>Table Header 2
+                    </th>
+                    <th>Table Header 3
+                    </th>
+                    <th>Table Header 4
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Table content 1.1
+                    </td>
+                    <td>Table content 2.1
+                    </td>
+                    <td>Table content 3.1
+                    </td>
+                    <td>Table content 4.1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Table content 1.2
+                    </td>
+                    <td>Table content 2.2
+                    </td>
+                    <td>Table content 3.2
+                    </td>
+                    <td>Table content 4.2
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Table content 1.3
+                    </td>
+                    <td>Table content 2.3
+                    </td>
+                    <td>Table content 3.3
+                    </td>
+                    <td>Table content 4.3
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Table content 1.4
+                    </td>
+                    <td>Table content 2.4
+                    </td>
+                    <td>Table content 3.4
+                    </td>
+                    <td>Table content 4.4
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>A table that is horizontally scrollable at all screen widths:</p>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Table Header 1
+                    </th>
+                    <th>Table Header 2
+                    </th>
+                    <th>Table Header 3
+                    </th>
+                    <th>Table Header 4
+                    </th>
+                    <th>Table Header 5
+                    </th>
+                    <th>Table Header 6
+                    </th>
+                    <th>Table Header 7
+                    </th>
+                    <th>Table Header 8
+                    </th>
+                    <th>Table Header 9
+                    </th>
+                    <th>Table Header 10
+                    </th>
+                    <th>Table Header 11
+                    </th>
+                    <th>Table Header 12
+                    </th>
+                    <th>Table Header 13
+                    </th>
+                    <th>Table Header 14
+                    </th>
+                    <th>Table Header 15
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Table content 1.1
+                    </td>
+                    <td>Table content 2.1
+                    </td>
+                    <td>Table content 3.1
+                    </td>
+                    <td>Table content 4.1
+                    </td>
+                    <td>Table content 5.1
+                    </td>
+                    <td>Table content 6.1
+                    </td>
+                    <td>Table content 7.1
+                    </td>
+                    <td>Table content 8.1
+                    </td>
+                    <td>Table content 9.1
+                    </td>
+                    <td>Table content 10.1
+                    </td>
+                    <td>Table content 11.1
+                    </td>
+                    <td>Table content 12.1
+                    </td>
+                    <td>Table content 13.1
+                    </td>
+                    <td>Table content 14.1
+                    </td>
+                    <td>Table content 15.1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Table content 1.2
+                    </td>
+                    <td>Table content 2.2
+                    </td>
+                    <td>Table content 3.2
+                    </td>
+                    <td>Table content 4.2
+                    </td>
+                    <td>Table content 5.2
+                    </td>
+                    <td>Table content 6.2
+                    </td>
+                    <td>Table content 7.2
+                    </td>
+                    <td>Table content 8.2
+                    </td>
+                    <td>Table content 9.2
+                    </td>
+                    <td>Table content 10.2
+                    </td>
+                    <td>Table content 11.2
+                    </td>
+                    <td>Table content 12.2
+                    </td>
+                    <td>Table content 13.2
+                    </td>
+                    <td>Table content 14.2
+                    </td>
+                    <td>Table content 15.2
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Table content 1.3
+                    </td>
+                    <td>Table content 2.3
+                    </td>
+                    <td>Table content 3.3
+                    </td>
+                    <td>Table content 4.3
+                    </td>
+                    <td>Table content 5.3
+                    </td>
+                    <td>Table content 6.3
+                    </td>
+                    <td>Table content 7.3
+                    </td>
+                    <td>Table content 8.3
+                    </td>
+                    <td>Table content 9.3
+                    </td>
+                    <td>Table content 10.3
+                    </td>
+                    <td>Table content 11.3
+                    </td>
+                    <td>Table content 12.3
+                    </td>
+                    <td>Table content 13.3
+                    </td>
+                    <td>Table content 14.3
+                    </td>
+                    <td>Table content 15.3
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Note: If you require your table cells not to wrap, add the modifier class <code>.table--nowrap</code>.</p>
+            </div>
+            <div class="menu-marker-section" id="basics-horizontal-rules">
+              <h2 class="docs-section">Horizontal Rules</h2>
+              <hr/>
+            </div>
+            <div class="menu-marker-section" id="basics-form--elements">
+              <h2 class="docs-section">Form Elements</h2>
+              <p>
+                Form elements expand to 100% of their container width. Give them structure by wrapping them in grid columns.
+                
+              </p>
+              <p>
+                There is no added margin or padding around form elements – so nothing you need to override. Add whatever margin or padding (or not) as suits your own design.
+                
+              </p>
+              <h3>Form Label</h3>
+              <label for="">Example:</label>
+              <h3>Input Boxes</h3>
+              <label for="text-example">Text:</label>
+              <input id="text-example" name="examplename" type="text" placeholder="Example text input field"/>
+              <label for="email-example">Email:</label>
+              <input id="email-example" name="examplename" type="email" placeholder="Example email input field"/>
+              <label for="tel-example">Tel:</label>
+              <input id="tel-example" name="examplename" type="tel" placeholder="Example phone number input field"/>
+              <label for="search-example">Search:</label>
+              <input id="search-example" name="examplename" type="search" placeholder="Example search input field" results="5"/>
+              <label for="number-example">Number:</label>
+              <input id="number-example" name="examplename" type="number" placeholder="Example number input field"/>
+              <label for="date-example">Date:</label>
+              <input id="date-example" name="examplename" type="date" placeholder="Example date input field"/>
+              <label for="month-example">Month:</label>
+              <input id="month-example" name="examplename" type="month" placeholder="Example month input field"/>
+              <label for="password-example">Password:</label>
+              <input id="month-example" name="examplename" type="password" placeholder="Example password input field"/>
+              <h3>Textarea</h3>
+              <label for="textarea-example">Textarea:</label>
+              <textarea id="textarea-example" name="examplename" type="password" placeholder="Example textarea" rows="4"></textarea>
+              <h3>Selects</h3>
+              <label for="single-select-example">Single select:</label>
+              <select id="single-select-example" name="examplename">
+                <option value="first">First option
+                </option>
+                <option value="second">Second option
+                </option>
+                <option value="third">Third option
+                </option>
+              </select>
+              <label for="multi-select-example">Multi select:</label>
+              <select id="multi-select-example" name="examplename" multiple="3">
+                <option value="first">First option
+                </option>
+                <option value="second">Second option
+                </option>
+                <option value="third">Third option
+                </option>
+              </select>
+              <h3>Radio Boxes and Checkboxes</h3>
+              <form>
+                <input id="radio-1" name="examplename" type="radio" checked="checked"/>
+                <label for="radio-1">Radio 1</label><br/>
+                <input id="radio-2" name="examplename" type="radio"/>
+                <label for="radio-2">Radio 2</label><br/>
+                <input id="radio-3" name="examplename" type="radio"/>
+                <label for="radio-3">Radio 3</label>
+              </form>
+              <form>
+                <input id="checkbox-1" name="examplename" type="checkbox" checked="checked"/>
+                <label for="checkbox-1">Checkbox 1</label><br/>
+                <input id="checkbox-2" name="examplename" type="checkbox"/>
+                <label for="checkbox-2">Checkbox 2</label><br/>
+                <input id="checkbox-3" name="examplename" type="checkbox"/>
+                <label for="checkbox-3">Checkbox 3</label>
+              </form>
+              <h3>Styled Radio Boxes and Checkboxes</h3>
+              <p>Using <a href="http://fontawesome.io/">Font Awesome</a>.</p>
+              <p>
+                <code>.form__radio</code>
+                
+              </p>
+              <form>
+                <input class="form__radio" id="radio-4" name="examplename" type="radio" checked="checked"/>
+                <label for="radio-4">Radio 4</label><br/>
+                <input class="form__radio" id="radio-5" name="examplename" type="radio"/>
+                <label for="radio-5">Radio 5</label><br/>
+                <input class="form__radio" id="radio-6" name="examplename" type="radio"/>
+                <label for="radio-6">Radio 6</label>
+              </form><br/>
+              <p>
+                <code>.form__checkbox</code>
+                
+              </p>
+              <form>
+                <input class="form__checkbox" id="checkbox-4" name="examplename" type="checkbox" checked="checked"/>
+                <label for="checkbox-4">Checkbox 4</label><br/>
+                <input class="form__checkbox" id="checkbox-5" name="examplename" type="checkbox"/>
+                <label for="checkbox-5">Checkbox 5</label><br/>
+                <input class="form__checkbox" id="checkbox-6" name="examplename" type="checkbox"/>
+                <label for="checkbox-6">Checkbox 6</label>
+              </form><br/>
+              <p>
+                <code>.form__radio--toggle</code>
+                
+              </p>
+              <form>
+                <input class="form__radio--toggle" id="radio-7" name="examplename" type="radio" checked="checked"/>
+                <label for="radio-7">Radio 7</label><br/>
+                <input class="form__radio--toggle" id="radio-8" name="examplename" type="radio"/>
+                <label for="radio-8">Radio 8</label><br/>
+                <input class="form__radio--toggle" id="radio-9" name="examplename" type="radio"/>
+                <label for="radio-9">Radio 9</label>
+              </form><br/>
+              <p>
+                <code>.form__checkbox--toggle</code>
+                
+              </p>
+              <form>
+                <input class="form__checkbox--toggle" id="checkbox-7" name="examplename" type="checkbox" checked="checked"/>
+                <label for="checkbox-7">Checkbox 7</label><br/>
+                <input class="form__checkbox--toggle" id="checkbox-8" name="examplename" type="checkbox"/>
+                <label for="checkbox-8">Checkbox 8</label><br/>
+                <input class="form__checkbox--toggle" id="checkbox-9" name="examplename" type="checkbox"/>
+                <label for="checkbox-9">Checkbox 9</label>
+              </form>
+            </div>
+            <div class="menu-marker-section" id="basics-buttons">
+              <h2 class="docs-section">Buttons</h2>
+              <p>
+                Button classes can be applied to button tags, input-button tags and hyperlink anchor tags:
+                
+              </p>
+              <p>
+                <button class="btn" type="submit">Button</button> .btn
+              </p>
+              <p><a class="btn" href="#/">Hyperlink</a> .btn
+              </p>
+              <p>
+                <input class="btn" value="Input" type="submit"/> .btn
+              </p>
+              <p>Three sizes:</p>
+              <p>
+                <button class="btn btn--sm">Small button</button> .btn .btn--sm
+              </p>
+              <p>
+                <button class="btn">Default (medium) button</button> .btn
+              </p>
+              <p>
+                <button class="btn btn--lg">Large button</button> .btn.btn--lg
+              </p>
+              <p>Medium sized button with larger text (see also button icon below):</p>
+              <p>
+                <button class="btn btn--lt">Larger text</button> .btn.btn--lt
+              </p>
+              <p>Block width button: <code>.btn.btn--block</code></p>
+              <p>
+                <button class="btn btn--block">Block width button</button>
+              </p>
+              <p> Button colors:</p>
+              <p>
+                <button class="btn">Default</button> .btn
+              </p>
+              <p>
+                <button class="btn btn--primary">Primary</button> .btn.btn--primary
+              </p>
+              <p>
+                <button class="btn btn--secondary">Secondary</button> .btn.btn--secondary
+              </p>
+              <p>
+                <button class="btn btn--warning">Warning</button> .btn.btn--warning
+              </p>
+              <p>
+                <button class="btn btn--success">Success</button> .btn.btn--success
+              </p>
+              <p>
+                <button class="btn btn--error">Error</button> .btn.btn--error
+              </p>
+              <p>
+                <button class="btn btn--link">Link</button> .btn.btn--link
+              </p>
+              <p>
+                <button class="btn btn--success">Call to action <i class="fa fa-arrow-right"></i>
+                </button>
+                <button class="btn btn--secondary"><i class="fa fa-folder-open-o"></i> Archive</button>
+                <button class="btn btn--primary"><i class="fa fa-user"></i> User</button>
+                <button class="btn btn--warning">Are you sure <i class="fa fa-question-circle"></i>
+                </button>
+                <button class="btn btn--error">Reset <i class="fa fa-times-circle"></i>
+                </button>
+                <button class="btn">Cancel <i class="fa fa-times"></i>
+                </button>
+              </p>
+              <p>.btn--icon &mdash; use this to make square buttons when only a (Font Awesome) icon is present within the button.</p>
+              <p>
+                <button class="btn btn--success btn--icon"><i class="fa fa-arrow-right"></i></button>
+                <button class="btn btn--secondary btn--icon"><i class="fa fa-folder-open-o"></i></button>
+                <button class="btn btn--primary btn--icon"><i class="fa fa-user"></i></button>
+                <button class="btn btn--warning btn--icon"><i class="fa fa-question-circle"></i></button>
+                <button class="btn btn--error btn--icon"><i class="fa fa-times-circle"></i></button>
+                <button class="btn btn--icon"><i class="fa fa-times"></i></button>
+              </p>
+              <p>And, with <code>.btn--lt</code>:</p>
+              <p>
+                <button class="btn btn--success btn--icon btn--lt"><i class="fa fa-arrow-right"></i></button>
+                <button class="btn btn--secondary btn--icon btn--lt"><i class="fa fa-folder-open-o"></i></button>
+                <button class="btn btn--primary btn--icon btn--lt"><i class="fa fa-user"></i></button>
+                <button class="btn btn--warning btn--icon btn--lt"><i class="fa fa-question-circle"></i></button>
+                <button class="btn btn--error btn--icon btn--lt"><i class="fa fa-times-circle"></i></button>
+                <button class="btn btn--icon btn--lt"><i class="fa fa-times"></i></button>
+              </p>
+              <p> Rounded buttons:</p>
+              <p>
+                <button class="btn btn--sm btn--rounded">Small button</button> .btn.btn--sm.btn--rounded
+              </p>
+              <p>
+                <button class="btn btn--rounded">Default (medium) button</button> .btn.btn--rounded
+              </p>
+              <p>
+                <button class="btn btn--lg btn--rounded">Large button</button> .btn.btn--lg .btn--rounded
+              </p>
+              <p> Using .btn--icon together with .btn--rounded yields a circular button:</p>
+              <p>
+                <button class="btn btn--sm btn--icon btn--rounded"><i class="fa fa-snowflake-o"></i></button> .btn.btn--sm.btn--icon.btn--rounded
+              </p>
+              <p>
+                <button class="btn btn--icon btn--rounded"><i class="fa fa-bell"></i></button> .btn.btn--icon.btn--rounded
+              </p>
+              <p>
+                <button class="btn btn--lg btn--icon btn--rounded"><i class="fa fa-smile-o"></i></button> .btn.btn--lg.btn--icon.btn--rounded
+              </p>
+              <p>
+                <button class="btn btn--success btn--icon btn--rounded"><i class="fa fa-arrow-right"></i></button>
+                <button class="btn btn--secondary btn--icon btn--rounded"><i class="fa fa-folder-open-o"></i></button>
+                <button class="btn btn--primary btn--icon btn--rounded"><i class="fa fa-user"></i></button>
+                <button class="btn btn--warning btn--icon btn--rounded"><i class="fa fa-question-circle"></i></button>
+                <button class="btn btn--error btn--icon btn--rounded"><i class="fa fa-times-circle"></i></button>
+                <button class="btn btn--icon btn--rounded"><i class="fa fa-times"></i></button>
+              </p>
+              <p>
+                <button class="btn btn--success btn--icon btn--rounded btn--lt"><i class="fa fa-arrow-right"></i></button>
+                <button class="btn btn--secondary btn--icon btn--rounded btn--lt"><i class="fa fa-folder-open-o"></i></button>
+                <button class="btn btn--primary btn--icon btn--rounded btn--lt"><i class="fa fa-user"></i></button>
+                <button class="btn btn--warning btn--icon btn--rounded btn--lt"><i class="fa fa-question-circle"></i></button>
+                <button class="btn btn--error btn--icon btn--rounded btn--lt"><i class="fa fa-times-circle"></i></button>
+                <button class="btn btn--icon btn--rounded btn--lt"><i class="fa fa-times"></i></button>
+              </p>
+              <p><code>.combo--*</code> buttons :</p>
+              <p>
+                <button class="btn combo--first">.combo--first</button>
+                <button class="btn combo--middle">.combo--middle</button>
+                <button class="btn combo--last">.combo--last</button>
+              </p>
+              <p> The dropdown component can be used in buttons:</p>
+              <div class="dropdown">
+                <button class="btn dropdown__toggle">Example 1 <i class="fa fa-caret-down"></i>
+                </button><span class="dropdown__content dropdown__content--nowrap p--block bg--white bs">Example dropdown component content</span>
+              </div><br/><br/>
+              <div class="dropdown">
+                <button class="btn combo--first"> Example 2 (combo)</button>
+                <button class="btn btn--icon btn--lt combo--last dropdown__toggle"><i class="fa fa-bars"></i></button><span class="dropdown__content p--block bg--white bs">Example dropdown component content</span>
+              </div><br/><br/>
+              <p>
+                See the <a href='components.html#components-dropdowns'>dropdown component</a> for explanation.
+                
+              </p>
+              <p>
+                Example: icon buttons, combos and dropdowns (with added spacing, floats and clearfix wrappers to make everything appear in a line):
+                
+              </p>
+              <div class="clearfix">
+                <div class="float--left">
+                  <button class="btn btn--lt btn--icon combo--first"><i class="fa fa-bold" aria-hidden="true"></i></button>
+                  <button class="btn btn--lt btn--icon combo--middle"><i class="fa fa-italic" aria-hidden="true"></i></button>
+                  <button class="btn btn--lt btn--icon combo--last float--left"><i class="fa fa-underline" aria-hidden="true"></i></button><span class="float--left">&nbsp;</span>
+                  <div class="dropdown">
+                    <button class="btn btn--lt btn--icon dropdown__toggle"><i class="fa fa-align-left"></i></button><span class="dropdown__content p--zero bg--white bs">
+                      <ul class="menu">
+                        <li>
+                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+                        </li>
+                        <li>
+                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+                        </li>
+                        <li>
+                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+                        </li>
+                      </ul></span>
+                  </div>
+                </div><span class="float--left">&nbsp;</span>
+                <div class="float--left">
+                  <button class="btn btn--lt btn--icon combo--first"><i class="fa fa-cut" aria-hidden="true"></i></button>
+                  <button class="btn btn--lt btn--icon combo--middle"><i class="fa fa-copy" aria-hidden="true"></i></button>
+                  <button class="btn btn--lt btn--icon combo--last float--left"><i class="fa fa-paste" aria-hidden="true"></i></button><span class="float--left">&nbsp;</span>
+                  <div class="dropdown">
+                    <button class="btn btn--lt btn--icon dropdown__toggle"><i class="fa fa-list"></i></button><span class="dropdown__content p--zero bg--white bs">
+                      <ul class="menu">
+                        <li>
+                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+                        </li>
+                        <li>
+                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+                        </li>
+                      </ul></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="basics-combos">
+              <h2 class="docs-section">Combos</h2>
+              <p>
+                <code>.combo--*</code> utility classes enable buttons and form elements to be used inline. Besides rendering these elements as inline-blocks, some of the rounded corners are removed (if present).
+                
+              </p><form action="" class="clearfix">
+<input class="combo--first" name="" placeholder="Search" type="search">
+<button class="btn btn--sm btn--primary combo--last"><i class="fa fa-search"></i> Go</button>
+</form><br/><p>
+<button class="btn combo--first">.combo--first</button>
+<button class="btn combo--middle">.combo--middle</button>
+<button class="btn combo--last">.combo--last</button>
+</p>
+<div class="dropdown">
+<button class="btn btn--sm combo--first">Dropdown combo</button>
+<button class="btn btn--sm btn--icon combo--last dropdown__toggle fa fa-caret-down"></button><span class="dropdown__content">Example dropdown component content</span>
+</div>
+            </div>
+            <div class="menu-marker-section" id="basics-floats-and-clearfix">
+              <h2 class="docs-section">Floats and Clearfix</h2>
+              <p>These outer boxes have <code>.clearfix</code>.</p>
+              <div class="clearfix">
+                <div class="float--right">
+                  <div class="b--1px-dashed p--2u">
+                    <This>is an example of <code>.float--right</code></This>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              </div>
+              <div class="clearfix">
+                <div class="float--left">
+                  <div class="b--1px-dashed p--2u">
+                    <This>is an example of <code>.float--left</code></This>
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              </div>
+            </div>
+            <div class="menu-marker-section" id="basics-badges">
+              <h2 class="docs-section">Badges</h2>
+              <p>Badges can be used in any sized text.</p>
+              <p>
+                Examples<span class="badge">1</span><span class="badge badge--primary">2</span><span class="badge badge--secondary">345</span><span class="badge badge--warning">678</span><span class="badge badge--error">9</span><span class="badge">10</span><span class="badge badge--success"><i class="fa fa-coffee"></i></span>
+                
+              </p>
+              <h1>h1 example<span class="badge badge--success">NEW</span></h1>
+            </div>
+            <div class="menu-marker-section" id="basics-labels">
+              <h2 class="docs-section">Labels</h2>
+              <p>Labels can be used in any sized text.</p>
+              <p>Examples:</p>
+              <h1><span class="label">New</span> TITLE</h1>
+              <p><span class="label label--primary">Author</span></p>
+              <p><span class="label label--secondary">Enquiry</span></p>
+              <p><span class="label label--warning">Required</span></p>
+              <p><span class="label label--error">Oops!</span></p>
+              <p><span class="label label--success">Winner</span></p>
+            </div>
+            <div class="menu-marker-section" id="basics-images">
+              <h2 class="docs-section">Images</h2>
+              <p><img src="holder.js/96x96" alt="thumbnail"/>
+                By default, images are inline elements, sitting on the baseline of any text they are share a block element (e.g. paragraph) with. Codebase also gives them code max-width: 100% so that large images are &quot;repsonsive&quot;, shrinking to fit in containers (or windows) narrower than the actual image width.
+                
+              </p>
+              <p>Further styling can be added using <a href="decoration.html">decoration classes</a> (e.g. borders).
+                
+              </p>
+              <p>Examples:</p><img class="mb--3u b-4px-solid b-white bs" src="holder.js/1000x150" alt="full-width"/>
+              <div class="grid grid--gutter grid--nested">
+                <div class="col col-sm--span-4"><img class="b-circle mh-auto" src="holder.js/250x250" alt="full-width"/>
+                  <p class="text--center">
+                    Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+                    
+                  </p>
+                </div>
+                <div class="col col-sm--span-4"><img class="b-circle mh-auto" src="holder.js/250x250" alt="full-width"/>
+                  <p class="text--center">
+                    Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+                    
+                  </p>
+                </div>
+                <div class="col col-sm--span-4"><img class="b-circle mh-auto" src="holder.js/250x250" alt="full-width"/>
+                  <p class="text--center">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
+               version 2.x PREVIEW
+              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="codebase/js/codebase.js"></script>
+  </body>
+</html>

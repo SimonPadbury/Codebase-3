@@ -1,0 +1,287 @@
+// CLASSLESS BASICS: TYPOGRAPHY
+// ============================
+
+body
+  font-family: $base-font-family
+  font-size: $base-font-size
+  line-height: $base-line-height
+  // = 24px = $spacing-3u
+  @if $enlarged-typography-everywhere == true
+    font-size: $enlarged-font-size
+    line-height: $enlarged-line-height
+    // = 32px = $spacing-4u
+
+  .enlarged &  &
+    font-size: $enlarged-font-size
+    line-height: $enlarged-line-height
+    // = 32px = $spacing-4u
+
+  color: $base-text-color
+  text-rendering: optimizeLegibility
+  font-feature-settings: "kern" 1
+  font-kerning: normal
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom: $base-line-height
+  // = $spacing-3u
+  @if $h1-h6-font-weight-normal == true
+    font-weight: normal
+
+h1
+  margin-top: 0
+
+h2, h3, h4, h5, h6
+  @if $h2-h6-base-line-height-margin-top == false
+    margin-top: 0
+
+@if $h2-h6-base-line-height-margin-top == true
+  h2, h3, h4, h5, h6
+    @if $enlarged-typography-everywhere == false
+      margin-top: $base-line-height * 2
+      // = $spacing-6u
+    @else
+      margin-top: $enlarged-line-height * 2
+      // = $spacing-8u
+
+  h1+h2,h1+h3,h1+h4,h1+h5,h1+h6,
+  h2+h3,h2+h4,h2+h5,h2+h6,
+  h3+h4,h3+h5,h3+h6,
+  h4+h5,h4+h6,
+  h5+h6
+    margin-top: 0
+
+p, ol, ul, dl
+  margin-top: 0
+  margin-bottom: $base-line-height
+
+=base-headers
+  h1
+    font-size: $base-font-size * 3
+    line-height: $spacing-6u
+  h2
+    font-size: $base-font-size * 2.25
+    line-height: $spacing-4u
+  h3
+    font-size: $base-font-size * 1.75
+    line-height: $spacing-4u
+  h4
+    font-size: $base-font-size * 1.35
+    line-height: $spacing-3u
+  h5
+    font-size: $base-font-size * 1.1
+    line-height: $spacing-3u
+  h6
+    font-size: $base-font-size * 1
+    line-height: $spacing-3u
+
+=enlarged-headers
+  h1
+    font-size: $enlarged-font-size * 3
+    line-height: $spacing-8u
+  h2
+    font-size: $enlarged-font-size * 2.25
+    line-height: $spacing-6u
+  h3
+    font-size: $enlarged-font-size * 1.75
+    line-height: $spacing-5u
+  h4
+    font-size: $enlarged-font-size * 1.35
+    line-height: $spacing-4u
+  h5
+    font-size: $enlarged-font-size * 1.1
+    line-height: $spacing-4u
+  h6
+    font-size: $enlarged-font-size * 1
+    line-height: $spacing-4u
+
+=base-headers-alt
+  h1
+    font-size: $base-font-size * 4
+    line-height: $spacing-10u
+  h2
+    font-size: $base-font-size * 2.75
+    line-height: $spacing-7u
+  h3
+    font-size: $base-font-size * 2
+    line-height: $spacing-5u
+  h4
+    font-size: $base-font-size * 1.5
+    line-height: $spacing-4u
+  h5
+    font-size: $base-font-size * 1.25
+
+=enlarged-headers-alt
+  h1
+    font-size: $enlarged-font-size * 4
+    line-height: $spacing-14u
+  h2
+    font-size: $enlarged-font-size * 2.75
+    line-height: $spacing-10u
+  h3
+    font-size: $enlarged-font-size * 2
+    line-height: $spacing-7u
+  h4
+    font-size: $enlarged-font-size * 1.5
+    line-height: $spacing-5u
+  h5
+    font-size: $enlarged-font-size * 1.25
+
+@if $enlarged-typography-everywhere == false
+  +base-headers
+  +break__headers-alt--up
+    +base-headers-alt
+
+@else
+  +enlarged-headers
+  +break__headers-alt--up
+    +enlarged-headers-alt
+
+hr
+  height: 0
+  margin: $spacing-4u 0
+  border: 0
+  border-top: $border-1px-solid
+
+blockquote
+  margin: $base-line-height 0
+  border-left: $border-4px-solid
+  padding: $spacing-3u $spacing-3u $spacing-3u $spacing-4u
+  font-size: $base-font-size * 1.2
+
+a
+  color: $base-text-color-hyperlink
+  text-decoration: none
+  &:hover
+    color: $base-text-color-hyperlink-hover
+    text-decoration: underline
+  &:active,
+  &:focus
+    outline: none
+
+code
+  display: inline-block
+  border: $border-1px-solid
+  @if $base-code-rounded-corners == true
+    border-radius: $border-radius
+
+  padding: 0 ($spacing-1u / 2)
+  background: $color-gray-lighten-3
+
+
+pre
+  code
+    display: block
+    overflow-x: auto
+    padding: $spacing-block
+
+// BASICS MIXINS: TYPOGRAPHY
+// =========================
+
+// Lead paragraph
+
+=lead
+  font-size: 1.25em
+  line-height: $base-line-height + $spacing-1u
+
+// Drop cap
+
+=dropcap
+  &::first-letter
+    display: inline-block
+    float: left
+    font-size: 6em
+    font-weight: 300
+    line-height: 0.75
+
+=initial-icon
+  & > i:first-child
+    display: inline-block
+    float: left
+    padding-right: 20px
+    font-size: 340%
+    font-weight: 300
+    line-height: 90%
+  min-height: $base-line-height * 2
+
+// Text alignment
+
+=text--left
+  text-align: left
+
+=text--center
+  text-align: center
+
+=text--right
+  text-align: right
+
+// Text muted (semi-transparent)
+
+=text--muted
+  opacity: 0.5
+
+// Enlarged typography
+
+=enlarged-typography
+  font-size: $enlarged-font-size
+  line-height: $enlarged-line-height
+  +enlarged-headers
+  +break__headers-alt--up
+    +enlarged-headers-alt
+
+// Text columns
+
+=text--columns
+  columns: $text-columns-min-width
+
+// CLASS BUILDER: TYPOGRAPHY
+// =========================
+
+=basics-typography
+
+  // Lead paragraph
+
+  .lead
+    +lead
+
+  // Drop cap
+
+  .dropcap
+    +dropcap
+
+  // Drop cap
+
+  .initial-icon
+    +initial-icon
+
+  // Text alignment
+
+  .text--left
+    +text--left
+
+  .text--center
+    +text--center
+
+  .text--right
+    +text--right
+
+  // Text Columns
+
+  .text--columns
+    +text--columns
+
+  // Muted text
+
+  .text--muted
+    +text--muted
+
+  // Enlarged Typography
+  // ===================
+  // For use when you need to enlarge text e.g. within your main content, but
+  // you prefer to have everything else defaulting to base font and heading
+  // sizes.
+
+  .enlarge
+    +enlarged-typography
+
+@if $include-css-typography == true
+  +basics-typography

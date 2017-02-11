@@ -1,0 +1,46 @@
+//- Components Dropdowns
+
+.menu-marker-section(id="components-dropdowns")
+
+  h2.docs-section Dropdowns
+
+  p.
+    In Codebase, dropdown components are a derivative of <a href='components.html#components-showhide'>showhide components</a>, sharing some of the same mixins.
+
+  +dropdown
+
+  pre
+    code.
+      &lt;div class="dropdown"&gt;
+        &lt;button class="btn btn--sm dropdown__toggle"&gt;Dropdown &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;div class="dropdown__content dropdown__content--nowrap"&gt;Long content with &lt;code&gt;dropdown__content--nowrap&lt;/code&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+  +dropdown-combo
+
+  br
+  br
+
+  p.
+    Besides clicking the button again to dismiss the dropdown, you can click anywhere outside the dropdown to dismiss it (i.e. click on a transparent full-screen overlay, which is set at a z-index one unit less than the dropdown).
+
+  p.
+    The <code>.dropdown</code> wrapper ensures that the dropdown content appears flush left of the button. The wrapper has #[code display: inline-block] so that you can easily build a row of dropdowns and other inline elements.
+
+  p Complex example:
+
+  +dropdown-complex-example
+
+  br
+
+  p.
+      However, the downside of the <code>.dropdown</code> wrapper having
+      <code>display: inline-block</code> is that the dropdown content is constrained to the width of the <code>.dropdown__toggle</code> element. But there are various ways around this, which you can apply. One option is to add the modifier class <code>.dropdown__content--nowrap</code> (as used in example 1). Another option is for you to specify your required width for the dropdown content.
+
+  h3 Dropdown at breakpoints
+
+  p Sometimes you may require showhide not to operate above or below a particular breakpoint.
+
+  p The example below operates as a dropdown on medium viewports up. Below that media query breakpoint, the toggle is hidden and the content is displayed as part of the page.
+
+  +dropdown-md-up

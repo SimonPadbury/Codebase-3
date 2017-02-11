@@ -1,0 +1,48 @@
+// LAYOUT MIXINS: SEMANTIC GRID SYSTEM
+// ===================================
+// End user can call these mixins in their theme.
+
+// Flexbox grid system mixins
+
+=flexbox-col--span($flexbox-col--span)
+  width: ($flexbox-col--span / $grid-max-cols) * 100%
+
+// Surplus flexbox columns will wrap because `flex-wrap: wrap` has been
+// included in the grid wrapper mixin/class.
+
+=flexbox-col--offset($flexbox-col--offset)
+  margin-left: ($flexbox-col--offset / $grid-max-cols) * 100%
+
+=flexbox-col--order($flexbox-col--order)
+  order: $flexbox-col--order
+
+=flexbox-col--centered($flexbox-col--centered)
+  width: ($flexbox-col--centered / $grid-max-cols) * 100%
+  margin-right: auto
+  margin-left: auto
+
+// Incomplete grid rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).
+
+// Float grid system mixins
+
+=float-col--span($float-col--span)
+  float: left
+  width: ($float-col--span / $grid-max-cols) * 100%
+
+=float-col--offset($float-col--offset)
+  margin-left: ($float-col--offset / $grid-max-cols) * 100%
+
+=float-col--push($float-col--push)
+  left: ($float-col--push / $grid-max-cols) * 100%
+
+=float-col--pull($float-col--pull)
+  right: ($float-col--pull / $grid-max-cols) * 100%
+
+=float-col--centered($float-col--centered)
+  width: ($float-col--centered / $grid-max-cols) * 100%
+  margin-right: auto
+  margin-left: auto
+
+// Incomplete grid rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).

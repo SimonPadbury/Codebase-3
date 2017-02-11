@@ -1,0 +1,41 @@
+// COMPONENT MIXINS: RESET OVERLAY
+// ===============================
+// Used to close things that are opened by jQuery script by "clicking outside".
+// The reset overlay is transparent by default, but can be rendered `darkened`
+// e.g. for use under popovers (e.g. lightboxes).
+
+=reset-overlay
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: -1
+  background-color: rgba(0,0,0,0)
+  transition: background-color 0.3s
+
+=reset-overlay--is-raised
+  z-index: $reset-overlay--z-index
+
+=reset-overlay--is-raised-higher
+  z-index: $reset-overlay--z-index-higher
+
+=reset-overlay--darken
+  background-color: $reset-overlay--darken
+
+// CLASS BUILDER: RESET OVERLAY
+// ============================
+
+=components-reset-overlay
+
+  .reset-overlay
+    +reset-overlay
+    &--is-raised
+      +reset-overlay--is-raised
+    &--is-raised-higher
+      +reset-overlay--is-raised-higher
+    &--darken
+      +reset-overlay--darken
+
+@if $include-css-reset-overlay == true
+  +components-reset-overlay

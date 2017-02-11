@@ -1,0 +1,214 @@
+//- Layout Grid Classes
+
+.menu-marker-section(id="layout-grid-classes")
+
+  h2.docs-section Layout Grid Classes
+  p.
+    Since Codebase 2.0, the default layout grid classes use flexbox. You can revert to the older float-based grid system by overriding the #[code $grid-flexbox] to false.
+
+  pre
+    code.
+      $grid-flexbox: true !default;</code></pre>
+
+  p  Composite responsive example:
+
+  section.grid.grid--gutter
+    .col.col-md--span-9.col-lg--order-2.b--1px-solid
+      | Article
+      section.grid.grid--gutter.grid--nested
+        .col.col-sm--span-4.b--1px-solid Nested
+        .col.col-sm--span-4.b--1px-solid Nested
+        .col.col-sm--span-4.b--1px-solid Nested
+    .col.col-md--span-3.col-lg--order-1.b--1px-solid Aside
+  section.grid
+    .col.col-sm--span-7.col--centered.b--1px-solid Centered
+
+
+  pre
+    code.
+      &lt;section class="grid grid--gutter"&gt;
+        &lt;div class="col col-md--span-8 col-lg--push-4"&gt;
+          Article
+
+          &lt;section class="grid grid--gutter grid--nested"&gt;
+            &lt;div class="col col-sm--span-4"&gt;
+              Nested
+            &lt;/div&gt;
+            &lt;div class="col col-sm--span-4"&gt;
+              Nested
+            &lt;/div&gt;
+            &lt;div class="col col-sm--span-4"&gt;
+              Nested
+            &lt;/div&gt;
+          &lt;/section&gt;
+
+        &lt;/div&gt;
+        &lt;div class="col col-md--span-4 col-lg--pull-8"&gt;
+          Aside
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+      &lt;section class="grid grid--gutter"&gt;
+        &lt;div class="col col-sm--span-7 col--centered"&gt;
+          Centered
+        &lt;/div&gt;
+      &lt;/section&gt;
+
+  table.table
+    thead
+      tr
+        th(style='width:160px') Class
+        th Explanation
+    tbody
+      tr
+        td
+          code .grid
+        td.
+          The containing class. Sets the max width (from variable
+          <code>$grid-max-width</code>, does centering by auto margin right and left, and includes a clearfix.
+      tr
+        td
+          code .grid--gutter
+        td.
+          Gives right and left padding to all immediate child block elements (i.e. columns).
+      tr
+        td
+          code .grid--nested
+        td.
+          Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.
+      tr
+        td
+          code .col
+        td.
+          Float left. Min height 1px. (Applies padding gutter.)
+      tr
+        td
+          code .col--centered
+        td.
+          No float. Instead, centering is accomplished by auto margin right and left.
+      tr
+        td
+          code .col--*
+          br
+          code .col-xs--*
+          br
+          code .col-sm--*
+          br
+          code .col-md--*
+          br
+          code .col-lg--*
+        td.
+          Controlling the column behaviour (at different breakpoints). Except for <code>.col--*</code> all columns expand to 100% of their container width below their breakpoint.
+      tr
+        td
+          code *--span-*
+        td.
+          Column spanning (at different breakpoints), as calculated out of max
+          <code>$grid-max-cols</code> (default is 12).
+      tr
+        td
+          code *--offset-*
+        td.
+          Column offsetting from the left (at different breakpoints), as calculated out of max <code>$grid-max-cols</code> (default is 12).
+      tr
+        td(colspan='2')
+          b Flexbox grid only (default):
+      tr
+        td
+          code *--order-*
+        td.
+          Column (re-)ordering (at different breakpoints), as calculated out of max <code>$grid-max-cols</code> (default is 12).
+      tr
+        td(colspan='2')
+          b Float grid only (deprecated):
+      tr
+        td
+          code *--push-*
+        td.
+          Column pushing to the right (at different breakpoints), as calculated out of max <code>$grid-max-cols</code> (default is 12).
+      tr
+        td
+          code *--pull-*
+        td.
+          Column pullling to the left (at different breakpoints), as calculated out of max <code>$grid-max-cols</code>(default is 12).
+
+  h3 Column spans
+  p
+    code --span-
+
+  section.grid
+    .col.col--span-12.b--1px-solid .col--span-12
+  section.grid
+    .col.col--span-11.b--1px-solid .col--span-11
+  section.grid
+    .col.col--span-10.b--1px-solid .col--span-10
+  section.grid
+    .col.col--span-9.b--1px-solid ...
+  section.grid
+    .col.col--span-8.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-7.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-6.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-5.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-4.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-3.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-2.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-1.b--1px-solid &nbsp;
+  section.grid
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+    .col.col--span-1.b--1px-solid &nbsp;
+
+  h3 Column offsets
+
+  p
+    code --offset-
+
+  section.grid
+    .col.col--span-1.col--offset-1.b--1px-solid *-1
+  section.grid
+    .col.col--span-1.col--offset-2.b--1px-solid *-2
+  section.grid
+    .col.col--span-1.col--offset-3.b--1px-solid *-3
+  section.grid
+    .col.col--span-1.col--offset-4 &nbsp; ...
+  section.grid
+    .col.col--span-1.col--offset-11.b--1px-solid *-11
+
+  h3 Column (re-)ordering
+
+  p
+    code --order-
+
+  section.grid
+    .col.col--span-3.col--order-2.b--1px-solid (1st) *-order-3
+    .col.col--span-3.col--order-1.b--1px-solid (2nd) *-order-1
+    .col.col--span-3.col--order-2.b--1px-solid (3rd) *-order-4
+    .col.col--span-3.col--order-1.b--1px-solid (4th) *-order-2
+
+  br
+
+  p.initial-icon.bl--4px-solid.b--teal-darken-1.p--3u.bg--teal-lighten-2
+    i.fa.fa-info-circle.text--teal-darken-1.
+    In the flexbox grid system, the <code>code --order-</code> number relates to column order [higher or lower number] &ndash; use this rearrange the displayed order of the columns.
+    br
+    br
+    | See <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/')> https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a> for more information.
+    br
+    br
+    | Overriding <code>$grid-flexbox: true !default;</code> will prevent the generation of these column order classes and generate a set of push/pull classes for the float grid (<code>--push-</code> / <code>--pull-</code>) instead.

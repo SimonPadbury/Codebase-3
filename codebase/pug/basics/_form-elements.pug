@@ -1,0 +1,58 @@
+//- Basics Mixins: Form Elements
+
+
+//- Form (wrapper)
+
+mixin form(formAction, formClass)
+  form(action=formAction class=formClass)
+
+//- Inputs (not including buttons). See buttons.
+
+mixin input-text(id, name, placeholder, inputClass, inputClass)
+  input(id=id, name=name, type='text', placeholder=placeholder class=inputClass)
+
+mixin input-email(id, name, placeholder, inputClass)
+  input(id=id, name=name, type='email', placeholder=placeholder class=inputClass)
+
+mixin input-tel(id, name, placeholder, inputClass)
+  input(id=id, name=name, type='tel', placeholder=placeholder class=inputClass)
+
+mixin input-search(id, name, placeholder, results, inputClass)
+  input(id=id, name=name, type='search', placeholder=placeholder, results=results class=inputClass)
+
+mixin input-number(id, name, placeholder, inputClass)
+  input(id=id, name=name, type='number', placeholder=placeholder class=inputClass)
+
+mixin input-date(id, name, placeholder, inputClass)
+  input(id=id, name=name, type='date', placeholder=placeholder class=inputClass)
+
+mixin input-month(id, name, placeholder, inputClass)
+  input(id=id, name=name, type='month', placeholder=placeholder class=inputClass)
+
+mixin input-password(id, name, placeholder, inputClass)
+  input(id=id, name=name, type='password', placeholder=placeholder class=inputClass)
+
+//- Textarea
+
+mixin textarea(id, name, placeholder, rows, inputClass)
+  textarea(id=id, name=name, type='password', placeholder=placeholder, rows=rows class=inputClass)
+
+//- Selects
+
+//- For a single-select, don't set a 'multiple' value
+
+mixin select(id, name, multiple, inputClass)
+  select(id=id, name=name, multiple=multiple class=inputClass)
+    block
+
+mixin option(value)
+  option(value=value)
+    block
+
+//- Radio box and Checkbox
+
+mixin radio(id, name, inputClass, checked)
+  input(id=id, name=name, type='radio', class=inputClass, checked=checked)
+
+mixin checkbox(id, name, inputClass, checked)
+  input(id=id, name=name, type='checkbox', class=inputClass, checked=checked)

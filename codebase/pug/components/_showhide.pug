@@ -1,0 +1,78 @@
+//- Component: Showhide
+
+mixin showhide(showhideClass)
+  .showhide()
+    button.showhide__toggle.btn Showhide <i class="fa fa-sort"></i>
+    .showhide__content.p--block.bg--gray-lighten-3
+      | Example showhide component content
+
+mixin showhide-combo
+  .showhide
+    button.btn.combo--first Combo example
+    button.btn.btn--icon.fa.fa-sort.showhide__toggle.combo--last
+    .showhide__content.p--block.bg--gray-lighten-3
+      | Content
+
+mixin showhide-above
+  .showhide
+    .showhide__content.p--block.bg--gray-lighten-3
+      | Example showhide component content
+    button.showhide__toggle.btn Showhide above <i class="fa fa-sort"></i>
+
+mixin showhide-block
+  .showhide.showhide--block
+    button.showhide__toggle.btn Showhide block <i class="fa fa-sort"></i>
+    .showhide__content.p--block.bg--gray-lighten-3
+      | Example showhide component content
+
+mixin showhide-resettable
+  .showhide.showhide--is-resettable
+    button.showhide__toggle.btn Showhide <i class="fa fa-sort"></i>
+    .showhide__content.p--block.bg--gray-lighten-3
+      | Example showhide component content. Click anywhere outside to dismiss this content.
+
+mixin showhide-md-up
+  .showhide.showhide--md-up
+    button.showhide__toggle.btn Showhide <i class="fa fa-sort"></i>
+    .showhide__content.p--block.bg--gray-lighten-3
+      | Example showhide component content.
+
+mixin showhide-dismissable-panel
+  .showhide.showhide--show-start.showhide--block
+    .showhide__content.bg--teal-lighten-2
+      span.showhide__dismiss.float--right.text--muted.pr--1u
+        | <b>Close <i class="fa fa-times"></i></b>
+      p.initial-icon.p--3u
+        | <i class="fa fa-check-circle text--teal-darken-1" aria-hidden="true"></i>
+        | <b>Showhide showing at start</b>
+        br
+        |  The dismiss toggle is within showhide content block.
+
+mixin showhide-accordion
+  .showhide.showhide--accordion.showhide--block
+    .showhide__toggle
+      span
+        | Showhide tab 1
+        =' '
+        i.fa.fa-caret-down
+    .showhide__content  Example 1 showhide component content
+    .showhide__toggle
+      span
+        | Showhide tab 2
+        =' '
+        i.fa.fa-caret-down
+    .showhide__content  Example 2 showhide component content
+    .showhide__toggle
+      span
+        | Showhide tab 3
+        =' '
+        i.fa.fa-caret-down
+    .showhide__content  Example 3 showhide component content
+
+mixin showhide-dropdown
+  .showhide.showhide--dropdown.showhide--is-resettable
+    button.btn.btn--sm.showhide__toggle
+      | Showhide dropdown
+      =' '
+      i.fa.fa-caret-down
+    .showhide__content.p--block.bs.bg--white Content
