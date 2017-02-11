@@ -1,0 +1,63 @@
+// BASICS MIXINS: CONTROL COLORS
+// =============================
+// Used for Buttons, Labels, Badges.
+
+=control-colors
+  &--primary
+    color: $color-primary-text-alt
+    background: $color-primary
+
+  &--secondary
+    color: $color-secondary-text-alt
+    background: $color-secondary
+
+  &--warning
+    color: $color-warning-text-alt
+    background: $color-warning
+
+  &--error
+    color: $color-error-text-alt
+    background: $color-error
+
+  &--success
+    color: $color-success-text-alt
+    background: $color-success
+
+=control-colors--hover
+  &--primary
+    &:hover
+      color: $color-primary-text-alt-hover
+      background: $color-primary-hover
+
+  &--secondary
+    &:hover
+      color: $color-secondary-text-alt-hover
+      background: $color-secondary-hover
+
+  &--warning
+    &:hover
+      color: $color-warning-text-alt-hover
+      background: $color-warning-hover
+
+  &--error
+    &:hover
+      color: $color-error-text-alt-hover
+      background: $color-error-hover
+
+  &--success
+    &:hover
+      color: $color-success-text-alt-hover
+      background: $color-success-hover
+
+// CLASS BUILDER: CONTROL COLORS
+// =============================
+// Sets the background color of ANY block or inline element.
+// Also sets the respective text color.
+
+=basics-control-colors
+
+  .control
+    +control-colors
+
+@if $include-css-control-colors == true
+  +basics-control-colors

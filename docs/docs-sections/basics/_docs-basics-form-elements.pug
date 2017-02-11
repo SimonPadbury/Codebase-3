@@ -1,0 +1,150 @@
+//- Docs Basics: Form Elements
+
+.menu-marker-section(id="basics-form--elements")
+
+  h2.docs-section Form Elements
+
+  p.
+    Form elements expand to 100% of their container width. Give them structure by wrapping them in grid columns.
+
+  p.
+    There is no added margin or padding around form elements – so nothing you need to override. Add whatever margin or padding (or not) as suits your own design.
+
+  h3 Form Label
+
+  label(for='') Example:
+
+  h3 Input Boxes
+
+  label(for='text-example') Text:
+  +input-text('text-example', 'examplename', 'Example text input field')
+
+  label(for='email-example') Email:
+  +input-email('email-example', 'examplename', 'Example email input field')
+
+  label(for='tel-example') Tel:
+  +input-tel('tel-example', 'examplename', 'Example phone number input field')
+
+  label(for='search-example') Search:
+  +input-search('search-example', 'examplename', 'Example search input field', 5)
+
+  label(for='number-example') Number:
+  +input-number('number-example', 'examplename', 'Example number input field')
+
+  label(for='date-example') Date:
+  +input-date('date-example', 'examplename', 'Example date input field')
+
+  label(for='month-example') Month:
+  +input-month('month-example', 'examplename', 'Example month input field')
+
+  label(for='password-example') Password:
+  +input-password('month-example', 'examplename', 'Example password input field')
+
+  h3 Textarea
+
+  label(for='textarea-example') Textarea:
+  +textarea('textarea-example', 'examplename', 'Example textarea', 4)
+
+  h3 Selects
+
+  label(for='single-select-example') Single select:
+  +select('single-select-example', 'examplename')
+    +option('first')
+      | First option
+    +option('second')
+      | Second option
+    +option('third')
+      | Third option
+
+  label(for='multi-select-example') Multi select:
+  +select('multi-select-example', 'examplename', 3)
+    +option('first')
+      | First option
+    +option('second')
+      | Second option
+    +option('third')
+      | Third option
+
+  h3 Radio Boxes and Checkboxes
+
+  form
+    +radio('radio-1', 'examplename', null, 'checked')
+    label(for='radio-1') Radio 1
+    br
+    +radio('radio-2', 'examplename')
+    label(for='radio-2') Radio 2
+    br
+    +radio('radio-3', 'examplename')
+    label(for='radio-3') Radio 3
+
+  form
+    +checkbox('checkbox-1', 'examplename', null, 'checked')
+    label(for='checkbox-1') Checkbox 1
+    br
+    +checkbox('checkbox-2', 'examplename')
+    label(for='checkbox-2') Checkbox 2
+    br
+    +checkbox('checkbox-3', 'examplename')
+    label(for='checkbox-3') Checkbox 3
+
+  h3 Styled Radio Boxes and Checkboxes
+
+  p Using <a href="http://fontawesome.io/">Font Awesome</a>.
+
+  p.
+    <code>.form__radio</code>
+
+  form
+    +radio('radio-4', 'examplename', 'form__radio', 'checked')
+    label(for='radio-4') Radio 4
+    br
+    +radio('radio-5', 'examplename', 'form__radio')
+    label(for='radio-5') Radio 5
+    br
+    +radio('radio-6', 'examplename', 'form__radio')
+    label(for='radio-6') Radio 6
+
+  br
+
+  p.
+    <code>.form__checkbox</code>
+
+  form
+    +checkbox('checkbox-4', 'examplename', 'form__checkbox', 'checked')
+    label(for='checkbox-4') Checkbox 4
+    br
+    +checkbox('checkbox-5', 'examplename', 'form__checkbox')
+    label(for='checkbox-5') Checkbox 5
+    br
+    +checkbox('checkbox-6', 'examplename', 'form__checkbox')
+    label(for='checkbox-6') Checkbox 6
+
+  br
+
+  p.
+    <code>.form__radio--toggle</code>
+
+  form
+    +radio('radio-7', 'examplename', 'form__radio--toggle', 'checked')
+    label(for='radio-7') Radio 7
+    br
+    +radio('radio-8', 'examplename', 'form__radio--toggle')
+    label(for='radio-8') Radio 8
+    br
+    +radio('radio-9', 'examplename', 'form__radio--toggle')
+    label(for='radio-9') Radio 9
+
+  br
+
+  p.
+    <code>.form__checkbox--toggle</code>
+
+  form
+    +checkbox('checkbox-7', 'examplename', 'form__checkbox--toggle', 'checked')
+    label(for='checkbox-7') Checkbox 7
+    br
+    +checkbox('checkbox-8', 'examplename', 'form__checkbox--toggle')
+    label(for='checkbox-8') Checkbox 8
+    br
+    +checkbox('checkbox-9', 'examplename', 'form__checkbox--toggle')
+    label(for='checkbox-9') Checkbox 9

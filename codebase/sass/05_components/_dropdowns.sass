@@ -1,0 +1,124 @@
+// COMPONEMT: DROPDOWNS
+// ====================
+
+=dropdown__toggle
+  &--is-toggled
+    position: relative
+    z-index: $reset-overlay--z-index + 1
+
+=dropdown__content
+  +showhide__content
+  +showhide--dropdown__content
+  top: 100%
+  left: 0
+  z-index: $reset-overlay--z-index + 1
+
+// Dropdown operative only above particular breakpoints
+// (When inoperative, toggle is `display: none` and
+// content is `display: block !important`.)
+
+=dropdown--sm-up
+  +break__xs--only
+    display: block !important
+    padding-left: $spacing-2u
+    .dropdown__toggle
+      display: none
+    .dropdown__content
+      box-shadow: none
+      position: static
+      display: block !important
+      z-index: auto
+
+=dropdown--md-up
+  +break__sm-down
+    display: block !important
+    padding-left: $spacing-2u
+    .dropdown__toggle
+      display: none
+    .dropdown__content
+      box-shadow: none
+      position: static
+      display: block !important
+      z-index: auto
+
+=dropdown--lg-up
+  +break__md--down
+    display: block !important
+    padding-left: $spacing-2u
+    .dropdown__toggle
+      display: none
+    .dropdown__content
+      box-shadow: none
+      position: static
+      display: block !important
+      z-index: auto
+
+// Dropdown operative only above particular breakpoints
+// (When inoperative, toggle is `display: none` and
+// content is `display: block !important`.)
+
+=dropdown--xs-down
+  +break__sm-up
+    display: block !important
+    padding-left: $spacing-2u
+    .dropdown__toggle
+      display: none
+    .dropdown__content
+      display: block !important
+
+=dropdown--sm-down
+  +break__md--up
+    display: block !important
+    padding-left: $spacing-2u
+    .dropdown__toggle
+      display: none
+    .dropdown__content
+      display: block !important
+
+=dropdown--md-down
+  +break__lg--up
+    display: block !important
+    padding-left: $spacing-2u
+    .dropdown__toggle
+      display: none
+    .dropdown__content
+      display: block !important
+
+// CLASS BUILDER
+// =============
+
+=components-dropdowns
+
+  // Showhide dropdown alias
+
+  .dropdown
+    +showhide
+
+  .dropdown__toggle
+    +dropdown__toggle
+
+  .dropdown__content
+    +dropdown__content
+    @if $decoration-showhide-dropdown-content == true
+      padding: $spacing-block
+      background: $color-white
+      box-shadow: $box-shadow
+      @if $dropdown-rounded-corners == true
+        border-radius: $border-radius
+
+  .dropdown--sm-up
+    +dropdown--sm-up
+  .dropdown--md-up
+    +dropdown--md-up
+  .dropdown--lg-up
+    +dropdown--lg-up
+
+  .dropdown--xs-down
+    +dropdown--xs-down
+  .dropdown--sm-down
+    +dropdown--sm-down
+  .dropdown--md-down
+    +dropdown--md-down
+
+@if $include-css-dropdowns == true
+  +components-dropdowns

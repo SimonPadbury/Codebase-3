@@ -1,0 +1,26 @@
+//- Basics Mixins: Buttons
+
+//-
+  These example button mixins assume that the class will be 'btn'. Use buttonClass to add extra classes.
+
+  0. Simply call the mixin to get an example
+  1. Set the text on the button
+  2. Set the type or href
+  3. Set the extra class(es)
+
+
+
+//- Button
+
+mixin button(buttonName, buttonType, buttonClass)
+  button(class=['btn', buttonClass], type=buttonType)!= buttonName
+
+//- Anchor (hyperlink) button
+
+mixin anchor-button(buttonLink, href, buttonClass)
+  a(class=['btn', buttonClass], href=href)!= buttonLink
+
+//- Input button
+
+mixin input-button(buttonValue, buttonType, buttonClass)
+  input(value=buttonValue, class=['btn', buttonClass], type=buttonType)

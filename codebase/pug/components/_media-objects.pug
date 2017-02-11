@@ -1,0 +1,68 @@
+//- Component Mixins: Media Objects
+
+mixin media(border, imagePosition)
+  case border
+    when border
+      - mediaClass = 'media--border'
+    when border-top
+      - mediaClass = 'media--border-top'
+  div(class=['media', mediaClass])
+    block
+
+mixin media__header
+  .media__header
+    block
+
+mixin media__image(imagePosition)
+  case imagePosition
+    when 'left'
+      - mediaImageClass = 'media__image-wrap--left'
+    when 'right'
+      - mediaImageClass = 'media__image-wrap--right'
+    when 'center'
+      - mediaImageClass = 'media__image-wrap--center'
+  div(class=['media__image-wrap', mediaImageClass])
+    block
+
+mixin media__content
+  .media__content-wrap
+    .media__content
+      block
+
+mixin media__title
+  .media__title
+    block
+
+mixin media__text
+  .media__text
+    block
+
+mixin media__footer
+  .media__footer
+    block
+
+//- Examples
+
+mixin media__example
+  .media.media--border
+    +media__header
+      | Header
+    +media__image(left)
+      +image('holder.js/96x96')
+    +media__content
+      +media__title
+        h4.mt--zero Media Object Title
+      +media__title
+        +paragraph(1)
+    +media__footer
+      | Footer
+
+mixin media__example--border-top
+  .media.media--border-top
+    +media__image(left)
+      +image('holder.js/96x96')
+    +media__content
+      +media__title
+        h4.mt--zero Media Object Title
+      +media__title
+        +paragraph

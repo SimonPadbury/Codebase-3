@@ -1,0 +1,271 @@
+//- Docs Basics: Buttons
+
+.menu-marker-section(id="basics-buttons")
+
+  h2.docs-section Buttons
+
+  p.
+    Button classes can be applied to button tags, input-button tags and hyperlink anchor tags:
+
+  p
+    +button('Button', 'submit')
+    = ' '
+    | .btn
+
+  p
+    +anchor-button('Hyperlink', '#/')
+    = ' '
+    | .btn
+
+  p
+    +input-button('Input', 'submit')
+    = ' '
+    | .btn
+
+  p Three sizes:
+
+  p
+    button.btn.btn--sm Small button
+    |  .btn .btn--sm
+  p
+    button.btn Default (medium) button
+    |  .btn
+  p
+    button.btn.btn--lg Large button
+    |  .btn.btn--lg
+
+  p Medium sized button with larger text (see also button icon below):
+
+  p
+    button.btn.btn--lt Larger text
+    |  .btn.btn--lt
+
+  p Block width button: <code>.btn.btn--block</code>
+  p
+    button.btn.btn--block Block width button
+
+  p  Button colors:
+  p
+    button.btn Default
+    |  .btn
+  p
+    button.btn.btn--primary Primary
+    |  .btn.btn--primary
+  p
+    button.btn.btn--secondary Secondary
+    |  .btn.btn--secondary
+  p
+    button.btn.btn--warning Warning
+    |  .btn.btn--warning
+  p
+    button.btn.btn--success Success
+    |  .btn.btn--success
+  p
+    button.btn.btn--error Error
+    |  .btn.btn--error
+  p
+    button.btn.btn--link Link
+    |  .btn.btn--link
+
+  p
+    button.btn.btn--success
+      | Call to action
+      =' '
+      i.fa.fa-arrow-right
+
+    button.btn.btn--secondary
+      i.fa.fa-folder-open-o
+      |  Archive
+
+    button.btn.btn--primary
+      i.fa.fa-user
+      |  User
+
+    button.btn.btn--warning
+      | Are you sure
+      =' '
+      i.fa.fa-question-circle
+
+    button.btn.btn--error
+      | Reset
+      =' '
+      i.fa.fa-times-circle
+
+    button.btn
+      | Cancel
+      =' '
+      i.fa.fa-times
+
+  p
+    | .btn--icon &mdash; use this to make square buttons when only a (Font Awesome) icon is present within the button.
+
+  p
+    button.btn.btn--success.btn--icon
+      i.fa.fa-arrow-right
+
+    button.btn.btn--secondary.btn--icon
+      i.fa.fa-folder-open-o
+
+    button.btn.btn--primary.btn--icon
+      i.fa.fa-user
+
+    button.btn.btn--warning.btn--icon
+      i.fa.fa-question-circle
+
+    button.btn.btn--error.btn--icon
+      i.fa.fa-times-circle
+
+    button.btn.btn--icon
+      i.fa.fa-times
+
+  p And, with <code>.btn--lt</code>:
+
+  p
+    button.btn.btn--success.btn--icon.btn--lt
+      i.fa.fa-arrow-right
+
+    button.btn.btn--secondary.btn--icon.btn--lt
+      i.fa.fa-folder-open-o
+
+    button.btn.btn--primary.btn--icon.btn--lt
+      i.fa.fa-user
+
+    button.btn.btn--warning.btn--icon.btn--lt
+      i.fa.fa-question-circle
+
+    button.btn.btn--error.btn--icon.btn--lt
+      i.fa.fa-times-circle
+
+    button.btn.btn--icon.btn--lt
+      i.fa.fa-times
+
+  p  Rounded buttons:
+
+  p
+    button.btn.btn--sm.btn--rounded Small button
+    |  .btn.btn--sm.btn--rounded
+  p
+    button.btn.btn--rounded Default (medium) button
+    |  .btn.btn--rounded
+  p
+    button.btn.btn--lg.btn--rounded Large button
+    |  .btn.btn--lg .btn--rounded
+
+  p  Using .btn--icon together with .btn--rounded yields a circular button:
+  p
+    button.btn.btn--sm.btn--icon.btn--rounded
+      i.fa.fa-snowflake-o
+    |  .btn.btn--sm.btn--icon.btn--rounded
+  p
+    button.btn.btn--icon.btn--rounded
+      i.fa.fa-bell
+    |  .btn.btn--icon.btn--rounded
+  p
+    button.btn.btn--lg.btn--icon.btn--rounded
+      i.fa.fa-smile-o
+    |  .btn.btn--lg.btn--icon.btn--rounded
+
+  p
+    button.btn.btn--success.btn--icon.btn--rounded
+      i.fa.fa-arrow-right
+    button.btn.btn--secondary.btn--icon.btn--rounded
+      i.fa.fa-folder-open-o
+    button.btn.btn--primary.btn--icon.btn--rounded
+      i.fa.fa-user
+    button.btn.btn--warning.btn--icon.btn--rounded
+      i.fa.fa-question-circle
+    button.btn.btn--error.btn--icon.btn--rounded
+      i.fa.fa-times-circle
+    button.btn.btn--icon.btn--rounded
+      i.fa.fa-times
+
+  p
+    button.btn.btn--success.btn--icon.btn--rounded.btn--lt
+      i.fa.fa-arrow-right
+    button.btn.btn--secondary.btn--icon.btn--rounded.btn--lt
+      i.fa.fa-folder-open-o
+    button.btn.btn--primary.btn--icon.btn--rounded.btn--lt
+      i.fa.fa-user
+    button.btn.btn--warning.btn--icon.btn--rounded.btn--lt
+      i.fa.fa-question-circle
+    button.btn.btn--error.btn--icon.btn--rounded.btn--lt
+      i.fa.fa-times-circle
+    button.btn.btn--icon.btn--rounded.btn--lt
+      i.fa.fa-times
+
+  p <code>.combo--*</code> buttons :
+  p
+    button.btn.combo--first .combo--first
+    button.btn.combo--middle .combo--middle
+    button.btn.combo--last .combo--last
+
+  p  The dropdown component can be used in buttons:
+
+  .dropdown
+    button.btn.dropdown__toggle
+      | Example 1
+      =' '
+      i.fa.fa-caret-down
+    span.dropdown__content.dropdown__content--nowrap.p--block.bg--white.bs Example dropdown component content
+
+  br
+  br
+
+  .dropdown
+    button.btn.combo--first  Example 2 (combo)
+    button.btn.btn--icon.btn--lt.combo--last.dropdown__toggle
+      i.fa.fa-bars
+    span.dropdown__content.p--block.bg--white.bs Example dropdown component content
+
+  br
+  br
+
+  p.
+    See the <a href='components.html#components-dropdowns'>dropdown component</a> for explanation.
+
+  p.
+    Example: icon buttons, combos and dropdowns (with added spacing, floats and clearfix wrappers to make everything appear in a line):
+
+  .clearfix
+    .float--left
+      button.btn.btn--lt.btn--icon.combo--first
+        i.fa.fa-bold(aria-hidden='true')
+      button.btn.btn--lt.btn--icon.combo--middle
+        i.fa.fa-italic(aria-hidden='true')
+      button.btn.btn--lt.btn--icon.combo--last.float--left
+        i.fa.fa-underline(aria-hidden='true')
+      span.float--left &nbsp;
+      .dropdown
+        button.btn.btn--lt.btn--icon.dropdown__toggle
+          i.fa.fa-align-left
+        span.dropdown__content.p--zero.bg--white.bs
+          ul.menu
+            li
+              button.btn.btn--lt.btn--icon.btn--link
+                i.fa.fa-align-center(aria-hidden='true')
+            li
+              button.btn.btn--lt.btn--icon.btn--link
+                i.fa.fa-align-right(aria-hidden='true')
+            li
+              button.btn.btn--lt.btn--icon.btn--link
+                i.fa.fa-align-justify(aria-hidden='true')
+    span.float--left &nbsp;
+    .float--left
+      button.btn.btn--lt.btn--icon.combo--first
+        i.fa.fa-cut(aria-hidden='true')
+      button.btn.btn--lt.btn--icon.combo--middle
+        i.fa.fa-copy(aria-hidden='true')
+      button.btn.btn--lt.btn--icon.combo--last.float--left
+        i.fa.fa-paste(aria-hidden='true')
+      span.float--left &nbsp;
+      .dropdown
+        button.btn.btn--lt.btn--icon.dropdown__toggle
+          i.fa.fa-list
+        span.dropdown__content.p--zero.bg--white.bs
+          ul.menu
+            li
+              button.btn.btn--lt.btn--icon.btn--link
+                i.fa.fa-list-ol(aria-hidden='true')
+            li
+              button.btn.btn--lt.btn--icon.btn--link
+                i.fa.fa-list-ul(aria-hidden='true')

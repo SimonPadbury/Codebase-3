@@ -1,128 +1,69 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Getting Started | Codebase</title>
-
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="codebase/css/codebase.css">-->
-  <link rel="stylesheet" href="theme/css/styles.css">
-  <link rel="stylesheet" href="theme/prism/prism.css">
-
-</head>
-
-<body>
-
-<div class="page-wrap">
-
-<nav class="navbar docs__navbar deco-bb-thin-solid">
-  <div class="navbar__brand">
-    <a href="index.html"><span>Codebase</span> <small class="deco-text-gray">v.1.3.5</small></a>
-  </div>
-  <div class="navbar__content">
-    <div class="navbar__right">
-      <ul class="show--md-up">
-        <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  <div class="docs docs--base">
-
-    <div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1">
-  <i class="fa fa-bars" aria-hidden="true"></i>
-</div>
-
-<div id="sidebar-1" class="docs__sidebar sm--off-canvas off-canvas--right">
-
-  <ul class="docs__sidebar-menu hide--md-up">
-    <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-  </ul>
-  <h4>Docs</h4>
-
-  <ul class="docs__sidebar-menu">
-    <li><a href="getting-started.html">Getting Started</a></li>
-    <li><a href="classless-base-styles.html">Classless Base Styles</a>
-      <ul>
-        <li><a href="classless-typography.html">Typography</a></li>
-        <li><a href="classless-forms.html">Forms</a></li>
-      </ul>
-    </li>
-    <li><a href="layout.html">Layout</a>
-      <ul>
-        <li><a href="layout-classic-grids.html">Classic Grids</a></li>
-        <li><a href="layout-semantic-grids.html">Semantic Grids</a></li>
-        <li><a href="layout-flexbox-grids.html">Flexbox Grids</a></li>
-        <li><a href="layout-visibility.html">Visibility</a></li>
-        <li><a href="layout-off-canvas-sidebars.html">Off-canvas Sidebars</a></li>
-      </ul>
-    </li>
-    <li><a href="utilities.html">Utilities</a>
-      <ul>
-        <li><a href="utilities-typography.html">Typography</a></li>
-        <li><a href="utilities-forms.html">Forms</a></li>
-        <li><a href="utilities-buttons.html">Buttons</a></li>
-        <li><a href="utilities-dropdowns.html">Dropdowns</a></li>
-      </ul>
-    </li>
-    <li><a href="components.html">Components</a>
-      <ul>
-        <li><a href="components-media-objects.html">Media Objects</a></li>
-        <li><a href="components-menus.html">Menus</a></li>
-        <li><a href="components-navbars.html">Navbars</a></li>
-        <li><a href="components-pagination.html">Pagination</a></li>
-        <li><a href="components-popovers.html">Popovers</a></li>
-        <li><a href="components-slideshows.html">Slideshows</a></li>
-        <li><a href="components-tab-systems.html">Tab Systems</a></li>
-        <li><a href="components-tables.html">Tables</a></li>
-      </ul>
-    </li>
-    <li><a href="decoration.html">Decoration</a>
-      <ul>
-        <li><a href="decoration-margins.html">Margins</a></li>
-        <li><a href="decoration-borders.html">Borders</a></li>
-        <li><a href="decoration-paddings.html">Paddings</a></li>
-        <li><a href="decoration-colors.html">Colors</a></li>
-        <li><a href="decoration-shadows.html">Box Shadows</a></li>
-      </ul>
-    </li>
-  </ul>
-
-</div>
-<!-- /.docs__sidebar -->
-
-    <main class="docs__main">
-
-      <header class="docs__header">
-        <h1>Getting Started</h1>
-      </header>
-
-      <div class="docs__content">
-
-        <h2>Simple Setup</h2>
-
-        <p>
-          First, copy the <code>codebase/</code> folder (containing the <code>css/</code>, <code>js/</code> and <code>scss/</code> folders) into your project.
-        </p>
-
-        <p>
-          Example simple HTML to get started:
-        </p>
-
-        <pre class="docs__code"><code class="language-html">&lt;!doctype html&gt;
+<!DOCTYPE (doctype)>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"/>
+    <meta name="author"/>
+    <link rel="icon"/>
+    <title>Getting Started</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+  </head>
+  <body>
+    <div class="body__inner">
+      <nav class="navbar navbar--fixed docs__navbar">
+        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
+        <div class="navbar--right show--md-up">
+          <ul>
+            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="docs__main">
+        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
+          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+          <div class="docs__sidebar-menu">
+            <h4>Docs</h4>
+            <ul>
+              <li class="current menu-marker"><a href="#getting-started">Getting Started</a>
+                <ul>
+                  <li><a href="#getting-started-simple-setup">Simple Setup</a></li>
+                  <li><a href="#getting-started-advanced-setup">Advanced Setup</a></li>
+                </ul>
+              </li>
+              <li><a href="basics.html">Basics</a></li>
+              <li><a href="layout.html">Layout</a></li>
+              <li><a href="components.html">Components</a></li>
+              <li><a href="decoration.html">Decoration</a></li>
+              <li><a href="examples.html">Examples</a></li>
+              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="docs__content menu-marker-wrap">
+          <header class="docs__header menu-marker-section" id="getting-started">
+            <h1>Getting Started</h1>
+          </header>
+          <div class="docs__body">
+            <div class="menu-marker-section" id="getting-started-simple-setup">
+              <h2 class="docs-section">Simple Setup</h2>
+              <ol>
+                <li>Add <code>codebase.css</code> and <code>codebase.js</code> to your project.</li>
+                <li>Add <a href="http://fontawesome.io">Font Awesome</a> and <a href="http://jquery.com">jQuery</a> (either self-hosted a or link to a CDN).</li>
+                <li>Create your first HTML page, e.g. using the starter example below.</li>
+              </ol>
+              <pre><code>&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
     &lt;title&gt;Your Webpage Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="path/to/font-awesome.min.css"&gt;
     &lt;link rel="stylesheet" href="path/to/codebase/css/codebase.css"&gt;
     &lt;link rel="stylesheet" href="path/to/your-theme/css/styles.css"&gt;
   &lt;/head&gt;
@@ -132,130 +73,61 @@
 
     &lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
     &lt;script src="path/to/codebase/js/codebase.js"&gt;&lt;/script&gt;
-    &lt;script&gt;
-      $(document).codebase();
-    &lt;/script&gt;
     &lt;script src="path/to/your-theme/js/scripts.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-
-        <p>
-          Note that jQuery needs to be sourced first, so that the Codebase jQuery scrips can work.
-        </p>
-
-        <h2>Advanced Setup</h2>
-
-        <h3>(1.) SCSS</h3>
-
-        <p>
-          After copying in the <code>codebase/</code> folder as above, build your project theme structure, e.g.:
-        </p>
-
-        <pre class="docs__code"><code class="language-md">your-project/
-  ├── codebase/
-  │     ├── css/
-  │     ├── js/
-  │     └── scss/
-  │
-  └── your-theme/
-        ├── css/
-        ├── js/
-        └── scss/</code></pre>
-
-        <p>
-          You can import <code>codebase.scss</code> directly into your project base SCSS file.
-        </p>
-
-        <p>
-          There are two ways that you can override the Codebase default variables &ndash; the choice is yours:
-        </p>
-
-        <h4>"Non-interventionist" variable overrides</h4>
-
-        <p>
-          This is where you declare your variable overrides <mark>before you import Codebase</mark>. All Codebase variables have the <code>!default</code> flag, so if you name your overrides the same as the Codebase variable names, then your SCSS pre-processor will preferentially use your values instead of the Codebase defaults. For example:
-        </p>
-
-        <pre class="docs__code"><code class="language-scss">// YOUR PROJECT BASE SCSS FILE
+</code></pre>
+              <p>Note that jQuery needs to be sourced first, so that the Codebase jQuery plugin can work.</p>
+            </div>
+            <div class="menu-marker-section" id="getting-started-advanced-setup">
+              <h2 class="docs-section">Advanced Setup</h2>
+              <p>Example project folder structure:</p>
+              <pre><code>your-project/
+├── codebase/
+│     ├── (css/) /* Unrequired if you are importing Codebase into your theme */
+│     ├── coffee/
+│     ├── js/
+│     └── sass/
+│
+├── your-dev/
+│     ├── coffee/
+│     └── sass/
+│
+└── your-build/
+      ├── css/
+      └── js/
+</code></pre>
+              <h3>Import Codebase into your theme SASS</h3>
+              <p>
+                All Codebase variables have the <code>!default</code> flag. To override any of these, you <strong>first</strong> declare your your overrides using the same Codebase variable names (but with your preferred values), then import Codebase. Your SASS pre-processor will preferentially use your values instead of the Codebase defaults.
+                
+              </p>
+              <pre><code>// YOUR PROJECT BASE SASS FILE
 // ===========================
 
-// Put your overrides of Codebase `!default` variables here
+// (1.) Override Codebase `!default` variables here...
 
-// Then import Codebase
+// (2.) Import Codebase
 @import '../../codebase/scss/codebase';
 
-// Your project styles here
-...</code></pre>
-
-        <p>
-          This "non-interventionist" override approach has this advantage: you can later easily drop into your project a newer version of Codebase. But the disadvantage is that you can't use any of the the Codebase variables <i>within</i> your variables. (E.g. you couldn't change the navbar breakpoint from <code>$break-xs</code> to <code>$break-sm</code> <i>unless</i> you had previously declared <code>$break-sm</code>. )
-        </p>
-
-        <h4>"Interventionist" variable overrides</h4>
-
-        <p>
-          This is where you actually declare your overrides <mark>within Codebase, after the default variables.</mark> Codebase imports an empty file named <code>_variable-overrides.scss</code> for this purpose:
-        </p>
-
-        <pre class="docs__code"><code class="language-scss">@import '01_default-variables/ ...
-
-@import '02_variable-overrides/_variable-overrides.scss
-
-...</code></pre>
-
-        <p>
-          The advantage of this "interventionist" approach is that you have full use of everything. The disadvantage is, you must remember to copy or backup your <code>_variable-overrides.scss</code> before you update Codebase.
-        </p>
-
-        <h3>(2.) JS / jQuery</h3>
-
-        <p>
-          The Codebase jQuery script is a set of (<code>cb_</code>-prefixed) plugins &ndash; each of which you can call &ndash; and a "master" (document ready setup) plugin named <code>codebase();</code>.
-        </p>
-
-        <p>
-          You will need to call <code>codebase();</code>. The simplest way to do this is:
-        </p>
-
-        <pre class="docs__code"><code class="language-html">&lt;script&gt;
-  $(document).codebase();
-&lt;/script&gt;</code></pre>
-
-        <p>
-          Alternatively, you could move that call into your own theme script.
-        </p>
-
+// (3.) Begin your project styles here...
+</code></pre>
+              <p class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2">
+                <i class="fa fa-info-circle text--teal-darken-1"></i> Whenever you use any of the the Codebase variables <strong>within your own variables</strong>, you will need to declare these first, before you use them.
+                <br>
+                <br> For example: if you need to change the navbar breakpoint from <code>$break-xs</code> to <code>$break-sm</code> then you need <i>pre-</i>declare <code>$break-sm</code> in your own variables.
+                <br>
+                <br> You could copy the entire Codebase default variables file (<a href="codebase/scss/02_default-variables/_default-variables.scss">codebase/scss/02_default-variables/_default-variables.scss</a>) into your theme (remove all the <code>!default</code> flags) and set your chosen variable values there.
+              </p>
+            </div>
+          </div>
+          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
+               version 2.x PREVIEW
+              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
+        </div>
       </div>
-    </main>
-  </div>
-
-  
-  <footer class="docs__footer deco-bg-charcoal">
-    <span class="deco-text-light-gray">
-      <a href="index.html">Codebase</a> v.1.3.5 | <a href="https://github.com/SimonPadbury/Codebase" target="_blank">GitHub Repository</a> | Built&nbsp;by&nbsp;<a href="http://simonpadbury.github.io" target="_blank">Simon&nbsp;Padbury</a>
-    </span>
-  </footer>
-
-</div><!-- /.docs -->
-</div><!-- /.page-wrap -->
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="codebase/js/codebase.js"></script>
-<script>
-  $(document).codebase();
-
-  $(document).ready(function() {
-      $("[href]").each(function() {
-      if (this.href == window.location.href) {
-          $(this).addClass("current");
-          }
-      });
-  });
-</script>
-<script src="theme/prism/prism.js"></script>
-
-</body>
-
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="codebase/js/codebase.js"></script>
+  </body>
 </html>

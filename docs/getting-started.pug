@@ -1,0 +1,16 @@
+//- Getting Started (page)
+extends _docs-template.pug
+
+block vars
+  - var title='Getting Started'
+  - var topID='getting-started'
+
+block template__sidebar
+  include docs-template-partials/_docs-sidebar-getting-started
+
+block template__header
+  h1 Getting Started
+
+block template__body
+  include docs/getting-started/_docs-getting-started-simple-setup
+  include docs/getting-started/_docs-getting-started-advanced-setup

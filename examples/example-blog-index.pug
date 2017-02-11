@@ -1,0 +1,38 @@
+//- Example Blog Index
+
+extends ../codebase/pug/_codebase
+
+block vars
+  - var title='Blog Index Example'
+
+block append head-addins
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js')
+
+block body
+  include _corner-codebase
+  include example-partials/_example-partials-index
+
+  +example-navbar
+
+  .grid
+    .col--span-12.hero
+      .holderjs(data-background-src="holder.js/1280x240")
+
+  .grid.grid--gutter.mv-6u
+    .col.col-md--span-9
+
+      +blog-index-entry
+      +blog-index-entry
+      +blog-index-entry
+      +blog-index-entry
+      +blog-index-entry
+
+      +pagination
+
+    .col.col-md--span-3
+      h4 Sidebar
+
+      +menu('Sidebar link', 12, 'menu--block')
+
+  .pt--6u.bg--gray-darken-2
+    +big-footer

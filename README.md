@@ -1,19 +1,29 @@
-# Codebase v.1.3.5
+# Codebase v.2.x PREVIEW
 
-Yet another SCSS / jQuery component library.
+> A major upgrade is in progress, moving from Codebase 1.x to 2.x. But I have no time at present to complete all the snagging before properly launching Codebase 2.0. I hope to pick this project up again in several weeks.
+
+
+Codebase is a SASS, CoffeeScript, and Pug website component library.
+
+(Also requires jQuery and Font Awesome.)
 
 ### Codebase itself is (in) the `codebase/` folder:
 
 ```
 codebase/
   ├── css/
-  ├── js/
-  └── scss/
+  ├── coffee/
+  ├── pug/
+  └── sass/
 ```
 
-### Codebase docs:
+### Documentation:
 
 [http://simonpadbury.github.io/Codebase/](http://simonpadbury.github.io/Codebase/)
+
+### Log
+
+[LOG.md](LOG.md)
 
 ---
 

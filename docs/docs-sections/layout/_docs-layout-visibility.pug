@@ -1,0 +1,132 @@
+//- Layout Visibility
+
+.menu-marker-section(id="layout-visibility")
+
+  h2.docs-section Visibility
+
+  p.
+    A full range of <code>*-down</code>, <code>*-only</code> and <code>*-up</code> visibility mixins have been built based on the Codebase media query breakpoint variables.
+
+  p.
+    You can include these mixins directly in your project. Classes have also been built from each of these mixins.
+
+  p.text--center
+    i.fa.fa-check
+    |  = visible
+
+  style.
+    .visibility-example {
+    margin: -8px;
+    padding: 8px;
+    }
+
+  table.table.table--nowrap
+    thead
+      tr
+        th Mixin / Class
+        th Example
+        th xs
+        th sm
+        th md
+        th lg
+    tbody
+      tr
+        td hide--xs-only (= show--sm-up)
+        td
+          .hide--xs-only.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+      tr
+        td hide--sm-only
+        td
+          .hide--sm-only.p--block.bg--green.text--white.visibility-example  Example
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+      tr
+        td hide--md-only
+        td
+          .hide--md-only.p--block.bg--green.text--white.visibility-example  Example
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+      tr
+        td hide--lg-only (= show--md-down)
+        td
+          .hide--lg-only.p--block.bg--green.text--white.visibility-example  Example
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+      tr
+        td show--xs-only (= hide--sm-up)
+        td
+          .show--xs-only.p--block.bg--green.text--white.visibility-example  Example
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+        td
+        td
+      tr
+        td show--sm-only
+        td
+          .show--sm-only.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+        td
+      tr
+        td show--md-only
+        td
+          .show--md-only.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+      tr
+        td show--lg-only (= hide--md-down)
+        td
+          .show--lg-only.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+      tr
+        td hide--md-up (= show--sm-down)
+        td
+          .hide--md-up.p--block.bg--green.text--white.visibility-example  Example
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td
+        td
+      tr
+        td hide--sm-down (= show--md-up)
+        td
+          .hide--sm-down.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td.bg--gray.text--white
+          i.fa.fa-check
+        td.bg--gray.text--white
+          i.fa.fa-check

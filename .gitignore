@@ -8,7 +8,7 @@
 ehthumbs.db
 Thumbs.db
 
-# SCSS
+# SASS
 
 .sass-cache
 **.sass-cache
@@ -17,5 +17,6 @@ Thumbs.db
 # CodeKit
 
 config.codekit
+config.codekit3
 .codekit-cache
 kit

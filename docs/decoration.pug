@@ -1,0 +1,21 @@
+//- Getting Started (page)
+extends _docs-template.pug
+
+block vars
+  - var title='Decoration'
+  - var topID='decoration'
+
+block template__sidebar
+  include docs-template-partials/_docs-sidebar-decoration
+
+block template__header
+  h1 Decoration
+  include docs/decoration/_docs-decoration-intro
+
+block template__body
+  include docs/decoration/_docs-decoration-element-grid
+  include docs/decoration/_docs-decoration-margins
+  include docs/decoration/_docs-decoration-borders
+  include docs/decoration/_docs-decoration-paddings
+  include docs/decoration/_docs-decoration-colors
+  include docs/decoration/_docs-decoration-box-shadows

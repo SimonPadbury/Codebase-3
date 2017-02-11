@@ -1,0 +1,48 @@
+.off-canvas-navicon--docs.off-canvas-navicon.off-canvas-navicon--right.off-canvas-navicon--fixed(data-off-canvas="sidebar-1")
+  i.fa.fa-bars(aria-hidden="true")
+
+.docs__sidebar.off-canvas.off-canvas--sm.off-canvas--right.off-canvas--fixed(id="sidebar-1")
+  .off-canvas__close.off-canvas__close--left.hide--md-up
+    i.fa.fa-times-circle(aria-hidden="true")
+
+  .docs__sidebar-menu
+    h4 Docs
+
+    ul
+      li
+        a(href="getting-started.html") Getting Started
+
+      li
+        a(href="basics.html") Basics
+
+      li
+        a(href="layout.html") Layout
+
+      li
+        a(href="components.html") Components
+
+      li
+        a(href="decoration.html") Decoration
+
+      li.current.menu-marker
+        a(href="examples.html") Examples
+        ul
+          li
+            a(href="example-starter.html") Example Starter
+          li
+            a(href="example-blog-index.html") Example Blog Index
+          li
+            a(href="example-gallery.html") Example Gallery
+
+      li.hide--md-up
+        a(
+          href="https://github.com/SimonPadbury/Codebase"
+          target="_blank"
+          rel="noopener noreferrer"
+          )
+          i(
+            class="fa fa-github-alt"
+            aria-hidden="true"
+            )
+          = ' '
+          | &nbsp;GitHub Repository

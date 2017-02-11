@@ -1,0 +1,40 @@
+//- Components Off-Canvas Sidebars
+
+.menu-marker-section(id="components-off-canvas-sidebars")
+
+  h2.docs-section Off-Canvas Sidebars
+  p
+    | The Codebase off-canvas sidebar can be used indepentently, or as a modification to a Codebase grid system.
+  p
+    | If you use the off-canvas sidebar as a modification of a grid system, then instead of setting the
+    code col-[size]--span-*
+    |  of a sidebar column on your lowest grid setting (xs, sm, md or lg), use the class
+    code col-[size]--off-canvas
+    | . You can also specify whether the off-canvas is to the left or right.
+  p  You will also need to add a navicon for toggling the sidebar.
+  p
+    | Be sure to set the off-canvas navicon
+    code data-off-canvas=&quot;&quot;
+    |  to point to its respective off-canvas sidebar
+    code id=&quot;&quot;
+    | .
+  p
+    | It is possible to have more than one off-canvas sidebar. But only one can be activated at a time.
+  p
+    i Example: see the sidebar on this page at different screen widths.
+
+  pre
+    code.
+      &lt;div class="off-canvas-navicon off-canvas-navicon--right" data-off-canvas="sidebar-1"&gt;
+        &lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+
+      &lt;div id="sidebar-1" class="xs--off-canvas off-canvas--right"&gt;
+
+        &lt;div class="off-canvas__close off-canvas__close--left"&gt;
+          &lt;i class="fa fa-times" aria-hidden="true"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Off-canvas sidebar content --&gt;
+
+      &lt;/div&gt;

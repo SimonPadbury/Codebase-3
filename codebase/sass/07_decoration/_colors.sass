@@ -1,0 +1,225 @@
+// DECORATION: COLORS
+// ==================
+
+=colors
+  // Background Colors
+
+  .bg--gray
+    background-color: $color-gray
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: lighten($color-gray, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: darken($color-gray, $color-increment * $i)
+
+  .bg--blue
+    background-color: $color-blue
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: lighten($color-blue, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: darken($color-blue, $color-increment * $i)
+
+  .bg--teal
+    background-color: $color-teal
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: lighten($color-teal, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: darken($color-teal, $color-increment * $i)
+
+  .bg--orange
+    background-color: $color-orange
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: lighten($color-orange, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: darken($color-orange, $color-increment * $i)
+
+  .bg--red
+    background-color: $color-red
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: lighten($color-red, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: darken($color-red, $color-increment * $i)
+
+  .bg--green
+    background-color: $color-green
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: lighten($color-green, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          background-color: darken($color-green, $color-increment * $i)
+
+  .bg--black
+    background-color: $color-black
+
+  .bg--white
+    background-color: $color-white
+
+  // Text Colors
+
+  .text--gray
+    color: $color-gray
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: lighten($color-gray, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: darken($color-gray, $color-increment * $i)
+
+  .text--blue
+    color: $color-blue
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: lighten($color-blue, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: darken($color-blue, $color-increment * $i)
+
+  .text--teal
+    color: $color-teal
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: lighten($color-teal, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: darken($color-teal, $color-increment * $i)
+
+  .text--orange
+    color: $color-orange
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: lighten($color-orange, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: darken($color-orange, $color-increment * $i)
+
+  .text--red
+    color: $color-red
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: lighten($color-red, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: darken($color-red, $color-increment * $i)
+
+  .text--green
+    color: $color-green
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: lighten($color-green, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          color: darken($color-green, $color-increment * $i)
+
+  .text--black
+    color: $color-black
+
+  .text--white
+    color: $color-white
+
+  // Border Colors
+
+  .b--gray
+    border-color: $color-gray
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: lighten($color-gray, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: darken($color-gray, $color-increment * $i)
+
+  .b--blue
+    border-color: $color-blue
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: lighten($color-blue, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: darken($color-blue, $color-increment * $i)
+
+  .b--teal
+    border-color: $color-teal
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: lighten($color-teal, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: darken($color-teal, $color-increment * $i)
+
+  .b--orange
+    border-color: $color-orange
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: lighten($color-orange, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: darken($color-orange, $color-increment * $i)
+
+  .b--red
+    border-color: $color-red
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: lighten($color-red, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: darken($color-red, $color-increment * $i)
+
+  .b--green
+    border-color: $color-green
+    &-lighten
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: lighten($color-green, $color-increment * $i)
+    &-darken
+      @for $i from 1 through $color-shades
+        &-#{$i}
+          border-color: darken($color-green, $color-increment * $i)
+
+  .b--black
+    border-color: $color-black
+
+  .b--white
+    border-color: $color-white

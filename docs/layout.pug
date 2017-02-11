@@ -1,0 +1,18 @@
+//- Getting Started (page)
+extends _docs-template.pug
+
+block vars
+  - var title='Layout'
+  - var topID='layout'
+
+block template__sidebar
+  include docs-template-partials/_docs-sidebar-layout
+
+block template__header
+  h1 Layout
+
+block template__body
+  include docs/layout/_docs-layout-intro
+  include docs/layout/_docs-layout-grid-classes
+  include docs/layout/_docs-layout-grid-mixins
+  include docs/layout/_docs-layout-visibility

@@ -1,0 +1,19 @@
+//- Basics Mixins: Initial Icons
+
+mixin initial-icon(iconClass)
+  if block
+    .initial-icon
+      i(class=iconClass aria-hidden='true')
+      block
+  else
+    .initial-icon
+      i(class='fa fa-info-circle' aria-hidden='true')
+      | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+//-
+  Example:
+
+  +initial-icon('fa fa-frown-o')
+    b Well, that was embarrasing!
+    br
+    | Sorry, but we can't find the page you are looking for.

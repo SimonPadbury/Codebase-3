@@ -1,0 +1,142 @@
+// CLASSLESS BASICS: FORMS
+// =======================
+
+label
+  display: inline-block
+  padding: 6px 0
+
+=form__element
+  -webkit-appearance: none
+  position: relative
+  width: 100%
+  outline: 0 none
+  @if $decoration-forms == true
+    border: $border-1px-solid
+    @if $form--input-rounded-corners == true
+      border-radius: $border-radius
+    @if $enlarged-typography-everywhere == true
+      padding: $spacing-1u
+    @else
+      padding: ($spacing-1u - 2px) $spacing-1u
+    .enlarged &  &
+      padding: $spacing-1u
+    color: $base-text-color
+    &:placeholder
+    &:focus
+      border-color: $base-text-color-hyperlink
+
+input,
+select
+  +form__element
+
+select
+  @if $decoration-forms == true
+    padding: $spacing-1u - 1px
+    // Accounting for the 1px margin
+    color: $color-gray-darken-1
+
+select:not([multiple])
+  min-height: $spacing-4u
+
+input[type="radio"],
+input[type="checkbox"]
+  display: inline-block
+  @if $decoration-forms == true
+    width: $spacing-3u
+    min-height: auto
+    margin: 0
+    padding: 0 $spacing-1u
+    border: 0
+    line-height: 1
+
+input[type='radio']
+  -webkit-appearance: radio
+
+input[type='checkbox']
+  -webkit-appearance: checkbox
+
+textarea
+  vertical-align: top
+  overflow: auto
+  +form__element
+  @if $decoration-forms == true
+    margin-bottom: $spacing-1u /2 !important
+
+// BASICS MIXINS: FORMS
+// ====================
+
+// Hide form placeholders on focus
+
+=form__placeholder--hide
+  &:focus::-webkit-input-placeholder
+    color: transparent !important
+  &:focus:-moz-placeholder
+    color: transparent !important
+  &:focus::-moz-placeholder
+    color: transparent !important
+
+// Font Awesome styled radio & checkbox
+// See http://fontawesome.io/cheatsheet/
+
+=form__radio
+  display: none !important
+  + label:before
+    display: inline-block
+    width: 30px
+    font-family: FontAwesome
+    content: '\f1db'
+  &:checked + label:before
+    content: ' \f111'
+
+=form__toggle
+  display: none !important
+  + label:before
+    display: inline-block
+    width: 30px
+    font-family: FontAwesome
+    content: '\f204'
+  &:checked + label:before
+    content: ' \f205'
+
+=form__checkbox
+  display: none !important
+  + label:before
+    display: inline-block
+    width: 30px
+    font-family: FontAwesome
+    content: '\f096'
+    &:hover
+      cursor: pointer
+  &:checked + label:before
+    content: '\f046'
+
+=form__radio--toggle
+  +form__toggle
+
+=form__checkbox--toggle
+  +form__toggle
+
+// CLASS BUILDER: FORMS
+// ====================
+
+=basics-forms
+
+  input,
+  textarea
+    +form__placeholder--hide
+
+  .form
+    &__radio
+      +form__radio
+
+    &__radio--toggle
+      +form__radio--toggle
+
+    &__checkbox
+      +form__checkbox
+
+    &__checkbox--toggle
+      +form__checkbox--toggle
+
+@if $include-css-forms == true
+  +basics-forms

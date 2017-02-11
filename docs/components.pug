@@ -1,0 +1,26 @@
+//- Getting Started (page)
+extends _docs-template.pug
+
+block vars
+  - var title='Components'
+  - var topID='components'
+
+block template__sidebar
+  include docs-template-partials/_docs-sidebar-components
+
+block template__header
+  h1 Components
+  include docs/components/_docs-components-intro
+
+block template__body
+  include docs/components/_docs-components-showhide
+  include docs/components/_docs-components-dropdowns
+  include docs/components/_docs-components-menus-and-menubars
+  include docs/components/_docs-components-navbars
+  include docs/components/_docs-components-menu-marker
+  include docs/components/_docs-components-off-canvas-sidebars
+  include docs/components/_docs-components-slideshows
+  include docs/components/_docs-components-media-objects
+  include docs/components/_docs-components-popovers
+  include docs/components/_docs-components-tab-systems
+  include docs/components/_docs-components-pagination

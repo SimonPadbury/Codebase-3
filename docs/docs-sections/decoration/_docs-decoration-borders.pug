@@ -1,0 +1,33 @@
+//- Decoration Borders
+
+.menu-marker-section(id="decoration-borders")
+
+  h2.docs-section Borders
+
+  p A few simple border styles.
+
+  ul
+    li Borders all #[code b-*]
+    li Border top #[code bt-*]
+    li Border right #[code br-*]
+    li Border bottom #[code bb-*]
+    li Border-left #[code bl--*]
+
+  p Examples:
+
+  .mb--2u.p--2u.b--1px-solid.b--zero  .b--zero
+  .mb--2u.p--2u.b--1px-dashed  .b--1px-dashed
+  .mb--2u.p--2u.b--1px-solid  .b--1px-solid
+  .mb--2u.p--2u.b--4px-solid  .b--4px-solid
+  .mb--2u.p--2u.b--8px-solid  .b--8px-solid
+
+  p.
+    By default, borders have color #code $color-gray-lighten-2]. Borders can be assigned other colors in the Codebase swatch using #[code b-][color] classes. See #[a(href='#decoration-colors') colors].
+
+  h3 Border enhancements:
+
+  section.grid.grid--gutter
+    .col.col-sm--span-6
+      .mh-auto.mb--2u.p--4u.b--1px-solid.b--radius(style='width:250px;height:250px;')  .b--radius
+    .col.col-sm--span-6
+      .mh-auto.mb--2u.p--4u.b--1px-solid.b--circle(style='width:250px;height:250px;')  .b--circle

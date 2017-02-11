@@ -1,0 +1,14 @@
+//- Blog Index Entry
+
+mixin blog-index-entry
+  .media
+    +media__image('left')
+      +image('holder.js/120x120?text=Thumbnail')
+    +media__content
+      +media__title
+        h2.mt--zero Blog Post Title Example
+        p.text--muted By Somebody | DD.MM.YYYY | 4 Comments
+      +media__text
+        +paragraph(1)
+        <a href="#/">Read more <i class="fa fa-chevron-right"></i></a>
+  hr
