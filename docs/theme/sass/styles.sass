@@ -44,7 +44,9 @@ body
     font-weight: 400
     letter-spacing: 0.0625em
     &:hover
-      background-color: transparent
+      background: transparent url('../../../images/codebase2-logo-alt.svg') 0 0 no-repeat
+      background-size: 2.5em auto
+      color: $color-white
       text-decoration: none
     @if $enlarged-typography-everywhere == true
       padding-left: $spacing-10u
@@ -52,6 +54,9 @@ body
       padding-left: $spacing-7u + 4px
     .enlarged &
       padding-left: $spacing-10u
+  a:hover
+    background: transparent
+    color: $color-blue-lighten-1
 
 // Main
 
@@ -138,6 +143,8 @@ body
 .off-canvas-navicon--docs
   top: 0
   z-index: 104
+  &:hover
+    color: $color-blue-lighten-1
 
 .docs__sidebar
   .off-canvas__close

@@ -3724,10 +3724,15 @@ body {
     letter-spacing: 0.0625em;
     padding-left: 60px; }
     .docs__navbar .brand:hover {
-      background-color: transparent;
+      background: transparent url("../../../images/codebase2-logo-alt.svg") 0 0 no-repeat;
+      background-size: 2.5em auto;
+      color: #fff;
       text-decoration: none; }
     .enlarged .docs__navbar .brand {
       padding-left: 80px; }
+  .docs__navbar a:hover {
+    background: transparent;
+    color: #47b6ff; }
 
 .docs__main {
   padding-top: 40px; }
@@ -3809,6 +3814,8 @@ body {
 .off-canvas-navicon--docs {
   top: 0;
   z-index: 104; }
+  .off-canvas-navicon--docs:hover {
+    color: #47b6ff; }
 
 .docs__sidebar .off-canvas__close {
   color: #09f;
