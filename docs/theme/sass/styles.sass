@@ -14,7 +14,6 @@ body
   max-width: 1380px
   margin: auto
   background: $color-white
-  overflow-x: hidden
 
 // Navbar
 
@@ -22,8 +21,8 @@ body
   max-width: 1380px
   z-index: 103
   // In front of the sidebars
-  background: $color-white
-  border-bottom: 0.04em solid $color-teal-darken-1
+  background: $color-teal-darken-2
+  //border-bottom: 0.04em solid $color-teal-darken-1
   @if $enlarged-typography-everywhere == true
     height: $spacing-7u
     +break__navbar--up
@@ -32,27 +31,32 @@ body
     height: $spacing-5u
     +break__navbar--up
       height: $spacing-7u
-  .enlarged &  &
+  .enlarged &
     height: $spacing-6u
     +break__navbar--up
       height: $spacing-7u
   .brand
-    background: $color-white url('../../../images/codebase2-logo.svg') 0 0 no-repeat
+    background: transparent url('../../../images/codebase2-logo-alt.svg') 0 0 no-repeat
     background-size: 2.5em auto
     display: block
-    color: $color-teal-darken-1
+    color: $color-white
     font-size: 1.5em
     font-weight: 400
     letter-spacing: 0.0625em
     &:hover
-      background-color: $color-white
+      background: transparent url('../../../images/codebase2-logo-alt.svg') 0 0 no-repeat
+      background-size: 2.5em auto
+      color: $color-white
       text-decoration: none
     @if $enlarged-typography-everywhere == true
       padding-left: $spacing-10u
     @else
       padding-left: $spacing-7u + 4px
-    .enlarged &  &
+    .enlarged &
       padding-left: $spacing-10u
+  a:hover
+    background: transparent
+    color: $color-blue-lighten-1
 
 // Main
 
@@ -61,17 +65,16 @@ body
     padding-top: $spacing-6u
   @else
     padding-top: $spacing-5u
-  .enlarged &  &
+  .enlarged &
     padding-top: $spacing-6u
   +break__md--up
     @if $enlarged-typography-everywhere == true
       padding-top: $spacing-6u
     @else
       padding-top: $spacing-5u
-    .enlarged &  &
+    .enlarged &
       padding-top: $spacing-6u
     display: flex
-    position: relative
     overflow-x: hidden
 
 .docs__header
@@ -106,7 +109,7 @@ body
 
 .docs__content
   +break__md--up
-    order: 3
+    order: 2
     width: 100%
     margin-left: 280px
 
@@ -140,6 +143,8 @@ body
 .off-canvas-navicon--docs
   top: 0
   z-index: 104
+  &:hover
+    color: $color-blue-lighten-1
 
 .docs__sidebar
   .off-canvas__close

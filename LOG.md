@@ -1,5 +1,10 @@
 # Codebase Version Log
 
+### v.2.PREVIEW 2 -- 13 Feb 2017
+
+* Removed `overflow-x: hidden` from the docs outermost wrapper (`.body__inner`) because on iOS Safari this was preventing everything that required the reset-overlay from being layered in front of the overlay.
+* Added some form element styling to override iOS Safari search input to not have rounded corners.
+
 ### v.2.PREVIEW -- 11 Feb 2017
 
 #### Major Changes between Codebase 1.x and 2.x
@@ -85,7 +90,7 @@ Several re-writes of components and basics, plus several additions, including:
 * Various minor bug fixes/ snagging following v.1.0 repo sync.
 * **Removed the "CSS-only scroll-lock"**: it was preventing iOS Safari toolbars from hiding/minimizing while scrolling (because iOS Safari does this on body scroll, whereas the Codebase v.1.0 scroll-lock scrolled the page inside of a `div.body--inner` instead of allowing body scroll). But this now means that page scrolling can happen behind revealed modals and behind revealed off-canvas sidebars.
 * Solved the problem of modals appearing _behind_ the darkened reset-overlay on iOS Safari - by removing `position:relative` from the containing grid and columns.
-* Added a `-light` variant of the color swatch and `` classes.
+* Added a `-light` variant of the color swatch and control classes.
 * **Overhauled Codebase jQuery scripts**: transformed the functions into plugins, and moved them out of the master `$(document).ready()` function (also now a plugin), so that developers can include them in their own theme/app script going forward.
 * Abbreviating mixin names and class names):
   * `tiny, small, medium, large` has become `xs, sm, md, lg` (in grid systems and in decoration classes)
