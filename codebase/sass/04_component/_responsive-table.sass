@@ -1,0 +1,38 @@
+// COMPONENTS: RESPONSIVE TABLE
+// ============================
+
+=table
+  &--wrap-outer
+    position: relative
+    z-index: $z-index--responsive-table
+    margin: $spacing--24 auto
+    background: transparent
+  &--wrap-inner
+    position: relative
+    overflow-x: auto
+  &--nowrap
+    white-space: nowrap
+
+=table--deco
+  min-width: 100%
+  th
+    text-align: left
+  th, td
+    border: $border--thin
+    padding: $spacing--8 $spacing--12
+    vertical-align: top
+
+// CLASS BUILDER: RESPONSIVE TABLE
+// ===============================
+
+=components-table
+
+  .table
+    +table
+
+  @if $deco-class--responsive-table == true
+    .table.deco
+      +table--deco
+
+@if $include-css--table == true
+  +components-table

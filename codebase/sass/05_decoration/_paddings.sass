@@ -1,0 +1,97 @@
+// DECORATION: PADDINGS
+// ====================
+// File: codebase/scss/12_decoration-classes/_paddings.scss
+
+=paddings
+
+  // Same as $spacing--block in menu items, navbar items, tab labels and table cells
+  .p--block
+    padding: $spacing--block
+
+  // Padding All
+
+  .p
+    &--zero
+      padding: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding: #{$spacing}px
+
+  // Padding Top
+
+  .pt
+    &--zero
+      padding-top: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding-top: #{$spacing}px
+
+  // Padding Right
+
+  .pr
+    &--zero
+      padding-right: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding-right: #{$spacing}px
+
+  // Padding Bottom
+
+  .pb
+    &--zero
+      padding-bottom: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding-bottom: #{$spacing}px
+
+  // Padding Left
+
+  .pl
+    &--zero
+      padding-left: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding-left: #{$spacing}px
+
+  // Padding Vertical (Top and Bottom)
+
+  .pv
+    &--zero
+      padding-top: 0
+      padding-bottom: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding-top: #{$spacing}px
+        padding-bottom: #{$spacing}px
+
+  // Padding Horizontal (Right and Left)
+
+  .ph
+    &--zero
+      padding-right: 0
+      padding-left: 0
+    @for $i from 1 through $spacing--max
+      $spacing: $i * 4
+      &--#{$spacing}
+        padding-right: #{$spacing}px
+        padding-left: #{$spacing}px
+
+// Extra line spacing (top or bottom padding)
+
+.pt--line
+  padding-top: $text--base-line-height
+  &.text--big-text,
+  .text--big-text &
+    padding-top: $text--big-text-line-height
+
+.pb--line
+  padding-bottom: $text--base-line-height
+  &.text--big-text,
+  .text--big-text &
+    padding-bottom: $text--big-text-line-height

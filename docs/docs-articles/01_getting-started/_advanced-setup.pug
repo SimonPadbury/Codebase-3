@@ -1,0 +1,44 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-advanced-setup"
+  - var sectionTitle = "Advanced Setup"
+
+block section
+  p Example project folder structure:
+
+  pre
+    code.
+      your-project/
+      │
+      ├── codebase/
+      │   ├── css/
+      │   ├── js/
+      │   ├── pug/ [1]
+      │   └── sass/ [2]
+      │
+      ├── your-dev/
+      │   ├── img/
+      │   ├── js/
+      │   ├── pug/ [1]
+      │   └── sass/ [2]
+      │
+      ├── your-build/
+      │   ├── css/
+      │   ├── img/
+      │   └── js/
+      │
+      └── your HTML
+
+  p Notes:
+  
+  ol
+    li.
+      The Codebase documentation has been built using the HTML pre-processor language #[a(href="http://pugjs.org/") Pug] (formerly known as Jade). You can do the same. See the further instructions below on #[a(href="#getting-started-codebase-with-pug") how to use Codebase with Pug].
+    li.
+      The Codebase CSS has been built using #[a(href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html") indented syntax Sass]. You can do the same. See the further instructions below on #[a(href="#getting-started-codebase-with-sass") how to use Codebase with Sass].
+    
+  hr
+    
+  p.
+    The Codebase CSS and JavaScript components can, of course, be used directly on the HTML files (as in the #[a(href="#getting-started-simple-setup") Simple Setup], above). Or you can use e.g. PHP, Handlebars, Slim, or Haml.

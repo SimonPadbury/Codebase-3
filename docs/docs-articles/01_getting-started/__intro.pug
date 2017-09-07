@@ -1,0 +1,25 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-introduction"
+  - var sectionTitle = "Introduction"
+
+block section
+  p.
+    Codebase is a website component library. You can use it as the basis for your website design projects.
+  
+  p.
+    The Codebase stylesheet #[code codebase.css] has been composed using #[a(href="http://sass-lang.com/documentation/frames.html#!file.INDENTED_SYNTAX.html") indented syntax Sass]. Its styles were built first as mixins and then these have been included in the Codebase classes.
+
+  p.
+    Codebase styles can therefore be used simply as-is, by dropping the Codebase classes directly into your website HTML – or whatever you use to compile your HTML (e.g. #[a(href="#getting-started-codebase-with-pug") pug]). Alternatively, you can include Codebase mixins into your own Sass.
+
+  p.
+    A few things in Codebase also use a tiny JavaScript #[code codebase.js] to make them work &ndash; such as dropdowns, popovers and responsive tables. Since version 2.0, Codebase scripts have been re-factored as "vanilla" JavaScript and so jQuery is not needed.
+
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | The Codebase documentation (you are looking at it) is an example of Codebase in use.
+  
+  p.
+    Besides these docs, some Codebase webpage #[a(href="examples.html") examples] have been included in this project.

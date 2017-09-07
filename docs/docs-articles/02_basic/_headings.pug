@@ -1,0 +1,42 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-headings"
+  - var sectionTitle = "Headings"
+
+block section
+  h1 Heading h1
+  h2 Heading h2
+  h3 Heading h3
+  h4 Heading h4
+  h5 Heading h5
+  h6 Heading h6
+
+  p.
+    Headings have been sized appropriately for having their line heights fit to a vertical rhythm based on 
+    #[a(href="decoration.html#decoration-element-grid") element grid] units.
+    
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | Codebase headings have been set with zero top margin (same as paragraphs).
+
+  p.
+    Headings h1 to h5 are slightly enlarged (and their line heights adjusted for wider viewports) at and above their "alt" breakpoint, which is set by the following variable:
+  
+  pre
+    code.
+      $break--headers-alt: $mq--sm !default
+      // = 640px
+
+  p.
+    Headers in Codebase are set to #[code font-weight: normal] by default, so that you can use bold on particular words for emphasis.
+
+  p.
+    Also, a set of text utility classes has been provided for modifying any text according to the Codebase headings' font sizes and line heights.
+    
+  .text--h1 .text--h1
+  .text--h2 .text--h2
+  .text--h3 .text--h3
+  .text--h4 .text--h4
+  .text--h5 .text--h5
+  .text--h6 .text--h6

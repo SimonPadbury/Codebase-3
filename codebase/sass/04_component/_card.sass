@@ -1,0 +1,135 @@
+// COMPONENT MIXINS: CARD
+// ======================
+
+=card
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  margin-bottom: $spacing--24
+  overflow: hidden
+  min-height: 1px
+
+=card--vertical
+  flex-direction: column
+  align-items: center
+
+=card--deco
+  border: $border--thin
+  border-radius: $border--radius
+  .card
+    border: 0
+    border-radius: 0
+    border-top: $border--thin
+    &__header
+      border-bottom: $border--thin
+      padding: $spacing--block
+    &__footer
+      border-top: $border--thin
+      padding: $spacing--block
+    &__image--left
+      padding-top: $spacing--16
+      padding-left: $spacing--16
+      [dir="rtl"] &, &[dir="rtl"],
+      .rtl &, &.rtl
+        padding-right: $spacing--16
+        padding-left: inherit
+    &__image--right
+      padding-top: $spacing--16
+      padding-right: $spacing--16
+      [dir="rtl"] &, &[dir="rtl"],
+      .rtl &, &.rtl
+        padding-right: inherit
+        padding-left: $spacing--16
+    &__body,
+    &__section
+      padding: $spacing--16 $spacing--16 0
+      & > :first-child
+        margin-bottom: $spacing--8
+    &__section + *
+      border-top: $border--thin
+
+=card__header
+  width: 100%
+
+=card__body
+  width: 100%
+  flex: 1
+  overflow: auto
+
+=card__section
+  width: 100%
+
+=card__footer
+  order: 9999
+  width: 100%
+
+=card__image
+  display: block
+  & > img
+    display: block
+  //- Workaround for IE11 bug. See https://github.com/philipwalton/flexbugs/issues/75
+  min-height: 1px
+
+=card__image--first
+  order: 0
+
+=card__image--last
+  order: 1
+
+=card__overlay
+  position: absolute
+  display: flex
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+  z-index: 1
+  &--top
+    align-items: flex-start
+  &--middle
+    align-items: center
+  &--bottom
+    align-items: flex-end
+
+// CLASS BUILDER: CARD
+// ===================
+
+=component--card
+
+  .card
+    +card
+    @if $deco-class--card == true
+      &.deco
+        +card--deco
+
+  .card--vertical
+    +card--vertical
+
+  .card__header
+    +card__header
+
+  .card__image
+    +card__image
+    &--left,
+    &--top
+      +card__image--first
+    &--right,
+    &--bottom
+      +card__image--last
+
+  .card__body
+    +card__body
+
+  .card__section
+    +card__section
+
+  .card__overlay
+    +card__overlay
+
+  .card__footer
+    +card__footer
+
+// End of class builder mixin
+
+@if $include-css--card == true
+  +component--card

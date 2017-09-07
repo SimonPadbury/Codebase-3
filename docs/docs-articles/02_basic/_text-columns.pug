@@ -1,0 +1,14 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-text-columns"
+  - var sectionTitle = "Text Columns"
+
+block section
+  p.
+    The Codebase #[code .text--columns] container class causes text to be displayed in a number of columns, depending on (a.) the viewport width; and (b.) the set value for the minimum column width variable, #[code $text--columns-min-width].
+
+  p Example:
+
+  .text--columns
+    +paragraph(4)

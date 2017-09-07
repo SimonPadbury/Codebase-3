@@ -1,0 +1,284 @@
+//- Example Company Homepage
+
+extends ../codebase/pug/_codebase
+
+block vars
+  - var title = "Example Company | Codebase"
+  - var bodyClass = "codebase-example bg--purple-lighten-3"
+
+//-block append head-addins
+
+block body
+  include example-partials/__example-partials-index
+
+  .codebase-bodyinner
+    
+    .flexbox.flexbox--container.bg--white
+      .flexitem.flexitem--span-12
+        .bg--purple-darken-2.pt--16
+          | 
+        ul.menubar.menubar--right.deco.hide--sm-down
+          li.
+            #[a(href="") HOME]
+          li.
+            #[a(href="") ABOUT]
+          li.
+            #[a(href="") NEWS]
+          li.
+            #[a(href="") CAREERS]
+          li.
+            #[a(href="") CONTACT]
+
+        .hide--sm-up
+          .showhide.text--right
+            .mb--24.p--block
+              a.showhide__ctrl.text--bold(data-content-id="top-menu") #[i.fa.fa-bars] MENU
+            #top-menu.showhide__content.text--center
+              ul.mb--line.bb--thin.menu.deco
+                li.
+                  #[a(href="") HOME]
+                li.
+                  #[a(href="").text--bold PRODUCTS]
+                li.
+                  #[a(href="").text--bold SERVICES]
+                li.
+                  #[a(href="") ABOUT]
+                li.
+                  #[a(href="") NEWS]
+                li.
+                  #[a(href="") CAREERS]
+                li.
+                  #[a(href="") CONTACT]
+                li
+                  form.p--4
+                    input#search-example.form__input--inline.form__input--sm(name="examplename" placeholder="Search..." type="text")
+                    button.btn.btn--icon.btn--sm(type="submit") #[i.fa.fa-search]
+
+        style.
+          .company-header a {
+            color: rgb(61,61,61);
+            text-decoration: none
+          }
+          
+        h1.p--block.company-header.
+          #[a(href="/#").text--heavy #[i.fa.fa-cube] Company]
+        
+        .bb--thin.ph--16
+          .hide--sm-down.flexbox.flexbox--center.flexbox--span-12
+            .flexitem.flexitem--span-6
+              ul.menubar.deco
+                li #[a(href="#/").mh--4.bb--thick.b--purple PRODUCTS]
+                li #[a(href="#/").mh--4.bb--thick.b--purple SERVICES]
+            .flexitem.flexitem--span-6
+              form.p--4.float--right
+                input#search-example.form__input--inline.form__input--sm(name="examplename" placeholder="Search..." type="text")
+                button.btn.btn--icon.btn--sm(type="submit") #[i.fa.fa-search]
+
+        .flexbox.flexbox--gutter
+          .flexitem.flexitem-sm--span-8.flexitem-md--span-9
+            h2.mt--48 Elevator Pitch
+            +paragraph(1, "lead")
+            
+          .flexitem.flexitem-sm--span-4.flexitem-md--span-3
+            .mv--24.b--thin.b--purple
+              .bb--thin.b--purple.p--block.bg--purple-lighten-3.text--center
+                | #[b Make contact]
+              .p--8.text--center.
+                #[i.fa.fa-phone] Phone: #[br]
+                +1 (333) 6666 999
+              .p--8.text--center.
+                #[i.fa.fa-envelope-o] Email: #[br]
+                #[a(href="mailto:info@company.com") info@company.com]
+        
+        style.
+          @media (max-width: 639px) {
+            .company-ad-tiles .card {
+              max-width: 300px;
+              margin-right: auto;
+              margin-left: auto;
+            }
+          }
+        
+        .bg--gray-lighten-2.pt--24
+          
+          .flexbox.flexbox--gutter.company-ad-tiles
+            
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+                      
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+
+            .flexitem.flexitem-sm--span-6.flexitem-md--span-4.flexitem-lg--span-3
+              .card.deco
+                a(href="#/").card__image
+                  img(src="holder.js/650x400")
+                .card__body.bg--white
+                  .p--4 Lorem ipsum dolor sit amet
+    
+        .flexbox.flexbox--gutter
+          
+          .flexitem.flexitem-sm--span-12.flexitem-lg--span-6.flexitem-lg--order-2
+            .mh--auto(style="max-width: 640px;")
+              h2.mt--line Featured news item
+              
+              +paragraph(2, "lead")
+              
+              a.btn(href="/#") Read more #[i.fa.fa-arrow-right]
+            
+              hr
+              
+              h2 About our Company
+              
+              +paragraph
+
+              style.
+                .values {
+                  padding-left: 32px
+                }
+                .values .text--initial-icon > i:first-child {
+                  height: 80px;
+                  width: 80px;
+                  padding-top: 16px;
+                  margin-left: -96px;
+                  color: white;
+                  background: #491851;
+                  border-radius: 50%;
+                }
+              .values
+                .text--initial-icon.mb--line
+                  i.fa.fa-certificate.fa-fw
+                  h4.mb--4 Something important
+                  span Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo.
+                
+                .text--initial-icon.mb--line
+                  i.fa.fa-microphone.fa-fw
+                  h4.mb--4 Something else important
+                  span Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius.
+
+                .text--initial-icon.mb--line
+                  i.fa.fa-bell.fa-fw
+                  h4.mb--4 Something still important
+                  span Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.
+              
+          .flexitem.flexitem-sm--span-6.flexitem-lg--span-3.flexitem-lg--order-1
+            .mt--line
+              .showhide.b--thin.b--purple.bb--zero.mb--4
+                .showhide__ctrl.p--block.bg--purple-lighten-3(data-content-id="products01")
+                  b Product Category 1
+                  i.fa.fa-plus.float--right(style="padding-top: 4px")
+                #products01.showhide__content.bt--thin.b--purple
+                  +menu("Product", 5, "deco")
+                .showhide__ctrl.p--block.bg--purple-lighten-3(data-content-id="products02")
+                  b Product Category 2
+                  i.fa.fa-plus.float--right(style="padding-top: 4px")
+                #products02.showhide__content.bt--thin.b--purple
+                  +menu("Product", 4, "deco")
+                .showhide__ctrl.p--block.bg--purple-lighten-3(data-content-id="products03")
+                  b Product Category 3
+                  i.fa.fa-plus.float--right(style="padding-top: 4px")
+                #products03.showhide__content.bt--thin.b--purple
+                  +menu("Product", 4, "deco")
+                .showhide__ctrl.p--block.bg--purple-lighten-3(data-content-id="products04")
+                  b Product Category 4
+                  i.fa.fa-plus.float--right(style="padding-top: 4px")
+                #products04.showhide__content.bt--thin.b--purple
+                  +menu("Product", 3, "deco bb--thin b--purple")
+                
+          .flexitem.flexitem-sm--span-6.flexitem-lg--span-3.flexitem-lg--order-3
+            .mv--24.b--thin.b--purple
+              .bb--thin.b--purple.p--block.bg--purple-lighten-3.text--center
+                | #[b Services]
+              +menu("Service", 4, "deco")
+        
+        style.
+          .company-big-footer a {
+            color: #aaa;
+          }
+        .company-big-footer.mt--line.bg--purple-darken-3.pv--20
+          .flexbox.flexbox--gutter.example-big-footer
+
+            .flexitem.flexitem-md--span-3
+              +paragraph(1, "text--gray-lighten-1")
+
+            .flexitem.flexitem-md--span-6
+              .flexbox.flexbox--gutter.flexbox--nested
+                .flexitem.flexitem-xs--span-6
+                  h4.mt--zero.text--gray-lighten-1 Product Categories
+                  +menu("Category", 4)
+                .flexitem.flexitem-xs--span-6
+                  h4.mt--zero.text--gray-lighten-1 Services
+                  +menu("Service", 4)
+
+            .flexitem.flexitem-md--span-3(style="display: flex; flex-direction: column")
+              style.
+                .company-footer {
+                  align-self: flex-end;
+                  width: 100%;
+                  text-align: right;
+                }
+                .company-footer a {
+                  font-size: 2em;
+                  color: white;
+                  text-decoration: none;
+                }
+              
+              .text--right(style="flex-grow: 1")
+                +social
+              
+              .p--block.company-footer.
+                #[a(href="/#").text--heavy #[i.fa.fa-cube]&nbsp;Company]
+                
+        .p--block.bg--gray-darken-3
+          .text--gray.text--center.
+            Copyright &copy; 2017 Company, Ltd.
+          .text--gray.text--center
+            i Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+    
+  +codebase-bottomline
+  
+block append body-foot-addins
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>

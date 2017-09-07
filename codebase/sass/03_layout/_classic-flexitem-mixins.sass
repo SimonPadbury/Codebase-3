@@ -1,0 +1,27 @@
+// LAYOUT MIXINS: CLASSIC FLEXITEMS
+// ================================
+
+=classic-flexitem--span
+  &--span
+    @for $i from 1 through $max-flexitems
+      &-#{$i}
+        width: (100% / $max-flexitems) * $i
+
+=classic-flexitem--offset
+  &--offset
+    @for $i from 0 through $max-flexitems
+      &-#{$i}
+        margin-left: (100% / $max-flexitems) * $i
+        [dir="rtl"] &, &[dir="rtl"],
+        .rtl &, &.rtl
+          margin-right: (100% / $max-flexitems) * $i
+          margin-left: 0
+
+=classic-flexitem--order
+  &--order
+    @for $i from 1 through $max-flexitems
+      &-#{$i}
+        order: $i
+
+// Incomplete flexbox rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).

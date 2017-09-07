@@ -1,26 +1,30 @@
-//- Getting Started (page)
+//- Components (page)
 extends _docs-template.pug
 
 block vars
-  - var title='Components'
-  - var topID='components'
+  - var title="Components • Codebase"
+  - var topID="components"
+  - bodyClass = "docs__chapter"
 
-block template__sidebar
-  include docs-template-partials/_docs-sidebar-components
+block template__navigation
+  include docs-template-partials/_docs-nav-components
 
 block template__header
   h1 Components
-  include docs-sections/components/_docs-components-intro
 
 block template__body
-  include docs-sections/components/_docs-components-showhide
-  include docs-sections/components/_docs-components-dropdowns
-  include docs-sections/components/_docs-components-menus-and-menubars
-  include docs-sections/components/_docs-components-navbars
-  include docs-sections/components/_docs-components-menu-marker
-  include docs-sections/components/_docs-components-off-canvas-sidebars
-  include docs-sections/components/_docs-components-slideshows
-  include docs-sections/components/_docs-components-media-objects
-  include docs-sections/components/_docs-components-popovers
-  include docs-sections/components/_docs-components-tab-systems
-  include docs-sections/components/_docs-components-pagination
+  include docs-articles/04_component/__intro
+  include docs-articles/04_component/_deco-styling
+  include docs-articles/04_component/_activator-javascript
+  include docs-articles/04_component/_showhide
+  include docs-articles/04_component/_dropdown
+  include docs-articles/04_component/_menu
+  include docs-articles/04_component/_menubar-simple
+  include docs-articles/04_component/_menubar-responsive
+  include docs-articles/04_component/_menubar-complex
+  include docs-articles/04_component/_off-canvas
+  include docs-articles/04_component/_card
+  include docs-articles/04_component/_responsive-table
+  include docs-articles/04_component/_popover
+  include docs-articles/04_component/_tab-system
+  include docs-articles/04_component/_pagination

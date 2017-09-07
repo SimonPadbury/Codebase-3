@@ -1,0 +1,156 @@
+// TEXT UTILITIES (MIXINS AND CLASSES)
+// ===================================
+
+// Drop capital for initial letter in paragraph
+
+=text--dropcap
+  &::first-letter
+    display: inline-block
+    float: left
+    font-size: 6em
+    font-weight: 300
+    line-height: 0.75
+  [dir="rtl"] &, &[dir="rtl"],
+  .rtl &, &.rtl
+    &::first-letter
+      float: right
+
+
+// Initial icon
+
+=text--initial-icon
+  min-height: $text--base-line-height * 3
+  padding-left: $spacing--64
+  & > :first-child
+    display: inline-block
+    float: left
+    margin-left: -$spacing--64
+    font-size: 340%
+    font-weight: 300
+    line-height: 90%
+  [dir="rtl"] &, &[dir="rtl"],
+  .rtl &, &.rtl
+    padding-left: 0
+    padding-right: $spacing--64
+    & > :first-child
+      float: right
+      margin-left: 0
+      margin-right: -$spacing--64
+
+
+// Text alignment
+
+=text--left
+  text-align: left
+
+=text--center
+  text-align: center
+
+=text--right
+  text-align: right
+
+// Text style
+
+=text--heavy
+  font-weight: 900
+
+=text--bold
+  font-weight: $bold--font-weight
+
+=text--normal
+  font-weight: normal
+  font-style: normal
+
+=text--italics
+  font-style: italic
+
+=text--caps
+  text-transform: uppercase
+
+=text--small-text
+  font-size: 80%
+  line-height: 1.5
+
+=text--nowrap
+  white-space: nowrap
+
+// Enlarged typography container
+// =============================
+// Note: Not for use on inline text elements, because
+// it changes the line height.
+
+=text--big-text
+  font-size: $text--big-text-font-size
+  line-height: $text--big-text-line-height
+  +text--big-text-headers
+  +break--min($mq--headers-alt)
+    +text--big-text-headers-alt
+
+// Text muted (semi-transparent)
+
+=text--muted
+  opacity: 0.5
+
+// Text columns
+
+=text--columns
+  columns: $text--columns-min-width
+
+// CLASS BUILDER: TYPOGRAPHY
+// =========================
+
+=basics-typography
+
+  .text--lead
+    +text--big-text
+    .text--big-text &
+      font-size: 1.25em
+      line-height: 1.5
+
+  .text--dropcap
+    +text--dropcap
+
+  .text--initial-icon
+    +text--initial-icon
+
+  .text--left
+    +text--left
+
+  .text--center
+    +text--center
+
+  .text--right
+    +text--right
+
+  .text--columns
+    +text--columns
+
+  .text--bold
+    +text--bold
+
+  .text--heavy
+    +text--heavy
+
+  .text--normal
+    +text--normal
+
+  .text--italics
+    +text--italics
+
+  .text--caps
+    +text--caps
+
+  .text--small-text
+    +text--small-text
+
+  .text--nowrap
+    +text--nowrap
+
+  .text--muted
+    +text--muted
+
+  .text--big-text
+    +text--big-text
+
+@if $include-css--typography == true
+  +basics-typography

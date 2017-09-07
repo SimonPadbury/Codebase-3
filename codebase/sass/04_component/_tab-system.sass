@@ -1,0 +1,84 @@
+// COMPONENT MIXINS: TABS SYSTEM
+// =============================
+
+=tab__label
+  display: inline-block
+  position: relative
+  &:hover
+    cursor: pointer
+  &.is-front
+    z-index: $z-index--tab-front + 1
+    cursor: default
+
+=tab__label--deco
+  border-top: $border--thin
+  border-right: $border--thin
+  border-left: $border--thin
+  box-shadow: $box-shadow--inset-bottom
+  padding: $spacing--block
+  white-space: nowrap
+  color: $color--gray-darken-1
+  background: $color--gray-lighten-3
+  &:hover
+    color: $text--base-text-color
+    background: $color--gray-lighten-2
+  &.is-front
+    color: $text--base-text-color
+    background: $color--white
+    box-shadow: none
+
+=tab__label-wrap
+  position: relative
+  z-index: $z-index--tab-front + 1
+  white-space: nowrap
+  overflow-x: auto
+  &--left
+    text-align: left
+  &--center
+    text-align: center
+  &--right
+    text-align: right
+
+=tab__card
+  position: relative
+  display: none
+  z-index: $z-index--tab-front
+  width: 100%
+  height: 0
+  overflow-x: auto
+  opacity: 0
+  white-space: normal
+  &.is-front
+    display: block
+    height: auto
+    opacity: 1
+
+=tab__card--deco
+  top: -1px
+  border-top: $border--thin
+  padding-top: $spacing--8
+  background: $color--white
+
+// CLASS BUILDER: TAB SYSTEM
+// =========================
+
+=components-tab-system
+
+  .tab__label-wrap
+    +tab__label-wrap
+
+  .tab__label
+    +tab__label
+
+  .tab__card
+    +tab__card
+
+  @if $deco-class--tab-system == true
+    .tabs.deco
+      .tab__label
+        +tab__label--deco
+      .tab__card
+        +tab__card--deco
+
+@if $include-css--tab-system == true
+  +components-tab-system

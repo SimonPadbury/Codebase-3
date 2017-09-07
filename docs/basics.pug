@@ -2,32 +2,33 @@
 extends _docs-template.pug
 
 block vars
-  - var title='Basics'
-  - var topID='basics'
+  - var title="Basics • Codebase"
+  - var topID="basics"
+  - bodyClass = "docs__chapter"
 
-block template__sidebar
-  include docs-template-partials/_docs-sidebar-basics
+block template__navigation
+  include docs-template-partials/_docs-nav-basics
 
 block template__header
   h1 Basics
-  include docs-sections/basics/__docs-basics-intro
 
 block template__body
-  include docs-sections/basics/_docs-basics-headings
-  include docs-sections/basics/_docs-basics-paragraphs
-  include docs-sections/basics/_docs-basics-blockquotes
-  include docs-sections/basics/_docs-basics-text-alignment
-  include docs-sections/basics/_docs-basics-text-columns
-  include docs-sections/basics/_docs-basics-enlarged-typography
-  include docs-sections/basics/_docs-basics-initial-icons
-  include docs-sections/basics/_docs-basics-text-elements
-  include docs-sections/basics/_docs-basics-lists
-  include docs-sections/basics/_docs-basics-tables
-  include docs-sections/basics/_docs-basics-horizontal-rules
-  include docs-sections/basics/_docs-basics-form-elements
-  include docs-sections/basics/_docs-basics-buttons
-  include docs-sections/basics/_docs-basics-combos
-  include docs-sections/basics/_docs-basics-floats-and-clearfix
-  include docs-sections/basics/_docs-basics-badges
-  include docs-sections/basics/_docs-basics-labels
-  include docs-sections/basics/_docs-basics-images
+  include docs-articles/02_basic/__intro
+  include docs-articles/02_basic/_headings
+  include docs-articles/02_basic/_paragraphs
+  include docs-articles/02_basic/_initial-icons
+  include docs-articles/02_basic/_blockquotes
+  include docs-articles/02_basic/_text-alignment
+  include docs-articles/02_basic/_text-columns
+  include docs-articles/02_basic/_text-elements
+  include docs-articles/02_basic/_lists
+  include docs-articles/02_basic/_tables
+  include docs-articles/02_basic/_horizontal-rules
+  include docs-articles/02_basic/_images
+  include docs-articles/02_basic/_buttons
+  include docs-articles/02_basic/_form-elements
+  include docs-articles/02_basic/_combos
+  include docs-articles/02_basic/_badges-and-labels
+  include docs-articles/02_basic/_floats-and-clearfix
+  include docs-articles/02_basic/_text-utilities
+  include docs-articles/02_basic/_big-typography

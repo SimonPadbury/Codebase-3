@@ -3,36 +3,116 @@
 extends ../codebase/pug/_codebase
 
 block vars
-  - var title='Blog Index Example'
+  - var title="Example Blog Index | Codebase"
 
-block append head-addins
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js')
+//-block append head-addins
 
 block body
-  include _corner-codebase
-  include example-partials/_example-partials-index
+  include example-partials/__example-partials-index
 
-  +example-navbar
+  style.
+    .example-menubar,
+    .example-menubar .menu__ctrl {
+      background-color: #3d3d3d;
+      color: #bbb;
+    }
+    .example-menubar .menu__ctrl {
+    padding: 8px;
+      font-size: 1.5em;
+      transition: all 0.2s ease;
+    }
+    .example-menubar li {
+      margin: 0;
+    }
+    .example-menubar a {
+      padding: 8px 16px;
+      color: #bbb;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .example-menubar .menu__ctrl:hover,
+    .example-menubar a:hover {
+      color: #fff;
+      background-color: #5c5c5c;
+    }
+    @media (min-width: 960px) {
+      .example-menubar {
+        padding: 8px 0;
+      }
+    }
 
-  .grid
-    .col--span-12.hero
-      .holderjs(data-background-src="holder.js/1280x240")
+  .example-menubar.menu.menu--menubar-sm
+    .menu__brand
+      a(href="#/")
+        b Somebody's Blog
+    .menu__ctrl.menu__ctrl--right.fa.fa-bars
+    .menu__content
+      ul.menubar__right
+        li #[a(href="#/") Home]
+        li #[a(href="#/") About]
+        li #[a(href="#/") Contact]
 
-  .grid.grid--gutter.mv--6u
-    .col.col-md--span-9
+  .flexbox.flexbox--container
+    .flexitem--span-12.hero
+      img(src="holder.js/1280x320")
 
-      +blog-index-entry
-      +blog-index-entry
-      +blog-index-entry
-      +blog-index-entry
-      +blog-index-entry
+  .flexbox.flexbox--container.flexbox--gutter.mv--24
+    .flexitem.flexitem-md--span-9
 
-      +pagination
+      style.
+        @media (max-width: 639px) {
+          .example-blog-index-entry .media__image {
+            padding-bottom: 24px;
+            float: none;
+            text-align: center;
+          }
+        }
+        
+      
+      +blog-index-excerpts(10)
 
-    .col.col-md--span-3
-      h4 Sidebar
+      hr
+        
+      ul.pagination.deco.text--center.mb--48
+        li
+          a(href="#/")
+            i.fa.fa-arrow-left
+            =" "
+            | Newer
+        li
+          a(href="#/") 1
+        li
+          a.pagination__current(href="http://www.example.com") 2
+        li
+          a(href="#/") 3
+        li
+          a(href="#/") 4
+        li
+          a(href="#/") 5
+        li
+          a(href="#/")
+            | Older
+            =" "
+            i.fa.fa-arrow-right
 
-      +menu('Sidebar link', 12, 'menu--block')
+    .flexitem.flexitem-md--span-3
+      
+      +social
+      +blog-sidebar
 
-  .pt--6u.bg--gray-darken-2
+  .mt--48.pt--line.bg--gray-darken-2
+    style.
+      .example-big-footer p,
+      .example-big-footer a {
+        color: #bbb;
+      }
+      .example-big-footer a:hover {
+        color: #fff;
+        background-color: transparent;
+      }
     +big-footer
+
+  +codebase-bottomline
+    
+block append body-foot-addins
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>    

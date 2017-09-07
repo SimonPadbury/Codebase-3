@@ -1,0 +1,125 @@
+.docs__homepage-links
+  div
+    a(href="getting-started.html") #[i.fa.fa-play-circle.fa-fw.fa-lg] Getting Started
+  
+  div
+    a(href="basics.html") #[i.fa.fa-cubes.fa-fw.fa-lg] Basics
+  
+  div
+    a(href="layout.html") #[i.fa.fa-map.fa-fw.fa-lg] Layout
+  
+  div
+    a(href="components.html") #[i.fa.fa-cogs.fa-fw.fa-lg] Components
+  
+  div
+    a(href="decoration.html") #[i.fa.fa-paint-brush.fa-fw.fa-lg] Decoration
+  
+  div
+    a(href="examples.html") #[i.fa.fa-flask.fa-fw.fa-lg] Examples
+
+h3.mt--line Features include:
+
+p Two ways of using Codebase:
+
+ul
+  li #[a(href="getting-started.html#getting-started-simple-setup") Simple setup]: Just use #[code codebase.css] and #[code codebase.js] in your project. (jQuery not required.)
+  li.mt--line #[a(href="getting-started.html#getting-started-advanced-setup")  Advanced setup]:      
+    ul
+      li.mt--20.
+        The Codebase stylesheet has been built using  #[a(href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html") indented-syntax Sass]. You can use Sass to choose which parts of Codebase you need, to override the #[code !default] variables, and to include and extend any of the mixins.
+      li.mt--20.
+        The Codebase docs have been developed using the #[a(href="https://pugjs.org/api/getting-started.html") Pug] templating language. You can develop a static website in the same way, extending the #[code _codebase.pug] #[a(href="getting-started.html#getting-started-codebase-with-pug") starter template], and following the #[a(href="examples.html") examples]. Alternatively you may use any other HTML templating language.
+
+h3 The Codebase Stylesheets
+ 
+p.
+  Codebase styling is organised into #[a(href="basics.html") Basics] and #[a(href="components.html") Components] (analogous to #[a(href="http://atomicdesign.bradfrost.com/") Atomic Design]'s "Atoms" and "Molecules").
+
+p.
+  The styles has been created first as Sass mixins and then these are included in classes &ndash; all following #[a(href="http://getbem.com/introduction/") BEM] naming convention.
+
+p.
+  All #[a(href="codebase/sass/02_default-variables/_default-variables.sass") Codebase variables] are set with #[code !default] values, so that they can be easily overridden. And if you #[code @import] the Codebase master Sass file #[code codebase.sass], can (override and) utilize and the variables, and you can include and/or extend the mixins in your own project. 
+
+p.
+  Find out more about #[a(href="getting-started.html#getting-started-codebase-with-sass") using Codebase with Sass].
+
+h3 The Codebase Scripts
+
+p.
+  A few things in Codebase (responsive tables, showhide, dropdown, off-canvas, popovers and tabs) use some tiny JavaScripts. These are combined into one, #[code codebase.js].
+  
+p.
+  Since v.2.0 Codebase has no need for jQuery. Of course, if you add more functionality with scripts or plugins that require jQuery, go for it. Same for any other library that you may wish to use.
+  
+h3 Flexbox Layout
+
+p.
+  Codebase #[a(href="layout.html") Layout] consists of two (default) 12-column flexbox systems: #[a(href="layout.html#layout-flexbox-classes") flexbox classes] and #[a(href="layout.html#layout-flexbox-mixins") mixins].
+  
+p.
+  A range of #[a(href="layout.html#layout-invisibility") invisibility] mixins/classes have also been included.
+
+h3 Decoration Utilities
+
+p.
+  Codebase components are as minimally styled as possible. This has been done so that there is not much that you would need to override in your CSS.
+p.
+  Some minimal decorative styling can be applied by adding a #[code .deco] class to each component individually where you wish to use it. And when you don't wish to use Codebase opinionated styling, in the Sass variables file you can toggle off the #[code .deco] classes. This will result in less unused CSS.
+  
+p.
+  Codebase also has some simple #[a(href="decoration.html") decoration utility classes] &ndash; which are similar in principle to #[a(href="http://basscss.com/") BASCSS] and #[a(href="http://tachyons.io/") Tachyons].
+  
+p.
+  All margins, paddings, font sizes and line heights are built on a #[a(href="decoration.html#decoration-element-grid") 4px element grid], similar in principle to #[a(href="https://spec.fm/specifics/8-pt-grid") Spec FM's 8-Point Grid].
+
+p.
+  Codebase decorative styling uses a common set of decoration variables &ndash; which you can easily override.
+
+h3 Using Codebase with Pug
+
+p.
+  The Codebase CSS and JS files can be used with HTML directly, of course. Or you can use a templating language such as #[a( href="http://pugjs.org/") PugJS].
+
+p.
+  The Codebase documentation has been developed using Pug. Pug snippets of Codebase components have been included through the docs (look for the Pug tabs, such as in the "Get started" button example below). There are also further #[a(href="examples.html") examples].
+    
+
+p.
+  Find out more about #[a(href="getting-started.html#getting-started-codebase-with-pug") using Codebase with Pug].
+
+
+h3 MIT licence
+
+Codebase is open source software, released under the #[a(href="https://opensource.org/licenses/MIT") MIT licence]. This means:
+
+blockquote 
+  | "Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source."
+  .text--right &ndash; #[a(href="https://tldrlegal.com/license/mit-license") tl;drLegal]
+
+.tabs.deco.mt--line
+  .tab__label-wrap--right
+    .tab__label(data-tab-id="tab-docs-intro-html") HTML
+    .tab__label(data-tab-id="tab-docs-intro-pug") Pug
+
+  #tab-docs-intro-html.tab__card
+    pre.mt--zero
+      code.
+        &lt;div class="text--center"&gt;
+          &lt;a href="getting-started.html" class="btn btn--primary btn--pill"&gt;
+            Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+
+  #tab-docs-intro-pug.tab__card
+    pre.mt--zero
+      code.
+        .text--center
+          a(href="getting-started.html").btn.btn--primary.btn--pill.
+            Get started \#[i.fa.fa-arrow-right]
+            
+            
+
+.text--center
+  a(href="getting-started.html").btn.btn--primary.btn--pill.
+    Get started #[i.fa.fa-arrow-right]

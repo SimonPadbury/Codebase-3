@@ -1,0 +1,38 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-lists"
+  - var sectionTitle = "Lists"
+
+block section
+  .flexbox.flexbox--gutter
+    .flexitem.flexitem-sm--span-4
+      
+      ol
+        li List item 1
+        li List item 2
+        li List item 3
+        li List item 4
+        li List item 5
+      
+    .flexitem.flexitem-sm--span-4
+      
+      ul
+        li List item 1
+        li List item 2
+        li List item 3
+        li List item 4
+        li List item 5
+      
+
+    .flexitem.flexitem-sm--span-4
+      
+      dl
+        dt Definition list title 1
+        dd Definition list data 1 Lorem ipsum dolor sit amet
+        
+        dt Definition list title 2
+        dd Definition list data 2 Lorem ipsum dolor sit amet
+        
+        dt Definition list title 3
+        dd Definition list data 3 Lorem ipsum dolor sit amet

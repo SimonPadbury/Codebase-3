@@ -1,577 +1,872 @@
-<!DOCTYPE (doctype)>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"/>
-    <meta name="author"/>
-    <link rel="icon"/>
-    <title>Layout</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <title>Layout • Codebase</title>
+    <link rel="stylesheet" href="docs/docs-theme/css/styles.css">
   </head>
-  <body>
-    <div class="body__inner">
-      <nav class="navbar navbar--fixed docs__navbar">
-        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
-        <div class="navbar--right show--md-up">
-          <ul>
-            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="docs__main">
-        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
-        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
-          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div class="docs__sidebar-menu">
-            <h4>Docs</h4>
-            <ul>
-              <li><a href="getting-started.html">Getting Started</a></li>
-              <li><a href="basics.html">Basics</a></li>
-              <li class="current menu-marker"><a href="#layout">Layout</a>
-                <ul>
-                  <li><a href="#layout-grid-systems">Grid Systems</a></li>
-                  <li><a href="#layout-grid-classes">Grid Classes</a></li>
-                  <li><a href="#layout-grid-mixins">Grid Mixins</a></li>
-                  <li><a href="#layout-visibility">Visibility</a></li>
-                </ul>
-              </li>
-              <li><a href="components.html">Components</a></li>
-              <li><a href="decoration.html">Decoration</a></li>
-              <li><a href="examples.html">Examples</a></li>
-              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="docs__content menu-marker-wrap">
-          <header class="docs__header menu-marker-section" id="layout">
-            <h1>Layout</h1>
-          </header>
-          <div class="docs__body">
-            <div class="menu-marker-section" id="layout-grid-systems">
-              <h2 class="docs-section">Grid Systems</h2>
-              <p>In Codebase four grid systems have been provided:</p>
-              <h3><a href="layout.html#layout-grid-classes">Layout grid classes</a></h3>
-              <ul>
-                <li><b>Flexbox (default)</b> &ndash; since Codebase 2.0, the layout grid is built using flexbox by default.</li>
-                <li><b>Float (deprecated)</b> &ndash; the older float grid system still exists, but it is unavailable because of a<code>$grid-flexbox: true !default</code> toggle. Override this variable if you prefer to use a float grid.</li>
-              </ul>
-              <p>Both flexbox and float grids use the same classes (set them up the same way). The only difference visible in the browser is that in the flexbox grid, all columns within the<code>.grid</code> wrapper are the same height.</p>
-              <h3><a href="layout.html#layout-grid-mixins">Layout grid mixins</a></h3>
-              <p> (For &quot;semantic&quot; grids.)</p>
-              <ul>
-                <li><b>Flexbox mixins</b> &ndash; mixins specific to the flexbox grid are prefixed<code>flexbox-col--</code></li>
-                <li><b>Float mixins</b> &ndash; mixins specific to the float grid are prefixed<code>float-col--</code></li>
-              </ul>
-              <p>Mixins used by both are<code>grid</code>,<code>grid--gutter</code>,<code>grid--nested</code> and<code>col</code>.</p>
-              <h3>Common features of Codebase layout grids</h3>
-              <p>All four layout grid systems share the same<code>$grid-</code> variables for controlling the maximum width, number of columns and the size of the gutter. The gutter is controlled by its own class/mixin, so that you can choose whether or not a particular grid instance has a gutter or not.</p>
-              <p>The grid systems are flexible (column width is set using<code>max-width</code>, not<code>width</code>) and responsive (controlled by a set of media query breakpoint widths, which are in turn set by overridable<code>$break-</code> variables.)</p>
-              <p>All the usual variations are supported:</p>
-              <ul>
-                <li>column span</li>
-                <li>column offset</li>
-                <li>column order (flexbox grids only)</li>
-                <li>column push/pull (float grids only)</li>
-                <li>column centering (single column only)</li>
-              </ul>
-              <p>The four Codebase layout grid systems all display essentially the same in browsers new enough to handle flexbox (i.e. above IE9). The only significant difference being that the flexbox columns are the full height of their containers, not merely the height of their own content.</p>
-              <p>Incomplete grid rows? No problem. Rows can be incomplete (no &grave;.end&grave; or &grave;.omega&grave; classes required).</p>
-              <p>Surplus grid columns? No problem. Columns will wrap if they extend beyond the grid max width.</p>
-              <h3>Grids at different Media Query Breakpoints</h3>
-              <p>The Codebase media query breakpoint widths are specified by four<code>!default</code> variables.</p>
-              <p>The four grid systems can be used with or without specifying breakpoints (and with or without using grid breakpoint classes). Without breakpoints, the columns will be displayed the same (% width) whatever the window width.</p>
-              <p>This means that each grid system can have up to five window-width configurations:</p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th></th>
-                    <th> Grid classes</th>
-                    <th> Grid mixins</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Multi-column below<code>$break-xs</code></td>
-                    <td>Set columns using<code>.col--</code>.</td>
-                    <td colspan="2"> Use column mixins without wrapping them in breakpoint mixins.</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Multi-column above<code>$break-xs</code></td>
-                    <td>Set columns using<code>.col-xs--*</code></td>
-                    <td colspan="2">Wrap column mixins in<code>@include break__xs-up {...}</code></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Multi-column above<code>$break-sm</code></td>
-                    <td>Set columns using<code>.col-sm--*</code></td>
-                    <td colspan="2">Wrap column mixins in<code>@include break__sm-up {...}</code></td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Multi-column above<code>$break-md</code></td>
-                    <td>Set columns using<code>.col-md--*</code></td>
-                    <td colspan="2">Wrap column mixins in<code>@include break__md-up {...}</code></td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>Multi-column above<code>$break-lg</code></td>
-                    <td>Set columns using<code>.col-lg--*</code></td>
-                    <td colspan="2">Wrap column mixins in<code>@include break__lg-up {...}</code></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="menu-marker-section" id="layout-grid-classes">
-              <h2 class="docs-section">Layout Grid Classes</h2>
-              <p>Since Codebase 2.0, the default layout grid classes use flexbox. You can revert to the older float-based grid system by overriding the <code>$grid-flexbox</code> to false.
-                
-              </p>
-              <pre><code>$grid-flexbox: true !default;</code></pre>
-</code></pre>
-              <p> Composite responsive example:</p>
-              <section class="grid grid--gutter">
-                <div class="col col-md--span-9 col-lg--order-2 b--1px-solid">Article
-                  <section class="grid grid--gutter grid--nested">
-                    <div class="col col-sm--span-4 b--1px-solid">Nested</div>
-                    <div class="col col-sm--span-4 b--1px-solid">Nested</div>
-                    <div class="col col-sm--span-4 b--1px-solid">Nested</div>
-                  </section>
-                </div>
-                <div class="col col-md--span-3 col-lg--order-1 b--1px-solid">Aside</div>
-              </section>
-              <section class="grid">
-                <div class="col col-sm--span-7 col--centered b--1px-solid">Centered</div>
-              </section>
-              <pre><code>&lt;section class="grid grid--gutter"&gt;
-  &lt;div class="col col-md--span-8 col-lg--push-4"&gt;
-    Article
-
-    &lt;section class="grid grid--gutter grid--nested"&gt;
-      &lt;div class="col col-sm--span-4"&gt;
-        Nested
-      &lt;/div&gt;
-      &lt;div class="col col-sm--span-4"&gt;
-        Nested
-      &lt;/div&gt;
-      &lt;div class="col col-sm--span-4"&gt;
-        Nested
-      &lt;/div&gt;
-    &lt;/section&gt;
-
-  &lt;/div&gt;
-  &lt;div class="col col-md--span-4 col-lg--pull-8"&gt;
-    Aside
-  &lt;/div&gt;
-&lt;/section&gt;
-
-&lt;section class="grid grid--gutter"&gt;
-  &lt;div class="col col-sm--span-7 col--centered"&gt;
-    Centered
-  &lt;/div&gt;
-&lt;/section&gt;
-</code></pre>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width:160px">Class</th>
-                    <th>Explanation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>.grid</code></td>
-                    <td>
-                      The containing class. Sets the max width (from variable
-                      <code>$grid-max-width</code>, does centering by auto margin right and left, and includes a clearfix.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>.grid--gutter</code></td>
-                    <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
-                  </tr>
-                  <tr>
-                    <td><code>.grid--nested</code></td>
-                    <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
-                  </tr>
-                  <tr>
-                    <td><code>.col</code></td>
-                    <td>Float left. Min height 1px. (Applies padding gutter.)</td>
-                  </tr>
-                  <tr>
-                    <td><code>.col--centered</code></td>
-                    <td>No float. Instead, centering is accomplished by auto margin right and left.</td>
-                  </tr>
-                  <tr>
-                    <td><code>.col--*</code><br/><code>.col-xs--*</code><br/><code>.col-sm--*</code><br/><code>.col-md--*</code><br/><code>.col-lg--*</code></td>
-                    <td>Controlling the column behaviour (at different breakpoints). Except for <code>.col--*</code> all columns expand to 100% of their container width below their breakpoint.</td>
-                  </tr>
-                  <tr>
-                    <td><code>*--span-*</code></td>
-                    <td>
-                      Column spanning (at different breakpoints), as calculated out of max
-                      <code>$grid-max-cols</code> (default is 12).
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>*--offset-*</code></td>
-                    <td>Column offsetting from the left (at different breakpoints), as calculated out of max <code>$grid-max-cols</code> (default is 12).</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><b>Flexbox grid only (default):</b></td>
-                  </tr>
-                  <tr>
-                    <td><code>*--order-*</code></td>
-                    <td>Column (re-)ordering (at different breakpoints), as calculated out of max <code>$grid-max-cols</code> (default is 12).</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2"><b>Float grid only (deprecated):</b></td>
-                  </tr>
-                  <tr>
-                    <td><code>*--push-*</code></td>
-                    <td>Column pushing to the right (at different breakpoints), as calculated out of max <code>$grid-max-cols</code> (default is 12).</td>
-                  </tr>
-                  <tr>
-                    <td><code>*--pull-*</code></td>
-                    <td>
-                      Column pullling to the left (at different breakpoints), as calculated out of max <code>$grid-max-cols</code>(default is 12).
-                      
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3>Column spans</h3>
-              <p><code>--span-</code></p>
-              <section class="grid">
-                <div class="col col--span-12 b--1px-solid">.col--span-12</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-11 b--1px-solid">.col--span-11</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-10 b--1px-solid">.col--span-10</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-9 b--1px-solid">...</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-8 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-7 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-6 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-5 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-4 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-3 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-2 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-                <div class="col col--span-1 b--1px-solid">&nbsp;</div>
-              </section>
-              <h3>Column offsets</h3>
-              <p><code>--offset-</code></p>
-              <section class="grid">
-                <div class="col col--span-1 col--offset-1 b--1px-solid">*-1</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-1 col--offset-2 b--1px-solid">*-2</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-1 col--offset-3 b--1px-solid">*-3</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-1 col--offset-4">&nbsp; ...</div>
-              </section>
-              <section class="grid">
-                <div class="col col--span-1 col--offset-11 b--1px-solid">*-11</div>
-              </section>
-              <h3>Column (re-)ordering</h3>
-              <p><code>--order-</code></p>
-              <section class="grid">
-                <div class="col col--span-3 col--order-2 b--1px-solid">(1st) *-order-3</div>
-                <div class="col col--span-3 col--order-1 b--1px-solid">(2nd) *-order-1</div>
-                <div class="col col--span-3 col--order-2 b--1px-solid">(3rd) *-order-4</div>
-                <div class="col col--span-3 col--order-1 b--1px-solid">(4th) *-order-2</div>
-              </section><br/>
-              <p class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-info-circle text--teal-darken-1"></i>
-                <In>the flexbox grid system, the <code>code --order-</code> number relates to column order [higher or lower number] &ndash; use this rearrange the displayed order of the columns.</In><br/><br/>See <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/')> https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a> for more information.<br/><br/>Overriding <code>$grid-flexbox: true !default;</code> will prevent the generation of these column order classes and generate a set of push/pull classes for the float grid (<code>--push-</code> / <code>--pull-</code>) instead.
-              </p>
-            </div>
-            <div class="menu-marker-section" id="layout-grid-mixins">
-              <h2 class="docs-section">Layout Grid Mixins</h2>
-              <p>Composite responsnive grid example using flexbox column mixins:</p>
-              <section class="your-grid-wrapper">
-                <div class="your-article-column b--1px-solid">Article
-                  <section class="your-nested-grid-wrapper">
-                    <div class="b--1px-solid">Nested</div>
-                    <div class="b--1px-solid">Nested</div>
-                    <div class="b--1px-solid">Nested</div>
-                  </section>
-                </div>
-                <div class="your-sidebar-column b--1px-solid">Aside</div>
-              </section>
-              <section class="your-grid-wrapper">
-                <div class="your-centered-column b--1px-solid">Centered</div>
-              </section>
-              <section class="your-twelths-grid-wrapper">
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-                <div class="twelth b--1px-solid">&nbsp;</div>
-              </section>
-              <pre class="docs__code"></pre>
-              <p>The Codebase grid mixins are named similar to the Codebase classic grid classes (but prefixed either with <code>$flexbox-</code> or <code>$float-</code>.
-                
-              </p>
-              <p>
-                i (The float mixins are not exemplified in these docs.)
-                
-              </p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width:290px">Mixin</th>
-                    <th>Explanation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><code>@mixin grid</code></td>
-                    <td>
-                      The container mixin. Sets the max width (from variable <code>code $grid-max-width</code> ), does centering by auto margin right and left. If you have more columns (or column width) than the grid container width, wrapping is handled by <code>flex-wrap: wrap;</code>
-                      br
-                      br
-                      | If a grid container doesn't have the grid mixin included, then a grid system will expand to whatever the width of the container is, without maxing out at <code>$grid-max-width</code>. E.g. it could expand to the BODY width.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin grid--gutter</code></td>
-                    <td>Gives right and left padding to all immediate child block elements (i.e. columns).</td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin grid--nested</code></td>
-                    <td>Gives negative right and left margin to the grid container equal to the gutter width, so that a nested grid is flush right and left inside their containing column.</td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin col</code></td>
-                    <td>(Min height 1px.)</td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin flexbox-col--span(X)</code></td>
-                    <td>Column spanning, as calculated out of <code>$grid-max-cols</code> (default is 12).</td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin flexbox-col--offset(X)</code></td>
-                    <td>
-                      <Offsetting>is accomplished by adding to <code>margin-left</code> (while <code>margin-right: auto;</code> , as calculated out of</Offsetting><code>$grid-max-cols</code> (default is 12).<br/><br/><b>Note:</b> Only use <code>flexbox-col--offset(X)</code> if you have <i>sufficiently fewer</i> columns in a grid container &ndash; because this offsetting cannot force surplus columns (widths) to wrap on to a new 'row' within the wrapper.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin flexbox-col--order(X)</code></td>
-                    <td>Column (re-)ordering.</td>
-                  </tr>
-                  <tr>
-                    <td><code>@mixin flexbox-col--centered(X)</code></td>
-                    <td>
-                      Centering is accomplished by auto margin right and left. Column spanning is as calculated out of <code>$grid-max-cols</code> (default is 12).
-                      
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>Float grid mixins are similar. Use them as in the following includes:</p>
-              <ul>
-                <li><code>@include grid</code>*</li>
-                <li><code>@include grid--gutter</code>*</li>
-                <li><code>@include grid--nested</code>*</li>
-                <li><code>@include col</code>*</li>
-                <li><code>@include float-col--span(X)</code></li>
-                <li><code>@include float-col--offset(X)</code></li>
-                <li><code>@include float-col--push(X)</code></li>
-                <li><code>@include float-col--pull(X)</code></li>
-                <li><code>@include float-col--centered(X)</code></li>
-              </ul>
-              <p>*These are the same mixins as are used with the flexbox column mixins.</p>
-            </div>
-            <div class="menu-marker-section" id="layout-visibility">
-              <h2 class="docs-section">Visibility</h2>
-              <p>
-                A full range of <code>*-down</code>, <code>*-only</code> and <code>*-up</code> visibility mixins have been built based on the Codebase media query breakpoint variables.
-                
-              </p>
-              <p>
-                You can include these mixins directly in your project. Classes have also been built from each of these mixins.
-                
-              </p>
-              <p class="text--center"><i class="fa fa-check"></i> = visible</p>
-              <style>
-                .visibility-example {
-                margin: -8px;
-                padding: 8px;
-                }
-                
-              </style>
-              <table class="table table--nowrap">
-                <thead>
-                  <tr>
-                    <th>Mixin / Class</th>
-                    <th>Example</th>
-                    <th>xs</th>
-                    <th>sm</th>
-                    <th>md</th>
-                    <th>lg</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>hide--xs-only (= show--sm-up)</td>
-                    <td>
-                      <div class="hide--xs-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                  </tr>
-                  <tr>
-                    <td>hide--sm-only</td>
-                    <td>
-                      <div class="hide--sm-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                  </tr>
-                  <tr>
-                    <td>hide--md-only</td>
-                    <td>
-                      <div class="hide--md-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                  </tr>
-                  <tr>
-                    <td>hide--lg-only (= show--md-down)</td>
-                    <td>
-                      <div class="hide--lg-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>show--xs-only (= hide--sm-up)</td>
-                    <td>
-                      <div class="show--xs-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>show--sm-only</td>
-                    <td>
-                      <div class="show--sm-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>show--md-only</td>
-                    <td>
-                      <div class="show--md-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>show--lg-only (= hide--md-down)</td>
-                    <td>
-                      <div class="show--lg-only p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                  </tr>
-                  <tr>
-                    <td>hide--md-up (= show--sm-down)</td>
-                    <td>
-                      <div class="hide--md-up p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>hide--sm-down (= show--md-up)</td>
-                    <td>
-                      <div class="hide--sm-down p--block bg--green text--white visibility-example"> Example</div>
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                    <td class="bg--gray text--white"><i class="fa fa-check"></i></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
-               version 2.x PREVIEW
-              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
-        </div>
+  <body class="docs__chapter">
+    <div class="menubar menubar--fixed codebase--nav-top">
+      <div class="menubar__brand codebase__brand"><a class="text--nowrap" href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
+            <g fill="#ffffff">
+              <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
+            </g>
+          </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></div>
+      <div class="menubar__content">
+        <ul class="menubar__right hide--sm-down">
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download"></i> Download</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github"></i> GitHub</a></li>
+        </ul>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="codebase/js/codebase.js"></script>
+    <div class="docs__main">
+      <div class="off-canvas__ctrl off-canvas__ctrl--docs off-canvas__ctrl--right off-canvas__ctrl--fixed hide--md-up" data-content-id="sidebar-1"><span class="hide--sm-down">Docs</span> <span class="hide--sm-up">Menu</span> <i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="docs__nav off-canvas__content off-canvas__content--md off-canvas__content--right off-canvas__content--fixed" id="sidebar-1">
+        <div class="off-canvas__close off-canvas__close--right hide--md-up text--big-text p--4"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+        <ul>
+          <li class="hide--md-down"><a href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
+                <g fill="#ffffff">
+                  <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
+                </g>
+              </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></li>
+          <li class="hide--sm-up"><a href="#/"><i class="fa fa-home fa-fw fa-lg"></i> Home</a></li>
+          <li><a href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a></li>
+          <li><a href="basics.html"><i class="fa fa-cubes fa-fw fa-lg"></i> Basics</a></li>
+          <li><a class="this-page" href="layout.html"><i class="fa fa-map fa-fw fa-lg"></i> Layout</a>
+            <div class="docs__nav--sub-nav">
+              <ul class="menu deco">
+                <li><a href="#layout-flexbox-systems">Flexbox Systems</a></li>
+                <li><a href="#layout-flexbox-variables">Flexbox Variables</a></li>
+                <li><a href="#layout-flexbox-classes">Flexbox Classes</a></li>
+                <li><a href="#layout-flexbox-mixins">Flexbox Mixins</a></li>
+                <li><a href="#layout-invisibility">Invisibility</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="components.html"><i class="fa fa-cogs fa-fw fa-lg"></i> Components</a></li>
+          <li><a href="decoration.html"><i class="fa fa-paint-brush fa-fw fa-lg"></i> Decoration</a></li>
+          <li><a href="examples.html"><i class="fa fa-flask fa-fw fa-lg"></i> Examples</a></li>
+          <li class="hide--sm-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download fa-fw fa-lg"></i> Download</a></li>
+          <li class="hide--sm-up"><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github fa-fw fa-lg"></i> GitHub</a></li>
+        </ul>
+      </div>
+      <div class="docs__docs-content">       
+        <header>
+          <h1>Layout</h1>
+        </header>
+        <main>
+          <article>
+            <div class="docs__section" id="layout-flexbox-systems">
+              <header>
+                <h2>Flexbox Systems</h2>
+              </header>
+              <section>
+                <p>Since Codebase 2.0, the flexbox layout mixins and classes formerly using the word "grid" have been renamed simply as layout <code>flexbox</code> and "col" (column) has been renamed as <code>flexitem</code>. This has been done so that the word "grid" can instead be used in the names of mixins and classes to refer to the new CSS grid specification.
+                  
+                </p>
+                <table class="table deco">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Mixin (prefix)</th>
+                      <th>Class (prefix)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>The flexbox block</td>
+                      <td><code>+flexbox</code></td>
+                      <td><code>.flexbox</code></td>
+                    </tr>
+                    <tr>
+                      <td>The flex-item element (immediate child)</td>
+                      <td><code>+flexitem</code></td>
+                      <td><code>.flexitem</code></td>
+                    </tr>
+                  </tbody>
+                </table><br>
+                <p>
+                  In the Codebase flexbox system, all the following options are supported:
+                  
+                </p>
+                <ul>
+                  <li>Flexitem span</li>
+                  <li>Flexitem offseting</li>
+                  <li>Flexitem (re)ordering</li>
+                  <li>Flexitem centering (horizontally) and/or middling (vertically)</li>
+                </ul>
+                <p><i>Incomplete flexitem "rows"?</i> No problem. Flexbox "rows" can be incomplete. The last flexitem does not expand to occupy the unused space. No additional "end" classes required.
+                  
+                </p>
+                <p><i>Surplus horizontal flexitems ("columns")?</i> No problem. Flexitems will automatically wrap if they extend beyond the flexbox container max width. The last flexitem does not expand to occupy the unused space. No additional "end" classes required.
+                  
+                </p>
+                <h3>Flexboxes at different Media Query Breakpoints</h3>
+                <p>The Codebase media query breakpoint widths are specified by four <code>!default</code> variables.
+                  
+                </p>
+                <p>
+                  Flexboxes can be used with or without specifying breakpoints (and with or without using breakpoint classes). Without breakpoints, the flexitems will be displayed the same (% width) whatever the window width.
+                  
+                </p>
+                <p>
+                  This means that each flexbox system can have up to five viewport width configurations:
+                  
+                </p>
+                <table class="table deco">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th style="width: 160px;"> <code>.flexitem</code> classes</th>
+                      <th> <code>+flexitem</code> mixins</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Multi-column below<code>$mq--xs</code></td>
+                      <td><code>.flexitem--*</code></td>
+                      <td colspan="2"> Use flexitem mixins without wrapping them in breakpoint mixins.</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Multi-column above<code>$mq--xs</code></td>
+                      <td><code>.flexitem-xs--*</code></td>
+                      <td colspan="2">Wrap flexitem mixins in <br> <code>+break--min($mq--xs)</code> {...}</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Multi-column above<code>$mq--sm</code></td>
+                      <td><code>.flexitem-sm--*</code></td>
+                      <td colspan="2">Wrap flexitem mixins in <br> <code>+break--min($mq--sm)</code> {...}</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Multi-column above<code>$mq--md</code></td>
+                      <td><code>.flexitem-md--*</code></td>
+                      <td colspan="2">Wrap flexitem mixins in <br> <code>+break--min($mq--md)</code> {...}</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Multi-column above<code>$mq--lg</code></td>
+                      <td><code>.flexitem-lg--*</code></td>
+                      <td colspan="2">Wrap flexitem mixins in <br> <code>+break--min($mq--lg)</code> {...}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="layout-flexbox-variables">
+              <header>
+                <h2>Flexbox Variables</h2>
+              </header>
+              <section>
+                <p>Codebase flexbox systems use the following variables:</p>
+                <table class="table deco">
+                  <thead>
+                    <tr>
+                      <th>Variable</th>
+                      <th>Value</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="text--nowrap">$mq--xs</code></td>
+                      <td><code class="text--nowrap">320px !default</code></td>
+                      <td>
+                        <Break-point>for extra-small viewports (e.g. phones, portrait).</Break-point>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">$mq--sm</code></td>
+                      <td><code class="text--nowrap">640px !default</code></td>
+                      <td>
+                        <Break-point>for small viewports (e.g. phones, landscape; tablets, portrait).</Break-point>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">$mq--md</code></td>
+                      <td><code class="text--nowrap">960px !default</code></td>
+                      <td>Break-point for medium viewports (e.g. tablets, landscape).</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">$mq--lg</code></td>
+                      <td><code class="text--nowrap">1280px !default</code></td>
+                      <td>Break-point for large viewports (e.g. laptops, desktops).</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">$max-flexitems</code></td>
+                      <td><code class="text--nowrap">12 !default</code></td>
+                      <td>The default Codebase flexbox system has up to 12 columns (flexitems), each 1/12 of the flexbox max width.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">$flexbox--max-width</code></td>
+                      <td><code class="text--nowrap">1280px !default</code></td>
+                      <td>Maximum width of the modifiers <code>+flexbox--container</code> mixin and <code>.flexbox--container</code> class. For wider viewports the flexbox is centered by auto-margins right and left.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">$flexbox--gutter-width</code></td>
+                      <td><code class="text--nowrap">$spacing--24 !default</code></td>
+                      <td>
+                        <Half>of the gutter width is used as margin either side of each flexbox column. (See <a href="decoration.html#decoration-element-grid">element grid</a> for units.)          </Half>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="layout-flexbox-classes">
+              <header>
+                <h2>Flexbox Classes</h2>
+              </header>
+              <section>
+                <p> Composite responsive flexbox example:</p>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem-sm--span-9 flexitem-lg--order-2">
+                    <div class="bg--purple mb--4 p--4 text--white">Article</div>
+                    <div class="flexbox flexbox--gutter flexbox--nested">
+                      <div class="flexitem flexitem-sm--span-4">
+                        <div class="bg--purple mb--4 p--4 text--white">Nested</div>
+                      </div>
+                      <div class="flexitem flexitem-sm--span-4">
+                        <div class="bg--purple mb--4 p--4 text--white">Nested</div>
+                      </div>
+                      <div class="flexitem flexitem-sm--span-4">
+                        <div class="bg--purple mb--4 p--4 text--white">Nested</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexitem flexitem-sm--span-3 flexitem-lg--order-1"> 
+                    <div class="bg--purple mb--4 p--4 text--white">Aside</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--center">
+                  <div class="flexitem flexitem--span-7"> 
+                    <div class="bg--purple mb--4 p--4 text--white">Centered (at all viewport widths)</div>
+                  </div>
+                </div>
+                <div class="tabs deco mt--24">
+                  <div class="tab__label-wrap--right">
+                    <div class="tab__label" data-tab-id="tab-docs-flexbox-classes-html">HTML</div>
+                    <div class="tab__label" data-tab-id="tab-docs-flexbox-classes-pug">Pug</div>
+                  </div>
+                  <div class="tab__card" id="tab-docs-flexbox-classes-html">
+                    <pre class="mt--zero"><code>&lt;div class="flexbox flexbox--gutter"&gt;
+  &lt;div class="flexitem flexitem-md--span-9 flexitem-lg--order-2"&gt;
+    Article
+
+    &lt;div class="flexbox flexbox--gutter flexbox--nested"&gt;
+      &lt;div class="flexitem flexitem-sm--span-4"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="flexitem flexitem-sm--span-4"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="flexitem flexitem-sm--span-4"&gt;
+        Nested
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class="flexitem flexitem-md--span-3 col-lg--order-1"&gt;
+    Aside
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="flexbox flexbox--center"&gt;
+  &lt;div class="flexitem flexitem--span-7"&gt;
+    Centered (at all viewport widths)
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                  </div>
+                  <div class="tab__card" id="tab-docs-flexbox-classes-pug">
+                    <pre class="mt--zero"><code>.flexbox.flexbox--gutter
+  .flexitem.flexitem-md--span-9.flexitem-lg--order-2
+    | Article
+    
+    .flexbox.flexbox--gutter.flexbox--nested
+      .flexitem.flexitem-sm--span-4
+        | Nested
+      .flexitem.flexitem-sm--span-4
+        | Nested
+      .flexitem.flexitem-sm--span-4
+        | Nested
+  
+  .flexitem.flexitem-md--span-3.col-lg--order-1
+    | Aside
+
+.flexbox.flexbox--center
+  .flexitem.flexitem--span-7
+    | Centered (at all viewport widths)
+  </code></pre>
+                  </div>
+                </div>
+                <table class="table deco">
+                  <thead>
+                    <tr>
+                      <th style="width:160px;">Class</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code class="text--nowrap">.flexbox</code></td>
+                      <td>The container class. Sets up the flexbox. Its width is unconstrained.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexbox--container</code></td>
+                      <td>The <code>.flexbox--container</code> block modifier constrains the flexbox to <code>$flexbox--max-width</code> and, on wider viewports, centers the flexbox by auto-margins right and left.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexbox--gutter</code></td>
+                      <td>Gives right and left padding to all immediate child block elements (i.e. flexitems).</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexbox--nested</code></td>
+                      <td>Gives negative right and left margin to the flexbox container equal to the gutter width, so that a nested flexbox is flush right and left inside their containing flexitem.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexbox--center</code></td>
+                      <td>Applied to the flexbox container, this will horizontally center any number of flexitems.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexbox--middle</code></td>
+                      <td>Applied to the flexbox container, this will vertically center any number of flexitems.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexitem</code></td>
+                      <td>The immediate child ("column" or "row") base class. It has a fallback to <code>width: 100%</code> for causing a flexitem to become full-width when the viewport is below the lowest flexitem span breakpoint.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">.flexitem--*</code><br><code class="text--nowrap">.flexitem-xs--*</code><br><code class="text--nowrap">.flexitem-sm--*</code><br><code class="text--nowrap">.flexitem-md--*</code><br><code class="text--nowrap">.flexitem-lg--*</code></td>
+                      <td>Controlling the column (flexitem) width behaviour at different breakpoints. Except for <code>.flexitem--*</code> all flexitems expand to width: 100%] of their container width below their breakpoint.</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">*--span-*</code></td>
+                      <td>Flexitem spanning at different breakpoints using % widths (<b>note:</b> not using flex-grow), as calculated out of max
+                        <code>$max-flexitems</code> (default is 12).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">*--offset-*</code></td>
+                      <td>Flexitem offsetting (at different breakpoints), as calculated out of max <code>$max-flexitems</code> (default is 12).</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">*--order-*</code></td>
+                      <td>
+                        Flexitem (re-)ordering (at different breakpoints).
+                        
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Flexitem spans</h3>
+                <p><code>--span-</code></p>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-12">
+                    <div class="bg--brown mb--4 p--4 text--white">.flexitem--span-12</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-11">
+                    <div class="bg--brown mb--4 p--4 text--white">.flexitem--span-11</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-10">
+                    <div class="bg--brown mb--4 p--4 text--white">.flexitem--span-10</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-9">
+                    <div class="bg--brown mb--4 p--4 text--white">...</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-8">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-7">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-6">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-5">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-4">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-3">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-2">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                  <div class="flexitem flexitem--span-1">
+                    <div class="bg--brown mb--4 p--4 text--white">&nbsp;</div>
+                  </div>
+                </div>
+                <h3 class="mt--line">Flexitem offsets</h3>
+                <p><code>--offset-</code></p>
+                <div class="flexbox">
+                  <div class="flexitem flexitem--span-1 flexitem--offset-1">
+                    <div class="bg--pink mb--4 p--4 text--white">*-1</div>
+                  </div>
+                </div>
+                <div class="flexbox">
+                  <div class="flexitem flexitem--span-1 flexitem--offset-2">
+                    <div class="bg--pink mb--4 p--4 text--white">*-2</div>
+                  </div>
+                </div>
+                <div class="flexbox">
+                  <div class="flexitem flexitem--span-1 flexitem--offset-3">
+                    <div class="bg--pink mb--4 p--4 text--white">*-3</div>
+                  </div>
+                </div>
+                <div class="flexbox">
+                  <div class="flexitem flexitem--span-1 flexitem--offset-4">
+                    <div class="bg--pink mb--4 p--4 text--white">&nbsp; ...</div>
+                  </div>
+                </div>
+                <div class="flexbox">
+                  <div class="flexitem flexitem--span-1 flexitem--offset-11">
+                    <div class="bg--pink mb--4 p--4 text--white">*-11</div>
+                  </div>
+                </div>
+                <h3>Flexitem (re-)ordering</h3>
+                <p><code>--order-</code></p>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem--span-3 flexitem--order-2">
+                    <div class="bg--yellow mb--4 p--4 text--white">(1st) *--order-3</div>
+                  </div>
+                  <div class="flexitem flexitem--span-3 flexitem--order-1">
+                    <div class="bg--yellow mb--4 p--4 text--white">(2nd) *--order-1</div>
+                  </div>
+                  <div class="flexitem flexitem--span-3 flexitem--order-2">
+                    <div class="bg--yellow mb--4 p--4 text--white">(3rd) *--order-4</div>
+                  </div>
+                  <div class="flexitem flexitem--span-3 flexitem--order-1">
+                    <div class="bg--yellow mb--4 p--4 text--white">(4th) *--order-2</div>
+                  </div>
+                </div><br>
+                <p><b>Notes on flexitem (re-)ordering:</b></p>
+                <ol>
+                  <li>If you require column re-ordering, specify the order of <i>all</i> flexitems in your flexbox.</li>
+                  <li>If at a higher breakpoint you need columns to revert to their normal order (as in the HTML), then you can use --order-0] (e.g. <code>.flexitem-lg--order-0</code>).
+                    
+                  </li>
+                </ol>
+                <h3>Flexbox centering and middling</h3>
+                <p>Centering and middling is applied to the flexbox container (not to each flexitem). One or more flexitems can be included in the flexbox container.</p>
+                <p><code>.flexbox--center</code> &ndash; <b>note:</b> the flexbox container width needs to be wider than the width of the flexitem.</p>
+                <div class="flexbox flexbox--center b--dashed">
+                  <div class="flexitem flexitem--span-2 p--4 bg--orange">Centered</div>
+                  <div class="flexitem flexitem--span-2 p--4 bg--yellow">Centered</div>
+                  <div class="flexitem flexitem--span-2 p--4 bg--green">Centered</div>
+                </div><br>
+                <p><code>.flexbox--middle</code> &ndash; <b>note:</b> the flexbox container height needs to be taller than the height of the flexitem.</p>
+                <div class="flexbox flexbox--middle b--dashed" style="height: 150px;">
+                  <div class="flexitem flexitem--span-2 p--4 bg--orange">Middled</div>
+                  <div class="flexitem flexitem--span-2 p--4 bg--yellow">Middled</div>
+                  <div class="flexitem flexitem--span-2 p--4 bg--green">Middled</div>
+                </div><br>
+                <p><code>.flexbox--center.flexbox--middle</code></p>
+                <div class="flexbox flexbox--center flexbox--middle b--dashed" style="height: 150px;">
+                  <div class="flexitem flexitem--span-2 p--4 bg--orange">Centered and middled</div>
+                  <div class="flexitem flexitem--span-2 p--4 bg--yellow">Centered and middled</div>
+                  <div class="flexitem flexitem--span-2 p--4 bg--green">Centered and middled</div>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="layout-flexbox-mixins">
+              <header>
+                <h2>Flexbox Mixins</h2>
+              </header>
+              <section>
+                <p>Using Codebase flexbox and flexitem mixins in an example semantic* layout system:</p>
+                <div class="your-flexbox-container">
+                  <div class="your-article-flexitem">
+                    <div class="bg--green-darken-1 mb--4 p--4 text--white">Article</div>
+                    <div class="your-nested-flexbox-container">
+                      <div class="your-nested-flexitem">
+                        <div class="bg--green-darken-1 mb--4 p--4 text--white">Nested</div>
+                      </div>
+                      <div class="your-nested-flexitem">
+                        <div class="bg--green-darken-1 mb--4 p--4 text--white">Nested</div>
+                      </div>
+                      <div class="your-nested-flexitem">
+                        <div class="bg--green-darken-1 mb--4 p--4 text--white">Nested</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="your-sidebar-flexitem">
+                    <div class="bg--green-darken-1 mb--4 p--4 text--white">Aside</div>
+                  </div>
+                </div>
+                <div class="your-flexbox-container">
+                  <div class="your-centered-flexitem">
+                    <div class="bg--green-darken-1 mb--4 p--4 text--white">Centered</div>
+                  </div>
+                </div>
+                <p>*Classes can be named as whatever is suitable in your design.</p>
+                <div class="tabs deco mt--24">
+                  <div class="tab__label-wrap--right">
+                    <div class="tab__label" data-tab-id="tab-docs-flexbox-semantic-html">HTML</div>
+                    <div class="tab__label" data-tab-id="tab-docs-flexbox-semantic-sass">Sass</div>
+                  </div>
+                  <div class="tab__card" id="tab-docs-flexbox-semantic-html">
+                    <pre class="mt--zero"><code>&lt;div class="your-flexbox-container"&gt;
+  &lt;div class="your-article-column"&gt;
+    Article
+
+    &lt;div class="your-nested-flexbox-container"&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+      &lt;div class="your-nested-column"&gt;
+        Nested
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class="your-sidebar-column"&gt;
+    Aside
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="your-flexbox-container"&gt;
+  &lt;div class="your-centered-column"&gt;
+    Centered
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                  </div>
+                  <div class="tab__card" id="tab-docs-flexbox-semantic-sass">
+                    <pre class="mt--zero"><code>.your-flexbox-container
+  +flexbox
+  +flexbox--gutter
+  +flexbox--nested
+
+.your-article-flexitem
+  +flexitem
+  +break--min($mq--sm)
+    +flexitem--span(9)
+  +break--min($mq--lg)
+    +flexitem--order(2)
+
+.your-sidebar-flexitem
+  +flexitem
+  +break--min($mq--sm)
+    +flexitem--span(3)
+  +break--min($mq--lg)
+    +flexitem--order(1)
+
+.your-nested-flexbox-container
+  +flexbox
+  +flexbox--gutter
+  +flexbox--nested
+
+.your-nested-flexitem
+  +flexitem
+  +break--min($mq--sm)
+    +flexitem--span(4)
+
+.your-centered-flexitem
+  +flexitem
+  +flexitem--centered(7)
+
+</code></pre>
+                  </div>
+                </div>
+                <p>
+                  The Codebase semantic flexbox and flexitem mixins are named similar to the Codebase classic flexbox and flexitem classes. However, note that there are no breakpoints built into these mixins &ndash; you can apply them in your Sass as in the example above.
+                  
+                </p>
+                <table class="table deco">
+                  <thead>
+                    <tr>
+                      <th style="width: 200px;">Mixin</th>
+                      <th>Explanation</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>+flexbox</code></td>
+                      <td>The container mixin. Sets the max width (from variable  <code>$flexbox--max-width</code>), does centering by auto margin right and left. If you have more columns (or column width) than the flexbox container width, wrapping is handled by <code>flex-wrap: wrap;</code>
+                        <br>
+                        <br>
+                        If a flexbox container doesn't have the flexbox mixin included, then a flexbox system will expand to whatever the width of the container is, without maxing out at <code>$flexbox--max-width</code>. E.g. it could expand to the <code>&lt;body&gt;</code> width.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexbox--container</code></td>
+                      <td>
+                        <The><code>+flexbox--container</code> block modifier constrains the flexbox to <code>$flexbox--max-width</code> and, on wider viewports, centers the flexbox by auto-margins right and left.</The>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexbox--gutter</code></td>
+                      <td>Gives right and left padding to all immediate child block elements (flexitems).</td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexbox--nested</code></td>
+                      <td>Gives negative right and left margin to the flexbox container equal to the gutter width, so that a nested flexbox is flush right and left inside their containing column.</td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexbox--center</code></td>
+                      <td>
+                        <Applied>to the flexbox container, this will horizontally center any number of flexitems.</Applied>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexbox--middle</code></td>
+                      <td>
+                        <Applied>to the flexbox container, this will vertically center any number of flexitems.</Applied>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexitem</code></td>
+                      <td>The flexitem base mixin.</td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexitem--span(X)</code></td>
+                      <td>Column spanning using % widths (<b>note:</b> not using flex-grow), as calculated out of <code>$max-flexitems</code> (default is 12).</td>
+                    </tr>
+                    <tr>
+                      <td><code class="text--nowrap">+flexitem--offset(X)</code></td>
+                      <td>
+                        <Flexitem>offsetting (at different breakpoints), as calculated out of max <code>$max-flexitems</code> (default is 12).</Flexitem>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><code>+flexitem--order(X)</code></td>
+                      <td>Column (re-)ordering.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="layout-invisibility">
+              <header>
+                <h2>Invisibility</h2>
+              </header>
+              <section>
+                <p>
+                  A range of invisibility mixins have been built based on the Codebase media query breakpoint variables.
+                  
+                </p>
+                <p>
+                  You can include these mixins directly in your project. Classes have also been built from each of these mixins.
+                  
+                </p>
+                <p class="text--center"><span class="fa fa-times"></span> = invisible</p>
+                <style>
+                  .invisibility-example {
+                  margin: -8px -12px;
+                  padding: 8px 12px;
+                  }
+                  
+                </style>
+                <table class="table table--nowrap deco">
+                  <thead>
+                    <tr>
+                      <th>Mixin / Class</th>
+                      <th>Example</th>
+                      <th>xs-down</th>
+                      <th>xs-sm</th>
+                      <th>sm-md</th>
+                      <th>md-lg</th>
+                      <th>lg-up</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bt--thick">
+                      <td><code>hide--xs-down</code></td>
+                      <td>
+                        <div class="hide--xs-down p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>hide--sm-down</code></td>
+                      <td>
+                        <div class="hide--sm-down p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>hide--md-down</code></td>
+                      <td>
+                        <div class="hide--md-down p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>hide--lg-down</code></td>
+                      <td>
+                        <div class="hide--lg-down p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td></td>
+                    </tr>
+                    <tr class="bt--thick">
+                      <td><code>hide--xs-up</code></td>
+                      <td>
+                        <div class="hide--xs-up p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                      <td><code>hide--sm-up</code></td>
+                      <td>
+                        <div class="hide--sm-up p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                      <td><code>hide--md-up</code></td>
+                      <td>
+                        <div class="hide--md-up p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                    </tr>
+                    <tr>
+                      <td><code>hide--lg-up</code></td>
+                      <td>
+                        <div class="hide--lg-up p--block bg--green text--white invisibility-example">Example</div>
+                      </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="text--center"><i class="fa fa-times"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h3>Notes</h3>
+                <ol>
+                  <li><b>There are no Codebase</b> <code>.show--</code> <b>classes</b>. Therefore, if you need something to be visible only at some viewport widths and not others, then what you need to do is use the appropriate <code>.hide--*</code> class so that it will not be visible at viewport widths where you don't want it to be.</li>
+                  <li>If you need something to be visible only at a mid-range viewport width, then use two <code>.hide--*</code> classes: one to hide the thing at lower viewport widths and one to hide it at higher viewport widths. E.g.
+                    
+                  </li>
+                </ol>
+                <pre><code>// A div that is ONLY visible at medium viewport widths:
+
+&lt;div class="hide--md-down hide--lg-up"&gt; ... &lt;/div&gt;
+</code></pre>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>For an example of where this has been done, see the <b>viewport indicator</b> (fixed to the bottom-right corner) in these docs.</p>
+              </section>
+            </div>
+          </article>
+        </main>
+        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta |
+            <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> |
+            Built by <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
+      </div>
+    </div>
+    <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
+    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,846 +1,1010 @@
-<!DOCTYPE (doctype)>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"/>
-    <meta name="author"/>
-    <link rel="icon"/>
-    <title>Basics</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <title>Basics • Codebase</title>
+    <link rel="stylesheet" href="docs/docs-theme/css/styles.css">
   </head>
-  <body>
-    <div class="body__inner">
-      <nav class="navbar navbar--fixed docs__navbar">
-        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
-        <div class="navbar--right show--md-up">
-          <ul>
-            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="docs__main">
-        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
-        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
-          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div class="docs__sidebar-menu">
-            <h4>Docs</h4>
-            <ul>
-              <li><a href="getting-started.html">Getting Started</a></li>
-              <li class="current menu-marker"><a href="#basics">Basics</a>
-                <ul>
-                  <li><a href="#basics-headings">Headings</a></li>
-                  <li><a href="#basics-paragraphs">Paragraphs</a></li>
-                  <li><a href="#basics-blockquotes">Blockquotes</a></li>
-                  <li><a href="#basics-text-alignment">Text Alignment</a></li>
-                  <li><a href="#basics-text-columns">Text Columns</a></li>
-                  <li><a href="#basics-enlarged-typography">Enlarged Typography</a></li>
-                  <li><a href="#basics-initial-icons">Initial Icons</a></li>
-                  <li><a href="#basics-text-elements">Simple Text Elements</a></li>
-                  <li><a href="#basics-lists">Lists</a></li>
-                  <li><a href="#basics-tables">Tables</a></li>
-                  <li><a href="#basics-horizontal-rules">Horizontal Rules</a></li>
-                  <li><a href="#basics-form--elements">Form Elements</a></li>
-                  <li><a href="#basics-buttons">Buttons</a></li>
-                  <li><a href="#basics-combos">Combos</a></li>
-                  <li><a href="#basics-floats-and-clearfix">Floats and Clearfix</a></li>
-                  <li><a href="#basics-badges">Badges</a></li>
-                  <li><a href="#basics-labels">Labels</a></li>
-                  <li><a href="#basics-images">Images</a></li>
-                </ul>
-              </li>
-              <li><a href="layout.html">Layout</a></li>
-              <li><a href="components.html">Components</a></li>
-              <li><a href="decoration.html">Decoration</a></li>
-              <li><a href="examples.html">Examples</a></li>
-              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="docs__content menu-marker-wrap">
-          <header class="docs__header menu-marker-section" id="basics">
-            <h1>Basics</h1>
-            <p class="lead">
-              Starting from an <code>@import</code> of <a href="https://necolas.github.io/normalize.css/">normalize.css</a> and building upon it, Codebase adds some basic styling and other interestng features.
-              
-            </p>
-            <p class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2">
-              <i class="fa fa-info-circle text--teal-darken-1"></i> Some of these Basics examples have been built first as Pug mixins, in order to be useful in rapid prototyping or style guide composition.
-              <br><br>
-              (Some basics really can't be more rapidly created by calling a mixin than by actually hand-coding them. E.g. there are no mixins for horizontal rules, floats, clearfix, badges, labels, text columns or enlarged typography.)
-            </p>
-          </header>
-          <div class="docs__body">
-            <div class="menu-marker-section" id="basics-headings">
-              <h2 class="docs-section">Headings</h2>
-              <p>
-                By default, h1 has zero top margin whereas h2-h6 headings ordinarily have top margin equal to 2× the default line height, i.e. 48px, or 6x element grid units. (This top margin is removed in header pairings.)
-                
-              </p>
-              <p>
-                Headings h1-h4 are given increasted font-size for medium screens up. All headings are rendered <code>font-weight: normal</code> so that you can choose to emphasize some word(s) in bold.
-                
-              </p>
-              <h1>Heading h1</h1>
-              <h2>Heading h2</h2>
-              <h3>Heading h3</h3>
-              <h4>Heading h4</h4>
-              <h5>Heading h5</h5>
-              <h6>Heading h6</h6>
+  <body class="docs__chapter">
+    <div class="menubar menubar--fixed codebase--nav-top">
+      <div class="menubar__brand codebase__brand"><a class="text--nowrap" href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
+            <g fill="#ffffff">
+              <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
+            </g>
+          </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></div>
+      <div class="menubar__content">
+        <ul class="menubar__right hide--sm-down">
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download"></i> Download</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github"></i> GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="docs__main">
+      <div class="off-canvas__ctrl off-canvas__ctrl--docs off-canvas__ctrl--right off-canvas__ctrl--fixed hide--md-up" data-content-id="sidebar-1"><span class="hide--sm-down">Docs</span> <span class="hide--sm-up">Menu</span> <i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="docs__nav off-canvas__content off-canvas__content--md off-canvas__content--right off-canvas__content--fixed" id="sidebar-1">
+        <div class="off-canvas__close off-canvas__close--right hide--md-up text--big-text p--4"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+        <ul>
+          <li class="hide--md-down"><a href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
+                <g fill="#ffffff">
+                  <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
+                </g>
+              </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></li>
+          <li class="hide--sm-up"><a href="#/"><i class="fa fa-home fa-fw fa-lg"></i> Home</a></li>
+          <li><a href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a></li>
+          <li><a class="this-page" href="basics.html"><i class="fa fa-cubes fa-fw fa-lg"></i> Basics</a>
+            <div class="docs__nav--sub-nav">
+              <ul class="menu deco">
+                <li><a href="#basic-intro">Introduction</a></li>
+                <li><a href="#basic-headings">Headings</a></li>
+                <li><a href="#basic-paragraphs">Paragraphs</a></li>
+                <li><a href="#basic-initial-icons">Initial Icons</a></li>
+                <li><a href="#basic-blockquotes">Blockquotes</a></li>
+                <li><a href="#basic-text-alignment">Text Alignment</a></li>
+                <li><a href="#basic-text-columns">Text Columns</a></li>
+                <li><a href="#basic-text-elements">Simple Text Elements</a></li>
+                <li><a href="#basic-lists">Lists</a></li>
+                <li><a href="#basic-tables">Tables</a></li>
+                <li><a href="#basic-horizontal-rules">Horizontal Rules</a></li>
+                <li><a href="#basic-images">Images</a></li>
+                <li><a href="#basic-buttons">Buttons</a></li>
+                <li><a href="#basic-form-elements">Form Elements</a></li>
+                <li><a href="#basic-combos">Combos</a></li>
+                <li><a href="#basic-badges-and-labels">Badges and Labels</a></li>
+                <li><a href="#basic-floats-and-clearfix">Floats and Clearfix</a></li>
+                <li><a href="#basic-text-utilities">Text Utilities</a></li>
+                <li><a href="#basic-big-typography">Big Typography</a></li>
+              </ul>
             </div>
-            <div class="menu-marker-section" id="basics-paragraphs">
-              <h2 class="docs-section">Paragraphs</h2>
-              <p>A simple paragraph:</p>
-              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              <p><code>p.lead</code></p>
-              <p class="lead">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              <p><code>p.dropcap</code></p>
-              <p class="dropcap">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+          </li>
+          <li><a href="layout.html"><i class="fa fa-map fa-fw fa-lg"></i> Layout</a></li>
+          <li><a href="components.html"><i class="fa fa-cogs fa-fw fa-lg"></i> Components</a></li>
+          <li><a href="decoration.html"><i class="fa fa-paint-brush fa-fw fa-lg"></i> Decoration</a></li>
+          <li><a href="examples.html"><i class="fa fa-flask fa-fw fa-lg"></i> Examples</a></li>
+          <li class="hide--sm-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download fa-fw fa-lg"></i> Download</a></li>
+          <li class="hide--sm-up"><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github fa-fw fa-lg"></i> GitHub</a></li>
+        </ul>
+      </div>
+      <div class="docs__docs-content">       
+        <header>
+          <h1>Basics</h1>
+        </header>
+        <main>
+          <article>
+            <div class="docs__section" id="basic-intro">
+              <header>
+                <h2>Introduction</h2>
+              </header>
+              <section>
+                <p>Codebase basic styles build upon <a href="https://necolas.github.io/normalize.css/">Normalize</a> (this already imported into <code>codebase.css</code> during Sass pre-processing). These apply to classless HTML tagged elements.
+                  
+                </p>
+                <p>In addition to the basic HTML styling, Codebase has several <code>.text--*</code> utility classes. These have been demonstrated at appripriate points below.
+                  
+                </p>
+                <p>A full list of text utility classes can also be found at <a href="decoration.html#decoration-text">Decoration: Text</a>.</p>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-blockquotes">
-              <h2 class="docs-section">Blockquotes</h2>
-              <p><code>&lt;blockquote cite=""&gt;</code></p>
-              <blockquote cite="Example">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</blockquote>
-            </div>
-            <div class="menu-marker-section" id="basics-text-alignment">
-              <h2 class="docs-section">Text Alignment</h2>
-              <p><code>.text--left</code></p>
-              <p class="text--left">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              <p><code>.text--center</code></p>
-              <p class="text--center">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              <p><code>.text--right</code></p>
-              <p class="text--right">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-            </div>
-            <div class="menu-marker-section" id="basics-text-columns">
-              <h2 class="docs-section">Text Columns</h2>
-              <p>
-                The Codebase <code>.text--columns</code> wrapper class cause text to be displayed in a number of columns, depending on (a.) viewport width and (b.) the set value for the minimum column width variable, <code>$text-columns-min-width</code>.
-                
-              </p>
-              <p>Example:</p>
-              <div class="text--columns">
-                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-                <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
-                <p>Utroque habemus moderatius cum cu, no sea persius assueverit, eam id ipsum ridens urbanitas. Ex ridens tibique duo. Ne vim error percipit, his in duis ullamcorper, id sed vero vidisse labores. Eos cu habeo oratio, habeo dicit ad per. Nam nulla vocibus temporibus ea, et melius electram ius, nec putent moderatius appellantur et. Ea vix saperet tincidunt.</p>
-                <p>Eruditi omittam usu et, ea sed animal detraxit. Pro aperiam efficiendi suscipiantur at, at vis epicurei verterem corrumpit, cu probatus tincidunt mel. Ei nibh officiis qui, pri minim ubique ne. Tritani liberavisse ad duo. Deleniti menandri nam ea, alienum sadipscing id quo, congue gubergren mnesarchum mei ad.</p>
-              </div>
-            </div>
-            <div class="menu-marker-section" id="basics-enlarged-typography">
-              <h2 class="docs-section">Enlarged Typography</h2>
-              <p>
-                By defult, Codebase has its font sizes for everything based on a set of <code>$base-font-*</code> variables. But there is also a set of <code>$enlarged-font-*</code> variables. (You can override both the base and enlarged variables because each are set as <code>!default</code> variables.)
-                
-              </p>
-              <p>
-                There are three ways to use the enlarged typography in Codebase:
-                
-              </p>
-              <h4>1. Toggle enlarged typography</h4>
-              <p>
-                You can toggle on the enlarged typography everywhere, by overriding one variable from false to true:
-                
-              </p>
-              <pre><code>$enlarged-typography-everywhere: true !default;
+          </article>
+          <article>
+            <div class="docs__section" id="basic-headings">
+              <header>
+                <h2>Headings</h2>
+              </header>
+              <section>
+                <h1>Heading h1</h1>
+                <h2>Heading h2</h2>
+                <h3>Heading h3</h3>
+                <h4>Heading h4</h4>
+                <h5>Heading h5</h5>
+                <h6>Heading h6</h6>
+                <p>
+                  Headings have been sized appropriately for having their line heights fit to a vertical rhythm based on 
+                  <a href="decoration.html#decoration-element-grid">element grid</a> units.
+                  
+                </p>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>Codebase headings have been set with zero top margin (same as paragraphs).</p>
+                <p>
+                  Headings h1 to h5 are slightly enlarged (and their line heights adjusted for wider viewports) at and above their "alt" breakpoint, which is set by the following variable:
+                  
+                </p>
+                <pre><code>$break--headers-alt: $mq--sm !default
+// = 640px
 </code></pre>
-              <h4>2. Overriding enlarged typography defaults</h4>
-              <p>
-                You can override the <code>$enlarged-font-size</code> and <code>$enlarged-line-height</code> default variables within your theme (see <a href="getting-started.html#advanced-setup">Getting Started: Advanced Setup</a>).
-                
-              </p>
-              <p>
-                Overriding these variables will affect everything (if you toggle on enlarged typography) or only stuff contained in a  <code>.enlarged</code> (see below).
-                
-              </p>
-              <h4>3. Enlarged typography wrapper class</h4>
-              <p>
-                Codebase can render enlarged typography simply by placing any Codebase-styled HTML in a wrapper that has class <code>.enlarge</code>.
-                
-              </p>
-              <p>This may be useful e.g. for long-read articles.</p>
-              <div class="grid grid--gutter grid--nested">
-                <div class="col col-sm--span-6">
-                  <h2>Normal h2 Header</h2>
-                  <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-                </div>
-                <div class="col col-sm--span-6">
-                  <div class="enlarge">
-                    <h2>Enlarged h2 Header</h2>
-                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <p>Headers in Codebase are set to <code>font-weight: normal</code> by default, so that you can use bold on particular words for emphasis.
+                  
+                </p>
+                <p>
+                  Also, a set of text utility classes has been provided for modifying any text according to the Codebase headings' font sizes and line heights.
+                  
+                </p>
+                <div class="text--h1">.text--h1</div>
+                <div class="text--h2">.text--h2</div>
+                <div class="text--h3">.text--h3</div>
+                <div class="text--h4">.text--h4</div>
+                <div class="text--h5">.text--h5</div>
+                <div class="text--h6">.text--h6</div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-paragraphs">
+              <header>
+                <h2>Paragraphs</h2>
+              </header>
+              <section>
+                <p>A simple paragraph:</p>
+                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <p><code>p.text--lead</code></p>
+                <p class="text--lead">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <p><code>p.text--dropcap</code></p>
+                <p class="text--dropcap">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-initial-icons">
+              <header>
+                <h2>Initial Icons</h2>
+              </header>
+              <section>
+                <p>A variation on using a dropcap to start an important paragraph. The utility class affects the <code>:first-child</code> selector. (This works well with, e.g. see <a href="http://fontawesome.io/">Font Awesome</a>). Useful for when you want to make a note or statement stand out.</p>
+                <div class="text--initial-icon"><i class="fa fa-star" aria-hidden="true"></i>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</div>
+                <pre><code>&lt;div class="text--initial-icon"&gt;
+  &lt;i class="fa fa-star" aria-hidden="true"&gt;&lt;/i&gt; Lorem ipsum dolor sit amet ...
+&lt;/div&gt;
+</code></pre>
+                <p>Alternative to an icon font, simply put the initial single character in a <code>span</code> and it will recieve the same Codebase treatment.</p>
+                <div class="text--initial-icon"><span>1</span>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</div>
+                <div class="text--initial-icon"><span>2</span>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</div>
+                <div class="text--initial-icon"><span>3</span>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</div>
+                <h3>Further styling</h3>
+                <p>Add color, padding, etc (e.g. by <a href="decoration.html">decoration</a> classes) for greater effect. Example:</p>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</p>
+                <div class="tabs deco mt--24">
+                  <div class="tab__label-wrap--right">
+                    <div class="tab__label" data-tab-id="tab-docs-flexbox-initial-icon-html">HTML</div>
+                    <div class="tab__label" data-tab-id="tab-docs-flexbox-initial-icon-pug">Pug</div>
+                  </div>
+                  <div class="tab__card" id="tab-docs-flexbox-initial-icon-html">
+                    <pre class="mt--zero"><code>&lt;div class="text--initial-icon mb--24 bl--heavy b--green-darken-1 p--16 pl--80 bg--green-lighten-2"&gt;
+  &lt;i class="fa fa-check-circle text--green-darken-1"&gt;&lt;/i&gt; Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+&lt;/div&gt;
+</code></pre>
+                  </div>
+                  <div class="tab__card" id="tab-docs-flexbox-initial-icon-pug">
+                    <pre class="mt--zero"><code>.text--initial-icon.mb--line.bl--heavy.b--green-darken-1.p--16.pl--80.bg--green-lighten-2
+  i.fa.fa-check-circle.text--green-darken-1
+  | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</code></pre>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-initial-icons">
-              <h2 class="docs-section">Initial Icons</h2>
-              <p>For when you want to make a note or statement stand out.</p>
-              <div class="initial-icon"><i class="fa fa-info-circle" aria-hidden="true"></i>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</div><br/>
-              <p class="initial-icon mb--4u bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2"><i class="fa fa-check-circle text--teal-darken-1"></i>
-                <b>Further styling</b><br>
-                Add color, padding, etc (e.g. by decoration classes) for greater effect.
-              </p>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-blockquotes">
+              <header>
+                <h2>Blockquotes</h2>
+              </header>
+              <section>
+                <p>In Codebase, blockquotes recieve some padding right and left, to give the effect of indentation. Otherwise they have the same as paragraph styling. </p>
+                <p><code>&lt;blockquote cite=""&gt;</code></p>
+                <blockquote cite="Example">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</blockquote>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-text-elements">
-              <h2 class="docs-section">Simple Text Elements</h2>
-              <div class="text--columns">
-                <p><i>italics</i><br/><em>emphasis</em><br/><b>bold</b><br/><strong>strong</strong><br/>
-                  <cite>citation</cite><br/>
-                  <del>deleted text (strikethough)</del><br/>
-                  <dfn title="title">definition</dfn><br/><abbr title="This stands for something">abbreviation</abbr><br/><ins>inserted text</ins><br/><kbd>user input</kbd><br/><samp>sample output</samp><br/>
-                  <mark>marked (highlighted) text</mark><br/><small>small</small><br/> Superscript: e.g. E = mc<sup>2</sup><br/> Subscript: e.g. H<sub>2</sub>O<br/>
-                  <var>variable or placeholder text</var><br/> ndash &ndash;<br/> mdash &mdash;<br/><a href="">hyperlink</a><br/><code>inline code</code>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-text-alignment">
+              <header>
+                <h2>Text Alignment</h2>
+              </header>
+              <section>
+                <p><code>.text--left</code></p>
+                <p class="text--left">
+                  Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et. 
+                  
                 </p>
-                <address>Address</address>
-                <pre>Preformatted text
+                <p><code>.text--center</code></p>
+                <p class="text--center">
+                  Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et. 
+                  
+                </p>
+                <p><code>.text--right</code></p>
+                <p class="text--right">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et. </p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-text-columns">
+              <header>
+                <h2>Text Columns</h2>
+              </header>
+              <section>
+                <p>The Codebase <code>.text--columns</code> container class causes text to be displayed in a number of columns, depending on (a.) the viewport width; and (b.) the set value for the minimum column width variable, <code>$text--columns-min-width</code>.
+                  
+                </p>
+                <p>Example:</p>
+                <div class="text--columns">
+                  <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                  <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
+                  <p>Utroque habemus moderatius cum cu, no sea persius assueverit, eam id ipsum ridens urbanitas. Ex ridens tibique duo. Ne vim error percipit, his in duis ullamcorper, id sed vero vidisse labores. Eos cu habeo oratio, habeo dicit ad per. Nam nulla vocibus temporibus ea, et melius electram ius, nec putent moderatius appellantur et. Ea vix saperet tincidunt.</p>
+                  <p>Eruditi omittam usu et, ea sed animal detraxit. Pro aperiam efficiendi suscipiantur at, at vis epicurei verterem corrumpit, cu probatus tincidunt mel. Ei nibh officiis qui, pri minim ubique ne. Tritani liberavisse ad duo. Deleniti menandri nam ea, alienum sadipscing id quo, congue gubergren mnesarchum mei ad.</p>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-text-elements">
+              <header>
+                <h2>Text Elements</h2>
+              </header>
+              <section>
+                <div class="text--columns">
+                  <p><i>italics</i><br><em>emphasis</em><br><b>bold</b><br><strong>strong</strong><br>
+                    <cite>citation</cite><br>
+                    <del>deleted text (strikethough)</del><br>
+                    <dfn title="title">definition</dfn><br><abbr title="This stands for something">abbreviation</abbr><br><ins>inserted text</ins><br><kbd>user input</kbd><br><samp>sample output</samp><br>
+                    <mark>marked (highlighted) text</mark><br><small>small</small><br> Superscript: e.g. E = mc<sup>2</sup><br> Subscript: e.g. H<sub>2</sub>O<br>
+                    <var>variable or placeholder text</var><br> ndash &ndash;<br> mdash &mdash;<br><a href="">hyperlink</a><br><code>inline code</code>
+                  </p>
+                  <address>Address</address>
+                  <pre>Preformatted text
 </pre>
-                <pre><code>// &lt;pre&gt;&lt;code&gt;
+                  <pre><code>// &lt;pre&gt;&lt;code&gt;
 &nbsp;
 10 print "Hello world";
 20 goto 10
 &nbsp;
 Run</code></pre>
-              </div>
+                </div>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-lists">
-              <h2 class="docs-section">Lists</h2>
-              <ol>
-                <li>List item 1
-                </li>
-                <li>List item 2
-                </li>
-                <li>List item 3
-                </li>
-                <li>List item 4
-                </li>
-                <li>List item 5
-                </li>
-              </ol>
-              <ul>
-                <li>List item 1
-                </li>
-                <li>List item 2
-                </li>
-                <li>List item 3
-                </li>
-                <li>List item 4
-                </li>
-                <li>List item 5
-                </li>
-              </ul>
-              <dl>
-                <dt>Title</dt>
-                <dd>Data1
-                </dd>
-                <dt>Title</dt>
-                <dd>Data2
-                </dd>
-                <dt>Title</dt>
-                <dd>Data3
-                </dd>
-              </dl>
-            </div>
-            <div class="menu-marker-section" id="basics-tables">
-              <h2 class="docs-section">Tables</h2>
-              <p>Simply add class <code>.table</code>to tables. This adds the styles that you see below.</p>
-              <p>The <code>codebase.js</code> adds two wrappers around tables that enables responsive overflow by horizontal scrolling: <code>table-wrap--outer</code> and <code>table-wrap--inner</code>. (Note: you don't need to add these wrappers yourself.)</p>
-              <p>
-                Also, if the table width is wider than the width allowed in the webpage layout, then an inset box shadow is added to indicate that there is more to the table than what is visible.
-                
-              </p>
-              <p>A table that is horizontally scrollable on narrow screens:</p>
-              <table class="table table--nowrap">
-                <thead>
-                  <tr>
-                    <th>Table Header 1
-                    </th>
-                    <th>Table Header 2
-                    </th>
-                    <th>Table Header 3
-                    </th>
-                    <th>Table Header 4
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Table content 1.1
-                    </td>
-                    <td>Table content 2.1
-                    </td>
-                    <td>Table content 3.1
-                    </td>
-                    <td>Table content 4.1
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Table content 1.2
-                    </td>
-                    <td>Table content 2.2
-                    </td>
-                    <td>Table content 3.2
-                    </td>
-                    <td>Table content 4.2
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Table content 1.3
-                    </td>
-                    <td>Table content 2.3
-                    </td>
-                    <td>Table content 3.3
-                    </td>
-                    <td>Table content 4.3
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Table content 1.4
-                    </td>
-                    <td>Table content 2.4
-                    </td>
-                    <td>Table content 3.4
-                    </td>
-                    <td>Table content 4.4
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>A table that is horizontally scrollable at all screen widths:</p>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Table Header 1
-                    </th>
-                    <th>Table Header 2
-                    </th>
-                    <th>Table Header 3
-                    </th>
-                    <th>Table Header 4
-                    </th>
-                    <th>Table Header 5
-                    </th>
-                    <th>Table Header 6
-                    </th>
-                    <th>Table Header 7
-                    </th>
-                    <th>Table Header 8
-                    </th>
-                    <th>Table Header 9
-                    </th>
-                    <th>Table Header 10
-                    </th>
-                    <th>Table Header 11
-                    </th>
-                    <th>Table Header 12
-                    </th>
-                    <th>Table Header 13
-                    </th>
-                    <th>Table Header 14
-                    </th>
-                    <th>Table Header 15
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Table content 1.1
-                    </td>
-                    <td>Table content 2.1
-                    </td>
-                    <td>Table content 3.1
-                    </td>
-                    <td>Table content 4.1
-                    </td>
-                    <td>Table content 5.1
-                    </td>
-                    <td>Table content 6.1
-                    </td>
-                    <td>Table content 7.1
-                    </td>
-                    <td>Table content 8.1
-                    </td>
-                    <td>Table content 9.1
-                    </td>
-                    <td>Table content 10.1
-                    </td>
-                    <td>Table content 11.1
-                    </td>
-                    <td>Table content 12.1
-                    </td>
-                    <td>Table content 13.1
-                    </td>
-                    <td>Table content 14.1
-                    </td>
-                    <td>Table content 15.1
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Table content 1.2
-                    </td>
-                    <td>Table content 2.2
-                    </td>
-                    <td>Table content 3.2
-                    </td>
-                    <td>Table content 4.2
-                    </td>
-                    <td>Table content 5.2
-                    </td>
-                    <td>Table content 6.2
-                    </td>
-                    <td>Table content 7.2
-                    </td>
-                    <td>Table content 8.2
-                    </td>
-                    <td>Table content 9.2
-                    </td>
-                    <td>Table content 10.2
-                    </td>
-                    <td>Table content 11.2
-                    </td>
-                    <td>Table content 12.2
-                    </td>
-                    <td>Table content 13.2
-                    </td>
-                    <td>Table content 14.2
-                    </td>
-                    <td>Table content 15.2
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Table content 1.3
-                    </td>
-                    <td>Table content 2.3
-                    </td>
-                    <td>Table content 3.3
-                    </td>
-                    <td>Table content 4.3
-                    </td>
-                    <td>Table content 5.3
-                    </td>
-                    <td>Table content 6.3
-                    </td>
-                    <td>Table content 7.3
-                    </td>
-                    <td>Table content 8.3
-                    </td>
-                    <td>Table content 9.3
-                    </td>
-                    <td>Table content 10.3
-                    </td>
-                    <td>Table content 11.3
-                    </td>
-                    <td>Table content 12.3
-                    </td>
-                    <td>Table content 13.3
-                    </td>
-                    <td>Table content 14.3
-                    </td>
-                    <td>Table content 15.3
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <p>Note: If you require your table cells not to wrap, add the modifier class <code>.table--nowrap</code>.</p>
-            </div>
-            <div class="menu-marker-section" id="basics-horizontal-rules">
-              <h2 class="docs-section">Horizontal Rules</h2>
-              <hr/>
-            </div>
-            <div class="menu-marker-section" id="basics-form--elements">
-              <h2 class="docs-section">Form Elements</h2>
-              <p>
-                Form elements expand to 100% of their container width. Give them structure by wrapping them in grid columns.
-                
-              </p>
-              <p>
-                There is no added margin or padding around form elements – so nothing you need to override. Add whatever margin or padding (or not) as suits your own design.
-                
-              </p>
-              <h3>Form Label</h3>
-              <label for="">Example:</label>
-              <h3>Input Boxes</h3>
-              <label for="text-example">Text:</label>
-              <input id="text-example" name="examplename" type="text" placeholder="Example text input field"/>
-              <label for="email-example">Email:</label>
-              <input id="email-example" name="examplename" type="email" placeholder="Example email input field"/>
-              <label for="tel-example">Tel:</label>
-              <input id="tel-example" name="examplename" type="tel" placeholder="Example phone number input field"/>
-              <label for="search-example">Search:</label>
-              <input id="search-example" name="examplename" type="search" placeholder="Example search input field" results="5"/>
-              <label for="number-example">Number:</label>
-              <input id="number-example" name="examplename" type="number" placeholder="Example number input field"/>
-              <label for="date-example">Date:</label>
-              <input id="date-example" name="examplename" type="date" placeholder="Example date input field"/>
-              <label for="month-example">Month:</label>
-              <input id="month-example" name="examplename" type="month" placeholder="Example month input field"/>
-              <label for="password-example">Password:</label>
-              <input id="month-example" name="examplename" type="password" placeholder="Example password input field"/>
-              <h3>Textarea</h3>
-              <label for="textarea-example">Textarea:</label>
-              <textarea id="textarea-example" name="examplename" type="password" placeholder="Example textarea" rows="4"></textarea>
-              <h3>Selects</h3>
-              <label for="single-select-example">Single select:</label>
-              <select id="single-select-example" name="examplename">
-                <option value="first">First option
-                </option>
-                <option value="second">Second option
-                </option>
-                <option value="third">Third option
-                </option>
-              </select>
-              <label for="multi-select-example">Multi select:</label>
-              <select id="multi-select-example" name="examplename" multiple="3">
-                <option value="first">First option
-                </option>
-                <option value="second">Second option
-                </option>
-                <option value="third">Third option
-                </option>
-              </select>
-              <h3>Radio Boxes and Checkboxes</h3>
-              <form>
-                <input id="radio-1" name="examplename" type="radio" checked="checked"/>
-                <label for="radio-1">Radio 1</label><br/>
-                <input id="radio-2" name="examplename" type="radio"/>
-                <label for="radio-2">Radio 2</label><br/>
-                <input id="radio-3" name="examplename" type="radio"/>
-                <label for="radio-3">Radio 3</label>
-              </form>
-              <form>
-                <input id="checkbox-1" name="examplename" type="checkbox" checked="checked"/>
-                <label for="checkbox-1">Checkbox 1</label><br/>
-                <input id="checkbox-2" name="examplename" type="checkbox"/>
-                <label for="checkbox-2">Checkbox 2</label><br/>
-                <input id="checkbox-3" name="examplename" type="checkbox"/>
-                <label for="checkbox-3">Checkbox 3</label>
-              </form>
-              <h3>Styled Radio Boxes and Checkboxes</h3>
-              <p>Using <a href="http://fontawesome.io/">Font Awesome</a>.</p>
-              <p>
-                <code>.form__radio</code>
-                
-              </p>
-              <form>
-                <input class="form__radio" id="radio-4" name="examplename" type="radio" checked="checked"/>
-                <label for="radio-4">Radio 4</label><br/>
-                <input class="form__radio" id="radio-5" name="examplename" type="radio"/>
-                <label for="radio-5">Radio 5</label><br/>
-                <input class="form__radio" id="radio-6" name="examplename" type="radio"/>
-                <label for="radio-6">Radio 6</label>
-              </form><br/>
-              <p>
-                <code>.form__checkbox</code>
-                
-              </p>
-              <form>
-                <input class="form__checkbox" id="checkbox-4" name="examplename" type="checkbox" checked="checked"/>
-                <label for="checkbox-4">Checkbox 4</label><br/>
-                <input class="form__checkbox" id="checkbox-5" name="examplename" type="checkbox"/>
-                <label for="checkbox-5">Checkbox 5</label><br/>
-                <input class="form__checkbox" id="checkbox-6" name="examplename" type="checkbox"/>
-                <label for="checkbox-6">Checkbox 6</label>
-              </form><br/>
-              <p>
-                <code>.form__radio--toggle</code>
-                
-              </p>
-              <form>
-                <input class="form__radio--toggle" id="radio-7" name="examplename" type="radio" checked="checked"/>
-                <label for="radio-7">Radio 7</label><br/>
-                <input class="form__radio--toggle" id="radio-8" name="examplename" type="radio"/>
-                <label for="radio-8">Radio 8</label><br/>
-                <input class="form__radio--toggle" id="radio-9" name="examplename" type="radio"/>
-                <label for="radio-9">Radio 9</label>
-              </form><br/>
-              <p>
-                <code>.form__checkbox--toggle</code>
-                
-              </p>
-              <form>
-                <input class="form__checkbox--toggle" id="checkbox-7" name="examplename" type="checkbox" checked="checked"/>
-                <label for="checkbox-7">Checkbox 7</label><br/>
-                <input class="form__checkbox--toggle" id="checkbox-8" name="examplename" type="checkbox"/>
-                <label for="checkbox-8">Checkbox 8</label><br/>
-                <input class="form__checkbox--toggle" id="checkbox-9" name="examplename" type="checkbox"/>
-                <label for="checkbox-9">Checkbox 9</label>
-              </form>
-            </div>
-            <div class="menu-marker-section" id="basics-buttons">
-              <h2 class="docs-section">Buttons</h2>
-              <p>
-                Button classes can be applied to button tags, input-button tags and hyperlink anchor tags:
-                
-              </p>
-              <p>
-                <button class="btn" type="submit">Button</button> .btn
-              </p>
-              <p><a class="btn" href="#/">Hyperlink</a> .btn
-              </p>
-              <p>
-                <input class="btn" value="Input" type="submit"/> .btn
-              </p>
-              <p>Three sizes:</p>
-              <p>
-                <button class="btn btn--sm">Small button</button> .btn .btn--sm
-              </p>
-              <p>
-                <button class="btn">Default (medium) button</button> .btn
-              </p>
-              <p>
-                <button class="btn btn--lg">Large button</button> .btn.btn--lg
-              </p>
-              <p>Medium sized button with larger text (see also button icon below):</p>
-              <p>
-                <button class="btn btn--lt">Larger text</button> .btn.btn--lt
-              </p>
-              <p>Block width button: <code>.btn.btn--block</code></p>
-              <p>
-                <button class="btn btn--block">Block width button</button>
-              </p>
-              <p> Button colors:</p>
-              <p>
-                <button class="btn">Default</button> .btn
-              </p>
-              <p>
-                <button class="btn btn--primary">Primary</button> .btn.btn--primary
-              </p>
-              <p>
-                <button class="btn btn--secondary">Secondary</button> .btn.btn--secondary
-              </p>
-              <p>
-                <button class="btn btn--warning">Warning</button> .btn.btn--warning
-              </p>
-              <p>
-                <button class="btn btn--success">Success</button> .btn.btn--success
-              </p>
-              <p>
-                <button class="btn btn--error">Error</button> .btn.btn--error
-              </p>
-              <p>
-                <button class="btn btn--link">Link</button> .btn.btn--link
-              </p>
-              <p>
-                <button class="btn btn--success">Call to action <i class="fa fa-arrow-right"></i>
-                </button>
-                <button class="btn btn--secondary"><i class="fa fa-folder-open-o"></i> Archive</button>
-                <button class="btn btn--primary"><i class="fa fa-user"></i> User</button>
-                <button class="btn btn--warning">Are you sure <i class="fa fa-question-circle"></i>
-                </button>
-                <button class="btn btn--error">Reset <i class="fa fa-times-circle"></i>
-                </button>
-                <button class="btn">Cancel <i class="fa fa-times"></i>
-                </button>
-              </p>
-              <p>.btn--icon &mdash; use this to make square buttons when only a (Font Awesome) icon is present within the button.</p>
-              <p>
-                <button class="btn btn--success btn--icon"><i class="fa fa-arrow-right"></i></button>
-                <button class="btn btn--secondary btn--icon"><i class="fa fa-folder-open-o"></i></button>
-                <button class="btn btn--primary btn--icon"><i class="fa fa-user"></i></button>
-                <button class="btn btn--warning btn--icon"><i class="fa fa-question-circle"></i></button>
-                <button class="btn btn--error btn--icon"><i class="fa fa-times-circle"></i></button>
-                <button class="btn btn--icon"><i class="fa fa-times"></i></button>
-              </p>
-              <p>And, with <code>.btn--lt</code>:</p>
-              <p>
-                <button class="btn btn--success btn--icon btn--lt"><i class="fa fa-arrow-right"></i></button>
-                <button class="btn btn--secondary btn--icon btn--lt"><i class="fa fa-folder-open-o"></i></button>
-                <button class="btn btn--primary btn--icon btn--lt"><i class="fa fa-user"></i></button>
-                <button class="btn btn--warning btn--icon btn--lt"><i class="fa fa-question-circle"></i></button>
-                <button class="btn btn--error btn--icon btn--lt"><i class="fa fa-times-circle"></i></button>
-                <button class="btn btn--icon btn--lt"><i class="fa fa-times"></i></button>
-              </p>
-              <p> Rounded buttons:</p>
-              <p>
-                <button class="btn btn--sm btn--rounded">Small button</button> .btn.btn--sm.btn--rounded
-              </p>
-              <p>
-                <button class="btn btn--rounded">Default (medium) button</button> .btn.btn--rounded
-              </p>
-              <p>
-                <button class="btn btn--lg btn--rounded">Large button</button> .btn.btn--lg .btn--rounded
-              </p>
-              <p> Using .btn--icon together with .btn--rounded yields a circular button:</p>
-              <p>
-                <button class="btn btn--sm btn--icon btn--rounded"><i class="fa fa-snowflake-o"></i></button> .btn.btn--sm.btn--icon.btn--rounded
-              </p>
-              <p>
-                <button class="btn btn--icon btn--rounded"><i class="fa fa-bell"></i></button> .btn.btn--icon.btn--rounded
-              </p>
-              <p>
-                <button class="btn btn--lg btn--icon btn--rounded"><i class="fa fa-smile-o"></i></button> .btn.btn--lg.btn--icon.btn--rounded
-              </p>
-              <p>
-                <button class="btn btn--success btn--icon btn--rounded"><i class="fa fa-arrow-right"></i></button>
-                <button class="btn btn--secondary btn--icon btn--rounded"><i class="fa fa-folder-open-o"></i></button>
-                <button class="btn btn--primary btn--icon btn--rounded"><i class="fa fa-user"></i></button>
-                <button class="btn btn--warning btn--icon btn--rounded"><i class="fa fa-question-circle"></i></button>
-                <button class="btn btn--error btn--icon btn--rounded"><i class="fa fa-times-circle"></i></button>
-                <button class="btn btn--icon btn--rounded"><i class="fa fa-times"></i></button>
-              </p>
-              <p>
-                <button class="btn btn--success btn--icon btn--rounded btn--lt"><i class="fa fa-arrow-right"></i></button>
-                <button class="btn btn--secondary btn--icon btn--rounded btn--lt"><i class="fa fa-folder-open-o"></i></button>
-                <button class="btn btn--primary btn--icon btn--rounded btn--lt"><i class="fa fa-user"></i></button>
-                <button class="btn btn--warning btn--icon btn--rounded btn--lt"><i class="fa fa-question-circle"></i></button>
-                <button class="btn btn--error btn--icon btn--rounded btn--lt"><i class="fa fa-times-circle"></i></button>
-                <button class="btn btn--icon btn--rounded btn--lt"><i class="fa fa-times"></i></button>
-              </p>
-              <p><code>.combo--*</code> buttons :</p>
-              <p>
-                <button class="btn combo--first">.combo--first</button>
-                <button class="btn combo--middle">.combo--middle</button>
-                <button class="btn combo--last">.combo--last</button>
-              </p>
-              <p> The dropdown component can be used in buttons:</p>
-              <div class="dropdown">
-                <button class="btn dropdown__toggle">Example 1 <i class="fa fa-caret-down"></i>
-                </button><span class="dropdown__content dropdown__content--nowrap p--block bg--white bs">Example dropdown component content</span>
-              </div><br/><br/>
-              <div class="dropdown">
-                <button class="btn combo--first"> Example 2 (combo)</button>
-                <button class="btn btn--icon btn--lt combo--last dropdown__toggle"><i class="fa fa-bars"></i></button><span class="dropdown__content p--block bg--white bs">Example dropdown component content</span>
-              </div><br/><br/>
-              <p>
-                See the <a href='components.html#components-dropdowns'>dropdown component</a> for explanation.
-                
-              </p>
-              <p>
-                Example: icon buttons, combos and dropdowns (with added spacing, floats and clearfix wrappers to make everything appear in a line):
-                
-              </p>
-              <div class="clearfix">
-                <div class="float--left">
-                  <button class="btn btn--lt btn--icon combo--first"><i class="fa fa-bold" aria-hidden="true"></i></button>
-                  <button class="btn btn--lt btn--icon combo--middle"><i class="fa fa-italic" aria-hidden="true"></i></button>
-                  <button class="btn btn--lt btn--icon combo--last float--left"><i class="fa fa-underline" aria-hidden="true"></i></button><span class="float--left">&nbsp;</span>
-                  <div class="dropdown">
-                    <button class="btn btn--lt btn--icon dropdown__toggle"><i class="fa fa-align-left"></i></button><span class="dropdown__content p--zero bg--white bs">
-                      <ul class="menu">
-                        <li>
-                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-align-center" aria-hidden="true"></i></button>
-                        </li>
-                        <li>
-                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-align-right" aria-hidden="true"></i></button>
-                        </li>
-                        <li>
-                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-                        </li>
-                      </ul></span>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-lists">
+              <header>
+                <h2>Lists</h2>
+              </header>
+              <section>
+                <div class="flexbox flexbox--gutter">
+                  <div class="flexitem flexitem-sm--span-4">
+                    <ol>
+                      <li>List item 1</li>
+                      <li>List item 2</li>
+                      <li>List item 3</li>
+                      <li>List item 4</li>
+                      <li>List item 5</li>
+                    </ol>
                   </div>
-                </div><span class="float--left">&nbsp;</span>
-                <div class="float--left">
-                  <button class="btn btn--lt btn--icon combo--first"><i class="fa fa-cut" aria-hidden="true"></i></button>
-                  <button class="btn btn--lt btn--icon combo--middle"><i class="fa fa-copy" aria-hidden="true"></i></button>
-                  <button class="btn btn--lt btn--icon combo--last float--left"><i class="fa fa-paste" aria-hidden="true"></i></button><span class="float--left">&nbsp;</span>
-                  <div class="dropdown">
-                    <button class="btn btn--lt btn--icon dropdown__toggle"><i class="fa fa-list"></i></button><span class="dropdown__content p--zero bg--white bs">
-                      <ul class="menu">
-                        <li>
-                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
-                        </li>
-                        <li>
-                          <button class="btn btn--lt btn--icon btn--link"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
-                        </li>
-                      </ul></span>
+                  <div class="flexitem flexitem-sm--span-4">
+                    <ul>
+                      <li>List item 1</li>
+                      <li>List item 2</li>
+                      <li>List item 3</li>
+                      <li>List item 4</li>
+                      <li>List item 5</li>
+                    </ul>
+                  </div>
+                  <div class="flexitem flexitem-sm--span-4">
+                    <dl>
+                      <dt>Definition list title 1</dt>
+                      <dd>Definition list data 1 Lorem ipsum dolor sit amet</dd>
+                      <dt>Definition list title 2</dt>
+                      <dd>Definition list data 2 Lorem ipsum dolor sit amet</dd>
+                      <dt>Definition list title 3</dt>
+                      <dd>Definition list data 3 Lorem ipsum dolor sit amet</dd>
+                    </dl>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-combos">
-              <h2 class="docs-section">Combos</h2>
-              <p>
-                <code>.combo--*</code> utility classes enable buttons and form elements to be used inline. Besides rendering these elements as inline-blocks, some of the rounded corners are removed (if present).
-                
-              </p><form action="" class="clearfix">
-<input class="combo--first" name="" placeholder="Search" type="search">
-<button class="btn btn--sm btn--primary combo--last"><i class="fa fa-search"></i> Go</button>
-</form><br/><p>
-<button class="btn combo--first">.combo--first</button>
-<button class="btn combo--middle">.combo--middle</button>
-<button class="btn combo--last">.combo--last</button>
-</p>
-<div class="dropdown">
-<button class="btn btn--sm combo--first">Dropdown combo</button>
-<button class="btn btn--sm btn--icon combo--last dropdown__toggle fa fa-caret-down"></button><span class="dropdown__content">Example dropdown component content</span>
-</div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-tables">
+              <header>
+                <h2>Text Tables</h2>
+              </header>
+              <section>
+                <p>This is what a basic (classless) table looks like using Codebase:</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Table Header 1</th>
+                      <th>Table Header 2</th>
+                      <th>Table Header 3</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Table content 1.1</td>
+                      <td>Table content 2.1</td>
+                      <td>Table content 3.1</td>
+                    </tr>
+                    <tr>
+                      <td>Table content 1.2</td>
+                      <td>Table content 2.2</td>
+                      <td>Table content 3.2</td>
+                    </tr>
+                    <tr>
+                      <td>Table content 1.3</td>
+                      <td>Table content 2.3</td>
+                      <td>Table content 3.3</td>
+                    </tr>
+                  </tbody>
+                </table><br>
+                <p>For more functionality and styling, see the Codebase <a href="components.html#components-responsive-tables">responsive tables</a> component. </p>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-floats-and-clearfix">
-              <h2 class="docs-section">Floats and Clearfix</h2>
-              <p>These outer boxes have <code>.clearfix</code>.</p>
-              <div class="clearfix">
-                <div class="float--right">
-                  <div class="b--1px-dashed p--2u">
-                    <This>is an example of <code>.float--right</code></This>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-horizontal-rules">
+              <header>
+                <h2>Horizontal Rules</h2>
+              </header>
+              <section>
+                <p>The horizontal rule tag <code>hr</code> is simply styled with a thin, light gray, top border.</p>
+                <hr>
+                <p>The horizontal rule is capable of receiving Codebase <a href="decoration.html#decoration-borders">border decoration</a>. Here are a few examples:</p>
+                <p><code>hr.bt--dashed</code></p>
+                <hr class="bt--dashed">
+                <p><code>hr.bt--heavy</code></p>
+                <hr class="bt--heavy">
+                <p><code>hr.bt--heavy.b--green</code></p>
+                <hr class="bt--heavy b--green">
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-images">
+              <header>
+                <h2>Images</h2>
+              </header>
+              <section><img src="holder.js/96x96">
+                <p class="mt--line">In Codebase, images are block-level elements with <code>max-width: 100%</code> so that large images are &quot;repsonsive&quot;, shrinking to fit within containers (or windows) narrower than the actual image width.
+                  
+                </p>
+                <p>Further styling can be added using <a href="decoration.html">decoration classes</a> (e.g. borders).
+                  
+                </p>
+                <p>Examples:</p><img class="mb--line b--thick b--white bs bg--brown" src="holder.js/1000x200">
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem-sm--span-4"><img class="mh--auto b--circle" src="holder.js/144x144">
+                    <p class="text--center mt--20">
+                      Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+                      
+                    </p>
+                  </div>
+                  <div class="flexitem flexitem-sm--span-4"><img class="mh--auto b--circle" src="holder.js/144x144">
+                    <p class="text--center mt--20">
+                      Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+                      
+                    </p>
+                  </div>
+                  <div class="flexitem flexitem-sm--span-4"><img class="mh--auto b--circle" src="holder.js/144x144">
+                    <p class="text--center mt--20">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.</p>
                   </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              </div>
-              <div class="clearfix">
-                <div class="float--left">
-                  <div class="b--1px-dashed p--2u">
-                    <This>is an example of <code>.float--left</code></This>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-buttons">
+              <header>
+                <h2>Buttons</h2>
+              </header>
+              <section>
+                <p>
+                  Button classes can be applied to button tags, input-button tags and hyperlink anchor tags:
+                  
+                </p>
+                <p><button class="btn" type="submit">Button</button> <code>.btn</code></p>
+                <p><a class="btn" href="#/">Hyperlink</a> <code>.btn</code>
+                  
+                </p>
+                <p><input class="btn" value="Input" type="submit"> <code>.btn</code></p>
+                <p>Block width button: <code>.btn.btn--block</code></p>
+                <p>
+                  <button class="btn btn--block">Block width button</button>
+                </p>
+                <h3> Button Colors</h3>
+                <p>
+                  <button class="btn">Default</button> <code>.btn</code>
+                </p>
+                <p>
+                  <button class="btn btn--primary">Primary</button> <code>.btn.btn--primary</code>
+                </p>
+                <p>
+                  <button class="btn btn--secondary">Secondary</button> <code>.btn.btn--secondary</code>
+                </p>
+                <p>
+                  <button class="btn btn--warning">Warning</button> <code>.btn.btn--warning</code>
+                </p>
+                <p>
+                  <button class="btn btn--success">Success</button> <code>.btn.btn--success</code>
+                </p>
+                <p>
+                  <button class="btn btn--danger">Danger</button> <code>.btn.btn--danger</code>
+                </p>
+                <h3>Button States</h3>
+                <p><code>.btn--active</code> <code>.btn--disabled</code></p>
+                <p>
+                  <button class="btn">Default</button>
+                  <button class="btn btn--active">Default active</button>
+                  <button class="btn btn--disabled" aria-disabled="true">Default disabled</button>
+                </p>
+                <p>
+                  <button class="btn btn--primary">Primary</button>
+                  <button class="btn btn--primary btn--active">Primary active</button>
+                  <button class="btn btn--primary btn--disabled" aria-disabled="true">Primary disabled</button>
+                </p>
+                <p>
+                  <button class="btn btn--secondary">Secondary</button>
+                  <button class="btn btn--secondary btn--active">Secondary active</button>
+                  <button class="btn btn--secondary btn--disabled" aria-disabled="true">Secondary disabled</button>
+                </p>
+                <p>
+                  <button class="btn btn--warning">Warning</button>
+                  <button class="btn btn--warning btn--active">Warning active</button>
+                  <button class="btn btn--warning btn--disabled" aria-disabled="true">Warning disabled</button>
+                </p>
+                <p>
+                  <button class="btn btn--success">Success</button>
+                  <button class="btn btn--success btn--active">Success active</button>
+                  <button class="btn btn--success btn--disabled" aria-disabled="true">Success disabled</button>
+                </p>
+                <p>
+                  <button class="btn btn--danger">Danger</button>
+                  <button class="btn btn--danger btn--active">Danger active</button>
+                  <button class="btn btn--danger btn--disabled" aria-disabled="true">Danger disabled</button>
+                </p>
+                <p>The active and disabled state classes also work for outline buttons and 3D buttons (see below).</p>
+                <h3>Outline Buttons</h3>
+                <p><code>.btn--outline</code></p>
+                <p>
+                  <button class="btn btn--outline">Default</button>
+                  <button class="btn btn--primary btn--outline">Primary</button>
+                  <button class="btn btn--secondary btn--outline">Secondary</button>
+                  <button class="btn btn--warning btn--outline">Warning</button>
+                  <button class="btn btn--success btn--outline">Success</button>
+                  <button class="btn btn--danger btn--outline">Danger</button>
+                </p>
+                <h3>3D Buttons</h3>
+                <p>By default, Codebase has flat buttons. If you override the variable <code>$btn--3d: false !default</code> to <code>true</code> then all buttons (except outlines) will be made to appear as 3D using gloss and shadow gradients (as you see in the examples below).
+                  
+                </p>
+                <p>However, in default mode you can also add class <code>.btn--3d</code> to any button (except outlines) to make it 3D.
+                  
+                </p>
+                <p>
+                  <button class="btn btn--3d">Default</button>
+                  <button class="btn btn--primary btn--3d">Primary</button>
+                  <button class="btn btn--secondary btn--3d">Secondary</button>
+                  <button class="btn btn--warning btn--3d">Warning</button>
+                  <button class="btn btn--success btn--3d">Success</button>
+                  <button class="btn btn--danger btn--3d">Danger  </button>
+                </p>
+                <p>Add <code>.btn--big-text</code> for increased text and/or icon size:</p><a class="btn btn--primary" href="#/">Find out more &hellip;</a> <a class="btn btn--primary btn--big-text" href="#/">Find out more &hellip;</a>
+                <h3 class="mt--line">Small, Default and Large Buttons</h3>
+                <p>Add <code>.btn--sm</code> for a smaller button, or <code>.btn--lg</code> for a larger button:</p><a class="btn btn--primary btn--sm" href="#/">Smaller</a> <a class="btn btn--primary" href="#/">Default</a> <a class="btn btn--primary btn--lg" href="#/">Larger</a>
+                <p class="mt--line text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>The smaller form button size has been designed for fitting within menus and menubars. In that context, give it a margin class <code>.m--4</code> to position it correctly.</p>
+                <h3>Buttons with Big Text and/or Big Icon</h3>
+                <p>Button sizes can be used in combination with <code>.btn--big-text</code> (for increased text and/or icon size) and <code>.btn--outline</code>:  </p><a class="btn btn--primary btn--sm" href="#/">Normal text</a> <a class="btn btn--primary btn--sm btn--big-text" href="#/">Big text</a> <a class="btn btn--primary btn--sm btn--outline" href="#/">Normal text</a> <a class="btn btn--primary btn--sm btn--big-text btn--outline" href="#/">Big text</a><br><br><a class="btn btn--primary" href="#/">Normal text</a> <a class="btn btn--primary btn--big-text" href="#/">Big text</a> <a class="btn btn--primary btn--outline" href="#/">Normal text</a> <a class="btn btn--primary btn--big-text btn--outline" href="#/">Big text</a><br><br><a class="btn btn--primary btn--lg" href="#/">Normal text</a> <a class="btn btn--primary btn--lg btn--big-text" href="#/">Big text</a> <a class="btn btn--primary btn--lg btn--outline" href="#/">Normal text  </a> <a class="btn btn--primary btn--lg btn--big-text btn--outline" href="#/">Big text  </a><br><br>
+                <p>Icons (e.g. <a href="http://fontawesome.io/icons/">Font Awesome</a>) can be included in buttons:</p>
+                <p>
+                  <button class="btn btn--success">Call to action <i class="fa fa-arrow-right"></i>
+                  </button>
+                  <button class="btn btn--secondary"><i class="fa fa-folder-open-o"></i> Archive</button>
+                  <button class="btn btn--primary"><i class="fa fa-user"></i> User</button>
+                  <button class="btn btn--warning">Are you sure <i class="fa fa-question-circle"></i>
+                  </button>
+                  <button class="btn btn--danger">Reset <i class="fa fa-times-circle"></i>
+                  </button>
+                  <button class="btn">Menu <i class="fa fa-bars"></i>
+                  </button>
+                </p>
+                <h3>Square Icon Buttons</h3>
+                <p><code>.btn--icon</code> &mdash; makes square buttons when only a single character, pictogram or (<a href="http://fontawesome.io/icons/">Font Awesome</a>) icon is present within the button.
+                  
+                </p>
+                <p>
+                  <button class="btn btn--success btn--icon"><i class="fa fa-arrow-right"></i></button>
+                  <button class="btn btn--secondary btn--icon"><i class="fa fa-folder-open-o"></i></button>
+                  <button class="btn btn--primary btn--icon"><i class="fa fa-user"></i></button>
+                  <button class="btn btn--warning btn--icon"><i class="fa fa-question-circle"></i></button>
+                  <button class="btn btn--danger btn--icon"><i class="fa fa-times-circle"></i></button>
+                  <button class="btn btn--icon"><i class="fa fa-bars"></i></button>
+                </p>
+                <p>Add <code>.btn--big-text</code> for a larger icon (1.5em):</p>
+                <p>
+                  <button class="btn btn--success btn--icon btn--big-text"><i class="fa fa-arrow-right"></i></button>
+                  <button class="btn btn--secondary btn--icon btn--big-text"><i class="fa fa-folder-open-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--big-text"><i class="fa fa-user"></i></button>
+                  <button class="btn btn--warning btn--icon btn--big-text"><i class="fa fa-question-circle"></i></button>
+                  <button class="btn btn--danger btn--icon btn--big-text"><i class="fa fa-times-circle"></i></button>
+                  <button class="btn btn--icon btn--big-text"><i class="fa fa-bars"></i></button>
+                </p>
+                <p>Icon sizes:</p>
+                <p>
+                  <button class="btn btn--success btn--icon btn--sm"><i class="fa fa-search"></i></button>
+                  <button class="btn btn--success btn--icon"><i class="fa fa-search"></i></button>
+                  <button class="btn btn--success btn--icon btn--lg"><i class="fa fa-search"></i></button>
+                </p>
+                <p>Icon sizes with larger text and with outline:</p>
+                <p>
+                  <button class="btn btn--icon btn--sm"><i class="fa fa-search"></i></button>
+                  <button class="btn btn--icon btn--sm btn--big-text"><i class="fa fa-search"></i></button>
+                  <button class="btn btn--icon btn--sm btn--outline"><i class="fa fa-search"></i></button>
+                  <button class="btn btn--icon btn--sm btn--outline btn--big-text"><i class="fa fa-search"></i></button>
+                  <p>
+                    <button class="btn btn--icon"><i class="fa fa-search"></i></button>
+                    <button class="btn btn--icon btn--big-text"><i class="fa fa-search"></i></button>
+                    <button class="btn btn--icon btn--outline"><i class="fa fa-search"></i></button>
+                    <button class="btn btn--icon btn--outline btn--big-text"><i class="fa fa-search"></i></button>
+                  </p>
+                  <p>
+                    <button class="btn btn--icon btn--lg"><i class="fa fa-search"></i></button>
+                    <button class="btn btn--icon btn--lg btn--big-text"><i class="fa fa-search"></i></button>
+                    <button class="btn btn--icon btn--lg btn--outline"><i class="fa fa-search"></i></button>
+                    <button class="btn btn--icon btn--lg btn--outline btn--big-text"><i class="fa fa-search"></i></button>
+                  </p>
+                </p>
+                <h3>Rounded "pill" buttons</h3>
+                <p>
+                  <button class="btn btn--pill">Example</button> <code>.btn.btn--pill</code>
+                </p>
+                <p> Using <code>.btn--icon</code> together with <code>.btn--pill</code> yields a circular button:</p>
+                <p>
+                  <button class="btn btn--pill btn--success btn--icon"><i class="fa fa-arrow-right"></i></button>
+                  <button class="btn btn--pill btn--secondary btn--icon"><i class="fa fa-folder-open-o"></i></button>
+                  <button class="btn btn--pill btn--primary btn--icon"><i class="fa fa-user"></i></button>
+                  <button class="btn btn--pill btn--warning btn--icon"><i class="fa fa-question-circle"></i></button>
+                  <button class="btn btn--pill btn--danger btn--icon"><i class="fa fa-times-circle"></i></button>
+                  <button class="btn btn--pill btn--icon"><i class="fa fa-bars"></i></button>
+                </p>
+                <p>Pill icon button sizes, larger text, and outline:</p>
+                <p>
+                  <button class="btn btn--primary btn--icon btn--pill btn--sm"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--lg"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--sm btn--big-text"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--big-text"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--lg btn--big-text"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--sm btn--outline"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--outline"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--lg btn--outline"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--sm btn--big-text btn--outline"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--big-text btn--outline"><i class="fa fa-heart-o"></i></button>
+                  <button class="btn btn--primary btn--icon btn--pill btn--lg btn--big-text btn--outline"><i class="fa fa-heart-o"></i></button>
+                </p>
+                <h3>Combo Buttons</h3>
+                <p>See <a href="#basics-combos">combos</a> for explanation.
+                  
+                </p>
+                <p>
+                  <button class="btn combo--left">.combo--left</button>
+                  <button class="btn combo--center">.combo--center</button>
+                  <button class="btn combo--right">.combo--right</button>
+                </p>
+                <p>
+                  <button class="btn btn--pill btn--danger combo--left">.combo--left</button>
+                  <button class="btn btn--pill btn--warning combo--center">.combo--center</button>
+                  <button class="btn btn--pill btn--success combo--right">.combo--right</button>
+                </p>
+                <h3>Button with Dropdown</h3>
+                <p> The dropdown component can be used with buttons. See the <a href="components.html#components-dropdowns">dropdown component</a> for explanation.</p>
+                <div class="dropdown">
+                  <button class="btn dropdown__ctrl">Example 1 <i class="fa fa-caret-down"></i>
+                  </button><span class="dropdown__content p--block bg--white bs">Example dropdown component content</span>
+                </div><br>
+                <div class="dropdown">
+                  <button class="btn combo--left"> Example 2 (combo)</button>
+                  <button class="btn btn--icon combo--right dropdown__ctrl"><i class="fa fa-caret-down"></i></button><span class="dropdown__content p--block bg--white bs">Example dropdown component content</span>
+                </div>
+                <h3 class="mt--line">Social media icon buttons</h3>
+                <p>
+                  If you need social media buttons, it's easy to create them with Codebase. Following is a example.
+                  
+                </p>
+                <p>Simply create icon buttons as above, and use <a href="http://fontawesome.io/icons/">Font Awesome</a> (or other) to supply the social media brand icon. Then assign the appropriate background color to each.
+                  
+                </p>
+                <style>
+                  a.btn--facebook    {background-color:#3b5998;}
+                  a.btn--twitter     {background-color:#00b6f1;}
+                  a.btn--linkedin    {background-color:#007bb6;}
+                  a.btn--google-plus {background-color:#df4a32;}
+                  a.btn--youtube     {background-color:#b31217;}
+                  a.btn--pinterest   {background-color:#cb2027;}
+                  a.btn--instagram   {background-color:#c32aa3;}
+                  a.btn--tumblr      {background-color:#2c4762;}
+                  
+                  a:hover.btn--facebook    {background-color:#263e60;}
+                  a:hover.btn--twitter     {background-color:#0099bc;}
+                  a:hover.btn--linkedin    {background-color:#005d82;}
+                  a:hover.btn--google-plus {background-color:#aa3327;}
+                  a:hover.btn--youtube     {background-color:#7f0e17;}
+                  a:hover.btn--pinterest   {background-color:#961a23;}
+                  a:hover.btn--instagram   {background-color:#8e2079;}
+                  a:hover.btn--tumblr      {background-color:#15222d;}
+                  
+                    
+                </style>
+                <p><a class="btn btn--facebook btn--icon btn--big-text" href="#/"><i class="fa fa-facebook"></i></a> <a class="btn btn--twitter btn--icon btn--big-text" href="#/"><i class="fa fa-twitter"></i></a> <a class="btn btn--linkedin btn--icon btn--big-text" href="#/"><i class="fa fa-linkedin"></i></a> <a class="btn btn--google-plus btn--icon btn--big-text" href="#/"><i class="fa fa-google-plus"></i></a> <a class="btn btn--youtube btn--icon btn--big-text" href="#/"><i class="fa fa-youtube"></i></a> <a class="btn btn--pinterest btn--icon btn--big-text" href="#/"><i class="fa fa-pinterest"></i></a> <a class="btn btn--instagram btn--icon btn--big-text" href="#/"><i class="fa fa-instagram"></i></a> <a class="btn btn--tumblr btn--icon btn--big-text" href="#/"><i class="fa fa-tumblr"></i></a>
+                </p>
+                <p><b>Note:</b> The brand background colors shown in the example above are not included in <code>codebase.css</code>. They are simply added here in the docs.</p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-form-elements">
+              <header>
+                <h2>Form Elements</h2>
+              </header>
+              <section>
+                <p>Form elements expand to 100% of their container width. Give them structure by wrapping them in flexbox flexitems (see <a href="layout.html">Layout</a>).
+                  
+                </p>
+                <p>
+                  There is no added margin or padding around form elements – so nothing you need to override. Add whatever margin or padding (or not) as suits your own design.
+                  
+                </p>
+                <h3>Form Label</h3>
+                <div class="b--heavy b--rounded b--teal-lighten-2 p--16">
+                  <p class="text--muted">Example:</p>
+                  <label for="">Name:</label>
+                </div>
+                <h3 class="mt--line">Input Fields</h3>
+                <label for="text-example">Text:</label>
+                <input id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <label for="email-example">Email:</label>
+                <input id="email-example" name="examplename" placeholder="Example email input field" type="email">
+                <label for="tel-example">Tel:</label>
+                <input id="tel-example" name="examplename" placeholder="Example phone number input field" type="tel">
+                <label for="search-example">Search:</label>
+                <input id="search-example" name="examplename" placeholder="Example search input field" results="5" type="search">
+                <label for="number-example">Number:</label>
+                <input id="number-example" name="examplename" placeholder=" Example number input field" type="number">
+                <label for="date-example">Date:</label>
+                <input id="date-example" name="examplename" placeholder="Example date input field" type="date">
+                <label for="month-example">Month:</label>
+                <input id="month-example" name="examplename" placeholder="Example month input field" type="month">
+                <label for="password-example">Password:</label>
+                <input id="month-example" name="examplename" placeholder="Example password input field" type="password">
+                <h3 class="mt--line">Form Inputs without Full-Width</h3>
+                <p>There may be some occasions when you don't want a full-width form input field, and you can't or don't wish to control input field widths using e.g. the flexbox layout system. In which case, you can simply ass class <code>.form__input--inline</code> to prevent the field width expanding to 100% container width.</p>
+                <label for="text-example2">Text:</label>
+                <input class="form__input--inline" id="text-example2" name="examplename" placeholder="Example text input field" type="text">
+                <h3 class="mt--line">Textarea</h3>
+                <label for="textarea-example">Textarea:</label>
+                <textarea id="textarea-example" name="examplename" type="password" placeholder="Example textarea" rows="4"></textarea>
+                <h3 class="mt--line">Selects</h3>
+                <label for="single-select-example">Single select:</label>
+                <select id="single-select-example" name="examplename">
+                  <option value="first">First option </option>
+                  <option value="second">Second option </option>
+                  <option value="third">Third option</option>
+                </select>
+                <label class="mt--line" for="multi-select-example">Single select:</label>
+                <select id="multi-select-example" name="examplename" multiple="3">
+                  <option value="first">First option </option>
+                  <option value="second">Second option </option>
+                  <option value="third">Third option</option>
+                </select>
+                <h3 class="mt--line">Radio Boxes and Checkboxes</h3>
+                <form>
+                  <input id="radio-1" name="examplename" checked="checked" type="radio">
+                  <label for="radio-1">Radio 1</label><br>
+                  <input id="radio-2" name="examplename" type="radio">
+                  <label for="radio-2">Radio 2</label><br>
+                  <input id="radio-3" name="examplename" type="radio">
+                  <label for="radio-3">Radio 3</label>
+                </form>
+                <form>
+                  <input id="checkbox-1" name="examplename" checked="checked" type="checkbox">
+                  <label for="checkbox-1">Checkbox 1 </label><br>
+                  <input id="checkbox-2" name="examplename" type="checkbox">
+                  <label for="checkbox-2">Checkbox 2</label><br>
+                  <input id="checkbox-3" name="examplename" type="checkbox">
+                  <label for="checkbox-3">Checkbox 3</label>
+                </form>
+                <h3 class="mt--line">Styled Radio Boxes and Checkboxes</h3>
+                <p>Using <a href="http://fontawesome.io/">Font Awesome</a>.</p>
+                <p><code>.form__radio</code></p>
+                <form>
+                  <input class="form__radio" id="radio-4" name="examplename" checked="checked" type="radio">
+                  <label for="radio-4">Radio 4</label><br>
+                  <input class="form__radio" id="radio-5" name="examplename" type="radio">
+                  <label for="radio-5">Radio 5</label><br>
+                  <input class="form__radio" id="radio-6" name="examplename" type="radio">
+                  <label for="radio-6">Radio 6</label>
+                </form><br>
+                <p><code>.form__checkbox</code></p>
+                <form>
+                  <input class="form__checkbox" id="checkbox-4" name="examplename" checked="checked" type="checkbox">
+                  <label for="checkbox-4">Checkbox 4</label><br>
+                  <input class="form__checkbox" id="checkbox-5" name="examplename" type="checkbox">
+                  <label for="checkbox-5">Checkbox 5</label><br>
+                  <input class="form__checkbox" id="checkbox-6" name="examplename" type="checkbox">
+                  <label for="checkbox-6">Checkbox 6</label>
+                </form><br>
+                <p><code>.form__radio--toggle</code></p>
+                <p><code>.form__radio</code></p>
+                <form>
+                  <input class="form__radio--toggle" id="radio-7" name="examplename" checked="checked" type="radio">
+                  <label for="radio-7">Radio 7</label><br>
+                  <input class="form__radio--toggle" id="radio-8" name="examplename" type="radio">
+                  <label for="radio-8">Radio 8</label><br>
+                  <input class="form__radio--toggle" id="radio-9" name="examplename" type="radio">
+                  <label for="radio-9">Radio 9</label>
+                </form><br>
+                <p><code>.form__checkbox--toggle</code></p>
+                <form>
+                  <input class="form__checkbox--toggle" id="checkbox-7" name="examplename" checked="checked" type="checkbox">
+                  <label for="checkbox-7">Checkbox 7</label><br>
+                  <input class="form__checkbox--toggle" id="checkbox-8" name="examplename" type="checkbox">
+                  <label for="checkbox-8">Checkbox 8</label><br>
+                  <input class="form__checkbox--toggle" id="checkbox-9" name="examplename" type="checkbox">
+                  <label for="checkbox-9">Checkbox 9</label>
+                </form>
+                <h3 class="mt--line">Form Element Sizes</h3>
+                <p>Three sizes have been provided for form inputs, selects and textarea elements. These match the three sizes of <a href="#basics-buttons">buttons</a>.
+                  
+                </p>
+                <label for="text-example"><code>.form__input--sm</code>:</label></label>
+                <input class="form__input--sm" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <p class="mt--line text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>The smaller form input field size (and smaller button size) has been designed for fitting within menus and menubars.</p>
+                <label for="text-example">Default:</label>
+                <input id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <label class="mt--line" for="text-example"><code>.form__input--lg</code>:</label>
+                <input class="form__input--lg" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <h3 class="mt--line">Form Elements with Big Text</h3>
+                <p>
+                  An increased text size of 1.5em has been provided for situations where a form requires special emphasis (e.g. a call to action sign-up).
+                  
+                </p>
+                <p>For the big text size, use the class <code>.form__input--big-text</code> on form elements.
+                  
+                </p>
+                <p>The larger text size is the same as for the optional big text size on <a href="#basics-buttons">buttons</a>.
+                  
+                </p>
+                <label for="text-example"><code>.form__input--big-text.form__input--sm</code></label>
+                <input class="form__input--big-text form__input--sm" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <label class="mt--line" for="text-example"><code>.form__input--big-text</code></label>
+                <input class="form__input--big-text" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <label class="mt--line" for="text-example"><code>.form__input--big-text.form__input--lg</code> </label>
+                <input class="form__input--big-text form__input--lg" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <h3 class="mt--line">Pills</h3>
+                <p>If you require a "pill" style form input field, use <code>.form__input--pill</code>. Examples:
+                  
+                </p>
+                <label for="text-example"><code>.form__input--pill.form__input--sm</code></label>
+                <input class="form__input--pill form__input--sm" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                <label class="mt--line" for="text-example"><code>.form__input--pill.form__input--inline</code> 
+                  <input class="form__input--pill form__input--inline" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+                </label>
+                <label class="mt--line" for="text-example"><code>.form__input--big-text.form__input--lg.form__input--pill</code></label>
+                <input class="form__input--big-text form__input--lg form__input--pill" id="text-example" name="examplename" placeholder="Example text input field" type="text">
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-combos">
+              <header>
+                <h2>Combos</h2>
+              </header>
+              <section>
+                <p><code>.combo--*</code> classes enable multiple buttons and/or form elements to be used in a cluster. Combo classes remove some of the rounded corners (if present).
+                  
+                </p>
+                <h3>Inline Combos</h3>
+                <p><code>.combo--left</code>, <code>.combo--center</code> and <code>.combo--right</code> classes are set as inline blocks. Floats are used to close up the spaces.
+                  
+                </p>
+                <p>In order to display the form input fields as inline items, the class <code>.form__input--inline</code> has also been used (to override the Codebase default 100% width that is applied to form input fields.)
+                  
+                </p>
+                <form action="">
+                  <input class="form__input--sm form__input--inline combo--left" placeholder="Search" type="search">
+                  <button class="btn btn--sm combo--right"><i class="fa fa-search"></i> Go</button>
+                </form><br>
+                <form action="">
+                  <input class="form__input--inline form__input--pill combo--left" placeholder="Search" type="search">
+                  <button class="btn btn--pill combo--right"><i class="fa fa-search"></i> Go</button>
+                </form><br>
+                <form action="">
+                  <input class="form__input--lg form__input--inline combo--left" placeholder="Search" type="search">
+                  <button class="btn btn--lg combo--right"><i class="fa fa-search"></i> Go</button>
+                </form><br>
+                <p class="mt--line">
+                  <button class="btn combo--left">Alpha</button>
+                  <button class="btn combo--center">Beta</button>
+                  <button class="btn combo--center">Charlie</button>
+                  <button class="btn combo--right">Delta</button>
+                </p><br>
+                <form action="">
+                  <input class="form__input--inline combo--left" name="" placeholder="Name" type="text">
+                  <input class="form__input--inline combo--center" name="" placeholder="Email" type="email">
+                  <button class="btn combo--right">Subscribe</button>
+                </form><br>
+                <div class="dropdown">
+                  <button class="btn btn--pill combo--left">Dropdown combo</button>
+                  <button class="btn btn--icon btn--pill combo--right dropdown__ctrl"><i class="fa fa-caret-down"></i></button><span class="dropdown__content p--block bg--gray-lighten-2">Example dropdown content</span>
+                </div><br>
+                <h3>Stacked Combos</h3>
+                <p><code>.combo--top</code>, <code>.combo--middle</code> and <code>.combo--bottom</code> classes remain naturally as stacked items. </p>
+                <p>Form elements ordinarily (even without combo classes) expend to the full width of their container, whereas buttons require <code>.btn--block</code> to make them expand to full width. Then you can constrain the width of your container for your combo cluster. 
+                  
+                </p>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem-xs--span-6">
+                    <form action="">
+                      <input class="combo--top" name="" placeholder="Name" type="text">
+                      <input class="combo--middle" name="" placeholder="Email" type="email">
+                      <button class="btn btn--block combo--bottom">Subscribe</button>
+                    </form>
+                  </div>
+                  <div class="flexitem flexitem-xs--span-6">
+                    <div class="showhide">
+                      <div class="showhide__ctrl btn btn--block combo--top">First showhide parent <i class="fa fa-caret-down"></i></div>
+                      <div class="showhide__content">
+                        <div class="p--block bg--yellow">First child</div>
+                      </div>
+                    </div>
+                    <div class="showhide combo--middle">
+                      <div class="showhide__ctrl btn btn--block combo--middle">Second showhide parent <i class="fa fa-caret-down"></i></div>
+                      <div class="showhide__content">
+                        <div class="p--block bg--yellow">Second child</div>
+                      </div>
+                    </div>
+                    <div class="showhide">
+                      <div class="showhide__ctrl btn btn--block combo--bottom">Third showhide parent <i class="fa fa-caret-down"></i></div>
+                      <div class="showhide__content">
+                        <div class="p--block bg--yellow">Third child</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              </div>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-badges">
-              <h2 class="docs-section">Badges</h2>
-              <p>Badges can be used in any sized text.</p>
-              <p>
-                Examples<span class="badge">1</span><span class="badge badge--primary">2</span><span class="badge badge--secondary">345</span><span class="badge badge--warning">678</span><span class="badge badge--error">9</span><span class="badge">10</span><span class="badge badge--success"><i class="fa fa-coffee"></i></span>
-                
-              </p>
-              <h1>h1 example<span class="badge badge--success">NEW</span></h1>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-badges-and-labels">
+              <header>
+                <h2>Badges and Labels</h2>
+              </header>
+              <section>
+                <p>Badges can be used on any sized text, inheriting its size.</p>
+                <p>
+                  Examples<span class="badge">1</span><span class="badge badge--primary">2</span><span class="badge badge--secondary">345</span><span class="badge badge--warning">678</span><span class="badge badge--danger">9</span><span class="badge">10</span><span class="badge badge--success"><i class="fa fa-coffee"></i></span>
+                  
+                </p>
+                <h1>h1 example<span class="badge badge--success">NEW</span></h1>
+                <p>Labels can be used in any sized text, inheriting its size.</p>
+                <p>Examples:</p>
+                <p><span class="label label--primary">Author</span></p>
+                <p><span class="label label--secondary">Enquiry</span></p>
+                <p><span class="label label--warning">Required</span></p>
+                <p><span class="label label--danger">Oops!</span></p>
+                <p><span class="label label--success">Winner</span></p>
+                <h1><span class="label">New</span> h1 example</h1>
+              </section>
             </div>
-            <div class="menu-marker-section" id="basics-labels">
-              <h2 class="docs-section">Labels</h2>
-              <p>Labels can be used in any sized text.</p>
-              <p>Examples:</p>
-              <h1><span class="label">New</span> TITLE</h1>
-              <p><span class="label label--primary">Author</span></p>
-              <p><span class="label label--secondary">Enquiry</span></p>
-              <p><span class="label label--warning">Required</span></p>
-              <p><span class="label label--error">Oops!</span></p>
-              <p><span class="label label--success">Winner</span></p>
-            </div>
-            <div class="menu-marker-section" id="basics-images">
-              <h2 class="docs-section">Images</h2>
-              <p><img src="holder.js/96x96" alt="thumbnail"/>
-                By default, images are inline elements, sitting on the baseline of any text they are share a block element (e.g. paragraph) with. Codebase also gives them code max-width: 100% so that large images are &quot;repsonsive&quot;, shrinking to fit in containers (or windows) narrower than the actual image width.
-                
-              </p>
-              <p>Further styling can be added using <a href="decoration.html">decoration classes</a> (e.g. borders).
-                
-              </p>
-              <p>Examples:</p><img class="mb--3u b--4px-solid b--white bs" src="holder.js/1000x150" alt="full-width"/>
-              <div class="grid grid--gutter grid--nested">
-                <div class="col col-sm--span-4"><img class="b--circle mh--auto" src="holder.js/250x250" alt="full--width"/>
-                  <p class="text--center">
-                    Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+          </article>
+          <article>
+            <div class="docs__section" id="basic-floats-and-clearfix">
+              <header>
+                <h2>Floats and Clearfix</h2>
+              </header>
+              <section>
+                <p>These outer boxes have <code>.clearfix</code>.</p>
+                <div class="clearfix">
+                  <div class="float--right">
+                    <div class="b--dashed p--16">This is an example of <code>.float--right</code></div>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
                     
                   </p>
                 </div>
-                <div class="col col-sm--span-4"><img class="b--circle mh--auto" src="holder.js/250x250" alt="full-width"/>
-                  <p class="text--center">
-                    Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
-                    
-                  </p>
+                <div class="clearfix">
+                  <div class="float--left">
+                    <div class="b--dashed p--16">This is an example of <code>.float--left</code></div>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
                 </div>
-                <div class="col col-sm--span-4"><img class="b--circle mh--auto" src="holder.js/250x250" alt="full--width"/>
-                  <p class="text--center">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</p>
-                </div>
-              </div>
+              </section>
             </div>
-          </div>
-          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
-               version 2.x PREVIEW
-              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
-        </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-text-utilities">
+              <header>
+                <h2>Text Utilities</h2>
+              </header>
+              <section>
+                <p>Codebase has several simple text utility classes, which are prefixed <code>.text--</code>. 
+                  
+                </p>
+                <p>
+                  Most of these are demonstrated in appropriate places elsewhere on this Codebase Basics docs page. But here are a few more:
+                  
+                </p>
+                <p><code>.text--bold</code> <span class="text--bold">Bold text</span></p>
+                <p><code>.text--heavy</code> <span class="text--heavy">Heavy text (900)</span></p>
+                <p><code>.text--italics</code> <span class="text--italics">Italics text</span></p>
+                <p><code>.text--normal</code><b> <i>Returns text to normal. <span class="text--normal">Perhaps you may find this useful</span> in some circumstances.</i></b></p>
+                <p><code>.text--caps</code> <span class="text--caps">All-capitals text</span></p>
+                <p><code>.text--muted</code> <span class="text--muted">Muted text is semi-transparent (opacity: 0.5)</span></p>
+                <p><code>.text--big-text</code> Big text for making <span class="text--big-text">something</span> stand out.</p>
+                <p><code>.text--small-text</code>  Small text for <span class="text--small-text">small print</span>.</p>
+                <p>The full list of Codebase text utility classes can be found at <a href="decoration.html#decoration-text">Decoration: Text</a>.</p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="basic-big-typography">
+              <header>
+                <h2>Big Typography</h2>
+              </header>
+              <section>
+                <p>By default, Codebase has its font sizes for everything based on a set of <code>$text--base-font-*</code> variables. But there is also a set of <code>$text--big-text-font-*</code> variables. (You can override both, because each are set as <code>!default</code> variables.)
+                  
+                </p>
+                <p>
+                  There are two ways to deploy big typography in Codebase:
+                  
+                </p>
+                <h4>1. The <code>.text--big-text</code> inline element class</h4>
+                <p>If you want to emphasize some inline text by <span class="text--big-text">increasing the font size</span>, Codebase can do this by applying <code>.text--big-text</code> to an inline tag (e.g. <code>&lt;span class="text--big-text"&gt;</code>).
+                  
+                </p>
+                <h4>2. The <code>.text--big-text</code> container element class</h4>
+                <p>Codebase can render big typography simply by <b>placing any Codebase-styled HTML within a container that has class</b> <code>.text--big-text</code>.
+                  
+                  
+                </p>
+                <p>This may be useful e.g. for long-read articles.</p>
+                <div class="flexbox flexbox--gutter flexbox--nested">
+                  <div class="flexitem flexitem-xs--span-6">
+                    <h1>Header h1</h1>
+                    <h2>Header h2</h2>
+                    <h3>Header h3</h3>
+                    <h4>Header h4</h4>
+                    <h5>Header h5</h5>
+                    <h6>Header h6</h6>
+                    <p>
+                      Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
+                      
+                    </p>
+                  </div>
+                  <div class="flexitem flexitem-xs--span-6">
+                    <div class="text--big-text">
+                      <h1>Header h1</h1>
+                      <h2>Header h2</h2>
+                      <h3>Header h3</h3>
+                      <h4>Header h4</h4>
+                      <h5>Header h5</h5>
+                      <h6>Header h6</h6>
+                      <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+        </main>
+        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta |
+            <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> |
+            Built by <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="codebase/js/codebase.js"></script>
+    <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
+    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -8,11 +8,15 @@
 ehthumbs.db
 Thumbs.db
 
-# SASS
+# Sass
 
 .sass-cache
 **.sass-cache
 *.scssc
+
+#
+
+/_dev-dependencies/*
 
 # CodeKit
 

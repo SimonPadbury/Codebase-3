@@ -1,0 +1,290 @@
+// COMPONENT MIXINS: MENUS AND MENUBARS
+// ====================================
+
+=menu
+  position: relative
+  margin: 0
+  padding: 0
+  ul
+    margin: 0
+    padding: 0
+
+=menu__item
+  list-style-type: none
+
+=menu__item--deco
+  margin-bottom: 0
+
+=menu__link
+  display: block
+
+=menu__link--deco
+  padding: $spacing--block
+  transition: all 0.2s ease-in-out
+  &.is-active,
+  &:hover
+    text-decoration: none
+    background-color: $color--gray-lighten-3
+
+=menu__child-link--deco
+  padding-left: $spacing--36
+
+=menu__grandchild-link--deco
+  padding-left: $spacing--60
+
+=menu--fixed
+  position: fixed !important
+  z-index: $z-index--menu-menubar-fixed
+  width: 100vw
+
+// Menubar
+
+=menubar
+  display: flex
+  flex-wrap: wrap
+  margin: 0
+  form
+    margin: 0
+    white-space: nowrap
+  li
+    margin: 0
+
+=menu__brand
+  display: inline-block
+
+=menu__brand--deco
+  a
+    padding: #spacing-block
+
+=menu__ctrl
+  &--left
+    position: absolute
+    z-index: 1
+    left: 0
+  &--right
+    position: absolute
+    z-index: 1
+    right: 0
+  &:hover
+    cursor: pointer
+
+=menu__content--operation
+  overflow-y: hidden
+  max-height: 0
+  transition: max-height 0.5s cubic-bezier(0, 0.5, 0, 1)
+  cursor: default
+  &.is-active
+    max-height: 100vh
+    transition-timing-function: cubic-bezier(0.5, 0, 0.5, 0)
+
+=menubar--left
+  flex-grow: 1
+  order: 1
+  justify-content: flex-start
+  [dir="rtl"] &, &[dir="rtl"],
+  .rtl &, &.rtl
+    justify-content: flex-end
+
+=menubar--right
+  flex-grow: 1
+  order: 2
+  justify-content: flex-end
+  [dir="rtl"] &, &[dir="rtl"],
+  .rtl &, &.rtl
+    justify-content: flex-start
+
+=menubar--center
+  flex-grow: 1
+  justify-content: center
+
+=menubar--justify
+  flex-grow: 1
+  justify-content: space-between
+
+// CLASS BUILDER: MENUS AND MENUBARS
+// =================================
+
+=components-menu-and-menubar
+
+  .menu
+    +menu
+    li
+      +menu__item
+    a
+      +menu__link
+
+  .menu--fixed,
+  .menubar--fixed
+    +menu--fixed
+
+  .menu__brand,
+  .menubar__brand
+    +menu__brand
+
+  .menu__ctrl,
+  .menubar__ctrl
+    +menu__ctrl
+    .menu--menubar-xs &
+      +break--min($mq--xs)
+        display: none
+    .menu--menubar-sm &
+      +break--min($mq--sm)
+        display: none
+    .menu--menubar-md &
+      +break--min($mq--md)
+        display: none
+    .menu--menubar-lg &
+      +break--min($mq--lg)
+        display: none
+
+  .menu__content,
+  .menubar__content
+    flex-grow: 1
+    .menubar &
+      +menubar
+      & > ul
+        +menubar
+    .menu--menubar-xs &
+      +break--max($mq--xs)
+        +menu__content--operation
+      +break--min($mq--xs)
+        +menubar
+        & > ul
+          +menubar
+    .menu--menubar-sm &
+      +break--max($mq--sm)
+        +menu__content--operation
+      +break--min($mq--sm)
+        +menubar
+        & > ul
+          +menubar
+    .menu--menubar-md &
+      +break--max($mq--md)
+        +menu__content--operation
+      +break--min($mq--md)
+        +menubar
+        & > ul
+          +menubar
+    .menu--menubar-lg &
+      +break--max($mq--lg)
+        +menu__content--operation
+      +break--min($mq--lg)
+        +menubar
+        & > ul
+          +menubar
+
+  =menubar-assemble
+    +menubar
+    li
+      +menu__item
+    a
+      +menu__link
+      white-space: nowrap
+
+  .menubar
+    +menu
+    +menubar-assemble
+
+  =dropdown-override
+    .dropdown
+      &__ctrl i
+        display: none
+      &__content
+        display: block !important
+        position: static
+        max-height: inherit
+        a
+          padding-left: $spacing--24
+          [dir="rtl"] &, &[dir="rtl"],
+          .rtl &, &.rtl
+            padding-right: $spacing--24
+            padding-left: inherit
+
+  .menu--menubar-xs
+    +break--max($mq--xs)
+      +dropdown-override
+    +break--min($mq--xs)
+      +menubar-assemble
+  .menu--menubar-sm
+    +break--max($mq--sm)
+      +dropdown-override
+    +break--min($mq--sm)
+      +menubar-assemble
+  .menu--menubar-md
+    +break--max($mq--md)
+      +dropdown-override
+    +break--min($mq--md)
+      +menubar-assemble
+  .menu--menubar-lg
+    +break--max($mq--lg)
+      +dropdown-override
+    +break--min($mq--lg)
+      +menubar-assemble
+
+  =menubar-dropdown
+    .dropdown__content
+      +dropdown__content--deco
+      padding: 0
+      a
+        padding-left: $spacing--8
+
+  .menu
+    @if $deco-class--menu-and-menubar == true
+      &.deco
+        li
+          +menu__item--deco
+        a
+          +menu__link--deco
+        li li a
+          +menu__child-link--deco
+        li li li a
+          +menu__grandchild-link--deco
+        &.menu--menubar-xs
+          +break--min($mq--xs)
+            +menubar-dropdown
+        &.menu--menubar-sm
+          +break--min($mq--sm)
+            +menubar-dropdown
+        &.menu--menubar-md
+          +break--min($mq--md)
+            +menubar-dropdown
+        &.menu--menubar-lg
+          +break--min($mq--lg)
+            +menubar-dropdown
+        .menu__brand
+          +menu__brand--deco
+
+  .menubar
+    @if $deco-class--menu-and-menubar == true
+      &.deco
+        li
+          +menu__item--deco
+        a
+          +menu__link--deco
+        .menubar__brand
+          +menu__brand--deco
+        +menubar-dropdown
+
+  // Menubar child menus are handled by dropdown components.
+  // (No grandchild menus in _menubars_ have been configured).
+
+  .menubar--left,
+  .menubar__left
+    +menubar--left
+
+  .menubar--right,
+  .menubar__right
+    +menubar--right
+
+  .menubar--center,
+  .menubar__center
+    +menubar--center
+
+  .menubar--justify,
+  .menubar__justify
+    +menubar--justify
+
+  // Child menus are handled by `.dropdown`
+
+@if $include-css--menu-and-menubar == true
+  +components-menu-and-menubar

@@ -1,0 +1,303 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "layout-flexbox-classes"
+  - var sectionTitle = "Flexbox Classes"
+
+block section
+  p  Composite responsive flexbox example:
+
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem-sm--span-9.flexitem-lg--order-2
+      .bg--purple.mb--4.p--4.text--white Article
+      .flexbox.flexbox--gutter.flexbox--nested
+        .flexitem.flexitem-sm--span-4
+          .bg--purple.mb--4.p--4.text--white Nested
+        .flexitem.flexitem-sm--span-4
+          .bg--purple.mb--4.p--4.text--white Nested
+        .flexitem.flexitem-sm--span-4
+          .bg--purple.mb--4.p--4.text--white Nested
+    .flexitem.flexitem-sm--span-3.flexitem-lg--order-1 
+      .bg--purple.mb--4.p--4.text--white Aside
+  .flexbox.flexbox--center
+    .flexitem.flexitem--span-7 
+      .bg--purple.mb--4.p--4.text--white Centered (at all viewport widths)
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-flexbox-classes-html") HTML
+      .tab__label(data-tab-id="tab-docs-flexbox-classes-pug") Pug
+
+    #tab-docs-flexbox-classes-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="flexbox flexbox--gutter"&gt;
+            &lt;div class="flexitem flexitem-md--span-9 flexitem-lg--order-2"&gt;
+              Article
+
+              &lt;div class="flexbox flexbox--gutter flexbox--nested"&gt;
+                &lt;div class="flexitem flexitem-sm--span-4"&gt;
+                  Nested
+                &lt;/div&gt;
+                &lt;div class="flexitem flexitem-sm--span-4"&gt;
+                  Nested
+                &lt;/div&gt;
+                &lt;div class="flexitem flexitem-sm--span-4"&gt;
+                  Nested
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;div class="flexitem flexitem-md--span-3 col-lg--order-1"&gt;
+              Aside
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="flexbox flexbox--center"&gt;
+            &lt;div class="flexitem flexitem--span-7"&gt;
+              Centered (at all viewport widths)
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+    #tab-docs-flexbox-classes-pug.tab__card
+      pre.mt--zero
+        code.
+          .flexbox.flexbox--gutter
+            .flexitem.flexitem-md--span-9.flexitem-lg--order-2
+              | Article
+              
+              .flexbox.flexbox--gutter.flexbox--nested
+                .flexitem.flexitem-sm--span-4
+                  | Nested
+                .flexitem.flexitem-sm--span-4
+                  | Nested
+                .flexitem.flexitem-sm--span-4
+                  | Nested
+            
+            .flexitem.flexitem-md--span-3.col-lg--order-1
+              | Aside
+
+          .flexbox.flexbox--center
+            .flexitem.flexitem--span-7
+              | Centered (at all viewport widths)
+            
+  table.table.deco
+    thead
+      tr
+        th(style="width:160px") Class
+        th Explanation
+    tbody
+      tr
+        td
+          code.text--nowrap .flexbox
+        td.
+          The container class. Sets up the flexbox. Its width is unconstrained.
+      tr
+        td
+          code.text--nowrap .flexbox--container
+        td.
+          The #[code .flexbox--container] block modifier constrains the flexbox to #[code $flexbox--max-width] and, on wider viewports, centers the flexbox by auto-margins right and left.
+      tr
+        td
+          code.text--nowrap .flexbox--gutter
+        td.
+          Gives right and left padding to all immediate child block elements (i.e. flexitems).
+      tr
+        td
+          code.text--nowrap .flexbox--nested
+        td.
+          Gives negative right and left margin to the flexbox container equal to the gutter width, so that a nested flexbox is flush right and left inside their containing flexitem.
+      tr
+        td
+          code.text--nowrap .flexbox--center
+        td.
+          Applied to the flexbox container, this will horizontally center any number of flexitems.
+      tr
+        td
+          code.text--nowrap .flexbox--middle
+        td.
+          Applied to the flexbox container, this will vertically center any number of flexitems.
+      tr
+        td
+          code.text--nowrap .flexitem
+        td.
+          The immediate child ("column" or "row") base class. It has a fallback to #[code width: 100%] for causing a flexitem to become full-width when the viewport is below the lowest flexitem span breakpoint.
+      tr
+        td
+          code.text--nowrap .flexitem--*
+          br
+          code.text--nowrap .flexitem-xs--*
+          br
+          code.text--nowrap .flexitem-sm--*
+          br
+          code.text--nowrap .flexitem-md--*
+          br
+          code.text--nowrap .flexitem-lg--*
+        td.
+          Controlling the column (flexitem) width behaviour at different breakpoints. Except for #[code .flexitem--*] all flexitems expand to width: 100%] of their container width below their breakpoint.
+      tr
+        td
+          code.text--nowrap *--span-*
+        td.
+          Flexitem spanning at different breakpoints using % widths (#[b note:] not using flex-grow), as calculated out of max
+          #[code $max-flexitems] (default is 12).
+      tr
+        td
+          code.text--nowrap *--offset-*
+        td.
+          Flexitem offsetting (at different breakpoints), as calculated out of max #[code $max-flexitems] (default is 12).
+      tr
+        td
+          code.text--nowrap *--order-*
+        td.
+          Flexitem (re-)ordering (at different breakpoints).
+
+  h3 Flexitem spans
+  p
+    code --span-
+
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-12
+      .bg--brown.mb--4.p--4.text--white .flexitem--span-12
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-11
+      .bg--brown.mb--4.p--4.text--white .flexitem--span-11
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-10
+      .bg--brown.mb--4.p--4.text--white .flexitem--span-10
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-9
+      .bg--brown.mb--4.p--4.text--white ...
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-8
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-7
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-6
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-5
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-4
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-3
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-2
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+    .flexitem.flexitem--span-1
+      .bg--brown.mb--4.p--4.text--white &nbsp;
+
+  h3.mt--line Flexitem offsets
+
+  p
+    code --offset-
+
+  .flexbox
+    .flexitem.flexitem--span-1.flexitem--offset-1
+      .bg--pink.mb--4.p--4.text--white *-1
+  .flexbox
+    .flexitem.flexitem--span-1.flexitem--offset-2
+      .bg--pink.mb--4.p--4.text--white *-2
+  .flexbox
+    .flexitem.flexitem--span-1.flexitem--offset-3
+      .bg--pink.mb--4.p--4.text--white *-3
+  .flexbox
+    .flexitem.flexitem--span-1.flexitem--offset-4
+      .bg--pink.mb--4.p--4.text--white &nbsp; ...
+  .flexbox
+    .flexitem.flexitem--span-1.flexitem--offset-11
+      .bg--pink.mb--4.p--4.text--white *-11
+
+  h3 Flexitem (re-)ordering
+
+  p
+    code --order-
+
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem--span-3.flexitem--order-2
+      .bg--yellow.mb--4.p--4.text--white (1st) *--order-3
+    .flexitem.flexitem--span-3.flexitem--order-1
+      .bg--yellow.mb--4.p--4.text--white (2nd) *--order-1
+    .flexitem.flexitem--span-3.flexitem--order-2
+      .bg--yellow.mb--4.p--4.text--white (3rd) *--order-4
+    .flexitem.flexitem--span-3.flexitem--order-1
+      .bg--yellow.mb--4.p--4.text--white (4th) *--order-2
+
+  br
+
+  p #[b Notes on flexitem (re-)ordering:]
+  
+  ol
+    li.
+      If you require column re-ordering, specify the order of #[i all] flexitems in your flexbox.
+    li.
+      If at a higher breakpoint you need columns to revert to their normal order (as in the HTML), then you can use --order-0] (e.g. #[code .flexitem-lg--order-0]).
+      
+  h3 Flexbox centering and middling
+  
+  p Centering and middling is applied to the flexbox container (not to each flexitem). One or more flexitems can be included in the flexbox container.
+  
+  p #[code .flexbox--center] &ndash; #[b note:] the flexbox container width needs to be wider than the width of the flexitem.
+  
+  .flexbox.flexbox--center.b--dashed
+    .flexitem.flexitem--span-2.p--4.bg--orange
+      | Centered
+    .flexitem.flexitem--span-2.p--4.bg--yellow
+      | Centered
+    .flexitem.flexitem--span-2.p--4.bg--green
+      | Centered
+
+  br
+    
+  p #[code .flexbox--middle] &ndash; #[b note:] the flexbox container height needs to be taller than the height of the flexitem.
+
+  .flexbox.flexbox--middle.b--dashed(style="height: 150px")
+    .flexitem.flexitem--span-2.p--4.bg--orange
+      | Middled
+    .flexitem.flexitem--span-2.p--4.bg--yellow
+      | Middled
+    .flexitem.flexitem--span-2.p--4.bg--green
+      | Middled
+
+  br
+    
+  p #[code .flexbox--center.flexbox--middle]
+
+  .flexbox.flexbox--center.flexbox--middle.b--dashed(style="height: 150px")
+    .flexitem.flexitem--span-2.p--4.bg--orange
+      | Centered and middled
+    .flexitem.flexitem--span-2.p--4.bg--yellow
+      | Centered and middled
+    .flexitem.flexitem--span-2.p--4.bg--green
+      | Centered and middled

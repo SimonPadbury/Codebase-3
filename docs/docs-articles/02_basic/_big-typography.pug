@@ -1,0 +1,52 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-big-typography"
+  - var sectionTitle = "Big Typography"
+
+block section
+  p.
+    By default, Codebase has its font sizes for everything based on a set of #[code $text--base-font-*] variables. But there is also a set of #[code $text--big-text-font-*] variables. (You can override both, because each are set as #[code !default] variables.)
+
+  p.
+    There are two ways to deploy big typography in Codebase:
+
+  h4 1. The #[code .text--big-text] inline element class
+
+  p.
+    If you want to emphasize some inline text by #[span.text--big-text increasing the font size], Codebase can do this by applying #[code .text--big-text] to an inline tag (e.g. #[code &lt;span class="text--big-text"&gt;]).
+
+  h4 2. The #[code .text--big-text] container element class
+
+  p.
+    Codebase can render big typography simply by #[b placing any Codebase-styled HTML within a container that has class] #[code .text--big-text].
+
+
+  p This may be useful e.g. for long-read articles.
+
+  .flexbox.flexbox--gutter.flexbox--nested
+    .flexitem.flexitem-xs--span-6
+
+      h1 Header h1
+      h2 Header h2
+      h3 Header h3
+      h4 Header h4
+      h5 Header h5
+      h6 Header h6
+
+      p.
+        Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
+
+    .flexitem.flexitem-xs--span-6
+
+      .text--big-text
+
+        h1 Header h1
+        h2 Header h2
+        h3 Header h3
+        h4 Header h4
+        h5 Header h5
+        h6 Header h6
+
+        p.
+          Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.

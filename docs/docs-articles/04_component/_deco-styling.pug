@@ -1,0 +1,77 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-deco-styling"
+  - var sectionTitle = "Component Deco Styling"
+
+block section
+  p.
+    Codebase components attempt to be as minimally styled as possible &ndash; so that there is not much that you would need to override in your CSS. This can be seen in the "undecorated" examples that follow in this documentation.
+    
+  p.
+    However, it is not easy to demonatrate undecorated components. So, for ease of use in the docs some components have some lightweight minimal styling applied by adding the class #[code .deco]. You can also use deco styling e.g. during prototyping.
+
+  p.
+    Deco styling consists mainly of adding margin(s) and paddings(s) in accordance with the #[a(href="decoration.html#decoration-element-grid") element grid], and sometimes a thin border, some gray shading (e.g. for back tabs) and box shadows (e.g. for dropdown content).
+    
+  p.
+    Therefore, you can add in styling in any of the following ways:
+    
+  ol
+    li.
+      You can, of course, style using your own CSS.
+    li.
+      You can use Codebase #[a(href="decoration.html") decoration classes].
+    li.
+      You can use #[code .deco] on many Codebase components, as listed in the table below.
+    
+  table.table.deco
+    thead
+      tr
+        th Component
+        th Optional #[code .deco]
+        th Notes
+    tbody
+      tr
+        td Showhide
+        td #[i.fa.fa-times.pv--4]
+        td It's easy enough to add style e.g. by adding #[code .btn] to the showhide controller element and a background to the showhide content element.
+      tr
+        td Dropdown
+        td #[i.fa.fa-check.pv--4]
+        td Deco styling is opny applied to the dropdown content element. The dropdown controller element can by styled e.g. by adding #[code .btn].
+      tr
+        td Simple Menubar
+        td #[i.fa.fa-check.pv--4]
+        td
+      tr
+        td Complex Menubar
+        td #[i.fa.fa-check.pv--4]
+        td Note: You don't need to add #[code .deco] to each dropdown content element &ndash; it is built in to #[code .menubar.deco] (and applied only to functional dropdowns above the menubar breakpoint).
+      tr
+        td Off-canvas
+        td #[i.fa.fa-times.pv--4]
+        td No #[code .deco] styling has been provided for the off-canvas component.
+      tr
+        td Media Object
+        td #[i.fa.fa-check.pv--4]
+        td 
+      tr
+        td Card
+        td #[i.fa.fa-check.pv--4]
+        td 
+      tr
+        td Table
+        td #[i.fa.fa-check.pv--4]
+        td 
+      tr
+        td Tab System
+        td #[i.fa.fa-check.pv--4]
+        td Styling to define the tab labels and the top borders of tab content "cards" only.
+      tr
+        td Pagination
+        td #[i.fa.fa-check.pv--4]
+        td
+  
+  p.
+    If you never use any of these component #[code .deco] classes, you can easily toggle them off by overriding the component decoration #[code true !default] variables in #[a(href="codebase/sass/02_default-variables/_default-variables.sass")  codebase/sass/02_default-variables/_default-variables.sass]. That way these unused styles won't be packaged in codebase.css.

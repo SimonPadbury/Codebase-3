@@ -1,0 +1,106 @@
+// Navigation
+
+.off-canvas__ctrl--docs
+  display: block
+  top: 0
+  right: 0
+  height: $spacing--40
+  padding: $spacing--block
+  text-align: center
+  color: $color--white
+  background: $color--teal-darken-3
+  transition: all 0.2s ease
+  &:hover
+    background: $color--teal-darken-1
+
+.docs__nav
+  .off-canvas__close
+    margin-right: $spacing--8
+    color: $color--blue-lighten-2
+    text-decoration: none
+    &:hover
+      color: $color--white
+
+.docs__nav
+  //z-index: 140
+  width: 300px
+  overflow-x: visible
+  background: $color--teal-darken-3
+  +break--max($mq--md)
+    box-shadow: $box-shadow
+  > ul
+    margin: 0
+    padding: 0
+  li
+    list-style-type: none
+    margin: 0
+    a
+      padding: $spacing--8
+      display: block !important
+      text-decoration: none
+      color: $color--white
+      transition: background-color 0.15s ease, color 0.15s ease
+      +break--min($mq--md)
+        width: 100px
+        padding-top: $spacing--12
+        padding-bottom: $spacing--12
+        text-align: center
+        font-size: 0.875em
+        line-height: 1.5em
+      .fa
+        display: inline-block
+        width: $spacing--28
+        +break--min($mq--md)
+          display: block
+          width: 74px
+          font-size: 2em
+          margin: $spacing--4 auto
+      &.this-page
+        background-color: $color--teal-darken-2
+      &.menu-link-current,
+      &:active,
+      &:hover
+        background-color: $color--teal-darken-1
+      svg
+        position: relative
+        top: -$spacing--4
+        width: 72px
+        height: 40px
+    li
+      margin: 0
+      a
+        padding-left: $spacing--24
+      &:last-of-type
+        border-bottom: 0
+
+  +break--min($mq--md)
+    // Flex-item
+    position: fixed
+    top: 0
+    order: 1
+    height: 100vh
+    overflow-y: auto
+
+// Sub Navigation
+// * narrow viewports: within the off-canvas sidebar
+// * wide viewports: displayed as column 2
+
+.docs__nav--sub-nav
+  background: $color--teal-darken-2
+  a
+    &:active,
+    &:hover
+      background-color: $color--teal-darken-1 !important
+  +break--min($mq--md)
+    // Flex-item
+    position: fixed
+    top: 0
+    left: 100px
+    width: 200px
+    height: 100vh
+    padding-top: 40px
+    overflow-y: auto
+    a
+      width: 200px !important
+      font-size: 1em !important
+      text-align: left !important

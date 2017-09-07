@@ -1,0 +1,97 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-pagination"
+  - var sectionTitle = "Pagination"
+
+block section
+  .b--heavy.b--rounded.b--teal-lighten-2.p--16
+    
+    p.text--muted Undecorated
+
+    ul.pagination
+      li
+        a(href="#/") #[i.fa.fa-arrow-left] Newer
+      li
+        a(href="#/") 1
+      li
+        a.pagination__current(href="http://www.example.com") 2
+      li
+        a(href="#/") 3
+      li
+        a(href="#/") 4
+      li
+        a(href="#/") 5
+      li
+        a(href="#/") Older #[i.fa.fa-arrow-right]
+
+    
+    p.text--muted Decorated with #[code .deco]
+      
+    ul.pagination.deco
+      li
+        a(href="#/") #[i.fa.fa-arrow-left] Newer
+      li
+        a(href="#/") 1
+      li
+        a.pagination__current(href="http://www.example.com") 2
+      li
+        a(href="#/") 3
+      li
+        a(href="#/") 4
+      li
+        a(href="#/") 5
+      li
+        a(href="#/") Older #[i.fa.fa-arrow-right]
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-pagination-html") HTML
+      .tab__label(data-tab-id="tab-docs-pagination-pug") Pug
+
+    #tab-docs-pagination-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;ul class="pagination"&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;&lt;i class="fa fa-arrow-left"&gt;&lt;/i&gt; Newer&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="pagination__current" href="#/"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Older &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+
+    #tab-docs-pagination-pug.tab__card
+      pre.mt--zero
+        code.
+          ul.pagination
+            li
+              a(href="#/") \#[i.fa.fa-arrow-left] Newer
+            li
+              a(href="#/") 1
+            li
+              a.pagination__current(href="http://www.example.com") 2
+            li
+              a(href="#/") 3
+            li
+              a(href="#/") 4
+            li
+              a(href="#/") 5
+            li
+              a(href="#/") Older \#[i.fa.fa-arrow-right]
+
+  h3 Pagination classes
+  
+  table.table.deco
+    thead
+      tr
+        th Class
+        th Notes
+    tbody
+      tr
+        td #[code .pagination]
+        td The pagination component block.
+      tr
+        td #[code .pagination__current]
+        td The current page element (can be applied to #[code &lt;li&gt;] or #[code &lt;a&gt;]).

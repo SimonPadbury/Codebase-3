@@ -1,0 +1,218 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-activator-javascript"
+  - var sectionTitle = "Component Activator JavaScript"
+
+block section
+  p Click a control (e.g. button), and a small JavaScript adds or removes some #[code .is-active] classes. That explains the operation of most things in Codebase.
+  
+  p Since Codebase 2, all the various showhides, dropdowns, menubars, popovers, and off-canvas sidebars are controlled by one script called #[code _activator.js], which has been pre-processed and included within #[code codebase.js].
+  
+  p Basic activator components need an outer container element (block), with an inner control element and a content element beside it (as siblings). #[b They can be anything], so long as the controller has a class with suffix #[code __ctrl] and the content has a class with suffix #[code __content].
+  
+  p Example:
+  
+  pre
+    code.
+      &lt;div class="thing"&gt;
+      
+        &lt;button class="thing__ctrl"&gt;
+          Click me
+        &lt;/button&gt;
+        
+        &lt;div class="thing__content"&gt;
+          I am a thing.
+        &lt;/div&gt;
+        
+      &lt;/div&gt;
+
+  p It doesn't matter whether the controller element comes before or after the content element.
+
+  .flexbox.flexbox--gutter.pv--20
+    .flexitem.flexitem-md--span-6
+      
+      .mb--line.b--thin.b--purple.p--8.bg--purple-lighten-3
+        | class="thing"
+        .b--thin.b--purple.mv--8.p--8.bg--white
+          | class="thing__ctrl"
+        .b--thin.b--purple.p--8.bg--white
+          | class="thing__content"
+
+    .flexitem.flexitem-md--span-6
+
+      .mb--line.b--thin.b--purple.p--8.bg--purple-lighten-3
+        | class="thing"
+        .b--thin.b--purple.mv--8.p--8.bg--white
+          | class="thing__content"
+        .b--thin.b--purple.p--8.bg--white
+          | class="thing__ctrl"
+  
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | You can utilize the activator script. To do so, give your component's outer HTML container a class name, and then #[b use that same class name] as a prefix for its controller and its content.
+
+  h3 Activator Operation
+
+  p It is entirely up to you what styling you wish to add for the inactive and active states of the component, controller and content. E.g. Codebase uses CSS transitions for the animation of showhide, collapsed menubar, off-canvas sidebar and popover.
+
+  ol
+    li Click/tap an activator control #[code .thing__ctrl] to add class #[code .is-active] to all these:
+      ol(type="a").mt--line
+        li Its #[code .thing] block
+        li The clicked #[code .thing__ctrl] element itself
+        li Its respective #[code .thing__content] element
+    li.
+      At the same time, all other activator components will get #[code .is-active] removed. #[b Therefore, only one activator component can be active at any time].
+    li.
+      Click/tap an activator #[code .thing__ctrl] again to cause the removal of the #[code .is-active] classes, thereby deactivating this component.
+    li.
+      A click/tap #[b anywhere outside] an activator content will also deactivate the active component (useful for dismissing an off-canvas sidebar or a popover/ modal).
+    li.
+      A click/tap an #[b on-page] #[code &lt;a href="#..."&gt; tag] #[b within] an activator will also deactivate the active component (useful for dismissing an off-canvas sidebar if visiting a hyperlink target on the same webpage).
+    li.
+      #[b Optional extra:] click/tap a #[code .thing__close] element within an active activator component to deactivate it. (See "Closing from within", below.)
+    li.
+      #[b Optional extra:] adding the modifier #[code .thing--no-dismiss] to the component block will stop propapgation of a click/tap through the block, thereby preventing "click/tap outside to dismiss" (useful for situations when you don't want a visitor to dismiss a popover/ modal without interacting with it).
+      
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3.
+    #[i.fa.fa-info-circle.text--green-darken-1].
+    Examples of simple activator components in Codebase are #[a(href="#components-dropdowns") dropdown] and #[a(href="#components-showhide") showhide].
+    
+  h3 Adding specificity
+  
+  p Add #[code data-content-id="identifier"] to control elements in order to target particular #[code id="identifier"] content elements.
+  
+  p This enables the controller to be located outside the component (e.g. for use in creating popovers of off-canvas sidebars).
+
+  pre
+    code.
+      &lt;div class="thing"&gt;
+
+        &lt;div id="thing-content-2" class="thing__content"&gt;
+          I am thing 2.
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+      &lt;button data-content-id="thing-content-2" class="thing__ctrl"&gt;
+        Click me
+      &lt;/button&gt;
+    
+  .flexbox.flexbox--gutter.pv--20
+    .flexitem.flexitem-sm--span-8.flexitem-sm--offset-2
+      
+      .mb--8.b--thin.b--purple.p--8.bg--purple-lighten-3
+        | class="thing"
+        .b--thin.b--purple.mv--4.p--8.bg--white
+          | class="thing__content" #[br]
+          | id="thing-content-2"
+      
+      .mh--8.mb--line.b--thin.b--purple.p--8.bg--purple-lighten-3
+        | class="thing__ctrl" #[br]
+        | data-content-id="thing-content-2"
+
+
+  p And this also allows multiple controller/content pairs to co-exist within the same activator component (e.g. to create complex systems such as accordions).
+    
+  .flexbox.flexbox--gutter.pv--20
+    .flexitem.flexitem-sm--span-8.flexitem-sm--offset-2
+
+      .mb--line.b--thin.b--purple.p--8.bg--purple-lighten-3
+        | class="thing"
+        .b--thin.b--yellow.mv--8.p--8.bg--yellow-lighten-3
+          | class="thing__ctrl" #[br]
+          | data-content-id="thing-content-3"
+        .b--thin.b--yellow.mv--8.p--8.bg--yellow-lighten-3
+          | class="thing__content" #[br]
+          | id="thing-content-3"
+        .b--thin.b--blue.mv--8.p--8.bg--blue-lighten-3
+          | class="thing__ctrl" #[br]
+          | data-content-id="thing-content-4"
+        .b--thin.b--blue.mv--8.p--8.bg--blue-lighten-3
+          | class="thing__content" #[br]
+          | id="thing-content-4"
+        .b--thin.b--red.mv--8.p--8.bg--red-lighten-3
+          | class="thing__ctrl" #[br]
+          | data-content-id="thing-content-5"
+        .b--thin.b--red.mt--8.p--8.bg--red-lighten-3
+          | class="thing__content" #[br]
+          | id="thing-content-5"
+
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | Examples of activator components with added specificity in Codebase are #[a(href="#components-popovers") popovers] and #[a(href="#components-off-canvas-sidebars") off-canvas sidebars].
+  
+  h3 Closing from within
+  
+  p.
+    If for some reason you wish to have a "close" (or "dismiss") button inside your content element, you can do that. Simply add an element with class #[code thing__close] inside your #[code thing__content]. Clicking this element will cause the removal of #[code is-active] from the content element (and the control element, if you have one).
+  
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | Codebase #[a(href="#components-popovers") popovers] and #[a(href="#components-off-canvas-sidebars") off-canvas sidebars] have "close" buttons.
+  
+  h3 Activator Classes
+  
+  table.table.deco
+    thead
+      tr
+        th Class
+        th Notes
+        th Active state class
+    tbody
+      tr
+        td #[code *] (could be anything)
+        td The class of the activator component block
+        td #[code *.is-active]
+      tr
+        td #[code *__ctrl]
+        td The activator controller element. #[br] (Optional:) #[code data-content-id="identifier"] for added specificity.
+        td #[code *__ctrl.is-active]
+      tr
+        td #[code *__content]
+        td The activator content element. #[br] (Optional:) #[code id="identifier"].
+        td #[code *__content.is-active]
+      tr
+        td #[code *__close]
+        td (Optional:) The activator "close from within" element
+        td n/a
+  
+  h3 Codebase Activator Components
+  
+  p.
+    The activator script is being used by the following components in Codebase:
+    
+  table.table.table--nowrap.deco
+    thead
+      tr
+        th Component class
+        th Controller class
+        th Content class
+    tbody
+      tr
+        td #[code .showhide]
+        td #[code .showhide__ctrl]
+        td #[code .showhide__content]
+      tr
+        td #[code .dropdown]
+        td #[code .dropdown__ctrl]
+        td #[code .dropdown__content]
+      tr
+        td #[code .menubar]
+        td #[code .menubar__ctrl]
+        td #[code .menubar__content]
+      tr
+        td #[code .off-canvas]
+        td #[code .off-canvas__ctrl] <sup>1</sup>
+        td #[code .off-canvas__content] <sup>2</sup>
+      tr
+        td #[code .popover]
+        td #[code .popover__ctrl] <sup>1</sup>
+        td #[code .popover__content] <sup>2</sup>
+
+  ol
+    li.
+      #[code data-content-id] is required for specificity.
+    li.
+      The content element must have an #[code id] that matches its controller's #[code data-content-id].

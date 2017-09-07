@@ -1,0 +1,171 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-codebase-html-generator-mixins"
+  - var sectionTitle = "Codebase HTML Generator Mixins"
+
+block section
+  p.
+    Codebase has some handy Pug HTML generator mixins. These have been used in  generating some of the docs and #[a(href="examples.html") examples], and you can also use them for rapid prototyping.
+  
+  p.
+    Following these example HTML generators, you can also generate your own. Examples of others in the the Codebase project can be found in the #[code .popover--fix] example (a popover with a lot of tabular content), and in the example blog index excerpts loop.
+    
+  h3 "Lorem ipsum" Paragraph Generator
+  
+  p.
+    When this paragraph mixin is included, it will generate up to four paragraphs in your HTML depending on how many you specify. You can also add some classes to the first paragraph (e.g. if you require it to have a dropcap, or enlarged "lead" text, or some #[a(href="decoration.html") decoration] classes).
+  
+  p.
+    See #[a(href="codebase/pug/generators/_paragraphs.pug") codebase/pug/generators/_paragraphs.pug].
+  
+  pre
+    code.
+      mixin paragraph(number, p1Class)
+        case number
+          when 1
+            p(class=p1Class).
+              Lorem ipsum dolor sit amet ...
+          when 2
+            p(class=p1Class).
+              Lorem ipsum dolor sit amet ...
+            p.
+              Summo nostro dicunt sea ut ...
+          when 3
+            p(class=p1Class).
+              Lorem ipsum dolor sit amet ...
+            p.
+              Summo nostro dicunt sea ut ...
+            p.
+              Utroque habemus moderatius cum cu ...
+          when 4
+            p(class=p1Class).
+              Lorem ipsum dolor sit amet ...
+            p.
+              Summo nostro dicunt sea ut ...
+            p.
+              Utroque habemus moderatius cum cu ...
+            p.
+              Eruditi omittam usu et ...
+          default
+            Lorem ipsum dolor sit amet ...
+  
+  p.
+    (In the actual mixin these paragraphs are written in full.)
+    
+  p Usage:
+  
+  pre
+    code.
+      //- To get one paragraph (default):
+      
+      +paragraph
+      
+      //- To get a specific number of paragraphs (up to 4)
+
+      +paragraph(2)
+      
+      //- To add some classes to the first paragraph
+      
+      +paragraph(1, "b--heavy")
+      
+      +paragraph(3, "lead text--purple")
+  
+  
+  h3 Menu and Menubar Generators
+  
+  p.
+    Mixins for rapid generation of menus and menubars have been provided.
+    
+  p.
+    See #[a(href="codebase/pug/generators/_menus.pug") codebase/pug/generators/_menus.pug].
+    
+  pre
+    code.
+      //- Menu generator
+
+      mixin menu(menuLink, total, menuClass)
+        - var n = 0;
+        ul(class=["menu", menuClass])
+          while n < total
+            li
+              a(href="#/")= menuLink
+                = " "
+                = (n++ + 1)
+
+      //- Menubar generator
+
+      mixin menubar(menuLink, total, menuClass)
+        - var n = 0;
+        ul(class=["menubar", menuClass])
+          while n < total
+            li
+              a(href="#/")= menuLink
+                = " "
+                = (n++ + 1)
+
+  p.
+    Usage: in the parameters specify:
+    
+  ol
+    li The text of the menu link
+    li The number of menu items
+    li Any classes you require to be added (optional)
+      
+  p.
+    Examples:
+    
+  pre
+    code.
+      //- a 5-item menu:
+      
+      +menu("Menu link", 5)
+      
+      //- a 4-item menubar, centered
+      
+      +menubar("Test", 4, "menubar--center")
+  
+  h3 Table Generator
+  
+  p.
+    This mixin builds a demo table for you.
+    
+  p.
+    See #[a(href="codebase/pug/generators/_tables.pug") codebase/pug/generators/_tables.pug].
+  
+  pre
+    code.
+      mixin table(totalColumns, totalRows, tableClass)
+        table(class=["table", tableClass])
+          thead
+            tr
+              - for (var cols = 0; cols < totalColumns; cols++)
+                th= "Table Header"
+                  = " "
+                  = (cols + 1)
+          tbody
+            - for (var rows = 0; rows < totalRows; rows++)
+              tr
+                - for (var cols = 0; cols < totalColumns; cols++)
+                  td= "Table content"
+                    = " "
+                    = (cols + 1)
+                    = "."
+                    = (rows + 1)
+
+  p.
+    Usage: in the parameters specify:
+    
+  ol
+    li The number of rows
+    li The number of columns
+    li Any classes you require to be added (optional)
+      
+  p.
+    Examples:
+  
+  pre
+    code.
+      +table(3, 4)
+      
+      +table(6, 5, "bg--yellow")

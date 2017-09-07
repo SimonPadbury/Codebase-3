@@ -1,0 +1,60 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "decoration-paddings"
+  - var sectionTitle = "Paddings"
+
+block section
+  
+    p Padding utility prefixes:
+
+    ul
+      li Paddings all: #[code p--*]
+      li Padding top: #[code pt--*]
+      li Padding right: #[code pr--*]
+      li Padding bottom: #[code pb--*]
+      li Padding left: #[code pl--*]
+      li Paddings vertical: #[code pv--*] (both top and bottom)
+      li Paddings horizontal: #[code ph--*](both left and right)
+
+    p Padding increments as in the following examples (and #[code --zero] for removing unwanted padding):
+    
+    .mb--line.bg--pink-lighten-3.p--zero
+      .b--dashed.b--pink-lighten-1.p--4 .p--zero (for removing paddings)
+    .mb--line.bg--pink-lighten-3.p--4
+      .b--dashed.b--pink-lighten-1.p--4 .p--4
+    .mb--line.bg--pink-lighten-3.p--8
+      .b--dashed.b--pink-lighten-1.p--4 .p--8
+    .mb--line.bg--pink-lighten-3.p--12
+      .b--dashed.b--pink-lighten-1.p--4 .p--12
+    .mb--line.bg--pink-lighten-3.p--16
+      .b--dashed.b--pink-lighten-1.p--4 .p--16
+    .mb--line.bg--pink-lighten-3.p--20
+      .b--dashed.b--pink-lighten-1.p--4 .p--20
+    .mb--line.bg--pink-lighten-3.p--24
+      .b--dashed.b--pink-lighten-1.p--4 .p--24
+    p ... ...
+    .mb--line.bg--pink-lighten-3.p--80
+      .b--dashed.b--pink-lighten-1.p--4 .p--80
+
+    h3.mt--line Block padding
+
+    p.
+      E.g. used for menu and menubar items, tab labels and table cells. Equal to #[code pv--8 ph--16].
+
+    .mb--line.bg--pink-lighten-3.p--block
+      .b--dashed.b--pink-lighten-1.p--4 .p--block
+
+
+    h3.mt--line Extra line spacing
+
+    p.
+      Sometimes you may find that you need to add extra whitespace (e.g. above headers, or below list items), equal to the line height of your normal text. Codebase has decoration classes for that (for margin and pading). The extra line paddings are shown in the following examples:
+
+    .mb--line.bg--pink-lighten-3.pt--line
+      .b--dashed.b--pink-lighten-1.p--4 .pt--line
+    .mb--line.bg--pink-lighten-3.pb--line
+      .b--dashed.b--pink-lighten-1.p--4 .pb--line
+
+    p.
+      The amount of extra white space applied will be increased if you are also using these classes in combination with #[a(href="basics.html#basics-big-typography") big typography]. 

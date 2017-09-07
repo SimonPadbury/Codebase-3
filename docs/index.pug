@@ -1,93 +1,26 @@
 //- Index (page)
-extends _docs-template.pug
+extends _docs-homepage-template.pug
 
-block vars
-  - lang = 'en'
-  - title= 'Codebase'
-  - description = 'Codebase 2 - a SASS, Coffeescript and Pug website component library'
-  - author = 'Simon Padbury'
-  - favicon = ' '
+block append vars
+  - lang = "en"
+  - htmlDir = "ltr"
+  - title= "Codebase"
+  - description = "Codebase 2 - a Sass, JavaScript and Pug website component library"
+  - author = "Simon Padbury"
+  - bodyClass = "homepage"
 
-block template__sidebar
-  include docs-template-partials/_docs-sidebar-index
+block template__homepage--header
+  include docs-template-partials/_docs-header
+  
+  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35" class="codebase2")
+    g(fill="#ffffff")
+      path(d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z")
+  
+  //-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35" class="codebase2"><g fill="#ffffff"><path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"/></g></svg>
+  
+  h1 Codebase
 
-block template__header
-  h1(style="padding-top:0;")
-    +image('images/codebase2-logo.svg', 'Codebase 2', 'codebase2')
-    | Codebase
+  h2 Codebase is a Sass, JavaScript and Pug<br> website component library.
 
-block template__body
-
-  p.lead.
-    Codebase is a SASS, CoffeeScript, and Pug website component library.
-
-  h3 Features include:
-
-  style.
-    .codebase2-logo {
-      display: block;
-      height: 100px;
-      width: 100%;
-      background-position: center;
-      background-size: 140px auto;
-    }
-
-  .grid.grid--gutter.grid--nested
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> Two ways of using Codebase:
-
-      ul(style="list-style-type:none;")
-        li.
-          <a href="getting-started.html#getting-started-simple-setup"><b>Simple setup</b></a><br>
-          &ndash; CSS, JS(<a href="https://jquery.com/">jQuery</a>) &amp; HTML<br><br>
-        li.
-          <a href="getting-started.html#getting-started-advanced-setup"><b>Advanced setup</b></a><br>
-          &ndash; <a href="http://sass-lang.com/">SASS</a>, <a href="http://coffeescript.org/">CoffeeScript</a> &amp; <a href="https://pugjs.org/api/getting-started.html">Pug</a>
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> The styling has been created first as <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">indented syntax SASS</a> mixins and then these are included in classes &ndash; all following <a href="http://getbem.com/introduction/">BEM</a> naming convention. You can include and extend the mixins in your design theme.
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> The Styling is organised into <a href="basics.html">Basics</a> and <a href="components.html">Components</a> (analogous to <a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>'s "Atoms" and "Molecules"). For many of these, <a href="codebase-pug/">codebase-pug/</a> partials have been created for use in rapid prototyping (their usage is demonstrated in the docs Pug files). You can combine these into your own partial templates ("Organisms"), etc.
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> <a href="layout.html">Layout</a> is organized selarately from basics and components. Layout consists of four 12-column grid systems. <a href="layout.html#layout-grid-classes">Flexbox classes</a> and <a href="layout.html#layout-grid-mixins">mixins</a> (default). Float classes and mixins (deprecated but still if you switch them on). A full range of <a href="layout.html#layout-visibility">visibility</a> mixins/classes have also been included.
-
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> Minimal decorative styling used throughout the basics and components, based on a common set of decoration variables, which can be either modified or switched off altogether (becoming "style unoppinionated").
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> Simple <a href="decoration.html">decoration classes</a> &ndash; similar in principle to <a href="http://basscss.com/">BASCSS</a> and <a href="http://tachyons.io/">Tachyons</a>. These use the same decoration variables as Codebase Basics and Components, so they play well together, and modifying the decoration variables affects the basics, components and decoration.
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> All margins, paddings, font sizes and line heights are built on an <a href="decoration.html#decoration-element-grid">8px element grid</a>.
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> Default and <a href="basics.html#basics-enlarged-typography">enlarged typography</a>. Two sizes, three ways.
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> All <a href="codebase/sass/02_default-variables/_default-variables.sass">Codebase variables</a> are set as defaults, so that they can be easily overridden.
-
-    .col.col-sm--span-6
-      p.
-        <i class="fa fa-circle"></i> Extensive documentation, and a few <a href="examples.html">examples</a>.
-
-  pre
-    code.
-      &lt;a class="btn btn--success" href="getting-started.html"&gt;
-        Get started
-      &lt;/a&gt;
-
-  p.
-    <a class="btn btn--success" href="getting-started.html">Get started</a>
+block template__homepage--main
+  include docs-articles/00_homepage/__intro

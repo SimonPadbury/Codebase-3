@@ -1,0 +1,46 @@
+//- Example icon buttons for social media
+
+mixin social
+  style.
+    a.btn--facebook {
+      color: #fff !important;
+      background-color:#3b5998 !important;
+    }
+    a.btn--twitter {
+      color: #fff !important;
+      background-color:#00b6f1 !important;
+    }
+    a.btn--linkedin {
+      color: #fff !important;
+      background-color:#007bb6 !important;
+    }
+    a.btn--google-plus {
+      color: #fff !important;
+      background-color:#df4a32 !important;
+    }
+
+    a:hover.btn--facebook {
+      background-color:#263e60 !important;
+    }
+    a:hover.btn--twitter {
+      background-color:#0099bc !important;
+    }
+    a:hover.btn--linkedin {
+      background-color:#005d82 !important;
+    }
+    a:hover.btn--google-plus {
+      background-color:#aa3327 !important;
+    }
+    
+  a.m--4.btn.btn--facebook.btn--icon.btn--big-text(href="#/")
+    i.fa.fa-facebook
+  = " "
+  a.m--4.btn.btn--twitter.btn--icon.btn--big-text(href="#/")
+    i.fa.fa-twitter
+  = " "
+  a.m--4.btn.btn--linkedin.btn--icon.btn--big-text(href="#/")
+    i.fa.fa-linkedin
+  = " "
+  a.m--4.btn.btn--google-plus.btn--icon.btn--big-text(href="#/")
+    i.fa.fa-google-plus
+  = " "

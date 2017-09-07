@@ -1,0 +1,79 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-menu-marker"
+  - var sectionTitle = "Menu Marker"
+
+block section
+  p.
+    If you have a menu (or menubar) that has links to several sections on your page (as in these docs, for example), you need to add class #[code ] to your menu container:
+  
+  pre
+    code.
+      &lt;ul class="menu-marker"&gt;
+
+        &lt;li&gt;
+          &lt;a href="#section-1"&gt;Section 1&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+          &lt;a href="#section-1"&gt;Section 2&lt;/a&gt;
+        &lt;/li&gt;
+
+        &lt;li&gt;
+          &lt;a href="#section-1"&gt;Section 3&lt;/a&gt;
+        &lt;/li&gt;
+
+      &lt;/ul&gt;
+    
+  p.
+    And then set up your page content as follows:
+
+  pre
+    code.
+      &lt;div class="menu-marker-wrap"&gt;
+
+        &lt;div class="menu-marker-section" id="section-1"&gt;
+          ...
+        &lt;/div&gt;
+
+        &lt;div class="menu-marker-section" id="section-2"&gt;
+          ...
+        &lt;/div&gt;
+
+        &lt;div class="menu-marker-section" id="section-3"&gt;
+          ...
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+
+  p.
+    Set the menu on-page anchors to find their respective IDs. Then the class #[code menu-link-active] will be added to the menu item anchor tag #[b when the respective menu marker section appears in the viewport] during scrolling.
+    
+  p.
+    Style the element with class #[code menu-link-active] any way you like.
+    
+  p.
+    #[b Example:] You may have noticed the color of the sidebar sub-menu links change as you scroll down this page (on wider viewports).
+
+  h3 Menu-marker Classes
+
+  table.table.deco
+    thead
+      tr
+        th(style="width: 210px") Class
+        th(style="width: 170px") Notes
+        th Modifiers
+    tbody
+      tr
+        td #[code ]
+        td The menu-marker setup class
+        td Apply this class to the menu or menubar block. On-page links must have #[code &lt;a href="\#{section-identifier}"&gt;]. These links will recieve class #[code .is-current] when their respective #[code -section] apears within the viewport, and this class will be removed when the section is scrolled out of the viewport.
+      tr
+        td #[code -wrap]
+        td The container for the menu-marker sections
+        td When any part of this container is within the viewport, class #[code .is-current] will be found on one of the menu marker on-page links
+      tr
+        td #[code -section]
+        td The menu-marker section class
+        td Menu-marker sections must have #[code id="{section-identifier}"]

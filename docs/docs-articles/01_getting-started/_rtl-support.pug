@@ -1,0 +1,41 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-rtl-support"
+  - var sectionTitle = "RTL Languages Support"
+
+block section
+  
+    p.
+      Codebase aims to support RTL languages without the requirement for special RTL classes to be applied to elements or containers of elements. Codebase does this by using the CSS3 <code>[dir="rtl"]</code> selector.
+      
+    p.
+      Add #[code dir="rtl"] to a container &ndash; this can be the #[code &lt;html&gt;] tag itself. This sets the direction of the text flow from right to left &ndash; #[i and] it implements Codebase RTL support on those components that need it.
+
+    p.
+      If for some reason you #[i really can't] use <code>[dir="rtl"]</code>, then you can use #[code class="rtl"] &ndash; either applied to the element itself, or to a container of it. (But of course, classes do not change the #[i text direction]. So you will still have to accomplish that by another means.)
+
+    p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3.
+      #[i.fa.fa-check-circle.text--green-darken-1] If you add <code>[dir="rtl"]</code> (or #[code class="rtl"]) to a container, component or element that requires it, then you get Codebase RTL support.
+
+    p.
+      Some Codebase components and text utility classes have a #[code *--right] and #[code *--left] modifier class for controlling the horizontal alignment of elements. These have been styled so that they are the same for both LTR and RTL. (Right is always right and left is always left.)
+
+    p.
+      Codebase was originally built by an LTR language speaker (English), and so the Sass has been styled from a "LTR first" perspective, with RTL overrides built into its mixins &ndash; as in the #[mark highlighed] selectors in the following simplified example (Sass):
+        
+    pre(dir="ltr")
+      code.
+        =something
+        
+          // LTR supported by default
+          padding-left: 100px
+            
+            // RTL supported by override
+            <mark>[dir="rtl"] &amp;, &amp;[dir="rtl"],</mark>
+            <mark>.rtl &amp;, &amp;.rtl</mark>
+              padding-left: inherit
+              padding-right: 100px
+        
+        .something
+          +something

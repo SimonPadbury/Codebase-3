@@ -1,0 +1,157 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-off-canvas"
+  - var sectionTitle = "Off-Canvas"
+
+block section
+  p Example:
+  
+  .off-canvas__ctrl.hide--sm-up(data-content-id="oc-example").
+    #[i.fa.fa-bars(aria-hidden="true")] &nbsp; #[i.fa.fa-arrow-left] Tap or click the icon to the left
+  .off-canvas__content.off-canvas__content--left.off-canvas__content--sm.p--24.bg--teal-lighten-1#oc-example
+    .off-canvas__close.off-canvas__close--right.
+      #[i.fa.fa-times.hide--sm-up(aria-hidden="true")]
+    p This colored panel operates as an off-canvas sidebar at narrower viewport widths, but it is on-canvas for wider viewports.
+    p In this simple example, no width has been specified for the off-canvas panel &ndash; so it will expand to the width required for its content (i.e. the text you are currently reading), up to max-width 100%. 
+
+  .tabs.deco.mt--line
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-off-canvas-html") HTML
+      .tab__label(data-tab-id="tab-docs-off-canvas-pug") Pug
+
+    #tab-docs-off-canvas-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="off-canvas"&gt;
+            &lt;div class="off-canvas__ctrl off-canvas__ctrl--right hide--sm-up" data-content-id="offcanvas-example"&gt;
+              &lt;i class="fa fa-bars" aria-hidden="true"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+
+            &lt;div id="offcanvas-example" class="off-canvas__content off-canvas__content--xs off-canvas__content--right"&gt;
+
+              &lt;div class="off-canvas__close off-canvas__close--left"&gt;
+                &lt;i class="fa fa-times" aria-hidden="true"&gt;&lt;/i&gt;
+              &lt;/div&gt;
+
+              &lt;!-- Off-canvas (e.g. sidebar) content --&gt;
+
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+    #tab-docs-off-canvas-pug.tab__card
+      pre.mt--zero
+        code.
+          .off-canvas
+            .off-canvas__ctrl.off-canvas__ctrl--right.hide--sm-up(data-content-id="offcanvas-example").
+              \#[i.fa.fa-bars(aria-hidden="true")]
+              
+            #offcanvas-example.off-canvas__content.off-canvas__content--xs.off-canvas__content--right
+              .off-canvas__close.off-canvas__close--left
+                \#[i.fa.fa-times(aria-hidden="true")]
+              
+              // Off-canvas (e.g. sidebar) content
+              
+              
+              
+              
+              
+              
+  p.
+    You will need to specify whether the off-canvas content is to the left or right &ndash; and also position its respective controller on the same side as the content).
+  p.
+    You will also need to add an off-canvas control (navicon) for toggling the sidebar. Be sure to set the off-canvas control #[code code data-control_id=""] to point to its respective off-canvas content #[code id=""].
+  p.
+    It is possible to have more than one off-canvas component. But only one can be activated at a time.
+
+  h3 Controlling the off-canvas content width
+  
+  p.
+    The off-canvas content block will "stretch to fit" the width of whatever content you put inside it (up to 100% width).
+
+  p.
+    You can also control the off-canvas content block width in your own stylesheet.
+    
+  p The following demos operate as off-canvas sidebars at all viewport widths:
+
+  .b--heavy.b--rounded.b--teal-lighten-2.p--16
+    
+    .off-canvas__ctrl(data-content-id="oc-ex-1").
+      #[i.fa.fa-bars(aria-hidden="true")]
+    .off-canvas__content.off-canvas__content--left.off-canvas__content--lg.bg--gray-lighten-2#oc-ex-1
+      .off-canvas__close.off-canvas__close--right.
+        #[i.fa.fa-times(aria-hidden="true")]
+      | Example 1: off-canvas sidebar content
+    | Demo 1: this off-canvas sidebar is as wide as its content requires.
+
+    br
+    br
+
+    .off-canvas__ctrl(data-content-id="oc-ex-2").
+      #[i.fa.fa-bars(aria-hidden="true")]
+    .off-canvas__content.off-canvas__content--left.off-canvas__content--lg.bg--gray-lighten-2#oc-ex-2(style="width:200px")
+      .off-canvas__close.off-canvas__close--right.
+        #[i.fa.fa-times(aria-hidden="true")]
+      | Example 2: off-canvas sidebar content
+    | Demo 2: this off-canvas sidebar has #[code style="width:200px"].
+
+    br
+    br
+      
+    .off-canvas__ctrl(data-content-id="oc-ex-3").
+      #[i.fa.fa-bars(aria-hidden="true")]
+    .off-canvas__content.off-canvas__content--left.off-canvas__content--lg.bg--gray-lighten-2#oc-ex-3(style="width:75%")
+      .off-canvas__close.off-canvas__close--right.
+        #[i.fa.fa-times(aria-hidden="true")]
+      | Example 3: off-canvas sidebar content
+    | Demo 3: this off-canvas sidebar has #[code style="width:75%"].
+
+  h3.mt--line Deactivating an off-canvas component above a particular viewport width
+
+  p.
+    You may sometimes require some content to be on-canvas for wider viewports and to operate as an off-canvas sidebar. This is done by adding off-canvas content width modifier classes, as in the following table.
+  
+  p.
+    You will also need to add the appropriate class to hide the controller and the closer above the same viewport width.
+    
+  table.table.deco
+    thead
+      tr
+        th Off-canvas content
+        th Off-canvas control
+        th Off-canvas close
+    tbody
+      tr
+        td #[code .off-canvas__content--xs]
+        td #[code .hide--xs-up]
+        td #[code .hide--xs-up]
+      tr
+        td #[code .off-canvas__content--sm]
+        td #[code .hide--sm-up]
+        td #[code .show--sm-up]
+      tr
+        td #[code .off-canvas__content--md]
+        td #[code .hide--md-up]
+        td #[code .hide--md-up]
+      tr
+        td #[code .off-canvas__content--lg]
+        td #[code .hide--lg-up]
+        td #[code .hide--lg-up]
+
+  h3 Off canvas Classes
+  
+  table.table.deco
+    thead
+      tr
+        th Class
+        th Notes
+    tbody
+      tr
+        td #[code .off-canvas]
+        td The off-canvas component block
+      tr
+        td #[code .off-canvas__ctrl]
+        td The off-canvas controller element
+      tr
+        td #[code .off-canvas__content]
+        td The off-canvas content element

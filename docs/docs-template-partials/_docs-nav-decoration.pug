@@ -1,0 +1,35 @@
+.off-canvas__ctrl.off-canvas__ctrl--docs.off-canvas__ctrl--right.off-canvas__ctrl--fixed.hide--md-up(data-content-id="sidebar-1")
+  | #[span.hide--sm-down Docs] #[span.hide--sm-up Menu] #[i.fa.fa-bars(aria-hidden="true")]
+
+
+.docs__nav.off-canvas__content.off-canvas__content--md.off-canvas__content--right.off-canvas__content--fixed(id="sidebar-1")
+  .off-canvas__close.off-canvas__close--right.hide--md-up.text--big-text.p--4
+    i.fa.fa-times-circle(aria-hidden="true")
+
+  ul
+    li.hide--md-down
+      a(href="index.html")
+        svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35")
+          g(fill="#ffffff")
+            path(d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z")
+        | Codebase #[span.text--muted.text--normal 2.0 Beta]
+
+    li.hide--sm-up #[a(href="#/") #[i.fa.fa-home.fa-fw.fa-lg] Home]
+
+    li #[a(href="getting-started.html") #[i.fa.fa-play-circle.fa-fw.fa-lg] Getting Started]
+
+    li #[a(href="basics.html") #[i.fa.fa-cubes.fa-fw.fa-lg] Basics]
+
+    li #[a(href="layout.html") #[i.fa.fa-map.fa-fw.fa-lg] Layout]
+
+    li #[a(href="components.html") #[i.fa.fa-cogs.fa-fw.fa-lg] Components]
+
+    li #[a.this-page(href="decoration.html") #[i.fa.fa-paint-brush.fa-fw.fa-lg] Decoration]
+      .docs__nav--sub-nav
+        include _docs-sub-nav-decoration
+
+    li #[a(href="examples.html") #[i.fa.fa-flask.fa-fw.fa-lg] Examples]
+
+    li.hide--sm-up #[a(href="https://github.com/SimonPadbury/Codebase/archive/master.zip") #[i.fa.fa-download.fa-fw.fa-lg] Download]
+
+    li.hide--sm-up #[a(href="https://github.com/SimonPadbury/Codebase") #[i.fa.fa-github.fa-fw.fa-lg] GitHub]

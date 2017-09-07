@@ -1,0 +1,103 @@
+// COMPONENT MIXINS: POPOVERS
+// ==========================
+
+=popover__ctrl
+  &:hover
+    cursor: pointer
+
+// The popover container is used to hide the popover off-screen
+=popover
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  top: 0
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    // IE10,11
+    top: -100vh
+  right: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: $popover--backdrop-color
+  pointer-events: none
+  opacity: 0
+  transition: $popover--transition-backdrop
+  z-index: $z-index--popover
+  &.is-active
+    top: 0
+    opacity: 1
+    pointer-events: auto
+
+// The popover itself
+=popover__content
+  position: relative
+  max-height: 85vh
+  overflow: auto !important
+  opacity: 0
+  transform: scale(0.8)
+  transition: $popover--transition-content
+  img
+    max-height: 70vh !important
+    width: auto !important
+  &.is-active
+    opacity: 1
+    transform: none
+  & > .card
+    margin-bottom: 0
+
+=popover__content--narrow
+  min-width: $popover--narrow-min
+  +break--min($popover--narrow-mq)
+    width: $popover--narrow-max
+
+=popover__content--fix
+  display: inline-flex
+  overflow: inherit !important
+
+=popover__content--cover
+  display: block
+  width: 100%
+  min-height: 100%
+  height: 100vh
+  max-height: 100vh !important
+  margin: 0 !important
+  overflow: auto !important
+  > *
+    border-radius: 0
+
+=popover__close
+  position: relative
+  &:hover
+    cursor: pointer
+
+// CLASS BUILDER: POPOVERS
+// =======================
+
+=components-popovers
+
+  .popover
+    +popover
+
+  .popover__ctrl
+    +popover__ctrl
+
+  .popover__content
+    +popover__content
+    &--narrow
+      +popover__content--narrow
+    &--fix
+      +popover__content--fix
+    &--cover
+      +popover__content--cover
+
+  .popover__body
+    max-height: 85vh
+    overflow: hidden
+
+  .popover__close
+    +popover__close
+
+@if $include-css--popovers == true
+  +components-popovers

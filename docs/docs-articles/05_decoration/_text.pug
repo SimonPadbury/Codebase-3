@@ -1,0 +1,137 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "decoration-text"
+  - var sectionTitle = "Text"
+
+block section
+  p.
+    Codebase text decoration utilities are introduced in the Codebase #[a(href="basics.html") Basics] documentation. They are also listed and demonstrated here below.
+  
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--h1
+    .flexitem.flexitem-sm--span-9.text--h1 .text--h1
+  
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--h2
+      
+    .flexitem.flexitem-sm--span-9.text--h2 .text--h2
+    
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--h3
+    .flexitem.flexitem-sm--span-9.text--h3 .text--h3
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--h4
+    .flexitem.flexitem-sm--span-9.text--h4 .text--h4
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--h5
+    .flexitem.flexitem-sm--span-9.text--h5 .text--h5
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--h6
+    .flexitem.flexitem-sm--span-9.text--h6 .text--h6
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--lead
+    .flexitem.flexitem-sm--span-9.text--lead Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--dropcap
+    .flexitem.flexitem-sm--span-9.text--dropcap Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+    
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code.text--nowrap .text--initial-icon
+    .flexitem.flexitem-sm--span-9.text--initial-icon #[i.fa.fa-flag] Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--bold
+    .flexitem.flexitem-sm--span-9.text--bold Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--heavy
+    .flexitem.flexitem-sm--span-9.text--heavy Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--italics
+    .flexitem.flexitem-sm--span-9.text--italics Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--normal
+    .flexitem.flexitem-sm--span-9
+      b
+        i Removes bold and italics from any text, #[span.text--normal thereby resetting to normal text]. Perhaps you may find this useful in some circumstances.
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--caps
+    .flexitem.flexitem-sm--span-9.text--caps Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--muted
+    .flexitem.flexitem-sm--span-9.text--muted Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--left
+    .flexitem.flexitem-sm--span-9.text--left Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--right
+    .flexitem.flexitem-sm--span-9.text--right Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--center
+    .flexitem.flexitem-sm--span-9.text--center Lorem ipsum dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--columns
+    .flexitem.flexitem-sm--span-9.text--columns 
+      +paragraph
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--[colors]
+      | #[sup 1]
+    .flexitem.flexitem-sm--span-9.text--orange (Example: .text--orange) Lorem ipsum dolor sit amet
+    
+  p #[sup 1] #[b Note:] See #[a(href="#decoration-colors") colors] for more information on Codebase color swatches.
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--small-text
+    .flexitem.flexitem-sm--span-9 Lorem #[span.text--small-text ipsum] dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--big-text
+      | #[br] (inline)#[sup 2]
+    .flexitem.flexitem-sm--span-9 Lorem #[span.text--big-text ipsum] dolor sit amet
+
+  .flexbox.mb--line
+    .flexitem.flexitem-sm--span-3
+      code .text--big-text
+      | #[br] (container)#[sup 2]
+    .flexitem.flexitem-sm--span-9
+      .text--big-text
+        p Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  p #[sup 2] #[b Note:] You can use the #[code .text--big-text] utility class both inline (e.g. on a span within a paragraph) or on a container (block level) around the element(s) that you need to set as enlarged text. The utility class will affect #[i all text] within the container, including paragraphs, headers #[i and] any Codebase components inside the #[code .text--big-text] container. See #[a(href="basics.html#basics-big-typography") Basics: Big Typography].

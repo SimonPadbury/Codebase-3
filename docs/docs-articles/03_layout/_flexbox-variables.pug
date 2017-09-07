@@ -1,0 +1,65 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "layout-flexbox-variables"
+  - var sectionTitle = "Flexbox Variables"
+
+block section
+  p Codebase flexbox systems use the following variables:
+
+  table.table.deco
+    thead
+      tr
+        th Variable
+        th Value
+        th Explanation
+    tbody
+      tr
+        td
+          code.text--nowrap $mq--xs
+        td
+          code.text--nowrap 320px !default
+        td
+          Break-point for extra-small viewports (e.g. phones, portrait).
+      tr
+        td
+          code.text--nowrap $mq--sm
+        td
+          code.text--nowrap 640px !default
+        td
+          Break-point for small viewports (e.g. phones, landscape; tablets, portrait).
+      tr
+        td
+          code.text--nowrap $mq--md
+        td
+          code.text--nowrap 960px !default
+        td.
+          Break-point for medium viewports (e.g. tablets, landscape).
+      tr
+        td
+          code.text--nowrap $mq--lg
+        td
+          code.text--nowrap 1280px !default
+        td.
+          Break-point for large viewports (e.g. laptops, desktops).
+      tr
+        td
+          code.text--nowrap $max-flexitems
+        td
+          code.text--nowrap 12 !default
+        td.
+          The default Codebase flexbox system has up to 12 columns (flexitems), each 1/12 of the flexbox max width.
+      tr
+        td
+          code.text--nowrap $flexbox--max-width
+        td
+          code.text--nowrap 1280px !default
+        td.
+          Maximum width of the modifiers #[code +flexbox--container] mixin and #[code .flexbox--container] class. For wider viewports the flexbox is centered by auto-margins right and left.
+      tr
+        td
+          code.text--nowrap $flexbox--gutter-width
+        td
+          code.text--nowrap $spacing--24 !default
+        td
+          Half of the gutter width is used as margin either side of each flexbox column. (See #[a(href="decoration.html#decoration-element-grid") element grid] for units.)          

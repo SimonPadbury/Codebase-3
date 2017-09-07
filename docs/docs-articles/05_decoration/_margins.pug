@@ -1,0 +1,59 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "decoration-margins"
+  - var sectionTitle = "Margins"
+
+block section
+  
+  p Margin utility prefixes:
+  
+  ul
+    li Margins all: #[code m--*]
+    li Margin top: #[code mt--*]
+    li Margin right: #[code mr--*]
+    li Margin bottom: #[code mb--*]
+    li Margin left: #[code ml--*]
+    li Margins vertical: #[code mv--*] (both top and bottom)
+    li Margins horizontal: #[code mh--*] (both left and right)
+
+  p Margin increments as in the following examples (and #[code --zero] for removing unwanted margin):
+
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--zero.bg--brown-lighten-3.p--8 .mr--zero (for removing margins)
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--4.bg--brown-lighten-3.p--8 .mr--4
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--8.bg--brown-lighten-3.p--8 .mr--8
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--12.bg--brown-lighten-3.p--8 .mr--12
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--16.bg--brown-lighten-3.p--8 .mr--16
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--20.bg--brown-lighten-3.p--8 .mr--20
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--24.bg--brown-lighten-3.p--8 .mr--24
+  p ... ...
+  .mb--line.b--dashed.b--brown-darken-1
+    .m--80.bg--brown-lighten-3.p--8 .mr--80
+
+  h3.mt--line Horizontal centering by margin:auto
+
+  p.
+    This also sets the element to #[code display:block !important]
+
+  .mb--line.b--dashed.b--brown-darken-1
+    .mh--auto.bg--brown-lighten-3.p--8(style="width:75%;") .mh--auto
+    
+  h3.mt--line Extra line spacing
+  
+  p.
+    Sometimes you may find that you need to add extra whitespace (e.g. above headers, or below list items), equal to the line height of your normal text. Codebase has decoration classes for that (for margin and pading). The extra line margins are shown in the following examples:
+
+  .mb--line.b--dashed.b--brown-darken-1
+    .mt--line.bg--brown-lighten-3.p--8 .mt--line
+  .mb--line.b--dashed.b--brown-darken-1
+    .mb--line.bg--brown-lighten-3.p--8 .mb--line
+
+  p.
+    The amount of extra white space applied will be increased if you are also using these classes in combination with #[a(href="basics.html#basics-big-typography") big typography]. 

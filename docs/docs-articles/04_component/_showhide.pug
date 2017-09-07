@@ -1,0 +1,83 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-showhide"
+  - var sectionTitle = "Showhide"
+
+block section
+  p.
+    Showhide is a Codebase #[a(href="#components-activator") activator] component.
+    
+  p.
+    Use #[code .showhide] to show and hide content.
+
+  .showhide
+    button.showhide__ctrl.btn 
+      | Showhide #[i.fa.fa-sort]
+    .showhide__content.bg--yellow-lighten-2
+      .p--block
+        | Example showhide component content
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-showhide-html") HTML
+      .tab__label(data-tab-id="tab-docs-showhide-pug") Pug
+
+    #tab-docs-showhide-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="showhide"&gt;
+            &lt;button class="showhide__ctrl btn"&gt;Showhide &lt;i class="fa fa-sort"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;div class="showhide__content"&gt;Example showhide component content&lt;/div&gt;
+          &lt;/div&gt;
+
+    #tab-docs-showhide-pug.tab__card
+      pre.mt--zero
+        code.
+          .showhide
+            button.showhide__ctrl.btn 
+              | Showhide \#[i.fa.fa-sort]
+            .showhide__content.bg--yellow-lighten-2
+              .p--block
+                | Example showhide component content
+
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | #[b The showhide component has no decorative styling of its own.]
+    | Showhide is exemplified in these docs by adding button styling for the controller, and a yellow background for the content.
+    
+  .showhide
+    button.btn.combo--left Combo example
+    button.btn.btn--icon.showhide__ctrl.combo--right <i class="fa fa-sort"></i>
+    .showhide__content.bg--yellow-lighten-2
+      .p--block
+        | Content
+        
+  br
+
+  p.
+    Simply place the #[code showhide__content] block before the toggle in the HTML (i.e. reverse the order of the toggle and the content) and it will be shown and hidden above the toggle.
+
+  .showhide
+    .showhide__content.bg--yellow-lighten-2
+      .p--block
+        | Example showhide component content
+    button.showhide__ctrl.btn Showhide above <i class="fa fa-sort"></i>
+    
+  h3.mt--line Showhide Classes
+  
+  table.table.deco
+    thead
+      tr
+        th Class
+        th Notes
+    tbody
+      tr
+        td #[code .showhide]
+        td The showhide component block
+      tr
+        td #[code .showhide__ctrl]
+        td The showhide controller element
+      tr
+        td #[code .showhide__content]
+        td The showhide content element

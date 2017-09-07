@@ -1,0 +1,19 @@
+//- TABLE GENERATOR
+
+mixin table(totalColumns, totalRows, tableClass)
+  table(class=["table", tableClass])
+    thead
+      tr
+        - for (var cols = 0; cols < totalColumns; cols++)
+          th= "Table Header"
+            = " "
+            = (cols + 1)
+    tbody
+      - for (var rows = 0; rows < totalRows; rows++)
+        tr
+          - for (var cols = 0; cols < totalColumns; cols++)
+            td= "Table content"
+              = " "
+              = (cols + 1)
+              = "."
+              = (rows + 1)

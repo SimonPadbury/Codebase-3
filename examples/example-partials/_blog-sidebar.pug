@@ -1,0 +1,18 @@
+mixin blog-sidebar
+
+  .flexbox.flexbox--gutter.flexbox--nested
+
+    .flexitem.flexitem-sm--span-6.flexitem-md--span-12
+      h4.mt--line Blog categories
+      +menu("Category", 3, "menu--block")
+    
+    .flexitem.flexitem-sm--span-6.flexitem-md--span-12
+      h4 Recent posts
+      +menu("Recent post", 4, "menu--block")
+
+    .flexitem.flexitem-sm--span-6.flexitem-md--span-12
+      h4 Recent comments
+      +menu("Recent comment", 5, "menu--block")
+
+    .flexitem.flexitem-sm--span-6.flexitem-md--span-12
+      +example-subs-form

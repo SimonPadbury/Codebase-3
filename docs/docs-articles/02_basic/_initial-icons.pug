@@ -1,0 +1,60 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-initial-icons"
+  - var sectionTitle = "Initial Icons"
+
+block section
+  p A variation on using a dropcap to start an important paragraph. The utility class affects the #[code :first-child] selector. (This works well with, e.g. see #[a(href="http://fontawesome.io/") Font Awesome]). Useful for when you want to make a note or statement stand out.
+
+  .text--initial-icon
+    i(class="fa fa-star" aria-hidden="true")
+    | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  pre
+    code.
+      &lt;div class="text--initial-icon"&gt;
+        &lt;i class="fa fa-star" aria-hidden="true"&gt;&lt;/i&gt; Lorem ipsum dolor sit amet ...
+      &lt;/div&gt;
+
+  p Alternative to an icon font, simply put the initial single character in a #[code span] and it will recieve the same Codebase treatment.
+
+  .text--initial-icon
+    span 1
+    | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  .text--initial-icon
+    span 2
+    | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  .text--initial-icon
+    span 3
+    | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+
+  h3 Further styling
+
+  p Add color, padding, etc (e.g. by #[a(href="decoration.html") decoration] classes) for greater effect. Example:
+  
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+    
+    
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-flexbox-initial-icon-html") HTML
+      .tab__label(data-tab-id="tab-docs-flexbox-initial-icon-pug") Pug
+
+    #tab-docs-flexbox-initial-icon-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="text--initial-icon mb--24 bl--heavy b--green-darken-1 p--16 pl--80 bg--green-lighten-2"&gt;
+            &lt;i class="fa fa-check-circle text--green-darken-1"&gt;&lt;/i&gt; Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+          &lt;/div&gt;
+
+    #tab-docs-flexbox-initial-icon-pug.tab__card
+      pre.mt--zero
+        code.
+          .text--initial-icon.mb--line.bl--heavy.b--green-darken-1.p--16.pl--80.bg--green-lighten-2
+            i.fa.fa-check-circle.text--green-darken-1
+            | Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.

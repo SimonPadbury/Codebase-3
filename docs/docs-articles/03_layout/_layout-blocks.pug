@@ -1,0 +1,232 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "layout-layout-blocks"
+  - var sectionTitle = "Layout Blocks"
+
+block section
+  p.
+    A full range of visibility mixins have been built based on the Codebase media query breakpoint variables.
+
+  p.
+    You can include these mixins directly in your project. Classes have also been built from each of these mixins.
+
+  p.text--center
+    span.bg--gray.p--block #[i.fa.fa-check.text--white]
+    |  = visible
+
+  style.
+    .visibility-example {
+    margin: -8px -12px;
+    padding: 8px 12px;
+    }
+
+  table.table.table--nowrap.deco
+    thead
+      tr
+        th Mixin / Class
+        th Example
+        th xs-down
+        th xs-sm
+        th sm-md
+        th md-lg
+        th lg-up
+    tbody
+      tr.bt--thick
+        td #[code hide--xs-down]
+        td
+          .hide--xs-down.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code hide--sm-down]
+        td
+          .hide--sm-down.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code hide--md-down]
+        td
+          .hide--md-down.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code hide--lg-down]
+        td
+          .hide--lg-down.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr.bt--thick
+        td #[code hide--xs-sm]
+        td
+          .hide--xs-sm.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code hide--sm-md]
+        td
+          .hide--sm-md.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code hide--md-lg]
+        td
+          .hide--md-lg.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr.bt--thick
+        td #[code hide--xs-up]
+        td
+          .hide--xs-up.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+        td
+        td
+      tr
+        td #[code hide--sm-up]
+        td
+          .hide--sm-up.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+        td
+      tr
+        td #[code hide--md-up]
+        td
+          .hide--md-up.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+      tr
+        td #[code hide--lg-up]
+        td
+          .hide--lg-up.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+      tr.bt--thick
+        td #[code show--xs-down]
+        td
+          .show--xs-down.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+        td
+        td
+      tr
+        td #[code show--sm-down]
+        td
+          .show--sm-down.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+        td
+      tr
+        td #[code show--md-down]
+        td
+          .show--md-down.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+      tr
+        td #[code show--lg-down]
+        td
+          .show--lg-down.p--block.bg--green.text--white.visibility-example  Example
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+      tr.bt--thick
+        td #[code show--xs-sm]
+        td
+          .show--xs-sm.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+        td
+      tr
+        td #[code show--sm-md]
+        td
+          .show--sm-md.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+        td
+      tr
+        td #[code show--md-lg]
+        td
+          .show--md-lg.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td
+      tr.bt--thick
+        td #[code show--xs-up]
+        td
+          .show--xs-up.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code show--sm-up]
+        td
+          .show--sm-up.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code show--md-up]
+        td
+          .show--md-up.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]
+      tr
+        td #[code show--lg-up]
+        td
+          .show--lg-up.p--block.bg--green.text--white.visibility-example  Example
+        td
+        td
+        td
+        td
+        td.text--center.bg--gray #[i.fa.fa-check.text--white]

@@ -1,35 +1,43 @@
 //- Codebase Starter
 
-include _codebase-pug-index
+include generators/__index
 
 block vars
-  - lang = 'en'
-  - title = 'Codebase Starter'
+  - lang = ""
+  - htmlDir = ""
+  - htmlClass = ""
+  - title = ""
+  - description = ""
+  - author = ""
+  - favicon = ""
+  - faviconType = ""
+  - bodyClass = ""
 
-doctype(doctype)
-html(lang=lang)
+doctype html
+html(lang=lang, dir=htmlDir, class=htmlClass)
 
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome-1")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
     meta(name="description", content=description)
     meta(name="author", content=author)
-    link(rel="icon", href=favicon)
 
     title #{title}
 
     block head-addins
-      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+      link(rel="icon", href=favicon, type=faviconType)
+      //- To replace `codebase.css` with your own CSS (that imports 
+        `codebase.css`), use `block` in your template. Or to retain
+        `codebase.css`,  use `block append`.
+      link(rel="stylesheet", href="codebase/css/codebase.css")
 
-      link(rel='stylesheet', href='codebase/css/codebase.css')
-
-  body
+  body(class=bodyClass)
     block body
 
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous")
-
-    script(src='codebase/js/codebase.js')
-
     block body-foot-addins
+      //- To replace `codebase.js` with your own JS (that imports 
+        `codebase.js`), use `block` in your template. Or to retain
+        `codebase.js`,  use `block append`.
+      script(src="codebase/js/codebase.js")

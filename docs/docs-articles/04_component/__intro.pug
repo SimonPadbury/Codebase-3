@@ -1,0 +1,26 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-introduction"
+  - var sectionTitle = "Introduction"
+
+block section
+  p.
+    Codebase components are common HTML/CSS patterns. Some have added functionality from a tiny JavaScript.
+
+  h3 Component Mixins and Class Builders
+
+  p.
+    Almost everything in Codebase, including all components, has been created first as a set of Sass mixins. These are then combined and included in their respective #[b class builder] mixins. And these class builders are under the control of a set of true #[code !default] variables in #[a(href="codebase/sass/01_default-variables/_default-variables.sass")  codebase/sass/01_default-variables/_default-variables.sass].
+
+  p.
+    This means that you can toggle component classes for inclusion (true) or exclusion (false) in your advanced theme build by overriding these defaults.
+
+  p.
+    And this also means that you can include and combine and re-style codebase components in your own theme Sass.
+
+  p.
+    If you do include and use Codebase components in your own theme, then maybe you will not need (some of) the Codebase component classes. For this reason, all Codebase components have their classes under the control of "class builder" toggles, so that you can toggle off unused component classes. This is useful for  reducing your final CSS file size.
+    
+  p.
+    Also, if you are combining various frameworks with #[i similarly named CSS classes], you can toggle off the Codebase class names, then create new (e.g. prefixed) classnames in order to avoid framework clashes.

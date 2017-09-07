@@ -1,0 +1,61 @@
+// CLASS BUILDER: CLASSIC FLEXBOX SYSTEM
+// =====================================
+
+=layout-flexbox-system
+
+  .flexbox
+    +flexbox
+
+  .flexbox--container
+    +flexbox--container
+
+  .flexbox--center
+    +flexbox--center
+
+  .flexbox--middle
+    +flexbox--middle
+
+  .flexbox--gutter
+    +flexbox--gutter
+
+  .flexbox--nested
+    +flexbox--nested
+
+  // Flexitems
+  .flexitem
+    +flexitem
+    +classic-flexitem--span
+    +classic-flexitem--offset
+    +classic-flexitem--order
+
+  .flexitem-xs
+    +break--min($mq--xs)
+      +classic-flexitem--span
+      +classic-flexitem--offset
+      +classic-flexitem--order
+
+  .flexitem-sm
+    +break--min($mq--sm)
+      +classic-flexitem--span
+      +classic-flexitem--offset
+      +classic-flexitem--order
+
+  .flexitem-md
+    +break--min($mq--md)
+      +classic-flexitem--span
+      +classic-flexitem--offset
+      +classic-flexitem--order
+
+  .flexitem-lg
+    +break--min($mq--lg)
+      +classic-flexitem--span
+      +classic-flexitem--offset
+      +classic-flexitem--order
+
+  // Incomplete flexbox rows? No problem. Rows can be incomplete (no `.end` or
+  // `.omega` classes required).
+
+// End of class builder mixin
+
+@if $include-css--flexbox-system == true
+  +layout-flexbox-system
