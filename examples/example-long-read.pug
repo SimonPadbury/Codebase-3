@@ -1,0 +1,108 @@
+//- Example Blog Post Long Read
+
+extends ../codebase/pug/_codebase
+
+block vars
+  - var title = "Example Long Read (Single Post) | Codebase"
+  - var bodyClass = "codebase-example"
+
+block append head-addins
+  style.
+    @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+    body {
+      font-family: "Source Serif Pro", serif;
+    }
+
+block body
+  include example-partials/__example-partials-index
+  
+
+  .codebase-bodyinner
+    
+      .menu.menu--menubar-md.menubar--fixed.deco.bg--white.bs
+        .menubar__brand
+          a(href="#/")
+            b Long Read
+
+        .m--4.menu__ctrl.menu__ctrl--right.btn.btn--success.btn--icon.btn--sm.btn--big-text.btn--outline #[i.fa.fa-bars]
+
+        .menu__content
+          ul.menubar__right
+            li #[a(href="#/") Home]
+            li #[a(href="#/") About]
+            li #[a(href="#/") Contact]
+            li #[a(href="#/") Login]
+        
+      .flexbox.flexbox--container.flexbox--gutter
+          
+        .flexitem.flexitem-md--span-3.flexitem--order-2.mt--48
+          
+          +blog-sidebar
+        
+        .flexitem.flexitem-md--span-9.flexitem--order-1
+          
+          h1.mt--80.text--heavy This is an Example Long Read Article with a Big Title
+          
+          .flexbox.flexbox--gutter.flexbox--nested.bt--thin.pt--line
+
+            .flexitem.flexitem-sm--span-4.flexitem-lg--span-4
+              
+              .flexbox.flexbox--gutter.flexbox--nested
+                .flexitem.flexitem--span-4.flexitem-xs--span-3.flexitem-sm--span-12
+                  img(src="holder.js/100x100" alt="Avatar").b--circle
+                .flexitem.flexitem--span-8.flexitem-xs--span-9.flexitem-sm--span-12
+                  h4.mv--4 By Author Name
+                  h4.mv--8.text--italics 12 Aug 1999
+              +paragraph(1, "hide--sm-down")
+              .mv--24
+                +social
+            
+            .flexitem.flexitem-sm--span-8.flexitem-lg--span-8.text--big-text
+
+              +paragraph(3, "text--lead text--dropcap")
+              
+              h2 Heading
+              
+              +paragraph(2)
+
+              h2 Heading
+              
+              +paragraph(4)
+
+              h2 Heading
+              
+              +paragraph(3)
+
+              h2 Heading
+              
+              +paragraph(1)
+
+          hr.mt--72
+            
+          ul.pagination.deco.text--center.pb--72
+            li
+              a(href="#/")
+                i.fa.fa-arrow-left
+                =" "
+                | Newer
+            li
+              a(href="#/") 1
+            li
+              a.pagination__current(href="http://www.example.com") 2
+            li
+              a(href="#/") 3
+            li
+              a(href="#/") 4
+            li
+              a(href="#/") 5
+            li
+              a(href="#/")
+                | Older
+                =" "
+                i.fa.fa-arrow-right
+
+    
+  +codebase-bottomline
+  
+  block append body-foot-addins
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>    

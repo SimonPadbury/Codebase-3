@@ -1,0 +1,66 @@
+// LAYOUT MIXINS: INVISIBILITY
+// ===========================
+
+// Hide down
+
+=hide--xs-down
+  @media screen and (max-width: $mq--xs - 1)
+    display: none !important
+
+=hide--sm-down
+  @media screen and (max-width: $mq--sm - 1)
+    display: none !important
+
+=hide--md-down
+  @media screen and (max-width: $mq--md - 1)
+    display: none !important
+
+=hide--lg-down
+  @media screen and (max-width: $mq--lg - 1)
+    display: none !important
+
+// Hide up
+
+=hide--xs-up
+  @media screen and (min-width: $mq--xs)
+    display: none !important
+
+=hide--sm-up
+  @media screen and (min-width: $mq--sm)
+    display: none !important
+
+=hide--md-up
+  @media screen and (min-width: $mq--md)
+    display: none !important
+
+=hide--lg-up
+  @media screen and (min-width: $mq--lg)
+    display: none !important
+
+// CLASS BUILDER: INVISIBILITY
+// ===========================
+
+=layout-invisibility
+
+  .hide--xs-down
+    +hide--xs-down
+  .hide--sm-down
+    +hide--sm-down
+  .hide--md-down
+    +hide--md-down
+  .hide--lg-down
+    +hide--lg-down
+
+  .hide--xs-up
+    +hide--xs-up
+  .hide--sm-up
+    +hide--sm-up
+  .hide--md-up
+    +hide--md-up
+  .hide--lg-up
+    +hide--lg-up
+
+// End of class builder mixin
+
+@if $include-css--invisibility == true
+  +layout-invisibility

@@ -1,0 +1,472 @@
+// DEFAULT VARIABLES
+// =================
+
+// INDEX
+// =============================================================================
+// (1.) Colors (for Typography, Decoration and UI)
+// (2.) Decoration
+// (3.) Layout
+// (4.) Basics and Typography
+// (5.) Icons
+// (6.) Components
+// (7.) Z-Index of Components
+// (8.) Inclide CSS Classes (Basics, Components, Layout, Decoration)
+// (9.) Include Decoration within Basics and Components
+
+// =============================================================================
+// (1.) Colors
+// =============================================================================
+
+// Color steps
+
+// Used for calculating lighter and darker shades.
+
+$color--step:              12% !default
+$color--step-1x:           $color--step !default
+$color--step-2x:           24% !default
+$color--step-3x:           36% !default
+// Variables and mixins use the color step variables above.
+
+$color--shades:            3 !default
+// The Color `$color--shades` number determines how many loops are looped
+// in the decoration color class generators. The number of `$color--shades`
+// also should equal the number of color steps (see above).
+
+// Swatch colors
+
+// Codebase uses the following color variables in its onboard decoration
+// (mixins and classes). You can override these, assigning your own colors.
+
+$color--blue:              #58d !default
+$color--teal:              #5bd !default
+$color--green:             #3c5 !default
+$color--orange:            #f82 !default
+$color--red:               #e43 !default
+// The above five variables, darkened by `$color--step-1x`, have been
+// repurposed as UI colors. UI button hover/active states are darkened by
+// `$color--step-2x`. (See "UI colors" below.)
+
+$color--yellow:            #fc0 !default
+$color--brown:             #a95 !default
+$color--purple:            #b5c !default
+$color--pink:              #f37 !default
+$color--gray:              #999 !default
+
+$color--black:             #000 !default
+$color--white:             #fff !default
+
+// Swatch color shades
+
+$color--blue-lighten-3:    lighten($color--blue, $color--step-3x) !default
+$color--blue-lighten-2:    lighten($color--blue, $color--step-2x) !default
+$color--blue-lighten-1:    lighten($color--blue, $color--step-1x) !default
+$color--blue-darken-1:     darken($color--blue, $color--step-1x) !default
+$color--blue-darken-2:     darken($color--blue, $color--step-2x) !default
+$color--blue-darken-3:     darken($color--blue, $color--step-3x) !default
+
+$color--teal-lighten-3:    lighten($color--teal, $color--step-3x) !default
+$color--teal-lighten-2:    lighten($color--teal, $color--step-2x) !default
+$color--teal-lighten-1:    lighten($color--teal, $color--step-1x) !default
+$color--teal-darken-1:     darken($color--teal, $color--step-1x) !default
+$color--teal-darken-2:     darken($color--teal, $color--step-2x) !default
+$color--teal-darken-3:     darken($color--teal, $color--step-3x) !default
+
+$color--green-lighten-3:   lighten($color--green, $color--step-3x) !default
+$color--green-lighten-2:   lighten($color--green, $color--step-2x) !default
+$color--green-lighten-1:   lighten($color--green, $color--step-1x) !default
+$color--green-darken-1:    darken($color--green, $color--step-1x) !default
+$color--green-darken-2:    darken($color--green, $color--step-2x) !default
+$color--green-darken-3:    darken($color--green, $color--step-3x) !default
+
+$color--orange-lighten-3:  lighten($color--orange, $color--step-3x) !default
+$color--orange-lighten-2:  lighten($color--orange, $color--step-2x) !default
+$color--orange-lighten-1:  lighten($color--orange, $color--step-1x) !default
+$color--orange-darken-1:   darken($color--orange, $color--step-1x) !default
+$color--orange-darken-2:   darken($color--orange, $color--step-2x) !default
+$color--orange-darken-3:   darken($color--orange, $color--step-3x) !default
+
+$color--red-lighten-3:     lighten($color--red, $color--step-3x) !default
+$color--red-lighten-2:     lighten($color--red, $color--step-2x) !default
+$color--red-lighten-1:     lighten($color--red, $color--step-1x) !default
+$color--red-darken-1:      darken($color--red, $color--step-1x) !default
+$color--red-darken-2:      darken($color--red, $color--step-2x) !default
+$color--red-darken-3:      darken($color--red, $color--step-3x) !default
+
+$color--yellow-lighten-3:  lighten($color--yellow, $color--step-3x) !default
+$color--yellow-lighten-2:  lighten($color--yellow, $color--step-2x) !default
+$color--yellow-lighten-1:  lighten($color--yellow, $color--step-1x) !default
+$color--yellow-darken-1:   darken($color--yellow, $color--step-1x) !default
+$color--yellow-darken-2:   darken($color--yellow, $color--step-2x) !default
+$color--yellow-darken-3:   darken($color--yellow, $color--step-3x) !default
+
+$color--brown-lighten-3:   lighten($color--brown, $color--step-3x) !default
+$color--brown-lighten-2:   lighten($color--brown, $color--step-2x) !default
+$color--brown-lighten-1:   lighten($color--brown, $color--step-1x) !default
+$color--brown-darken-1:    darken($color--brown, $color--step-1x) !default
+$color--brown-darken-2:    darken($color--brown, $color--step-2x) !default
+$color--brown-darken-3:    darken($color--brown, $color--step-3x) !default
+
+$color--purple-lighten-3:  lighten($color--purple, $color--step-3x) !default
+$color--purple-lighten-2:  lighten($color--purple, $color--step-2x) !default
+$color--purple-lighten-1:  lighten($color--purple, $color--step-1x) !default
+$color--purple-darken-1:   darken($color--purple, $color--step-1x) !default
+$color--purple-darken-2:   darken($color--purple, $color--step-2x) !default
+$color--purple-darken-3:   darken($color--purple, $color--step-3x) !default
+
+$color--pink-lighten-3:    lighten($color--pink, $color--step-3x) !default
+$color--pink-lighten-2:    lighten($color--pink, $color--step-2x) !default
+$color--pink-lighten-1:    lighten($color--pink, $color--step-1x) !default
+$color--pink-darken-1:     darken($color--pink, $color--step-1x) !default
+$color--pink-darken-2:     darken($color--pink, $color--step-2x) !default
+$color--pink-darken-3:     darken($color--pink, $color--step-3x) !default
+
+$color--gray-lighten-3:    lighten($color--gray, $color--step-3x) !default
+$color--gray-lighten-2:    lighten($color--gray, $color--step-2x) !default
+$color--gray-lighten-1:    lighten($color--gray, $color--step-1x) !default
+$color--gray-darken-1:     darken($color--gray, $color--step-1x) !default
+$color--gray-darken-2:     darken($color--gray, $color--step-2x) !default
+$color--gray-darken-3:     darken($color--gray, $color--step-3x) !default
+
+// UI colors
+
+// User Interface colors are used by buttons, labels, badges and UI
+// background, text and border classes (for you to apply as you wish to
+// control panels, popovers, notifications, etc.) The Codebase default hyperlink
+// color is also `$color--primary`.
+
+// The Codebase default UI colors are the same as the `-darken-1` swatch colors
+// for blue, teal, green, orange and red. This may seem a redundancy, but it
+// means that you are at liberty to override the UI colors independently from
+// the swatch colors. (E.g. you may wish your primary UI color to be a
+// different color than blue.)
+
+$color--default:            $color--gray-darken-1 !default
+$color--primary:            $color--blue-darken-1 !default
+$color--secondary:          $color--teal-darken-1 !default
+$color--success:            $color--green-darken-1 !default
+$color--warning:            $color--orange-darken-1 !default
+$color--danger:             $color--red-darken-1 !default
+
+$color--default-hover:      $color--gray-darken-2 !default
+$color--primary-hover:      $color--blue-darken-2 !default
+$color--secondary-hover:    $color--teal-darken-2 !default
+$color--success-hover:      $color--green-darken-2 !default
+$color--warning-hover:      $color--orange-darken-2 !default
+$color--danger-hover:       $color--red-darken-2 !default
+
+$color--default-disabled:    $color--gray-lighten-1 !default
+$color--primary-disabled:    $color--blue-lighten-1 !default
+$color--secondary-disabled:  $color--teal-lighten-1 !default
+$color--success-disabled:    $color--green-lighten-1 !default
+$color--warning-disabled:    $color--orange-lighten-1 !default
+$color--danger-disabled:     $color--red-lighten-1 !default
+
+$color--default-text-alt:           #ffffff !default
+$color--primary-text-alt:           #ffffff !default
+$color--secondary-text-alt:         #ffffff !default
+$color--success-text-alt:           #ffffff !default
+$color--warning-text-alt:           #ffffff !default
+$color--danger-text-alt:            #ffffff !default
+
+$color--default-text-alt-hover:     $color--default-text-alt !default
+$color--primary-text-alt-hover:     $color--primary-text-alt !default
+$color--secondary-text-alt-hover:   $color--secondary-text-alt !default
+$color--success-text-alt-hover:     $color--success-text-alt !default
+$color--warning-text-alt-hover:     $color--warning-text-alt !default
+$color--danger-text-alt-hover:      $color--danger-text-alt !default
+
+// =============================================================================
+// (2.) Decoration
+// =============================================================================
+
+// Codebase component decoration is all controlled by the following set of
+// decoration variables. These same variables are used throughout Codebase
+// typography, components and decoration.
+
+// Element grid
+
+$spacing--4:         4px
+$spacing--8:         8px
+$spacing--12:       12px
+$spacing--16:       16px
+$spacing--20:       20px
+$spacing--24:       24px
+$spacing--28:       28px
+$spacing--32:       32px
+$spacing--36:       36px
+$spacing--40:       40px
+$spacing--44:       44px
+$spacing--48:       48px
+$spacing--52:       52px
+$spacing--56:       56px
+$spacing--60:       60px
+$spacing--64:       64px
+$spacing--68:       68px
+$spacing--72:       72px
+$spacing--76:       76px
+$spacing--80:       80px
+
+$spacing--max:      20
+// Used by the decoration classes @for loops. 20 loops = 80px (default)
+
+$spacing--block: $spacing--8 $spacing--16 !default
+// e.g. menu links, default button size
+
+$spacing--thin:     1px !default
+$spacing--thick:    $spacing--4 !default
+$spacing--heavy:    $spacing--8 !default
+
+// Borders
+
+$border--dashed:           $spacing--thin dashed $color--gray-lighten-2 !default
+$border--thin:             $spacing--thin solid $color--gray-lighten-2 !default
+$border--thick:            $spacing--thick solid $color--gray-lighten-2 !default
+$border--heavy:            $spacing--heavy solid $color--gray-lighten-2 !default
+$border--radius:           4px !default
+
+// Shadows
+
+$box-shadow:               0 2px 4px rgba(0,0,0,0.2) !default
+$box-shadow--1z:           $box-shadow
+$box-shadow--2z:           0 4px 6px rgba(0,0,0,0.2) !default
+$box-shadow--3z:           0 6px 8px rgba(0,0,0,0.2) !default
+$box-shadow--inset:        inset 0 0 4px rgba(0,0,0,0.3) !default
+$box-shadow--inset-top:    inset 0 4px 4px -4px rgba(0,0,0,0.3) !default
+$box-shadow--inset-right:  inset -4px 0 4px -4px rgba(0,0,0,0.3) !default
+$box-shadow--inset-bottom: inset 0 -4px 4px -4px rgba(0,0,0,0.3) !default
+$box-shadow--inset-left:   inset 4px 0 4px -4px rgba(0,0,0,0.3) !default
+
+// =============================================================================
+// (3.) Layout
+// =============================================================================
+
+// Breakpoints
+
+$mq--xs:                320px !default
+$mq--sm:                640px !default
+$mq--md:                960px !default
+$mq--lg:                1280px !default
+
+// Flexbox System
+
+$flexbox--max-width:    1280px !default
+$max-flexitems:         12 !default
+
+// Half of the gutter width is used as margin either side of each flexitem
+// (i.e. flexbox column). Therefore the default gutter width is 12px
+// left and right.
+$flexbox--gutter-width:            $spacing--24 !default
+
+// =============================================================================
+// (4.) Basics and Typography
+// =============================================================================
+
+$text--base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", sans-serif !default
+
+$text--base-font-size:                   1rem !default
+// 16px
+
+$text--base-line-height:                 $spacing--24 !default
+// 24px
+
+$text--base-font-weight:                 400 !default
+$bold--font-weight:                      700 !default
+
+$text--big-text-font-size:               1.25rem !default
+// 20px
+$text--big-text-line-height:             $spacing--28 !default
+// 28px
+
+$blockquotes-font-size:                  $text--base-font-size
+$text--big-text-blockquotes-font-size:   $text--big-text-font-size
+
+// Base Typography Colors
+
+$text--base-text-color:                   $color--gray-darken-3 !default
+$text--base-text-color-hyperlink:         $color--primary !default
+$text--base-text-color-hyperlink-hover:   $color--primary-hover !default
+$text--base-text-color-hyperlink-visited: $color--purple !default
+
+// Headings
+
+$h1-h6--font-weight-normal:               true !default
+$h2-h6--tall-top-margin:                  true !default
+
+// breakpoint for changing header sizes
+$mq--headers-alt:                         $mq--sm !default
+
+$text--columns-min-width:                 12em !default
+
+// Code (and preformatted code blocks)
+$text--base-code-border:                  true !default
+$text--base-code-rounded-corners:         true !default
+
+// Buttons
+$btn--rounded-corners:                   true !default
+$btn--padding-sm:                        $spacing--4 $spacing--12 !default
+$btn--padding-default:                   $spacing--8 $spacing--16 !default
+$btn--padding-lg:                        $spacing--12 $spacing--24 !default
+$btn--padding-icon:                      $spacing--8
+
+// Optional 3D gradient effect buttons (`false` yields flat buttons)
+$btn--3d:                                false !default
+
+// Outline buttons
+$btn--outline-thickness:                 2px !default
+
+// Forms
+$form--input-rounded-corners:        true !default
+$form--outline-thickness:            2px !default
+$form--outline-color:                $color--gray-lighten-2 !default
+$form--outline-color-focus:          $color--primary !default
+$form--focus-glow:                   true !default
+$form--focus-glow-style:             0 0 $spacing--4 rgba(0,0,0,0.2) !default
+
+// =============================================================================
+// (5.) Icons
+// =============================================================================
+
+$icon--font-family:                  FontAwesome
+
+// Form Elements
+
+$icon--radio-off:                    "\f1db" !default
+$icon--radio-on:                     "\f111" !default
+$icon--checkbox-off:                 "\f096" !default
+$icon--checkbox-on:                  "\f046" !default
+$icon--toggle-off:                   "\f204" !default
+$icon--toggle-on:                    "\f205" !default
+
+// =============================================================================
+// (7.) Components
+// =============================================================================
+
+$off-canvas--transition:             all 0.6s ease-in-out
+
+$popover--backdrop-color:            rgba(0,0,0, 0.5)
+$popover--transition-backdrop:       all 0.3s ease-in-out
+$popover--transition-content:        all 0.3s ease-in-out
+$popover--narrow-min:                300px
+$popover--narrow-mq:                 $mq--sm
+$popover--narrow-max:                600px
+
+// z-index of compnents
+$z-index--dropdown:                  120
+$z-index--menu-menubar-fixed:        120
+$z-index--off-canvas:                120
+$z-index--responsive-table:          1
+$z-index--popover:                   130
+$z-index--tab-front:                 1
+
+// Include Components `.deco` classes
+
+// Codebase aims to be as "style-agnostic" as possible -- so that you don`t need
+// to override my Codebase`s choice of styling. But for demonstration purposes
+// it is necessary to add in some `.deco` classes that provide some minimal
+// styling for the Codebase docs and for rapid prototyping (e.g. block padding
+// around menu items, box shadow behind dropdowns and popovers, borders for
+// table cells, media objects, cards, tabs, etc.)
+
+// You can switch these off by overiding the following variables:
+
+$deco-class--dropdown:               true !default
+$deco-class--menu-and-menubar:       true !default
+$deco-class--card:                   true !default
+$deco-class--responsive-table:       true !default
+$deco-class--pagination:             true !default
+$deco-class--tab-system:             true !default
+
+// =============================================================================
+// (8.) Include CSS Classes (Basics, Components, Layout, Decoration)
+// =============================================================================
+
+// Codebase has most of its styles built as mixins, which are then included in
+// classes. Therefore:
+
+// * You can choose whether or not to include these classes by toggling the
+//   following `true/false` variables (i.e. by overriding them in your own
+//   variables). Toggle `false` whatever you don"t need, for generating smaller
+//   CSS.
+
+// * You can include these variables in your own classes (with your own choice
+//   of class names). This may be useful if you are combining various frameworks
+//   and you need to have components etc. differently namespaced to avoid
+//   clashes.
+
+// * You can include Codebase mixins at different media query breakpoints.
+//   For example, in Codebase the responsive menubar dropdowns are only styled
+//   as dropdowns above their (optional) breakpoints.
+
+// Basics
+$include-css--typography:                  true !default
+$include-css--floats-clearfix:             true !default
+$include-css--buttons:                     true !default
+$include-css--badges:                      true !default
+$include-css--labels:                      true !default
+$include-css--combos:                      true !default
+$include-css--forms:                       true !default
+
+// Layout
+$include-css--flexbox-system:              true !default
+$include-css--invisibility:                true !default
+
+// Components
+$include-css--dropdowns:                   true !default
+$include-css--media-objects:               true !default
+$include-css--card:                        true !default
+$include-css--menu-and-menubar:            true !default
+$include-css--navbars:                     true !default
+$include-css--off-canvas:                  true !default
+$include-css--pagination:                  true !default
+$include-css--popovers:                    true !default
+$include-css--reset-overlay:               true !default
+$include-css--showhide:                    true !default
+$include-css--table:                       true !default
+$include-css--tab-system:                  true !default
+$include-css--tooltips:                    true !default
+
+// Decoration
+$include-css--decoration:                  true !default
+
+$include-color--red-classes:               true !default
+$include-color--red-lighten-shades:        true !default
+$include-color--red-darken-shades:         true !default
+
+$include-color--orange-classes:            true !default
+$include-color--orange-lighten-shades:     true !default
+$include-color--orange-darken-shades:      true !default
+
+$include-color--yellow-classes:            true !default
+$include-color--yellow-lighten-shades:     true !default
+$include-color--yellow-darken-shades:      true !default
+
+$include-color--brown-classes:             true !default
+$include-color--brown-lighten-shades:      true !default
+$include-color--brown-darken-shades:       true !default
+
+$include-color--green-classes:             true !default
+$include-color--green-lighten-shades:      true !default
+$include-color--green-darken-shades:       true !default
+
+$include-color--teal-classes:              true !default
+$include-color--teal-lighten-shades:       true !default
+$include-color--teal-darken-shades:        true !default
+
+$include-color--blue-classes:              true !default
+$include-color--blue-lighten-shades:       true !default
+$include-color--blue-darken-shades:        true !default
+
+$include-color--purple-classes:            true !default
+$include-color--purple-lighten-shades:     true !default
+$include-color--purple-darken-shades:      true !default
+
+$include-color--pink-classes:              true !default
+$include-color--pink-lighten-shades:       true !default
+$include-color--pink-darken-shades:        true !default
+
+$include-color--grayscale-classes:         true !default
+$include-color--gray-lighten-shades:       true !default
+$include-color--gray-darken-shades:        true !default
+
+// Note: the "grayscale" toggle also includes the black and white color classes.
+// (It is named "grayscale" and not simply "gray" to remind you of this fact.)

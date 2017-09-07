@@ -1,0 +1,15 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-intro"
+  - var sectionTitle = "Introduction"
+
+block section
+  p.
+    Codebase basic styles build upon #[a(href="https://necolas.github.io/normalize.css/") Normalize] (this already imported into #[code codebase.css] during Sass pre-processing). These apply to classless HTML tagged elements.
+    
+  p.
+    In addition to the basic HTML styling, Codebase has several #[code .text--*] utility classes. These have been demonstrated at appripriate points below.
+  
+  p.
+    A full list of text utility classes can also be found at #[a(href="decoration.html#decoration-text") Decoration: Text].

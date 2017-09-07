@@ -1,0 +1,215 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "decoration-colors"
+  - var sectionTitle = "Colors"
+
+block section
+  h3 The Codebase color swatches
+  
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | #[b These colors are here simply to get you started in your prototyping].
+    | You can override and add to them in your own website design as you make progress. 
+  
+  p.
+    Each set of color class builders is individually controlled in the default variables file, so that you can toggle off the classes for colors that you never use.
+
+  p.
+    In each color swatch series there are 7 colors: the base color (see the middle column above) plus 3 incrementally lighter and 3 incrementally darker &ndash; plus black and white.
+
+  style.
+    .swatch-row {
+      display: flex;
+    }
+    .swatch-row.b--thin {
+      margin-bottom: 4px;
+      padding-top: 4px;
+      padding-left: 4px;
+    }
+    .swatch-row p {
+      width: 72px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    .swatch-row.b--thin p {
+      width: 68px
+    }
+    .swatch {
+      width: 72px;
+      height: 72px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    
+  div(style="overflow-x: auto;")
+    .swatch-row
+      p
+      p.text--center.text--small-text Red
+      p.text--center.text--small-text Orange
+      p.text--center.text--small-text Yellow
+      p.text--center.text--small-text Brown
+      p.text--center.text--small-text Green
+      p.text--center.text--small-text Teal
+      p.text--center.text--small-text Blue
+      p.text--center.text--small-text Purple
+      p.text--center.text--small-text Pink
+    .swatch-row
+      p.text--small-text darken-3
+      .swatch.bg--red-darken-3
+      .swatch.bg--orange-darken-3
+      .swatch.bg--yellow-darken-3
+      .swatch.bg--brown-darken-3
+      .swatch.bg--green-darken-3
+      .swatch.bg--teal-darken-3
+      .swatch.bg--blue-darken-3
+      .swatch.bg--purple-darken-3
+      .swatch.bg--pink-darken-3
+    .swatch-row
+      p.text--small-text darken-2
+      .swatch.bg--red-darken-2
+      .swatch.bg--orange-darken-2
+      .swatch.bg--yellow-darken-2
+      .swatch.bg--brown-darken-2
+      .swatch.bg--green-darken-2
+      .swatch.bg--teal-darken-2
+      .swatch.bg--blue-darken-2
+      .swatch.bg--purple-darken-2
+      .swatch.bg--pink-darken-2
+    .swatch-row
+      p.text--small-text darken-1
+      .swatch.bg--red-darken-1
+      .swatch.bg--orange-darken-1
+      .swatch.bg--yellow-darken-1
+      .swatch.bg--brown-darken-1
+      .swatch.bg--green-darken-1
+      .swatch.bg--teal-darken-1
+      .swatch.bg--blue-darken-1
+      .swatch.bg--purple-darken-1
+      .swatch.bg--pink-darken-1
+    .swatch-row.b--thin.b--black.b--rounded
+      p.text--caps.text--small-text Base color
+      .swatch.bg--red
+      .swatch.bg--orange
+      .swatch.bg--yellow
+      .swatch.bg--brown
+      .swatch.bg--green
+      .swatch.bg--teal
+      .swatch.bg--blue
+      .swatch.bg--purple
+      .swatch.bg--pink
+    .swatch-row
+      p.text--small-text lighten-1
+      .swatch.bg--red-lighten-1
+      .swatch.bg--orange-lighten-1
+      .swatch.bg--yellow-lighten-1
+      .swatch.bg--brown-lighten-1
+      .swatch.bg--green-lighten-1
+      .swatch.bg--teal-lighten-1
+      .swatch.bg--blue-lighten-1
+      .swatch.bg--purple-lighten-1
+      .swatch.bg--pink-lighten-1
+    .swatch-row
+      p.text--small-text lighten-2
+      .swatch.bg--red-lighten-2
+      .swatch.bg--orange-lighten-2
+      .swatch.bg--yellow-lighten-2
+      .swatch.bg--brown-lighten-2
+      .swatch.bg--green-lighten-2
+      .swatch.bg--teal-lighten-2
+      .swatch.bg--blue-lighten-2
+      .swatch.bg--purple-lighten-2
+      .swatch.bg--pink-lighten-2
+    .swatch-row
+      p.text--small-text lighten-3
+      .swatch.bg--red-lighten-3
+      .swatch.bg--orange-lighten-3
+      .swatch.bg--yellow-lighten-3
+      .swatch.bg--brown-lighten-3
+      .swatch.bg--green-lighten-3
+      .swatch.bg--teal-lighten-3
+      .swatch.bg--blue-lighten-3
+      .swatch.bg--purple-lighten-3
+      .swatch.bg--pink-lighten-3    
+    .swatch-row.bt--thin.pt--4(style="margin-top: 4px;")
+      p.text--small-text grayscale
+      .swatch.bg--white.b--thin
+      .swatch.bg--gray-lighten-3
+      .swatch.bg--gray-lighten-2
+      .swatch.bg--gray-lighten-1
+      .swatch.bg--gray
+      .swatch.bg--gray-darken-1
+      .swatch.bg--gray-darken-2
+      .swatch.bg--gray-darken-3
+      .swatch.bg--black
+    
+  
+  br
+
+  p Codebase swatch color class options:
+
+  table.table.deco
+    tbody
+      tr
+        td(style="width: 160px")
+          | #[i background color] #[br] #[code .bg] #[br] #[br]
+          | #[i text color] #[br] #[code .text] #[br] #[br]
+          | #[i border color] #[br] #[code .b]
+        td
+          | #[code --red]
+          br
+          | #[code --orange]
+          br
+          | #[code --yellow]
+          br
+          | #[code --brown]
+          br
+          | #[code --green]
+          br
+          | #[code --teal]
+          br
+          | #[code --blue]
+          br
+          | #[code --purple]
+          br
+          | #[code --pink]
+          br
+          | #[code --gray]
+          br
+          | #[code --black]
+          br
+          | #[code --white]
+        td
+          | #[code -lighten-]
+          br
+          | #[code -darken-]
+        td
+          | #[code 1]
+          br
+          | #[code 2]
+          br
+          | #[code 3]
+
+  p Applying colors to elements:
+
+  .flexbox.flexbox--gutter.b--thin.b--rounded.pt--20
+    .flexitem.flexitem-sm--span-6
+      | Backgrounds: #[code bg--[color]]
+    .flexitem.flexitem-sm--span-6
+      .p--8.bg--blue-lighten-2  Example: #[code .bg--blue-lighten-2]
+      br
+    .flexitem.flexitem-sm--span-6
+      | Borders: #[code b--[color]]
+    .flexitem.flexitem-sm--span-6
+      .mb--line.p--8.b--heavy.b--orange  Example #[code .b--orange]
+    .flexitem.flexitem-sm--span-6
+      | Text: #[code text--[color]]
+    .flexitem.flexitem-sm--span-6
+      p Example: #[code .text--purple] (below)<br>
+      +paragraph(1, "text--purple")
+
+  br
+  
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | Darker shades of five of the Codebase swatch colors have also been used for UI colors. See #[a(href="basics.html#basics-buttons") buttons], #[a(href="basics.html#basics-badges-and-labels") badges and labels].

@@ -1,16 +1,19 @@
-//- Big Footer
+//- Example Big Footer
 
 mixin big-footer
-  .grid.grid--gutter
-    .col.col-sm--span-3
-      +menu('footer link', 5)
-    .col.col-sm--span-3
-      +menu('footer link', 5)
-    .col.col-sm--span-3
-      +menu('footer link', 5)
-    .col.col-sm--span-3
-      +image('holder.js/240x120')
-    .col--span-12.pt--3u
-      hr
-      p.text--center.text--white.
+  .flexbox.flexbox--container.flexbox--gutter.example-big-footer
+    .flexitem.flexitem-sm--span-3
+      +menu("Footer link 1 -", 5)
+    .flexitem.flexitem-sm--span-3
+      +menu("Footer link 2 -", 5)
+    .flexitem.flexitem-sm--span-3
+      +menu("Footer link 3 -", 5)
+    .flexitem.flexitem-sm--span-3
+      img(src="holder.js/240x120")
+      
+      .mt--line
+        +social
+    
+    .flexitem.mt--line
+      p.text--center.
         Copyright &copy; 2017 Some Name

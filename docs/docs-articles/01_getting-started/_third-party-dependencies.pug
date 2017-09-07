@@ -1,0 +1,22 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-third-party-dependencies"
+  - var sectionTitle = "Third-party Dependencies"
+
+block section
+  h3 Normalize
+
+  p.
+    The #[a(href="https://necolas.github.io/normalize.css/") Normalize] stylesheet has already been been sourced from #[a(href="https://cdnjs.com/") CDNJS] and included into #[code codebase.css] during Sass pre-processing.
+  
+  h3 Font Awesome
+
+  p.
+    The #[a(href="http://fontawesome.io/") Font Awesome] stylesheet has already been been sourced from #[a(href="https://cdnjs.com/") CDNJS] and included into #[code codebase.css] during Sass pre-processing.
+  
+  p.
+    The Font Awesome icon font will be sourced from CDNJS while you are online. (It may already be in your browser cache.)
+
+  p.
+    The only external call that Codebase makes is to Font Awesome on CDNJS.

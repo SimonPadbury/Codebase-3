@@ -1,63 +1,56 @@
-/*! Codebase 2.x PREVIEW | MIT License | github.com/SimonPadbury/Codebase */
+/* Codebase 2.0 BETA | MIT License | github.com/SimonPadbury/Codebase */
 
-// THIRD PARTY STYLESHEETS
+// THIRD PARTY
 
-@import '01_third-party/normalize'
-// See '01_third-party/notes.md'
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 
-// DEFAULT VARIABLES
+// BASE VARIABLES AND MIXINS
 
-@import '02_default-variables/default-variables'
+@import "01_base-variables-and-mixins/_default-variables"
+@import "01_base-variables-and-mixins/_media-query-mixins"
 
-// MEDIA QUERY MIXINS
-
-@import '03_media-query-mixins/layout'
-@import '03_media-query-mixins/navbars'
-@import '03_media-query-mixins/typography'
 
 // BASICS
 
-@import '04_basics/base'
-@import '04_basics/typography'
-@import '04_basics/floats-clearfix'
-@import '04_basics/control-colors'
-@import '04_basics/badges'
-@import '04_basics/buttons'
-@import '04_basics/labels'
-@import '04_basics/combos'
-@import '04_basics/forms'
-@import '04_basics/images'
-@import '04_basics/tables'
-
-// COMPONENTS
-
-@import '05_components/reset-overlay'
-@import '05_components/showhide'
-@import '05_components/dropdowns'
-@import '05_components/media-objects'
-@import '05_components/menus-and-menubars'
-@import '05_components/navbars'
-@import '05_components/off-canvas-sidebars'
-@import '05_components/pagination'
-@import '05_components/popovers'
-@import '05_components/slideshows'
-@import '05_components/tab-systems'
+@import "02_basic/_base"
+@import "02_basic/_typography"
+@import "02_basic/_floats-clearfix"
+@import "02_basic/_colors-ui"
+@import "02_basic/_badges"
+@import "02_basic/_buttons"
+@import "02_basic/_labels"
+@import "02_basic/_combos"
+@import "02_basic/_form-elements"
+@import "02_basic/_images"
+@import "02_basic/_tables"
+@import "02_basic/_text-utility-classes"
 
 // LAYOUT
 
-// Both the 'classic' and 'semantic' grid systems have flexbox (default) and
-// float (deprecated) options. That's four 12 column grid systems possible.
-@import '06_layout/shared-grid-base'
-@import '06_layout/classic-grid-system'
-@import '06_layout/classic-grid-system-class-builder'
-@import '06_layout/semantic-grid-system'
-@import '06_layout/visibility'
+@import "03_layout/_shared-flexbox-base"
+@import "03_layout/_classic-flexitem-mixins"
+@import "03_layout/_classic-flexbox-class-builder"
+@import "03_layout/_semantic-flexitem-mixins"
+@import "03_layout/_invisibility"
+
+// COMPONENTS
+
+@import "04_component/_showhide"
+@import "04_component/_dropdown"
+@import "04_component/_card"
+@import "04_component/_menu-and-menubar"
+@import "04_component/_off-canvas"
+@import "04_component/_responsive-table"
+@import "04_component/_pagination"
+@import "04_component/_popover"
+@import "04_component/_tab-system"
 
 // DECORATION
 
-@import '07_decoration/colors'
-@import '07_decoration/borders'
-@import '07_decoration/margins'
-@import '07_decoration/paddings'
-@import '07_decoration/shadows'
-@import '07_decoration/decoration-class-builder'
+@import "05_decoration/_borders"
+@import "05_decoration/_margins"
+@import "05_decoration/_paddings"
+@import "05_decoration/_colors"
+@import "05_decoration/_shadows"
+@import "05_decoration/_decoration-class-builder"

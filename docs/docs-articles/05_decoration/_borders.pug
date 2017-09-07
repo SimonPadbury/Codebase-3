@@ -1,0 +1,78 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "decoration-borders"
+  - var sectionTitle = "Borders"
+
+block section
+  p A few simple border styles.
+
+  .flexbox
+    .flexitem.flexitem-xs--span-6
+      ul
+        li borders all #[code b--*]
+        li border-top #[code bt--*]
+        li border-right #[code br--*]
+        li border-bottom #[code bb--*]
+        li border-left #[code bl--*]
+    .flexitem.flexitem-xs--span-6      
+      ul
+        li top-right (corner#[sup 1]) #[code btr--*]
+        li bottom-right (corner#[sup 1]) #[code bbr--*]
+        li bottom-left (corner#[sup 1]) #[code bbl--*]
+        li top-left (corner#[sup 1]) #[code btl--*]
+
+  p #[sup 1] The corners are for when you need to set particular rounded corners.
+
+  p Examples:
+
+  .mb--8.p--8.b--thin.b--zero  #[code .b--zero] (0px &ndash; for removing borders)
+  .mb--8.p--8.b--dashed  #[code .b--dashed] (1px)
+  .mb--8.p--8.b--thin  #[code .b--thin] (1px)
+  .mb--8.p--8.b--thick  #[code .b--thick] (4px)
+  .mb--8.p--8.b--heavy  #[code .b--heavy] (8px)
+
+  p.mt--line
+    By default, borders have color code #[code $color--gray-lighten-2]. Borders can be assigned other colors in the Codebase swatch using #[code b--[color]] classes. See #[a(href="#decoration-colors") colors].
+
+  h3 Border enhancements:
+
+  .flexbox.flexbox--gutter
+    .flexitem.flexitem-sm--span-6
+      .mh--auto.p--40.b--thin.b--rounded(style="width:250px;height:250px;")  .b--rounded
+    .flexitem.flexitem-sm--span-6
+      .mh--auto.p--40.b--thin.b--circle(style="width:250px;height:250px;")  .b--circle
+
+  table.table.deco
+    tbody
+      tr
+        td(colspan="8") Rounded corners: adjacent corner pairs
+      tr
+        td #[code .bt--rounded]
+        td
+          .bt--rounded.p--20.bg--purple
+        td #[code .bb--rounded]
+        td
+          .bb--rounded.p--20.bg--purple
+        td #[code .br--rounded]
+        td
+          .br--rounded.p--20.bg--purple
+        td #[code .bl--rounded]
+        td
+          .bl--rounded.p--20.bg--purple
+      tr
+        td(colspan="8") Rounded corners: single corners
+      tr
+        td #[code .btr--rounded]
+        td
+          .btr--rounded.p--20.bg--purple
+        td #[code .btl--rounded]
+        td
+          .btl--rounded.p--20.bg--purple
+        td #[code .bbr--rounded]
+        td
+          .bbr--rounded.p--20.bg--purple
+        td #[code .bbl--rounded]
+        td
+          .bbl--rounded.p--20.bg--purple
+      

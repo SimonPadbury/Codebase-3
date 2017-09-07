@@ -1,0 +1,93 @@
+// HOMEPAGE
+
+.docs__homepage-content
+  width: 100%
+  header
+    background-color: $color--teal-darken-3
+  main
+    max-width: 780px
+    margin: auto
+
+  .menubar
+    a
+      padding: $spacing--block
+      color: $color--teal-lighten-1
+      transition: color 0.2s ease-in-out
+      &:hover
+        color: $color--white
+        text-decoration: none
+
+.docs__homepage--header
+  background-color: $color--teal-darken-3
+  padding-bottom: $spacing--68 * 2
+
+  svg.codebase2
+    position: relative
+    display: block
+    margin: 0 auto
+    padding-top: $spacing--24
+    //width: 300px
+    height: 134px
+    +break--min($mq--md)
+      //width: 380px
+      height: 200px
+
+  h1
+    margin: 0 auto
+    padding: 0 $spacing--8
+    font-weight: 400
+    text-align: center
+    color: $color--white
+
+  h2
+    margin-top: $spacing--8
+    font-size: 2rem
+    line-height: 1.35
+    font-weight: 300
+    text-align: center
+    color: $color--white
+
+  & > main
+    margin-bottom: $spacing--24
+    padding: 0 0 $spacing--24
+    article
+      +break--max($mq--md)
+        margin-top: -$spacing--28
+
+.docs__homepage--main
+  position: relative
+  max-width: 780px
+  margin: -($spacing--68 * 2) auto $spacing--40
+  padding-right: $spacing--16
+  padding-left: $spacing--16
+  background-color: $color--white
+
+.docs__homepage-links
+  +flexbox
+  max-width: 768px
+  margin: auto
+  padding: $spacing--16 0 0
+  & > div
+    +flexitem
+    display: flex
+    align-items: stretch
+    +flexitem--span(6)
+    +break--min($mq--sm)
+      +flexitem--span(4)
+  a
+    flex: 1
+    margin: 2px
+    padding: $spacing--20
+    text-align: center
+    background-color: $color--teal-darken-2
+    color: $color--white
+    text-decoration: none
+    transition: all 0.2s ease-in-out
+    &:hover
+      background-color: $color--teal-darken-1
+    i
+      display: block
+      margin: $spacing--8 auto
+      font-size: 3em
+    +break--min($mq--md)
+      min-height: 116px

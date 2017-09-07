@@ -1,0 +1,33 @@
+mixin biz-menubar-inner
+
+  .menu__brand
+    a(href="#/")
+      b Brand
+      
+  .m--4.menu__ctrl.menu__ctrl--right.btn.btn--primary.btn--icon.btn--sm.btn--big-text.btn--outline #[i.fa.fa-bars]
+
+  .menu__content
+    
+    ul.menubar__left
+      li.dropdown
+        a.dropdown__ctrl(href="http://example.com") Products #[i.fa.fa-caret-down]
+        ul.dropdown__content
+          li #[a(href="#/") Our first product]
+          li #[a(href="#/") Product 2]
+          li #[a(href="#/") Product 3 finally was launched]
+      li.dropdown
+        a.dropdown__ctrl(href="http://example.com") Services #[i.fa.fa-caret-down]
+        ul.dropdown__content
+          li #[a(href="#/") Service 1]
+          li #[a(href="#/") Service 2]
+          li #[a(href="#/") Service 3]
+          
+    ul.menubar__right
+      li #[a(href="#/") Home]
+      li #[a(href="#/") About]
+      li #[a(href="#/") Contact]
+      li #[a(href="#/") Login]
+      li
+        form.mb--zero.p--4
+          input#search-example.b--blue-darken-1.form__input--inline.form__input--sm.combo--left(name="examplename" placeholder="Search..." type="text")
+          button.btn.btn--primary.btn--icon.btn--sm.combo--right(type="submit") #[i.fa.fa-search]

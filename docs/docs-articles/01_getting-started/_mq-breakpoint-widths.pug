@@ -1,0 +1,55 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-mq-breakpoint-widths"
+  - var sectionTitle = "Media Query Breakpoint Widths"
+
+block section
+  
+    p In Codebase the media query breakpoint width variables are:
+    
+    pre
+      code.
+        $mq--xs: 320px !default
+        $mq--sm: 640px !default
+        $mq--md: 960px !default
+        $mq--lg: 1280px !default
+
+    p These have been utilized in a set of Sass mixins as follows:
+    
+    pre
+      code.
+        =break--min($mq--min-width)
+          @media(min-width: $mq--min-width)
+            @content
+
+        =break--max($mq--max-width)
+          @media(max-width: $mq--max-width - 1px)
+            @content
+
+        =break--minmax($mq--min-width, $mq--max-width)
+          @media(min-width: $mq--min-width) and (max-width: $mq--max-width - 1px)
+            @content
+
+    p These mixins are then called as in the following examples:
+    
+    pre
+      code.
+        // For styling only applicable below `$mq--sm` (i.e. up to 639px)
+        
+        +break--max($mq--sm)
+          ...
+        
+    pre
+      code.
+        // For styling only applicable from `$mq--sm` to `$mq--md` (i.e.  640px to 959px)
+
+        +break--minmax($mq--sm, $mq--md)
+          ...
+
+    pre
+      code.
+        // For styling only applicable above `$mq--md` (i.e. from 960px and up)
+        
+        +break--min($mq--md)
+          ...

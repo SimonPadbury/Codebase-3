@@ -1,18 +1,20 @@
-//- Getting Started (page)
+//- Layout (page)
 extends _docs-template.pug
 
 block vars
-  - var title='Layout'
-  - var topID='layout'
+  - var title="Layout • Codebase"
+  - var topID="layout"
+  - bodyClass = "docs__chapter"
 
-block template__sidebar
-  include docs-template-partials/_docs-sidebar-layout
+block template__navigation
+  include docs-template-partials/_docs-nav-layout
 
 block template__header
   h1 Layout
 
 block template__body
-  include docs-sections/layout/_docs-layout-intro
-  include docs-sections/layout/_docs-layout-grid-classes
-  include docs-sections/layout/_docs-layout-grid-mixins
-  include docs-sections/layout/_docs-layout-visibility
+  include docs-articles/03_layout/_flexbox-systems
+  include docs-articles/03_layout/_flexbox-variables
+  include docs-articles/03_layout/_flexbox-classes
+  include docs-articles/03_layout/_flexbox-mixins
+  include docs-articles/03_layout/_invisibility

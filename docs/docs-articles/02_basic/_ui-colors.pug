@@ -1,0 +1,122 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-ui-colors"
+  - var sectionTitle = "UI Color Utilities"
+
+block section
+  p Codebase buttons, badges and labels share a common set of user interface colors, each assigned to UI signal names. You have liberty to change and add to these colors in your design.
+  
+  p (Buttons also have a fallback gray color &ndash; for when no UI signal color (yet) needs to be assigned to a particular button.)
+
+  p Codebase UI colors have been assigned to a set of simple ui--] mixins, which have been included in the styles for #[a(href="#basics-buttons") buttons], #[a(href="#basics-badges-and-labels") badges and labels]. These mixins assign the background signal color, and also set the text as white (in all cases) for legibility.
+  
+  table.table.deco
+    thead
+      tr
+        th UI signal name
+        th !default] Color
+        th Example
+    tbody
+      tr
+        td Primary
+        td Blue
+        td.bg--primary
+      tr
+        td Secondary
+        td Teal
+        td.bg--secondary
+      tr
+        td Success
+        td Green
+        td.bg--success
+      tr
+        td Warning
+        td Orange
+        td.bg--warning
+      tr
+        td Error
+        td Red
+        td.bg--danger
+
+  p In addition, Codebase also has a simple set of signal color utility classes, that enable the quick application of these color backgrounds (and white text) for any HTML element.
+
+  p UI color utility classes can be used to color panels, notifications, modals, tabs, or whever else you need to be assigned a UI signal color.
+
+  table.table.deco
+    thead
+      tr
+        th UI signal name
+        th Example .ui--*]
+        th Example .bg--*]
+        th Example .b--*]
+        th Example .text--*]
+    tbody
+      tr
+        td Primary
+        td.ui--primary Example
+        td.bg--primary Example
+        td
+          .bb--heavy.b--primary Example
+        td.text--primary Example
+      tr
+        td Secondary
+        td.ui--secondary Example
+        td.bg--secondary Example
+        td
+          .bb--heavy.b--secondary Example
+        td.text--secondary Example
+      tr
+        td Success
+        td.ui--success Example
+        td.bg--success Example
+        td
+          .bb--heavy.b--success Example
+        td.text--success Example
+      tr
+        td Warning
+        td.ui--warning Example
+        td.bg--warning Example
+        td
+          .bb--heavy.b--warning Example
+        td.text--warning Example
+      tr
+        td Error
+        td.ui--danger Example
+        td.bg--danger Example
+        td
+          .bb--heavy.b--danger Example
+        td.text--danger Example
+  
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-ui-colors-html") HTML
+      .tab__label(data-tab-id="tab-docs-ui-colors-pug") Pug
+
+    #tab-docs-ui-colors-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="ui--primary"&gt; ... &lt;/div&gt;
+
+          &lt;div class="ui--secondary"&gt; ... &lt;/div&gt;
+          
+          &lt;div class="ui--success"&gt; ... &lt;/div&gt;
+          
+          &lt;div class="ui--warning"&gt; ... &lt;/div&gt;
+          
+          &lt;div class="ui--danger"&gt; ... &lt;/div&gt;
+
+    #tab-docs-ui-colors-pug.tab__card
+      pre.mt--zero
+        code.
+          .ui--primary
+
+          .ui--secondary
+
+          .ui--success
+          
+          .ui--warning
+          
+          .ui--danger
+  
+  p Codebase also has a more extensive set of color utility classes &ndash; see #[a(href="decoration.html#decoration-colors") Decoration: Colors].

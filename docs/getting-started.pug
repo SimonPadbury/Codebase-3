@@ -1,16 +1,25 @@
-//- Getting Started (page)
+//- Start (page)
 extends _docs-template.pug
 
 block vars
-  - var title='Getting Started'
-  - var topID='getting-started'
+  - var title="Getting Started • Codebase"
+  - var topID="getting-started"
+  - bodyClass = "docs__chapter"
 
-block template__sidebar
-  include docs-template-partials/_docs-sidebar-getting-started
+block template__navigation
+  include docs-template-partials/_docs-nav-getting-started
 
 block template__header
   h1 Getting Started
 
 block template__body
-  include docs-sections/getting-started/_docs-getting-started-simple-setup
-  include docs-sections/getting-started/_docs-getting-started-advanced-setup
+  include docs-articles/01_getting-started/__intro
+  include docs-articles/01_getting-started/_simple-setup
+  include docs-articles/01_getting-started/_third-party-dependencies
+  include docs-articles/01_getting-started/_advanced-setup
+  include docs-articles/01_getting-started/_codebase-with-sass
+  include docs-articles/01_getting-started/_mq-breakpoint-widths
+  include docs-articles/01_getting-started/_codebase-with-pug
+  include docs-articles/01_getting-started/_how-codebase-uses-pug
+  include docs-articles/01_getting-started/_codebase-html-generator-mixins
+  include docs-articles/01_getting-started/_rtl-support

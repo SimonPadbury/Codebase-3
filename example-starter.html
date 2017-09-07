@@ -1,32 +1,33 @@
-<!DOCTYPE (doctype)>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"/>
-    <meta name="author"/>
-    <link rel="icon"/>
-    <title>Codebase Starter</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="codebase/css/codebase.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <title>Example Starter</title>
+    <link rel="icon">
+    <link rel="stylesheet" href="codebase/css/codebase.css">
   </head>
   <body>
-    <style>
-      .corner-ribbon {
-        position: fixed;
-        bottom: 8px;
-        right: 8px;
-        width: 64px;
-        height: 37px;
-        z-index: 999;
-        background: url('../../images/codebase2-logo.svg') 0 0 no-repeat;
-      }
-      
-    </style><a class="corner-ribbon" href="index.html"></a>
-    <!-- Get to work-->
-    <h1>Get to work...</h1>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <!-- Get to work-->Get to work...
+        <div class="dropdown" style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;">
+          <div class="dropdown__content dropdown__content--above mb--4 bs b--rounded bg--white">
+            <ul class="menu deco b--thick b--blue">
+              <li><a class="bb--thin b--blue text--nowrap" href="index.html"><i class="fa fa-home"></i> Codebase</a></li>
+              <li><a class="text--nowrap" href="getting-started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
+              <li><a class="text--nowrap" href="basics.html"><i class="fa fa-cubes"></i> Basics</a></li>
+              <li><a class="text--nowrap" href="layout.html"><i class="fa fa-map"></i> Layout</a></li>
+              <li><a class="text--nowrap" href="components.html"><i class="fa fa-cogs"></i> Components</a></li>
+              <li><a class="text--nowrap" href="decoration.html"><i class="fa fa-paint-brush"></i> Decoration</a></li>
+              <li><a class="text--nowrap" href="examples.html"><i class="fa fa-flask"></i> Examples</a></li>
+              <li class="bt--thin b--blue"><a class="text--nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-home"></i> GitHub</a></li>
+            </ul>
+          </div>
+          <button class="dropdown__ctrl btn btn--primary btn--icon btn--big-text btn--pill"> <i class="fa fa-cog"></i></button>
+        </div>
+        <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
     <script src="codebase/js/codebase.js"></script>
   </body>
 </html>

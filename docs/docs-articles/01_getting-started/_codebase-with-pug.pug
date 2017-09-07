@@ -1,0 +1,65 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-codebase-with-pug"
+  - var sectionTitle = "Using Codebase with Pug"
+
+block section      
+  p.
+    The Codebase documentation has been developed using #[a(href="http://pugjs.org/") PugJS]. The Pug language was (and is being) developed by #[a(href="https://github.com/pugjs/pug") Forbes Lindesay].
+  
+  p.
+    One way of using Codebase with Pug in your project is as follows: Codebase comes with a simple starter Pug template called #[a(href="codebase/pug/_codebase.pug") _codebase.pug], which you can inherit (using #[a(href="https://pugjs.org/language/inheritance.html") extends]) as the basis of your templates. (Alternatively, you can start without extending this example starter template).
+  
+  h3 The #[code _codebase.pug] starter template
+    
+  pre
+    code.
+      //- Codebase Starter
+
+      include generators/__generators-index
+
+      block vars
+        - lang = ""
+        - htmlDir = ""
+        - htmlClass = ""
+        - title = ""
+        - description = ""
+        - author = ""
+        - favicon = ""
+        - faviconType = ""
+        - bodyClass = ""
+
+      doctype html
+      html(lang=lang, dir=htmlDir, class=htmlClass)
+
+        head
+          meta(charset="utf-8")
+          meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome-1")
+          meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+          meta(name="description", content=description)
+          meta(name="author", content=author)
+
+          title \#{title}
+
+          block head-addins
+            link(rel="icon", href=favicon, type=faviconType)
+            link(rel="stylesheet", href="codebase/css/codebase.css")
+
+        body(class=bodyClass)
+          block body
+
+          block body-foot-addins
+            script(src="codebase/js/codebase.js")
+  
+  p.
+    You can then #[code extend] the Codebase starter in your own Pug template(s) as follows:
+    
+  pre
+    code.
+      //- Your Template
+
+      extends ../codebase/pug/_codebase
+      
+      //- ...etc.
+  

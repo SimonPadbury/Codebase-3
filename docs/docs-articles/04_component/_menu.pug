@@ -1,0 +1,95 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-menu"
+  - var sectionTitle = "Menu"
+
+block section
+  .b--heavy.b--rounded.b--teal-lighten-2.p--16
+    
+    p.text--muted Undecorated
+
+    +menu("Link", 5)
+    
+    p.text--muted Decorated with #[code .deco]
+      
+    +menu("Link", 5, "deco")
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-menu-html") HTML
+      .tab__label(data-tab-id="tab-docs-menu-pug") Pug
+
+    #tab-docs-menu-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;ul class="menu"&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+
+    #tab-docs-menu-pug.tab__card
+      pre.mv--zero
+        code.
+          ul.menu
+            li \#[a(href="#/") link 1]
+            li \#[a(href="#/") link 2]
+            li \#[a(href="#/") link 3]
+            li \#[a(href="#/") link 4]
+            li \#[a(href="#/") link 5]
+
+          //- Or use the Codebase menu HTML generator mixin for rapid prototyping:
+          
+          +menu("Link", 5)
+          
+      p.mt--4 See #[a(href="getting-started.html#getting-started-codebase-html-generator-mixins") Getting Started: HTML Generator Mixins]
+      
+  p The menu #[code .deco] class adds a padding indent for level-2 (child) menus and level 3 (grandchild) menus &ndash; but no further.
+  
+  ul.menu.deco
+    li
+      a(href="#/") Link
+    li
+      a(href="#/") Link
+    li
+      a(href="#/") Link
+      ul
+        li
+          a(href="#/") Link
+        li
+          a(href="#/") Link
+          ul
+            li
+              a(href="#/") Link
+            li
+              a(href="#/") Link
+        li
+          a(href="#/") Link
+    li
+      a(href="#/") Link
+    li
+      a(href="#/") Link
+
+  
+  h3.mt--line Menu Classes
+
+  table.table.deco
+    thead
+      tr
+        th Class
+        th Notes
+    tbody
+      tr
+        td #[code .menu]
+        td The menu component block
+      tr
+        td #[code .menu li] #[sup 1]
+        td The menu item element
+      tr
+        td #[code .menu a] #[sup 2]
+        td The menu hyperlink element
+
+  p #[sup 1] Including the mixin #[code =menu__item] #[br] #[sup 2] Including the mixin #[code =menu__link]

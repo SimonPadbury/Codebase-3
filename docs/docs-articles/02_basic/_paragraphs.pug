@@ -1,0 +1,18 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "basic-paragraphs"
+  - var sectionTitle = "Paragraphs"
+
+block section
+  p A simple paragraph:
+
+  +paragraph(1)
+
+  p #[code p.text--lead]
+  
+  +paragraph(1, "text--lead")
+
+  p #[code p.text--dropcap]
+
+  +paragraph(1, "text--dropcap")

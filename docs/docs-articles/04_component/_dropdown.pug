@@ -1,0 +1,156 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-dropdown"
+  - var sectionTitle = "Dropdown"
+
+block section
+  p.
+    Dropdowns are Codebase #[a(href="#components-activator") activator] components.
+  p.
+    Besides clicking the button again to dismiss the dropdown, you can click #[i anywhere outside] the dropdown content to dismiss it.      
+  p.
+    (The examples below have dropdown content elements styled using #[code .dropdown.deco]).
+    
+  .dropdown.deco
+    button.btn.dropdown__ctrl
+      | Dropdown #[i.fa.fa-caret-down]
+    .dropdown__content
+      | Dropdown content
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-dropdown-html") HTML
+      .tab__label(data-tab-id="tab-docs-dropdown-pug") Pug
+
+    #tab-docs-dropdown-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="dropdown"&gt;
+            &lt;button class="dropdown__ctrl btn btn--sm"&gt;Dropdown &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;div class="dropdown__content"&gt;Dropdown content&lt;/div&gt;
+          &lt;/div&gt;
+
+    #tab-docs-dropdown-pug.tab__card
+      pre.mt--zero
+        code.
+          .dropdown
+            button.btn.dropdown__ctrl
+              | Dropdown \#[i.fa.fa-caret-down]
+            .dropdown__content
+              | Dropdown content
+
+  h3.mt--zero Alignment of Dropdown Content
+
+  p With a modifier class on the #[code .dropdown__content], the dropdown content can be aligned flush-left, above or flush-right (relative to the dropdown control).
+
+  .flexbox.flexbox--gutter.flexbox--nested.mt--20
+    .flexitem.flexitem--span-4
+      | #[code .dropdown__content--left]
+      
+      .mt--20.dropdown.deco
+        button.btn.dropdown__ctrl
+          | Left #[i.fa.fa-caret-down]
+        .dropdown__content.dropdown__content--left
+          | Dropdown content left
+
+    .flexitem.flexitem--span-4
+      | #[code .dropdown__content--above]
+
+      .mt--20.dropdown.dropdown--right.deco
+        button.btn.dropdown__ctrl
+          | Above #[i.fa.fa-caret-up]
+        .dropdown__content.dropdown__content--above
+          | Dropdown content above
+
+    .flexitem.flexitem--span-4.text--right
+      | #[code .dropdown__content--right]
+
+      .mt--20.dropdown.dropdown--right.deco
+        button.btn.dropdown__ctrl
+          | Right #[i.fa.fa-caret-down]
+        .dropdown__content.dropdown__content--right
+          | Dropdown content right
+
+    p.mt--line (You can adjust the direction of the caret yourself, if you need to do so.)
+
+  h3.mt--line Combo button dropdowns
+
+  p.mt--line Buttons can be used in combinations of two or more buttons. See #[a(href="basics.html#basics-combos") Basics: Combos] for more information.
+
+  .dropdown.deco
+    button.btn.combo--left Dropdown combo
+    button.btn.btn--icon.dropdown__ctrl.combo--right #[i.fa.fa-caret-down]
+    .dropdown__content Dropdown content
+
+  p.mt--line A complex "button bar" example combining combo buttons and dropdowns:
+
+  style.
+    .button-bar-example .dropdown__content a {
+      padding: 12px
+    }
+    .button-bar-example .dropdown__content a:hover {
+      text-decoration: none;
+      cursor: pointer
+    }
+    
+  .button-bar-example.clearfix
+    
+    .float--left.mr--4
+      button.btn.btn--icon.combo--left
+        i.fa.fa-bold(aria-hidden="true")
+      button.btn.btn--icon.combo--center
+        i.fa.fa-italic(aria-hidden="true")
+      button.btn.btn--icon.combo--right.float--left
+        i.fa.fa-underline(aria-hidden="true")
+    .float--left.mr--4
+      .dropdown
+        button.btn.btn--icon.dropdown__ctrl
+          i.fa.fa-align-left
+        span.dropdown__content.b--rounded.p--zero.bg--white.bs
+          ul.menu
+            li.mb--zero
+              a.fa.fa-align-center(aria-hidden="true")
+            li.mb--zero
+              a.fa.fa-align-right(aria-hidden="true")
+            li.mb--zero
+              a.fa.fa-align-justify(aria-hidden="true")
+    .float--left.mr--4
+      button.btn.btn--icon.combo--left
+        i.fa.fa-cut(aria-hidden="true")
+      button.btn.btn--icon.combo--center
+        i.fa.fa-copy(aria-hidden="true")
+      button.btn.btn--icon.combo--right.float--left
+        i.fa.fa-paste(aria-hidden="true")
+    .float--left
+      .dropdown
+        button.btn.btn--icon.dropdown__ctrl
+          i.fa.fa-list
+        span.dropdown__content.b--rounded.p--zero.bg--white.bs
+          ul.menu
+            li.mb--zero
+              a.fa.fa-list-ol(aria-hidden="true")
+            li.mb--zero
+              a.fa.fa-list-ul(aria-hidden="true")
+
+  h3.mt--line Dropdown Classes
+
+  table.table.deco
+    thead
+      tr
+        th Class
+        th Notes
+        th Modifiers
+    tbody
+      tr
+        td #[code .dropdown]
+        td The dropdown component block
+        td
+      tr
+        td #[code .dropdown__ctrl]
+        td The dropdown controller element
+        td
+      tr
+        td #[code .dropdown__content]
+        td The dropdown content element
+        td #[code .dropdown__content--left] #[code .dropdown__content--above] #[code .dropdown__content--right] 

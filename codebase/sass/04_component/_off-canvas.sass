@@ -1,0 +1,122 @@
+// COMPONENT MIXINS: OFF-CANVAS SIDEBARS
+// =====================================
+
+// Off-canvas Control (e.g. navicon)
+
+=off-canvas__ctrl
+  display: inline-block
+  margin-top: 0
+  z-index: $z-index--off-canvas
+  &--left
+    position: absolute
+    left: 0
+  &--right
+    position: absolute
+    right: 0
+  &--fixed
+    position: fixed !important
+    // overrides the absolutes above
+  @if text--big-text == true
+    height: $spacing--44
+    padding: $spacing--4 $spacing--8
+    line-height: $spacing--24
+  @else
+    height: $spacing--24
+    padding: $spacing--4
+    line-height: $spacing--24
+  .text--big-text &
+    height: $spacing--24
+    padding: $spacing--4 $spacing--8
+    line-height: $spacing--24
+  &:hover
+    cursor: pointer
+
+// Off-canvas Close
+
+=off-canvas__close
+  display: block
+  &:hover
+    cursor: pointer
+  &--left
+    margin-right: auto
+    margin-left: 0
+    text-align: left
+  &--right
+    margin-right: 0
+    margin-left: auto
+    text-align: right
+
+// Off-canvas Content (sidebar or panel)
+// The extra 10% in the off-canvas position 100% will hide any Codebase box-shadow on the off-canvas.
+
+=off-canvas__content--right
+  right: -110%
+  // IE11 doesn"t like 110vw
+  &.is-active
+    right: 0
+
+=off-canvas__content--left
+  left: -110%
+  // IE11 doesn't like 110vw
+  &.is-active
+    left: 0
+
+=off-canvas__content
+  position: fixed
+  top: 0
+  bottom: 0
+  height: 100%
+  max-height: 100vh
+  z-index: $z-index--off-canvas
+  overflow: auto
+  transition: $off-canvas--transition
+
+// CLASS-BUILDER: OFF-CANVAS
+// =========================
+
+=components-off-canvas
+
+  // Off-canvas Control
+
+  .off-canvas__ctrl
+    +off-canvas__ctrl
+
+  // Off-canvas Content
+
+  .off-canvas__content
+    max-width: 100%
+    &--xs
+      +break--max($mq--xs)
+        +off-canvas__content
+        &.off-canvas__content--right
+          +off-canvas__content--right
+        &.off-canvas__content--left
+          +off-canvas__content--left
+    &--sm
+      +break--max($mq--sm)
+        +off-canvas__content
+        &.off-canvas__content--right
+          +off-canvas__content--right
+        &.off-canvas__content--left
+          +off-canvas__content--left
+    &--md
+      +break--max($mq--md)
+        +off-canvas__content
+        &.off-canvas__content--right
+          +off-canvas__content--right
+        &.off-canvas__content--left
+          +off-canvas__content--left
+    &--lg
+      +off-canvas__content
+      &.off-canvas__content--right
+        +off-canvas__content--right
+      &.off-canvas__content--left
+        +off-canvas__content--left
+
+  // Off-canvas Close
+
+  .off-canvas__close
+    +off-canvas__close
+
+@if $include-css--off-canvas == true
+  +components-off-canvas

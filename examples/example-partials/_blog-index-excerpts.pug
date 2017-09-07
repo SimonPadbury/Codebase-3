@@ -1,0 +1,29 @@
+//- Blog Index Excerpt Loop
+
+mixin blog-index-excerpts(total)
+
+  style.
+    .media__body {
+      padding-right: 16px
+    }
+
+  - var n = total;
+  while n > 0
+
+    span(style="display: none;")= n--
+    
+    .flexbox.flexbox--gutter.flexbox--nested
+      .flexitem.flexitem-sm--span-4.flexitem-sm--order-2
+        img(src="holder.js/200x200" alt="Featured image").mh--auto.mb--line.bs--1z.p--8
+      .flexitem.flexitem-sm--span-8.flexitem-sm--order-1          
+        
+        h3.mb--4 #[a(href="#/") Blog Post Title Example]
+        +paragraph(1, "media__text")
+      
+        .card
+          a(href="#/").card__image.card__image--left.pr--4
+            img(src="holder.js/50x50" alt="Avatar").b--circle.pr--4
+          .card__body
+            h5.mb--zero #[a(href="#/") Blog Author Name]
+            p.text--muted 23 May 2065 | 4 Comments
+  

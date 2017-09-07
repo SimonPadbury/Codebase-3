@@ -1,0 +1,318 @@
+// BASICS MIXINS: BUTTONS
+// ======================
+
+=btn
+  display: inline-block
+  width: auto
+  height: auto
+  margin: 0
+  border: 0
+  font-size: $text--base-font-size
+  color: $color--default-text-alt
+  text-decoration: none
+  vertical-align: middle
+  white-space: nowrap
+  background: $color--default
+  transition: all 0.2s ease-in-out
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+  &[type="button"],
+  &[type="submit"]
+    -webkit-appearance: none
+  &:hover,
+  &.btn--active
+    cursor: pointer
+    color: $color--default-text-alt-hover
+    text-decoration: none
+    background: $color--default-hover
+  &:visited
+    color: $color--default-text-alt
+  &:active,
+  &.btn--active
+    box-shadow: inset 0 0 $spacing--4 #000
+  &.btn--disabled
+    color: $color--default-text-alt
+    background-color: $color--default-disabled
+    border-color: $color--default-disabled
+    pointer-events: none
+    &:hover
+      cursor: not-allowed
+    &:active
+      box-shadow: none !important
+  @if $btn--rounded-corners == true
+    border-radius: $border--radius
+  @if $btn--3d == true
+    +btn--3d
+    // `false` gives flat buttons by default
+  &--outline
+    +btn--outline
+    &:hover
+      background-color: $color--default
+
+=btn--size
+  padding: 0 $spacing--24
+  line-height: $spacing--40
+  &.btn--outline
+    padding: 0 ($spacing--24 - ($btn--outline-thickness * 2))
+    line-height: ($spacing--40 - ($btn--outline-thickness * 2))
+  &--sm
+    padding: 0 $spacing--16
+    line-height: $spacing--32
+    &.btn--outline
+      padding: 0 ($spacing--16 - ($btn--outline-thickness * 2))
+      line-height: ($spacing--32 - ($btn--outline-thickness * 2))
+  &--lg
+    padding: 0 $spacing--40
+    line-height: $spacing--56
+    &.btn--outline
+      padding: 0 ($spacing--40 - ($btn--outline-thickness * 2))
+      line-height: ($spacing--56 - ($btn--outline-thickness * 2))
+
+=btn--3d
+  box-shadow: inset 0 0 2px rgba(0,0,0,0.5), inset 0 8px 8px -8px  rgb(255,255,255), inset 0 -16px 16px -16px rgba(0,0,0,0.4)
+  &:active
+    box-shadow: inset 0 -48px 48px -48px rgba(0,0,0,0.4), inset 0 0 4px rgba(0,0,0,0.8)
+  &.btn--disabled
+    box-shadow: none !important
+
+=btn--pill
+  border-radius: 10rem
+
+=btn--big-text
+  font-size: 1.5em
+
+=btn--icon
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 0
+  height: $spacing--40
+  width: $spacing--40
+  @media screen and (-webkit-min-device-pixel-ratio:0)
+    & > *
+      // Because Safari is not obeying `justify-content: center`
+      // Hack required because IE 10,11 doesn't like margins being altered.
+      margin: auto
+  &.btn--outline
+    padding: 0
+  &.btn--big-text
+    font-size: 1.5rem
+  &.btn--sm
+    height: $spacing--32
+    width: $spacing--32
+  &.btn--lg
+    height: $spacing--56
+    width: $spacing--56
+
+// See also UI Colors `_colors-ui.sass`
+
+=btn--block
+  &--block
+    display: block
+    width: 100%
+    text-align: center
+
+// EXPERIMENTAL
+
+=btn--primary
+  +ui--primary
+=btn--secondary
+  +ui--secondary
+=btn--success
+  +ui--success
+=btn--warning
+  +ui--warning
+=btn--danger
+  +ui--danger
+
+=btn--primary--hover
+  +ui--primary--hover
+=btn--secondary--hover
+  +ui--secondary--hover
+=btn--success--hover
+  +ui--success--hover
+=btn--warning--hover
+  +ui--warning--hover
+=btn--danger--hover
+  +ui--danger--hover
+
+=btn--active
+  cursor: pointer
+  color: $color--default-text-alt-hover
+  text-decoration: none
+  background: $color--default-hover
+  box-shadow: inset 0 0 $spacing--4 #000 !important
+
+=btn--primary--active
+  +btn--active
+  +ui--primary--hover
+=btn--secondary--active
+  +btn--active
+  +ui--secondary--hover
+=btn--success--active
+  +btn--active
+  +ui--success--hover
+=btn--warning--active
+  +btn--active
+  +ui--warning--hover
+=btn--danger--active
+  +btn--active
+  +ui--danger--hover
+
+=btn--primary--disabled
+  color: $color--primary-text-alt
+  background-color: $color--primary-disabled
+=btn--secondary--disabled
+  color: $color--secondary-text-alt
+  background-color: $color--secondary-disabled
+=btn--success--disabled
+  color: $color--success-text-alt
+  background-color: $color--success-disabled
+=btn--warning--disabled
+  color: $color--warning-text-alt
+  background-color: $color--warning-disabled
+=btn--danger--disabled
+  color: $color--danger-text-alt
+  background-color: $color--danger-disabled
+
+=btn--outline
+  color: $color--gray-darken-1
+  border: $btn--outline-thickness solid $color--gray-darken-1
+  background-color: transparent
+  box-shadow: none !important
+
+=btn--primary--outline
+  +btn--outline
+  color: $color--primary
+  border-color: $color--primary
+  &:hover
+    +ui--primary
+=btn--secondary--outline
+  +btn--outline
+  color: $color--secondary
+  border-color: $color--secondary
+  &:hover
+    +ui--secondary
+=btn--success--outline
+  +btn--outline
+  color: $color--success
+  border-color: $color--success
+  &:hover
+    +ui--success
+=btn--warning--outline
+  +btn--outline
+  color: $color--warning
+  border-color: $color--warning
+  &:hover
+    +ui--warning
+=btn--danger--outline
+  +btn--outline
+  color: $color--danger
+  border-color: $color--danger
+  &:hover
+    +ui--danger
+
+
+=btn--primary
+  +ui--primary
+  &:hover
+    +btn--primary--hover
+  &:active
+    +btn--primary--active
+  &.btn--active
+    +btn--primary--active
+  &.btn--disabled
+    +btn--primary--disabled
+  &.btn--outline
+    +btn--primary--outline
+
+=btn--secondary
+  +ui--secondary
+  &:hover
+    +btn--secondary--hover
+  &:active
+    +btn--secondary--active
+  &.btn--active
+    +btn--secondary--active
+  &.btn--disabled
+    +btn--secondary--disabled
+  &.btn--outline
+    +btn--secondary--outline
+
+=btn--success
+  +ui--success
+  &:hover
+    +btn--success--hover
+  &:active
+    +btn--success--active
+  &.btn--active
+    +btn--success--active
+  &.btn--disabled
+    +btn--success--disabled
+  &.btn--outline
+    +btn--success--outline
+
+=btn--warning
+  +ui--warning
+  &:hover
+    +btn--warning--hover
+  &:active
+    +btn--warning--active
+  &.btn--active
+    +btn--warning--active
+  &.btn--disabled
+    +btn--warning--disabled
+  &.btn--outline
+    +btn--warning--outline
+
+=btn--danger
+  +ui--danger
+  &:hover
+    +btn--danger--hover
+  &:active
+    +btn--danger--active
+  &.btn--active
+    +btn--danger--active
+  &.btn--disabled
+    +btn--danger--disabled
+  &.btn--outline
+    +btn--danger--outline
+
+// CLASS BUILDER: BUTTONS
+// ======================
+
+=components-buttons
+
+  .btn
+    +btn
+    +btn--size
+    +btn--block
+
+  .btn--primary
+    +btn--primary
+  .btn--secondary
+    +btn--secondary
+  .btn--success
+    +btn--success
+  .btn--warning
+    +btn--warning
+  .btn--danger
+    +btn--danger
+
+  .btn
+    &--pill
+      +btn--pill
+
+    &--big-text
+      +btn--big-text
+
+    &--icon
+      +btn--icon
+
+  @if $btn--3d == false
+    .btn--3d
+      +btn--3d
+
+@if $include-css--buttons == true
+  +components-buttons

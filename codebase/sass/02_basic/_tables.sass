@@ -1,0 +1,14 @@
+// CLASSLESS BASICS: TABLES
+// ========================
+
+table
+  position: relative
+  border-collapse: collapse
+
+th, td
+  @if text--big-text == true
+    line-height: $text--big-text-line-height
+  @else
+    line-height: $text--base-line-height
+  .text--big-text &
+    line-height: $text--big-text-line-height

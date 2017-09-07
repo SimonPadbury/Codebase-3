@@ -1,0 +1,33 @@
+//- Codebase Bottomline
+
+mixin codebase-bottomline
+
+  .dropdown(style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;")
+    .dropdown__content.dropdown__content--above.mb--4.bs.b--rounded.bg--white
+      ul.menu.deco.b--thick.b--blue
+        li
+          a(href="index.html").bb--thin.b--blue.text--nowrap #[i.fa.fa-home] Codebase
+        li
+          a(href="getting-started.html").text--nowrap #[i.fa.fa-play-circle] Getting Started
+        li
+          a(href="basics.html").text--nowrap #[i.fa.fa-cubes] Basics
+        li
+          a(href="layout.html").text--nowrap #[i.fa.fa-map] Layout
+        li
+          a(href="components.html").text--nowrap #[i.fa.fa-cogs] Components
+        li
+          a(href="decoration.html").text--nowrap #[i.fa.fa-paint-brush] Decoration
+        li
+          a(href="examples.html").text--nowrap #[i.fa.fa-flask] Examples
+        li.bt--thin.b--blue
+          a(href="https://github.com/SimonPadbury/Codebase").text--nowrap #[i.fa.fa-home] GitHub
+    button.dropdown__ctrl.btn.btn--primary.btn--icon.btn--big-text.btn--pill 
+      i.fa.fa-cog
+
+  .b--thin.b--rounded.bs.ph--4.bg--white.text--center(style="position: fixed; right: 8px; bottom: 8px; z-index: 999;")
+    | Viewport 
+    span.hide--xs-up xs &amp; down
+    span.hide--xs-down.hide--sm-up xs&mdash;sm
+    span.hide--sm-down.hide--md-up sm&mdash;md
+    span.hide--md-down.hide--lg-up md&mdash;lg
+    span.hide--lg-down lg &amp; up

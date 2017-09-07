@@ -1,0 +1,438 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "components-menubar-complex"
+  - var sectionTitle = "Menubar: Complex"
+
+block section
+  p.
+    In Codebase, responsive menubars have further been developed into complex navigation systems capable of handling multiple menus/menubars, dropdowns and inline forms (similar to the Bootstrap navbar and Foundation top bar). They are complex inasmuch as they can handle all these optional elements &ndash; but their HTML is still quite simple.
+  p.
+    The complex menu/menubar introduces some optional nested elements: brand, #[a(href="#components-activator") activator] control (for the navicon) and activator content. Also, since in a complex menubar the actual menubar(s) are nested elements, their equivalent alignment classes are named using double underscores (following #[a(href="http://getbem.com/introduction/") BEM]).
+  p.
+    For comparison:
+  
+  table.table.deco
+    thead
+      tr
+        th Menu
+        th Menubar
+        th Responsive menubar
+        th Complex menubar#[sup 1]
+    tbody
+      tr
+        td #[code .menu]
+        td #[code .menubar]
+        td e.g. #[code.text--nowrap .menu.menu--menubar-md]
+        td e.g. #[code.text--nowrap .menu.menu--menubar-md]
+      tr
+        td n/a
+        td n/a
+        td n/a
+        td Complex menubar elements: #[br]
+          | #[code .menubar__brand] #[br]
+          | #[code .menubar__ctrl]#[sup 2, 3] #[br]
+          | #[code .menubar__content]#[sup 2]
+      tr
+        td n/a
+        td(colspan="2") Menubar alignment: #[br] 
+          | #[code .menubar--left] #[br]
+          | #[code .menubar--right] #[br]
+          | #[code .menubar--center] #[br]
+          | #[code .menubar--justify]
+        td Menubar alignment: #[br]
+          | #[code .menubar__left] #[br]
+          | #[code .menubar__right] #[br]
+          | #[code .menubar__center] #[br]
+          | #[code .menubar__justify]
+  
+  p #[sup 1] The complex navigation system can either be a menu, a responsive menu-menubar or a non-responsive menubar.
+  
+  p #[sup 2] Complex menubars are #[a(href="#components-activator") activator] components.
+  
+  p #[sup 3] Complex menubar controls also have optional modifier classes #[code .menubar__ctrl--left] or #[code .menubar__ctrl--right].
+  
+  h3 Collapsed Menubar Control
+    
+  p.
+    Codebase has no styling for the menubar control &ndash; you are at liberty to do whatever you like. Hamburger or no hamburger.
+  p.
+    The docs examples below are all styled using an icon button, as follows:
+    
+  pre
+    code.
+      &lt;div class="menu__ctrl menu__ctrl--right m--4 btn btn--sm btn--icon fa fa-bars"&gt;&lt;/div&gt;
+  
+  h3 A simple example of a complex responsive menubar
+  
+  .b--heavy.b--rounded.b--teal-lighten-2.p--16
+    
+    p.text--muted Undecorated:
+
+    .menu.menu--menubar-sm.b--dashed
+      .menu__brand
+        a(href="#/")
+          b Brand
+      .menu__ctrl.menu__ctrl--right.btn.btn--sm.btn--icon.fa.fa-bars
+      .menu__content
+        ul.menubar__right
+          li #[a(href="#/") Right 1]
+          li #[a(href="#/") Right 2]
+          li #[a(href="#/") Right 3]
+    
+    p.pt--20.text--muted Decorated with #[code .deco]:
+      
+    .menu.menu--menubar-sm.deco.b--dashed
+      .menu__brand
+        a(href="#/")
+          b Brand
+      .menu__ctrl.menu__ctrl--right.m--4.btn.btn--sm.btn--icon.fa.fa-bars
+      .menu__content
+        ul.menubar__right
+          li #[a(href="#/") Right 1]
+          li #[a(href="#/") Right 2]
+          li #[a(href="#/") Right 3]
+
+  p.mt--line.
+    In these examples the #[a(href="http://fontawesome.io/") Font Awesome] "bars" icon, here being used as a navicon, is included among the classes of the #[code .menu__ctrl] tag itself. Alternatively you can configure some text or an icon within the tag. 
+    
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-menubar2-html") HTML
+      .tab__label(data-tab-id="tab-docs-menubar2-pug") Pug
+
+    #tab-docs-menubar2-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="menu menu--menubar-sm"&gt;
+
+            &lt;div class="menu__brand"&gt;
+              &lt;a href="#/"&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class="menu__ctrl menu__ctrl--right fa fa-bars"&gt; &lt;/div&gt;
+            
+            &lt;div class="menu__content"&gt;
+              &lt;ul class="menubar__right"&gt;
+                &lt;li&gt;&lt;a href="#/"&gt;Right 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#/"&gt;Right 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#/"&gt;Right 3&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+    #tab-docs-menubar2-pug.tab__card
+      pre.mt--zero
+        code.
+          .menu.menu--menubar-sm
+            .menu__brand
+              a(href="#/")
+                b Brand
+            .menu__ctrl.menu__ctrl--right.fa.fa-bars
+            .menu__content
+              ul.menubar__right
+                li \#[a(href="#/") Right 1]
+                li \#[a(href="#/") Right 2]
+                li \#[a(href="#/") Right 3]
+  
+  p (The following examples all are decorated with #[code .deco].)
+  
+  h3 Double menubar
+
+  .menu.menu--menubar-sm.deco.b--dashed
+    .menu__brand
+      a(href="#/")
+        b Brand
+    .menu__ctrl.menu__ctrl--right.m--4.btn.btn--sm.btn--icon.fa.fa-bars
+    .menu__content
+      ul.menubar__left
+        li #[a(href="#/") Left 1]
+        li #[a(href="#/") Left 2]
+        li #[a(href="#/") Left 3]
+      ul.menubar__right
+        li #[a(href="#/") Right 1]
+        li #[a(href="#/") Right 2]
+        li #[a(href="#/") Right 3]
+    
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-menubar3-html") HTML
+      .tab__label(data-tab-id="tab-docs-menubar3-pug") Pug
+
+    #tab-docs-menubar3-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="menu menu--menubar-sm"&gt;
+
+            &lt;div class="menu__brand"&gt;
+              &lt;a href="#/"&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class="menu__ctrl menu__ctrl--right fa fa-bars"&gt; &lt;/div&gt;
+            
+            &lt;div class="menu__content"&gt;
+              &lt;ul class="menubar__left"&gt; ... &lt;/ul&gt;
+              &lt;ul class="menubar__right"&gt; ... &lt;/ul&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+    #tab-docs-menubar3-pug.tab__card
+      pre.mt--zero
+        code.
+          .menu.menu--menubar-sm
+            .menu__brand
+              a(href="#/")
+                b Brand
+            
+            .menu__ctrl.menu__ctrl--right.fa.fa-bars
+            
+            .menu__content
+              ul.menubar__left ...
+              ul.menubar__right ...
+                
+  h3 Incorporating an inline form 
+  
+  .menu.menu--menubar-sm.deco.b--dashed
+    .menu__brand
+      a(href="#/")
+        b Brand
+    .menu__ctrl.menu__ctrl--right.m--4.btn.btn--sm.btn--icon.fa.fa-bars
+    .menu__content
+      ul.menubar__right
+        li #[a(href="#/") Right 1]
+        li #[a(href="#/") Right 2]
+        li #[a(href="#/") Right 3]
+        li
+          form.mb--zero.p--4
+            input#search-example.b--gray-darken-1.form__input--inline.form__input--sm.combo--left(name="examplename" placeholder="Search..." type="text")
+            button.btn.btn--icon.btn--sm.combo--right(type="submit") #[i.fa.fa-search]
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-menubar4-html") HTML
+      .tab__label(data-tab-id="tab-docs-menubar4-pug") Pug
+
+    #tab-docs-menubar4-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="menu menu--menubar-sm"&gt;
+
+            &lt;div class="menu__brand"&gt;
+              &lt;a href="#/"&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/a&gt;
+            &lt;/div&gt;
+
+            &lt;div class="menu__ctrl menu__ctrl--right fa fa-bars"&gt; &lt;/div&gt;
+            
+            &lt;div class="menu__content"&gt;
+              &lt;ul class="menubar__right"&gt;
+                ...
+                &lt;li&gt;
+                  &lt;form class=" mb--zero p--heavy"&gt;
+                    &lt;input class="b--gray-darken-1 form__input--inline form__input--sm combo--left" id="search-example" name="examplename" placeholder="Search..." type="text"&gt;
+                    &lt;button class="btn btn--icon btn--sm combo--right" type="submit"&gt;
+                      &lt;i class="fa fa-search"&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                  &lt;/form&gt;
+                &lt;li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+    #tab-docs-menubar4-pug.tab__card
+      pre.mt--zero
+        code.
+          .menu.menu--menubar-sm
+            .menu__brand
+              a(href="#/")
+                b Brand
+            
+            .menu__ctrl.menu__ctrl--right.fa.fa-bars
+            
+            .menu__content
+              ul.menubar__right 
+                ...
+                li
+                  form.mb--zero.p--4
+                    input#search-example.b--gray-darken-1.form__input--inline.form__input--sm.combo--left(name="examplename" placeholder="Search..." type="text")
+                    button.btn.btn--icon.btn--sm.combo--right(type="submit") \#[i.fa.fa-search]
+
+  h3 Incorporating dropdown menus
+  
+  p.
+    When a dropdown is incorporated into a menubar, the first click on a parent link activates the drodown to reveal the child menu items (without the parent link being followed). 
+  p.
+    Clicking the parent link again (while the dropdown content is activated) will follow the parent link to its linked page.
+  p.
+    Clicking anywhere else outside the activated dropdown content will dismiss the dropdown. (Clicking another dropdown will deactivate the active dropdown and activate the newly clicked dropdown instead.)
+  p.
+    #[b Note:] you won't have to use the responsive dropdown modifier classes (e.g. #[code .dropdown--md-up]) because the responsive menubar modifier class (e.g. #[code .menu--menubar-md]) incorporates dropdown mixins above the breakpoint width.
+  
+  .menu.menu--menubar-sm.deco.b--dashed
+    .menu__brand
+      a(href="#/")
+        b Brand
+    .menu__ctrl.menu__ctrl--right.m--4.btn.btn--sm.btn--icon.fa.fa-bars
+    .menu__content
+      ul.menubar__left
+        li #[a(href="#/") Left 1]
+        li.dropdown.dropdown--left
+          a.dropdown__ctrl(href="http://example.com") Left 2 <i class="fa fa-caret-down"></i>
+          ul.dropdown__content
+            li #[a(href="#/") Left child 2.1]
+            li #[a(href="#/") Left child 2.2]
+            li #[a(href="#/") Left child 2.3]
+        li.dropdown
+          a.dropdown__ctrl(href="http://example.com") Left 3 <i class="fa fa-caret-down"></i>
+          ul.dropdown__content.dropdown__content--left
+            li #[a(href="#/") Left child 3.1]
+            li #[a(href="#/") Left child 3.2]
+            li #[a(href="#/") Left child 3.3]
+      ul.menubar__right
+        li #[a(href="#/") Right 1]
+        li #[a(href="#/") Right 2]
+        li.dropdown
+          a.dropdown__ctrl(href="http://example.com") Right 3 <i class="fa fa-caret-down"></i>
+          ul.dropdown__content.dropdown__content--right
+            li #[a(href="#/") Right child 3.1]
+            li #[a(href="#/") Right child 3.2]
+            li #[a(href="#/") Right child 3.3]
+
+  .tabs.deco.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-menubar5-html") HTML
+      .tab__label(data-tab-id="tab-docs-menubar5-pug") Pug
+
+    #tab-docs-menubar5-html.tab__card
+      pre.mt--zero
+        code.
+          &lt;div class="menu menu--menubar-sm"&gt;
+
+            &lt;div class="menu__brand"&gt; ... &lt;/div&gt;
+
+            &lt;div class="menu__ctrl menu__ctrl--right fa fa-bars"&gt; &lt;/div&gt;
+            
+            &lt;div class="menu__content"&gt;
+              &lt;ul class="menubar__right"&gt;
+                &lt;li&gt;&lt;a href="#/"&gt;Right 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="dropdown"&gt;&lt;a class="dropdown__ctrl" href="http://example.com"&gt;Right 2 &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
+                  &lt;ul class="dropdown__content dropdown__content--right"&gt;
+                    &lt;li&gt;&lt;a href="#/"&gt;Right child 2.1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#/"&gt;Right child 2.2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#/"&gt;Right child 2.3&lt;/a&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/li&gt;
+                ...
+  
+    #tab-docs-menubar5-pug.tab__card
+      pre.mt--zero
+        code.
+          .menu.menu--menubar-sm.deco
+          
+            .menu__brand ...
+                
+            .menu__ctrl.menu__ctrl--right.fa.fa-bars
+
+            .menu__content
+              ul.menubar__left
+                li \#[a(href="#/") Right 1]
+                li.dropdown
+                  a.dropdown__ctrl(href="http://example.com") Right 2 \#[i.fa.fa-caret-down]
+                  ul.dropdown__content
+                    li \#[a(href="#/") Right child 2.1]
+                    li \#[a(href="#/") Right child 2.2]
+                    li \#[a(href="#/") Right child 2.3]
+                ...
+  
+  h3 Bringing it all together
+  
+  p Here's a complex example of a complex menubar:
+  
+  .menu.menu--menubar-sm.deco
+  
+    .menu__brand
+      a(href="#/")
+        b Brand
+        
+    .menu__ctrl.menu__ctrl--right.m--4.btn.btn--sm.btn--icon.fa.fa-bars
+    .menu__content
+      
+      ul.menubar__left
+        li #[a(href="#/") Left 1]
+        li.dropdown
+          a.dropdown__ctrl(href="http://example.com") Left 2 #[i.fa.fa-caret-down]
+          ul.dropdown__content.dropdown__content--left
+            li #[a(href="#/") Left child 2.1]
+            li #[a(href="#/") Left child 2.2]
+            li #[a(href="#/") Left child 2.3]
+        li.dropdown
+          a.dropdown__ctrl(href="http://example.com") Left 3 #[i.fa.fa-caret-down]
+          ul.dropdown__content.dropdown__content--left
+            li #[a(href="#/") Left child 3.1]
+            li #[a(href="#/") Left child 3.2]
+            li #[a(href="#/") Left child 3.3]
+            
+      ul.menubar__right
+        li #[a(href="#/") Right 1]
+        li
+          form.mb--zero.p--4
+            input#search-example.b--blue-darken-1.form__input--inline.form__input--sm.form__input--pill(name="examplename" placeholder="Search..." type="text")
+            button.btn.btn--primary.btn--icon.btn--sm.btn--pill(type="submit") #[i.fa.fa-search]
+        li.dropdown
+          a.dropdown__ctrl(href="http://example.com") Right 2 #[i.fa.fa-caret-down]
+          ul.dropdown__content.dropdown__content--right
+            li #[a(href="#/") Right child 2.1]
+            li #[a(href="#/") Right child 2.2]
+            li #[a(href="#/") Right child 2.3]
+
+  h3.mt--line Complex Menubar Classes
+
+  p See also #[a(href="#components-dropdown") dropdown] component.
+
+  table.table.deco
+    thead
+      tr
+        th(style="width: 145px;") Class
+        th Notes
+        th Modifiers
+    tbody
+      tr
+        td #[code .menu]
+        td The menu/menubar component block
+        td Responsive 'switches': #[br]
+          | #[code .menu--menubar-xs], #[code .menu--menubar-sm], #[code .menu--menubar-md], #[code .menu--menubar-xs]
+          | Fixed position menubar (viewport top): #[br] #[code .menu--fixed] or #[code .menubar--fixed]
+      tr
+        td #[code .menu__brand]
+        td The menu brand element
+        td
+      tr
+        td #[code .menu__ctrl]
+        td The menu controller element
+        td
+      tr
+        td #[code .menu__content]
+        td The menu content element
+        td
+      tr
+        td #[code .menubar__left]
+        td(rowspan="4") Menubar element alignment
+        td(rowspan="4") These menubar elements will be contained within #[code .menubar__content]
+      tr
+        td #[code .menubar__right]
+      tr
+        td #[code .menubar__center]
+      tr
+        td #[code .menubar__justify]
+      tr
+        td #[code .menu li] #[sup 1]
+        td The menu/menubar item element
+        td
+      tr
+        td #[code .menu a] #[sup 2]
+        td The menu/menubar hyperlink element
+        td
+        
+  p #[sup 1] Including the mixin #[code =menu__item] #[br] #[sup 2] Including the mixin #[code =menu__link]

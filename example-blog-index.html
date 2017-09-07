@@ -1,255 +1,389 @@
-<!DOCTYPE (doctype)>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"/>
-    <meta name="author"/>
-    <link rel="icon"/>
-    <title>Blog Index Example</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="codebase/css/codebase.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <title>Example Blog Index | Codebase</title>
+    <link rel="icon">
+    <link rel="stylesheet" href="codebase/css/codebase.css">
   </head>
   <body>
     <style>
-      .corner-ribbon {
-        position: fixed;
-        bottom: 8px;
-        right: 8px;
-        width: 64px;
-        height: 37px;
-        z-index: 999;
-        background: url('../../images/codebase2-logo.svg') 0 0 no-repeat;
+      .example-menubar,
+      .example-menubar .menu__ctrl {
+        background-color: #3d3d3d;
+        color: #bbb;
+      }
+      .example-menubar .menu__ctrl {
+      padding: 8px;
+        font-size: 1.5em;
+        transition: all 0.2s ease;
+      }
+      .example-menubar li {
+        margin: 0;
+      }
+      .example-menubar a {
+        padding: 8px 16px;
+        color: #bbb;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .example-menubar .menu__ctrl:hover,
+      .example-menubar a:hover {
+        color: #fff;
+        background-color: #5c5c5c;
+      }
+      @media (min-width: 960px) {
+        .example-menubar {
+          padding: 8px 0;
+        }
       }
       
-    </style><a class="corner-ribbon" href="index.html"></a>
-        <!-- Extra styles for this example-->
+    </style>
+    <div class="example-menubar menu menu--menubar-sm">
+      <div class="menu__brand"><a href="#/"><b>Somebody's Blog</b></a></div>
+      <div class="menu__ctrl menu__ctrl--right fa fa-bars"></div>
+      <div class="menu__content">
+        <ul class="menubar__right">
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/">About</a></li>
+          <li><a href="#/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flexbox flexbox--container">
+      <div class="flexitem--span-12 hero"><img src="holder.js/1280x320"></div>
+    </div>
+    <div class="flexbox flexbox--container flexbox--gutter mv--24">
+      <div class="flexitem flexitem-md--span-9">
         <style>
-          .showhide {
-            text-align: right;
-          }
-          .brand a {
-            display: inline-block;
-            padding: 8px 12px;
-            font-size: 1.5em;
-          }
-          .navbar a,
-          .brand a {
-            background: #414141;
-            color: #ffffff
-          }
-          .navbar a:hover,
-          .brand a:hover {
-            color: #ffffff;
-            background: #1D1D1D;
-            text-decoration: none;
-          }
-          .navbar {
-            text-align: left;
-          }
-          .holderjs {
-            height: 120px;
-            width: 100%;
-            background-position: center;
-            background-size: 180px auto
-          }
-          @media (max-width: 959px) {
-            .brand {
-              position: absolute;
-              max-width: 250px;
-              z-index: 50;
-            }
-            .brand a {
-              padding: 12px;
-            }
-          }
-          @media (min-width: 960px) {
-            .holderjs {
-              height: 240px
+          @media (max-width: 639px) {
+            .example-blog-index-entry .media__image {
+              padding-bottom: 24px;
+              float: none;
+              text-align: center;
             }
           }
           
+          
         </style>
-        <div class="bg--gray-darken-2">
-          <div class="grid">
-            <div class="col col-md--span-2 brand"><a href="#/">Brand</a></div>
-            <div class="col col-md--span-10">
-              <div class="showhide showhide--block showhide--sm-down showhide--is-resettable">
-                <button class="showhide__toggle btn btn--icon btn--lt"><i class="fa fa-bars"></i></button>
-                <div class="showhide__content">
-                  <div class="navbar">
-                    <ul class="navbar--right">
-                      <li><a href="#/">Home</a></li>
-                      <li class="dropdown dropdown--md-up"><a class="dropdown__toggle">About <i class="fa fa-caret-down"></i></a>
-                        <ul class="dropdown__content dropdown__content--nowrap menu">
-                          <li><a href="#/">Back Story</a></li>
-                          <li><a href="#/">Present Day</a></li>
-                          <li><a href="#/">Future Plans</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#/">Contact</a></li>
-                    </ul>
+            <style>
+              .media__body {
+                padding-right: 16px
+              }
+              
+            </style><span style="display: none;">10</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">9</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">8</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">7</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">6</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">5</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">4</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">3</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">2</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
+                  </div>
+                </div>
+              </div>
+            </div><span style="display: none;">1</span>
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2"><img class="mh--auto mb--line bs--1z p--8" src="holder.js/200x200" alt="Featured image"></div>
+              <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1">         
+                <h3 class="mb--4"><a href="#/">Blog Post Title Example</a></h3>
+                <p class="media__text">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                <div class="card"><a class="card__image card__image--left pr--4" href="#/"><img class="b--circle pr--4" src="holder.js/50x50" alt="Avatar"></a>
+                  <div class="card__body">
+                    <h5 class="mb--zero"><a href="#/">Blog Author Name</a></h5>
+                    <p class="text--muted">23 May 2065 | 4 Comments</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-    <div class="grid">
-      <div class="col--span-12 hero">
-        <div class="holderjs" data-background-src="holder.js/1280x240"></div>
-      </div>
-    </div>
-    <div class="grid grid--gutter mv--6u">
-      <div class="col col-md--span-9">
-            <div class="media">
-              <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/120x120?text=Thumbnail"/>
-              </div>
-              <div class="media__content-wrap">
-                <div class="media__content">
-                  <div class="media__title">
-                    <h2 class="mt--zero">Blog Post Title Example</h2>
-                    <p class="text--muted">By Somebody | DD.MM.YYYY | 4 Comments</p>
-                  </div>
-                  <div class="media__text">
-                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a href="#/">Read more <i class="fa fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr/>
-            <div class="media">
-              <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/120x120?text=Thumbnail"/>
-              </div>
-              <div class="media__content-wrap">
-                <div class="media__content">
-                  <div class="media__title">
-                    <h2 class="mt--zero">Blog Post Title Example</h2>
-                    <p class="text--muted">By Somebody | DD.MM.YYYY | 4 Comments</p>
-                  </div>
-                  <div class="media__text">
-                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a href="#/">Read more <i class="fa fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr/>
-            <div class="media">
-              <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/120x120?text=Thumbnail"/>
-              </div>
-              <div class="media__content-wrap">
-                <div class="media__content">
-                  <div class="media__title">
-                    <h2 class="mt--zero">Blog Post Title Example</h2>
-                    <p class="text--muted">By Somebody | DD.MM.YYYY | 4 Comments</p>
-                  </div>
-                  <div class="media__text">
-                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a href="#/">Read more <i class="fa fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr/>
-            <div class="media">
-              <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/120x120?text=Thumbnail"/>
-              </div>
-              <div class="media__content-wrap">
-                <div class="media__content">
-                  <div class="media__title">
-                    <h2 class="mt--zero">Blog Post Title Example</h2>
-                    <p class="text--muted">By Somebody | DD.MM.YYYY | 4 Comments</p>
-                  </div>
-                  <div class="media__text">
-                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a href="#/">Read more <i class="fa fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr/>
-            <div class="media">
-              <div class="media__image-wrap media__image-wrap--left"><img src="holder.js/120x120?text=Thumbnail"/>
-              </div>
-              <div class="media__content-wrap">
-                <div class="media__content">
-                  <div class="media__title">
-                    <h2 class="mt--zero">Blog Post Title Example</h2>
-                    <p class="text--muted">By Somebody | DD.MM.YYYY | 4 Comments</p>
-                  </div>
-                  <div class="media__text">
-                    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a href="#/">Read more <i class="fa fa-chevron-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <hr/>
-        <ul class="pagination">
+        <hr>
+        <ul class="pagination deco text--center mb--48">
           <li><a href="#/"><i class="fa fa-arrow-left"></i> Newer</a></li>
           <li><a href="#/">1</a></li>
-          <li><a class="pagination__current" href="#/">2</a></li>
+          <li><a class="pagination__current" href="http://www.example.com">2</a></li>
           <li><a href="#/">3</a></li>
           <li><a href="#/">4</a></li>
           <li><a href="#/">5</a></li>
           <li><a href="#/">Older <i class="fa fa-arrow-right"></i></a></li>
         </ul>
       </div>
-      <div class="col col-md--span-3">
-        <h4>Sidebar</h4>
-        <ul class="menu menu--block">
-          <li><a href="#/">Sidebar link 1</a></li>
-          <li><a href="#/">Sidebar link 2</a></li>
-          <li><a href="#/">Sidebar link 3</a></li>
-          <li><a href="#/">Sidebar link 4</a></li>
-          <li><a href="#/">Sidebar link 5</a></li>
-          <li><a href="#/">Sidebar link 6</a></li>
-          <li><a href="#/">Sidebar link 7</a></li>
-          <li><a href="#/">Sidebar link 8</a></li>
-          <li><a href="#/">Sidebar link 9</a></li>
-          <li><a href="#/">Sidebar link 10</a></li>
-          <li><a href="#/">Sidebar link 11</a></li>
-          <li><a href="#/">Sidebar link 12</a></li>
-        </ul>
+      <div class="flexitem flexitem-md--span-3">
+            <style>
+              a.btn--facebook {
+                color: #fff !important;
+                background-color:#3b5998 !important;
+              }
+              a.btn--twitter {
+                color: #fff !important;
+                background-color:#00b6f1 !important;
+              }
+              a.btn--linkedin {
+                color: #fff !important;
+                background-color:#007bb6 !important;
+              }
+              a.btn--google-plus {
+                color: #fff !important;
+                background-color:#df4a32 !important;
+              }
+              
+              a:hover.btn--facebook {
+                background-color:#263e60 !important;
+              }
+              a:hover.btn--twitter {
+                background-color:#0099bc !important;
+              }
+              a:hover.btn--linkedin {
+                background-color:#005d82 !important;
+              }
+              a:hover.btn--google-plus {
+                background-color:#aa3327 !important;
+              }
+              
+            </style><a class="m--4 btn btn--facebook btn--icon btn--big-text" href="#/"><i class="fa fa-facebook"></i></a> <a class="m--4 btn btn--twitter btn--icon btn--big-text" href="#/"><i class="fa fa-twitter"></i></a> <a class="m--4 btn btn--linkedin btn--icon btn--big-text" href="#/"><i class="fa fa-linkedin"></i></a> <a class="m--4 btn btn--google-plus btn--icon btn--big-text" href="#/"><i class="fa fa-google-plus"></i></a> 
+            <div class="flexbox flexbox--gutter flexbox--nested">
+              <div class="flexitem flexitem-sm--span-6 flexitem-md--span-12">
+                <h4 class="mt--line">Blog categories</h4>
+                <ul class="menu menu--block">
+                  <li><a href="#/">Category 1</a></li>
+                  <li><a href="#/">Category 2</a></li>
+                  <li><a href="#/">Category 3</a></li>
+                </ul>
+              </div>
+              <div class="flexitem flexitem-sm--span-6 flexitem-md--span-12">
+                <h4>Recent posts</h4>
+                <ul class="menu menu--block">
+                  <li><a href="#/">Recent post 1</a></li>
+                  <li><a href="#/">Recent post 2</a></li>
+                  <li><a href="#/">Recent post 3</a></li>
+                  <li><a href="#/">Recent post 4</a></li>
+                </ul>
+              </div>
+              <div class="flexitem flexitem-sm--span-6 flexitem-md--span-12">
+                <h4>Recent comments</h4>
+                <ul class="menu menu--block">
+                  <li><a href="#/">Recent comment 1</a></li>
+                  <li><a href="#/">Recent comment 2</a></li>
+                  <li><a href="#/">Recent comment 3</a></li>
+                  <li><a href="#/">Recent comment 4</a></li>
+                  <li><a href="#/">Recent comment 5</a></li>
+                </ul>
+              </div>
+              <div class="flexitem flexitem-sm--span-6 flexitem-md--span-12">
+                    <form class="example-subs-form" action="">
+                      <h4>Join our mailing list</h4><input class="mb--4" id="text-example" name="examplename" placeholder="Your name" type="text">
+<input class="mb--4" id="email-example" name="examplename" placeholder="Your email" type="email">
+<input class="btn btn--primary" value="Subscribe" type="submit">
+                    </form>
+              </div>
+            </div>
       </div>
     </div>
-    <div class="pt--6u bg--gray-darken-2">
-          <div class="grid grid--gutter">
-            <div class="col col-sm--span-3">
+    <div class="mt--48 pt--line bg--gray-darken-2">
+      <style>
+        .example-big-footer p,
+        .example-big-footer a {
+          color: #bbb;
+        }
+        .example-big-footer a:hover {
+          color: #fff;
+          background-color: transparent;
+        }
+      </style>
+          <div class="flexbox flexbox--container flexbox--gutter example-big-footer">
+            <div class="flexitem flexitem-sm--span-3">
               <ul class="menu">
-                <li><a href="#/">footer link 1</a></li>
-                <li><a href="#/">footer link 2</a></li>
-                <li><a href="#/">footer link 3</a></li>
-                <li><a href="#/">footer link 4</a></li>
-                <li><a href="#/">footer link 5</a></li>
+                <li><a href="#/">Footer link 1 - 1</a></li>
+                <li><a href="#/">Footer link 1 - 2</a></li>
+                <li><a href="#/">Footer link 1 - 3</a></li>
+                <li><a href="#/">Footer link 1 - 4</a></li>
+                <li><a href="#/">Footer link 1 - 5</a></li>
               </ul>
             </div>
-            <div class="col col-sm--span-3">
+            <div class="flexitem flexitem-sm--span-3">
               <ul class="menu">
-                <li><a href="#/">footer link 1</a></li>
-                <li><a href="#/">footer link 2</a></li>
-                <li><a href="#/">footer link 3</a></li>
-                <li><a href="#/">footer link 4</a></li>
-                <li><a href="#/">footer link 5</a></li>
+                <li><a href="#/">Footer link 2 - 1</a></li>
+                <li><a href="#/">Footer link 2 - 2</a></li>
+                <li><a href="#/">Footer link 2 - 3</a></li>
+                <li><a href="#/">Footer link 2 - 4</a></li>
+                <li><a href="#/">Footer link 2 - 5</a></li>
               </ul>
             </div>
-            <div class="col col-sm--span-3">
+            <div class="flexitem flexitem-sm--span-3">
               <ul class="menu">
-                <li><a href="#/">footer link 1</a></li>
-                <li><a href="#/">footer link 2</a></li>
-                <li><a href="#/">footer link 3</a></li>
-                <li><a href="#/">footer link 4</a></li>
-                <li><a href="#/">footer link 5</a></li>
+                <li><a href="#/">Footer link 3 - 1</a></li>
+                <li><a href="#/">Footer link 3 - 2</a></li>
+                <li><a href="#/">Footer link 3 - 3</a></li>
+                <li><a href="#/">Footer link 3 - 4</a></li>
+                <li><a href="#/">Footer link 3 - 5</a></li>
               </ul>
             </div>
-            <div class="col col-sm--span-3"><img src="holder.js/240x120"/>
+            <div class="flexitem flexitem-sm--span-3"><img src="holder.js/240x120">
+              <div class="mt--line">
+                    <style>
+                      a.btn--facebook {
+                        color: #fff !important;
+                        background-color:#3b5998 !important;
+                      }
+                      a.btn--twitter {
+                        color: #fff !important;
+                        background-color:#00b6f1 !important;
+                      }
+                      a.btn--linkedin {
+                        color: #fff !important;
+                        background-color:#007bb6 !important;
+                      }
+                      a.btn--google-plus {
+                        color: #fff !important;
+                        background-color:#df4a32 !important;
+                      }
+                      
+                      a:hover.btn--facebook {
+                        background-color:#263e60 !important;
+                      }
+                      a:hover.btn--twitter {
+                        background-color:#0099bc !important;
+                      }
+                      a:hover.btn--linkedin {
+                        background-color:#005d82 !important;
+                      }
+                      a:hover.btn--google-plus {
+                        background-color:#aa3327 !important;
+                      }
+                      
+                    </style><a class="m--4 btn btn--facebook btn--icon btn--big-text" href="#/"><i class="fa fa-facebook"></i></a> <a class="m--4 btn btn--twitter btn--icon btn--big-text" href="#/"><i class="fa fa-twitter"></i></a> <a class="m--4 btn btn--linkedin btn--icon btn--big-text" href="#/"><i class="fa fa-linkedin"></i></a> <a class="m--4 btn btn--google-plus btn--icon btn--big-text" href="#/"><i class="fa fa-google-plus"></i></a> 
+              </div>
             </div>
-            <div class="col--span-12 pt--3u">
-              <hr/>
-              <p class="text--center text--white">Copyright &copy; 2017 Some Name</p>
+            <div class="flexitem mt--line">
+              <p class="text--center">Copyright &copy; 2017 Some Name</p>
             </div>
           </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="codebase/js/codebase.js"></script>
+        <div class="dropdown" style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;">
+          <div class="dropdown__content dropdown__content--above mb--4 bs b--rounded bg--white">
+            <ul class="menu deco b--thick b--blue">
+              <li><a class="bb--thin b--blue text--nowrap" href="index.html"><i class="fa fa-home"></i> Codebase</a></li>
+              <li><a class="text--nowrap" href="getting-started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
+              <li><a class="text--nowrap" href="basics.html"><i class="fa fa-cubes"></i> Basics</a></li>
+              <li><a class="text--nowrap" href="layout.html"><i class="fa fa-map"></i> Layout</a></li>
+              <li><a class="text--nowrap" href="components.html"><i class="fa fa-cogs"></i> Components</a></li>
+              <li><a class="text--nowrap" href="decoration.html"><i class="fa fa-paint-brush"></i> Decoration</a></li>
+              <li><a class="text--nowrap" href="examples.html"><i class="fa fa-flask"></i> Examples</a></li>
+              <li class="bt--thin b--blue"><a class="text--nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-home"></i> GitHub</a></li>
+            </ul>
+          </div>
+          <button class="dropdown__ctrl btn btn--primary btn--icon btn--big-text btn--pill"> <i class="fa fa-cog"></i></button>
+        </div>
+        <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
+    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>    
   </body>
 </html>

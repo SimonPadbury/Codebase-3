@@ -1,133 +1,589 @@
-<!DOCTYPE (doctype)>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description"/>
-    <meta name="author"/>
-    <link rel="icon"/>
-    <title>Getting Started</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="docs/theme/css/styles.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <title>Getting Started • Codebase</title>
+    <link rel="stylesheet" href="docs/docs-theme/css/styles.css">
   </head>
-  <body>
-    <div class="body__inner">
-      <nav class="navbar navbar--fixed docs__navbar">
-        <div class="navbar--left"><a class="brand" href="index.html">Codebase <span class="text--muted">2.x PREVIEW</span></a></div>
-        <div class="navbar--right show--md-up">
-          <ul>
-            <li><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="docs__main">
-        <div class="off-canvas-navicon--docs off-canvas-navicon off-canvas-navicon--right off-canvas-navicon--fixed" data-off-canvas="sidebar-1"><i class="fa fa-bars" aria-hidden="true"></i></div>
-        <div class="docs__sidebar off-canvas off-canvas--sm off-canvas--right off-canvas--fixed" id="sidebar-1">
-          <div class="off-canvas__close off-canvas__close--left hide--md-up"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
-          <div class="docs__sidebar-menu">
-            <h4>Docs</h4>
-            <ul>
-              <li class="current menu-marker"><a href="#getting-started">Getting Started</a>
-                <ul>
-                  <li><a href="#getting-started-simple-setup">Simple Setup</a></li>
-                  <li><a href="#getting-started-advanced-setup">Advanced Setup</a></li>
-                </ul>
-              </li>
-              <li><a href="basics.html">Basics</a></li>
-              <li><a href="layout.html">Layout</a></li>
-              <li><a href="components.html">Components</a></li>
-              <li><a href="decoration.html">Decoration</a></li>
-              <li><a href="examples.html">Examples</a></li>
-              <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer"><i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp; GitHub Repository</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="docs__content menu-marker-wrap">
-          <header class="docs__header menu-marker-section" id="getting-started">
-            <h1>Getting Started</h1>
-          </header>
-          <div class="docs__body">
-            <div class="menu-marker-section" id="getting-started-simple-setup">
-              <h2 class="docs-section">Simple Setup</h2>
-              <ol>
-                <li>Add <code>codebase.css</code> and <code>codebase.js</code> to your project.</li>
-                <li>Add <a href="http://fontawesome.io">Font Awesome</a> and <a href="http://jquery.com">jQuery</a> (either self-hosted a or link to a CDN).</li>
-                <li>Create your first HTML page, e.g. using the starter example below.</li>
-              </ol>
-              <pre><code>&lt;!doctype html&gt;
+  <body class="docs__chapter">
+    <div class="menubar menubar--fixed codebase--nav-top">
+      <div class="menubar__brand codebase__brand"><a class="text--nowrap" href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
+            <g fill="#ffffff">
+              <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
+            </g>
+          </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></div>
+      <div class="menubar__content">
+        <ul class="menubar__right hide--sm-down">
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download"></i> Download</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github"></i> GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="docs__main">
+      <div class="off-canvas__ctrl off-canvas__ctrl--docs off-canvas__ctrl--right off-canvas__ctrl--fixed hide--md-up" data-content-id="sidebar-1"><span class="hide--sm-down">Docs</span> <span class="hide--sm-up">Menu</span> <i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="docs__nav off-canvas__content off-canvas__content--md off-canvas__content--right off-canvas__content--fixed" id="sidebar-1">
+        <div class="off-canvas__close off-canvas__close--right hide--md-up text--big-text p--4"><i class="fa fa-times-circle" aria-hidden="true"></i></div>
+        <ul>
+          <li class="hide--md-down"><a href="index.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
+                <g fill="#ffffff">
+                  <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
+                </g>
+              </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></li>
+          <li class="hide--sm-up"><a href="#/"><i class="fa fa-home fa-fw fa-lg"></i> Home</a></li>
+          <li><a class="this-page" href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a>
+            <div class="docs__nav--sub-nav">
+              <ul class="menu deco">
+                <li><a href="#getting-started-introduction">Introduction</a></li>
+                <li><a href="#getting-started-simple-setup">Simple Setup</a></li>
+                <li><a href="#getting-started-third-party-dependencies">Third-party Dependencies</a></li>
+                <li><a href="#getting-started-advanced-setup">Advanced Setup</a></li>
+                <li><a href="#getting-started-codebase-with-sass">Using Codebase with Sass</a></li>
+                <li><a href="#getting-started-mq-breakpoint-widths">Media Query Breakpoint Widths</a></li>
+                <li><a href="#getting-started-codebase-with-pug">Using Codebase with Pug</a></li>
+                <li><a href="#getting-started-how-codebase-uses-pug">How Codebase uses Pug</a></li>
+                <li><a href="#getting-started-codebase-html-generator-mixins">Codebase HTML Generator Mixins</a></li>
+                <li><a href="#getting-started-rtl-support">RTL Languages Support</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="basics.html"><i class="fa fa-cubes fa-fw fa-lg"></i> Basics</a></li>
+          <li><a href="layout.html"><i class="fa fa-map fa-fw fa-lg"></i> Layout</a></li>
+          <li><a href="components.html"><i class="fa fa-cogs fa-fw fa-lg"></i> Components</a></li>
+          <li><a href="decoration.html"><i class="fa fa-paint-brush fa-fw fa-lg"></i> Decoration</a></li>
+          <li><a href="examples.html"><i class="fa fa-flask fa-fw fa-lg"></i> Examples</a></li>
+          <li class="hide--sm-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download fa-fw fa-lg"></i> Download</a></li>
+          <li class="hide--sm-up"><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github fa-fw fa-lg"></i> GitHub</a></li>
+        </ul>
+      </div>
+      <div class="docs__docs-content">       
+        <header>
+          <h1>Getting Started</h1>
+        </header>
+        <main>
+          <article>
+            <div class="docs__section" id="getting-started-introduction">
+              <header>
+                <h2>Introduction</h2>
+              </header>
+              <section>
+                <p>
+                  Codebase is a website component library. You can use it as the basis for your website design projects.
+                  
+                </p>
+                <p>The Codebase stylesheet <code>codebase.css</code> has been composed using <a href="http://sass-lang.com/documentation/frames.html#!file.INDENTED_SYNTAX.html">indented syntax Sass</a>. Its styles were built first as mixins and then these have been included in the Codebase classes.
+                  
+                </p>
+                <p>Codebase styles can therefore be used simply as-is, by dropping the Codebase classes directly into your website HTML – or whatever you use to compile your HTML (e.g. <a href="#getting-started-codebase-with-pug">pug</a>). Alternatively, you can include Codebase mixins into your own Sass.
+                  
+                </p>
+                <p>A few things in Codebase also use a tiny JavaScript <code>codebase.js</code> to make them work &ndash; such as dropdowns, popovers and responsive tables. Since version 2.0, Codebase scripts have been re-factored as "vanilla" JavaScript and so jQuery is not needed.
+                  
+                </p>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>The Codebase documentation (you are looking at it) is an example of Codebase in use.</p>
+                <p>Besides these docs, some Codebase webpage <a href="examples.html">examples</a> have been included in this project.</p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-simple-setup">
+              <header>
+                <h2>Simple Setup</h2>
+              </header>
+              <section>
+                <ol>
+                  <li>Add <code>codebase.css</code> and <code>codebase.js</code> to your project.</li>
+                  <li>
+                    Create your first HTML page &ndash; e.g. using the starter example below.
+                    
+                  </li>
+                </ol>
+                <pre><code>&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
     &lt;title&gt;Your Webpage Title&lt;/title&gt;
-    &lt;link rel="stylesheet" href="path/to/font-awesome.min.css"&gt;
+
     &lt;link rel="stylesheet" href="path/to/codebase/css/codebase.css"&gt;
-    &lt;link rel="stylesheet" href="path/to/your-theme/css/styles.css"&gt;
+    &lt;link rel="stylesheet" href="path/to/your-theme/css/your-styles.css"&gt;
   &lt;/head&gt;
   &lt;body&gt;
 
-    &lt;!-- Get to work --&gt;
+    &lt;h1&gt;Get to work&lt;/h1&gt;
 
-    &lt;script src="path/to/jquery.js"&gt;&lt;/script&gt;
     &lt;script src="path/to/codebase/js/codebase.js"&gt;&lt;/script&gt;
-    &lt;script src="path/to/your-theme/js/scripts.js"&gt;&lt;/script&gt;
+    &lt;script src="path/to/your-theme/js/your-scripts.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;
 </code></pre>
-              <p>Note that jQuery needs to be sourced first, so that the Codebase jQuery plugin can work.</p>
+                <ol start="3">
+                  <li>Build your HTML web page prototype(s) following the examples in these docs.</li>
+                  <li>Personalize with your own stylesheet, scripts and graphics.</li>
+                </ol>
+              </section>
             </div>
-            <div class="menu-marker-section" id="getting-started-advanced-setup">
-              <h2 class="docs-section">Advanced Setup</h2>
-              <p>Example project folder structure:</p>
-              <pre><code>your-project/
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-third-party-dependencies">
+              <header>
+                <h2>Third-party Dependencies</h2>
+              </header>
+              <section>
+                <h3>Normalize</h3>
+                <p>The <a href="https://necolas.github.io/normalize.css/">Normalize</a> stylesheet has already been been sourced from <a href="https://cdnjs.com/">CDNJS</a> and included into <code>codebase.css</code> during Sass pre-processing.
+                  
+                </p>
+                <h3>Font Awesome</h3>
+                <p>The <a href="http://fontawesome.io/">Font Awesome</a> stylesheet has already been been sourced from <a href="https://cdnjs.com/">CDNJS</a> and included into <code>codebase.css</code> during Sass pre-processing.
+                  
+                </p>
+                <p>
+                  The Font Awesome icon font will be sourced from CDNJS while you are online. (It may already be in your browser cache.)
+                  
+                </p>
+                <p>The only external call that Codebase makes is to Font Awesome on CDNJS.</p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-advanced-setup">
+              <header>
+                <h2>Advanced Setup</h2>
+              </header>
+              <section>
+                <p>Example project folder structure:</p>
+                <pre><code>your-project/
+│
 ├── codebase/
-│     ├── (css/) /* Unrequired if you are importing Codebase into your theme */
-│     ├── coffee/
-│     ├── js/
-│     └── sass/
+│   ├── css/
+│   ├── js/
+│   ├── pug/ [1]
+│   └── sass/ [2]
 │
 ├── your-dev/
-│     ├── coffee/
-│     └── sass/
+│   ├── img/
+│   ├── js/
+│   ├── pug/ [1]
+│   └── sass/ [2]
 │
-└── your-build/
-      ├── css/
-      └── js/
+├── your-build/
+│   ├── css/
+│   ├── img/
+│   └── js/
+│
+└── your HTML
 </code></pre>
-              <h3>Import Codebase into your theme SASS</h3>
-              <p>
-                All Codebase variables have the <code>!default</code> flag. To override any of these, you <strong>first</strong> declare your your overrides using the same Codebase variable names (but with your preferred values), then import Codebase. Your SASS pre-processor will preferentially use your values instead of the Codebase defaults.
-                
-              </p>
-              <pre><code>// YOUR PROJECT BASE SASS FILE
-// ===========================
+                <p>Notes:</p>
+                <ol>
+                  <li>The Codebase documentation has been built using the HTML pre-processor language <a href="http://pugjs.org/">Pug</a> (formerly known as Jade). You can do the same. See the further instructions below on <a href="#getting-started-codebase-with-pug">how to use Codebase with Pug</a>.</li>
+                  <li>The Codebase CSS has been built using <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">indented syntax Sass</a>. You can do the same. See the further instructions below on <a href="#getting-started-codebase-with-sass">how to use Codebase with Sass</a>.
+                    
+                  </li>
+                </ol>
+                <hr>
+                <p>The Codebase CSS and JavaScript components can, of course, be used directly on the HTML files (as in the <a href="#getting-started-simple-setup">Simple Setup</a>, above). Or you can use e.g. PHP, Handlebars, Slim, or Haml.</p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-codebase-with-sass">
+              <header>
+                <h2>Using Codebase with Sass</h2>
+              </header>
+              <section>
+                <p>You can <code>@import</code> the Codebase Sass master file directly into your project Sass master file, and then all the Codebase variables and mixins will be available for you to use. E.g.:
+                  
+                </p>
+                <pre><code>@import "../../codebase/scss/codebase"
+</code></pre>
+                <p>All Codebase variables have the <code>!default</code> flag. To override any of these, <b>you must first declare your own overrides using the same Codebase variable names</b> (but with your preferred values), and then import Codebase. 
+                  
+                </p>
+                <pre><code>// (1.) Override Codebase `!default` variables before importing Codebase
 
-// (1.) Override Codebase `!default` variables here...
+$color--yellow: #ffff00
 
 // (2.) Import Codebase
-@import '../../codebase/scss/codebase';
 
-// (3.) Begin your project styles here...
+@import "../../codebase/scss/codebase"
+
+// (3.) Begin your project styles after importing Codebase
+
+body
+  background: $color--yellow
 </code></pre>
-              <p class="initial-icon bl--4px-solid b--teal-darken-1 p--3u bg--teal-lighten-2">
-                <i class="fa fa-info-circle text--teal-darken-1"></i> Whenever you use any of the the Codebase variables <strong>within your own variables</strong>, you will need to declare these first, before you use them.
-                <br>
-                <br> For example: if you need to change the navbar breakpoint from <code>$break-xs</code> to <code>$break-sm</code> then you need <i>pre-</i>declare <code>$break-sm</code> in your own variables.
-                <br>
-                <br> You could copy the entire Codebase default variables file (<a href="codebase/scss/02_default-variables/_default-variables.scss">codebase/scss/02_default-variables/_default-variables.scss</a>) into your theme (remove all the <code>!default</code> flags) and set your chosen variable values there.
-              </p>
+                <p>
+                  Your Sass pre-processor will preferentially use your values instead of the Codebase defaults. You won't need to modify any Codebase Sass file directly.
+                      
+                </p>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>You can copy the entire Codebase default variables file (<a href="codebase/scss/02_default-variables/_default-variables.scss">codebase/scss/02_default-variables/_default-variables.scss</a>) into your theme, then remove all the <code>!default</code> flags, and set your chosen variable values there.</p>
+              </section>
             </div>
-          </div>
-          <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a>
-               version 2.x PREVIEW
-              |&nbsp;<a href="https://github.com/SimonPadbury/Codebase" target="_blank" rel="noopener noreferrer">GitHub Repository</a>&nbsp;| Built by&nbsp;<a href="http://simonpadbury.github.io" target="_blank" rel="noopener noreferrer">Simon Padbury</a></span></footer>
-        </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-mq-breakpoint-widths">
+              <header>
+                <h2>Media Query Breakpoint Widths</h2>
+              </header>
+              <section>
+                <p>In Codebase the media query breakpoint width variables are:</p>
+                <pre><code>$mq--xs: 320px !default
+$mq--sm: 640px !default
+$mq--md: 960px !default
+$mq--lg: 1280px !default
+</code></pre>
+                <p>These have been utilized in a set of Sass mixins as follows:</p>
+                <pre><code>=break--min($mq--min-width)
+  @media(min-width: $mq--min-width)
+    @content
+
+=break--max($mq--max-width)
+  @media(max-width: $mq--max-width - 1px)
+    @content
+
+=break--minmax($mq--min-width, $mq--max-width)
+  @media(min-width: $mq--min-width) and (max-width: $mq--max-width - 1px)
+    @content
+</code></pre>
+                <p>These mixins are then called as in the following examples:</p>
+                <pre><code>// For styling only applicable below `$mq--sm` (i.e. up to 639px)
+
++break--max($mq--sm)
+  ...
+</code></pre>
+                <pre><code>// For styling only applicable from `$mq--sm` to `$mq--md` (i.e.  640px to 959px)
+
++break--minmax($mq--sm, $mq--md)
+  ...
+</code></pre>
+                <pre><code>// For styling only applicable above `$mq--md` (i.e. from 960px and up)
+
++break--min($mq--md)
+  ...</code></pre>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-codebase-with-pug">
+              <header>
+                <h2>Using Codebase with Pug</h2>
+              </header>
+              <section>
+                <p>The Codebase documentation has been developed using <a href="http://pugjs.org/">PugJS</a>. The Pug language was (and is being) developed by <a href="https://github.com/pugjs/pug">Forbes Lindesay</a>.
+                  
+                </p>
+                <p>One way of using Codebase with Pug in your project is as follows: Codebase comes with a simple starter Pug template called <a href="codebase/pug/_codebase.pug">_codebase.pug</a>, which you can inherit (using <a href="https://pugjs.org/language/inheritance.html">extends</a>) as the basis of your templates. (Alternatively, you can start without extending this example starter template).
+                  
+                </p>
+                <h3>The <code>_codebase.pug</code> starter template</h3>
+                <pre><code>//- Codebase Starter
+
+include generators/__generators-index
+
+block vars
+  - lang = ""
+  - htmlDir = ""
+  - htmlClass = ""
+  - title = ""
+  - description = ""
+  - author = ""
+  - favicon = ""
+  - faviconType = ""
+  - bodyClass = ""
+
+doctype html
+html(lang=lang, dir=htmlDir, class=htmlClass)
+
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge, chrome-1")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description", content=description)
+    meta(name="author", content=author)
+
+    title #{title}
+
+    block head-addins
+      link(rel="icon", href=favicon, type=faviconType)
+      link(rel="stylesheet", href="codebase/css/codebase.css")
+
+  body(class=bodyClass)
+    block body
+
+    block body-foot-addins
+      script(src="codebase/js/codebase.js")
+</code></pre>
+                <p>You can then <code>extend</code> the Codebase starter in your own Pug template(s) as follows:
+                  
+                </p>
+                <pre><code>//- Your Template
+
+extends ../codebase/pug/_codebase
+
+//- ...etc.</code></pre>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-how-codebase-uses-pug">
+              <header>
+                <h2>How Codebase uses Pug</h2>
+              </header>
+              <section>
+                <p>
+                  Pug is a whitespace-sensitive (indented syntax) templating language for pre-processing into HTML. With Pug you can use partial-page includes, loops, conditionals, inheritance, mixins and variables.
+                  
+                </p>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>The <a href="https://pugjs.org/api/getting-started.html">PugJS documentation</a> is the first place to learn Pug. </p>
+                <p>
+                  Plus there are several tutorials out there. Following are some to get you started. (Pug was formerly known as Jade, and some of the following tuturials date from that time but are still relevant.)
+                  
+                </p>
+                <ul>
+                  <li>Simon Swiss's series, <a href="https://www.youtube.com/watch?v=JqCs1pdmf9o&amp;list=PLHrxuCR-0CcSWiMuLf58iuIsNlP549-Sk">Jade/Pug Tips in 90 Seconds</a> on YouTube</li>
+                  <li>Derek Banas's <a href="https://www.youtube.com/watch?v=l5AXcXAP4r8">Jade/Pug Tutorial</a> on YouTube</li>
+                  <li>Bryan Stoner's tutorial, <a href="https://codepen.io/mimoduo/post/learn-pug-js-with-pugs">Learn Pug.js with Pugs</a> on Codepen
+                    
+                  </li>
+                </ul>
+                <p>
+                  The Codebase docs were generated using many of the features of Pug. So, you can learn from the docs code itself, as well as reading the docs in a browser.
+                  
+                </p>
+                <ol>
+                  <li>The docs have been mostly written using the Pug syntax. (Some HTML is also embedded.)</li>
+                  <li>The Codebase docs have a their own <a href="docs/_docs-template.pug">docs starter template</a> named <code>_docs-template.pug</code>, that itself interits the <a href="codebase/pug/_codebase.pug">Codebase starter template</a> named <code>_codebase.pug</code>. (It is this Codebase starter template that links to <code>codebase.css</code> and <code>codebase.js</code>.)</li>
+                  <li>The docs starter template has <a href="https://pugjs.org/language/inheritance.html">blocks</a> into which the docs chapter pages (e.g. <a href="docs/getting-started.pug">getting-started.pug</a>) insert their content &ndash; see (4.) and (5.).</li>
+                  <li>The <a href="docs/docs-template-partials">docs-template-partials/</a> folder contains partial Pug files (e.g. header, sidebars, footer and article templates) that are <a href="https://pugjs.org/language/includes.html">included</a> into the docs pages.</li>
+                  <li>Each chapter article has its own article template (<a href="docs/docs-template-partials/_docs-article.pug">_docs-article.pug</a>).</li>
+                  <li>The <a href="docs/docs-articles">docs-articles/</a> folder contains all the articles of the Codebase docs. These articles are partial files that are included into the pug pages, similar to how the header, sidebars, etc. are included.</li>
+                  <li>The docs make use of some simple <a href="#getting-started-codebase-html-generator-mixins">Codebase HTML generator mixins</a> that are used for generating some of the docs examples. They can also be used for rapid prototyping (see their use in the <a href="examples.html">Examples</a>).</li>
+                </ol>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-codebase-html-generator-mixins">
+              <header>
+                <h2>Codebase HTML Generator Mixins</h2>
+              </header>
+              <section>
+                <p>Codebase has some handy Pug HTML generator mixins. These have been used in  generating some of the docs and <a href="examples.html">examples</a>, and you can also use them for rapid prototyping.
+                  
+                </p>
+                <p>Following these example HTML generators, you can also generate your own. Examples of others in the the Codebase project can be found in the <code>.popover--fix</code> example (a popover with a lot of tabular content), and in the example blog index excerpts loop.
+                  
+                </p>
+                <h3>"Lorem ipsum" Paragraph Generator</h3>
+                <p>When this paragraph mixin is included, it will generate up to four paragraphs in your HTML depending on how many you specify. You can also add some classes to the first paragraph (e.g. if you require it to have a dropcap, or enlarged "lead" text, or some <a href="decoration.html">decoration</a> classes).
+                  
+                </p>
+                <p>See <a href="codebase/pug/generators/_paragraphs.pug">codebase/pug/generators/_paragraphs.pug</a>.
+                  
+                </p>
+                <pre><code>mixin paragraph(number, p1Class)
+  case number
+    when 1
+      p(class=p1Class).
+        Lorem ipsum dolor sit amet ...
+    when 2
+      p(class=p1Class).
+        Lorem ipsum dolor sit amet ...
+      p.
+        Summo nostro dicunt sea ut ...
+    when 3
+      p(class=p1Class).
+        Lorem ipsum dolor sit amet ...
+      p.
+        Summo nostro dicunt sea ut ...
+      p.
+        Utroque habemus moderatius cum cu ...
+    when 4
+      p(class=p1Class).
+        Lorem ipsum dolor sit amet ...
+      p.
+        Summo nostro dicunt sea ut ...
+      p.
+        Utroque habemus moderatius cum cu ...
+      p.
+        Eruditi omittam usu et ...
+    default
+      Lorem ipsum dolor sit amet ...
+</code></pre>
+                <p>
+                  (In the actual mixin these paragraphs are written in full.)
+                  
+                </p>
+                <p>Usage:</p>
+                <pre><code>//- To get one paragraph (default):
+
++paragraph
+
+//- To get a specific number of paragraphs (up to 4)
+
++paragraph(2)
+
+//- To add some classes to the first paragraph
+
++paragraph(1, "b--heavy")
+
++paragraph(3, "lead text--purple")
+
+</code></pre>
+                <h3>Menu and Menubar Generators</h3>
+                <p>
+                  Mixins for rapid generation of menus and menubars have been provided.
+                  
+                </p>
+                <p>See <a href="codebase/pug/generators/_menus.pug">codebase/pug/generators/_menus.pug</a>.
+                  
+                </p>
+                <pre><code>//- Menu generator
+
+mixin menu(menuLink, total, menuClass)
+  - var n = 0;
+  ul(class=["menu", menuClass])
+    while n < total
+      li
+        a(href="#/")= menuLink
+          = " "
+          = (n++ + 1)
+
+//- Menubar generator
+
+mixin menubar(menuLink, total, menuClass)
+  - var n = 0;
+  ul(class=["menubar", menuClass])
+    while n < total
+      li
+        a(href="#/")= menuLink
+          = " "
+          = (n++ + 1)
+</code></pre>
+                <p>
+                  Usage: in the parameters specify:
+                  
+                </p>
+                <ol>
+                  <li>The text of the menu link</li>
+                  <li>The number of menu items</li>
+                  <li>Any classes you require to be added (optional)</li>
+                </ol>
+                <p>
+                  Examples:
+                  
+                </p>
+                <pre><code>//- a 5-item menu:
+
++menu("Menu link", 5)
+
+//- a 4-item menubar, centered
+
++menubar("Test", 4, "menubar--center")
+</code></pre>
+                <h3>Table Generator</h3>
+                <p>
+                  This mixin builds a demo table for you.
+                  
+                </p>
+                <p>See <a href="codebase/pug/generators/_tables.pug">codebase/pug/generators/_tables.pug</a>.
+                  
+                </p>
+                <pre><code>mixin table(totalColumns, totalRows, tableClass)
+  table(class=["table", tableClass])
+    thead
+      tr
+        - for (var cols = 0; cols < totalColumns; cols++)
+          th= "Table Header"
+            = " "
+            = (cols + 1)
+    tbody
+      - for (var rows = 0; rows < totalRows; rows++)
+        tr
+          - for (var cols = 0; cols < totalColumns; cols++)
+            td= "Table content"
+              = " "
+              = (cols + 1)
+              = "."
+              = (rows + 1)
+</code></pre>
+                <p>
+                  Usage: in the parameters specify:
+                  
+                </p>
+                <ol>
+                  <li>The number of rows</li>
+                  <li>The number of columns</li>
+                  <li>Any classes you require to be added (optional)</li>
+                </ol>
+                <p>
+                  Examples:
+                  
+                </p>
+                <pre><code>+table(3, 4)
+
++table(6, 5, "bg--yellow")</code></pre>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__section" id="getting-started-rtl-support">
+              <header>
+                <h2>RTL Languages Support</h2>
+              </header>
+              <section>
+                <p>
+                  Codebase aims to support RTL languages without the requirement for special RTL classes to be applied to elements or containers of elements. Codebase does this by using the CSS3 <code>[dir="rtl"]</code> selector.
+                  
+                </p>
+                <p>Add <code>dir="rtl"</code> to a container &ndash; this can be the <code>&lt;html&gt;</code> tag itself. This sets the direction of the text flow from right to left &ndash; <i>and</i> it implements Codebase RTL support on those components that need it.
+                  
+                </p>
+                <p>If for some reason you <i>really can't</i> use <code>[dir="rtl"]</code>, then you can use <code>class="rtl"</code> &ndash; either applied to the element itself, or to a container of it. (But of course, classes do not change the <i>text direction</i>. So you will still have to accomplish that by another means.)
+                  
+                </p>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-check-circle text--green-darken-1"></i> If you add <code>[dir="rtl"]</code> (or <code>class="rtl"</code>) to a container, component or element that requires it, then you get Codebase RTL support.
+                  
+                </p>
+                <p>Some Codebase components and text utility classes have a <code>*--right</code> and <code>*--left</code> modifier class for controlling the horizontal alignment of elements. These have been styled so that they are the same for both LTR and RTL. (Right is always right and left is always left.)
+                  
+                </p>
+                <p>Codebase was originally built by an LTR language speaker (English), and so the Sass has been styled from a "LTR first" perspective, with RTL overrides built into its mixins &ndash; as in the 
+                  <mark>highlighed</mark> selectors in the following simplified example (Sass):
+                    
+                </p>
+                <pre dir="ltr"><code>=something
+
+  // LTR supported by default
+  padding-left: 100px
+    
+    // RTL supported by override
+    <mark>[dir="rtl"] &amp;, &amp;[dir="rtl"],</mark>
+    <mark>.rtl &amp;, &amp;.rtl</mark>
+      padding-left: inherit
+      padding-right: 100px
+
+.something
+  +something</code></pre>
+              </section>
+            </div>
+          </article>
+        </main>
+        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta |
+            <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> |
+            Built by <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="codebase/js/codebase.js"></script>
+    <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
+    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
   </body>
 </html>

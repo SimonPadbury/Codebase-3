@@ -1,0 +1,82 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "decoration-element-grid"
+  - var sectionTitle = "Element Grid"
+
+block section
+  p.
+    Since version 2.0 Codebase uses a "soft" 4px element grid for consistently positioning elements relative to each other.
+    
+  p.
+    This is similar in principle to various 8px grids out there (also known as 8-point or 8dp [device pixel] grids). For example:
+    
+  ul
+    li.
+      #[a(href="https://spec.fm/specifics/8-pt-grid") SpecFM's 8-point grid] 
+    li.
+      #[a(href="http://www.bbc.co.uk/gel/web/foundations/universal-grid/baseline") The BBC GEL's 8px baseline grid]
+    li.
+      #[a(href="https://material.io/guidelines/layout/metrics-keylines.html") Material Design's 8dp square baseline grid]
+
+  p.
+    (If you're already familiar with the 8-point grid concept, you can think of Codebase's 4px grid in the same way, but with the ability to do a "half unit" whenever you find it useful.)
+
+  p.
+    The #[strong Codebase element grid] has been deployed a follows:
+    
+  ol
+    li.
+      Element grid #[code $spacing--*] variables have been used for setting all line-heights, margins and paddings throughout Codebase.
+
+  table.table.deco
+    thead
+      tr
+        th Element grid Variable
+        th Size
+    tbody
+      tr
+        td 
+          code $spacing--4
+        td 4px
+      tr
+        td 
+          code $spacing--8
+        td 8px
+      tr
+        td 
+          code $spacing--12
+        td 12px
+      tr
+        td 
+          code $spacing--16
+        td 16px
+      tr
+        td 
+          code $spacing--20
+        td 20px
+      tr
+        td 
+          code $spacing--24
+        td 24px
+      tr
+        td 
+          code $spacing--28
+        td 28px
+      tr
+        td ...
+        td ...
+      tr
+        td 
+          code $spacing--80
+        td 80px
+
+  ol(start="2")
+    li.
+      By default, the base typography vertical rhythm (line-height) is set at 24px = #[code $spacing--24] (equivalent to #[code line-height: 1.5]). The line heights for headers have also been set using of element grid #[code $spacing--*] variables.
+    li.
+      The layout #[code .flexbox] gutters have been set using #[code $spacing--*] variables.
+    li.
+      In setting margins and paddings for components in the #[code .deco] classes have been set using #[code $spacing--*] variables.
+    li.
+      Codebase decoraion utilities for #[a(href="#decoration-margins") margins] and #[a(href="#decoration-paddings") paddings] have been set using #[code $spacing--*] variables.

@@ -1,0 +1,38 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var sectionId = "getting-started-codebase-with-sass"
+  - var sectionTitle = "Using Codebase with Sass"
+
+block section
+  p.
+    You can #[code @import] the Codebase Sass master file directly into your project Sass master file, and then all the Codebase variables and mixins will be available for you to use. E.g.:
+    
+  pre
+    code.
+      @import "../../codebase/scss/codebase"
+      
+  p.
+    All Codebase variables have the #[code !default] flag. To override any of these, <b>you must first declare your own overrides using the same Codebase variable names</b> (but with your preferred values), and then import Codebase. 
+  
+  pre
+    code.
+      // (1.) Override Codebase `!default` variables before importing Codebase
+
+      $color--yellow: #ffff00
+      
+      // (2.) Import Codebase
+      
+      @import "../../codebase/scss/codebase"
+
+      // (3.) Begin your project styles after importing Codebase
+    
+      body
+        background: $color--yellow
+
+  p.
+    Your Sass pre-processor will preferentially use your values instead of the Codebase defaults. You won't need to modify any Codebase Sass file directly.
+        
+  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
+    i.fa.fa-info-circle.text--green-darken-1
+    | You can copy the entire Codebase default variables file (#[a(href="codebase/scss/02_default-variables/_default-variables.scss") codebase/scss/02_default-variables/_default-variables.scss]) into your theme, then remove all the #[code !default] flags, and set your chosen variable values there.
