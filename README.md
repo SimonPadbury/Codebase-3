@@ -2,7 +2,7 @@
 
 Codebase is a Sass, JavaScript, and Pug website component library.
 
-(Also requires jQuery and Font Awesome.)
+(Also includes Normalize and Font Awesome.)
 
 ## Codebase itself is (in) the `codebase/` folder:
 
