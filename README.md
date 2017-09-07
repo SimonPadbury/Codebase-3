@@ -2,7 +2,7 @@
 
 Codebase is a Sass, JavaScript, and Pug website component library.
 
-(Also requires jQuery and Font Awesome.)
+(Also includes Normalize and Font Awesome.)
 
 ## Codebase itself is (in) the `codebase/` folder:
 
@@ -74,7 +74,7 @@ Find out more about [using Codebase with Pug](getting-started.html#getting-start
 
 ## MIT licence
 
-Codebase is open source software, released under the #[a(href="https://opensource.org/licenses/MIT") MIT licence]. This means:
+Codebase is open source software, released under the [MIT licence](https://opensource.org/licenses/MIT). This means:
 
 > "Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source."
 > – [tl;drLegal](https://tldrlegal.com/license/mit-license")
