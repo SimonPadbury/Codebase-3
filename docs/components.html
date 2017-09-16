@@ -16,7 +16,7 @@
             <g fill="#ffffff">
               <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
             </g>
-          </svg>Codebase <span class="text--muted text--normal">2.0 Beta-2</span></a></div>
+          </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></div>
       <div class="menubar__content">
         <ul class="menubar__right hide--sm-down">
           <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
@@ -35,7 +35,7 @@
                 <g fill="#ffffff">
                   <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
                 </g>
-              </svg>Codebase <span class="text--muted text--normal">2.0 Beta-2</span></a></li>
+              </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></li>
           <li class="hide--sm-up"><a href="#/"><i class="fa fa-home fa-fw fa-lg"></i> Home</a></li>
           <li><a href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a></li>
           <li><a href="basics.html"><i class="fa fa-cubes fa-fw fa-lg"></i> Basics</a></li>
@@ -2138,11 +2138,13 @@
                 <p>A Codebase popover is what is sometimes known as a <b>modal</b> in other frameworks. It is also sometimes used as a <b>lightbox</b> (if the main content is an image). These are essentially all the same thing, therefore "popover" has been chosen as the most generic name.
                   
                 </p>
-                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i>The popover's semi-transparent backdrop is a CSS box shadow on the popover content &ndash; it is not a separate layer. Hat tip:  <a href="https://medium.com/@jotavejv/how-to-create-a-simple-overlay-that-works-anywhere-ae23456d3e8">João Victor's Medium article</a>, "How to create a simple overlay that works anywhere".</p>
+                <p>The <code>.popover</code> component block itself serves at the popover backdrop. 
+                  
+                </p>
                 <p>If you add the modifier class <code>.popover--no-dismiss</code> to the popover block, then "click/tap outside to dismiss" is prevented. This can be useful in situations where your popover content is rather important, and you need to ensure that your visitor interacts with it before deactivating the popover.
                   
                 </p>
-                <p>Also, popovers can be closed by a <code>.popover__close</code> element situated incide the popover content element.
+                <p>Also, popovers can be closed by a <code>.popover__close</code> element situated incise the popover content element.
                   
                 </p>
                 <div class="popover">
@@ -2156,7 +2158,6 @@
                 </p>
                 <div class="popover popover--no-dismiss">
                   <div class="popover__content p--20 bg--white" id="popover-example-1b">
-                    <h4>This popover can't be dismissed unless you click "Close" below</h4>
                     <p>Lorem ipsum dolor sit amet usu in odio gubergren conclusionemque.</p>
                     <div class="text--right"><a class="popover__close">Close</a></div>
                   </div>
@@ -2207,7 +2208,8 @@ button.btn.popover__ctrl(data-content-id="pop-ex-1") Popover example 1
                   </div>
                 </div>
                 <h3>Popovers "expand to fit" any size content</h3>
-                <p>If you don't use any popover constraint classes (as described below), then you get a popover that will take the width of its content, out to the max-width of the viewport and 85% of the viewport height (the viewport height restriction allows for e.g. the iOS Safari browser bar).</p>
+                <p>If you don't use any popover constraint classes (as described below), then you get a popover &ndash; that will take the width of its content, out to the max-width of the viewport and 85% of the viewport height. (Example 1, above, has its max-width as wide as the content &ndash; i.e. the "Lorem ipsum" sentance.) The viewport height restriction allows for e.g. the iOS Safari browser bar.</p>
+                <p>You can add margin and padding, to suit your design &ndash; e.g. using Codebase <a href="decoration.html">decoration</a> utility classes. </p>
                 <p>By default, popovers have their <code>.popover__content</code> have CSS <code>overflow: auto</code>, so that extra long text and/or table content will scroll.</p>
                 <p>
                   Images that are too tall for the popover content will be scaled down to max-height 70% of the viewport height (image width/height proportions are retained). This max-height ensures that images can be entirely displayed within the popover and also allow a little room for an image title. (This provides a very simple "lightbox" setup.)
@@ -2255,68 +2257,77 @@ button.btn.popover__ctrl(data-content-id="pop-ex-1") Popover example 1
                 </div>
                 <p>
                   <button class="btn btn--sm popover__ctrl" data-content-id="popover-2d">Popover example 2d</button> Narrow popover with a lot of text, and <code>.popover__content--narrow</code>.
-                </p>
-                <p>Codebase popovers also have a class <code>.popover--fix</code> that is specially designed to work with a <a href="#components-card">card</a> integrated into the popover. This is documented <i>after</i> explained the use of a card inside a popover &ndash; see below.
                   
                 </p>
-                <h3>Integrating a Card with a Popover</h3>
+                <p><b>Note:</b> If you require a fixed header and/or footer in your popover, see <code>.popover--fix</code> below.</p>
+                <p>Codebase popovers also have a class <code>.popover--fix</code> that is specially designed to work with a <a href="#components-card">card</a> in the popover.  This us documented <i>after</i> explained the use of a card inside a popover &ndash; see below.
+                  
+                </p>
+                <h3>Using a Card inside a Popover</h3>
                 <p>
                   Codebase popovers come with (almost) no styling of their own &ndash; so you can do whatever you like with them. If you require a block header, body and footer then you can easily integrate a Codebase card (or media object).
                   
                 </p>
-                <div class="popover">
-                  <div class="popover__content popover__content--narrow b--rounded card bg--white" id="popover-3">
-                    <div class="card__header p--8 bg--blue"><span class="popover__close float--right text--white text--big-text">&times;</span>
-                      <h4 class="m--zero text--white">Popover header</h4>
-                    </div>
-                    <div class="card__body p--block">
-                      <h3 class="mt--8">Popover body content</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                    <div class="card__footer bt--thin p--block"> Popover footer
-                      <div class="float--right"><a class="popover__close">Cancel</a></div>
+                <div class="popover popover--no-dismiss">
+                  <div class="popover__content popover__content--narrow m--16" id="popover-3">
+                    <div class="b--rounded card bg--white">
+                      <div class="card__header p--8 bg--blue"><span class="popover__close float--right text--white text--big-text">&times;</span>
+                        <h4 class="m--zero text--white">Popover header</h4>
+                      </div>
+                      <div class="card__body p--block">
+                        <h3 class="mt--8">Popover body content</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                      </div>
+                      <div class="card__footer bt--thin p--block"> Popover footer
+                        <div class="float--right"><a class="popover__close">Cancel</a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <p>
-                  <button class="btn btn--sm popover__ctrl" data-content-id="popover-3">Popover example 3</button> &ndash; narrow popover integrating a card plus some extra styling.
+                  <button class="btn btn--sm popover__ctrl" data-content-id="popover-3">Popover example 3</button> &ndash; narrow popover containing a card plus some extra styling, and with <code>.popover--no-dismiss</code>.
                   
                 </p>
                 <div class="tabs deco mt--24">
                   <div class="tab__label-wrap--right">
-                    <div class="tab__label" data-tab-id="tab-docs-popover3-html">HTML</div>
-                    <div class="tab__label" data-tab-id="tab-docs-popover3-pug">Pug</div>
+                    <div class="tab__label" data-tab-id="tab-docs-popover2-html">HTML</div>
+                    <div class="tab__label" data-tab-id="tab-docs-popover2-pug">Pug</div>
                   </div>
-                  <div class="tab__card" id="tab-docs-popover3-html">
+                  <div class="tab__card" id="tab-docs-popover2-html">
                     <pre class="mt--zero"><code>&lt;/div class="popover"&gt;
-  &lt;div id="pop-ex-3" class="popover__content popover__content--narrow <mark>card</mark>"&gt;
-    &lt;div class="card__header"&gt;
-      &lt;a class="popover__close float--right"&gt;&times;&lt;/a&gt;
-      Card header content
+  &lt;div id="pop-ex-3" class="popover__content popover__content--narrow"&gt;
+    
+    &lt;div class="card"&gt;
+      &lt;div class="media__header"&gt;
+        &lt;a class="popover__close float--right"&gt;&times;&lt;/a&gt;
+        Card header content
+      &lt;/div&gt;
+      &lt;div class="card__body"&gt;
+        Card body content
+      &lt;/div&gt;
+      &lt;div class="card__footer"&gt;
+        Card footer content
+      &lt;/div&gt;              
     &lt;/div&gt;
-    &lt;div class="card__body"&gt;
-      Card body content
-    &lt;/div&gt;
-    &lt;div class="card__footer"&gt;
-      Card footer content
-    &lt;/div&gt;              
-  &lt;/div&gt;
 
+  &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;button class="popover__ctrl btn" data-content-id="pop-ex-3"&gt;Popover example 3&lt;/button&gt;
 </code></pre>
                   </div>
-                  <div class="tab__card" id="tab-docs-popover3-pug">
+                  <div class="tab__card" id="tab-docs-popover2-pug">
                     <pre class="mt--zero"><code>.popover
-  #pop-ex-3.popover__content.popover__content--narrow<mark>.card</mark>
-    .card__header
-      a.popover__close.float--right &times;
-      Card header content
-    .card__body
-      Card body content
-    .card__footer
-      Card footer content
+  #pop-ex-3popover__content.popover__content--narrow
+    
+    .card
+      .card__header
+        a.popover__close.float--right &times;
+        Card header content
+      .card__body
+        Card body content
+      .card__footer
+        Card footer content
   
 button.btn.popover__ctrl(data-content-id="pop-ex-3") Popover example 3
 
@@ -2325,41 +2336,46 @@ button.btn.popover__ctrl(data-content-id="pop-ex-3") Popover example 3
 
 
 
+
 </code></pre>
                   </div>
                 </div>
-                <h3> Integrating a Flexbox Layout System with a Popover</h3>
-                <p>You can also put a <a href="layout.html#layout-flexbox-systems">flexbox layout system</a> into a popover (with or without incorporating it into a card). And for constraining the popover container width, you can do either of the following:
+                <h3> Using a Flexbox Layout System inside a Popover</h3>
+                <p>You can also put a <a href="layout.html#layout-flexbox-systems">flexbox layout system</a> into a popover (with or without incorporating it into a card). And for constraining the popover container width, you can do either:
                   
                 </p>
                 <ol>
                   <li>Control the width of the popover container, e.g. by adding <code>.popover__content--narrow</code></li>
-                  <li>Control the width of the flexbox, e,g, by adding <code>.flexbox--container</code> &ndash; see below
+                  <li>Control the width of the flexbox, e,g, by adding <code>.flexbox--container</code>
                     
                   </li>
                 </ol>
                 <div class="popover">
-                  <div class="popover__content m--16 b--rounded bg--white flexbox flexbox--container card m--zero" id="popover-4">
-                    <div class="card__header bb--thin p--block"><span class="popover__close float--right"><i class="fa fa-times"></i></span>
-                      <h4 class="mb--zero">Header</h4>
-                    </div>
-                    <div class="card__body p--16">
-                      <div class="flexbox flexbox--gutter flexbox--nested">
-                        <div class="flexitem flexitem-sm--span-6"><img src="holder.js/800x600"></div>
-                        <div class="flexitem flexitem-sm--span-6">
-                          <h2>Image Title</h2>
-                          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-                          <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
-                          <p>
-                            <button class="btn btn--primary">Activate</button>
-                            <button class="btn btn--secondary">Delete</button>
-                          </p>
+                  <div class="popover__content m--16" id="popover-4">
+                    <div class="card bs-2q b--rounded bs bg--white">
+                      <div class="flexbox flexbox--container">
+                        <div class="card__header bb--thin p--block"><span class="popover__close float--right"><i class="fa fa-times"></i></span>
+                          <h4 class="mb--zero">Header</h4>
                         </div>
-                      </div>
-                    </div>
-                    <div class="card__footer bt--thin p--16">
-                      <div class="text--right">
-                        <button class="btn btn--secondary popover__close text--right">Cancel</button>
+                        <div class="card__body p--16">
+                          <div class="flexbox flexbox--gutter flexbox--nested">
+                            <div class="flexitem flexitem-sm--span-6"><img src="holder.js/800x600"></div>
+                            <div class="flexitem flexitem-sm--span-6">
+                              <h2>Image Title</h2>
+                              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+                              <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
+                              <p>
+                                <button class="btn btn--primary">Activate</button>
+                                <button class="btn btn--secondary">Delete</button>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card__footer bt--thin p--block">
+                          <div class="text--right">
+                            <button class="btn btn--secondary popover__close text--right">Cancel</button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2368,77 +2384,15 @@ button.btn.popover__ctrl(data-content-id="pop-ex-3") Popover example 3
                   <button class="btn btn--sm popover__ctrl" data-content-id="popover-4">Popover example 4</button> &ndash; popover with flexbox system inside a card
                   
                 </p>
-                <div class="tabs deco mt--24">
-                  <div class="tab__label-wrap--right">
-                    <div class="tab__label" data-tab-id="tab-docs-popover4-html">HTML</div>
-                    <div class="tab__label" data-tab-id="tab-docs-popover4-pug">Pug</div>
-                  </div>
-                  <div class="tab__card" id="tab-docs-popover4-html">
-                    <pre class="mt--zero"><code>&lt;/div class="popover"&gt;
-  &lt;div id="pop-ex-4" class="popover__content popover__content--narrow <mark>flexbox flexbox--container card</mark>"&gt;
-    &lt;div class="card__header"&gt;
-      &lt;a class="popover__close float--right"&gt;&times;&lt;/a&gt;
-      Card header content
-    &lt;/div&gt;
-
-    &lt;div class="card__body <mark>flexbox flexbox--gutter flexbox--nested</mark>"&gt;
-      &lt;div class="<mark>flexitem flexitem-sm--span-6</mark>"&gt;
-        &lt;!-- First flexitem content --&gt;
-      &lt;/div&gt;
-      &lt;div class="<mark>flexitem flexitem-sm--span-6</mark>"&gt;
-        &lt;!-- Second flexitem content --&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class="card__footer"&gt;
-      Card footer content
-    &lt;/div&gt;              
-  &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;button class="popover__ctrl btn" data-content-id="pop-ex-4"&gt;Popover example 3&lt;/button&gt;
-</code></pre>
-                  </div>
-                  <div class="tab__card" id="tab-docs-popover4-pug">
-                    <pre class="mt--zero"><code>.popover
-  #pop-ex-4.popover__content.popover__content--narrow<mark>.flexbox.flexbox--container.card</mark>
-    .card__header
-      a.popover__close.float--right &times;
-      Card header content
-
-    .card__body<mark>.flexbox.flexbox--gutter.flexbox--nested</mark>
-      <mark>.flexitem.flexitem-sm--span-6</mark>
-        // First flexitem content
-      <mark>.flexitem.flexitem-sm--span-6</mark>
-        // Second flexitem content
-
-    .card__footer
-      Card footer content
-  
-button.btn.popover__ctrl(data-content-id="pop-ex-4") Popover example 3
-
-
-
-
-
-
-
-
-</code></pre>
-                  </div>
-                </div>
+                <p class="text--initial-icon b--thin b--green-lighten-1 b--rounded p--16 pl--80 bg--green-lighten-3"><i class="fa fa-info-circle text--green-darken-1"></i><b>Note:</b> If you are combing <code>.popover</code>, <code>.card</code> and <code>.flexbox</code>, then you may need to use <code>.flexbox.flexbox--container</code> as the first child of <code>popover__content</code> to set the overall width. Then use another <code>.flexbox</code> within the <code>.card_body</code>.    </p>
                 <h3>Using <code>.popover--fix</code></h3>
                 <p>The Codebase popover modifier class <code>.popover--fix</code> is designed to work with the use of a <a href="#components-card">card</a> in the popover. <code>.popover--fix</code> prevents the popover's default overflow scrolling and enables card header and footer to be fixed to the top and bottom of the popover, and then it allows card body overflow scrolling instead.
                   
                 </p>
-                <p><code>.popover--fix</code> is what you need when your popover contains a lot of text or table data.
-                  
-                </p>
                 <div class="popover popover--no-dismiss">
-                  <div class="popover__content popover__content--narrow popover__content--fix b--rounded bg--white" id="popover-5">
+                  <div class="popover__content popover__content--narrow popover__content--fix mt--line mr--8 ml--8 bs--2z b--rounded bg--white" id="popover-5">
                     <div class="card card--vertical m--zero">
-                      <div class="card__header p--8 bb--thin bg--white"><a class="mt--4 popover__close float--right">Done</a>
+                      <div class="card__header p--8 bb--thin bt--rounded bg--white"><a class="mt--4 popover__close float--right">Done</a>
                         <h4 class="mb--zero">Header</h4>
                       </div>
                       <div class="card__body p--block">
@@ -2705,14 +2659,14 @@ button.btn.popover__ctrl(data-content-id="pop-ex-4") Popover example 3
                   </div>
                 </div>
                 <p>
-                  <button class="btn btn--sm popover__ctrl" data-content-id="popover-5">Popover example 5</button> &ndash; popover with <code>.popover--fix</code>
+                  <button class="btn btn--sm popover__ctrl" data-content-id="popover-5">Popover example 5</button> &ndash; popover with <code>.popover--fix</code>.
+                  
+                </p>
+                <p><code>.popover--fix</code> is what you need when your popover contains a lot of text or table data.
                   
                 </p>
                 <h3>Full cover popover</h3>
-                <p>If you require a popover to cover the entire window, add <code>.popover__content--cover</code>.
-                  
-                </p>
-                <p>For example, use <code>.popover__content--cover</code> for a sitemap.
+                <p>If you require a popover to cover the entire window, add <code>.popover--cover</code> . For example, use this for a navigation system or sitemap.
                   
                 </p>
                 <div class="popover">
@@ -2870,7 +2824,7 @@ button.btn.popover__ctrl(data-content-id="pop-ex-4") Popover example 3
   // and your additional lightbox styles
 </code></pre>
                 <h3>Popover Classes</h3>
-                <p>The table below includes only classes for the popover itself. For card classes see <a href="#components-card">card</a>. For flexbox layout classes see <a href="layout.html#layout-flexbox-classes">flexbox classes</a>.
+                <p>The table below includes only classes for the popover itself. For card classes see <a href="#components-card">card</a>.
                   
                 </p>
                 <table class="table deco">
@@ -2917,7 +2871,7 @@ button.btn.popover__ctrl(data-content-id="pop-ex-4") Popover example 3
                     </tr>
                     <tr>
                       <td> <code>.popover__content--cover</code></td>
-                      <td> (Optional) full cover</td>
+                      <td> (Optional) full-page cover layout</td>
                     </tr>
                   </tbody>
                 </table>
@@ -3133,7 +3087,7 @@ button.btn.popover__ctrl(data-content-id="pop-ex-4") Popover example 3
                   <tbody>
                     <tr>
                       <td><code>.tabs</code></td>
-                      <td class="text--nowrap">The tab system component block.</td>
+                      <td>The tab system component block.</td>
                       <td></td>
                     </tr>
                     <tr>
@@ -3243,13 +3197,12 @@ button.btn.popover__ctrl(data-content-id="pop-ex-4") Popover example 3
             </div>
           </article>
         </main>
-        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta-2 |
+        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta |
             <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> |
             Built by <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
       </div>
     </div>
     <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
-    <script src="codebase/js/codebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
   </body>
 </html>
