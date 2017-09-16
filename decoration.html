@@ -16,7 +16,7 @@
             <g fill="#ffffff">
               <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
             </g>
-          </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></div>
+          </svg>Codebase <span class="text--muted text--normal">2.0 Beta-2</span></a></div>
       <div class="menubar__content">
         <ul class="menubar__right hide--sm-down">
           <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
@@ -35,7 +35,7 @@
                 <g fill="#ffffff">
                   <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
                 </g>
-              </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></li>
+              </svg>Codebase <span class="text--muted text--normal">2.0 Beta-2</span></a></li>
           <li class="hide--sm-up"><a href="#/"><i class="fa fa-home fa-fw fa-lg"></i> Home</a></li>
           <li><a href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a></li>
           <li><a href="basics.html"><i class="fa fa-cubes fa-fw fa-lg"></i> Basics</a></li>
@@ -292,26 +292,13 @@ h2 {
               </header>
               <section>
                 <p>A few simple border styles.</p>
-                <div class="flexbox">
-                  <div class="flexitem flexitem-xs--span-6">
-                    <ul>
-                      <li>borders all <code>b--*</code></li>
-                      <li>border-top <code>bt--*</code></li>
-                      <li>border-right <code>br--*</code></li>
-                      <li>border-bottom <code>bb--*</code></li>
-                      <li>border-left <code>bl--*</code></li>
-                    </ul>
-                  </div>
-                  <div class="flexitem flexitem-xs--span-6">     
-                    <ul>
-                      <li>top-right (corner<sup>1</sup>) <code>btr--*</code></li>
-                      <li>bottom-right (corner<sup>1</sup>) <code>bbr--*</code></li>
-                      <li>bottom-left (corner<sup>1</sup>) <code>bbl--*</code></li>
-                      <li>top-left (corner<sup>1</sup>) <code>btl--*</code></li>
-                    </ul>
-                  </div>
-                </div>
-                <p><sup>1</sup> The corners are for when you need to set particular rounded corners.</p>
+                <ul>
+                  <li>borders all <code>b--*</code></li>
+                  <li>border-top <code>bt--*</code></li>
+                  <li>border-right <code>br--*</code></li>
+                  <li>border-bottom <code>bb--*</code></li>
+                  <li>border-left <code>bl--*</code></li>
+                </ul>
                 <p>Examples:</p>
                 <div class="mb--8 p--8 b--thin b--zero"> <code>.b--zero</code> (0px &ndash; for removing borders)</div>
                 <div class="mb--8 p--8 b--dashed"> <code>.b--dashed</code> (1px)</div>
@@ -319,7 +306,7 @@ h2 {
                 <div class="mb--8 p--8 b--thick"> <code>.b--thick</code> (4px)</div>
                 <div class="mb--8 p--8 b--heavy"> <code>.b--heavy</code> (8px)</div>
                 <p class="mt--line">
-                  <By>default, borders have color code <code>$color--gray-lighten-2</code>. Borders can be assigned other colors in the Codebase swatch using <code>b--[color</code>] classes. See <a href="#decoration-colors">colors</a>.</By>
+                  <By>default, borders have color code <code>$color--gray-lighten-2</code>. Borders can be assigned other colors in the Codebase swatch using <code>b--{color}</code> classes. See <a href="#decoration-colors">colors</a>.</By>
                 </p>
                 <h3>Border enhancements:</h3>
                 <div class="flexbox flexbox--gutter">
@@ -330,52 +317,6 @@ h2 {
                     <div class="mh--auto p--40 b--thin b--circle" style="width:250px;height:250px;"> .b--circle</div>
                   </div>
                 </div>
-                <table class="table deco">
-                  <tbody>
-                    <tr>
-                      <td colspan="8">Rounded corners: adjacent corner pairs</td>
-                    </tr>
-                    <tr>
-                      <td><code>.bt--rounded</code></td>
-                      <td>
-                        <div class="bt--rounded p--20 bg--purple"></div>
-                      </td>
-                      <td><code>.bb--rounded</code></td>
-                      <td>
-                        <div class="bb--rounded p--20 bg--purple"></div>
-                      </td>
-                      <td><code>.br--rounded</code></td>
-                      <td>
-                        <div class="br--rounded p--20 bg--purple"></div>
-                      </td>
-                      <td><code>.bl--rounded</code></td>
-                      <td>
-                        <div class="bl--rounded p--20 bg--purple"></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="8">Rounded corners: single corners</td>
-                    </tr>
-                    <tr>
-                      <td><code>.btr--rounded</code></td>
-                      <td>
-                        <div class="btr--rounded p--20 bg--purple"></div>
-                      </td>
-                      <td><code>.btl--rounded</code></td>
-                      <td>
-                        <div class="btl--rounded p--20 bg--purple"></div>
-                      </td>
-                      <td><code>.bbr--rounded</code></td>
-                      <td>
-                        <div class="bbr--rounded p--20 bg--purple"></div>
-                      </td>
-                      <td><code>.bbl--rounded</code></td>
-                      <td>
-                        <div class="bbl--rounded p--20 bg--purple"></div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
               </section>
             </div>
           </article>
@@ -764,12 +705,13 @@ h2 {
             </div>
           </article>
         </main>
-        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta |
+        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta-2 |
             <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> |
             Built by <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
       </div>
     </div>
     <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
-    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+    <script src="codebase/js/codebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
   </body>
 </html>

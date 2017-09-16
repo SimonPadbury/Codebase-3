@@ -1,8 +1,8 @@
-# Codebase v.2.0 Beta
+# Codebase v.2.0 Beta-2
 
 Codebase is a Sass, JavaScript, and Pug website component library.
 
-(Also includes Normalize and Font Awesome.)
+(Also @include Normalize and @include Font Awesome.)
 
 ## Codebase itself is (in) the `codebase/` folder:
 
@@ -71,6 +71,20 @@ The Codebase CSS and JS files can be used with HTML directly, of course. Or you 
 The Codebase documentation has been developed using Pug. Pug snippets of Codebase components have been included through the docs. There are also further [examples](examples.html).
 
 Find out more about [using Codebase with Pug](getting-started.html#getting-started-codebase-with-pug).
+
+## Compatibility
+
+Codebase is compatible with the following browsers (tested September 2017 on MacOS and iOS):
+
+* Safari
+* Firefox
+* Chrome
+* Edge
+* Opera
+* Brave
+* Vivaldi (no iOS)
+
+Responsive images within flexbox are messed up by IE11. Plus other flexbox problem in popovers. This Mac user would appreciate some help here. :-)
 
 ## MIT licence
 

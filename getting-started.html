@@ -16,7 +16,7 @@
             <g fill="#ffffff">
               <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
             </g>
-          </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></div>
+          </svg>Codebase <span class="text--muted text--normal">2.0 Beta-2</span></a></div>
       <div class="menubar__content">
         <ul class="menubar__right hide--sm-down">
           <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
@@ -35,7 +35,7 @@
                 <g fill="#ffffff">
                   <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
                 </g>
-              </svg>Codebase <span class="text--muted text--normal">2.0 Beta</span></a></li>
+              </svg>Codebase <span class="text--muted text--normal">2.0 Beta-2</span></a></li>
           <li class="hide--sm-up"><a href="#/"><i class="fa fa-home fa-fw fa-lg"></i> Home</a></li>
           <li><a class="this-page" href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a>
             <div class="docs__nav--sub-nav">
@@ -138,19 +138,13 @@
                 <h2>Third-party Dependencies</h2>
               </header>
               <section>
-                <h3>Normalize</h3>
-                <p>The <a href="https://necolas.github.io/normalize.css/">Normalize</a> stylesheet has already been been sourced from <a href="https://cdnjs.com/">CDNJS</a> and included into <code>codebase.css</code> during Sass pre-processing.
+                <p><code>codebase.css</code> has CSS @includes that source the following from <a href="https://cdnjs.com/">CDNJS</a> while you are online (they may already be in your browser cache):
                   
                 </p>
-                <h3>Font Awesome</h3>
-                <p>The <a href="http://fontawesome.io/">Font Awesome</a> stylesheet has already been been sourced from <a href="https://cdnjs.com/">CDNJS</a> and included into <code>codebase.css</code> during Sass pre-processing.
-                  
-                </p>
-                <p>
-                  The Font Awesome icon font will be sourced from CDNJS while you are online. (It may already be in your browser cache.)
-                  
-                </p>
-                <p>The only external call that Codebase makes is to Font Awesome on CDNJS.</p>
+                <ol>
+                  <li>The <a href="https://necolas.github.io/normalize.css/">Normalize</a> stylesheet.</li>
+                  <li>The <a href="http://fontawesome.io/">Font Awesome</a> stylesheet and icon font.</li>
+                </ol>
               </section>
             </div>
           </article>
@@ -578,12 +572,13 @@ mixin menubar(menuLink, total, menuClass)
             </div>
           </article>
         </main>
-        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta |
+        <footer class="docs__footer"><span class="text--gray-lighten-4"><a href="index.html">Codebase</a> v.2.0 Beta-2 |
             <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> |
             Built by <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
       </div>
     </div>
     <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
-    <script src="codebase/js/codebase.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js" integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
+    <script src="codebase/js/codebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
   </body>
 </html>

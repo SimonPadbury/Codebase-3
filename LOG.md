@@ -1,5 +1,12 @@
 # Codebase Version Log
 
+### v.2.0 Beta 2 -- 16 Sep 2017
+
+* Removed `pointer-events` in the popover, and added a CSS delay in the dismissal of the popover (now OK in Opera Mini, older IE).
+* Removed specific rounded-corner decoration classes.
+* Fixed the Docs secondary sidebar for Opera Mini.
+* Several minor bug fixes and improvements.
+
 ### v.2.0 BETA -- 7 Sep 2017
 
 * Since v.2.0 both third-party stylesheets (Normalize and Font Awesome, from [https://cdnjs.com/](https://cdnjs.com/)) are incorporated directly into `codebase.css` itself _during pre-processing_ of the Codebase Sass files. Now all you need is Codebase plus your own styles.

@@ -5,30 +5,25 @@
   &:hover
     cursor: pointer
 
-// The popover container is used to hide the popover off-screen
+// The popover container is used to hide the popover off-canvas
 =popover
   position: fixed
   display: flex
   justify-content: center
   align-items: center
-  overflow: hidden
+  overflow: auto
   top: 0
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+  //@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
     // IE10,11
-    top: -100vh
   right: 0
   left: 0
   width: 100vw
-  height: 100vh
-  background: $popover--backdrop-color
-  pointer-events: none
-  opacity: 0
-  transition: $popover--transition-backdrop
+  height: 0
+  transition: height 0s ease-out 1s
   z-index: $z-index--popover
   &.is-active
-    top: 0
-    opacity: 1
-    pointer-events: auto
+    height: 100vh
+    transition: height 0s ease-in 0s
 
 // The popover itself
 =popover__content
@@ -36,8 +31,11 @@
   max-height: 85vh
   overflow: auto !important
   opacity: 0
+  // Box-shadow backdrop, idea from: https://medium.com/@jotavejv/how-to-create-a-simple-overlay-that-works-anywhere-ae23456d3e8
+  box-shadow: $popover--backdrop-box-shadow
   transform: scale(0.8)
   transition: $popover--transition-content
+  transition: all 0.3s ease-in-out
   img
     max-height: 70vh !important
     width: auto !important
