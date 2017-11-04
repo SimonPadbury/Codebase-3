@@ -117,7 +117,7 @@ block section
   .popover
     #popover-2d.popover__content.popover__content--narrow.mt--line.m--16.p--16.bg--white
       a.popover__close.float--right
-        Close #[i.fa.fa-times-circle.text--big-text]
+        Close #[i.fa.fa-times-circle.text--big]
       
       h3 A title
       +paragraph(4)
@@ -140,7 +140,7 @@ block section
   .popover
     #popover-3.popover__content.popover__content--narrow.b--rounded.card.bg--white
       .card__header.p--8.bg--blue
-        span.popover__close.float--right.text--white.text--big-text &times;
+        span.popover__close.float--right.text--white.text--big &times;
         h4.m--zero.text--white Popover header
       .card__body.p--block
         h3.mt--8 Popover body content
@@ -208,7 +208,7 @@ block section
     li.
       Control the width of the popover container, e.g. by adding #[code .popover__content--narrow]
     li.
-      Control the width of the flexbox, e,g, by adding #[code .flexbox--container] &ndash; see below
+      Control the width of the flexbox, e,g, by adding #[code .flexbox--container] &ndash; see example below
 
   .popover
     #popover-4.popover__content.m--16.b--rounded.bg--white.flexbox.flexbox--container.card.m--zero
@@ -242,7 +242,7 @@ block section
       pre.mt--zero
         code.
           &lt;/div class="popover"&gt;
-            &lt;div id="pop-ex-4" class="popover__content popover__content--narrow <mark>flexbox flexbox--container card</mark>"&gt;
+            &lt;div id="pop-ex-4" class="popover__content popover__content--narrow <mark>flexbox flexbox--container</mark> card"&gt;
               &lt;div class="card__header"&gt;
                 &lt;a class="popover__close float--right"&gt;&times;&lt;/a&gt;
                 Card header content
@@ -329,10 +329,10 @@ block section
               tr.bb--thin
                 td
                   = n++ + 1
-                td.info #[img(src="holder.js/56x56").float--left] #[b Lorem ipsum dolor sit amet] #[br] #[.text--small-text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.] 
-                td(style="width: 40px") #[i.fa.fa-fw.fa-cloud-download.text--big-text]
-                td(style="width: 40px") #[i.fa.fa-fw.fa-play-circle.text--big-text]
-                td(style="width: 40px") #[i.fa.fa-fw.fa-comment.text--big-text]
+                td.info #[img(src="holder.js/56x56").float--left] #[b Lorem ipsum dolor sit amet] #[br] #[.text--small Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.] 
+                td(style="width: 40px") #[i.fa.fa-fw.fa-cloud-download.text--big]
+                td(style="width: 40px") #[i.fa.fa-fw.fa-play-circle.text--big]
+                td(style="width: 40px") #[i.fa.fa-fw.fa-comment.text--big]
                   
 
           table.table.bt--thin.tracks
@@ -381,7 +381,7 @@ block section
       .flexbox.flexbox--container.flexbox--gutter
         .flexitem
           a.popover__close.float--right.pt--16
-            Close #[i.fa.fa-times-circle.text--big-text]
+            Close #[i.fa.fa-times-circle.text--big]
           h2.mt--line Sitemap
           hr
       .flexbox.flexbox--container.flexbox--gutter
@@ -461,7 +461,7 @@ block section
         td(colspan="2")
           | By default the popover content width is unconstrained &ndash; so the width becomes whatever the content needs ("expand to fit").
       tr
-        td  #[code .popover__content--narrow]
+        td  #[code.text--nowrap .popover__content--narrow]
         td  (Optional) narrow constrained layout
       tr
         td  #[code .popover__content--fix]

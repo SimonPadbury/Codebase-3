@@ -1,4 +1,4 @@
-# Codebase v.2.0 Beta-2
+# Codebase v.2.0 Beta-3
 
 Codebase is a Sass, JavaScript, and Pug website component library.
 
@@ -22,7 +22,7 @@ codebase/
 
 ### (1.) Two ways of using Codebase
 
-(a.) [Simple setup](getting-started.html#getting-started-simple-setup): Just use `codebase.css` and `codebase.js` in your project. (jQuery not required.)
+(a.) [Simple setup](getting-started.html#getting-started-simple-setup): Simply use `codebase.css` and `codebase.js` in your HTML project. (jQuery not required.)
 
 (b.) [Advanced setup](getting-started.html#getting-started-advanced-setup):
 
