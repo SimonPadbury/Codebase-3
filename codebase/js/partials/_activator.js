@@ -146,7 +146,7 @@
         // (c.) Close when clicking a hyperlink within.
         // E.g. close off-canvas if link goes somewhere on same page.
 
-        [].forEach.call(document.querySelectorAll("a[href*='#']"), function(el) { 
+        [].forEach.call(document.querySelectorAll("a[href*='#']"), function(el) {
           el.addEventListener("click", function() {
             deactivate();
           });

@@ -1,5 +1,9 @@
 # Codebase Version Log
 
+### v.2.0 Beta-3 -- 4 Nov 2017
+
+* Minor bug fixes and improvements.
+
 ### v.2.0 Beta 2 -- 16 Sep 2017
 
 * Removed `pointer-events` in the popover, and added a CSS delay in the dismissal of the popover (now OK in Opera Mini, older IE).

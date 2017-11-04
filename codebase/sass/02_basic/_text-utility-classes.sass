@@ -67,7 +67,7 @@
 =text--caps
   text-transform: uppercase
 
-=text--small-text
+=text--small
   font-size: 80%
   line-height: 1.5
 
@@ -79,12 +79,12 @@
 // Note: Not for use on inline text elements, because
 // it changes the line height.
 
-=text--big-text
-  font-size: $text--big-text-font-size
-  line-height: $text--big-text-line-height
-  +text--big-text-headers
+=text--big
+  font-size: $text--big-font-size
+  line-height: $text--big-line-height
+  +text--big-headers
   +break--min($mq--headers-alt)
-    +text--big-text-headers-alt
+    +text--big-headers-alt
 
 // Text muted (semi-transparent)
 
@@ -102,8 +102,8 @@
 =basics-typography
 
   .text--lead
-    +text--big-text
-    .text--big-text &
+    +text--big
+    .text--big &
       font-size: 1.25em
       line-height: 1.5
 
@@ -140,8 +140,8 @@
   .text--caps
     +text--caps
 
-  .text--small-text
-    +text--small-text
+  .text--small
+    +text--small
 
   .text--nowrap
     +text--nowrap
@@ -149,8 +149,8 @@
   .text--muted
     +text--muted
 
-  .text--big-text
-    +text--big-text
+  .text--big
+    +text--big
 
 @if $include-css--typography == true
   +basics-typography

@@ -1,4 +1,4 @@
-# Codebase v.2.0 Beta-2
+# Codebase v.2.0 Beta-3
 
 Codebase is a Sass, JavaScript, and Pug website component library.
 
