@@ -9,6 +9,7 @@
     <title>Example Dashboard | Codebase</title>
     <link rel="icon">
     <link rel="stylesheet" href="codebase/css/codebase.css">
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
     <style>
       .example-menubar-1 {
         z-index: 121;
@@ -39,17 +40,17 @@
     </style>
   </head>
   <body class="bg--gray-lighten-3">
-    <div class="menubar menubar--fixed bg--white example-menubar-1">
+    <div class="menubar menubar--fixed bg--white example-menubar-1 py--4">
       <div class="menubar__brand"><a href="#/"><b>Dashboard</b></a></div>
       <div class="menubar__content">
         <ul class="menubar__right">
-          <li><a><i class="fa fa-arrow-circle-o-left"></i></a></li>
+          <li><a><i class="fa fa-arrow-circle-left"></i></a></li>
           <li><a><i class="fa fa-user-circle"></i></a></li>
-          <li><a><i class="fa fa-arrow-circle-o-right"></i></a></li>
+          <li><a><i class="fa fa-arrow-circle-right"></i></a></li>
           <li><a><i class="fa fa-cog"></i></a></li>
-          <li><a class="dropdown__ctrl"><i class="fa fa-ellipsis-v"></i> <i class="fa fa-caret-down"></i></a>
+          <li><a class="dropdown__ctrl"><i class="fa fa-ellipsis-v"></i></a>
             <div class="dropdown__content dropdown__content--right b--thin bg--white">
-              <ul class="menu deco text--left">
+              <ul class="menu decorate left">
                 <li><a href="">Edit your profile</a></li>
                 <li><a href="">Settings</a></li>
                 <li><a href="">Logout</a></li>
@@ -59,7 +60,7 @@
         </ul>
       </div>
     </div>
-    <div class="mt--40 menu menu--fixed menu--menubar-md bg--gray-darken-3 example-menubar-2">
+    <div class="mt--48 menu menu--fixed menu--menubar-md bg--gray-darken-3 example-menubar-2">
       <div class="menu__ctrl menu__ctrl--right m--12 btn btn btn--icon btn--sm btn--big-text fa fa-bars"></div>
       <div class="menu__content">
         <ul class="menubar__justify">
@@ -69,187 +70,266 @@
           <li><a href="#/">Unassigned</a></li>
           <li><a href="#/">Ideas</a></li>
           <li><a href="#/">Showcase</a></li>
-          <li><a href="#/">Guides</a></li><a class="dropdown__ctrl">Search <i class="fa fa-caret-down"></i></a>
+          <li><a href="#/">Guides</a></li><a class="dropdown__ctrl">Search</a>
           <div class="dropdown__content dropdown__content--right bg--gray-darken-3">
-            <form class="mb--zero p--16">
+            <form class="mb p--16">
               <input class="b--gray form__input--inline form__input--sm combo--left" id="search-example" name="examplename" placeholder="Search..." type="text">
-              <button class="btn btn--icon btn--sm combo--right" type="submit"><i class="fa fa-search"></i>    </button>
+              <button class="btn btn--icon btn--sm combo--right" type="submit"><i class="fas fa-search"></i>    </button>
             </form>
           </div>
         </ul>
       </div>
     </div>
-    <div class="flexbox flexbox--gutter pt--60">
-      <div class="flexitem flexitem--span-4 flexitem-sm--span-3 flexitem-md--span-2 pt--40 bg--white">
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 1
+    <div class="flexbox flexbox--gap pt--84">
+      <div class="flex-item--span-4 flex-item-sm--span-3 flex-item-md--span-2 pt--24 bg--white">
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 1
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 2
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 2
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 3
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 3
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 4
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 4
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 5
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 5
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 6
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 6
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 7
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 7
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 8
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 8
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 9
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 9
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 10
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 10
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 11
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 11
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
-                <div class="card card-example mt--12">
-                  <div class="card__image"><img class="mb--4 b--circle" src="holder.js/64x64"></div>
-                  <div class="card__body ph--12" style="min-width: 120px;">
-                    <div class="text--small text--bold">Joe Bloggs 12
+                <div class="card card-example m--12">
+                  <div class="card__image">
+                    <svg class="mb--4 b--circle" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                      <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                      <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    </svg>
+                  </div>
+                  <div class="card__body px--12" style="min-width: 120px;">
+                    <div class="small bold">Joe Bloggs 12
                     </div>
-                    <p class="text--small mb--zero">Status <i class="fa fa-mortar-board"></i> <br> <i class="fa fa-clock-o"></i> 1 hour ago</p>
+                    <p class="small mb">Status <i class="fas fa-graduation-cap"></i> <br> <i class="fas fa-clock"></i> 1 hour ago</p>
                   </div>
                 </div>
                 <!--p(style="display: none;")= n++-->
       </div>
-      <div class="flexitem flexitem--span-8 flexitem-sm--span-9 flexitem-md--span-10 mh--auto pt--80" style="max-width: 960px;">
+      <div class="flex-item--span-8 flex-item-sm--span-9 flex-item-md--span-10 mx--auto pt--48" style="max-width: 1024px">
         <h2>Joe Bloggs 1</h2>
-        <div class="flexbox flexbox--gutter flexbox--nested">
-          <div class="flexitem flexitem-md--span-6 flexitem-lg--span-4 mb--line">
+        <div class="flexbox flexbox--gap flexbox--nested">
+          <div class="flex-item-md--span-6 flex-item-lg--span-4 mb--line">
             <div class="p--24 bg--white">
-              <div class="text--initial-icon"><i class="fa fa-bar-chart"></i> 
+              <div class="initial-icon"><i class="fa fa-chart-bar"></i> 
                 
                 <h3>Stats</h3>
               </div>
-              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a class="btn btn--block" href="">View stats</a>
+              <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p><a class="btn btn--block" href="">View stats</a>
             </div>
           </div>
-          <div class="flexitem flexitem-md--span-6 flexitem-lg--span-4 mb--line">
+          <div class="flex-item-md--span-6 flex-item-lg--span-4 mb--line">
             <div class="p--24 bg--white">
-              <div class="text--initial-icon"><i class="fa fa-key"></i> 
+              <div class="initial-icon"><i class="fa fa-key"></i> 
                 
                 <h3>Permissions</h3>
               </div>
-              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a class="btn btn--block" href="">Change permissions</a>
+              <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p><a class="btn btn--block" href="">Change permissions</a>
             </div>
           </div>
-          <div class="flexitem flexitem-md--span-6 flexitem-lg--span-4 mb--line">
+          <div class="flex-item-md--span-6 flex-item-lg--span-4 mb--line">
             <div class="p--24 bg--white">
-              <div class="text--initial-icon"><i class="fa fa-cog"></i> 
+              <div class="initial-icon"><i class="fa fa-cog"></i> 
                 
                 <h3>Settings</h3>
               </div>
-              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a class="btn btn--block" href="">Update settings </a>
+              <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p><a class="btn btn--block" href="">Update settings </a>
             </div>
           </div>
-          <div class="flexitem flexitem-md--span-6 flexitem-lg--span-4 mb--line">
+          <div class="flex-item-md--span-6 flex-item-lg--span-4 mb--line">
             <div class="p--24 bg--white">
-              <div class="text--initial-icon"><i class="fa fa-star"></i> 
+              <div class="initial-icon"><i class="fa fa-star"></i> 
                 
                 <h3>Projects</h3>
               </div>
-              <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p><a class="btn btn--block" href="">Assign projects</a>
+              <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p><a class="btn btn--block" href="">Assign projects</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-        <div class="dropdown" style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;">
-          <div class="dropdown__content dropdown__content--above mb--4 bs b--rounded bg--white">
-            <ul class="menu deco b--thick b--blue">
-              <li><a class="bb--thin b--blue text--nowrap" href="index.html"><i class="fa fa-home"></i> Codebase</a></li>
-              <li><a class="text--nowrap" href="getting-started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
-              <li><a class="text--nowrap" href="basics.html"><i class="fa fa-cubes"></i> Basics</a></li>
-              <li><a class="text--nowrap" href="layout.html"><i class="fa fa-map"></i> Layout</a></li>
-              <li><a class="text--nowrap" href="components.html"><i class="fa fa-cogs"></i> Components</a></li>
-              <li><a class="text--nowrap" href="decoration.html"><i class="fa fa-paint-brush"></i> Decoration</a></li>
-              <li><a class="text--nowrap" href="examples.html"><i class="fa fa-flask"></i> Examples</a></li>
-              <li class="bt--thin b--blue"><a class="text--nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-home"></i> GitHub</a></li>
+        <style>
+          .codebase {
+            position: fixed;
+            display: inline-block;
+            bottom: 8px;
+            left: 8px;
+            z-index: 999;
+          }
+          .codebase__content {
+            display: none;
+          }
+          .codebase__content.is-active {
+            display: block;
+          }
+          .codebase__content .feather {
+            position: relative;
+            top: 5px;
+            width: 18px;
+          }
+          
+        </style>
+        <div class="codebase">
+          <div class="codebase__content mb--4 bs b--rounded bg--white">
+            <ul class="menu decorate b--thick b--blue">
+              <li><a class="bb--thin b--blue nowrap" href="index.html"><i class="fas fa-home fa-fw"></i> Codebase</a></li>
+              <li><a class="nowrap" href="getting-started.html"><i class="fas fa-play fa-fw"></i> Getting Started</a></li>
+              <li><a class="nowrap" href="basics.html"><i class="fas fa-cubes fa-fw"></i> Basics</a></li>
+              <li><a class="nowrap" href="layout.html"><i class="far fa-map fa-fw"></i> Layout</a></li>
+              <li><a class="nowrap" href="components.html"><i class="fas fa-cogs fa-fw"></i> Components</a></li>
+              <li><a class="nowrap" href="decoration-utilities.html"><i class="fas fa-tint fa-fw"></i> Decoration Utilities</a></li>
+              <li><a class="nowrap" href="examples.html"><i class="fas fa-gift fa-fw"></i> Examples</a></li>
+              <li class="bt--thin b--blue"><a class="nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
             </ul>
           </div>
-          <button class="dropdown__ctrl btn btn--primary btn--icon btn--big-text btn--pill"> <i class="fa fa-cog"></i></button>
+          <button class="codebase__ctrl btn btn--primary btn--icon btn--pill big"><i class="fas fa-cog"></i></button>
         </div>
-        <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+        <div class="b--thin b--rounded bs px--4 bg--white center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--md-up">md &amp; down</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
     <script src="codebase/js/codebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
   </body>
 </html>

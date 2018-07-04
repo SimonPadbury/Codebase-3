@@ -1,0 +1,31 @@
+//- Blog Index Excerpt Loop
+
+mixin blog-index-excerpts(total)
+
+  style.
+    .media__body {
+      padding-right: 16px
+    }
+
+  - var n = total;
+  while n > 0
+
+    h3 #[a(href="#/") Blog Post Title #[= (n--)]]
+
+    .card.mb--0
+      a(href="#/").card__image.card__image--left.pr--4
+        +image-placeholder-light(50, 50, "b--circle mr--4")
+      .card__body
+        h5.mb--0 #[a(href="#/") By Author Name]
+        p.muted 23 May 2065 | 4 Comments
+
+    .flexbox.flexbox--gap.flexbox--nested.mb--line
+
+      .flex-item-md--span-4
+        +image-placeholder-dark(300, 200, "float--left mx--auto mb--line")
+      .flex-item-md--span-8
+        +paragraph(1)
+        a(href="/") Read more &rarr;
+      
+      
+  

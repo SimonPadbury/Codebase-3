@@ -4,145 +4,108 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Codebase 2 - a Sass, JavaScript and Pug website component library">
+    <meta name="description" content="Codebase 2: A Website Component Library">
     <meta name="author" content="Simon Padbury">
-    <title>Codebase</title>
+    <title>Codebase 2: A Website Component Library</title>
+    <link rel="icon">
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="docs/docs-theme/css/styles.css">
   </head>
   <body class="homepage">
     <div class="docs__homepage--header">
       <div class="menubar menubar--fixed codebase--nav-top">
-        <div class="menubar__brand codebase__brand"><a class="text--nowrap" href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
-              <g fill="#ffffff">
-                <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
-              </g>
-            </svg>Codebase <span class="text--normal text--muted">2.0 Beta-3</span></a></div>
+        <div class="menubar__brand codebase__brand"><a class="nowrap" href="index.html">
+            <svg id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+              <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z"></path>
+            </svg>Codebase <span><span class="lighter">v2.0</span></span></a></div>
         <div class="menubar__content">
           <ul class="menubar__right hide--sm-down">
-            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fa fa-download"></i> Download</a></li>
-            <li><a href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-github"></i> GitHub</a></li>
+            <li><a href="index.html"><span class="fas fa-home fa-fw"></span> Home</a></li>
+            <li><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><span class="fas fa-download"></span> Download</a></li>
+            <li><a href="https://github.com/SimonPadbury/Codebase"><span class="fab fa-github"></span> GitHub</a></li>
           </ul>
         </div>
       </div>
-      <svg class="codebase2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35">
-        <g fill="#ffffff">
-          <path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"></path>
-        </g>
+      <svg id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+        <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z"></path>
       </svg>
-      <h1>Codebase</h1>
-      <h2>Codebase is a Sass, JavaScript and Pug<br> website component library.</h2>
+      <h1>Codebase <span class="muted"><span class="lighter">v2.0</span></span></h1>
+      <h2>A Website Component Library</h2>
     </div>
     <div class="docs__homepage--main">
       <div class="docs__homepage-links">
-        <div><a href="getting-started.html"><i class="fa fa-play-circle fa-fw fa-lg"></i> Getting Started</a></div>
-        <div><a href="basics.html"><i class="fa fa-cubes fa-fw fa-lg"></i> Basics</a></div>
-        <div><a href="layout.html"><i class="fa fa-map fa-fw fa-lg"></i> Layout</a></div>
-        <div><a href="components.html"><i class="fa fa-cogs fa-fw fa-lg"></i> Components</a></div>
-        <div><a href="decoration.html"><i class="fa fa-paint-brush fa-fw fa-lg"></i> Decoration</a></div>
-        <div><a href="examples.html"><i class="fa fa-flask fa-fw fa-lg"></i> Examples</a></div>
+        <div><a href="getting-started.html"><span class="fas fa-play fa-fw"></span> Getting Started</a></div>
+        <div><a href="basics.html"><span class="fas fa-cubes fa-fw"></span> Basics</a></div>
+        <div><a href="layout.html"><span class="far fa-map fa-fw"></span> Layout</a></div>
+        <div><a href="components.html"><span class="fas fa-cogs fa-fw"></span> Components</a></div>
+        <div><a href="decoration-utilities.html"><span class="fas fa-tint fa-fw"></span> Decoration Utilities</a></div>
+        <div><a href="examples.html"><span class="fas fa-gift fa-fw"></span> Examples</a></div>
       </div>
-      <h3 class="mt--64">Two ways of using Codebase</h3>
-      <ul>
-        <li><a href="getting-started.html#getting-started-simple-setup">Simple setup</a>: Just use <code>codebase.css</code> and <code>codebase.js</code> in your project. (jQuery not required.)</li>
-        <li class="mt--line"><a href="getting-started.html#getting-started-advanced-setup"> Advanced setup</a>:      
-          <ul>
-            <li class="mt--20">The Codebase stylesheet has been built using  <a href="http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html">indented-syntax Sass</a>. You can use Sass to choose which parts of Codebase you need, to override the <code>!default</code> variables, and to include and extend any of the mixins.</li>
-            <li class="mt--20">The Codebase docs have been developed using the <a href="https://pugjs.org/api/getting-started.html">Pug</a> templating language. You can develop a static website in the same way, extending the <code>_codebase.pug</code> <a href="getting-started.html#getting-started-codebase-with-pug">starter template</a>, and following the <a href="examples.html">examples</a>. Alternatively you may use any other HTML templating language.
-              
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h3>The Codebase Stylesheets</h3>
-      <p>Codebase styling is organised into <a href="basics.html">Basics</a> and <a href="components.html">Components</a> (analogous to <a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>'s "Atoms" and "Molecules").
-        
-      </p>
-      <p>The styles has been created first as Sass mixins and then these are included in classes &ndash; all following <a href="http://getbem.com/introduction/">BEM</a> naming convention.
-        
-      </p>
-      <p>All <a href="codebase/sass/02_default-variables/_default-variables.sass">Codebase variables</a> are set with <code>!default</code> values, so that they can be easily overridden. And if you <code>@import</code> the Codebase master Sass file <code>codebase.sass</code>, can (override and) utilize and the variables, and you can include and/or extend the mixins in your own project. 
-        
-      </p>
-      <p>Find out more about <a href="getting-started.html#getting-started-codebase-with-sass">using Codebase with Sass</a>.
-        
-      </p>
-      <h3>The Codebase Scripts</h3>
-      <p>A few things in Codebase (responsive tables, showhide, dropdown, off-canvas, popovers and tabs) use some tiny JavaScripts. These are combined into one, <code>codebase.js</code>.
-        
-      </p>
-      <p>
-        Since v.2.0 Codebase has no need for jQuery. Of course, if you add more functionality with scripts or plugins that require jQuery, go for it. Same for any other library that you may wish to use.
-        
-      </p>
-      <h3>Flexbox Layout</h3>
-      <p>Codebase <a href="layout.html">Layout</a> consists of two (default) 12-column flexbox systems: <a href="layout.html#layout-flexbox-classes">flexbox classes</a> and <a href="layout.html#layout-flexbox-mixins">mixins</a>.
-        
-      </p>
-      <p>A range of <a href="layout.html#layout-invisibility">invisibility</a> mixins/classes have also been included.
-        
-      </p>
+      <div class="mt--48"></div>
+      <h3 class="mt--48">Dependencies</h3>
+      <p>None. The compiled Codebase CSS and JS are all that you need.</p>
+      <p><code>codebase.css</code> already has <a href="https://necolas.github.io/normalize.css/">Normalize</a> built in. You don't need to add it separately.</p>
+      <p><code>codebase.js</code> has been totally rebuilt and simplified for v.2.0. And now it does not ueed jQuery (or any other library).</p>
+      <p>No icon fonts are required by Codebase itself &ndash; you can use any icon font you choose. (These docs and examples use  <a href="https://fontawesome.com">Font Awesome</a>).</p>
+      <h3>Two ways of using Codebase</h3>
+      <ol>
+        <li><a class="big bold" href="getting-started.html#getting-started-simple-setup">Simple</a> &ndash; go ahead and use <code>codebase.css</code> and <code>codebase.js</code> in your project.</li>
+        <li><a class="big bold" href="getting-started.html#getting-started-advanced-setup">Advanced</a> &ndash; use Codebase as a Sass (SCSS) mixin library, and do what you want with its JS.</li>
+      </ol>
+      <p>You can also use the Codebase <a href="getting-started.html#getting-started-codebase-with-pug">Pug starter template</a>, that was developed for this documentation. But Codebase CSS and JS works just fine with HTML or any templating language.</p>
+      <h3>The Codebase CSS</h3>
+      <p>Codebase styling (in both the SCSS and the docs) is organised into <a href="basics.html">Basics</a> and <a href="components.html">Components</a> (analogous to <a href="http://atomicdesign.bradfrost.com/">Atomic Design</a>'s "Atoms" and "Molecules").</p>
+      <p>All <a href="codebase/scss/02_default-variables/_default-variables.scss">Codebase variables</a> are set with <code>!default</code> values &ndash; so, they can be easily overridden. And if you <code>@import</code> the Codebase master SCSS file <code>codebase.scss</code> into your own SCSS master file, then you can (override and) utilize and the variables, and you can include and/or extend the mixins in your own project. </p>
+      <p>Most* Codebase styles has been created first as SCSS mixins and then these are included in classes &ndash; all following <a href="http://getbem.com/introduction/">BEM</a> naming convention.<br><small>(* i.e. all styles that use CSS classes and some basic styles that apply to (unstyled) HTML tags)</small></p>
+      <p>Find out more about <a href="getting-started.html#getting-started-codebase-with-scss">using Codebase with SCSS</a>.</p>
+      <h3>The Codebase JS</h3>
+      <p>A few things in Codebase (responsive tables, showhide, dropdown, off-canvas, popovers and tabs) use some tiny JavaScripts. These are combined into one, <code>codebase.js</code>.</p>
+      <h3>Codebase Layout Systems</h3>
+      <p>Codebase has a versatile <a href="layout.html#layout-flexbox-system">flexbox 'columnar grid' system</a> &ndash; traditional 12 columns (default), responsive, with column span, offset, reordering, centering and wrapping.</p>
+      <p>A range of <a href="layout.html#layout-invisibility">invisibility</a> mixins/classes have also been included.</p>
       <h3>Decoration Utilities</h3>
-      <p>Codebase components are as minimally styled as possible. This has been done so that there is not much that you would need to override in your CSS.</p>
-      <p>Some minimal decorative styling can be applied by adding a <code>.deco</code> class to each component individually where you wish to use it. And when you don't wish to use Codebase opinionated styling, in the Sass variables file you can toggle off the <code>.deco</code> classes. This will result in less unused CSS.
-        
-      </p>
-      <p>Codebase also has some simple <a href="decoration.html">decoration utility classes</a> &ndash; which are similar in principle to <a href="http://basscss.com/">BASCSS</a> and <a href="http://tachyons.io/">Tachyons</a>.
-        
-      </p>
-      <p>All margins, paddings, font sizes and line heights are built on a <a href="decoration.html#decoration-element-grid">4px element grid</a>, similar in principle to <a href="https://spec.fm/specifics/8-pt-grid">Spec FM's 8-Point Grid</a>.
-        
-      </p>
-      <p>
-        Codebase decorative styling uses a common set of decoration variables &ndash; which you can easily override.
-        
-      </p>
+      <p>Codebase components are as 'cosmetically unstyled' as possible. This has been done so that there is not much that you would need to override in your CSS. </p>
+      <p>However, some minimal decorative styling can be applied by adding a <code>.decorate</code> class to each component individually where you wish to use it. (And when you don't want Codebase opinionated styling, in the SCSS variables file you can toggle off the <code>.decorate</code> classes.)</p>
+      <p>Codebase also has some simple <a href="decoration-utilities.html">decoration utility classes</a> &ndash; which are similar in principle to <a href="http://basscss.com/">BASCSS</a>, <a href="http://tachyons.io/">Tachyons</a>, and the utilities in the new <a href="https://getbootstrap.com/docs/4.0/utilities/borders/">Bootstrap 4</a>.</p>
+      <p>All margins, paddings, font sizes and line heights are built on a <a href="decoration-utilities.html#decoration-utilities-element-grid">4px element grid</a>, similar in principle to <a href="https://spec.fm/specifics/8-pt-grid">Spec FM's 8-Point Grid</a>.</p>
+      <p>Codebase decorative styling uses a common set of decoration variables &ndash; which you can easily override.</p>
       <h3>Using Codebase with Pug</h3>
-      <p>The Codebase CSS and JS files can be used with HTML directly, of course. Or you can use a templating language such as <a href="http://pugjs.org/">PugJS</a>.
-        
-      </p>
-      <p>The Codebase documentation has been developed using Pug. Pug snippets of Codebase components have been included through the docs (look for the Pug tabs, such as in the "Get started" button example below). There are also further <a href="examples.html">examples</a>.
-          
-        
-      </p>
-      <p>Find out more about <a href="getting-started.html#getting-started-codebase-with-pug">using Codebase with Pug</a>.
-        
-        
-      </p>
+      <p>The Codebase CSS and JS files can be used with HTML directly, of course. Or you can use a templating language such as <a href="http://pugjs.org/">PugJS</a>.</p>
+      <p>The Codebase documentation has been developed using Pug. Pug snippets of Codebase components have been included through the docs (look for the Pug tabs, such as in the "Get started" button example below). There are also further <a href="examples.html">examples</a>.</p>
+      <p>Find out more about <a href="getting-started.html#getting-started-codebase-with-pug">using Codebase with Pug</a>.</p>
+      <h3>Browser Compatibility</h3>
+      <p>Codebase has been tested and it all works with current and recent versions of Safari (MacOS and iOS), Firefox, Chrome, Opera, Vivaldi, Brave and Edge. </p>
+      <p>Codebase is also mostly OK on IE10 and IE11 (only these don't work well: popovers, card with fixed header/scrolling body, and SVG images within flexbox layout.) These few problems have to do with old IE's incomplete implemetation of flexbox.</p>
       <h3>MIT licence</h3>
-      <Codebase>is open source software, released under the <a href="https://opensource.org/licenses/MIT">MIT licence</a>. This means:</Codebase>
-      <blockquote>
-         "Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source."
-        <div class="text--right">&ndash; <a href="https://tldrlegal.com/license/mit-license">tl;drLegal</a></div>
-      </blockquote>
-      <div class="tabs deco mt--line">
+      <p>Codebase is open source software, released under the <a href="https://opensource.org/licenses/MIT">MIT licence</a>.</p>
+      <div class="tabs decorate mt--line">
         <div class="tab__label-wrap--right">
           <div class="tab__label" data-tab-id="tab-docs-intro-html">HTML</div>
           <div class="tab__label" data-tab-id="tab-docs-intro-pug">Pug</div>
         </div>
-        <div class="tab__card" id="tab-docs-intro-html">
-          <pre class="mt--zero"><code>&lt;div class="text--center"&gt;
+        <div class="tab__panel" id="tab-docs-intro-html">
+          <pre class="mt"><code>&lt;div class="center"&gt;
   &lt;a href="getting-started.html" class="btn btn--primary btn--pill"&gt;
-    Get started &lt;i class="fa fa-arrow-right"&gt;&lt;/i&gt;
+    Get started &lt;span.fas.fa-arrow-right&gt;&lt;/i&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
         </div>
-        <div class="tab__card" id="tab-docs-intro-pug">
-          <pre class="mt--zero"><code>.text--center
+        <div class="tab__panel" id="tab-docs-intro-pug">
+          <pre class="mt"><code>.center
   a(href="getting-started.html").btn.btn--primary.btn--pill.
-    Get started #[i.fa.fa-arrow-right]
-    
-    
+    Get started #[span.fas.fa-arrow-right]
 </code></pre>
         </div>
       </div>
-      <div class="text--center"><a class="btn btn--primary btn--pill" href="getting-started.html">Get started <i class="fa fa-arrow-right"></i></a></div>
+      <div class="center"><a class="btn btn--primary btn--pill" href="getting-started.html">Get started <span class="fas fa-arrow-right"></span></a></div>
     </div>
     <div class="docs__homepage--footer">
-      <footer class="docs__footer"><span class="text--teal"><a href="index.html">Codebase</a> <span class="text--normal text--muted">2.0 Beta-3</span> <span class="text--muted">|</span>
-          <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> <span class="text--muted">| Built by</span> <a href="http://simonpadbury.github.io">Simon Padbury</a></span></footer>
+      <footer class="docs__footer"><span><a href="index.html"> 
+            <svg id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+              <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z"></path>
+            </svg>Codebase <span class="lighter">v2.0</span></a> | <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> | Built by <a href="http://simonpadbury.github.io">Simon Padbury</a><br>
+          These docs are using the icon font <a href="https://fontawesome.com" target="_blank">Font Awesome</a></span></footer>
     </div>
     <script src="codebase/js/codebase.js"></script>
   </body>

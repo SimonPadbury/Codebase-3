@@ -6,100 +6,95 @@ block vars
   - var title = "Example Small Business | Codebase"
   - var bodyClass = "codebase-example"
 
-//- block append head-addins
+block append head-addins
+  +font-awesome
 
 block body
   include example-partials/__example-partials-index
-  
-  style.
-    .example-wrap {
-      max-width: 960px;
-      margin: 0 auto;
-      padding-right: 16px;
-      padding-left: 16px;
-    }
     
-  .menu.menu--fixed.menu--menubar-md.bg--white.bs--1z.deco
-    +biz-menubar-inner
+  .menu.menu--fixed.menu--menubar-md.bg--white.bs--1z.decorate
+    +small-business-menubar-inner
   
-  .text--white.bg--brown-darken-2.pt--40
+  +background-image-placeholder-dark
     +big-hero
       
-  .example-wrap.pv--48
-    p.text--lead.
-      Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
-      
-    .flexbox.flexbox--gutter.flexbox--nested
-      .flexitem.flexitem-md--span-6.mt--line
-        .text--initial-icon.
-          <i class="fa fa-info-circle" aria-hidden="true"></i> Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
-      .flexitem.flexitem-md--span-6.mt--line
-        .text--initial-icon.
-          <i class="fa fa-info-circle" aria-hidden="true"></i> Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
-      .flexitem.flexitem-md--span-6.mt--line
-        .text--initial-icon.
-          <i class="fa fa-info-circle" aria-hidden="true"></i> Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
-      .flexitem.flexitem-md--span-6.mt--line
-        .text--initial-icon.
-          <i class="fa fa-info-circle" aria-hidden="true"></i> Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
-
-  .example-wrap.pt--line.pv--48
-    p.
-      Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
+  .container.px--12
+    .flexbox.flexbox--gap.flexbox--center
+      .flex-item-md--span-10.flex-item-lg--span-8.py--48
+        p.lead.big.
+          Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
+          
+        .flexbox.flexbox--gap.flexbox--nested
+          .flex-item-md--span-6.mt--line
+            .initial-icon.
+              #[i.fas.fa-info-circle] Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+          .flex-item-md--span-6.mt--line
+            .initial-icon.
+              #[i.fas.fa-info-circle] Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+          .flex-item-md--span-6.mt--line
+            .initial-icon.
+              #[i.fas.fa-info-circle] Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+          .flex-item-md--span-6.mt--line
+            .initial-icon.
+              #[i.fas.fa-info-circle] Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.
+      .flex-item-md--span-10.flex-item-lg--span-8.mb--48
+        p.
+          Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.
   
-  .bg--brown-lighten-1.pv--48
-    .example-wrap
-      .flexbox.flexbox--gutter.flexbox--nested
+  .bg--green-lighten-2
+    .container
+      .flexbox.flexbox--center
+        .flex-item-md--span-10.flex-item-lg--span-8.py--48
+          .flexbox.flexbox--gap
 
-        .flexitem.flexitem-sm--span-4.text--center
+            .flex-item-md--span-4.center
 
-          img(src="holder.js/200x200").b--circle.mh--auto
-            
-          p.mt--line.
-            Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+              +image-placeholder-light(160, 160, "b--circle mx--auto")
+                
+              p.mt--line.
+                Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
 
-        .flexitem.flexitem-sm--span-4.text--center
+            .flex-item-md--span-4.center
 
-          img(src="holder.js/200x200").b--circle.mh--auto
+              +image-placeholder-light(160, 160, "b--circle mx--auto")
 
-          p.mt--line.
-            Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+              p.mt--line.
+                Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
 
-        .flexitem.flexitem-sm--span-4.text--center
+            .flex-item-md--span-4.center
 
-          img(src="holder.js/200x200").b--circle.mh--auto
+              +image-placeholder-light(160, 160, "b--circle mx--auto")
 
-          p.mt--line.
-            Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+              p.mt--line.
+                Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
 
-  .bg--brown-lighten-3.pv--48
-    .example-wrap
-      
-      h2.mt--zero.text--center Subscribe to our marketing emails
-      
-      form.flexbox.pt--20
-        .flexitem.flexitem-sm--span-4
-          .p--4
-            <input class="form__input--lg form__input--big-text b--gray-darken-1" id="text-example" name="examplename" placeholder="Your name" type="text">
-        .flexitem.flexitem-sm--span-4
-          .p--4
-            <input class="form__input--lg form__input--big-text b--gray-darken-1" id="email-example" name="examplename" placeholder="Your email" type="email">
-        .flexitem.flexitem-sm--span-4
-          .p--4
-            <button class="btn btn--lg btn--big-text btn--block" type="submit">Subscribe</button>
+  .bg--green-lighten-3.py--48
+    .container
+      .flexbox.flexbox--center
+        .flex-item--span-8
+        
+          h2.center Subscribe to our marketing emails
+          
+          form.flexbox.pt--line
+            .flex-item-md--span-4
+              .p--4
+                <input class="form__input--lg form__input--big-text b--green-lighten-1" id="text-example" name="examplename" placeholder="Your name" type="text">
+            .flex-item-md--span-4
+              .p--4
+                <input class="form__input--lg form__input--big-text b--green-lighten-1" id="email-example" name="examplename" placeholder="Your email" type="email">
+            .flex-item-md--span-4
+              .p--4
+                <button class="btn btn--success btn--lg big btn--block" type="submit">Subscribe</button>
 
 
   style.
-    .brown-footer a,
-    .brown-footer p {
+    .small-business-footer,
+    .small-business-footer a {
       color: #eee;
     }
-  .brown-footer.bg--brown-darken-1.pv--48
-    .example-wrap
+  .small-business-footer.bg--green-darken-1.py--48
       +big-footer
     
-  .bg--white
-    +codebase-bottomline
+  +codebase-bottomline
   
-block append body-foot-addins
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js")
+//-block append body-foot-addins

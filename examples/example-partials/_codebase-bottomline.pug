@@ -2,32 +2,50 @@
 
 mixin codebase-bottomline
 
-  .dropdown(style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;")
-    .dropdown__content.dropdown__content--above.mb--4.bs.b--rounded.bg--white
-      ul.menu.deco.b--thick.b--blue
+  style.
+    .codebase {
+      position: fixed;
+      display: inline-block;
+      bottom: 8px;
+      left: 8px;
+      z-index: 999;
+    }
+    .codebase__content {
+      display: none;
+    }
+    .codebase__content.is-active {
+      display: block;
+    }
+    .codebase__content .feather {
+      position: relative;
+      top: 5px;
+      width: 18px;
+    }
+    
+  .codebase
+    .codebase__content.mb--4.bs.b--rounded.bg--white
+      ul.menu.decorate.b--thick.b--blue
         li
-          a(href="index.html").bb--thin.b--blue.text--nowrap #[i.fa.fa-home] Codebase
+          a(href="index.html").bb--thin.b--blue.nowrap #[i.fas.fa-home.fa-fw] Codebase
         li
-          a(href="getting-started.html").text--nowrap #[i.fa.fa-play-circle] Getting Started
+          a(href="getting-started.html").nowrap #[i.fas.fa-play.fa-fw] Getting Started
         li
-          a(href="basics.html").text--nowrap #[i.fa.fa-cubes] Basics
+          a(href="basics.html").nowrap #[i.fas.fa-cubes.fa-fw] Basics
         li
-          a(href="layout.html").text--nowrap #[i.fa.fa-map] Layout
+          a(href="layout.html").nowrap #[i.far.fa-map.fa-fw] Layout
         li
-          a(href="components.html").text--nowrap #[i.fa.fa-cogs] Components
+          a(href="components.html").nowrap #[i.fas.fa-cogs.fa-fw] Components
         li
-          a(href="decoration.html").text--nowrap #[i.fa.fa-paint-brush] Decoration
+          a(href="decoration-utilities.html").nowrap #[i.fas.fa-tint.fa-fw] Decoration Utilities
         li
-          a(href="examples.html").text--nowrap #[i.fa.fa-flask] Examples
+          a(href="examples.html").nowrap #[i.fas.fa-gift.fa-fw] Examples
         li.bt--thin.b--blue
-          a(href="https://github.com/SimonPadbury/Codebase").text--nowrap #[i.fa.fa-home] GitHub
-    button.dropdown__ctrl.btn.btn--primary.btn--icon.btn--big-text.btn--pill 
-      i.fa.fa-cog
+          a(href="https://github.com/SimonPadbury/Codebase").nowrap #[i.fab.fa-github.fa-fw] GitHub
+    button.codebase__ctrl.btn.btn--primary.btn--icon.btn--pill.big
+      i.fas.fa-cog
 
-  .b--thin.b--rounded.bs.ph--4.bg--white.text--center(style="position: fixed; right: 8px; bottom: 8px; z-index: 999;")
+  .b--thin.b--rounded.bs.px--4.bg--white.center(style="position: fixed; right: 8px; bottom: 8px; z-index: 999;")
     | Viewport 
-    span.hide--xs-up xs &amp; down
-    span.hide--xs-down.hide--sm-up xs&mdash;sm
-    span.hide--sm-down.hide--md-up sm&mdash;md
+    span.hide--md-up md &amp; down
     span.hide--md-down.hide--lg-up md&mdash;lg
     span.hide--lg-down lg &amp; up

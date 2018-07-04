@@ -5,6 +5,9 @@ extends ../codebase/pug/_codebase
 block vars
   - var title = "Example Starter"
 
+block append head-addins
+  +font-awesome
+
 block body
   include example-partials/__example-partials-index
 
@@ -13,3 +16,5 @@ block body
   | Get to work...
 
   +codebase-bottomline
+
+//-block append body-foot-addins

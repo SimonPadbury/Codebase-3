@@ -1,19 +1,19 @@
 //- Example Big Footer
 
 mixin big-footer
-  .flexbox.flexbox--container.flexbox--gutter.example-big-footer
-    .flexitem.flexitem-sm--span-3
-      +menu("Footer link 1 -", 5)
-    .flexitem.flexitem-sm--span-3
-      +menu("Footer link 2 -", 5)
-    .flexitem.flexitem-sm--span-3
-      +menu("Footer link 3 -", 5)
-    .flexitem.flexitem-sm--span-3
-      img(src="holder.js/240x120")
-      
-      .mt--line
-        +social
-    
-    .flexitem.mt--line
-      p.text--center.
-        Copyright &copy; 2017 Some Name
+  .container
+    .flexbox.flexbox--gap.example-big-footer
+      .flex-item-md--span-3
+        +menu("Footer link 1 -", 5)
+      .flex-item-md--span-3
+        +menu("Footer link 2 -", 5)
+      .flex-item-md--span-3
+        +menu("Footer link 3 -", 5)
+      .flex-item-md--span-3
+        +image-placeholder-light(240, 120)
+        
+        .mt--line
+          +social
+
+  .container.mt--line.p--16.center.example-big-footer
+    Copyright &copy; 2091 #[a(href="/") Some Name]

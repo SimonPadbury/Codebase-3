@@ -5,7 +5,8 @@ extends ../codebase/pug/_codebase
 block vars
   - var title="Example Blog Index | Codebase"
 
-//-block append head-addins
+block append head-addins
+  +font-awesome
 
 block body
   include example-partials/__example-partials-index
@@ -35,74 +36,70 @@ block body
       color: #fff;
       background-color: #5c5c5c;
     }
-    @media (min-width: 960px) {
+    @media (min-width: 1024px) {
       .example-menubar {
         padding: 8px 0;
       }
     }
 
-  .example-menubar.menu.menu--menubar-sm
+  .example-menubar.menu.menu--menubar-md
     .menu__brand
       a(href="#/")
-        b Somebody's Blog
-    .menu__ctrl.menu__ctrl--right.fa.fa-bars
+        b Some Blog
+    .menu__ctrl.menu__ctrl--right(data-feather="menu")
     .menu__content
       ul.menubar__right
         li #[a(href="#/") Home]
         li #[a(href="#/") About]
         li #[a(href="#/") Contact]
 
-  .flexbox.flexbox--container
-    .flexitem--span-12.hero
-      img(src="holder.js/1280x320")
+  +background-image-placeholder-light
 
-  .flexbox.flexbox--container.flexbox--gutter.mv--24
-    .flexitem.flexitem-md--span-9
+    .flexbox.flexbox--center.flexbox--middle.flexbox--gap
+      h1.py--84.big.center Some Blog
 
-      style.
-        @media (max-width: 639px) {
-          .example-blog-index-entry .media__image {
-            padding-bottom: 24px;
-            float: none;
-            text-align: center;
+  .container
+    .flexbox.flexbox--gap.my--48
+      .flex-item-md--span-8
+
+        style.
+          @media (max-width: 639px) {
+            .example-blog-index-entry .media__image {
+              padding-bottom: 24px;
+              float: none;
+              text-align: center;
+            }
           }
-        }
+          
         
-      
-      +blog-index-excerpts(10)
+        +blog-index-excerpts(5)
 
-      hr
-        
-      ul.pagination.deco.text--center.mb--48
-        li
-          a(href="#/")
-            i.fa.fa-arrow-left
-            =" "
-            | Newer
-        li
-          a(href="#/") 1
-        li
-          a.pagination__current(href="http://www.example.com") 2
-        li
-          a(href="#/") 3
-        li
-          a(href="#/") 4
-        li
-          a(href="#/") 5
-        li
-          a(href="#/")
-            | Older
-            =" "
-            i.fa.fa-arrow-right
+        hr
+          
+        ul.pagination.decorate.center.mb--48
+          li
+            a(href="#/")
+              | &larr; Newer
+          li
+            a(href="#/") 1
+          li
+            a.pagination__current(href="http://www.example.com") 2
+          li
+            a(href="#/") 3
+          li
+            a(href="#/") 4
+          li
+            a(href="#/") 5
+          li
+            a(href="#/")
+              | Older &rarr;
 
-    .flexitem.flexitem-md--span-3
-      
-      +social
-      +blog-sidebar
+      .flex-item-md--span-4
+        +blog-sidebar
 
   .mt--48.pt--line.bg--gray-darken-2
     style.
-      .example-big-footer p,
+      .example-big-footer,
       .example-big-footer a {
         color: #bbb;
       }
@@ -115,4 +112,5 @@ block body
   +codebase-bottomline
     
 block append body-foot-addins
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js")
+  script.
+    feather.replace();

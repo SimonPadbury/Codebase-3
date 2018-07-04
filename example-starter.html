@@ -9,25 +9,47 @@
     <title>Example Starter</title>
     <link rel="icon">
     <link rel="stylesheet" href="codebase/css/codebase.css">
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Get to work-->Get to work...
-        <div class="dropdown" style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;">
-          <div class="dropdown__content dropdown__content--above mb--4 bs b--rounded bg--white">
-            <ul class="menu deco b--thick b--blue">
-              <li><a class="bb--thin b--blue text--nowrap" href="index.html"><i class="fa fa-home"></i> Codebase</a></li>
-              <li><a class="text--nowrap" href="getting-started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
-              <li><a class="text--nowrap" href="basics.html"><i class="fa fa-cubes"></i> Basics</a></li>
-              <li><a class="text--nowrap" href="layout.html"><i class="fa fa-map"></i> Layout</a></li>
-              <li><a class="text--nowrap" href="components.html"><i class="fa fa-cogs"></i> Components</a></li>
-              <li><a class="text--nowrap" href="decoration.html"><i class="fa fa-paint-brush"></i> Decoration</a></li>
-              <li><a class="text--nowrap" href="examples.html"><i class="fa fa-flask"></i> Examples</a></li>
-              <li class="bt--thin b--blue"><a class="text--nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-home"></i> GitHub</a></li>
+        <style>
+          .codebase {
+            position: fixed;
+            display: inline-block;
+            bottom: 8px;
+            left: 8px;
+            z-index: 999;
+          }
+          .codebase__content {
+            display: none;
+          }
+          .codebase__content.is-active {
+            display: block;
+          }
+          .codebase__content .feather {
+            position: relative;
+            top: 5px;
+            width: 18px;
+          }
+          
+        </style>
+        <div class="codebase">
+          <div class="codebase__content mb--4 bs b--rounded bg--white">
+            <ul class="menu decorate b--thick b--blue">
+              <li><a class="bb--thin b--blue nowrap" href="index.html"><i class="fas fa-home fa-fw"></i> Codebase</a></li>
+              <li><a class="nowrap" href="getting-started.html"><i class="fas fa-play fa-fw"></i> Getting Started</a></li>
+              <li><a class="nowrap" href="basics.html"><i class="fas fa-cubes fa-fw"></i> Basics</a></li>
+              <li><a class="nowrap" href="layout.html"><i class="far fa-map fa-fw"></i> Layout</a></li>
+              <li><a class="nowrap" href="components.html"><i class="fas fa-cogs fa-fw"></i> Components</a></li>
+              <li><a class="nowrap" href="decoration-utilities.html"><i class="fas fa-tint fa-fw"></i> Decoration Utilities</a></li>
+              <li><a class="nowrap" href="examples.html"><i class="fas fa-gift fa-fw"></i> Examples</a></li>
+              <li class="bt--thin b--blue"><a class="nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
             </ul>
           </div>
-          <button class="dropdown__ctrl btn btn--primary btn--icon btn--big-text btn--pill"> <i class="fa fa-cog"></i></button>
+          <button class="codebase__ctrl btn btn--primary btn--icon btn--pill big"><i class="fas fa-cog"></i></button>
         </div>
-        <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
+        <div class="b--thin b--rounded bs px--4 bg--white center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--md-up">md &amp; down</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
     <script src="codebase/js/codebase.js"></script>
   </body>
 </html>

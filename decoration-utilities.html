@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <title>Decoration Utilities • Codebase</title>
+    <link rel="icon">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="docs/docs-theme/css/styles.css">
+  </head>
+  <body class="docs__chapter">
+    <div class="menubar menubar--fixed codebase--nav-top">
+      <div class="menubar__brand codebase__brand"><a class="nowrap" href="index.html">
+          <svg id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+            <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z"></path>
+          </svg>Codebase <span><span class="lighter">v2.0</span></span></a></div>
+      <div class="menubar__content">
+        <ul class="menubar__right hide--sm-down">
+          <li><a href="index.html"><span class="fas fa-home fa-fw"></span> Home</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><span class="fas fa-download"></span> Download</a></li>
+          <li><a href="https://github.com/SimonPadbury/Codebase"><span class="fab fa-github"></span> GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="docs__main">
+      <div class="off-canvas__ctrl off-canvas__ctrl--docs off-canvas__ctrl--right off-canvas__ctrl--fixed hide--lg-up" data-content-id="docs_sidebar"><span class="hide--sm-down hide--lg-up">Docs</span> <span class="hide--md-up">Menu</span> <i class="fas fa-bars"></i></div>
+      <div class="docs__nav off-canvas__content off-canvas__content--lg off-canvas__content--right off-canvas__content--fixed" id="docs_sidebar">
+        <div class="off-canvas__close off-canvas__close--right hide--lg-up big p--4"><i class="fas fa-times"></i></div>
+        <div class="sidenav-toggler hide--lg-down" data-toggle-id="docs_sidebar" data-toggle-class="is-retracted"><span class="fas fa-ellipsis-v"></span></div>
+        <ul>
+          <li class="hide--md-up"><a href="#/"><i class="fas fa-home fa-fw"></i> Home</a></li>
+          <li><a href="getting-started.html"><i class="fas fa-play fa-fw"></i> Getting Started</a></li>
+          <li><a href="basics.html"><i class="fas fa-cubes fa-fw"></i> Basics</a></li>
+          <li><a href="layout.html"><i class="far fa-map fa-fw"></i> Layout</a></li>
+          <li><a href="components.html"><i class="fas fa-cogs fa-fw"></i> Components</a></li>
+          <li><a class="this-page" href="decoration-utilities.html"><i class="fas fa-tint fa-fw"></i> Decoration Utilities</a>
+            <div class="docs__nav--sub-nav">
+              <ul class="menu decorate">
+                <li><a href="#decoration-utilities-introduction">Introduction</a></li>
+                <li><a href="#decoration-utilities-element-grid">Element Grid</a></li>
+                <li><a href="#decoration-utilities-margins-and-paddings">Margins and Paddings</a></li>
+                <li><a href="#decoration-utilities-borders">Borders</a></li>
+                <li><a href="#decoration-utilities-colors">Colors</a></li>
+                <li><a href="#decoration-utilities-box-shadows">Box Shadows</a></li>
+                <li><a href="#decoration-utilities-text">Text</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="examples.html"><i class="fas fa-gift fa-fw"></i> Examples</a></li>
+          <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip"><i class="fas fa-download"></i> Download</a></li>
+          <li class="hide--md-up"><a href="https://github.com/SimonPadbury/Codebase"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
+      </div>
+      <div class="docs__docs-content" id="docs_content">      
+        <header>
+          <h1>Decoration Utilities</h1>
+        </header>
+        <main>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-introduction"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Introduction</h2>
+              </header>
+              <section>
+                <p class="lead">For consistency throughout Codebase, several decoration variables have been defined.</p>
+                <p>These variables have been incoporated into a set of simple decoration utility classes. These classes can be used to quickly add consistent styling to your HTML directly.</p>
+                <p>You can modify the decoration variables and classes, and add to them, in accordance with the style guide or visual identity of your website project.</p>
+                <p class="bg--green-lighten-3 p--16"><b>Hat tip</b>: The idea for Codebase decoration was inspired by <a href="http://www.basscss.com" target="_blank">BASCSS</a>, <a href="http://tachyons.io" target="_blank">Tachyons</a> and the <a href="https://spec.fm/specifics/8-pt--flexbox" target="_blank">8-Point grid</a>.</p>
+                <h3>Notes</h3>
+                <ol>
+                  <li>If you know you will never use the decoration utility classes, then you can override the <code>$cb-include-css--decoration-utilities</code> to <code>false</code> (see <a href="codebase/scss/00_default-variables/_default-variables.scss">codebase/scss/00_default-variables/_default-variables.scss</a>).</li>
+                  <li>Codebase decoration utility classes are not responsive to viewport sizes.</li>
+                  <li>
+                    Beware: there are some circumstances where styling from e.g. your own CSS will override decoration utility classes: CSS nesting.
+                    
+                  </li>
+                </ol>
+                <pre><code>/* This CSS will not override decoration utility classes: */
+
+h2 {
+  border: 0;
+}
+
+&lt;h2 class="b--heavy"&gt;Example: this h4 has a heavy border&lt;/h2&gt;
+</code></pre>
+                <style>
+                  h4 {
+                    border: 0;
+                  }
+                  
+                </style>
+                <h4 class="b--heavy">Example: this h4 has a heavy border</h4>
+                <pre><code>/* This CSS will override decoration utility classes: */
+
+.infobox h4 {
+  border: 0;
+}
+
+&lt;div class="infobox"&gt;
+  &lt;h4 class="b--heavy"&gt;Gotcha: this h4 has no border. Why?&lt;/h4&gt;
+&lt;/div&gt;
+</code></pre>
+                <style>
+                  .infobox h4 {
+                    border: 0;
+                  }
+                  
+                </style>
+                <div class="infobox">
+                  <h4 class="b--heavy">Gotcha: this h4 has no border. Why?</h4>
+                </div>
+                <ol start="4">
+                  <li>No styling from anywhere else in <code>codebase.css</code> overrides Codebase decoration utility classes &ndash; except the component <code>.decorate</code> classes (but you're not meant to combine <code>.decorate</code> and decoration utility classes anyway).
+                    
+                  </li>
+                </ol>
+                <hr>
+                <p>There is also a <code>.decorate</code> class used for some components. It is used so that the (opinionated) decorative styles can be separated from the functional styles required to set up the components. See <a href="components.html#components-decoration">Components: Decoration</a>. </p>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-element-grid"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Element Grid</h2>
+              </header>
+              <section>
+                <p class="lead">Codebase uses a "soft" 4px element grid for consistently positioning elements relative to each other.</p>
+                <p>This is similar in principle to various 8px grids out there (also known as 8-point or 8dp [device pixel] grids). For example:</p>
+                <ul>
+                  <li><a href="https://spec.fm/specifics/8-pt-grid">SpecFM's 8-point grid</a> </li>
+                  <li><a href="http://www.bbc.co.uk/gel/web/foundations/universal-grid/baseline">The BBC GEL's 8px baseline grid</a></li>
+                  <li><a href="https://material.io/guidelines/layout/metrics-keylines.html">Material Design's 8dp square baseline grid</a></li>
+                </ul>
+                <p class="bg--green-lighten-3 p--16">If you're already familiar with the 8-point grid concept, you can think of Codebase's 4px grid in the same way, but with the ability to do a "half unit" whenever you find it useful!</p>
+                <p>The <strong>Codebase element grid</strong> has been deployed a follows:</p>
+                <ol>
+                  <li>Element grid increments (4px) have been used for setting all line-heights, margins and paddings throughout Codebase.</li>
+                  <li>By default, the base typography vertical rhythm (line-height) is set at 24px (= 3 * 4px, equivalent to <code>line-height: 1.5</code>). The line heights for headers have also been set using 4px increments.</li>
+                  <li>The layout <code>.flexbox</code> gaps have been set at 24px.</li>
+                  <li>Decoration utilities for <a href="#decoration-utilities-margins-and-paddings">margins and paddings</a> have been set using values from the 4px element grid.</li>
+                </ol>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-margins-and-paddings"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Margins and Paddings</h2>
+              </header>
+              <section>
+                <p class="lead">Codebase decoration utilities for margins and paddings have been set using a <code>$cb-spacing</code> SCSS map, with values 0, 4px, 8px, 12px, 16px, 24px, 48px and 84px.</p>
+                <p>Margins and paddings utility class prefixes are as follows:</p>
+                <div class="flexbox flexbox--gap flexbox--nested">
+                  <div class="flex-item-md--span-6">
+                    <ul>
+                      <li>Margins all: <code>m--*</code></li>
+                      <li>Margin top: <code>mt--*</code></li>
+                      <li>Margin right: <code>mr--*</code></li>
+                      <li>Margin bottom: <code>mb--*</code></li>
+                      <li>Margin left: <code>ml--*</code></li>
+                      <li>Margins vertical: <code>my--*</code> (top and bottom)</li>
+                      <li>Margins horizontal: <code>mx--*</code> (left and right)</li>
+                    </ul>
+                  </div>
+                  <div class="flex-item-md--span-6">
+                    <ul>
+                      <li>Paddings all: <code>p--*</code></li>
+                      <li>Padding top: <code>pt--*</code></li>
+                      <li>Padding right: <code>pr--*</code></li>
+                      <li>Padding bottom: <code>pb--*</code></li>
+                      <li>Padding left: <code>pl--*</code></li>
+                      <li>Paddings vertical: <code>py--*</code> (top and bottom)</li>
+                      <li>Paddings horizontal: <code>px--*</code> (left and right)</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="flexbox flexbox--gap flexbox--nested">
+                  <div class="flex-item-md--span-6">
+                    <p>Margin examples:</p>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--0 bg--gray-lighten-3 p--4">.m--0 (for removing margins)</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--4 bg--gray-lighten-3 p--4">.m--4</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--8 bg--gray-lighten-3 p--4">.m--8</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--12 bg--gray-lighten-3 p--4">.m--12</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--16 bg--gray-lighten-3 p--4">.m--16</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--24 bg--gray-lighten-3 p--4">.m--24</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--48 bg--gray-lighten-3 p--4">.m--48</div>
+                    </div>
+                    <div class="mb--line b--dashed b--gray-lighten-2">
+                      <div class="m--84 bg--gray-lighten-3 p--4">.m--84</div>
+                    </div>
+                  </div>
+                  <div class="flex-item-md--span-6">
+                    <p>Padding examples:</p>
+                    <div class="mb--line bg--gray-lighten-3 p--0">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--0 (for removing paddings)</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--4">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--4</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--8">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--8</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--12">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--12</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--16">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--16</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--24">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--24</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--48">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--48</div>
+                    </div>
+                    <div class="mb--line bg--gray-lighten-3 p--84">
+                      <div class="b--dashed b--gray-lighten-1 p--4">.p--84</div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt--line">Horizontal centering by <code>margin: auto</code></h3>
+                <p>This also sets the element to <code>display:block !important</code></p>
+                <div class="mb--line b--dashed b--gray-lighten-2">
+                  <div class="mx--auto bg--gray-lighten-3 p--8" style="width:75%;">.mx--auto</div>
+                </div>
+                <h3 class="mt--line">Extra line spacing</h3>
+                <p>Sometimes you may find that you need to add extra whitespace (e.g. above headers, or below list items), equal to the line height of your normal text. Codebase has decoration utility classes for that (for margin and padding). The extra line margins are shown in the following examples.</p>
+                <p>Margins:</p>
+                <div class="mb--line b--dashed b--gray-lighten-2">
+                  <div class="mt--line bg--gray-lighten-3 p--8">.mt--line</div>
+                </div>
+                <div class="mb--line b--dashed b--gray-lighten-2">
+                  <div class="mb--line bg--gray-lighten-3 p--8">.mb--line</div>
+                </div>
+                <p>Paddings:</p>
+                <div class="mb--line bg--gray-lighten-3 pt--line">
+                  <div class="b--dashed b--gray-lighten-1 p--4">.pt--line</div>
+                </div>
+                <div class="mb--line bg--gray-lighten-3 pb--line">
+                  <div class="b--dashed b--gray-lighten-1 p--4">.pb--line    </div>
+                </div>
+                <p>The amount of extra white space applied will be increased if you are also using these classes in combination with <a href="basics.html#basics-big-typography">big typography</a>.</p>
+                <h3 class="mt--line">Block padding</h3>
+                <p>E.g. used for menu and menubar items, tab labels and table cells. Equivalent to <code>py--8 px--16</code>.</p>
+                <div class="mb--line bg--gray-lighten-3 p--block">
+                  <div class="b--dashed b--gray-lighten-1 p--4">.p--block</div>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-borders"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Borders</h2>
+              </header>
+              <section>
+                <p>A few simple border styles.</p>
+                <ul>
+                  <li>borders all <code>b--*</code></li>
+                  <li>border-top <code>bt--*</code></li>
+                  <li>border-right <code>br--*</code></li>
+                  <li>border-bottom <code>bb--*</code></li>
+                  <li>border-left <code>bl--*</code></li>
+                </ul>
+                <p>Examples:</p>
+                <div class="mb--8 p--8 b--thin b--0"> <code>.b--0</code> (0px &ndash; for removing borders)</div>
+                <div class="mb--8 p--8 b--dashed"> <code>.b--dashed</code> (1px)</div>
+                <div class="mb--8 p--8 b--thin"> <code>.b--thin</code> (1px)</div>
+                <div class="mb--8 p--8 b--thick"> <code>.b--thick</code> (4px)</div>
+                <div class="mb--8 p--8 b--heavy"> <code>.b--heavy</code> (8px)</div>
+                <p class="mt--line">
+                  <By>default, borders have color code <code>$cb-color--gray-lighten-2</code>. Borders can be assigned other colors in the Codebase swatch using <code>b--{color}</code> classes. See <a href="#decoration-colors">colors</a>.</By>
+                </p>
+                <h3>Border enhancements:</h3>
+                <div class="flexbox flexbox--gap center">
+                  <div class="flex-item-md--span-3">
+                    <div class="mx--auto p--40 b--thin b--rounded" style="width:100px;height:100px;"></div>.b--rounded <br> <span class="muted">(default border-radius <br> = 4px)</span>
+                  </div>
+                  <div class="flex-item-md--span-3">
+                    <div class="mx--auto p--40 b--thin b--rounded-4" style="width:100px;height:100px;"></div>.b--rounded-4 <br> <span class="muted">(border-radius: 4px)</span>
+                  </div>
+                  <div class="flex-item-md--span-3">
+                    <div class="mx--auto p--40 b--thin b--rounded-8" style="width:100px;height:100px;"></div>.b--rounded-8 <br> <span class="muted">(border-radius: 8px)</span>
+                  </div>
+                  <div class="flex-item-md--span-3">
+                    <div class="mx--auto p--40 b--thin b--circle" style="width:100px;height:100px;"></div>.b--circle <br> <span class="muted">(This will produce an ellipse if the block element is not a square)</span>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-colors"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Colors</h2>
+              </header>
+              <section>
+                <h3>The Codebase color swatches</h3>
+                <p>Codebase's six color swatches are used for Codebase UI colors (for <span class="label">default</span>, <span class="label label--primary">primary</span>, <span class="label label--secondary">secondary</span>, <span class="label label--success">success</span>, <span class="label label--warning">warning</span>, and <span class="label label--danger">danger</span>. See <a href="basics.html#basics-buttons">buttons</a>, <a href="basics.html#basics-badges-and-labels">badges and labels</a>.</p>
+                <p>These six colors have also been used for the Codebase decoration utility classes.</p>
+                <p>In each color series there are 7 colors: the base color (see the middle row below) plus 3 incrementally lighter and 3 incrementally darker.</p>
+                <p>Plus, black and white have been included (without shades).</p>
+                <style>
+                  .swatch-row {
+                    display: flex;
+                  }
+                  .swatch-row.b--thin {
+                    margin-bottom: 8px;
+                    padding-top: 8px;
+                    padding-left: 8px;
+                  }
+                  .swatch-row p {
+                    width: 99px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                  }
+                  .swatch-row.b--thin p {
+                    width: 89px
+                  }
+                  .swatch {
+                    width: 106px;
+                    height: 106px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                  }
+                  
+                </style>
+                <div style="overflow-x: auto;">
+                  <div class="swatch-row">
+                    <p></p>
+                    <p class="center small">Grays</p>
+                    <p class="center small">Blues</p>
+                    <p class="center small">Teals</p>
+                    <p class="center small">Greens</p>
+                    <p class="center small">Oranges</p>
+                    <p class="center small">Reds</p>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small">darken-3</p>
+                    <div class="swatch bg--gray-darken-3"></div>
+                    <div class="swatch bg--blue-darken-3"></div>
+                    <div class="swatch bg--teal-darken-3"></div>
+                    <div class="swatch bg--green-darken-3"></div>
+                    <div class="swatch bg--orange-darken-3"></div>
+                    <div class="swatch bg--red-darken-3"></div>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small">darken-2</p>
+                    <div class="swatch bg--gray-darken-2"></div>
+                    <div class="swatch bg--blue-darken-2"></div>
+                    <div class="swatch bg--teal-darken-2"></div>
+                    <div class="swatch bg--green-darken-2"></div>
+                    <div class="swatch bg--orange-darken-2"></div>
+                    <div class="swatch bg--red-darken-2"></div>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small">darken-1</p>
+                    <div class="swatch bg--gray-darken-1"></div>
+                    <div class="swatch bg--blue-darken-1"></div>
+                    <div class="swatch bg--teal-darken-1"></div>
+                    <div class="swatch bg--green-darken-1"></div>
+                    <div class="swatch bg--orange-darken-1"></div>
+                    <div class="swatch bg--red-darken-1"></div>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small caps bolder">Base Color</p>
+                    <div class="swatch bg--gray small p--4 bolder white">Gray</div>
+                    <div class="swatch bg--blue small p--4 bolder white">Blue</div>
+                    <div class="swatch bg--teal small p--4 bolder white">Teal</div>
+                    <div class="swatch bg--green small p--4 bolder white">Green</div>
+                    <div class="swatch bg--orange small p--4 bolder white">Orange</div>
+                    <div class="swatch bg--red small p--4 bolder white">Red</div>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small">lighten-1</p>
+                    <div class="swatch bg--gray-lighten-1"></div>
+                    <div class="swatch bg--blue-lighten-1"></div>
+                    <div class="swatch bg--teal-lighten-1"></div>
+                    <div class="swatch bg--green-lighten-1"></div>
+                    <div class="swatch bg--orange-lighten-1"></div>
+                    <div class="swatch bg--red-lighten-1"></div>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small">lighten-2</p>
+                    <div class="swatch bg--gray-lighten-2"></div>
+                    <div class="swatch bg--blue-lighten-2"></div>
+                    <div class="swatch bg--teal-lighten-2"></div>
+                    <div class="swatch bg--green-lighten-2"></div>
+                    <div class="swatch bg--orange-lighten-2"></div>
+                    <div class="swatch bg--red-lighten-2"></div>
+                  </div>
+                  <div class="swatch-row">
+                    <p class="small">lighten-3</p>
+                    <div class="swatch bg--gray-lighten-3"></div>
+                    <div class="swatch bg--blue-lighten-3"></div>
+                    <div class="swatch bg--teal-lighten-3"></div>
+                    <div class="swatch bg--green-lighten-3"></div>
+                    <div class="swatch bg--orange-lighten-3"></div>
+                    <div class="swatch bg--red-lighten-3"></div>
+                  </div>
+                  <div class="swatch-row bt--thin b--gray-darken-2 mt--4 pt--8">
+                    <p class="small caps bolder">Plus</p>
+                    <div class="swatch bg--white b--thin small bolder p--4">White</div>
+                    <div class="swatch bg--black small p--4 bolder white">Black</div>
+                    <div class="swatch"></div>
+                    <div class="swatch"></div>
+                    <div class="swatch"></div>
+                    <div class="swatch"></div>
+                  </div>
+                </div>
+                <p class="mt--line">Codebase swatch color class options:</p>
+                <table class="table table--rows table--columns">
+                  <tbody>
+                    <tr>
+                      <td style="width: 160px"><i>background color</i> <br> <code>.bg--</code> <br> <br>
+                        <i>text color</i> <br> (no prefix) <br> <br>
+                        <i>border color</i> <br> <code>.b--</code>
+                      </td>
+                      <td><code>gray</code><br><code>red</code><br><code>orange</code><br><code>green</code><br><code>teal</code><br><code>blue</code><br><code>black</code><br><code>white</code></td>
+                      <td><code>-lighten-</code><br><code>-darken-</code></td>
+                      <td><code>1</code><br><code>2</code><br><code>3</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>Applying swatch colors to elements:</p>
+                <div class="flexbox flexbox--gap flexbox--nested">
+                  <div class="flex-item-sm--span-6">&bull; Backgrounds: <code>bg--{colorname}</code></div>
+                  <div class="flex-item-sm--span-6">
+                    <div class="p--8 bg--blue-lighten-2"> Example: <code>.bg--blue-lighten-2</code></div><br>
+                  </div>
+                  <div class="flex-item-sm--span-6">&bull; Borders: <code>b--{colorname}</code></div>
+                  <div class="flex-item-sm--span-6">
+                    <div class="mb--line p--8 b--heavy b--orange"> Example: <code>.b--orange</code></div>
+                  </div>
+                  <div class="flex-item-sm--span-6">&bull; Text: <code>{colorname}</code></div>
+                  <div class="flex-item-sm--span-6">
+                    <p>Example: <code>.green-darken-1</code> (below)<br></p>
+                    <p class="green-darken-1">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                  </div>
+                </div>
+                <h3>Swatch color range classes and SCSS</h3>
+                <p>Example for setting the text color using utility classes for grays &ndash; and the corresponding SCSS for use in stylesheet creation:</p>
+                <table class="table table--rows table--columns">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>SCSS</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>.gray-darken-3</code></td>
+                      <td><code>color: darken($cb-color--gray, $cb-color--step * 3)</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>.gray-darken-2</code></td>
+                      <td><code>color: darken($cb-color--gray, $cb-color--step * 2)</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>.gray-darken-1</code></td>
+                      <td><code>color: darken($cb-color--gray, $cb-color--step)</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>.gray</code></td>
+                      <td><code>color: $cb-color--gray</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>.gray-lighten-1</code></td>
+                      <td><code>color: lighten($cb-color--gray, $cb-color--step * 1)</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>.gray-lighten-2</code></td>
+                      <td><code>color: lighten($cb-color--gray, $cb-color--step * 2)</code></td>
+                    </tr>
+                    <tr>
+                      <td><code>.gray-darken-3</code></td>
+                      <td><code>color: lighten($cb-color--gray, $cb-color--step * 3)</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="mt--line bg--green-lighten-3 p--16"> 
+                  <h4>Advanced (SCSS) users:</h4>
+                  <p><b>All Codebase decoration colors are here simply to get you started</b>. You can override and improve them in your own website design as you make progress.</p>
+                  <p>To show you how this is done, notice that there are a few extra example <code>$cb-color--*</code> variables and their instances in the <code>$cb-colors</code> SCSS map in the <a href="codebase/scss/00_default-variables/_default-variables.scss"> variables file</a>, commented out. </p>
+                  <p><b>You need to copy (a.) the whole set of color variables and (b.) the SCSS map into your styles &ndash; and then un-comment the extra colors in both</b>. Then during pre-processing, the class-builders in <a href="codebase/scss/04_decoration/_colors.scss">codebase/scss/04_decoration/_colors.scss</a> will generate all the decoration utility classes for colored backgrounds, borders and text.</p>
+                  <p>By overriding the color variables and the SCSS map in this way, you have complete freedom to:</p>
+                  <ul>
+                    <li>Add more color classes</li>
+                    <li>Remove classes for colors that you never use</li>
+                    <li>Change color class names</li>
+                    <li>Change color values</li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-box-shadows"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Box Shadows</h2>
+              </header>
+              <section>
+                <h3>(Outset) Box shadow</h3>
+                <p>For box shadows the unit "z" was chosen because the increasing shadow gives the idea of elevating the element on the "z-axis" (i.e. toward the person viewing the webpage).</p>
+                <div class="mb--line p--8 bs"><code>.bs</code> (or alias <code>.bs--1z</code>)</div>
+                <div class="mb--line p--8 bs--2z"><code>.bs--2z</code></div>
+                <div class="mb--line p--8 bs--3z"><code>.bs--3z</code></div>
+                <h3>Inset box shadow</h3>
+                <div class="mb--line p--8 bs--inset"><code>.bs--inset</code></div>
+                <h3>Inset box shadows on one side only</h3>
+                <div class="mb--line p--8 bs--inset-top"><code>.bs--inset-top</code></div>
+                <div class="mb--line p--8 bs--inset-right"><code>.bs--inset-right</code></div>
+                <div class="mb--line p--8 bs--inset-bottom"><code>.bs--inset-bottom</code></div>
+                <div class="mb--line p--8 bs--inset-left"><code>.bs--inset-left</code></div>
+              </section>
+            </div>
+          </article>
+          <article>
+            <div class="docs__article--target" id="decoration-utilities-text"></div>
+            <div class="docs__article">
+              <header>
+                <h2>Text</h2>
+              </header>
+              <section>
+                <p>Codebase has several simple text utility classes. These are all demonstrated in appropriate places throughout <a href="basics.html">Codebase Basics</a>. But here is the complete listing:</p>
+                <p><code>.thin</code> <span class="thin">Thin text (default 100)</span></p>
+                <p><code>.bold</code> <span class="bold">Bold text (default 700)</span></p>
+                <p><code>.bolder</code> <span class="bolder">Bolder text (default 900)</span></p>
+                <p><code>.italics</code> <span class="italics">Italics text</span></p>
+                <p><code>.normal</code> <span class="bold italics">Returns text to normal weight and removes italicization. <span class="normal">Perhaps you may find this useful</span> in some circumstances.</span></p>
+                <p><code>.caps</code> <span class="caps">All-capitals text</span></p>
+                <p><code>.muted</code> <span class="muted">Muted text is semi-transparent (opacity: 0.5)</span></p>
+                <p><code>.big</code> Big text for making <span class="big">something</span> stand out. (This class works for both inline and block elements.)</p>
+                <p><code>.small</code>  Small text for <span class="small">small print</span>. (This class works for both inline and block elements.)</p>
+                <div class="h1"><code>.h1</code> Heading level 1</div>
+                <div class="h2"><code>.h2</code> Heading level 2</div>
+                <div class="h3"><code>.h3</code> Heading level 3</div>
+                <div class="h4"><code>.h4</code> Heading level 4</div>
+                <div class="h5"><code>.h5</code> Heading level 5</div>
+                <div class="h6"><code>.h6</code> Heading level 6</div>
+                <p><code>.lead</code></p>
+                <p class="lead">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                <p><code>.dropcap</code></p>
+                <p class="dropcap">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                <p><code>.left</code></p>
+                <p class="left">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                <p><code>.center</code></p>
+                <p class="center">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                <p><code>.right</code></p>
+                <p class="right">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                <p><code>.columns</code></p>
+                <p class="columns">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+              </section>
+            </div>
+          </article>
+        </main>
+        <footer class="docs__footer"><span><a href="index.html"> 
+              <svg id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+                <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z"></path>
+              </svg>Codebase <span class="lighter">v2.0</span></a> | <a href="https://github.com/SimonPadbury/Codebase">GitHub Repository</a> | Built by <a href="http://simonpadbury.github.io">Simon Padbury</a><br>
+            These docs are using the icon font <a href="https://fontawesome.com" target="_blank">Font Awesome</a></span></footer>
+      </div>
+    </div>
+    <div class="b--thin b--rounded bs px--4 bg--white center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport width:&nbsp;<span class="hide--md-up">sm &amp; down</span><span class="hide--sm-down hide--lg-up">md...lg</span><span class="hide--md-down">lg &amp; up</span></div>
+    <script src="codebase/js/codebase.js"></script>
+  </body>
+</html>
