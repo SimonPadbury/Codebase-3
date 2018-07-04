@@ -1,0 +1,43 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "decoration-utilities-borders"
+  - var articleTitle = "Borders"
+
+block section
+
+  p A few simple border styles.
+
+  ul
+    li borders all #[code b--*]
+    li border-top #[code bt--*]
+    li border-right #[code br--*]
+    li border-bottom #[code bb--*]
+    li border-left #[code bl--*]
+
+  p Examples:
+
+  .mb--8.p--8.b--thin.b--0  #[code .b--0] (0px &ndash; for removing borders)
+  .mb--8.p--8.b--dashed  #[code .b--dashed] (1px)
+  .mb--8.p--8.b--thin  #[code .b--thin] (1px)
+  .mb--8.p--8.b--thick  #[code .b--thick] (4px)
+  .mb--8.p--8.b--heavy  #[code .b--heavy] (8px)
+
+  p.mt--line
+    By default, borders have color code #[code $cb-color--gray-lighten-2]. Borders can be assigned other colors in the Codebase swatch using #[code b--{color}] classes. See #[a(href="#decoration-colors") colors].
+
+  h3 Border enhancements:
+
+  .flexbox.flexbox--gap.center
+    .flex-item-md--span-3
+      .mx--auto.p--40.b--thin.b--rounded(style="width:100px;height:100px;")
+      | .b--rounded #[br] #[span.muted (default border-radius #[br] = 4px)]
+    .flex-item-md--span-3
+      .mx--auto.p--40.b--thin.b--rounded-4(style="width:100px;height:100px;")
+      | .b--rounded-4 #[br] #[span.muted (border-radius: 4px)]
+    .flex-item-md--span-3
+      .mx--auto.p--40.b--thin.b--rounded-8(style="width:100px;height:100px;")
+      | .b--rounded-8 #[br] #[span.muted (border-radius: 8px)]
+    .flex-item-md--span-3
+      .mx--auto.p--40.b--thin.b--circle(style="width:100px;height:100px;")
+      | .b--circle #[br] #[span.muted (This will produce an ellipse if the block element is not a square)]

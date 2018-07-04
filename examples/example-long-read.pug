@@ -8,101 +8,100 @@ block vars
 
 block append head-addins
   style.
-    @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Serif');
     body {
-      font-family: "Source Serif Pro", serif;
+      font-family: "Noto Serif", serif;
     }
+  +font-awesome
 
 block body
   include example-partials/__example-partials-index
-  
 
-  .codebase-bodyinner
-    
-      .menu.menu--menubar-md.menubar--fixed.deco.bg--white.bs
-        .menubar__brand
-          a(href="#/")
-            b Long Read
+  .menu.menu--menubar-md.menubar--fixed.decorate.bg--gray-lighten-3.bs
+    .menu__brand
+      a(href="#/")
+        b Long Read
+    .menu__ctrl.menu__ctrl--right.p--8
+      i.fas.fa-bars
+    .menu__content
+      ul.menubar__right
+        li #[a(href="#/") Home]
+        li #[a(href="#/") About]
+        li #[a(href="#/") Contact]
+        li #[a(href="#/") Login]
 
-        .m--4.menu__ctrl.menu__ctrl--right.btn.btn--success.btn--icon.btn--sm.btn--big-text.btn--outline #[i.fa.fa-bars]
+  .container.pt--84.px--12
 
-        .menu__content
-          ul.menubar__right
-            li #[a(href="#/") Home]
-            li #[a(href="#/") About]
-            li #[a(href="#/") Contact]
-            li #[a(href="#/") Login]
-        
-      .flexbox.flexbox--container.flexbox--gutter
+    .flexbox.flexbox--gap
+      #sidebar.flex-item-lg--span-3.flex-item--order-2
+        p.mb--8 Share this post:
+        +social
+
+        .flexbox.flexbox--gap
+
+          .flex-item-md--span-6.flex-item-lg--span-12.pt--line
+            h4 Blog categories
+            +menu("Category", 3, "menu--block")
           
-        .flexitem.flexitem-md--span-3.flexitem--order-2.mt--48
-          
-          +blog-sidebar
-        
-        .flexitem.flexitem-md--span-9.flexitem--order-1
-          
-          h1.mt--80.text--heavy This is an Example Long Read Article with a Big Title
-          
-          .flexbox.flexbox--gutter.flexbox--nested.bt--thin.pt--line
+          .flex-item-md--span-6.flex-item-lg--span-12.pt--line
+            h4 Recent posts
+            +menu("Recent post", 4, "menu--block")
 
-            .flexitem.flexitem-sm--span-4.flexitem-lg--span-4
-              
-              .flexbox.flexbox--gutter.flexbox--nested
-                .flexitem.flexitem--span-4.flexitem-xs--span-3.flexitem-sm--span-12
-                  img(src="holder.js/100x100" alt="Avatar").b--circle
-                .flexitem.flexitem--span-8.flexitem-xs--span-9.flexitem-sm--span-12
-                  h4.mv--4 By Author Name
-                  h4.mv--8.text--italics 12 Aug 1999
-              +paragraph(1, "hide--sm-down")
-              .mv--24
-                +social
-            
-            .flexitem.flexitem-sm--span-8.flexitem-lg--span-8.text--big
+          .flex-item-md--span-6.flex-item-lg--span-12.pt--line
+            h4 Recent comments
+            +menu("Recent comment", 5, "menu--block")
 
-              +paragraph(3, "text--lead text--dropcap")
-              
-              h2 Heading
-              
-              +paragraph(2)
+          .flex-item-md--span-6.flex-item-lg--span-12.pt--line
+            +example-subs-form
 
-              h2 Heading
-              
-              +paragraph(4)
+      #title.flex-item-lg--span-9.flex-item--order-1
+        h1 This is an Example Long Read Article with a Big Title
 
-              h2 Heading
-              
-              +paragraph(3)
+        .flexbox.flexbox--gap
+          #author.flex-item-md--span-4.flex-item-lg--span-4
+            .flexbox
+              div
+                +image-placeholder-light(100, 100, "mr--16 b--circle")
+              div
+                .my--8.big.bold By Author Name
+                .my--8.italics 12 Aug 1999
+            +paragraph(1, "hide--md-down")
 
-              h2 Heading
-              
-              +paragraph(1)
+          #main.flex-item-md--span-8.flex-item-lg--span-8
+            +paragraph(3, "lead dropcap")
+            h2 Heading
+            +paragraph(2)
+            h2 Heading
+            +paragraph(4)
+            h2 Heading
+            +paragraph(3)
+            h2 Heading
+            +paragraph(1)
 
-          hr.mt--72
-            
-          ul.pagination.deco.text--center.pb--72
-            li
-              a(href="#/")
-                i.fa.fa-arrow-left
-                =" "
-                | Newer
-            li
-              a(href="#/") 1
-            li
-              a.pagination__current(href="http://www.example.com") 2
-            li
-              a(href="#/") 3
-            li
-              a(href="#/") 4
-            li
-              a(href="#/") 5
-            li
-              a(href="#/")
-                | Older
-                =" "
-                i.fa.fa-arrow-right
+  .container.mt--48.bt--thin.p--16
+      
+    ul.pagination.decorate.center.pb--48
+      li
+        a(href="#/")
+          i.fas.fa-arrow-left
+          =" "
+          | Newer
+      li
+        a(href="#/") 1
+      li
+        a.pagination__current(href="http://www.example.com") 2
+      li
+        a(href="#/") 3
+      li
+        a(href="#/") 4
+      li
+        a(href="#/") 5
+      li
+        a(href="#/")
+          | Older
+          =" "
+          i.fas.fa-arrow-right
 
-    
   +codebase-bottomline
-  
-  block append body-foot-addins
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js")
+
+//-block append body-foot-addins

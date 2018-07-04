@@ -1,0 +1,31 @@
+// LAYOUT MIXINS: SEMANTIC FLEXITEMS
+// =================================
+// End user can call these mixins in their theme.
+
+@mixin cb-flex-item--span($cb-col--span) {
+  width: $cb-col--span / $cb-flexbox--max-items * 100%;
+}
+
+// Surplus flexbox columns will wrap because `flex-wrap: wrap` has been included in the flexbox container mixin/class.
+
+@mixin cb-flex-item--offset($cb-col--offset) {
+  margin-left: $cb-col--offset / $cb-flexbox--max-items * 100%;
+
+  [dir="rtl"] &, &[dir="rtl"],
+  .rtl &, &.rtl {
+    margin-right: $cb-col--offset / $cb-flexbox--max-items * 100%;
+    margin-left: 0;
+  }
+}
+
+@mixin cb-flex-item--order($cb-col--order) {
+  order: $cb-col--order;
+}
+
+@mixin cb-flex-item--centered($cb-col--centered) {
+  width: $cb-col--centered / $cb-flexbox--max-items * 100%;
+  flex-grow: 0;
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+}

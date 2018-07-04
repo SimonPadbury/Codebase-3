@@ -1,0 +1,125 @@
+// COMPONENTS MIXINS: DROPDOWNS
+// ============================
+
+@mixin cb-dropdown {
+  position: relative;
+}
+
+@mixin cb-dropdown__ctrl {
+  &.is-active {
+    position: relative;
+    z-index: $cb-z-index--dropdowns;
+  }
+}
+
+@mixin cb-dropup__ctrl {
+  &.is-active {
+    position: relative;
+    z-index: $cb-z-index--dropdowns;
+  }
+}
+
+@mixin cb-dropdown__content {
+  position: absolute;
+  display: none;
+  top: 100%;
+  z-index: $cb-z-index--dropdowns;
+  cursor: default;
+
+  &--above {
+    top: inherit;
+    bottom: 100%;
+  }
+
+  &--right {
+    right: 0;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}
+
+@mixin cb-dropup__content {
+  position: absolute;
+  display: none;
+  bottom: 100%;
+  z-index: $cb-z-index--dropdowns;
+  cursor: default;
+
+  &--right {
+    right: 0;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}
+
+
+@mixin cb-dropdown__content--decorate {
+  padding: $cb-spacing--block;
+  background: $cb-color--white;
+  box-shadow: $cb-box-shadow;
+  border-radius: $cb-border--radius;
+  overflow: hidden;
+}
+
+// CLASS BUILDER: DROPDOWNS
+// ========================
+
+@mixin cb-components-dropdowns {
+  .dropdown {
+    @include cb-dropdown;
+
+    @if $cb-decoration--dropdowns == true {
+      &.decorate {
+        .dropdown__content {
+          @include cb-dropdown__content--decorate;
+        }
+      }
+    }
+  }
+
+  .dropdown__ctrl {
+    @include cb-dropdown__ctrl;
+    @include cb-caret--down;
+  }
+
+  .dropdown__content {
+    @include cb-dropdown__content;
+  }
+
+  .dropup {
+    @include cb-dropdown;
+
+    @if $cb-decoration--dropdowns == true {
+      &.decorate {
+        .dropup__content {
+          @include cb-dropdown__content--decorate;
+        }
+      }
+    }
+  }
+
+  .dropup__ctrl {
+    @include cb-dropup__ctrl;
+    @include cb-caret--up;
+  }
+
+  .dropup__content {
+    @include cb-dropup__content;
+  }
+}
+
+@if $cb-include-css--dropdowns == true {
+  @include cb-components-dropdowns;
+}

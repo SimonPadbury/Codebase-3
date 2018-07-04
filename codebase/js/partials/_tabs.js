@@ -7,7 +7,7 @@
   // Document Ready
   document.addEventListener("DOMContentLoaded", function () {
 
-    // Add `.is-front` to first tab label and first tab card in each tab set
+    // Add `.is-front` to first tab label and first Tab Panel in each tab set
     [].forEach.call(document.querySelectorAll(".tab__label:first-of-type"), function(el) {
       el.classList.add("is-front");
       var frontCardId = el.dataset.tabId;

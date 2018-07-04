@@ -1,0 +1,47 @@
+// BASICS MIXINS: FLOATS AND CLEARFIX
+// ==================================
+
+@mixin cb-float--right {
+  display: block;
+  float: right;
+}
+
+@mixin cb-float--left {
+  display: block;
+  float: left;
+}
+
+@mixin cb-clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// CLASS BUILDER: FLOATS AND CLEADFIX
+// ==================================
+
+@mixin cb-basics-floats-clearfix {
+  .float {
+    &--left {
+      @include cb-float--left;
+    }
+
+    &--right {
+      @include cb-float--right;
+    }
+  }
+
+  .clearfix {
+    @include cb-clearfix;
+  }
+}
+
+@if $cb-include-css--floats-clearfix == true {
+  @include cb-basics-floats-clearfix;
+}

@@ -1,0 +1,135 @@
+// COMPONENTS MIXINS: POPOVERS
+// ===========================
+
+@mixin cb-popover__ctrl {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// The popover container is used to hide the popover off-canvas
+@mixin cb-popover {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  transition: height 0s ease-out 1s;
+  z-index: $cb-z-index--popovers;
+
+  &.is-active {
+    height: 100vh;
+    transition: height 0s ease-in 0s;
+  }
+}
+
+// The popover itself
+@mixin cb-popover__content {
+  position: relative;
+  max-height: 85vh;
+  overflow: auto !important;
+  opacity: 0;
+
+  // Box-shadow backdrop, idea from: https://medium.com/@jotavejv/how-to-create-a-simple-overlay-that-works-anywhere-ae23456d3e8
+  box-shadow: $cb-popover--backdrop-box-shadow;
+  transform: scale(0.8);
+  transition: $cb-popover--transition-content;
+  transition: all 0.3s ease-in-out;
+
+  img, svg {
+    display: block;
+    max-height: 70vh !important;
+    width: auto !important;
+  }
+
+  &.is-active {
+    opacity: 1;
+    transform: none;
+  }
+
+  & > .card {
+    margin-bottom: 0;
+  }
+}
+
+@mixin cb-popover__content--narrow {
+  min-width: $cb-popover--narrow-min;
+
+  @include cb-break--min($cb-popover--narrow-mq) {
+    width: $cb-popover--narrow-max;
+  }
+}
+
+@mixin cb-popover__content--fix {
+  display: inline-flex;
+  overflow: inherit !important;
+}
+
+@mixin cb-popover__content--cover {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  height: 100vh;
+  max-height: 100vh !important;
+  margin: 0 !important;
+  overflow: auto !important;
+
+  > * {
+    border-radius: 0;
+  }
+}
+
+@mixin cb-popover__close {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// CLASS BUILDER: POPOVERS
+// =======================
+
+@mixin cb-components-popovers {
+  .popover {
+    @include cb-popover;
+  }
+
+  .popover__ctrl {
+    @include cb-popover__ctrl;
+  }
+
+  .popover__content {
+    @include cb-popover__content;
+
+    &--narrow {
+      @include cb-popover__content--narrow;
+    }
+
+    &--fix {
+      @include cb-popover__content--fix;
+    }
+
+    &--cover {
+      @include cb-popover__content--cover;
+    }
+  }
+
+  .popover__body {
+    max-height: 85vh;
+    overflow: hidden;
+  }
+
+  .popover__close {
+    @include cb-popover__close;
+  }
+}
+
+@if $cb-include-css--popovers == true {
+  @include cb-components-popovers;
+}

@@ -1,0 +1,21 @@
+// LAYOUT MIXINS: CONTAINER
+// ========================
+
+@mixin cb-layout-container {
+    max-width: $cb-container--max-width;
+    // The `!important` above enables popovers to contain a `.container`
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Class builder
+
+@mixin cb-container {
+    .container {
+        @include cb-layout-container;
+    }
+}
+
+@if $cb-include-css--container == true {
+    @include cb-container;
+}

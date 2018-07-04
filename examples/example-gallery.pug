@@ -6,116 +6,158 @@ block vars
   - var title="Example Gallery"
   - var bodyClass = "bg--blue-lighten-3"
 
-//- block append head-addins
+block append head-addins
+  +font-awesome
 
 block body
   include example-partials/__example-partials-index
 
-  .bg--white.bb--thin.bg--blue-lighten-2
-    .flexbox.flexbox--container
-      .flexitem--span-12
-        +example-menubar
+  .menu.menu--fixed.menu--menubar-md.decorate.bg--white.bs--1z
+    .menu__brand
+      a(href="#/")
+        b Brand
+        
+    .menu__ctrl.menu__ctrl--right
+      i.fas.fa-bars
 
-  .flexbox.flexbox--container.flexbox--gutter
-    .flexitem--span-12
-      h1.mt--48 Picture Gallery
+    .menu__content
+      ul.menubar__right
+        li #[a(href="#/") Home]
+        li.dropdown
+          a.dropdown__ctrl(href="http://example.com") About us
+          ul.dropdown__content
+            li #[a(href="#/") How it all started]
+            li #[a(href="#/") The early years]
+            li #[a(href="#/") The present day]
+            li #[a(href="#/") Plans for the future]
+        li #[a(href="#/") Visit us]
+        li #[a(href="#/") Make contact]
 
-      p A simple image gallery using the Codebase tab system &ndash; combined with a flexbox layout for rearranging the tab labels and cards.
+  .container.pt--84
+    .flexbox.flexbox--container.flexbox--gap
+      .flex-item--span-12
+        h1 Picture Gallery
 
-  style.
-    .gallery-example .tab__label {
-      border: 4px solid #ddf;
-      border-radius: 4px
-    }
-    .gallery-example .tab__label.is-front {
-      border-color: #aad;
-    }
+        p A simple image gallery using the Codebase tab system &ndash; combined with a flexbox layout for rearranging the tab labels and cards.
 
-  .flexbox.flexbox--container.flexbox--gutter.gallery-example
-    .flexitem.flexitem-md--span-3.mb--line.text--center
-      .tab__label(data-tab-id="pic-01").
-        #[img(src="holder.js/80x80?&text=Picture One")]
-      .tab__label(data-tab-id="pic-02").
-        #[img(src="holder.js/80x80?&text=Picture Two")]
-      .tab__label(data-tab-id="pic-03").
-        #[img(src="holder.js/80x80?&text=Picture Three")]
-      .tab__label(data-tab-id="pic-04").
-        #[img(src="holder.js/80x80?&text=Picture Four")]
-      .tab__label(data-tab-id="pic-05").
-        #[img(src="holder.js/80x80?&text=Picture Five")]
-      .tab__label(data-tab-id="pic-06").
-        #[img(src="holder.js/80x80?&text=Picture Six")]
-      .tab__label(data-tab-id="pic-07").
-        #[img(src="holder.js/80x80?&text=Picture Seven")]
-      .tab__label(data-tab-id="pic-08").
-        #[img(src="holder.js/80x80?&text=Picture Eight")]
-      .tab__label(data-tab-id="pic-09").
-        #[img(src="holder.js/80x80?&text=Picture Nine")]
-      .tab__label(data-tab-id="pic-10").
-        #[img(src="holder.js/80x80?&text=Picture Ten")]
-      .tab__label(data-tab-id="pic-11").
-        #[img(src="holder.js/80x80?&text=Picture Eleven")]
-      .tab__label(data-tab-id="pic-12").
-        #[img(src="holder.js/80x80?&text=Picture Twelve")]
+    style.
+      .gallery-example .tab__label {
+        margin-bottom: 8px;
+        border: 4px solid #ccf;
+        border-radius: 4px;
+        background-color: #ccf;
+      }
+      .gallery-example .tab__label.is-front {
+        border-color: #aad;
+      }
 
-    .flexitem.flexitem-md--span-9
-      .tab__card#pic-01
-        img(src="holder.js/1000x500?&outline=yes&text=Picture One")
-        h4.mt--line Title for Picture One          
-        +paragraph
-      .tab__card#pic-02
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Two")
-        h4.mt--line Title for Picture Two          
-        +paragraph
-      .tab__card#pic-03
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Three")
-        h4.mt--line Title for Picture Three          
-        +paragraph
-      .tab__card#pic-04
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Four")
-        h4.mt--line Title for Picture Four          
-        +paragraph
-      .tab__card#pic-05
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Five")
-        h4.mt--line Title for Picture Five          
-        +paragraph
-      .tab__card#pic-06
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Six")
-        h4.mt--line Title for Picture Six          
-        +paragraph
-      .tab__card#pic-07
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Seven")
-        h4.mt--line Title for Picture Seven          
-        +paragraph
-      .tab__card#pic-08
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Eight")
-        h4.mt--line Title for Picture Eight          
-        +paragraph
-      .tab__card#pic-09
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Nine")
-        h4.mt--line Title for Picture Nine          
-        +paragraph
-      .tab__card#pic-10
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Ten")
-        h4.mt--line Title for Picture Ten          
-        +paragraph
-      .tab__card#pic-11
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Eleven")
-        h4.mt--line Title for Picture Eleven          
-        +paragraph
-      .tab__card#pic-12
-        img(src="holder.js/1000x500?&outline=yes&text=Picture Twelve")
-        h4.mt--line Title for Picture Twelve          
-        +paragraph
+    .flexbox.flexbox--container.flexbox--gap.gallery-example
+      .flex-item-md--span-3.mb--line.center
+        .tab__label(data-tab-id="pic-01")
+          +image-placeholder-light(80, 80)
+          .center.pb--4 One
+        .tab__label(data-tab-id="pic-02")
+          +image-placeholder-dark(80, 80)
+          .center.pb--4 Two
+        .tab__label(data-tab-id="pic-03")
+          +image-placeholder-light(80, 80)
+          .center.pb--4 Three
+        .tab__label(data-tab-id="pic-04")
+          +image-placeholder-dark(80, 80)
+          .center.pb--4 Four
+        .tab__label(data-tab-id="pic-05")
+          +image-placeholder-light(80, 80)
+          .center.pb--4 Five
+        .tab__label(data-tab-id="pic-06")
+          +image-placeholder-dark(80, 80)
+          .center.pb--4 Six
+        .tab__label(data-tab-id="pic-07")
+          +image-placeholder-light(80, 80)
+          .center.pb--4 Seven
+        .tab__label(data-tab-id="pic-08")
+          +image-placeholder-dark(80, 80)
+          .center.pb--4 Eight
+        .tab__label(data-tab-id="pic-09")
+          +image-placeholder-light(80, 80)
+          .center.pb--4 Nine
+        .tab__label(data-tab-id="pic-10")
+          +image-placeholder-dark(80, 80)
+          .center.pb--4 Ten
+        .tab__label(data-tab-id="pic-11")
+          +image-placeholder-light(80, 80)
+          .center.pb--4 Eleven
+        .tab__label(data-tab-id="pic-12")
+          +image-placeholder-dark(80, 80)
+          .center.pb--4 Twelve
+
+      .flex-item-md--span-9
+        .tab__panel#pic-01
+          h2.mb--8 Title for Picture One
+          +image-placeholder-light(1000, 500)
+          h4.mt--line Info for Picture One          
+          +paragraph
+        .tab__panel#pic-02
+          h2.mb--8 Title for Picture Two
+          +image-placeholder-dark(1000, 500)
+          h4.mt--line Info for Picture Two          
+          +paragraph
+        .tab__panel#pic-03
+          h2.mb--8 Title for Picture Three
+          +image-placeholder-light(1000, 500)
+          h4.mt--line Info for Picture Three          
+          +paragraph
+        .tab__panel#pic-04
+          h2.mb--8 Title for Picture Four
+          +image-placeholder-dark(1000, 500)
+          h4.mt--line Info for Picture Four          
+          +paragraph
+        .tab__panel#pic-05
+          h2.mb--8 Title for Picture Five
+          +image-placeholder-light(1000, 500)
+          h4.mt--line Info for Picture Five          
+          +paragraph
+        .tab__panel#pic-06
+          h2.mb--8 Title for Picture Six
+          +image-placeholder-dark(1000, 500)
+          h4.mt--line Info for Picture Six          
+          +paragraph
+        .tab__panel#pic-07
+          h2.mb--8 Title for Picture Seven
+          +image-placeholder-light(1000, 500)
+          h4.mt--line Info for Picture Seven          
+          +paragraph
+        .tab__panel#pic-08
+          h2.mb--8 Title for Picture Eight
+          +image-placeholder-dark(1000, 500)
+          h4.mt--line Info for Picture Eight          
+          +paragraph
+        .tab__panel#pic-09
+          h2.mb--8 Title for Picture Nine
+          +image-placeholder-light(1000, 500)
+          h4.mt--line Info for Picture Nine          
+          +paragraph
+        .tab__panel#pic-10
+          h2.mb--8 Title for Picture Ten
+          +image-placeholder-dark(1000, 500)
+          h4.mt--line Info for Picture Ten          
+          +paragraph
+        .tab__panel#pic-11
+          h2.mb--8 Title for Picture Eleven
+          +image-placeholder-light(1000, 500)
+          h4.mt--line Info for Picture Eleven          
+          +paragraph
+        .tab__panel#pic-12
+          h2.mb--8 Title for Picture Twelve
+          +image-placeholder-dark(1000, 500)
+          h4.mt--line Info for Picture Twelve          
+          +paragraph
 
     
-  .flexbox.flexbox--container
-    .flexitem--span-12
+  .container
+      hr.b--blue
 
-      hr
-
-      .text--center
-        ul.pagination
+      .center
+        ul.pagination.decorate
           li
             a(href="#/") #[i.fa.fa-arrow-left] Newer
           li
@@ -131,7 +173,9 @@ block body
           li
             a(href="#/") Older #[i.fa.fa-arrow-right]
       
-      p.text--center &copy; Picture Gallery.
+      hr.mt--20.b--blue
+      
+      p.center &copy; 2018 Picture Gallery.
         
   +codebase-bottomline
 

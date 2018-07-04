@@ -9,36 +9,34 @@
 
     // ACTIVATOR MASTER CONTROL
 
-    [].forEach.call(document.querySelectorAll("[class*=__ctrl]"), function(el) {
-      el.addEventListener("click", function(e) {
+    [].forEach.call(document.querySelectorAll("[class*=__ctrl]"), function (el) {
+      el.addEventListener("click", function (e) {
 
         e.stopPropagation();
 
-        if ( e.target.nodeName.toLowerCase() === "a" ) {
-          if ( !(e.target.classList.contains("is-active")) ) {
+        if (e.target.nodeName.toLowerCase() === "a") {
+          if (!(e.target.classList.contains("is-active"))) {
             e.preventDefault();
           }
         }
 
-        // Obtain the component name, and use it in setting the variables.
+        // Obtain the component name, and use it in setting the variables
 
         var myClasses = this.getAttribute("class").split(" ");
-        for(var i = 0; i < myClasses.length; i++) {
+        for (var i = 0; i < myClasses.length; i++) {
           myClasses[i] = myClasses[i].split("__");
         }
         myClasses = [].concat.apply([], myClasses);
 
-        // Activator Variables.
+        // Activator Variables
 
         var activeComponentClass = "." + myClasses[myClasses.indexOf("ctrl") - 1],
-            //activeCtrlClass = activeComponentClass + "__ctrl",
             activeContentClass = activeComponentClass + "__content",
             activeContentId = "#" + this.dataset.contentId;
-            //bodyActive = "body.is-active";
 
         // DEACTIVATE
 
-        // (a.) Master deactivator.
+        // (a.) Master deactivator
 
         function deactivate() {
           var isActive = document.querySelectorAll(".is-active");
@@ -47,30 +45,35 @@
           }
         }
 
-        // (b.) Deactivate on `click outside to dismiss`.
+        // (b.) Deactivate on `click outside to dismiss`
 
         function deactivateOutside() {
           document.body.addEventListener("click", function (e) {
+            var checkIsActive = this.classList.contains("is-active");
             for (var element = e.target; element; element = element.parentNode) {
-              if ( !(element.classList.contains("is-active")) ) {
+              if ( checkIsActive === false ) {
                 deactivate();
               }
             }
           });
           document.body.addEventListener("touchstart", function (e) {
+            var checkIsActive = this.classList.contains("is-active");
             for (var element = e.target; element; element = element.parentNode) {
-              if ( !(element.classList.contains("is-active")) ) {
+              if ( checkIsActive === false ) {
                 deactivate();
               }
             }
           });
         }
 
-        // (c.) Deactivate on window resize.
+        // (c.) Deactivate on window resize
 
         function deactivateResize() {
+          var windowWidth = window.innerWidth;
           window.addEventListener("resize", function () {
-            deactivate();
+            if ( window.innerWidth !== windowWidth ) {
+              deactivate();
+            }
           });
         }
 
@@ -78,7 +81,7 @@
 
         if (activeContentId === "#undefined") {
 
-          // Simple Toggle (using sibling `activeContentClass`).
+          // Simple Toggle (using sibling `activeContentClass`)
 
           if ( (this.classList.contains("is-active")) ) {
             deactivate();
@@ -87,12 +90,11 @@
             this.classList.add("is-active");
             this.parentNode.classList.add("is-active");
             this.parentNode.querySelector(activeContentClass).classList.add("is-active");
-            //document.body.classList.add("is-active");
           }
 
         } else {
 
-          // Advanced Toggle (using `data-content-id`).
+          // Advanced Toggle (using `data-content-id`)
 
           if ( (this.classList.contains("is-active")) ) {
             deactivate();
@@ -108,7 +110,7 @@
         deactivateOutside();
         deactivateResize();
 
-        // Stop propagation when clicking Activator Content.
+        // Stop propagation when clicking Activator Content
 
         [].forEach.call(document.querySelectorAll("[class*=__content]"), function(el) {
           el.addEventListener("click", function(e) {
@@ -121,7 +123,7 @@
 
         // ACTIVATOR CLOSE
 
-        // (a.) Close by button/link (e.g. "x" icon).
+        // (a.) Close by button/link (e.g. "x" icon)
 
         [].forEach.call(document.querySelectorAll("[class*=__close]"), function(el) {
           el.addEventListener("click", function(e) {
@@ -132,8 +134,8 @@
           });
         });
 
-        // (b.) Close dropdown by clicking elsewhere on a (complex) menu or menubar.
-        // Enables one dropdown to be closed when another is opened.
+        // (b.) Close dropdown by clicking elsewhere on a (complex) menu or menubar)
+        // (Enables one dropdown to be closed when another is opened)
 
         [].forEach.call(document.querySelectorAll(".menubar__content"), function(el) {
           if (activeComponentClass === ".dropdown") {
@@ -143,8 +145,8 @@
           }
         });
 
-        // (c.) Close when clicking a hyperlink within.
-        // E.g. close off-canvas if link goes somewhere on same page.
+        // (c.) Close when clicking a hyperlink within
+        // E.g. close off-canvas if link goes somewhere on same page
 
         [].forEach.call(document.querySelectorAll("a[href*='#']"), function(el) {
           el.addEventListener("click", function() {
@@ -156,9 +158,6 @@
 
         [].forEach.call(document.querySelectorAll("[class*=--no-dismiss]"), function(el) {
           el.addEventListener("click", function(e) {
-            e.stopPropagation();
-          });
-          el.addEventListener("touchstart", function(e) {
             e.stopPropagation();
           });
         });

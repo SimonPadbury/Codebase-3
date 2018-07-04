@@ -9,6 +9,7 @@
     <title>Example Newspaper | Codebase</title>
     <link rel="icon">
     <link rel="stylesheet" href="codebase/css/codebase.css">
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Spectral");
       body {
@@ -18,44 +19,46 @@
     </style>
   </head>
   <body class="codebase-example">
-    <div class="codebase-bodyinner">
-      <style>
-        .newspaper-logo a {
-          color: rgb(61,61,61);
-          text-decoration: none
-        }
-        
-        
-      </style>
-      <div class="flexbox flexbox--container bb--thin">
-        <div class="flexitem flexitem--span-12">
-          <div class="menu menu--menubar-md deco">             
-            <div class="menu__ctrl menu__ctrl--right p--8 text--big fa fa-bars"></div>
-            <div class="menu__content">
-              <ul class="menubar__right">
-                <li><a href="#/">Contact</a></li>
-                <li><a href="#/">About</a></li>
-                <li><a href="#/">Subscribe</a></li>
-                <li><a href="#/">Login</a></li>
-                <li>
-                  <form style="margin-bottom: 0; padding: 4px;">
-                    <input class="form__input--inline form__input--sm combo--left b--blue" id="search-example" name="examplename" placeholder="Search..." type="text">
-                    <button class="btn btn--primary btn--icon btn--sm combo--right" type="submit"><i class="fa fa-search"></i></button>
-                  </form>
-                </li>
-              </ul>
-            </div>
+    <style>
+      .newspaper-logo a {
+        color: rgb(61,61,61);
+        text-decoration: none
+      }
+      
+      
+    </style>
+    <div class="container flexbox bb--thin">
+      <div class="flex-item--span-12">
+        <div class="menu menu--menubar-md decorate">             
+          <div class="menu__ctrl menu__ctrl--right p--8 big fa fa-bars"></div>
+          <div class="menu__content">
+            <ul class="menubar__right">
+              <li><a href="#/">Contact</a></li>
+              <li><a href="#/">About</a></li>
+              <li><a href="#/">Subscribe</a></li>
+              <li><a href="#/">Login</a></li>
+              <li>
+                <form style="margin-bottom: 0; padding: 4px;">
+                  <input class="form__input--inline form__input--sm combo--left b--blue" id="search-example" name="examplename" type="text">
+                  <button class="btn btn--primary btn--icon btn--sm combo--right" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="flexbox flexbox--container flexbox--gutter">
-        <div class="flexitem flexitem--span-12">
-          <h1 class="mt--line newspaper-logo"><a href="#/"><i class="fa fa-newspaper-o"></i> Newspaper</a></h1>
+    </div>
+    <div class="container">
+      <div class="flexbox flexbox--gap">
+        <div class="flex-item--span-12">
+          <h1 class="mt--line newspaper-logo"><a href="#/"><i class="fa fa-newspaper"></i> Newspaper</a></h1>
         </div>
       </div>
-      <div class="flexbox flexbox--container flexbox--gutter">
-        <div class="flexitem flexitem--span-12">
-              <div class="tabs mb--line bb--thin deco">
+    </div>
+    <div class="container">
+      <div class="flexbox flexbox--gap">
+        <div class="flex-item--span-12">
+              <div class="tabs mb--line bb--thin decorate">
                 <div class="tab__label-wrap">
                   <div class="tab__label" data-tab-id="world">World News</div>
                   <div class="tab__label" data-tab-id="local">Local News</div>
@@ -64,8 +67,8 @@
                   <div class="tab__label" data-tab-id="technology">Technology</div>
                   <div class="tab__label" data-tab-id="sport">Sport</div>
                 </div>
-                <div class="tab__card" id="world">
-                  <ul class="menubar deco">
+                <div class="tab__panel" id="world">
+                  <ul class="menubar decorate">
                     <li><a href="#/">World 1</a></li>
                     <li><a href="#/">World 2</a></li>
                     <li><a href="#/">World 3</a></li>
@@ -73,8 +76,8 @@
                     <li><a href="#/">World 5</a></li>
                   </ul>
                 </div>
-                <div class="tab__card" id="local">
-                  <ul class="menubar deco">
+                <div class="tab__panel" id="local">
+                  <ul class="menubar decorate">
                     <li><a href="#/">Local 1</a></li>
                     <li><a href="#/">Local 2</a></li>
                     <li><a href="#/">Local 3</a></li>
@@ -82,8 +85,8 @@
                     <li><a href="#/">Local 5</a></li>
                   </ul>
                 </div>
-                <div class="tab__card" id="science">
-                  <ul class="menubar deco">
+                <div class="tab__panel" id="science">
+                  <ul class="menubar decorate">
                     <li><a href="#/">Science 1</a></li>
                     <li><a href="#/">Science 2</a></li>
                     <li><a href="#/">Science 3</a></li>
@@ -91,8 +94,8 @@
                     <li><a href="#/">Science 5</a></li>
                   </ul>
                 </div>
-                <div class="tab__card" id="health">
-                  <ul class="menubar deco">
+                <div class="tab__panel" id="health">
+                  <ul class="menubar decorate">
                     <li><a href="#/">Health 1</a></li>
                     <li><a href="#/">Health 2</a></li>
                     <li><a href="#/">Health 3</a></li>
@@ -100,8 +103,8 @@
                     <li><a href="#/">Health 5</a></li>
                   </ul>
                 </div>
-                <div class="tab__card" id="technology">
-                  <ul class="menubar deco">
+                <div class="tab__panel" id="technology">
+                  <ul class="menubar decorate">
                     <li><a href="#/">Technology 1</a></li>
                     <li><a href="#/">Technology 2</a></li>
                     <li><a href="#/">Technology 3</a></li>
@@ -109,8 +112,8 @@
                     <li><a href="#/">Technology 5</a></li>
                   </ul>
                 </div>
-                <div class="tab__card" id="sport">
-                  <ul class="menubar deco">
+                <div class="tab__panel" id="sport">
+                  <ul class="menubar decorate">
                     <li><a href="#/">Sport 1</a></li>
                     <li><a href="#/">Sport 2</a></li>
                     <li><a href="#/">Sport 3</a></li>
@@ -121,8 +124,10 @@
               </div>
         </div>
       </div>
-      <div class="flexbox flexbox--container flexbox--gutter mb--line bb--thin">
-        <div class="flexitem flexitem-sm--span-8 flexitem-md--span-4">
+    </div>
+    <div class="container">
+      <div class="flexbox flexbox--gap mb--line bb--thin">
+        <div class="flex-item-sm--span-8 flex-item-md--span-4">
           <style>
             a.card__overlay {
               text-align: left;
@@ -137,22 +142,27 @@
               box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             }
           </style>
-          <div class="card card--vertical main-story mh--8 deco">
-            <div class="card__image"><img src="holder.js/600x600"></div>
+          <div class="card card--vertical main-story mx--8 decorate">
+            <div class="card__image">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="600" style="max-width: 100%; height: auto; background: #555">
+                <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
+            </div>
             <div class="card__overlay card__overlay--top">
               <div class="card__body" style="background-color: rgba(0,0,0,0.5);">
-                <h4 class="text--white text--bold">Today's Frontpage Story</h4>
+                <h4 class="white bold">Today's Frontpage Story</h4>
               </div>
             </div><a class="card__overlay card__overlay--bottom" href="#/">
               <div class="card__body" style="background-color: rgba(0,0,0,0.5);">
-                <p class="text--white">
+                <p class="white">
                   Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
                   
                 </p>
               </div></a>
           </div>
         </div>
-        <div class="flexitem flexitem-sm--span-4 flexitem-md--span-8 bl--thin">
+        <div class="flex-item-sm--span-4 flex-item-md--span-8 bl--thin">
           <style>
             a.card {
               transition: all 0.3s ease-in-out;
@@ -165,11 +175,16 @@
             }
             
           </style>
-          <div class="mb--4 text--center bb--thin p--block text--bold text--caps">On this day</div>
+          <div class="mb--4 center bb--thin p--block bold caps">On this day</div>
           <div class="flexbox">
-            <div class="flexitem flexitem-md--span-4 p--block"><a class="card card--vertical deco" href="#/">
+            <div class="flex-item-md--span-4 p--block"><a class="card card--vertical decorate" href="#/">
                 <div class="card__header">Science</div>
-                <div class="card__image text--center"><img src="holder.js/600x300"></div>
+                <div class="card__image center">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="300" style="max-width: 100%; height: auto; background: #555">
+                    <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
                 <div class="card__body">
                   <h4>Headline</h4>
                   <p class="show--md-up">
@@ -177,9 +192,14 @@
                       
                   </p>
                 </div></a></div>
-            <div class="flexitem flexitem-md--span-4 p--block"><a class="card card--vertical deco" href="#/">
+            <div class="flex-item-md--span-4 p--block"><a class="card card--vertical decorate" href="#/">
                 <div class="card__header">Health</div>
-                <div class="card__image text--center"><img src="holder.js/600x300"></div>
+                <div class="card__image center">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="300" style="max-width: 100%; height: auto; background: #eee">
+                    <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
                 <div class="card__body">
                   <h4>Headline</h4>
                   <p class="show--md-up">
@@ -187,166 +207,251 @@
                     
                   </p>
                 </div></a></div>
-            <div class="flexitem flexitem-md--span-4 p--block"><a class="card card--vertical deco" href="#/">
+            <div class="flex-item-md--span-4 p--block"><a class="card card--vertical decorate" href="#/">
                 <div class="card__header">Sport</div>
-                <div class="card__image text--center"><img src="holder.js/600x300"></div>
+                <div class="card__image center">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="300" style="max-width: 100%; height: auto; background: #555">
+                    <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
                 <div class="card__body">
                   <h4>Headline</h4>
-                  <p class="show--md-up">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.</p>
+                  <p class="show--md-up">
+                    Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+                    
+                  </p>
                 </div></a></div>
           </div>
         </div>
       </div>
-      <main class="flexbox flexbox--container flexbox--gutter">
-        <div class="flexitem flexitem-sm--span-4 flexitem-sm--order-2 flexitem-md--span-3">
-          <p class="text--center text--caps">Advertisements</p>
+    </div>
+    <main class="container">
+      <div class="flexbox flexbox--gap">
+        <div class="flex-item-md--span-4 flex-item-md--order-2 flex-item-lg--span-3">
+          <p class="center caps">Advertisements</p>
           <div class="flexbox mb--line">
-            <div class="flexitem flexitem--span-6 flexitem-sm--span-12 p--4"><img src="holder.js/300x250"></div>
-            <div class="flexitem flexitem--span-6 flexitem-sm--span-12 p--4"><img src="holder.js/300x250"></div>
-            <div class="flexitem flexitem--span-6 flexitem-sm--span-12 p--4"><img src="holder.js/300x250"></div>
-            <div class="flexitem flexitem--span-6 flexitem-sm--span-12 p--4"><img src="holder.js/300x250"></div>
-            <div class="flexitem flexitem--span-6 flexitem-sm--span-12 p--4"><img src="holder.js/300x250"></div>
-          </div>
-        </div>
-        <div class="flexitem flexitem-sm--span-8 flexitem-sm--order-1 flexitem-md--span-9">
-          <div class="flexbox flexbox--gutter flexbox--nested">
-            <div class="flexitem flexitem-md--span-8 flexitem-md--order-2">
-              <h4 class="mt--zero text--center text--caps">Today's Main Stories</h4><img src="holder.js/600x300">
-              <h2 class="mv--16 text--bold">First Main Story Headline            </h2>
-              <p class="text--lead">Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-              <p>Summo nostro dicunt sea ut, an summo adolescens reformidans pri, his meliore ancillae ei. Sit an dolore labore, an lorem electram concludaturque sed, sed eu integre persius. Has ex malis sonet omnes, in quis ubique sed, in eos diceret laboramus. At usu hinc assueverit. Ne placerat lucilius mel, ea omnis omnes vituperata nec. Mea postea mandamus explicari no, nam ne detracto percipitur appellantur, sed in zril iisque eruditi. Quo eu tollit altera, ut velit apeirian suscipiantur mea.</p>
-              <hr>
-              <div class="flexbox flexbox--gutter flexbox--nested">
-                <div class="flexitem flexitem-sm--span-6"><img src="holder.js/600x300">
-                  <h3 class="mv--16 text--bold">Second Main Story Headline            </h3>
-                  <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-                </div>
-                <div class="flexitem flexitem-sm--span-6"><img src="holder.js/600x300">
-                  <h3 class="mv--16 text--bold">Third Main Story Headline            </h3>
-                  <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-                </div>
-              </div>
+            <div class="flex-item--span-6 flex-item-sm--span-12 p--4">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="300" height="250" style="max-width: 100%; height: auto; background: #555">
+                <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
             </div>
-            <div class="flexitem flexitem-md--span-4 flexitem-md--order-1">
-              <div class="mb--line text--center text--caps">Recent</div><a class="card" href="#/">
-                <div class="card__image card__image--left pr--8"><img src="holder.js/64x64"></div>
-                <div class="card__body"><b class="mt--zero mb--8">First Featured Recent News Item</b></div></a>
-              <hr><a class="card" href="#/">
-                <div class="card__image card__image--left pr--8"><img src="holder.js/64x64"></div>
-                <div class="card__body"><b class="mt--zero mb--8">Second Featured Recent News Item</b></div></a>
-              <hr><a class="card" href="#/">
-                <div class="card__image card__image--left pr--8"><img src="holder.js/64x64"></div>
-                <div class="card__body"><b class="mt--zero mb--8">Third Featured Recent News Item</b></div></a>
-              <hr><a class="card" href="#/">
-                <div class="card__image card__image--left pr--8"><img src="holder.js/64x64"></div>
-                <div class="card__body"><b class="mt--zero mb--8">Fourth Featured Recent News Item</b></div></a>
-              <hr><a class="card" href="#/">
-                <div class="card__image card__image--left pr--8"><img src="holder.js/64x64"></div>
-                <div class="card__body"><b class="mt--zero mb--8">Fifth Featured Recent News Item</b></div></a>
+            <div class="flex-item--span-6 flex-item-sm--span-12 p--4">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="300" height="250" style="max-width: 100%; height: auto; background: #eee">
+                <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
+            </div>
+            <div class="flex-item--span-6 flex-item-sm--span-12 p--4">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="300" height="250" style="max-width: 100%; height: auto; background: #eee">
+                <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
+            </div>
+            <div class="flex-item--span-6 flex-item-sm--span-12 p--4">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="300" height="250" style="max-width: 100%; height: auto; background: #555">
+                <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
+            </div>
+            <div class="flex-item--span-6 flex-item-sm--span-12 p--4">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="300" height="250" style="max-width: 100%; height: auto; background: #eee">
+                <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
             </div>
           </div>
         </div>
-      </main>
-      <div class="flexbox flexbox--container bt--thin">
-        <div class="flexitem pt--20">
-          <div class="flexbox flexbox--gutter">
-            <div class="flexitem flexitem-md--span-3 mb--line"><img src="holder.js/300x250"></div>
-            <div class="flexitem flexitem-md--span-6">
-              <div class="flexbox flexbox--gutter flexbox--nested">
-                <div class="flexitem flexitem-xs--span-6">
-                  <ul class="menu">
-                    <li><a href="#/">World</a></li>
-                    <li><a href="#/">Local</a></li>
-                    <li><a href="#/">Science</a></li>
-                    <li><a href="#/">Health</a></li>
-                    <li><a href="#/">Technology</a></li>
-                    <li><a href="#/">Sport</a></li>
-                  </ul>
-                </div>
-                <div class="flexitem flexitem-xs--span-6">
-                  <ul class="menu">
-                    <li><a href="#/">About</a></li>
-                    <li><a href="#/">Contact</a></li>
-                    <li><a href="#/">Advertise with us</a></li>
-                    <li><a href="#/">Careers</a></li>
-                    <li><a href="#/">Terms of Use</a></li>
-                    <li><a href="#/">Privacy policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flexitem flexitem-md--span-3">
-              <h3 class="newspaper-logo"><a href="#/"><i class="fa fa-newspaper-o"></i> Newspaper</a></h3>
-              <form style="padding:4px;"><input class="b--gray-darken-1 form__input--inline form__input--sm combo--left" id="search-example" name="examplename" placeholder="Search..." type="text">
-<button class="btn btn--icon btn--sm combo--right" type="submit"><i class="fa fa-search"></i></button>
-              </form>
-              <div class="mt--line">
-                    <style>
-                      a.btn--facebook {
-                        color: #fff !important;
-                        background-color:#3b5998 !important;
-                      }
-                      a.btn--twitter {
-                        color: #fff !important;
-                        background-color:#00b6f1 !important;
-                      }
-                      a.btn--linkedin {
-                        color: #fff !important;
-                        background-color:#007bb6 !important;
-                      }
-                      a.btn--google-plus {
-                        color: #fff !important;
-                        background-color:#df4a32 !important;
-                      }
-                      
-                      a:hover.btn--facebook {
-                        background-color:#263e60 !important;
-                      }
-                      a:hover.btn--twitter {
-                        background-color:#0099bc !important;
-                      }
-                      a:hover.btn--linkedin {
-                        background-color:#005d82 !important;
-                      }
-                      a:hover.btn--google-plus {
-                        background-color:#aa3327 !important;
-                      }
-                      
-                    </style><a class="m--4 btn btn--facebook btn--icon btn--big-text" href="#/"><i class="fa fa-facebook"></i></a> <a class="m--4 btn btn--twitter btn--icon btn--big-text" href="#/"><i class="fa fa-twitter"></i></a> <a class="m--4 btn btn--linkedin btn--icon btn--big-text" href="#/"><i class="fa fa-linkedin"></i></a> <a class="m--4 btn btn--google-plus btn--icon btn--big-text" href="#/"><i class="fa fa-google-plus"></i></a> 
-              </div>
-            </div>
-          </div>
-          <div class="flexbox">
-            <div class="flexitem">
+        <div class="flex-item-md--span-8 flex-item-md--order-1 flex-item-lg--span-9">
+          <div class="flexbox flexbox--gap flexbox--nested">
+            <div class="flex-item-md--span-8 flex-item-md--order-2">
+              <h4 class="mt center caps">Today's Main Stories</h4>
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="300" style="max-width: 100%; height: auto; background: #555">
+                <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              </svg>
+              <h2 class="my--16 bold">First Main Story Headline            </h2>
+              <p class="lead">Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+              <p>Movet voluptaria voluptatum has at, qui cu timeam ancillae democritum. Ad veniam detraxit his. In est bonorum fabulas deleniti, eam ex soluta verear albucius. Sale aperiri repudiandae eu cum, at cum sint dicunt. Prima tibique constituto cum ne, quidam dolorem detraxit pro no, sea an aeque zril.</p>
               <hr>
-              <p class="text--center">
-                Copyright &copy; 2017 Newspaper, Inc.
-                
-                
-              </p>
+              <div class="flexbox flexbox--gap flexbox--nested">
+                <div class="flex-item-md--span-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="300" style="max-width: 100%; height: auto; background: #eee">
+                    <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                  <h3 class="my--16 bold">Second Main Story Headline            </h3>
+                  <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                </div>
+                <div class="flex-item-md--span-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="600" height="300" style="max-width: 100%; height: auto; background: #555">
+                    <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                  <h3 class="my--16 bold">Third Main Story Headline            </h3>
+                  <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-item-md--span-4 flex-item-md--order-1">
+              <div class="mb--line center caps">Recent</div><a class="card" href="#/">
+                <div class="card__image card__image--left pr--8">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                    <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
+                <div class="card__body"><b class="mt mb--8">First Featured Recent News Item</b></div></a>
+              <hr><a class="card" href="#/">
+                <div class="card__image card__image--left pr--8">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #555">
+                    <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
+                <div class="card__body"><b class="mt mb--8">Second Featured Recent News Item</b></div></a>
+              <hr><a class="card" href="#/">
+                <div class="card__image card__image--left pr--8">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                    <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
+                <div class="card__body"><b class="mt mb--8">Third Featured Recent News Item</b></div></a>
+              <hr><a class="card" href="#/">
+                <div class="card__image card__image--left pr--8">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #eee">
+                    <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
+                <div class="card__body"><b class="mt mb--8">Fourth Featured Recent News Item</b></div></a>
+              <hr><a class="card" href="#/">
+                <div class="card__image card__image--left pr--8">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="64" height="64" style="max-width: 100%; height: auto; background: #555">
+                    <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                    <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+                  </svg>
+                </div>
+                <div class="card__body"><b class="mt mb--8">Fifth Featured Recent News Item</b></div></a>
             </div>
           </div>
         </div>
       </div>
+    </main>
+    <div class="container bt--thin pt--line">
+      <div class="flexbox flexbox--gap">
+        <div class="flex-item-md--span-3 mb--line">
+          <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="300" height="250" style="max-width: 100%; height: auto; background: #eee">
+            <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+          </svg>
+        </div>
+        <div class="flex-item-md--span-6">
+          <div class="flexbox flexbox--gap flexbox--nested">
+            <div class="flex-item--span-6">
+              <ul class="menu">
+                <li><a href="#/">World</a></li>
+                <li><a href="#/">Local</a></li>
+                <li><a href="#/">Science</a></li>
+                <li><a href="#/">Health</a></li>
+                <li><a href="#/">Technology</a></li>
+                <li><a href="#/">Sport</a></li>
+              </ul>
+            </div>
+            <div class="flex-item--span-6">
+              <ul class="menu">
+                <li><a href="#/">About</a></li>
+                <li><a href="#/">Contact</a></li>
+                <li><a href="#/">Advertise with us</a></li>
+                <li><a href="#/">Careers</a></li>
+                <li><a href="#/">Terms of Use</a></li>
+                <li><a href="#/">Privacy policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex-item-md--span-3">
+          <h3 class="newspaper-logo"><a href="#/"><i class="fa fa-newspaper"></i> Newspaper</a></h3>
+          <form>
+            <p class="mb--0"> 
+              <label>Search:</label>
+            </p><input class="b--gray-darken-1 form__input--inline form__input--sm combo--left" id="search-example" name="examplename" type="text">
+<button class="btn btn--icon btn--sm combo--right" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <div class="mt--line">
+                <style>
+                  .social a          {color:#fff;}
+                  a.btn--facebook    {background-color:#3b5998;}
+                  a.btn--twitter     {background-color:#00b6f1;}
+                  a.btn--linkedin    {background-color:#007bb6;}
+                  a.btn--google-plus {background-color:#df4a32;}
+                  a.btn--youtube     {background-color:#b31217;}
+                  a.btn--pinterest   {background-color:#cb2027;}
+                  a.btn--instagram   {background-color:#c32aa3;}
+                  a.btn--tumblr      {background-color:#2c4762;}
+                  
+                  a:hover.btn--facebook    {background-color:#263e60;}
+                  a:hover.btn--twitter     {background-color:#0099bc;}
+                  a:hover.btn--linkedin    {background-color:#005d82;}
+                  a:hover.btn--google-plus {background-color:#aa3327;}
+                  a:hover.btn--youtube     {background-color:#7f0e17;}
+                  a:hover.btn--pinterest   {background-color:#961a23;}
+                  a:hover.btn--instagram   {background-color:#8e2079;}
+                  a:hover.btn--tumblr      {background-color:#15222d;}
+                  
+                </style>
+                <div class="social"> <a class="btn btn--facebook btn--icon big" href="#/"><i class="fab fa-facebook-f"></i></a> <a class="btn btn--twitter btn--icon big" href="#/"><i class="fab fa-twitter"></i></a> <a class="btn btn--linkedin btn--icon big" href="#/"><i class="fab fa-linkedin-in"></i></a> <a class="btn btn--youtube btn--icon big" href="#/"><i class="fab fa-youtube"></i></a> <a class="btn btn--instagram btn--icon big" href="#/"><i class="fab fa-instagram"></i></a>
+                </div>
+          </div>
+        </div>
+      </div>
     </div>
-        <div class="dropdown" style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;">
-          <div class="dropdown__content dropdown__content--above mb--4 bs b--rounded bg--white">
-            <ul class="menu deco b--thick b--blue">
-              <li><a class="bb--thin b--blue text--nowrap" href="index.html"><i class="fa fa-home"></i> Codebase</a></li>
-              <li><a class="text--nowrap" href="getting-started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
-              <li><a class="text--nowrap" href="basics.html"><i class="fa fa-cubes"></i> Basics</a></li>
-              <li><a class="text--nowrap" href="layout.html"><i class="fa fa-map"></i> Layout</a></li>
-              <li><a class="text--nowrap" href="components.html"><i class="fa fa-cogs"></i> Components</a></li>
-              <li><a class="text--nowrap" href="decoration.html"><i class="fa fa-paint-brush"></i> Decoration</a></li>
-              <li><a class="text--nowrap" href="examples.html"><i class="fa fa-flask"></i> Examples</a></li>
-              <li class="bt--thin b--blue"><a class="text--nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-home"></i> GitHub</a></li>
+    <div class="container mt--line bt--thin pt--line">
+      <p class="center">
+        Copyright &copy; 2018 Newspaper, inc.
+        
+        
+      </p>
+    </div>
+        <style>
+          .codebase {
+            position: fixed;
+            display: inline-block;
+            bottom: 8px;
+            left: 8px;
+            z-index: 999;
+          }
+          .codebase__content {
+            display: none;
+          }
+          .codebase__content.is-active {
+            display: block;
+          }
+          .codebase__content .feather {
+            position: relative;
+            top: 5px;
+            width: 18px;
+          }
+          
+        </style>
+        <div class="codebase">
+          <div class="codebase__content mb--4 bs b--rounded bg--white">
+            <ul class="menu decorate b--thick b--blue">
+              <li><a class="bb--thin b--blue nowrap" href="index.html"><i class="fas fa-home fa-fw"></i> Codebase</a></li>
+              <li><a class="nowrap" href="getting-started.html"><i class="fas fa-play fa-fw"></i> Getting Started</a></li>
+              <li><a class="nowrap" href="basics.html"><i class="fas fa-cubes fa-fw"></i> Basics</a></li>
+              <li><a class="nowrap" href="layout.html"><i class="far fa-map fa-fw"></i> Layout</a></li>
+              <li><a class="nowrap" href="components.html"><i class="fas fa-cogs fa-fw"></i> Components</a></li>
+              <li><a class="nowrap" href="decoration-utilities.html"><i class="fas fa-tint fa-fw"></i> Decoration Utilities</a></li>
+              <li><a class="nowrap" href="examples.html"><i class="fas fa-gift fa-fw"></i> Examples</a></li>
+              <li class="bt--thin b--blue"><a class="nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
             </ul>
           </div>
-          <button class="dropdown__ctrl btn btn--primary btn--icon btn--big-text btn--pill"> <i class="fa fa-cog"></i></button>
+          <button class="codebase__ctrl btn btn--primary btn--icon btn--pill big"><i class="fas fa-cog"></i></button>
         </div>
-        <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+        <div class="b--thin b--rounded bs px--4 bg--white center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--md-up">md &amp; down</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
     <script src="codebase/js/codebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
   </body>
 </html>

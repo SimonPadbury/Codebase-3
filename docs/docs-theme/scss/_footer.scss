@@ -1,0 +1,25 @@
+// FOOTER
+
+.docs__footer {
+  border-top: $cb-border--thin;
+  padding: 24px 8px;
+  text-align: center;
+  background-color: $cb-color--white;
+  color: $cb-color--gray;
+  svg#codebase-logo {
+    position: relative;
+    top: -3px;
+    vertical-align: middle;
+    height: 18px;
+    width: 32px;
+    margin-right: 2px;
+    path {
+      fill: $cb-text--color-hyperlink;
+      stroke: $cb-text--color-hyperlink;
+      stroke-width: 1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+    }
+  }
+}

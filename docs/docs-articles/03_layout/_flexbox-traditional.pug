@@ -1,0 +1,343 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "layout-flexbox-traditional"
+  - var articleTitle = "Traditional Flexbox 'Columnar Grid'"
+
+block section
+  
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-md--span-9.flex-item-lg--order-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Article
+        .flexbox.flexbox--gap.flexbox--nested
+          .flex-item-md--span-4
+            .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Nested
+          .flex-item-md--span-4
+            .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Nested
+          .flex-item-md--span-4
+            .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Nested
+    .flex-item-md--span-3.flex-item-lg--order-1 
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Aside
+
+  .flexbox.flexbox--center
+    .flex-item--span-7 
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Centered (at all viewport widths)
+
+  .tabs.decorate.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-flexbox-classes-html") HTML
+      .tab__label(data-tab-id="tab-docs-flexbox-classes-pug") Pug
+
+    #tab-docs-flexbox-classes-html.tab__panel
+      pre.mt
+        code.
+          &lt;div class="flexbox flexbox--gap"&gt;
+            &lt;div class="flex-item-md--span-9 flex-item-lg--order-2"&gt;
+              Article
+
+              &lt;div class="flexbox flexbox--gap"&gt;
+                &lt;div class="flex-item-sm--span-4"&gt;
+                  Nested
+                &lt;/div&gt;
+                &lt;div class="flex-item-sm--span-4"&gt;
+                  Nested
+                &lt;/div&gt;
+                &lt;div class="flex-item-sm--span-4"&gt;
+                  Nested
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;div class="flex-item-md--span-3 col-lg--order-1"&gt;
+              Aside
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="flexbox flexbox--center"&gt;
+            &lt;div class="flex-item--span-7"&gt;
+              Centered (at all viewport widths)
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+    #tab-docs-flexbox-classes-pug.tab__panel
+      pre.mt
+        code.
+          .flexbox.flexbox--gap
+            .flex-item-md--span-9.flex-item-lg--order-2
+              | Article
+              
+              .flexbox.flexbox--gap.flexbox--nested
+                .flex-item-sm--span-4
+                  | Nested
+                .flex-item-sm--span-4
+                  | Nested
+                .flex-item-sm--span-4
+                  | Nested
+            
+            .flex-item-md--span-3.col-lg--order-1
+              | Aside
+
+          .flexbox.flexbox--center
+            .flex-item--span-7
+              | Centered (at all viewport widths)
+  
+  h3 Flexbox and Flex-Item Classes
+
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th(style="width:160px") Class
+        th Explanation
+    tbody
+      tr
+        td(colspan="2").bg--gray-lighten-3
+          b Flexbox classes
+      tr
+        td
+          code.nowrap .flexbox
+        td.
+          The container class. Sets up the flexbox. Its width is unconstrained.
+      tr
+        td
+          code.nowrap .flexbox--grow-equal
+        td.
+          Flexbox modifier class &ndash; makes (immediate child) flex-items to grow to equal width.
+      tr
+        td
+          code.nowrap .flexbox--grow-auto
+        td.
+          Flexbox modifier class &ndash; makes (immediate child) flex-items to grow to equal width.
+      tr
+        td
+          code.nowrap .flexbox--container
+        td.
+          Flexbox modifier class &ndash; constrains the flexbox to #[code $cb-flexbox--max-width] and, on wider viewports, centers the flexbox by auto-margins right and left.
+      tr
+        td
+          code.nowrap .flexbox--gap
+        td.
+          Gives right and left padding to all immediate child block elements (i.e. flex-items).
+      tr
+        td
+          code.nowrap .flexbox--center
+        td.
+          Applied to the flexbox container, this will horizontally center any number of flex-items.
+      tr
+        td
+          code.nowrap .flexbox--middle
+        td.
+          Applied to the flexbox container, this will vertically center any number of flex-items.
+      tr
+        tr
+          td(colspan="2").bg--gray-lighten-3
+            b Flex-item classes
+        td.nowrap
+          code .flex-item--*
+          br
+          code .flex-item-md--*
+          br
+          code .flex-item-lg--*
+        td.
+          Controlling the column (flex-item) width behaviour at different breakpoints. Except for #[code .flex-item--*] all flex-items expand to #[code width: 100%] of their container width below their breakpoint.
+      tr
+        td
+          code *--span-*
+        td.
+          Flex-item spanning at different breakpoints using % widths (#[b note:] not using flex-grow), as calculated out of max
+          #[code $cb-max-flex-items] (default is 12).
+      tr
+        td
+          code *--offset-*
+        td.
+          Flex-item offsetting (at different breakpoints), as calculated out of max #[code $cb-max-flex-items] (default is 12).
+      tr
+        td
+          code *--order-*
+        td Flex-item (re-)ordering (at different breakpoints).
+
+  h3.mt--48 Flexbox (Traditional) at different Media Query Breakpoint Widths
+
+  p The Codebase media query breakpoint widths are specified by four #[code !default] variables.
+
+  p Flexboxes can be used with or without specifying breakpoints (and with or without using breakpoint classes). Without breakpoints, the flex-items will be displayed the same (% width) whatever the window width.
+
+  p This means that each flexbox system can have up to five viewport width configurations:
+
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th
+        th
+        th.nowrap  Flex-Item classes
+        th Flex-Item mixins
+    tbody
+      tr
+        td 1
+        td Multi-column at all screen widths
+        td #[code .flex-item--*]
+        td Use flex-item mixins without wrapping them in breakpoint mixins.
+      tr
+        td 2
+        td Multi-column at or above #[code.nowrap $cb-mq--md] (default 640px)
+        td #[code.nowrap .flex-item-md--*]
+        td Wrap flex-item mixins in #[br] #[code.nowrap @include break--min($cb-mq--md)] {...}
+      tr
+        td 3
+        td Multi-column at or above #[code $cb-mq--lg] (default 960px)
+        td #[code .flex-item-lg--*]
+        td Wrap flex-item mixins in #[br] #[code @include break--min($cb-mq--lg)] {...}
+
+
+  h3 Flex-item Spans
+  
+  p #[code --span-]
+
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-12
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 .flex-item--span-12
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-11
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 .flex-item--span-11
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-10
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 .flex-item--span-10
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-9
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 ...
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-8
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-7
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-6
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-5
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-4
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-3
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+    .flex-item--span-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp;
+
+  h3.mt--line Flex-item Offsets
+
+  p
+    code --offset-
+
+  .flexbox
+    .flex-item--span-1.flex-item--offset-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 *-1
+  .flexbox
+    .flex-item--span-1.flex-item--offset-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 *-2
+  .flexbox
+    .flex-item--span-1.flex-item--offset-3
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 *-3
+  .flexbox
+    .flex-item--span-1.flex-item--offset-4
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 &nbsp; ...
+  .flexbox
+    .flex-item--span-1.flex-item--offset-11
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 *-11
+
+  h3.mt--line Flex-item (Re-)Ordering
+
+  p
+    code --order-
+
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-3.flex-item--order-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 (1st) *--order-3
+    .flex-item--span-3.flex-item--order-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 (2nd) *--order-1
+    .flex-item--span-3.flex-item--order-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 (3rd) *--order-4
+    .flex-item--span-3.flex-item--order-1
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 (4th) *--order-2
+
+  br
+
+  p #[b Notes on flex-item (re-)ordering:]
+  
+  ol
+    li If you require column re-ordering, specify the order of #[i all] flex-items in your flexbox.
+    
+    li If at a higher breakpoint you need columns to revert to their normal order (as in the HTML), then you can use --order-0] (e.g. #[code .flex-item-lg--order-0]).
+      
+  h3 Flexbox Centering and Middling
+  
+  p Centering and middling is applied to the flexbox container (not to each flex-item). One or more flex-items can be included in the flexbox container.
+  
+  p #[code .flexbox--center] &ndash; #[b note:] the flexbox container width needs to be wider than the width of the flex-item.
+  
+  .flexbox.flexbox--center.flexbox--gap.b--dashed
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Centered
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Centered
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Centered
+
+  p.mt--line #[code .flexbox--middle] &ndash; #[b note:] the flexbox container height needs to be taller than the height of the flex-item.
+
+  .flexbox.flexbox--middle.flexbox--gap.b--dashed(style="height: 150px")
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Middled
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Middled
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Middled
+
+  p.mt--line #[code .flexbox--center.flexbox--middle]
+
+  .flexbox.flexbox--center.flexbox--middle.flexbox--gap.b--dashed(style="height: 150px")
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Centered and middled
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Centered and middled
+    .flex-item--span-2
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3
+        | Centered and middled

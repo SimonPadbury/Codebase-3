@@ -1,0 +1,21 @@
+/*! CODEBASE */
+
+// BASICS: BASE
+// ============
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar;
+}
+
+[role="button"], a, area, button, input, label, select, summary, textarea {
+  touch-action: manipulation;
+}

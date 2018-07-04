@@ -1,0 +1,32 @@
+// BASICS MIXINS: LABELS
+// =====================
+
+@mixin cb-label {
+  position: relative;
+  display: inline block;
+  padding: 0.1em 0.4em;
+  line-height: 1;
+  color: $cb-color--white;
+  background: map-get($cb-colors-ui, "default");
+
+  @each $key, $cb-value in $cb-colors-ui {
+    &--#{$key} {
+      background-color: $cb-value;
+    }
+  }
+
+  white-space: nowrap;
+}
+
+// CLASS BUILDER: LABELS
+// =====================
+
+@mixin cb-basics-labels {
+  .label {
+    @include cb-label;
+  }
+}
+
+@if $cb-include-css--labels == true {
+  @include cb-basics-labels;
+}

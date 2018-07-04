@@ -1,0 +1,82 @@
+// DECORATION MIXIN: PADDINGS
+// ==========================
+
+@mixin cb-padding-utilities {
+
+  @each $key, $cb-value in $cb-spacing {
+
+    // All
+    .p--#{$key} {
+      padding: $cb-value;
+    }
+
+    // Top
+    .pt--#{$key} {
+      padding-top: $cb-value;
+    }
+
+    // Right
+    .pr--#{$key} {
+      padding-right: $cb-value;
+    }
+
+    // Bottom
+    .pb--#{$key} {
+      padding-bottom: $cb-value;
+    }
+
+    // Left
+    .pl--#{$key} {
+      padding-left: $cb-value;
+    }
+
+    // Vertical (Top and Bottom)
+    .py--#{$key} {
+      padding-top: $cb-value;
+      padding-bottom: $cb-value;
+    }
+
+    // Horizontal (Right and Left)
+    .px--#{$key} {
+      padding-right: $cb-value;
+      padding-left: $cb-value;
+    }
+
+  }
+
+  // Extra line spacing (top or bottom padding)
+
+  .pt--line {
+    padding-top: $cb-text--base-line-height;
+
+    &.big,
+    .big & {
+      padding-top: $cb-text--big-line-height;
+    }
+  }
+
+  .pb--line {
+    padding-bottom: $cb-text--base-line-height;
+
+    &.big,
+    .big & {
+      padding-bottom: $cb-text--big-line-height;
+    }
+  }
+
+  // Block Padding
+  // (Same as $cb-spacing--block in menu items, navbar items, tab labels and
+  // table cells.)
+
+  .p--block {
+    padding: $cb-spacing--block;
+  }
+
+}
+
+// INCLUDE CLASSES: PADDINGS
+// =========================
+
+@if $cb-include-css--decoration-utilities == true {
+  @include cb-padding-utilities;
+}

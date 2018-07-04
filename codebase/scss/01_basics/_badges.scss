@@ -1,0 +1,38 @@
+// BASICS MIXINS: BADGES
+// =====================
+
+@mixin cb-badge {
+  position: relative;
+  display: inline-block;
+  top: -0.4em;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  border-radius: 2em;
+  padding: 0.22em 0.3em;
+  font-size: 0.86em;
+  line-height: 1;
+  color: $cb-color--white;
+  background: map-get($cb-colors-ui, "default");
+
+  @each $key, $cb-value in $cb-colors-ui {
+    &--#{$key} {
+      background-color: $cb-value;
+    }
+  }
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+// CLASS BUILDER: BADGES
+// =====================
+
+@mixin cb-basics-badges {
+  .badge {
+    @include cb-badge;
+  }
+}
+
+@if $cb-include-css--badges == true {
+  @include cb-basics-badges;
+}

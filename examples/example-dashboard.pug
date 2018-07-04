@@ -7,6 +7,7 @@ block vars
   - var bodyClass = "bg--gray-lighten-3"
 
 block append head-addins
+  +font-awesome
   style.
     .example-menubar-1 {
       z-index: 121;
@@ -37,24 +38,24 @@ block append head-addins
 block body
   include example-partials/__example-partials-index
   
-  .menubar.menubar--fixed.bg--white.example-menubar-1
+  .menubar.menubar--fixed.bg--white.example-menubar-1.py--4
     .menubar__brand
       a(href="#/")
         b Dashboard
     .menubar__content
       ul.menubar__right
-        li #[a #[i.fa.fa-arrow-circle-o-left]]
+        li #[a #[i.fa.fa-arrow-circle-left]]
         li #[a #[i.fa.fa-user-circle]]
-        li #[a #[i.fa.fa-arrow-circle-o-right]]
+        li #[a #[i.fa.fa-arrow-circle-right]]
         li #[a #[i.fa.fa-cog]]
-        li #[a.dropdown__ctrl #[i.fa.fa-ellipsis-v] #[i.fa.fa-caret-down]]
+        li #[a.dropdown__ctrl #[i.fa.fa-ellipsis-v]]
           .dropdown__content.dropdown__content--right.b--thin.bg--white
-            ul.menu.deco.text--left
+            ul.menu.decorate.left
               li #[a(href="") Edit your profile]
               li #[a(href="") Settings]
               li #[a(href="") Logout]
           
-  .mt--40.menu.menu--fixed.menu--menubar-md.bg--gray-darken-3.example-menubar-2
+  .mt--48.menu.menu--fixed.menu--menubar-md.bg--gray-darken-3.example-menubar-2
     .menu__ctrl.menu__ctrl--right.m--12.btn.btn.btn--icon.btn--sm.btn--big-text.fa.fa-bars
     .menu__content
       ul.menubar__justify
@@ -65,66 +66,66 @@ block body
         li #[a(href="#/") Ideas]
         li #[a(href="#/") Showcase]
         li #[a(href="#/") Guides]
-        a.dropdown__ctrl Search #[i.fa.fa-caret-down]
+        a.dropdown__ctrl Search
         .dropdown__content.dropdown__content--right.bg--gray-darken-3
-          form.mb--zero.p--16
+          form.mb.p--16
             input#search-example.b--gray.form__input--inline.form__input--sm.combo--left(name="examplename" placeholder="Search..." type="text")
-            button.btn.btn--icon.btn--sm.combo--right(type="submit") #[i.fa.fa-search]    
+            button.btn.btn--icon.btn--sm.combo--right(type="submit") #[i.fas.fa-search]    
 
-  .flexbox.flexbox--gutter.pt--60
-    .flexitem.flexitem--span-4.flexitem-sm--span-3.flexitem-md--span-2.pt--40.bg--white
+  .flexbox.flexbox--gap.pt--84
+    .flex-item--span-4.flex-item-sm--span-3.flex-item-md--span-2.pt--24.bg--white
       
       mixin card-sidebar(total)
         - var n = 0;
         while n < total
-          .card.card-example.mt--12
-            .card__image.
-              #[img(src="holder.js/64x64").mb--4.b--circle]
-            .card__body.ph--12(style="min-width: 120px;")
-              .text--small.text--bold Joe Bloggs
+          .card.card-example.m--12
+            .card__image
+              +image-placeholder-light(64, 64, "mb--4 b--circle")
+            .card__body.px--12(style="min-width: 120px;")
+              .small.bold Joe Bloggs
                 = " "
                 = (n++ + 1)
-              p.text--small.mb--zero Status #[i.fa.fa-mortar-board] #[br] #[i.fa.fa-clock-o] 1 hour ago
+              p.small.mb Status #[i.fas.fa-graduation-cap] #[br] #[i.fas.fa-clock] 1 hour ago
           //p(style="display: none;")= n++
 
       +card-sidebar(12)
 
-    .flexitem.flexitem--span-8.flexitem-sm--span-9.flexitem-md--span-10.mh--auto.pt--80(style="max-width: 960px")
+    .flex-item--span-8.flex-item-sm--span-9.flex-item-md--span-10.mx--auto.pt--48(style="max-width: 1024px")
       
       h2 Joe Bloggs 1
             
-      .flexbox.flexbox--gutter.flexbox--nested
+      .flexbox.flexbox--gap.flexbox--nested
 
-        .flexitem.flexitem-md--span-6.flexitem-lg--span-4.mb--line
+        .flex-item-md--span-6.flex-item-lg--span-4.mb--line
           .p--24.bg--white
-            .text--initial-icon.
-              #[i.fa.fa-bar-chart] 
+            .initial-icon.
+              #[i.fa.fa-chart-bar] 
               #[h3 Stats]
             +paragraph
             
             a.btn.btn--block(href="") View stats
 
-        .flexitem.flexitem-md--span-6.flexitem-lg--span-4.mb--line
+        .flex-item-md--span-6.flex-item-lg--span-4.mb--line
           .p--24.bg--white
-            .text--initial-icon.
+            .initial-icon.
               #[i.fa.fa-key] 
               #[h3 Permissions]
             +paragraph
             
             a.btn.btn--block(href="") Change permissions
 
-        .flexitem.flexitem-md--span-6.flexitem-lg--span-4.mb--line
+        .flex-item-md--span-6.flex-item-lg--span-4.mb--line
           .p--24.bg--white
-            .text--initial-icon.
+            .initial-icon.
               #[i.fa.fa-cog] 
               #[h3 Settings]
             +paragraph
             
             a.btn.btn--block(href="") Update settings 
 
-        .flexitem.flexitem-md--span-6.flexitem-lg--span-4.mb--line
+        .flex-item-md--span-6.flex-item-lg--span-4.mb--line
           .p--24.bg--white
-            .text--initial-icon.
+            .initial-icon.
               #[i.fa.fa-star] 
               #[h3 Projects]
             +paragraph
@@ -133,5 +134,4 @@ block body
 
   +codebase-bottomline
   
-  block append body-foot-addins
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js")
+//-block append body-foot-addins

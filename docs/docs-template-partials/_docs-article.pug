@@ -1,8 +1,9 @@
 article
   block article
-    .docs__section(id=sectionId dir=sectionDir)
+    .docs__article--target(id=articleId)
+    .docs__article(dir=articleDir)
       header
-        h2 #{sectionTitle}
+        h2 #{articleTitle}
 
       section
         block section

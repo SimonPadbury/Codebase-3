@@ -1,0 +1,24 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "layout-container"
+  - var articleTitle = "Layout Container"
+
+block section
+
+    p.lead If you need your design layout to have a maximum width, you can use the Codebase #[code .container] class.
+
+    pre
+        code.
+            &lt;div class="container"&gt; ... &lt;/div&gt;
+
+    p The container class controls the block maximum width to 1280px, and it centers the container auto-margins right and left.
+
+    p You can use a container to wrap a #[a(href="#layout-flexbox-introduction") flexbox] layout system.
+
+    pre
+        code.
+            &lt;div class="container"&gt;
+                &lt;div class="flexbox"&gt; ... &lt;/div&gt;
+            &lt;/div&gt;
+    

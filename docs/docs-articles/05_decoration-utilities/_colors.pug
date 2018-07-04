@@ -1,0 +1,220 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "decoration-utilities-colors"
+  - var articleTitle = "Colors"
+
+block section
+
+  h3 The Codebase color swatches
+  
+  p Codebase's six color swatches are used for Codebase UI colors (for #[span.label default], #[span.label.label--primary primary], #[span.label.label--secondary secondary], #[span.label.label--success success], #[span.label.label--warning warning], and #[span.label.label--danger danger]. See #[a(href="basics.html#basics-buttons") buttons], #[a(href="basics.html#basics-badges-and-labels") badges and labels].
+
+  p These six colors have also been used for the Codebase decoration utility classes.
+
+  p In each color series there are 7 colors: the base color (see the middle row below) plus 3 incrementally lighter and 3 incrementally darker.
+  
+  p Plus, black and white have been included (without shades).
+
+  style.
+    .swatch-row {
+      display: flex;
+    }
+    .swatch-row.b--thin {
+      margin-bottom: 8px;
+      padding-top: 8px;
+      padding-left: 8px;
+    }
+    .swatch-row p {
+      width: 99px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .swatch-row.b--thin p {
+      width: 89px
+    }
+    .swatch {
+      width: 106px;
+      height: 106px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    
+  div(style="overflow-x: auto;")
+    .swatch-row
+      p
+      p.center.small Grays
+      p.center.small Blues
+      p.center.small Teals
+      p.center.small Greens
+      p.center.small Oranges
+      p.center.small Reds
+    .swatch-row
+      p.small darken-3
+      .swatch.bg--gray-darken-3
+      .swatch.bg--blue-darken-3
+      .swatch.bg--teal-darken-3
+      .swatch.bg--green-darken-3
+      .swatch.bg--orange-darken-3
+      .swatch.bg--red-darken-3
+    .swatch-row
+      p.small darken-2
+      .swatch.bg--gray-darken-2
+      .swatch.bg--blue-darken-2
+      .swatch.bg--teal-darken-2
+      .swatch.bg--green-darken-2
+      .swatch.bg--orange-darken-2
+      .swatch.bg--red-darken-2
+    .swatch-row
+      p.small darken-1
+      .swatch.bg--gray-darken-1
+      .swatch.bg--blue-darken-1
+      .swatch.bg--teal-darken-1
+      .swatch.bg--green-darken-1
+      .swatch.bg--orange-darken-1
+      .swatch.bg--red-darken-1
+    .swatch-row
+      p.small.caps.bolder Base Color
+      .swatch.bg--gray.small.p--4.bolder.white Gray
+      .swatch.bg--blue.small.p--4.bolder.white Blue
+      .swatch.bg--teal.small.p--4.bolder.white Teal
+      .swatch.bg--green.small.p--4.bolder.white Green
+      .swatch.bg--orange.small.p--4.bolder.white Orange
+      .swatch.bg--red.small.p--4.bolder.white Red
+    .swatch-row
+      p.small lighten-1
+      .swatch.bg--gray-lighten-1
+      .swatch.bg--blue-lighten-1
+      .swatch.bg--teal-lighten-1
+      .swatch.bg--green-lighten-1
+      .swatch.bg--orange-lighten-1
+      .swatch.bg--red-lighten-1
+    .swatch-row
+      p.small lighten-2
+      .swatch.bg--gray-lighten-2
+      .swatch.bg--blue-lighten-2
+      .swatch.bg--teal-lighten-2
+      .swatch.bg--green-lighten-2
+      .swatch.bg--orange-lighten-2
+      .swatch.bg--red-lighten-2
+    .swatch-row
+      p.small lighten-3
+      .swatch.bg--gray-lighten-3
+      .swatch.bg--blue-lighten-3
+      .swatch.bg--teal-lighten-3
+      .swatch.bg--green-lighten-3
+      .swatch.bg--orange-lighten-3
+      .swatch.bg--red-lighten-3
+    .swatch-row.bt--thin.b--gray-darken-2.mt--4.pt--8
+      p.small.caps.bolder Plus
+      .swatch.bg--white.b--thin.small.bolder.p--4 White
+      .swatch.bg--black.small.p--4.bolder.white Black
+      .swatch
+      .swatch
+      .swatch
+      .swatch
+    
+  
+  p.mt--line Codebase swatch color class options:
+
+  table.table.table--rows.table--columns
+    tbody
+      tr
+        td(style="width: 160px")
+          | #[i background color] #[br] #[code .bg--] #[br] #[br]
+          | #[i text color] #[br] (no prefix) #[br] #[br]
+          | #[i border color] #[br] #[code .b--]
+        td
+          | #[code gray]
+          br
+          | #[code red]
+          br
+          | #[code orange]
+          br
+          | #[code green]
+          br
+          | #[code teal]
+          br
+          | #[code blue]
+          br
+          | #[code black]
+          br
+          | #[code white]
+        td
+          | #[code -lighten-]
+          br
+          | #[code -darken-]
+        td
+          | #[code 1]
+          br
+          | #[code 2]
+          br
+          | #[code 3]
+
+  p Applying swatch colors to elements:
+
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-sm--span-6
+      | &bull; Backgrounds: #[code bg--{colorname}]
+    .flex-item-sm--span-6
+      .p--8.bg--blue-lighten-2  Example: #[code .bg--blue-lighten-2]
+      br
+    .flex-item-sm--span-6
+      | &bull; Borders: #[code b--{colorname}]
+    .flex-item-sm--span-6
+      .mb--line.p--8.b--heavy.b--orange  Example: #[code .b--orange]
+    .flex-item-sm--span-6
+      | &bull; Text: #[code {colorname}]
+    .flex-item-sm--span-6
+      p Example: #[code .green-darken-1] (below)#[br]
+      +paragraph(1, "green-darken-1")
+
+  h3 Swatch color range classes and SCSS
+
+  p Example for setting the text color using utility classes for grays &ndash; and the corresponding SCSS for use in stylesheet creation:
+
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th Class
+        th SCSS
+    tbody
+      tr
+        td #[code .gray-darken-3]
+        td #[code color: darken($cb-color--gray, $cb-color--step * 3)]
+      tr
+        td #[code .gray-darken-2]
+        td #[code color: darken($cb-color--gray, $cb-color--step * 2)]
+      tr
+        td #[code .gray-darken-1]
+        td #[code color: darken($cb-color--gray, $cb-color--step)]
+      tr
+        td #[code .gray]
+        td #[code color: $cb-color--gray]
+      tr
+        td #[code .gray-lighten-1]
+        td #[code color: lighten($cb-color--gray, $cb-color--step * 1)]
+      tr
+        td #[code .gray-lighten-2]
+        td #[code color: lighten($cb-color--gray, $cb-color--step * 2)]
+      tr
+        td #[code .gray-darken-3]
+        td #[code color: lighten($cb-color--gray, $cb-color--step * 3)]
+
+  .mt--line.bg--green-lighten-3.p--16 
+  
+    h4 Advanced (SCSS) users:
+    
+    p #[b All Codebase decoration colors are here simply to get you started]. You can override and improve them in your own website design as you make progress.
+    
+    p To show you how this is done, notice that there are a few extra example #[code $cb-color--*] variables and their instances in the #[code $cb-colors] SCSS map in the #[a(href="codebase/scss/00_default-variables/_default-variables.scss")  variables file], commented out. 
+    
+    p #[b You need to copy (a.) the whole set of color variables and (b.) the SCSS map into your styles &ndash; and then un-comment the extra colors in both]. Then during pre-processing, the class-builders in #[a(href="codebase/scss/04_decoration/_colors.scss") codebase/scss/04_decoration/_colors.scss] will generate all the decoration utility classes for colored backgrounds, borders and text.
+
+    p By overriding the color variables and the SCSS map in this way, you have complete freedom to:
+      
+    ul
+      li Add more color classes
+      li Remove classes for colors that you never use
+      li Change color class names
+      li Change color values

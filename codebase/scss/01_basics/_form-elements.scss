@@ -1,0 +1,199 @@
+// BASICS MIXINS: FORM ELEMENTS
+// ============================
+
+label {
+  display: inline-block;
+  padding: 4px 0;
+}
+
+@mixin cb-form__input {
+  position: relative;
+  width: 100%;
+  outline: 0 none;
+  border: $cb-form--outline-thickness solid $cb-form--outline-color;
+  font-size: 1em;
+  line-height: 1.5;
+  vertical-align: baseline;
+
+  @if $cb-form--input-rounded-corners == true {
+    border-radius: $cb-border--radius;
+  }
+  @else {
+    -webkit-border-radius: 0 !important;
+  }
+
+  min-height: 40px;
+  padding: (4px - $cb-form--outline-thickness) 4px;
+  color: $cb-text--base-text-color;
+  transition: all 0.6s ease;
+
+  &:focus {
+    border-color: $cb-text--color-hyperlink;
+
+    @if $cb-form--focus-glow == true {
+      box-shadow: $cb-form--focus-glow-style;
+    }
+  }
+}
+
+fieldset {
+  min-width: 0;
+}
+
+input,
+select {
+  @include cb-form__input;
+}
+
+option {
+  padding: 4px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="password"],
+textarea,
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="password"] {
+  line-height: 1em;
+}
+
+input[type="number"] {
+  padding: 0;
+  padding-left: 2px;
+}
+
+select {
+  color: $cb-color--gray;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  width: 24px;
+  min-height: auto;
+  margin: 0;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+
+  @include cb-form__input;
+}
+
+@mixin cb-textarea--decorate {
+  margin-bottom: 4px / 2 !important;
+}
+
+// BASICS MIXINS: FORMS
+// ====================
+
+// Hide form placeholders on focus
+
+@mixin cb-form__placeholder--hide {
+  &:focus::-webkit-input-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent !important;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent !important;
+  }
+}
+
+// Inline form elements
+
+@mixin cb-form__input--inline {
+  width: inherit;
+}
+
+// Sizes
+
+@mixin cb-form__input--sm {
+  min-height: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@mixin cb-form__input--lg {
+  min-height: 56px;
+}
+
+// Big text
+
+@mixin cb-form__input--big-text {
+  font-size: 1.5em;
+}
+
+// Pill
+
+@mixin cb-form__input--pill {
+  border-radius: 10rem;
+}
+
+// CLASS BUILDER: FORMS
+// ====================
+
+@mixin cb-basics-forms {
+  input,
+  textarea {
+    @include cb-form__placeholder--hide;
+  }
+
+  .form {
+    &__input--inline {
+      @include cb-form__input--inline;
+    }
+
+    &__input--sm {
+      @include cb-form__input--sm;
+    }
+
+    &__input--lg {
+      @include cb-form__input--lg;
+    }
+
+    &__input--big-text {
+      @include cb-form__input--big-text;
+    }
+
+    &__input--pill {
+      @include cb-form__input--pill;
+    }
+  }
+}
+
+@if $cb-include-css--forms == true {
+  @include cb-basics-forms;
+}

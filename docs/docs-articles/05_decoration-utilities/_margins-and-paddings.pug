@@ -1,0 +1,111 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "decoration-utilities-margins-and-paddings"
+  - var articleTitle = "Margins and Paddings"
+
+block section
+  
+  p.lead Codebase decoration utilities for margins and paddings have been set using a #[code $cb-spacing] SCSS map, with values 0, 4px, 8px, 12px, 16px, 24px, 48px and 84px.
+  
+  p Margins and paddings utility class prefixes are as follows:
+  
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-md--span-6
+
+      ul
+        li Margins all: #[code m--*]
+        li Margin top: #[code mt--*]
+        li Margin right: #[code mr--*]
+        li Margin bottom: #[code mb--*]
+        li Margin left: #[code ml--*]
+        li Margins vertical: #[code my--*] (top and bottom)
+        li Margins horizontal: #[code mx--*] (left and right)
+
+    .flex-item-md--span-6
+
+      ul
+        li Paddings all: #[code p--*]
+        li Padding top: #[code pt--*]
+        li Padding right: #[code pr--*]
+        li Padding bottom: #[code pb--*]
+        li Padding left: #[code pl--*]
+        li Paddings vertical: #[code py--*] (top and bottom)
+        li Paddings horizontal: #[code px--*] (left and right)
+
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-md--span-6
+
+      p Margin examples:
+
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--0.bg--gray-lighten-3.p--4 .m--0 (for removing margins)
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--4.bg--gray-lighten-3.p--4 .m--4
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--8.bg--gray-lighten-3.p--4 .m--8
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--12.bg--gray-lighten-3.p--4 .m--12
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--16.bg--gray-lighten-3.p--4 .m--16
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--24.bg--gray-lighten-3.p--4 .m--24
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--48.bg--gray-lighten-3.p--4 .m--48
+      .mb--line.b--dashed.b--gray-lighten-2
+        .m--84.bg--gray-lighten-3.p--4 .m--84
+
+    .flex-item-md--span-6
+      
+      p Padding examples:
+      
+      .mb--line.bg--gray-lighten-3.p--0
+        .b--dashed.b--gray-lighten-1.p--4 .p--0 (for removing paddings)
+      .mb--line.bg--gray-lighten-3.p--4
+        .b--dashed.b--gray-lighten-1.p--4 .p--4
+      .mb--line.bg--gray-lighten-3.p--8
+        .b--dashed.b--gray-lighten-1.p--4 .p--8
+      .mb--line.bg--gray-lighten-3.p--12
+        .b--dashed.b--gray-lighten-1.p--4 .p--12
+      .mb--line.bg--gray-lighten-3.p--16
+        .b--dashed.b--gray-lighten-1.p--4 .p--16
+      .mb--line.bg--gray-lighten-3.p--24
+        .b--dashed.b--gray-lighten-1.p--4 .p--24
+      .mb--line.bg--gray-lighten-3.p--48
+        .b--dashed.b--gray-lighten-1.p--4 .p--48
+      .mb--line.bg--gray-lighten-3.p--84
+        .b--dashed.b--gray-lighten-1.p--4 .p--84
+
+  h3.mt--line Horizontal centering by #[code margin: auto]
+
+  p This also sets the element to #[code display:block !important]
+
+  .mb--line.b--dashed.b--gray-lighten-2
+    .mx--auto.bg--gray-lighten-3.p--8(style="width:75%;") .mx--auto
+    
+  h3.mt--line Extra line spacing
+  
+  p Sometimes you may find that you need to add extra whitespace (e.g. above headers, or below list items), equal to the line height of your normal text. Codebase has decoration utility classes for that (for margin and padding). The extra line margins are shown in the following examples.
+  
+  p Margins:
+
+  .mb--line.b--dashed.b--gray-lighten-2
+    .mt--line.bg--gray-lighten-3.p--8 .mt--line
+  .mb--line.b--dashed.b--gray-lighten-2
+    .mb--line.bg--gray-lighten-3.p--8 .mb--line
+
+  p Paddings:
+
+  .mb--line.bg--gray-lighten-3.pt--line
+    .b--dashed.b--gray-lighten-1.p--4 .pt--line
+  .mb--line.bg--gray-lighten-3.pb--line
+    .b--dashed.b--gray-lighten-1.p--4 .pb--line    
+  
+  p The amount of extra white space applied will be increased if you are also using these classes in combination with #[a(href="basics.html#basics-big-typography") big typography].
+  
+  h3.mt--line Block padding
+
+  p E.g. used for menu and menubar items, tab labels and table cells. Equivalent to #[code py--8 px--16].
+
+  .mb--line.bg--gray-lighten-3.p--block
+    .b--dashed.b--gray-lighten-1.p--4 .p--block

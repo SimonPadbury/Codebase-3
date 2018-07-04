@@ -1,0 +1,117 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "components-toggler"
+  - var articleTitle = "Toggler"
+
+block section
+  
+  p The Codebase toggler is a simple JavaScript that adds or removes a CSS class of your choice from the toggler target element (this can be a Codebase class, or any class of your own). #[code codebase.css] carries no styling for the Toggler component itself.
+  
+  p The following example has a little CSS embedded near here in the HTML, in a #[code &lt;style&gt;] tag &ndash; to show you the toggler in opperation:
+  
+  style.
+    [data-toggle-id="toggle-ex-1"] svg {
+      position: relative;
+      transform: rotate(45deg);
+      transition: transform 1s;
+    }
+    [data-toggle-id="toggle-ex-1"].is-toggled svg {
+      transform: rotate(270deg);
+    }
+    #toggle-ex-1 {
+      transition: all 1s;
+    }
+    #toggle-ex-1.is-toggled {
+      letter-spacing: 5px;
+      background: yellow;
+    }
+  
+  .flexbox.flexbox--gap.flexbox--nested.mb--line
+    .flex-item-md--span-4
+
+      b.btn.btn--lg.btn--primary.btn--outline(data-toggle-id="toggle-ex-1" data-toggle-class="is-toggled") Click me
+    .flex-item-md--span-8
+
+      div.b--thin.b--dashed.p--16.center#toggle-ex-1 Toggler target example 1
+
+  p Here is another example (this time, the toggler is #[i situated within the target block] &ndash; so, to make the example reappear, you will need to refresh your browser):
+  
+  style.
+    #toggle-ex-2 {
+      height: 72px;
+      margin-bottom: 24px;
+      transition: all 0.6s;
+    }
+    #toggle-ex-2.is-toggled {
+      height: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+    [data-toggle-id="toggle-ex-2"]:hover {
+      cursor: pointer
+    }
+    [data-toggle-id="toggle-ex-2"].is-toggled {
+      display: none
+    }
+
+  .bl--heavy.b--orange.bg--orange-lighten-2#toggle-ex-2
+    span.float--right.pr--4(data-toggle-id="toggle-ex-2" data-toggle-class="is-toggled") Dismiss #[span.big &times;] 
+    .p--24 Toggler target example 2
+
+  p One more toggler example &ndash; this time, a Codebase #[a(href="decoration-utilities.html#decoration-utilities-colors") decoration utility class] background color is being added/removed from the target element
+
+  .flexbox.flexbox--gap.mb--line
+    div
+
+      b.btn.btn--lg.btn--success.btn--3d(data-toggle-id="toggle-ex-3" data-toggle-class="bg--blue-lighten-2") Click me
+
+    .col--2-3
+      div.b--thin.b--dashed.p--16.center#toggle-ex-3 Toggler target example 3
+
+  h3 Setting Up a Toggler
+  
+  pre
+    code.
+      &lt;span data-toggle-id="your-id" data-target-class="your-class"&gt;Click me&lt;/span&gt;
+
+      &lt;div id="your-id"&gt;
+        This target DIV will be toggled (i.e. it will have "your-class" added/removed)
+      &lt;/div&gt;
+
+  ol
+    li Assign your chosen #[code id="your-id"] to the target element (and apply your styles through that ID)
+    
+    li "Connect" the toggler element to the target element using #[code data-target-id="your-id"]
+
+    li Choose the toggler class that you want applied to the target element using #[code data-target-class="your-class"]
+    
+  p For styling the two "states" of the toggler target element, you can use e.g.:
+  
+  pre
+    code.
+      #your-id { }
+
+      #your-id.your-class { }
+
+  p.bg--green-lighten-3.p--16 #[b Note:] You can't put two classes in #[code data-toggle-class=""] separated by a space or a dot. And you can't use more than one #[code data-toggle-class=""] in a Toggler.
+
+  p That's all there is to the Codebase toggler. Unlike the Codebase activator, toggler has no "click outside to dismiss", and no "toggling one causes un-toggling of others." But there is one more thing that toggler can do that activator can't:
+
+  h3 Toggler Attributes
+  
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th Attribute
+        th Notes
+    tbody
+      tr
+        td #[code data-toggle-id=""]
+        td Put this in the toggler controller tag. Assign the ID of the target (i.e. the thing being toggled).
+      tr
+        td #[code id=""]
+        td The toggler target content ID. Add your own styles, and/or use #[code.nowrap data-toggle-class=""].
+      tr
+        td #[code.nowrap data-toggle-class=""]
+        td Put this in the toggler controller tag. Choose the CSS class that you wish to add/remove on the target. Add your own styles if necessary.

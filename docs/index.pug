@@ -4,23 +4,20 @@ extends _docs-homepage-template.pug
 block append vars
   - lang = "en"
   - htmlDir = "ltr"
-  - title= "Codebase"
-  - description = "Codebase 2 - a Sass, JavaScript and Pug website component library"
+  - title= "Codebase 2: A Website Component Library"
+  - description = "Codebase 2: A Website Component Library"
   - author = "Simon Padbury"
   - bodyClass = "homepage"
 
 block template__homepage--header
   include docs-template-partials/_docs-header
   
-  svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35" class="codebase2")
-    g(fill="#ffffff")
-      path(d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z")
+  svg(id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12")
+    path(d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z")
   
-  //-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 35" class="codebase2"><g fill="#ffffff"><path d="M40.61 16.47c1.953-1.953 1.953-5.118 0-7.07l10.607 10.606L40.61 30.613c1.953-1.953 1.953-5.12 0-7.07s-5.118-1.954-7.07 0c-1.954 1.95-5.12 1.95-7.072 0-1.953-1.954-1.953-5.12 0-7.072 1.952-1.952 5.118-1.952 7.07 0 1.954 1.953 5.12 1.953 7.072 0zM19.39 9.4L8.783 20.007 19.39 30.614c-5.858-5.858-5.858-15.355 0-21.213z"/></g></svg>
-  
-  h1 Codebase
+  h1 Codebase #[span.muted #[+codebase-version]]
 
-  h2 Codebase is a Sass, JavaScript and Pug<br> website component library.
+  h2 A Website Component Library
 
 block template__homepage--main
   include docs-articles/00_homepage/__intro

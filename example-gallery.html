@@ -9,150 +9,299 @@
     <title>Example Gallery</title>
     <link rel="icon">
     <link rel="stylesheet" href="codebase/css/codebase.css">
+    <script defer="defer" src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
   </head>
   <body class="bg--blue-lighten-3">
-    <div class="bg--white bb--thin bg--blue-lighten-2">
-      <div class="flexbox flexbox--container">
-        <div class="flexitem--span-12">
-              <div class="menu menu--menubar-sm deco">
-                <div class="menu__brand"><a href="#/"><b>Brand</b></a></div>
-                <div class="menu__ctrl menu__ctrl--right fa fa-bars"></div>
-                <div class="menu__content">
-                  <ul class="menubar__right">
-                    <li><a href="#/">Home</a></li>
-                    <li class="dropdown dropdown--right"><a class="dropdown__ctrl" href="http://example.com">About us <i class="fa fa-caret-down"></i></a>
-                      <ul class="dropdown__content">
-                        <li><a href="#/">How it all started</a></li>
-                        <li><a href="#/">The early years</a></li>
-                        <li><a href="#/">The present day</a></li>
-                        <li><a href="#/">Plans for the future</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#/">Visit us</a></li>
-                    <li><a href="#/">Make contact</a></li>
-                  </ul>
-                </div>
-              </div>
+    <div class="menu menu--fixed menu--menubar-md decorate bg--white bs--1z">
+      <div class="menu__brand"><a href="#/"><b>Brand</b></a></div>
+      <div class="menu__ctrl menu__ctrl--right"><i class="fas fa-bars"></i></div>
+      <div class="menu__content">
+        <ul class="menubar__right">
+          <li><a href="#/">Home</a></li>
+          <li class="dropdown"><a class="dropdown__ctrl" href="http://example.com">About us</a>
+            <ul class="dropdown__content">
+              <li><a href="#/">How it all started</a></li>
+              <li><a href="#/">The early years</a></li>
+              <li><a href="#/">The present day</a></li>
+              <li><a href="#/">Plans for the future</a></li>
+            </ul>
+          </li>
+          <li><a href="#/">Visit us</a></li>
+          <li><a href="#/">Make contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container pt--84">
+      <div class="flexbox flexbox--container flexbox--gap">
+        <div class="flex-item--span-12">
+          <h1>Picture Gallery</h1>
+          <p>A simple image gallery using the Codebase tab system &ndash; combined with a flexbox layout for rearranging the tab labels and cards.</p>
+        </div>
+      </div>
+      <style>
+        .gallery-example .tab__label {
+          margin-bottom: 8px;
+          border: 4px solid #ccf;
+          border-radius: 4px;
+          background-color: #ccf;
+        }
+        .gallery-example .tab__label.is-front {
+          border-color: #aad;
+        }
+        
+      </style>
+      <div class="flexbox flexbox--container flexbox--gap gallery-example">
+        <div class="flex-item-md--span-3 mb--line center">
+          <div class="tab__label" data-tab-id="pic-01">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">One</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-02">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Two</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-03">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Three</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-04">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Four</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-05">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Five</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-06">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Six</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-07">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Seven</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-08">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Eight</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-09">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Nine</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-10">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Ten</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-11">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Eleven</div>
+          </div>
+          <div class="tab__label" data-tab-id="pic-12">
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="80" height="80" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <div class="center pb--4">Twelve</div>
+          </div>
+        </div>
+        <div class="flex-item-md--span-9">
+          <div class="tab__panel" id="pic-01">
+            <h2 class="mb--8">Title for Picture One</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture One          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-02">
+            <h2 class="mb--8">Title for Picture Two</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Two          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-03">
+            <h2 class="mb--8">Title for Picture Three</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Three          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-04">
+            <h2 class="mb--8">Title for Picture Four</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Four          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-05">
+            <h2 class="mb--8">Title for Picture Five</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Five          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-06">
+            <h2 class="mb--8">Title for Picture Six</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Six          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-07">
+            <h2 class="mb--8">Title for Picture Seven</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Seven          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-08">
+            <h2 class="mb--8">Title for Picture Eight</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Eight          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-09">
+            <h2 class="mb--8">Title for Picture Nine</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Nine          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-10">
+            <h2 class="mb--8">Title for Picture Ten</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Ten          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-11">
+            <h2 class="mb--8">Title for Picture Eleven</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #eee">
+              <line x2="100%" y2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #ccc; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Eleven          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
+          <div class="tab__panel" id="pic-12">
+            <h2 class="mb--8">Title for Picture Twelve</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="1000" height="500" style="max-width: 100%; height: auto; background: #555">
+              <line x2="100%" y2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+              <line y1="100%" x2="100%" style="stroke: #777; stroke-width: 2px; stroke-linecap: round;"></line>
+            </svg>
+            <h4 class="mt--line">Info for Picture Twelve          </h4>
+            <p>Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="flexbox flexbox--container flexbox--gutter">
-      <div class="flexitem--span-12">
-        <h1 class="mt--48">Picture Gallery</h1>
-        <p>A simple image gallery using the Codebase tab system &ndash; combined with a flexbox layout for rearranging the tab labels and cards.</p>
+    <div class="container">
+      <hr class="b--blue">
+      <div class="center">
+        <ul class="pagination decorate">
+          <li><a href="#/"><i class="fa fa-arrow-left"></i> Newer</a></li>
+          <li><a href="#/">1</a></li>
+          <li><a class="pagination__current" href="http://www.example.com">2</a></li>
+          <li><a href="#/">3</a></li>
+          <li><a href="#/">4</a></li>
+          <li><a href="#/">5</a></li>
+          <li><a href="#/">Older <i class="fa fa-arrow-right"></i></a></li>
+        </ul>
       </div>
+      <hr class="mt--20 b--blue">
+      <p class="center">&copy; 2018 Picture Gallery.</p>
     </div>
-    <style>
-      .gallery-example .tab__label {
-        border: 4px solid #ddf;
-        border-radius: 4px
-      }
-      .gallery-example .tab__label.is-front {
-        border-color: #aad;
-      }
-      
-    </style>
-    <div class="flexbox flexbox--container flexbox--gutter gallery-example">
-      <div class="flexitem flexitem-md--span-3 mb--line text--center">
-        <div class="tab__label" data-tab-id="pic-01"><img src="holder.js/80x80?&amp;text=Picture One"></div>
-        <div class="tab__label" data-tab-id="pic-02"><img src="holder.js/80x80?&amp;text=Picture Two"></div>
-        <div class="tab__label" data-tab-id="pic-03"><img src="holder.js/80x80?&amp;text=Picture Three"></div>
-        <div class="tab__label" data-tab-id="pic-04"><img src="holder.js/80x80?&amp;text=Picture Four"></div>
-        <div class="tab__label" data-tab-id="pic-05"><img src="holder.js/80x80?&amp;text=Picture Five"></div>
-        <div class="tab__label" data-tab-id="pic-06"><img src="holder.js/80x80?&amp;text=Picture Six"></div>
-        <div class="tab__label" data-tab-id="pic-07"><img src="holder.js/80x80?&amp;text=Picture Seven"></div>
-        <div class="tab__label" data-tab-id="pic-08"><img src="holder.js/80x80?&amp;text=Picture Eight"></div>
-        <div class="tab__label" data-tab-id="pic-09"><img src="holder.js/80x80?&amp;text=Picture Nine"></div>
-        <div class="tab__label" data-tab-id="pic-10"><img src="holder.js/80x80?&amp;text=Picture Ten"></div>
-        <div class="tab__label" data-tab-id="pic-11"><img src="holder.js/80x80?&amp;text=Picture Eleven"></div>
-        <div class="tab__label" data-tab-id="pic-12"><img src="holder.js/80x80?&amp;text=Picture Twelve">
+        <style>
+          .codebase {
+            position: fixed;
+            display: inline-block;
+            bottom: 8px;
+            left: 8px;
+            z-index: 999;
+          }
+          .codebase__content {
+            display: none;
+          }
+          .codebase__content.is-active {
+            display: block;
+          }
+          .codebase__content .feather {
+            position: relative;
+            top: 5px;
+            width: 18px;
+          }
           
-        </div>
-      </div>
-      <div class="flexitem flexitem-md--span-9">
-        <div class="tab__card" id="pic-01"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture One">
-          <h4 class="mt--line">Title for Picture One          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-02"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Two">
-          <h4 class="mt--line">Title for Picture Two          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-03"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Three">
-          <h4 class="mt--line">Title for Picture Three          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-04"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Four">
-          <h4 class="mt--line">Title for Picture Four          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-05"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Five">
-          <h4 class="mt--line">Title for Picture Five          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-06"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Six">
-          <h4 class="mt--line">Title for Picture Six          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-07"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Seven">
-          <h4 class="mt--line">Title for Picture Seven          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-08"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Eight">
-          <h4 class="mt--line">Title for Picture Eight          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-09"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Nine">
-          <h4 class="mt--line">Title for Picture Nine          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-10"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Ten">
-          <h4 class="mt--line">Title for Picture Ten          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-11"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Eleven">
-          <h4 class="mt--line">Title for Picture Eleven          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-        <div class="tab__card" id="pic-12"><img src="holder.js/1000x500?&amp;outline=yes&amp;text=Picture Twelve">
-          <h4 class="mt--line">Title for Picture Twelve          </h4>
-          <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
-        </div>
-      </div>
-    </div>
-    <div class="flexbox flexbox--container">
-      <div class="flexitem--span-12">
-        <hr>
-        <div class="text--center">
-          <ul class="pagination">
-            <li><a href="#/"><i class="fa fa-arrow-left"></i> Newer</a></li>
-            <li><a href="#/">1</a></li>
-            <li><a class="pagination__current" href="http://www.example.com">2</a></li>
-            <li><a href="#/">3</a></li>
-            <li><a href="#/">4</a></li>
-            <li><a href="#/">5</a></li>
-            <li><a href="#/">Older <i class="fa fa-arrow-right"></i></a></li>
-          </ul>
-        </div>
-        <p class="text--center">&copy; Picture Gallery.</p>
-      </div>
-    </div>
-        <div class="dropdown" style="position: fixed; display: inline-block; bottom: 8px; left: 8px; z-index: 999;">
-          <div class="dropdown__content dropdown__content--above mb--4 bs b--rounded bg--white">
-            <ul class="menu deco b--thick b--blue">
-              <li><a class="bb--thin b--blue text--nowrap" href="index.html"><i class="fa fa-home"></i> Codebase</a></li>
-              <li><a class="text--nowrap" href="getting-started.html"><i class="fa fa-play-circle"></i> Getting Started</a></li>
-              <li><a class="text--nowrap" href="basics.html"><i class="fa fa-cubes"></i> Basics</a></li>
-              <li><a class="text--nowrap" href="layout.html"><i class="fa fa-map"></i> Layout</a></li>
-              <li><a class="text--nowrap" href="components.html"><i class="fa fa-cogs"></i> Components</a></li>
-              <li><a class="text--nowrap" href="decoration.html"><i class="fa fa-paint-brush"></i> Decoration</a></li>
-              <li><a class="text--nowrap" href="examples.html"><i class="fa fa-flask"></i> Examples</a></li>
-              <li class="bt--thin b--blue"><a class="text--nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fa fa-home"></i> GitHub</a></li>
+        </style>
+        <div class="codebase">
+          <div class="codebase__content mb--4 bs b--rounded bg--white">
+            <ul class="menu decorate b--thick b--blue">
+              <li><a class="bb--thin b--blue nowrap" href="index.html"><i class="fas fa-home fa-fw"></i> Codebase</a></li>
+              <li><a class="nowrap" href="getting-started.html"><i class="fas fa-play fa-fw"></i> Getting Started</a></li>
+              <li><a class="nowrap" href="basics.html"><i class="fas fa-cubes fa-fw"></i> Basics</a></li>
+              <li><a class="nowrap" href="layout.html"><i class="far fa-map fa-fw"></i> Layout</a></li>
+              <li><a class="nowrap" href="components.html"><i class="fas fa-cogs fa-fw"></i> Components</a></li>
+              <li><a class="nowrap" href="decoration-utilities.html"><i class="fas fa-tint fa-fw"></i> Decoration Utilities</a></li>
+              <li><a class="nowrap" href="examples.html"><i class="fas fa-gift fa-fw"></i> Examples</a></li>
+              <li class="bt--thin b--blue"><a class="nowrap" href="https://github.com/SimonPadbury/Codebase"><i class="fab fa-github fa-fw"></i> GitHub</a></li>
             </ul>
           </div>
-          <button class="dropdown__ctrl btn btn--primary btn--icon btn--big-text btn--pill"> <i class="fa fa-cog"></i></button>
+          <button class="codebase__ctrl btn btn--primary btn--icon btn--pill big"><i class="fas fa-cog"></i></button>
         </div>
-        <div class="b--thin b--rounded bs ph--4 bg--white text--center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--xs-up">xs &amp; down</span><span class="hide--xs-down hide--sm-up">xs&mdash;sm</span><span class="hide--sm-down hide--md-up">sm&mdash;md</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
+        <div class="b--thin b--rounded bs px--4 bg--white center" style="position: fixed; right: 8px; bottom: 8px; z-index: 999;">Viewport <span class="hide--md-up">md &amp; down</span><span class="hide--md-down hide--lg-up">md&mdash;lg</span><span class="hide--lg-down">lg &amp; up</span></div>
     <script src="codebase/js/codebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
   </body>

@@ -7,6 +7,7 @@ block vars
   - var bodyClass = "codebase-example"
 
 block append head-addins
+  +font-awesome
   style.
     @import url("https://fonts.googleapis.com/css?family=Spectral");
     body {
@@ -16,41 +17,43 @@ block append head-addins
 block body
   include example-partials/__example-partials-index
   
-  .codebase-bodyinner
     
-    style.
-      .newspaper-logo a {
-        color: rgb(61,61,61);
-        text-decoration: none
-      }
-      
-      
-    .flexbox.flexbox--container.bb--thin
-      .flexitem.flexitem--span-12
-        .menu.menu--menubar-md.deco              
-          .menu__ctrl.menu__ctrl--right.p--8.text--big.fa.fa-bars
-          .menu__content
-                  
-            ul.menubar__right
-              li #[a(href="#/") Contact]
-              li #[a(href="#/") About]
-              li #[a(href="#/") Subscribe]
-              li #[a(href="#/") Login]
-              li
-                form(style="margin-bottom: 0; padding: 4px;")
-                  input#search-example.form__input--inline.form__input--sm.combo--left.b--blue(name="examplename" placeholder="Search..." type="text")
-                  button.btn.btn--primary.btn--icon.btn--sm.combo--right(type="submit") #[i.fa.fa-search]
+  style.
+    .newspaper-logo a {
+      color: rgb(61,61,61);
+      text-decoration: none
+    }
     
-    .flexbox.flexbox--container.flexbox--gutter
-      .flexitem.flexitem--span-12
-        h1.mt--line.newspaper-logo #[a(href="#/") #[i.fa.fa-newspaper-o] Newspaper]
+    
+  .container.flexbox.bb--thin
+    .flex-item--span-12
+      .menu.menu--menubar-md.decorate              
+        .menu__ctrl.menu__ctrl--right.p--8.big.fa.fa-bars
+        .menu__content
+                
+          ul.menubar__right
+            li #[a(href="#/") Contact]
+            li #[a(href="#/") About]
+            li #[a(href="#/") Subscribe]
+            li #[a(href="#/") Login]
+            li
+              form(style="margin-bottom: 0; padding: 4px;")
+                input#search-example.form__input--inline.form__input--sm.combo--left.b--blue(name="examplename" type="text")
+                button.btn.btn--primary.btn--icon.btn--sm.combo--right(type="submit") #[i.fa.fa-search]
+  
+  .container
+    .flexbox.flexbox--gap
+      .flex-item--span-12
+        h1.mt--line.newspaper-logo #[a(href="#/") #[i.fa.fa-newspaper] Newspaper]
 
-    .flexbox.flexbox--container.flexbox--gutter
-      .flexitem.flexitem--span-12
+  .container
+    .flexbox.flexbox--gap
+      .flex-item--span-12
         +nav-tabs-newspaper
-    
-    .flexbox.flexbox--container.flexbox--gutter.mb--line.bb--thin
-      .flexitem.flexitem-sm--span-8.flexitem-md--span-4
+  
+  .container
+    .flexbox.flexbox--gap.mb--line.bb--thin
+      .flex-item-sm--span-8.flex-item-md--span-4
         
         style.
           a.card__overlay {
@@ -65,18 +68,18 @@ block body
           div:hover.main-story {
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
           }
-        .card.card--vertical.main-story.mh--8.deco
+        .card.card--vertical.main-story.mx--8.decorate
           .card__image
-            img(src="holder.js/600x600")
+            +image-placeholder-dark(600, 600)
           .card__overlay.card__overlay--top
             .card__body(style="background-color: rgba(0,0,0,0.5);")
-              h4.text--white.text--bold Today's Frontpage Story
+              h4.white.bold Today's Frontpage Story
           a(href="#/").card__overlay.card__overlay--bottom
             .card__body(style="background-color: rgba(0,0,0,0.5);")
-              p.text--white.
+              p.white.
                 Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
       
-      .flexitem.flexitem-sm--span-4.flexitem-md--span-8.bl--thin
+      .flex-item-sm--span-4.flex-item-md--span-8.bl--thin
         
         style.
           a.card {
@@ -89,175 +92,173 @@ block body
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
           }
         
-        .mb--4.text--center.bb--thin.p--block.text--bold.text--caps On this day
+        .mb--4.center.bb--thin.p--block.bold.caps On this day
         .flexbox
-          .flexitem.flexitem-md--span-4.p--block
+          .flex-item-md--span-4.p--block
             
-            a(href="#/").card.card--vertical.deco
+            a(href="#/").card.card--vertical.decorate
               .card__header Science
-              .card__image.text--center
-                img(src="holder.js/600x300")
+              .card__image.center
+                +image-placeholder-dark(600, 300)
               .card__body
                 h4 Headline
                 p.show--md-up.
                   Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
                     
-          .flexitem.flexitem-md--span-4.p--block
+          .flex-item-md--span-4.p--block
             
-            a(href="#/").card.card--vertical.deco
+            a(href="#/").card.card--vertical.decorate
               .card__header Health
-              .card__image.text--center
-                img(src="holder.js/600x300")
+              .card__image.center
+                +image-placeholder-light(600, 300)
               .card__body
                 h4 Headline
                 p.show--md-up.
                   Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
 
-          .flexitem.flexitem-md--span-4.p--block
+          .flex-item-md--span-4.p--block
 
-            a(href="#/").card.card--vertical.deco
+            a(href="#/").card.card--vertical.decorate
               .card__header Sport
-              .card__image.text--center
-                img(src="holder.js/600x300")
+              .card__image.center
+                +image-placeholder-dark(600, 300)
               .card__body
                 h4 Headline
                 p.show--md-up.
                   Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
-    main.flexbox.flexbox--container.flexbox--gutter
+    
+  main.container
+    .flexbox.flexbox--gap
       
-      .flexitem.flexitem-sm--span-4.flexitem-sm--order-2.flexitem-md--span-3
+      .flex-item-md--span-4.flex-item-md--order-2.flex-item-lg--span-3
           
-        p.text--center.text--caps Advertisements
+        p.center.caps Advertisements
         
         .flexbox.mb--line
-          .flexitem.flexitem--span-6.flexitem-sm--span-12.p--4
-            img(src="holder.js/300x250")
+          .flex-item--span-6.flex-item-sm--span-12.p--4
+            +image-placeholder-dark(300, 250)
           
-          .flexitem.flexitem--span-6.flexitem-sm--span-12.p--4
-            img(src="holder.js/300x250")
+          .flex-item--span-6.flex-item-sm--span-12.p--4
+            +image-placeholder-light(300, 250)
 
-          .flexitem.flexitem--span-6.flexitem-sm--span-12.p--4
-            img(src="holder.js/300x250")
+          .flex-item--span-6.flex-item-sm--span-12.p--4
+            +image-placeholder-light(300, 250)
 
-          .flexitem.flexitem--span-6.flexitem-sm--span-12.p--4
-            img(src="holder.js/300x250")
+          .flex-item--span-6.flex-item-sm--span-12.p--4
+            +image-placeholder-dark(300, 250)
 
-          .flexitem.flexitem--span-6.flexitem-sm--span-12.p--4
-            img(src="holder.js/300x250")
+          .flex-item--span-6.flex-item-sm--span-12.p--4
+            +image-placeholder-light(300, 250)
 
-      .flexitem.flexitem-sm--span-8.flexitem-sm--order-1.flexitem-md--span-9
+      .flex-item-md--span-8.flex-item-md--order-1.flex-item-lg--span-9
         
-        .flexbox.flexbox--gutter.flexbox--nested
-          .flexitem.flexitem-md--span-8.flexitem-md--order-2
-            h4.mt--zero.text--center.text--caps Today's Main Stories
+        .flexbox.flexbox--gap.flexbox--nested
+          .flex-item-md--span-8.flex-item-md--order-2
+            h4.mt.center.caps Today's Main Stories
             
-            img(src="holder.js/600x300")
+            +image-placeholder-dark(600, 300)
             
-            h2.mv--16.text--bold First Main Story Headline            
-            +paragraph(2, "text--lead")
+            h2.my--16.bold First Main Story Headline            
+            +paragraph(2, "lead")
             
             hr
               
-            .flexbox.flexbox--gutter.flexbox--nested
-              .flexitem.flexitem-sm--span-6
-                img(src="holder.js/600x300")
-                
-                h3.mv--16.text--bold Second Main Story Headline            
+            .flexbox.flexbox--gap.flexbox--nested
+              .flex-item-md--span-6
+                +image-placeholder-light(600, 300)
+                h3.my--16.bold Second Main Story Headline            
                 +paragraph
 
-              .flexitem.flexitem-sm--span-6
-                img(src="holder.js/600x300")
-                
-                h3.mv--16.text--bold Third Main Story Headline            
+              .flex-item-md--span-6
+                +image-placeholder-dark(600, 300)
+                h3.my--16.bold Third Main Story Headline            
                 +paragraph
 
             
-          .flexitem.flexitem-md--span-4.flexitem-md--order-1
-            .mb--line.text--center.text--caps Recent
+          .flex-item-md--span-4.flex-item-md--order-1
+            .mb--line.center.caps Recent
             
             a(href="#/").card
               .card__image.card__image--left.pr--8
-                img(src="holder.js/64x64")
+                +image-placeholder-light(64, 64)
               .card__body
-                b.mt--zero.mb--8 First Featured Recent News Item
+                b.mt.mb--8 First Featured Recent News Item
 
             hr
 
             a(href="#/").card
               .card__image.card__image--left.pr--8
-                img(src="holder.js/64x64")
+                +image-placeholder-dark(64, 64)
               .card__body
-                b.mt--zero.mb--8 Second Featured Recent News Item
+                b.mt.mb--8 Second Featured Recent News Item
 
             hr
 
             a(href="#/").card
               .card__image.card__image--left.pr--8
-                img(src="holder.js/64x64")
+                +image-placeholder-light(64, 64)
               .card__body
-                b.mt--zero.mb--8 Third Featured Recent News Item
+                b.mt.mb--8 Third Featured Recent News Item
                 
             hr
 
             a(href="#/").card
               .card__image.card__image--left.pr--8
-                img(src="holder.js/64x64")
+                +image-placeholder-light(64, 64)
               .card__body
-                b.mt--zero.mb--8 Fourth Featured Recent News Item
+                b.mt.mb--8 Fourth Featured Recent News Item
               
             hr
 
             a(href="#/").card
               .card__image.card__image--left.pr--8
-                img(src="holder.js/64x64")
+                +image-placeholder-dark(64, 64)
               .card__body
-                b.mt--zero.mb--8 Fifth Featured Recent News Item
+                b.mt.mb--8 Fifth Featured Recent News Item
 
       
-    .flexbox.flexbox--container.bt--thin
-      .flexitem.pt--20
-        .flexbox.flexbox--gutter
+  .container.bt--thin.pt--line
+    .flexbox.flexbox--gap
 
-          .flexitem.flexitem-md--span-3.mb--line
-            img(src="holder.js/300x250")
-          
-          .flexitem.flexitem-md--span-6
-            .flexbox.flexbox--gutter.flexbox--nested
-              .flexitem.flexitem-xs--span-6
-                ul.menu
-                  li #[a(href="#/") World]
-                  li #[a(href="#/") Local]
-                  li #[a(href="#/") Science]
-                  li #[a(href="#/") Health]
-                  li #[a(href="#/") Technology]
-                  li #[a(href="#/") Sport]
+      .flex-item-md--span-3.mb--line
+        +image-placeholder-light(300, 250)
+      
+      .flex-item-md--span-6
+        .flexbox.flexbox--gap.flexbox--nested
+          .flex-item--span-6
+            ul.menu
+              li #[a(href="#/") World]
+              li #[a(href="#/") Local]
+              li #[a(href="#/") Science]
+              li #[a(href="#/") Health]
+              li #[a(href="#/") Technology]
+              li #[a(href="#/") Sport]
 
-              .flexitem.flexitem-xs--span-6
-                ul.menu
-                  li #[a(href="#/") About]
-                  li #[a(href="#/") Contact]
-                  li #[a(href="#/") Advertise with us]
-                  li #[a(href="#/") Careers]
-                  li #[a(href="#/") Terms of Use]
-                  li #[a(href="#/") Privacy policy]
+          .flex-item--span-6
+            ul.menu
+              li #[a(href="#/") About]
+              li #[a(href="#/") Contact]
+              li #[a(href="#/") Advertise with us]
+              li #[a(href="#/") Careers]
+              li #[a(href="#/") Terms of Use]
+              li #[a(href="#/") Privacy policy]
 
-          .flexitem.flexitem-md--span-3
-            h3.newspaper-logo #[a(href="#/") #[i.fa.fa-newspaper-o] Newspaper]
-            form(style="padding:4px;")
-              <input class="b--gray-darken-1 form__input--inline form__input--sm combo--left" id="search-example" name="examplename" placeholder="Search..." type="text">
-              <button class="btn btn--icon btn--sm combo--right" type="submit"><i class="fa fa-search"></i></button>
+      .flex-item-md--span-3
+        h3.newspaper-logo #[a(href="#/") #[i.fa.fa-newspaper] Newspaper]
+        form
+          p.mb--0 
+            label Search:
+          <input class="b--gray-darken-1 form__input--inline form__input--sm combo--left" id="search-example" name="examplename" type="text">
+          <button class="btn btn--icon btn--sm combo--right" type="submit"><i class="fas fa-search"></i></button>
 
-            .mt--line
-              +social
-            
-        .flexbox
-          .flexitem
-            hr
-            p.text--center.
-              Copyright &copy; 2017 Newspaper, Inc.
-        
+        .mt--line
+          +social
+
+  .container.mt--line.bt--thin.pt--line
+    p.center.
+      Copyright &copy; 2018 Newspaper, inc.
+      
     
   +codebase-bottomline
 
-  block append body-foot-addins
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js")
+//-block append body-foot-addins
