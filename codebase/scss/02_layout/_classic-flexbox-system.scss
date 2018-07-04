@@ -1,0 +1,112 @@
+// LAYOUT MIXINS: CLASSIC FLEXITEMS
+// ================================
+
+@mixin cb-classic-flex-item--span {
+  &--span {
+    @for $cb-i from 1 through $cb-flexbox--max-items {
+      &-#{$cb-i} {
+        width: 100% / $cb-flexbox--max-items * $cb-i;
+      }
+    }
+  }
+}
+
+@mixin cb-classic-flex-item--offset {
+  &--offset {
+    @for $cb-i from 0 through $cb-flexbox--max-items {
+      &-#{$cb-i} {
+        margin-left: 100% / $cb-flexbox--max-items * $cb-i;
+
+        [dir="rtl"] &, &[dir="rtl"],
+        .rtl &, &.rtl {
+          margin-right: 100% / $cb-flexbox--max-items * $cb-i;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@mixin cb-classic-flex-item--order {
+  &--order {
+    @for $cb-i from 1 through $cb-flexbox--max-items {
+      &-#{$cb-i} {
+        order: $cb-i;
+      }
+    }
+  }
+}
+
+// Incomplete flexbox rows? No problem. Rows can simply be incomplete (no `.end` or
+// `.omega` classes required).
+
+// CLASS BUILDER: CLASSIC FLEXBOX SYSTEM
+// =====================================
+
+@mixin cb-layout-flexbox-system {
+  .flexbox {
+    @include cb-flexbox;
+  }
+
+  .flexbox--container {
+    @include cb-flexbox--container;
+  }
+
+  .flexbox--center {
+    @include cb-flexbox--center;
+  }
+
+  .flexbox--grow-equal {
+    @include cb-flexbox--grow-equal;
+  }
+
+  .flexbox--grow-auto {
+    @include cb-flexbox--grow-auto;
+  }
+
+  .flexbox--middle {
+    @include cb-flexbox--middle;
+  }
+
+  .flexbox--gap {
+    @include cb-flexbox--gap;
+  }
+
+  [class*="flex-item--span"],
+  [class*="flex-item-md--span"],
+  [class*="flex-item-lg--span"] {
+    width: 100%;
+  }
+
+  // Flexitems
+  .flex-item {
+    @include cb-classic-flex-item--span;
+    @include cb-classic-flex-item--offset;
+    @include cb-classic-flex-item--order;
+  }
+
+  .flex-item-md {
+    @include cb-break--min($cb-mq--md) {
+      @include cb-classic-flex-item--span;
+      @include cb-classic-flex-item--offset;
+      @include cb-classic-flex-item--order;
+    }
+  }
+
+  .flex-item-lg {
+    @include cb-break--min($cb-mq--lg) {
+      @include cb-classic-flex-item--span;
+      @include cb-classic-flex-item--offset;
+      @include cb-classic-flex-item--order;
+    }
+  }
+
+  // Incomplete flexbox rows? No problem. Rows can be incomplete (no `.end` or
+  // `.omega` classes required).
+}
+
+// End of class builder mixin
+
+@if $cb-include-css--flexbox-system == true {
+  @include cb-layout-flexbox-system;
+}

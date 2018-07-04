@@ -1,0 +1,20 @@
+// BASICS: MEDIA QUERY MIXINS
+// ==========================
+
+@mixin cb-break--min($cb-cb-mq--min-width) {
+  @media(min-width: $cb-cb-mq--min-width) {
+    @content;
+  }
+}
+
+@mixin cb-break--max($cb-cb-mq--max-width) {
+  @media(max-width: $cb-cb-mq--max-width - 1px) {
+    @content;
+  }
+}
+
+@mixin cb-break--minmax($cb-cb-mq--min-width, $cb-cb-mq--max-width) {
+  @media(min-width: $cb-cb-mq--min-width) and (max-width: $cb-cb-mq--max-width - 1px) {
+    @content;
+  }
+}

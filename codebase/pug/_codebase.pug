@@ -26,11 +26,12 @@ html(lang=lang, dir=htmlDir, class=htmlClass)
 
     title #{title}
 
+    link(rel="icon", href=favicon, type=faviconType)
+
     block head-addins
-      link(rel="icon", href=favicon, type=faviconType)
-      //- To replace `codebase.css` with your own CSS (that imports 
-        `codebase.css`), use `block` in your template. Or to retain
-        `codebase.css`,  use `block append`.
+
+      //- If you wish to replace `codebase.css` with your own CSS (that imports 
+        `codebase.css`), then use `block` in your template. Or if you wish to retain this `codebase.css` below, then use `block append head-addins`.
       link(rel="stylesheet", href="codebase/css/codebase.css")
 
   body(class=bodyClass)

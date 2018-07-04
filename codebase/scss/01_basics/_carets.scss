@@ -1,0 +1,144 @@
+// COMPONENTS MIXINS: CARETS
+// =========================
+
+@mixin cb-caret--down {
+    &::after {
+        position: relative;
+        display: inline-block;
+        content: "";
+        bottom: 0.4em;
+        margin-left: 0.25em;
+        width: 0;
+        height: 0;
+        border-left: 0.3em solid transparent;
+        border-right: 0.3em solid transparent;
+        border-top: 0.3em solid;
+    }
+    [dir="rtl"] &, &[dir="rtl"],
+    .rtl &, &.rtl {
+        &::after {
+            margin-left: 0;
+            margin-right: 0.25em;
+        }
+    }
+    &[class*="combo"]::after {
+        right: 0;
+        left: 0;
+    }
+}
+
+@mixin cb-caret--up {
+    &::after {
+        position: relative;
+        display: inline-block;
+        content: "";
+        bottom: 0.4em;
+        margin-left: 0.25em;
+        width: 0;
+        height: 0;
+        border-left: 0.3em solid transparent;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0.3em solid;
+    }
+    [dir="rtl"] &, &[dir="rtl"],
+    .rtl &, &.rtl {
+        &::after {
+            margin-left: 0;
+            margin-right: 0.25em;
+        }
+    }
+    &[class*="combo"]::after {
+        right: 0;
+        left: 0;
+    }
+}
+
+@mixin cb-caret--right {
+    &::after {
+        position: relative;
+        display: inline-block;
+        content: "";
+        margin-left: 0.3em;
+        margin-bottom: 0.1em;
+        width: 0;
+        height: 0;
+        border-left: 0.3em solid;
+        border-top: 0.3em solid transparent;
+        border-bottom: 0.3em solid transparent;
+    }
+    [dir="rtl"] &, &[dir="rtl"],
+    .rtl &, &.rtl {
+        &::after {
+            display: none;
+        }
+        &::before {
+            position: relative;
+            display: inline-block;
+            content: "";
+            margin-left: 0.3em;
+            margin-bottom: 0.1em;
+            width: 0;
+            height: 0;
+            border-left: 0.3em solid;
+            border-top: 0.3em solid transparent;
+            border-bottom: 0.3em solid transparent;
+        }
+    }    
+    &[class*="combo"]::after {
+        right: 0;
+        left: 0;
+    }
+}
+
+@mixin cb-caret--left {
+    &::before {
+        position: relative;
+        display: inline-block;
+        content: "";
+        margin-right: 0.3em;
+        margin-bottom: 0.1em;
+        width: 0;
+        height: 0;
+        border-right: 0.3em solid;
+        border-top: 0.3em solid transparent;
+        border-bottom: 0.3em solid transparent;
+    }
+    [dir="rtl"] &, &[dir="rtl"],
+    .rtl &, &.rtl {
+        &::before {
+            display: none;
+        }
+        &::after {
+            position: relative;
+            display: inline-block;
+            content: "";
+            margin-right: 0.3em;
+            margin-bottom: 0.1em;
+            width: 0;
+            height: 0;
+            border-right: 0.4em solid;
+            border-top: 0.4em solid transparent;
+            border-bottom: 0.4em solid transparent;
+        }
+    }    
+    &[class*="combo"]::after {
+        right: 0;
+        left: 0;
+    }
+}
+
+.caret--down {
+    @include cb-caret--down;
+}
+
+.caret--up {
+    @include cb-caret--up;
+}
+
+.caret--right {
+    @include cb-caret--right;
+}
+
+.caret--left {
+    @include cb-caret--left;
+}

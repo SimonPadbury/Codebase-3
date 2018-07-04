@@ -1,0 +1,244 @@
+// BASICS MIXINS: BUTTONS
+// ======================
+
+@mixin cb-btn {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  border: 0;
+  font-size: $cb-text--base-font-size;
+  color: $cb-btn--text-color;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: map-get($cb-colors-ui, "default");
+  transition: background-color 0.2s ease-in-out;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &[type="button"],
+  &[type="submit"] {
+    -webkit-appearance: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: $cb-btn--text-color-hover !important;
+    background-color: darken(map-get($cb-colors-ui, "default"), $cb-color--step);
+    &::after {
+      color: $cb-btn--text-color-hover;
+    }
+  }
+
+  &:active,
+  &.btn--active {
+    box-shadow: inset 0 0 4px #333;
+    background-color: darken(map-get($cb-colors-ui, "default"), $cb-color--step);
+  }
+
+  &.btn--disabled {
+    background-color: lighten(map-get($cb-colors-ui, "default"), $cb-color--step * 2);
+    pointer-events: none;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+
+  @if $cb-btn--rounded-corners == true {
+    border-radius: $cb-border--radius;
+  }
+
+  @if $cb-btn--3d == true {
+    @include cb-btn--3d;
+    // `false` gives flat buttons by default
+  }
+
+  @if $cb-btn--pressable == true {
+    &:active {
+      transform: translateY(1px);
+      // makes the button move down by 1px during a click/tap
+    }
+  }
+
+}
+
+@mixin cb-btn--size {
+  padding: 0 24px;
+  line-height: 40px;
+
+  &.btn--outline {
+    padding: 0 (24px - $cb-btn--outline-thickness * 2);
+    line-height: 40px - $cb-btn--outline-thickness * 2;
+  }
+
+  &--sm {
+    padding: 0 16px;
+    line-height: 32px;
+
+    &.btn--outline {
+      padding: 0 (16px - $cb-btn--outline-thickness * 2);
+      line-height: 32px - $cb-btn--outline-thickness * 2;
+    }
+  }
+
+  &--lg {
+    padding: 0 40px;
+    line-height: 56px;
+
+    &.btn--outline {
+      padding: 0 (40px - $cb-btn--outline-thickness * 2);
+      line-height: 56px - $cb-btn--outline-thickness * 2;
+    }
+  }
+}
+
+@mixin cb-btn--3d {
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 8px 8px -8px rgb(255, 255, 255), inset 0 -16px 16px -16px rgba(0, 0, 0, 0.4);
+
+  &:active {
+    box-shadow: inset 0 -48px 48px -48px rgba(0, 0, 0, 0.4), inset 0 0 4px rgba(0, 0, 0, 0.8);
+  }
+
+  &.btn--disabled {
+    box-shadow: none !important;
+  }
+}
+
+@mixin cb-btn--pill {
+  border-radius: 10rem;
+}
+
+@mixin cb-btn--big-text {
+  font-size: 1.5em;
+}
+
+@mixin cb-btn--icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    & > * {
+      // Because Safari is not obeying `justify-content: center`
+      // (This hack is required because IE 10,11 doesn't like margins being altered.)
+      margin: auto;
+    }
+  }
+
+  &.btn--outline {
+    padding: 0;
+  }
+
+  &.btn--sm {
+    height: 32px;
+    width: 32px;
+  }
+
+  &.btn--lg {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+@mixin cb-btn--block {
+  &--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@mixin cb-btn--outline {
+  color: darken($cb-color--gray, $cb-color--step);
+  border: $cb-btn--outline-thickness solid darken($cb-color--gray, $cb-color--step);
+  background-color: transparent;
+  box-shadow: none !important;
+
+  &:hover {
+    color: $cb-color--white !important;
+    background-color: darken($cb-color--gray, $cb-color--step);
+  }
+}
+
+@mixin cb-btn--colors {
+  @each $key, $cb-value in $cb-colors-ui {
+    &--#{$key} {
+      background-color: $cb-value;
+
+      &:hover,
+      &:active,
+      &.btn--active {
+        background-color: darken($cb-value, $cb-color--step);
+      }
+
+      &.btn--disabled {
+        background-color: lighten($cb-value, $cb-color--step * 2);
+      }
+
+      &.btn--outline {
+        color: $cb-value !important;
+        fill: $cb-value !important;
+        border-color: $cb-value;
+        background-color: transparent;
+
+        &:hover {
+          color: $cb-color--white;
+          background-color: $cb-value;
+        }
+      }
+    }
+  }
+}
+
+// CLASS BUILDER: BUTTONS
+// ======================
+
+@mixin cb-components-buttons {
+  .btn {
+    @include cb-btn;
+    @include cb-btn--size;
+    @include cb-btn--block;
+    @include cb-btn--colors;
+  }
+
+  .btn {
+    &--pill {
+      @include cb-btn--pill;
+    }
+
+    &.big {
+      @include cb-btn--big-text;
+    }
+
+    &--icon {
+      @include cb-btn--icon;
+    }
+
+    &--outline {
+      @include cb-btn--outline;
+    }
+  }
+
+  @if $cb-btn--3d == false {
+    .btn--3d {
+      @include cb-btn--3d;
+    }
+  }
+}
+
+@if $cb-include-css--buttons == true {
+  @include cb-components-buttons;
+}

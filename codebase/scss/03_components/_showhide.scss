@@ -1,0 +1,38 @@
+// COMPONEMT MIXINS: SHOWHIDE
+// ==========================
+
+@mixin cb-showhide__ctrl {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin cb-showhide__content {
+  overflow-y: hidden;
+  max-height: 0;
+  transition: max-height 0.6s cubic-bezier(0, 1, 0, 1);
+  cursor: default;
+
+  &.is-active {
+    max-height: 100vh;
+    transition-timing-function: cubic-bezier(1, 0, 1, 0);
+  }
+}
+
+// CLASS BUILDER: SHOWHIDE
+// =======================
+
+@mixin cb-components-showhide {
+  .showhide__ctrl,
+  .showhide__close {
+    @include cb-showhide__ctrl;
+  }
+
+  .showhide__content {
+    @include cb-showhide__content;
+  }
+}
+
+@if $cb-include-css--showhide == true {
+  @include cb-components-showhide;
+}

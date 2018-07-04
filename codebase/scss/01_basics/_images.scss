@@ -1,0 +1,10 @@
+// BASICS: IMAGES
+// ==============
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  // The !important is needed by SVG images, e.g. `holder.js`
+  outline: 0;
+}

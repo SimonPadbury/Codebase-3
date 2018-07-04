@@ -1,0 +1,109 @@
+// DECORATION MIXINS: COLORS
+// =========================
+@mixin cb-color-utilities {
+
+  // Background Colors
+  
+  @each $key,
+  $cb-value in $cb-colors {
+    .bg--#{$key} {
+      background-color: $cb-value;
+
+      &-lighten {
+        @for $i from 1 through $cb-color--shades {
+          &-#{$i} {
+            background-color: lighten($cb-value, $cb-color--step * $i);
+          }
+        }
+      }
+
+      &-darken {
+        @for $i from 1 through $cb-color--shades {
+          &-#{$i} {
+            background-color: darken($cb-value, $cb-color--step * $i);
+          }
+        }
+      }
+    }
+
+    .bg--black {
+      background-color: $cb-color--black;
+    }
+
+    .bg--white {
+      background-color: $cb-color--white;
+    }
+  }
+  
+  // Text Colors
+  
+  @each $key,
+  $cb-value in $cb-colors {
+    .#{$key} {
+      color: $cb-value;
+
+      &-lighten {
+        @for $i from 1 through $cb-color--shades {
+          &-#{$i} {
+            color: lighten($cb-value, $cb-color--step * $i);
+          }
+        }
+      }
+
+      &-darken {
+        @for $i from 1 through $cb-color--shades {
+          &-#{$i} {
+            color: darken($cb-value, $cb-color--step * $i);
+          }
+        }
+      }
+    }
+
+    .black {
+      color: $cb-color--black;
+    }
+
+    .white {
+      color: $cb-color--white;
+    }
+  }
+  
+  // Border Colors
+  
+  @each $key,
+  $cb-value in $cb-colors {
+    .b--#{$key} {
+      border-color: $cb-value;
+
+      &-lighten {
+        @for $i from 1 through $cb-color--shades {
+          &-#{$i} {
+            border-color: lighten($cb-value, $cb-color--step * $i);
+          }
+        }
+      }
+
+      &-darken {
+        @for $i from 1 through $cb-color--shades {
+          &-#{$i} {
+            border-color: darken($cb-value, $cb-color--step * $i);
+          }
+        }
+      }
+    }
+
+    .b--black {
+      border-color: $cb-color--black;
+    }
+
+    .b--white {
+      border-color: $cb-color--white;
+    }
+  }
+}
+
+// INCLUDE CLASSES: COLORS
+// =======================
+@if $cb-include-css--decoration-utilities==true {
+  @include cb-color-utilities;
+}

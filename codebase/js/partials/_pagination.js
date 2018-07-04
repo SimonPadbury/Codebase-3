@@ -1,4 +1,5 @@
-// PAGINATION
+// CODEBASE PAGINATION
+// ===================
 
 (function () {
   "use strict";
