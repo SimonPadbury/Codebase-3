@@ -2,8 +2,8 @@
 extends _docs-template.pug
 
 block vars
-  - var title="Components • Codebase"
-  - var topID="components"
+  - var title = "Components • Codebase"
+  - var topID = "components"
   - bodyClass = "docs__chapter"
 
 block template__navigation
@@ -13,18 +13,21 @@ block template__header
   h1 Components
 
 block template__body
-  include docs-articles/04_component/__intro
-  include docs-articles/04_component/_deco-styling
-  include docs-articles/04_component/_activator-javascript
-  include docs-articles/04_component/_showhide
-  include docs-articles/04_component/_dropdown
-  include docs-articles/04_component/_menu
-  include docs-articles/04_component/_menubar-simple
-  include docs-articles/04_component/_menubar-responsive
-  include docs-articles/04_component/_menubar-complex
-  include docs-articles/04_component/_off-canvas
-  include docs-articles/04_component/_card
-  include docs-articles/04_component/_responsive-table
-  include docs-articles/04_component/_popover
-  include docs-articles/04_component/_tab-system
-  include docs-articles/04_component/_pagination
+  include docs-articles/04_components/__intro
+  include docs-articles/04_components/_decoration
+  include docs-articles/04_components/_javascript
+  include docs-articles/04_components/_activator
+  include docs-articles/04_components/_toggler
+  include docs-articles/04_components/_showhide
+  include docs-articles/04_components/_dropdowns
+  include docs-articles/04_components/_menus
+  include docs-articles/04_components/_menubars-simple
+  include docs-articles/04_components/_menubars-responsive
+  include docs-articles/04_components/_menubars-complex
+  include docs-articles/04_components/_off-canvas-side-panels
+  include docs-articles/04_components/_cards
+  include docs-articles/04_components/_tables
+  include docs-articles/04_components/_popovers
+  include docs-articles/04_components/_tabs
+  include docs-articles/04_components/_pagination
+  include docs-articles/04_components/_load-partial

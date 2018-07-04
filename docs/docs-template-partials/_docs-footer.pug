@@ -1,4 +1,13 @@
 footer.docs__footer
-  span.text--teal.
-    #[a(href="index.html") Codebase] #[+codebase-version] #[span.text--muted |]
-    #[a(href="https://github.com/SimonPadbury/Codebase") GitHub Repository] #[span.text--muted | Built by] #[a(href="http://simonpadbury.github.io") Simon Padbury]
+  span
+    a(href="index.html") 
+      svg(id="codebase-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12")
+        path(d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z")
+      | Codebase #[+codebase-version]
+    |  | 
+    a(href="https://github.com/SimonPadbury/Codebase") GitHub Repository
+    |  | Built by 
+    a(href="http://simonpadbury.github.io") Simon Padbury
+    | #[br]
+    | These docs are using the icon font 
+    a(href="https://fontawesome.com" target="_blank") Font Awesome

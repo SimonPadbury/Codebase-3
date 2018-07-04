@@ -5,10 +5,11 @@ extends ../codebase/pug/_codebase
 block vars
   - lang = "en"
   - title= "Codebase"
-  - description = "Codebase 2 - a Sass, JavaScript and Pug website component library"
+  - description = "Codebase 2: A Website Component Library"
   - author = "Simon Padbury"
 
 block head-addins
+  script(defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous")
   link(rel="stylesheet", href="docs/docs-theme/css/styles.css")
 
 block body
@@ -23,7 +24,7 @@ block body
 
     block template__sub-navigation
         
-    .docs__docs-content        
+    .docs__docs-content#docs_content       
       
       header
         block template__header
@@ -35,13 +36,10 @@ block body
 
     block template__sub-menus
   
-  .b--thin.b--rounded.bs.ph--4.bg--white.text--center(style="position: fixed; right: 8px; bottom: 8px; z-index: 999;")
-    | Viewport 
-    span.hide--xs-up xs &amp; down
-    span.hide--xs-down.hide--sm-up xs&mdash;sm
-    span.hide--sm-down.hide--md-up sm&mdash;md
-    span.hide--md-down.hide--lg-up md&mdash;lg
-    span.hide--lg-down lg &amp; up
+  .b--thin.b--rounded.bs.px--4.bg--white.center(style="position: fixed; right: 8px; bottom: 8px; z-index: 999;")
+    | Viewport width:&nbsp;
+    span.hide--md-up sm &amp; down
+    span.hide--sm-down.hide--lg-up md...lg
+    span.hide--md-down lg &amp; up
 
-block append body-foot-addins
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js")
+//-block append body-foot-addins

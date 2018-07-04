@@ -1,0 +1,82 @@
+// TOP NAVIGATION
+
+.codebase--nav-top {
+  border-bottom: $cb-border--thin;
+  background: $cb-color--white;
+
+  .menubar__content {
+    a {
+      padding: $cb-spacing--block;
+      text-decoration: none;
+      color: $cb-color--teal;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: darken($cb-color--teal, $cb-color--step * 2);
+      }
+    }
+    .feather {
+      position: relative;
+      top: 3px;
+      height: 18px;
+      width: auto;
+    }
+
+    .docs__chapter & {
+      @include cb-break--minmax($cb-mq--md, $cb-mq--lg) {
+        padding-right: 88px;
+      }
+    }
+  }
+}
+
+.sidenav-toggler {
+  padding: 8px;
+  color: $cb-color--white;
+  &:hover,
+  &:active {
+    background: $cb-color--blue;
+    cursor: pointer;
+  }
+  .homepage & {
+    display: none;
+  }
+}
+
+.codebase__brand {
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: inline-block;
+    padding: 8px 16px 8px 8px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $cb-color--teal;
+
+    svg#codebase-logo {
+      position: relative;
+      top: -3px;
+      vertical-align: middle;
+      height: 20px;
+      width: 36px;
+      margin-right: 4px;
+      path {
+        fill: $cb-color--teal;
+        stroke: $cb-color--teal;
+        stroke-width: 1;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+      }
+    }
+
+    &:hover {
+      color: darken($cb-color--teal, $cb-color--step * 2);
+      svg#codebase-logo path {
+        stroke: darken($cb-color--teal, $cb-color--step * 2);
+        fill: darken($cb-color--teal, $cb-color--step * 2);
+      }
+    }
+  }
+}

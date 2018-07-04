@@ -2,8 +2,8 @@
 extends _docs-template.pug
 
 block vars
-  - var title="Layout • Codebase"
-  - var topID="layout"
+  - var title = "Layout • Codebase"
+  - var topID = "layout"
   - bodyClass = "docs__chapter"
 
 block template__navigation
@@ -13,8 +13,12 @@ block template__header
   h1 Layout
 
 block template__body
-  include docs-articles/03_layout/_flexbox-systems
+  include docs-articles/03_layout/_container
+
+  include docs-articles/03_layout/_flexbox-introduction
+  include docs-articles/03_layout/_flexbox-simple
+  include docs-articles/03_layout/_flexbox-traditional
   include docs-articles/03_layout/_flexbox-variables
-  include docs-articles/03_layout/_flexbox-classes
   include docs-articles/03_layout/_flexbox-mixins
+
   include docs-articles/03_layout/_invisibility
