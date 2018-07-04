@@ -1,0 +1,432 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "components-cards"
+  - var articleTitle = "Cards"
+
+block section
+  
+  p.lead Codebase cards are a flexbox implementation of Nicole Sullivan's #[a(href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/") media objects], with some added features for a wide range of applications.
+  
+  .b--heavy.b--rounded.b--gray-lighten-2.p--16
+    
+    p.muted Undecorated
+
+    .card
+      a(href="#/").card__image.card__image--left
+        +image-placeholder-light(96, 96)
+      .card__body
+        h4 Card Title
+        +paragraph
+        
+    p.muted Decorated with #[code .decorate.decorate--media]
+    
+    .card.decorate
+      a(href="#/").card__image.card__image--left
+        +image-placeholder-light(96, 96)
+      .card__body
+        h4 Card Title
+        +paragraph
+  
+    p.mb--0.muted #[b Note:] For Codebase card decoration, #[code .decorate] adds image padding only around #[code .card__image--right] and #[code .card__image--left]. This means that cards with vertically arranged content will have images that touch the card edges (as in the examples that follow).
+
+  .tabs.decorate.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-card-html") HTML
+      .tab__label(data-tab-id="tab-docs-card-pug") Pug
+
+    #tab-docs-card-html.tab__panel
+      pre.mt
+        code.
+          &lt;div class="card"&gt;
+          
+            &lt;a href="" class="card__image card__image--left"&gt;
+              &lt;img src="" alt=""&gt;
+            &lt;/a&gt;
+          
+            &lt;div class="card__body"&gt;
+              &lt;h4&gt;Card Title&lt;/h4&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+            &lt;/div&gt;
+          
+          &lt;/div&gt;
+
+    #tab-docs-card-pug.tab__panel
+      pre.mt
+        code.
+          .card
+            
+            a(href="").card__image.card__image--left
+              \#[img(src="" alt="")]
+          
+            .card__body
+              h4 Card Title
+              p Lorem ipsum dolor sit amet...
+
+  p Card images can have #[code .card__image--left] or #[code .card__image--right]. This changes the flexbox order of the image.
+    
+  p However, if your card image spans the whole width of the card, then you don't need these modifier classes.
+  
+  h3 Horizontal or Vertical Cards
+
+  p By default, cards display their main content (the image and the body) arranged horizontally, as 'columns'. But if your card image is wide enough, or if the card width is (constrained) narrow enough, then the card columns wrap to become rows.
+    
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item--span-4
+
+      .card.decorate
+        a(href="#/").card__image
+          +image-placeholder-light(300, 200)
+        .card__body
+          h4.card__title Card Title
+          .card__text
+            p.
+              Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+
+    .flex-item--span-4
+
+      .card.decorate
+        a(href="#/").card__image
+          +image-placeholder-light(300, 200)
+        .card__body
+          h4.card__title Card Title
+          .card__text
+            p.
+              Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+
+    .flex-item--span-4
+
+      .card.decorate
+        a(href="#/").card__image
+          +image-placeholder-light(300, 200)
+        .card__body
+          h4.card__title Card Title
+          .card__text
+            p.
+              Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+
+  .tabs.decorate.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-card-html-2") HTML
+      .tab__label(data-tab-id="tab-docs-card-pug-2") Pug
+
+    #tab-docs-card-html-2.tab__panel
+      pre.mt
+        code.
+          &lt;div class="card"&gt;
+          
+            &lt;a href="" class="card__image"&gt;
+              &lt;img src="" alt=""&gt;
+            &lt;/a&gt;
+          
+            &lt;div class="card__body"&gt;
+              &lt;h4&gt;Card Title&lt;/h4&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+            &lt;/div&gt;
+          
+          &lt;/div&gt;
+
+    #tab-docs-card-pug-2.tab__panel
+      pre.mt
+        code.
+          .card
+            
+            a(href="").card__image
+              \#[img(src="" alt="")]
+          
+            .card__body
+              h4 Card Title
+              p Lorem ipsum dolor sit amet...
+
+  p Also, you can force card layout to become vertical even if your card image is too narrow, by adding the modifier class #[code .card--vertical] to the component container.
+    
+  .card.card--vertical.decorate
+    a(href="#/").card__image
+      +image-placeholder-light(250, 125)
+    .card__body
+      h4 Card Title
+      +paragraph
+
+  p Additionally, for vertically arranged cards (accomplished by either mothod above) you can set #[code .card__image--top] or #[code .card__image--bottom] &ndash; instead of setting #[code .card__image--left] or #[code .card__image--right].
+
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-md--span-6
+      .card.card--vertical.decorate
+        a(href="#/").card__image.card__image--top
+          +image-placeholder-light(125, 125, 'mt--16 b--circle')
+        .card__body
+          h4 Card Title
+          +paragraph
+
+    .flex-item-md--span-6
+      .card.card--vertical.decorate
+        a(href="#/").card__image.card__image--bottom
+          +image-placeholder-light(125, 125, 'mb--16 b--circle')
+        .card__body
+          h4 Card Title
+          +paragraph
+
+  p (Extra margin been applied to the circular images, above.)
+
+  h3 Adding a Header, Footer, and Multiple Sections
+
+  p Codebase cards can easily accommodate headers and footers, using #[code .card__header] and #[code .card__footer].
+
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-sm--span-6
+
+      .card.decorate
+        .card__header
+          | Header
+        a(href="#/").card__image.card__image--right
+          +image-placeholder-light(96, 96)
+        .card__body
+          h4 Card Title
+          p Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. 
+        .card__footer
+          | Footer
+
+    .flex-item-sm--span-6
+
+      .card.decorate(style="max-width: 400px")
+        .card__header
+          | Header
+        a(href="#/").card__image
+          +image-placeholder-light(400, 200)
+        .card__body
+          h4 Card Title
+          p Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. 
+        .card__footer
+          | Footer
+
+  p If your require multiple sections within your card, comply use a few #[code .card__section] instead of one #[code .card__body].
+
+  .flexbox.flexbox--center
+    .flex-item-sm--span-6
+
+      .card.card--vertical.decorate(style="max-width: 400px")
+        .card__header
+          | Header
+        .card__section
+          h4 Card Title
+        .card__section
+          p Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+        .card__section
+          p Imperdiet evertitur no usu, his te suavitate salutatus.
+        .card__section
+          p Nullam ridens deterruisset an duo.
+        .card__section
+          p Cum harum insolens ei, cum probo placerat praesent et.
+        .card__footer
+          | Footer
+
+  
+  .tabs.decorate.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-card2-html") HTML
+      .tab__label(data-tab-id="tab-docs-card2-pug") Pug
+
+    #tab-docs-card2-html.tab__panel
+      pre.mt
+        code.
+          &lt;div class="card"&gt;
+          
+            &lt;div class="card__header"&gt;Header&lt;/div&gt;
+          
+            &lt;a href="" class="card__image card__image--right" &gt;
+              &lt;img src="" alt=""&gt;
+            &lt;/a&gt;
+          
+            &lt;div class="card__body"&gt;
+              &lt;h4&gt;Card Title&lt;/h4&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+            &lt;/div&gt;
+          
+            &lt;div class="card__footer"&gt;Footer&lt;/div&gt;
+          
+          &lt;/div&gt;
+
+    #tab-docs-card2-pug.tab__panel
+      pre.mt
+        code.
+          .card
+            
+            .card__header Header
+            
+            a(href="#/").card__image.card__image--left.
+              \#[img(src="" alt="")]
+          
+            .card__body
+              h4 Media Object Title
+              p Lorem ipsum dolor sit amet...
+              
+            .card__footer Footer
+
+  h3 Card Overlay
+
+  p The class #[code .card__overlay] can be used to insert a block of (e.g. text) on a layer over the other content within the card (e.g. over the image).
+    
+  .flexbox.flexbox--gap.flexbox--nested
+    .flex-item-md--span-4
+      p #[code .card__overlay--top]
+      
+      .card.decorate(style="max-width: 400px")
+        a(href="#/").card__image
+          +image-placeholder-light(400, 400)
+        .card__overlay.card__overlay--top
+          | Card overlay text (top)
+
+    .flex-item-md--span-4
+      p #[code .card__overlay--middle]
+      
+      .card.decorate(style="max-width: 400px")
+        a(href="#/").card__image
+          +image-placeholder-light(400, 400)
+        .card__overlay.card__overlay--middle
+          | Card overlay text (middle)
+                
+    .flex-item-md--span-4
+      p #[code .card__overlay--bottom]
+      
+      .card.decorate(style="max-width: 400px")
+        a(href="#/").card__image
+          +image-placeholder-light(400, 400)
+        .card__overlay.card__overlay--bottom
+          | Card overlay text (bottom)
+
+  p Notes on usage of the card overlay:
+
+  ol
+    li.
+      The card overlay must have less/smaller content than the other content that it is overlaying. (In these examples above: an image is being overlayed by text &ndash; too much text would stick out beyond the image.)
+    li.
+      If you need to use the card overlay with the header header and/or footer, be aware of the fact that the overlay will overlay the header and/or footer too. If this is a problem for your design, then you need to #[b add an extra container around the overlay], and give it CSS #[code position: relative]. (But exclude the header and/or footer from this extra container.)
+
+  h3 Cards with Constrained Height
+  
+  p If the height of a card is constrained (by a stated height on itself or on a container), then the #[code .card__body] has auto overflow scrolling (vertical).
+    
+  .flexbox.flexbox--center
+    .flex-item-sm--span-6
+      .card.card--vertical.decorate(style="height: 345px; max-width: 400px")
+        .card__header
+          | Header
+        .card__body
+          h4 Card Title
+          +paragraph(4)
+        .card__footer
+          | Footer
+      
+  p #[b Note:] #[code .card__section] does not have this same behavior.  
+
+  h3 Cards can be Nested
+    
+  p There may be some circumstances where you need to "nest" cards &ndash; or place smaller card(s) "inside" a bigger card. As Codebase cards are media objects, you would expect to be able to do this and you can, easily. 
+  
+  .card.mt--48
+    a(href="#/").card__image.card__image--left.pr--8
+      +image-placeholder-light(96, 96)
+    .card__body
+      h4.mb--8 Card Title
+      +paragraph
+      .card
+        a(href="#/").card__image.card__image--left.pr--8
+          +image-placeholder-light(96, 96)
+        .card__body
+          h4.mb--8 Card Title
+          +paragraph
+      .card
+        a(href="#/").card__image.card__image--left.pr--8
+          +image-placeholder-light(96, 96)
+        .card__body
+          h4.mb--8 Card Title
+          +paragraph
+
+  .tabs.decorate
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-card3-html") HTML
+      .tab__label(data-tab-id="tab-docs-card3-pug") Pug
+
+    #tab-docs-card3-html.tab__panel
+      pre.mt
+        code.
+          &lt;div class="card"&gt;
+          
+            &lt;a href="" class="card__image card__image--left" &gt;
+              &lt;img src="" alt="Square Thumbnail"&gt;
+            &lt;/a&gt;
+          
+            &lt;div class="card__body"&gt;
+              &lt;h4&gt;Card Title&lt;/h4&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;
+              
+              &lt;!-- Place nested `.card` here ... --&gt;
+              
+            &lt;/div&gt;
+          
+          &lt;/div&gt;
+
+    #tab-docs-card3-pug.tab__panel
+      pre.mt
+        code.
+          .card
+            
+            a(href="#/").card__image.card__image--left.
+              \#[img(src="" alt="Square Thumbnail")]
+          
+            .card__body
+              h4.card__title Media Object Title
+              p Lorem ipsum dolor sit amet...
+              
+              // Place nested `.card` here ...
+              
+  p Card classes:
+              
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th Class
+        th Explanation
+        th Modifiers
+    tbody
+      tr
+        td
+          code .card
+        td
+          The card component wrapper
+        td
+          code .card--vertical
+          |  for vertical alignment of elements in the card body
+      tr
+        td
+          code .card__image
+        td
+          The card image class can be applied to the image itself, or to an anchor (hyperlink) wrapper.
+        td.
+          #[code .card--left] or #[code .card--right] #[br] for cards with horizontally arranged body #[br]
+          #[code .card--top] or #[code .card--bottom] #[br] for cards with vertically arranged body
+      tr
+        td
+          code .card__header
+        td Card header
+        td
+      tr
+        td
+          code .card__body
+        td Card body. For the main text content of the card.
+        td
+      tr
+        td
+          code .card__section
+        td Alternative for card body. Use when you reqire a "multi-segmented" card.
+        td
+      tr
+        td
+          code .card__footer
+        td Card footer
+        td
+      tr
+        td
+          code .card__overlay
+        td blah
+        td #[code .card__overlay--top], #[code .card__overlay--top] or #[code .card__overlay--bottom] for positioning the content of the overlay

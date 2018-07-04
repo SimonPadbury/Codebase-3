@@ -1,0 +1,111 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "components-tables"
+  - var articleTitle = "Tables"
+
+block section
+  
+  p.lead The Codebase #[code .table] class expands tables to 100% width and adds some padding and a distinctive border-bottom to the table header. Also, all table cells have their content vertical-aligned to the top, and aligned left for LTR or right for RTL.
+
+  p #[code .table]
+
+  +table(4, 4)
+
+  h3 Table variations
+
+  p.bold The following table modifier classes can be used separately or in combination:
+  
+  p #[code .table.table--centered]
+
+  +table(4, 4, "table--centered")
+
+  p #[code .table.table--centered-not-first]
+
+  +table(4, 4, "table--centered-not-first")
+
+  p #[code .table.table--bold-first]
+  
+  +table(4, 4, "table--bold-first")
+
+  p #[code .table.table--bordered]
+
+  +table(4, 4, "table--bordered")
+
+  p #[code .table.table--rows]
+
+  +table(4, 4, "table--rows")
+
+  p #[code .table.table--columns]
+
+  +table(4, 4, "table--columns")
+
+  p #[code .table.table--grid]
+
+  +table(4, 4, "table--grid")
+
+  p #[code .table.table--compact]
+
+  +table(4, 4, "table--compact")
+  
+  p #[code .table.table--striped]
+
+  +table(4, 4, "table--striped")
+  
+  p.bg--green-lighten-3.p--16 The #[code .table--striped] class applies a #[b white tint] and a #[b black tint] to alterating rows. So, to accomplish a striped color effect, all you need to do is apply a background color to the #[code &lt;table&gt;] tag. (See also #[a(href="decoration-utilities.html#decoration-utilities-colors") Decoration Utilities: Colors].)
+
+  p Example: #[code .table.table--striped.bg--red-lighten-2]
+
+  +table(4, 4, "table--striped bg--red-lighten-2")
+  
+  h3 Tables are responsive
+
+  p If you add class #[code .table] to a #[code &lt;table&gt;], then #[code codebase.js] will add #[code &lt;div class="table-wrap"&gt;] around the table. This wrapper's CSS works to enable responsive overflow by horizontal scrolling &ndash; if required by a table being wider than the available width.
+
+  p Example: a wide table that is horizontally scrollable at all screen widths:
+
+  +table(15, 3, "table--grid")
+
+  h3 Table classes
+  
+  table.table.table--columns.table--rows
+    thead
+      tr
+        th Class
+        th Notes
+    tbody
+      tr
+        td #[code .table]
+        td The responsive table component block. Apply this class only to #[code &lt;table&gt;] tags.
+      tr
+        td #[code .table--rows]
+        td Adds a dividing line between table body rows.
+      tr
+        td #[code .table--columns]
+        td Adds a dividing line between table body columns.
+      tr
+        td #[code .table--bordered]
+        td Adds a border around the entire table.
+      tr
+        td #[code .table--grid]
+        td Adds a border around every table cell. (So, there's no need to use the previous three classes separately to achieve this styling.)
+      tr
+        td #[code .table--striped]
+        td Applies a white tint and a black tint to alternating rows.
+      tr
+        td #[code .table--compact]
+        td Sets the table cell padding to 4px (= 1 #[a(href="decoration-utilities.html#decoration-utilities-element-grid") element grid unit]).
+      tr
+        td #[code .table--centered]
+        td Center text-align for every cell.
+      tr
+        td.nowrap #[code .table--centered-not-first]
+        td Center text-align for every table body cell #[i except] for the first column (left on LTR, right on RTL).
+      tr
+        td #[code .table--bold-first]
+        td Bold text for the first column in the table body (left on LTR, right on RTL).
+      tr
+        td #[code .table--nowrap]
+        td Prevents white-space wrapping (in every table cell).#[sup 1]
+        
+  p #[sup 1] If you require nowrap only on some table cells and not others, you can use the #[a(href="decoration-utilities.html#decoration-utilities-text") text utility] class #[code .nowrap] applied to the #[code th] or #[code td] where you need it.

@@ -1,0 +1,39 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "components-load-partial"
+  - var articleTitle = "Load Partial"
+
+block section
+    p.lead There may be some situations where you want to load a smaller "partial" file (text, HTML or XML) into a block on your webpage. Codebase has a simple JavaScript that enables you to do this.
+
+    .mb--line.bg--green-lighten-3.p--16
+        p #[b Note:] This script works only for partials that are hosted within your website &ndash; it doesn't do cross-site scripting. And it only works via interaction with the web server (or virtual server) hosting your website. Therefore, if you are just building your website in your computer without the use of a (virtual) server, Codebase poad-partial won't work.
+
+        p If you don't have a virtual server that you can use for website design and development, maybe the simplest free way to get one is for you to download and install the free #[b Brackets] code editor from #[a(href="http://brackets.io") http://brackets.io]. It has a built-in #[b live preview] server.
+        
+        ul
+         li Read about Brackets Live Preview: #[a(href="https://github.com/adobe/brackets/wiki/How-to-Use-Brackets#live-preview") https://github.com/adobe/brackets/wiki/How-to-Use-Brackets#live-preview].
+         li See Brackets "Live Development in HTML" in action: #[a(href="http://youtu.be/Nhvj1NYC3Uc") http://youtu.be/Nhvj1NYC3Uc]).
+    
+    p #[b Example:] #[br] (If you see "This is an example." in the dashed box below, then load-partial is working OK.)
+
+    .b--thin.b--dashed.p--16(data-load-partial="load-partial-examples/example1.html")
+
+    p.mt--line In the Codebase documentation root folder, there is another folder #[b load-partial-example/] containing the file #[b example.html]. The (empty) DIV above has the attribute #[code data-load-partial="load-partial-example/example1.html"]. The Codebase JavaScript reads that, and it sends an #[a(href="https://en.wikipedia.org/wiki/XMLHttpRequest") XMLHttpRequest] to the server. If the server finds the requested file, then it is sent down and embedded in the webpage &ndash; into the same DIV. If nothing is found, then nothing will be displayed.
+
+    pre
+        code.
+            &lt;div data-load-partial="folder-name/file-name.html"&gt;&lt;/div&gt;
+    
+    p If you place your requested file in the website root folder, then you don't need #[code folder-name/]. You can have a number of folders within folders and, if you put the correct #[code path/to/your/file.html] in the #[code data-load-partial=""], then the server should find what you want if it exists.
+
+    p You can use this Codebase load-partial tool #[code data-load-partial=""] on any HTML tag. And you can use it any number of times on separate tags (but only once per tag). The fetched partial file will overwrite whever else was in the tag &ndash; so, just open and close the tag, as in the DIV example above.
+
+    p The embedded partial file, when written into your webpage, will receive styling from your webpage's stylesheet.
+
+    p Example #[code data-load-partial="load-partial-examples/example2.html"] on a SPAN tag:
+
+    span(data-load-partial="load-partial-examples/example2.html")
+
+

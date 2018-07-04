@@ -1,13 +1,14 @@
 extends ../../docs-template-partials/_docs-article
 
 block prepend article
-  - var sectionId = "layout-flexbox-variables"
-  - var sectionTitle = "Flexbox Variables"
+  - var articleId = "layout-flexbox-variables"
+  - var articleTitle = "Flexbox Variables"
 
 block section
+  
   p Codebase flexbox systems use the following variables:
 
-  table.table.deco
+  table.table.table--rows.table--columns
     thead
       tr
         th Variable
@@ -16,50 +17,29 @@ block section
     tbody
       tr
         td
-          code.text--nowrap $mq--xs
+          code.nowrap $cb-mq--md
         td
-          code.text--nowrap 320px !default
-        td
-          Break-point for extra-small viewports (e.g. phones, portrait).
-      tr
-        td
-          code.text--nowrap $mq--sm
-        td
-          code.text--nowrap 640px !default
-        td
-          Break-point for small viewports (e.g. phones, landscape; tablets, portrait).
-      tr
-        td
-          code.text--nowrap $mq--md
-        td
-          code.text--nowrap 960px !default
+          code.nowrap 640px !default
         td.
           Break-point for medium viewports (e.g. tablets, landscape).
       tr
         td
-          code.text--nowrap $mq--lg
+          code.nowrap $cb-mq--lg
         td
-          code.text--nowrap 1280px !default
+          code.nowrap 960px !default
         td.
           Break-point for large viewports (e.g. laptops, desktops).
       tr
         td
-          code.text--nowrap $max-flexitems
+          code.nowrap $cb-max-flex-items
         td
-          code.text--nowrap 12 !default
+          code.nowrap 12 !default
         td.
-          The default Codebase flexbox system has up to 12 columns (flexitems), each 1/12 of the flexbox max width.
+          The default Codebase flexbox system has up to 12 columns (flex-items), each 1/12 of the flexbox max width.
       tr
         td
-          code.text--nowrap $flexbox--max-width
+          code.nowrap $cb-flexbox--gap-width
         td
-          code.text--nowrap 1280px !default
-        td.
-          Maximum width of the modifiers #[code +flexbox--container] mixin and #[code .flexbox--container] class. For wider viewports the flexbox is centered by auto-margins right and left.
-      tr
+          code.nowrap $cb-spacing--24 !default
         td
-          code.text--nowrap $flexbox--gutter-width
-        td
-          code.text--nowrap $spacing--24 !default
-        td
-          Half of the gutter width is used as margin either side of each flexbox column. (See #[a(href="decoration.html#decoration-element-grid") element grid] for units.)          
+          Half of the gap width is used as margin either side of each flexbox column. (See #[a(href="decoration-utilities.html#decoration-utilities-element-grid") element grid] for units.)          

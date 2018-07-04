@@ -1,0 +1,81 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "components-menubars-responsive"
+  - var articleTitle = "Menubars: Responsive"
+
+block section
+
+  p There may be situations where you require a navigation list to display as a stacked menu on small viewports but as a menubar on wider viewports.
+
+  p Codebase handles this using mixins/classes #[code menu--menubar-*],  where #[code *] can be #[code md] or #[code lg] for transformation at the 640px or 960px (defaults) breakpoint widths in Codebase.
+    
+  p.bg--green-lighten-3.p--16 #[b Note:] The responsive menu / menubar mixins and classes are named thinking "from small screens up": they are #[i menus that become menubars] above the chosen breakpoint.
+
+  p Example using #[code .menu.menu--menubar-md] (and decorated with #[code .decorate]):
+
+  +menu("Link", 5, "menu--menubar-md menubar--center decorate")
+
+    
+  .tabs.decorate.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-menu-transformer-html") HTML
+      .tab__label(data-tab-id="tab-docs-menu-transformer-pug") Pug
+
+    #tab-docs-menu-transformer-html.tab__panel
+      pre.mt
+        code.
+          &lt;ul class="menu menu--menubar-md menubar--center"&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#/"&gt;Link 5&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+
+    #tab-docs-menu-transformer-pug.tab__panel
+      pre.my
+        code.
+          ul.menu.menu--menubar-md.menubar--center
+            li \#[a(href="#/") link 1]
+            li \#[a(href="#/") link 2]
+            li \#[a(href="#/") link 3]
+            li \#[a(href="#/") link 4]
+            li \#[a(href="#/") link 5]
+
+          //- Or use the Codebase menu HTML generator mixin for rapid prototyping:
+          
+          +menu("Link", 5, "menu--menubar-sm")
+          
+      p.mt--4 See #[a(href="getting-started.html#getting-started-codebase-html-generator-mixins") Getting Started: HTML Generator Mixins]
+
+  p Responsive menus/menubars work with the full range of #[a(href="#components-menubars-simple") simple menubars] and #[a(href="#components-menubars-complex") complex menubars].
+  
+  p.bg--green-lighten-3.p--16 The menubar alignment modifiers (#[code --left], #[code --right], #[code --center], #[code --justify]) will only take effect when the menu is in #[i menubar] mode.
+    
+  h3.mt--line Responsive Menubar Classes
+
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th(style="width: 115px;") Class
+        th Notes
+        th Modifiers
+    tbody
+      tr
+        td #[code .menu]
+        td The menu/menubar component block
+        td Responsive 'switches': #[br]
+          | #[code .menu--menubar-md], #[code .menu--menubar-lg] #[br]
+          | Fixed position menubar (viewport top): #[br] #[code .menu--fixed] or #[code .menubar--fixed] #[br]
+          | Menubar alignment: #[br] #[code .menubar--left], #[code .menubar--right], #[code .menubar--center], #[code .menubar--justify]
+      tr
+        td.nowrap #[code .menu li] #[sup 1]
+        td The menu/menubar item element
+        td
+      tr
+        td #[code .menu a] #[sup 2]
+        td The menu/menubar hyperlink element
+        td
+        
+  p #[sup 1] Including #[code @mixin menu__item] &nbsp; #[sup 2] Including #[code @mixin menu__link]

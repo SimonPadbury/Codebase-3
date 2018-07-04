@@ -1,0 +1,245 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "components-tabs"
+  - var articleTitle = "Tabs"
+
+block section
+  .b--heavy.b--rounded.b--gray-lighten-2.p--16
+    
+    p.muted Undecorated
+
+    .tabs
+      .tab__label(data-tab-id="tab-docs1") Tab Label 1
+      .tab__label(data-tab-id="tab-docs2") Tab Label 2
+      .tab__label(data-tab-id="tab-docs3") Tab Label 3
+      .tab__label(data-tab-id="tab-docs4") Tab Label 4
+      #tab-docs1.tab__panel
+        p Tab Panel 1 / Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      #tab-docs2.tab__panel
+        p Tab Panel 2 / Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      #tab-docs3.tab__panel
+        p Tab Panel 3 / Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      #tab-docs4.tab__panel
+        p Tab Panel 4 / Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    
+    p.pt--line.muted Decorated with #[code .decorate]
+      
+    .tabs.decorate
+      .tab__label(data-tab-id="tab-docs5") Tab Label 1
+      .tab__label(data-tab-id="tab-docs6") Tab Label 2
+      .tab__label(data-tab-id="tab-docs7") Tab Label 3
+      .tab__label(data-tab-id="tab-docs8") Tab Label 4
+      #tab-docs5.tab__panel
+        p Tab Panel 1 / Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      #tab-docs6.tab__panel
+        p Tab Panel 2 / Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      #tab-docs7.tab__panel
+        p Tab Panel 3 / Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      #tab-docs8.tab__panel
+        p Tab Panel 4 / Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  
+  p.mt--line A tab label's #[code data-tab-id=""] refers to its respective panel's #[code id=""].
+
+  p.bg--green-lighten-3.p--16 #[b Note:] Codebase automatically sets the first tab to be in front (i.e. on display) when the page is loaded.
+      
+  .tabs.decorate
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-tabs-html") HTML
+      .tab__label(data-tab-id="tab-docs-tabs-pug") Pug
+
+    #tab-docs-tabs-html.tab__panel
+      pre.mt
+        code.
+          &lt;div class="tabs"&gt;
+
+            &lt;div class="tab__label" data-tab-id="tabs-example-1"&gt;Tab Label 1&lt;/div&gt;
+            &lt;div class="tab__label" data-tab-id="tabs-example-2"&gt;Tab Label 2&lt;/div&gt;
+            
+            &lt;div class="tab__panel" id="tabs-example-1"&gt;
+              &lt;p&gt;Tab Panel 1&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="tab__panel" id="tabs-example-2"&gt;
+              &lt;p&gt;Tab Panel 2&lt;/p&gt;
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+
+    #tab-docs-tabs-pug.tab__panel
+      pre.mt
+        code.
+          .tabs
+            .tab__label(data-tab-id="tabs-example-1") Tab Label 1
+            .tab__label(data-tab-id="tabs-example-2") Tab Label 2
+          
+            .tab__panel#tabs-example-1
+              p Tab Panel 1
+
+            .tab__panel#tabs-example-2
+              p Tab Panel 2
+
+  p Tab labels can either each be placed next to their respective content (as in the example code above), or they can be separate &ndash; e.g. all the labels grouped together first in the #[code tabs] container.
+
+  h3 X-Axis Scrolling on Tab Labels
+  
+  p If you group all the tab labels together as above, you have the option to wrap them in a container with class #[code tab__label-wrap]. This container prevents the tabs from wrapping to a newline (when there are more tabs than the viewport width allows on row of labels), and allows x-axis scrolling.
+    
+  p Example of tabs with x-axis scrolling (view this tab system on a narrow viewport):
+    
+  .tabs.decorate
+    .tab__label-wrap
+      .tab__label(data-tab-id="world") World News
+      .tab__label(data-tab-id="local") Local News
+      .tab__label(data-tab-id="science") Science
+      .tab__label(data-tab-id="health") Health
+      .tab__label(data-tab-id="technology") Technology
+      .tab__label(data-tab-id="sport") Sport
+
+    #world.tab__panel
+      ul.menubar.decorate
+        li
+          a(href="#/") World 1
+        li
+          a(href="#/") World 2
+        li
+          a(href="#/") World 3
+        li
+          a(href="#/") World 4
+        li
+          a(href="#/") World 5
+    #local.tab__panel
+      ul.menubar.decorate
+        li
+          a(href="#/") Local 1
+        li
+          a(href="#/") Local 2
+        li
+          a(href="#/") Local 3
+        li
+          a(href="#/") Local 4
+        li
+          a(href="#/") Local 5
+    #science.tab__panel
+      ul.menubar.decorate
+        li
+          a(href="#/") Science 1
+        li
+          a(href="#/") Science 2
+        li
+          a(href="#/") Science 3
+        li
+          a(href="#/") Science 4
+        li
+          a(href="#/") Science 5
+    #health.tab__panel
+      ul.menubar.decorate
+        li
+          a(href="#/") Health 1
+        li
+          a(href="#/") Health 2
+        li
+          a(href="#/") Health 3
+        li
+          a(href="#/") Health 4
+        li
+          a(href="#/") Health 5
+    #technology.tab__panel
+      ul.menubar.decorate
+        li
+          a(href="#/") Technology 1
+        li
+          a(href="#/") Technology 2
+        li
+          a(href="#/") Technology 3
+        li
+          a(href="#/") Technology 4
+        li
+          a(href="#/") Technology 5
+    #sport.tab__panel
+      ul.menubar.decorate
+        li
+          a(href="#/") Sport 1
+        li
+          a(href="#/") Sport 2
+        li
+          a(href="#/") Sport 3
+        li
+          a(href="#/") Sport 4
+        li
+          a(href="#/") Sport 5
+
+  h3.mt--line Tab Label Alignment
+  
+  p Tab labels can be aligned left, right or center. Simply add one of these modifier classes to the tab label container.
+
+  p #[code .tab__label-wrap--left]
+    
+  .tabs.decorate
+    .tab__label-wrap--left
+      .tab__label(data-tab-id="tab-docs-left1") First
+      .tab__label(data-tab-id="tab-docs-left2") Second
+      .tab__label(data-tab-id="tab-docs-left3") Third
+
+    #tab-docs-left1.tab__panel
+      | First tab content
+    #tab-docs-left2.tab__panel
+      | Second tab content
+    #tab-docs-left3.tab__panel
+      | Third tab content
+    
+  p.mt--line #[code .tab__label-wrap--center]
+
+  .tabs.decorate
+    .tab__label-wrap--center
+      .tab__label(data-tab-id="tab-docs-center1") First
+      .tab__label(data-tab-id="tab-docs-center2") Second
+      .tab__label(data-tab-id="tab-docs-center3") Third
+
+    #tab-docs-center1.tab__panel
+      | First tab content
+    #tab-docs-center2.tab__panel
+      | Second tab content
+    #tab-docs-center3.tab__panel
+      | Third tab content
+    
+  p.mt--line #[code .tab__label-wrap--right]
+
+  .tabs.decorate
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-right1") First
+      .tab__label(data-tab-id="tab-docs-right2") Second
+      .tab__label(data-tab-id="tab-docs-right3") Third
+
+    #tab-docs-right1.tab__panel
+      | First tab content
+    #tab-docs-right2.tab__panel
+      | Second tab content
+    #tab-docs-right3.tab__panel
+      | Third tab content
+
+  h3.mt--line Tab system classes
+
+  table.table.table--rows.table--columns
+    thead
+      tr
+        th Class
+        th Notes
+        th Modifiers
+    tbody
+      tr
+        td #[code .tabs]
+        td.nowrap The tab system component block.
+        td
+      tr
+        td #[code .tab__label-wrap]
+        td (Optional:) container for tab label. Enables horizontal scrolling of tab labels if they occupy more horizontal space than the width of the viewport.
+        td.nowrap Position of tab labels: #[br] #[code .tab__label-wrap--left] #[br] #[code .tab__label-wrap--right] #[br] #[code .tab__label-wrap--center]
+      tr
+        td #[code .tab__label] #[br] #[code.nowrap data-content-id="{ID}"]
+        td The tab label element. #[br] #[code {ID}] = the ID of a tab label's respective card.
+        td
+      tr
+        td #[code .tab__panel]
+        td The tab panel element. (A unique ID is also required, of your choice – see #[code data-tab-id="{ID}"] above.)
+        td

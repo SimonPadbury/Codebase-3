@@ -1,19 +1,14 @@
 extends ../../docs-template-partials/_docs-article
 
 block prepend article
-  - var sectionId = "layout-invisibility"
-  - var sectionTitle = "Invisibility"
+  - var articleId = "layout-invisibility"
+  - var articleTitle = "Invisibility"
 
 block section
-  p.
-    A range of invisibility mixins have been built based on the Codebase media query breakpoint variables.
+  
+  p.lead A range of invisibility mixins and classes have been built based on the Codebase media query breakpoint variables.
 
-  p.
-    You can include these mixins directly in your project. Classes have also been built from each of these mixins.
-
-  p.text--center
-    span.fa.fa-times
-    |  = invisible
+  p.center #[i.fas.fa-times] = invisible (hidden) &nbsp; #[i.fas.fa-check] = visible
 
   style.
     .invisibility-example {
@@ -21,97 +16,49 @@ block section
     padding: 8px 12px;
     }
 
-  table.table.table--nowrap.deco
+  table.table.table--grid.table--centered-not-first
     thead
       tr
         th Mixin / Class
         th Example
-        th xs-down
-        th xs-sm
-        th sm-md
-        th md-lg
-        th lg-up
+        th sm
+        th md
+        th lg
     tbody
       tr.bt--thick
-        td #[code hide--xs-down]
-        td
-          .hide--xs-down.p--block.bg--green.text--white.invisibility-example Example
-        td.text--center #[i.fa.fa-times]
-        td
-        td
-        td
-        td
-      tr
         td #[code hide--sm-down]
         td
-          .hide--sm-down.p--block.bg--green.text--white.invisibility-example Example
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td
-        td
-        td
+          .hide--sm-down.p--block.bg--green.white.invisibility-example Example
+        td #[i.fas.fa-times]
+        td #[i.fas.fa-check]
+        td #[i.fas.fa-check]
       tr
         td #[code hide--md-down]
         td
-          .hide--md-down.p--block.bg--green.text--white.invisibility-example Example
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td
-        td
-      tr
-        td #[code hide--lg-down]
-        td
-          .hide--lg-down.p--block.bg--green.text--white.invisibility-example Example
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td
+          .hide--md-down.p--block.bg--green.white.invisibility-example Example
+        td #[i.fas.fa-times]
+        td #[i.fas.fa-times]
+        td #[i.fas.fa-check]
       tr.bt--thick
-        td #[code hide--xs-up]
-        td
-          .hide--xs-up.p--block.bg--green.text--white.invisibility-example Example
-        td
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-      tr
-        td #[code hide--sm-up]
-        td
-          .hide--sm-up.p--block.bg--green.text--white.invisibility-example Example
-        td
-        td
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
-      tr
         td #[code hide--md-up]
         td
-          .hide--md-up.p--block.bg--green.text--white.invisibility-example Example
-        td
-        td
-        td
-        td.text--center #[i.fa.fa-times]
-        td.text--center #[i.fa.fa-times]
+          .hide--md-up.p--block.bg--green.white.invisibility-example Example
+        td #[i.fas.fa-check]
+        td #[i.fas.fa-times]
+        td #[i.fas.fa-times]
       tr
         td #[code hide--lg-up]
         td
-          .hide--lg-up.p--block.bg--green.text--white.invisibility-example Example
-        td
-        td
-        td
-        td
-        td.text--center #[i.fa.fa-times]
+          .hide--lg-up.p--block.bg--green.white.invisibility-example Example
+        td #[i.fas.fa-check]
+        td #[i.fas.fa-check]
+        td #[i.fas.fa-times]
 
-  h3 Notes
+  h3.Notes
   
   ol
-    li.
-      #[b There are no Codebase] #[code .show--] #[b classes]. Therefore, if you need something to be visible only at some viewport widths and not others, then what you need to do is use the appropriate #[code .hide--*] class so that it will not be visible at viewport widths where you don't want it to be.
-    li.
-      If you need something to be visible only at a mid-range viewport width, then use two #[code .hide--*] classes: one to hide the thing at lower viewport widths and one to hide it at higher viewport widths. E.g.
+    li #[b There are no Codebase] #[code .show--] #[b classes]. Therefore, if you need something to be visible only at some viewport widths and not others, then what you need to do is use the appropriate #[code .hide--*] class so that it will not be visible at viewport widths where you don't want it to be.
+    li If you need something to be visible only at a mid-range viewport width, then use two #[code .hide--*] classes: one to hide the thing at lower viewport widths and one to hide it at higher viewport widths. E.g.
   
   pre
     code.
@@ -119,6 +66,5 @@ block section
 
       &lt;div class="hide--md-down hide--lg-up"&gt; ... &lt;/div&gt;
 
-  p.text--initial-icon.b--thin.b--green-lighten-1.b--rounded.p--16.pl--80.bg--green-lighten-3
-    i.fa.fa-info-circle.text--green-darken-1
-    | For an example of where this has been done, see the #[b viewport indicator] (fixed to the bottom-right corner) in these docs.
+  p.bg--green-lighten-3.p--16
+    | For an example of where this has been done, see the #[b viewport width indicator] (fixed to the bottom-right corner) in these docs.

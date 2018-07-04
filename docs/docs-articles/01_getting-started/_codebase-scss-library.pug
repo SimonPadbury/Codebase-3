@@ -1,0 +1,94 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "getting-started-codebase-scss-library"
+  - var articleTitle = "Using Codebase as a Sass (SCSS) Library"
+
+block section
+  p.lead Codebase is a highly versatile Sass (SCSS syntax) library, built using variables and mixins. You can import the Codebase SCSS master file directly into your project SCSS master file, and then all the Codebase variables and mixins will be available for you to use.
+  
+  pre
+    code.
+      @import "../../codebase/scss/codebase"
+  
+  .mb--line.bg--green-lighten-3.p--16 
+    p.mb--0 #[b Note:]
+    ul.mb--0
+      li.mb--0 All Codebase variables are prefixed #[code $cb-]
+      li All Codebase mixins are prefixed #[code cb-]
+
+  h3 Using Codebase Variables
+
+  p All Codebase variables have the #[code !default] flag. To override any of these, #[b you must #[span.heavy first] declare your own overrides using the same Codebase variable names] (but with your preferred values), and then import Codebase. 
+  
+  pre
+    code.
+      // (1.) Override Codebase `!default` variables before importing Codebase
+
+      $cb-color--blue: #000099;
+      
+      // (2.) Import Codebase
+      
+      @import "../../codebase/scss/codebase";
+
+      // (3.) Begin your project styles after importing Codebase
+    
+      body {
+        // This will now get `your` $cb-color--blue, not the !default in Codebase
+        background: $cb-color--blue;
+      }
+
+  p Your SCSS pre-processor will preferentially use your values instead of the Codebase defaults. You don't need to modify any Codebase SCSS file directly.
+
+  p #[b Tip:] You can copy the entire Codebase default variables file (#[a(href="codebase/scss/00_default-variables/_default-variables.scss") codebase/scss/00_default-variables/_default-variables.scss]) into your theme, then remove all the #[code !default] flags, and set your chosen variable values there.
+
+  h3 Using Codebase Mixins
+
+  .mb--line.bg--green-lighten-3.p--16
+    p.mb--8 In Codebase most* of the styles have been built first as mixins. And then these have been included in the Codebase CSS classes.
+    p.mb--0.small (* i.e. all styles that use CSS classes and some basic styles that apply to HTML tags).
+
+  p At the bottom of the Codebase variables file, you will find a set of #[code $cb-include-css-*] variables. 
+
+  pre
+    code.
+      // Basics
+      $cb-include-css--typography:             true !default;
+      $cb-include-css--floats-clearfix:        true !default;
+      $cb-include-css--buttons:                true !default;
+      $cb-include-css--badges:                 true !default;
+      $cb-include-css--labels:                 true !default;
+      $cb-include-css--combos:                 true !default;
+      $cb-include-css--forms:                  true !default;
+
+      // Layout
+      $cb-include-css--container:              true !default;
+      $cb-include-css--flexbox-system:         true !default;
+      $cb-include-css--invisibility:           true !default;
+
+      // Components
+      $cb-include-css--cards:                  true !default;
+      $cb-include-css--dropdowns:              true !default;
+      $cb-include-css--menus-and-menubars:     true !default;
+      $cb-include-css--off-canvas:             true !default;
+      $cb-include-css--pagination:             true !default;
+      $cb-include-css--popovers:               true !default;
+      $cb-include-css--showhide:               true !default;
+      $cb-include-css--tables:                 true !default;
+      $cb-include-css--tabs:                   true !default;
+
+      // Decoration
+      $cb-include-css--decoration-utilities:   true !default;
+
+  p You can:
+
+  ul
+    li Choose whether or not to include these classes by toggling the following `true/false` variables (i.e. by overriding them in your own variables). Toggle `false` whatever you don't need, for generating smaller CSS. Never use popovers (modals or lightboxes)? Then don't include them.
+    
+    li Include these mixins in your own classes (with your own choice of class names). This may be useful if you are combining various frameworks and you need to have components etc. differently namespaced to avoid clashes.
+
+    li Include Codebase mixins at different media query breakpoints.
+
+    li Switch all the Codebase CSS classes off, and then use only your own classes.
+
+  p While the Codebase docs focus on demonstrating the Codebase CSS classes and JS functionality, Sass/SCSS users will still find the docs useful because #[b the mixin names and class names are essentially the same]. And the docs navigation organization follows the SCSS folder/file organization, so familiarization with the docs can help you quickly find your way around the SCSS.

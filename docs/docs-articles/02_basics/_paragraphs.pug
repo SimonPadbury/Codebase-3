@@ -1,0 +1,38 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "basics-paragraphs"
+  - var articleTitle = "Paragraphs"
+
+block section
+  
+  p A simple paragraph:
+
+  +paragraph(1)
+
+  p As with headings, paragraphs have zero top margin. And a bottom margin equal to the line height of the default (paragraph) text size. 
+
+  p See also #[a(href="#basics-big-typography") big typography].
+  
+  h3 Paragraph text utilities
+
+  p #[code p.lead]
+  
+  +paragraph(1, "lead")
+
+  p #[code p.dropcap]
+
+  +paragraph(1, "dropcap")
+
+  p #[code p.lead.dropcap]
+
+  +paragraph(1, "lead dropcap")
+
+  .bg--green-lighten-3.p--16
+    p #[b Tip:] To adjust the dropcap vertical position for different typefaces, you can control by adding #[code transform: translateY(Xrem)] &ndash; where X is the value that your chosen typeface requires. Example:
+
+    pre.mb--0
+      code.
+        .lead.dropcap::first-letter {
+          transform: translateY(0.4rem);
+        }

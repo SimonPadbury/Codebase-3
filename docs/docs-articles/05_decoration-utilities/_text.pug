@@ -1,0 +1,67 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "decoration-utilities-text"
+  - var articleTitle = "Text"
+
+block section
+
+  p Codebase has several simple text utility classes. These are all demonstrated in appropriate places throughout #[a(href="basics.html") Codebase Basics]. But here is the complete listing:
+
+  p #[code .thin] 
+    span.thin Thin text (default 100)
+    
+  p #[code .bold] 
+    span.bold Bold text (default 700)
+
+  p #[code .bolder] 
+    span.bolder Bolder text (default 900)
+
+  p #[code .italics] 
+    span.italics Italics text
+
+  p #[code .normal] 
+    span.bold.italics Returns text to normal weight and removes italicization. #[span.normal Perhaps you may find this useful] in some circumstances.
+      
+  p #[code .caps] 
+    span.caps All-capitals text
+
+  p #[code .muted] 
+    span.muted Muted text is semi-transparent (opacity: 0.5)
+  
+  p #[code .big]
+    |  Big text for making #[span.big something] stand out. (This class works for both inline and block elements.)
+  
+  p #[code .small] 
+    |  Small text for #[span.small small print]. (This class works for both inline and block elements.)
+  
+  .h1 #[code .h1] Heading level 1
+  .h2 #[code .h2] Heading level 2
+  .h3 #[code .h3] Heading level 3
+  .h4 #[code .h4] Heading level 4
+  .h5 #[code .h5] Heading level 5
+  .h6 #[code .h6] Heading level 6
+  
+  p #[code .lead]
+  
+  +paragraph(1, "lead")
+
+  p #[code .dropcap]
+
+  +paragraph(1, "dropcap")
+  
+  p #[code .left]
+
+  +paragraph(1, "left")
+
+  p #[code .center]
+
+  +paragraph(1, "center")
+
+  p #[code .right]
+
+  +paragraph(1, "right")
+  
+  p #[code .columns]
+
+  +paragraph(1, "columns")

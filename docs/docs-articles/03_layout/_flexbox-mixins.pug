@@ -1,37 +1,45 @@
 extends ../../docs-template-partials/_docs-article
 
 block prepend article
-  - var sectionId = "layout-flexbox-mixins"
-  - var sectionTitle = "Flexbox Mixins"
+  - var articleId = "layout-flexbox-mixins"
+  - var articleTitle = "Using Flexbox Mixins for Semantic Layouts"
 
 block section
-  p Using Codebase flexbox and flexitem mixins in an example semantic* layout system:
+
+  p.lead Most Codebase flexbox layout mixins are used for generating the Codebase flexbox layout clases. As such, they are not suitable for Sass (SCSS) users to include in their code. But Codebase also has a semantic flexbox layout system for Sass users.
+
+  p See:
+
+  ol.brackets
+    li #[a(href="codebase/scss/02_layout/_shared-flexbox-base.scss") codebase/scss/02_layout/_shared-flexbox-base.scss].
+    li #[a(href="codebase/scss/02_layout/_semantic-flexbox-system.scss") codebase/scss/02_layout/_semantic-flexbox-system.scss].
+
+  p Use these semantic flexbox mixins as in the following example:
 
   .your-flexbox-container
-    .your-article-flexitem
-      .bg--green-darken-1.mb--4.p--4.text--white Article
-      .your-nested-flexbox-container
-        .your-nested-flexitem
-          .bg--green-darken-1.mb--4.p--4.text--white Nested
-        .your-nested-flexitem
-          .bg--green-darken-1.mb--4.p--4.text--white Nested
-        .your-nested-flexitem
-          .bg--green-darken-1.mb--4.p--4.text--white Nested
-    .your-sidebar-flexitem
-      .bg--green-darken-1.mb--4.p--4.text--white Aside
+    .your-article-flex-item
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Article
+        .your-nested-flexbox-container
+          .your-nested-flex-item
+            .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Nested
+          .your-nested-flex-item
+            .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Nested
+          .your-nested-flex-item
+            .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Nested
+    .your-sidebar-flex-item
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Aside
   .your-flexbox-container
-    .your-centered-flexitem
-      .bg--green-darken-1.mb--4.p--4.text--white Centered
+    .your-centered-flex-item
+      .b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Centered
 
-  p *Classes can be named as whatever is suitable in your design.
   
-  .tabs.deco.mt--24
+  .tabs.decorate.mt--24
     .tab__label-wrap--right
       .tab__label(data-tab-id="tab-docs-flexbox-semantic-html") HTML
-      .tab__label(data-tab-id="tab-docs-flexbox-semantic-sass") Sass
+      .tab__label(data-tab-id="tab-docs-flexbox-semantic-scss") SCSS
 
-    #tab-docs-flexbox-semantic-html.tab__card
-      pre.mt--zero
+    #tab-docs-flexbox-semantic-html.tab__panel
+      pre.mt
         code.
           &lt;div class="your-flexbox-container"&gt;
             &lt;div class="your-article-column"&gt;
@@ -61,101 +69,114 @@ block section
             &lt;/div&gt;
           &lt;/div&gt;
 
-    #tab-docs-flexbox-semantic-sass.tab__card
-      pre.mt--zero
+    #tab-docs-flexbox-semantic-scss.tab__panel
+      pre.mt
         code.
-          .your-flexbox-container
-            +flexbox
-            +flexbox--gutter
-            +flexbox--nested
+          .your-flexbox-container {
+            @include flexbox;
+            @include flexbox--gap;
+          }
 
-          .your-article-flexitem
-            +flexitem
-            +break--min($mq--sm)
-              +flexitem--span(9)
-            +break--min($mq--lg)
-              +flexitem--order(2)
+          .your-article-flex-item {
+            @include break--min($cb-mq--md) {
+              @include flex-item--span(9);
+            }
+            @include break--min($cb-mq--lg) {
+              @include flex-item--order(2);
+            }
+          }
 
-          .your-sidebar-flexitem
-            +flexitem
-            +break--min($mq--sm)
-              +flexitem--span(3)
-            +break--min($mq--lg)
-              +flexitem--order(1)
+          .your-sidebar-flex-item {
+            @include break--min($cb-mq--md) {
+              @include flex-item--span(3);
+            }
+            @include break--min($cb-mq--lg) {
+              @include flex-item--order(1);
+            }
+          }
 
-          .your-nested-flexbox-container
-            +flexbox
-            +flexbox--gutter
-            +flexbox--nested
+          .your-nested-flexbox-container {
+            @include flexbox;
+            @include flexbox--gap;
+            
+          }
 
-          .your-nested-flexitem
-            +flexitem
-            +break--min($mq--sm)
-              +flexitem--span(4)
+          .your-nested-flex-item {
+            @include break--min($cb-mq--md) {
+              @include flex-item--span(4);
+            }
+          }
 
-          .your-centered-flexitem
-            +flexitem
-            +flexitem--centered(7)
+          .your-centered-flex-item {
+            @include flex-item--centered(7);
+          }
 
 
   p.
-    The Codebase semantic flexbox and flexitem mixins are named similar to the Codebase classic flexbox and flexitem classes. However, note that there are no breakpoints built into these mixins &ndash; you can apply them in your Sass as in the example above.
+    The Codebase semantic flexbox and flex-item mixins are named similar to the Codebase classic flexbox and flex-item classes. However, note that there are no breakpoints built into these mixins &ndash; you can apply them in your SCSS as in the example above.
 
-  table.table.deco
+  table.table.table--rows.table--columns
     thead
       tr
         th(style="width: 200px") Mixin
         th Explanation
     tbody
       tr
+        td(colspan="2").bg--gray-lighten-3
+          b Flexbox mixins
+      tr
         td
-          code +flexbox
+          code @include flexbox
         td.
-          The container mixin. Sets the max width (from variable  #[code $flexbox--max-width]), does centering by auto margin right and left. If you have more columns (or column width) than the flexbox container width, wrapping is handled by #[code flex-wrap: wrap;]
+          The container mixin. Sets the max width (from variable  #[code $cb-flexbox--max-width]), does centering by auto margin right and left. If you have more columns (or column width) than the flexbox container width, wrapping is handled by #[code flex-wrap: wrap;]
           #[br]
           #[br]
-          If a flexbox container doesn't have the flexbox mixin included, then a flexbox system will expand to whatever the width of the container is, without maxing out at #[code $flexbox--max-width]. E.g. it could expand to the #[code &lt;body&gt;] width.
+          If a flexbox container doesn't have the flexbox mixin included, then a flexbox system will expand to whatever the width of the container is, without maxing out at #[code $cb-flexbox--max-width]. E.g. it could expand to the #[code &lt;body&gt;] width.
       tr
         td
-          code +flexbox--container
-        td
-          The #[code +flexbox--container] block modifier constrains the flexbox to #[code $flexbox--max-width] and, on wider viewports, centers the flexbox by auto-margins right and left.
-      tr
-        td
-          code +flexbox--gutter
+          code.nowrap @include flexbox--grow-equal
         td.
-          Gives right and left padding to all immediate child block elements (flexitems).
+          Flexbox modifier mixin &ndash; makes (immediate child) flex-items to grow to equal width.
       tr
         td
-          code +flexbox--nested
+          code.nowrap @include flexbox--grow-auto
         td.
-          Gives negative right and left margin to the flexbox container equal to the gutter width, so that a nested flexbox is flush right and left inside their containing column.
+          Flexbox modifier mixin &ndash; makes (immediate child) flex-items to grow to equal width.
       tr
         td
-          code +flexbox--center
-        td
-          Applied to the flexbox container, this will horizontally center any number of flexitems.
-      tr
-        td
-          code +flexbox--middle
-        td
-          Applied to the flexbox container, this will vertically center any number of flexitems.
-      tr
-        td
-          code +flexitem
-        td The flexitem base mixin.
-      tr
-        td
-          code +flexitem--span(X)
+          code.nowrap @include flexbox--container
         td.
-          Column spanning using % widths (#[b note:] not using flex-grow), as calculated out of #[code $max-flexitems] (default is 12).
+          Flexbox modifier mixin &ndash; constrains the flexbox to #[code $cb-flexbox--max-width] and, on wider viewports, centers the flexbox by auto-margins right and left.
       tr
         td
-          code.text--nowrap +flexitem--offset(X)
-        td
-          Flexitem offsetting (at different breakpoints), as calculated out of max #[code $max-flexitems] (default is 12).
+          code @include flexbox--gap
+        td.
+          Gives right and left padding to all immediate child block elements (flex-items).
       tr
         td
-          code +flexitem--order(X)
+          code @include flexbox--center
+        td
+          Applied to the flexbox container, this will horizontally center any number of flex-items.
+      tr
+        td
+          code @include flexbox--middle
+        td.
+          Applied to the flexbox container, this will vertically center any number of flex-items.
+      tr
+        tr
+          td(colspan="2").bg--gray-lighten-3
+            b Flex-item mixins
+        td
+          code @include flex-item--span(X)
+        td.
+          Column spanning using % widths (#[b note:] not using flex-grow), as calculated out of #[code $cb-max-flex-items] (default is 12).
+      tr
+        td
+          code.nowrap @include flex-item--offset(X)
+        td.
+          Flexitem offsetting (at different breakpoints), as calculated out of max #[code $cb-max-flex-items] (default is 12).
+      tr
+        td
+          code @include flex-item--order(X)
         td.
           Column (re-)ordering.

@@ -1,0 +1,38 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "basics-images"
+  - var articleTitle = "Images"
+
+block section
+  
+  +image-placeholder-light(100, 100)
+  
+  p.mt--line In Codebase, images are block-level elements with #[code max-width: 100%] so that large images are &quot;responsive&quot;, shrinking to fit within containers (or windows) narrower than the actual image width.
+
+  p Further styling can be added using #[a(href="decoration-utilities.html") decoration utility classes] (e.g. borders).
+    
+  p Examples:
+
+  +image-placeholder-dark(1000, 200, "mb--line b--thick b--white bs")
+  
+  .flexbox.flexbox--gap
+    .flex-item--span-4
+
+      +image-placeholder-light(144, 144, "mx--auto b--circle")
+
+      p.center.mt--line Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+
+    .flex-item--span-4
+
+      +image-placeholder-light(144, 144, "mx--auto b--circle")
+
+      p.center.mt--line Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+
+    .flex-item--span-4
+
+      +image-placeholder-light(144, 144, "mx--auto b--circle")
+
+      p.center.mt--line Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in.
+
+  p These placeholder images have been built using the Codebase #[a(href="getting-started.html#gen-images") Pug-HTML image generator mixins].

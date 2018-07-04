@@ -1,0 +1,54 @@
+extends ../../docs-template-partials/_docs-article
+
+block prepend article
+  - var articleId = "layout-flexbox-simple"
+  - var articleTitle = "Simple Flexbox"
+
+block section
+  p If you only use the classes #[code .flexbox], you get a flexbox with (immediate-child) flex-items.
+  
+  .flexbox
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 One
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Two
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Three
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Four
+
+  p.mt--line If you add the flexbox modifier class #[code .flexbox--grow-equal], you get equal-width flex-items.
+  
+  .flexbox.flexbox--grow-equal
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 One
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Two
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Three
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Four
+  
+  .tabs.decorate.mt--24
+    .tab__label-wrap--right
+      .tab__label(data-tab-id="tab-docs-flexbox-simple-html") HTML
+      .tab__label(data-tab-id="tab-docs-flexbox-simple-pug") Pug
+
+    #tab-docs-flexbox-simple-html.tab__panel
+      pre.mt
+        code.
+          &lt;div class="flexbox flexbox--grow-equal"&gt;
+            &lt;div&gt;One&lt;/div&gt;
+            &lt;div&gt;Two&lt;/div&gt;
+            &lt;div&gt;Three&lt;/div&gt;
+            &lt;div&gt;Four&lt;/div&gt;
+          &lt;/div&gt;
+
+    #tab-docs-flexbox-simple-pug.tab__panel
+      pre.mt
+        code.
+          .flexbox.flexbox--grow-equal
+            div One
+            div Two
+            div Three
+            div Four
+
+  p.mt--line If you add the flexbox modifier class #[code .flexbox--grow-auto], you get flex-items with widths adjusted according to their content.
+
+  .flexbox.flexbox--grow-auto
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 This is the first flex-item
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Another flex-item
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 Third
+    div.b--thin.b--blue-lighten-2.b--rounded.p--4.bg--blue-lighten-3 This is the last flex-item in this flexbox
