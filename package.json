@@ -1,8 +1,8 @@
 {
-  "name": "simon-gps",
+  "name": "codebase-gps",
   "version": "1.0.0",
   "author": "Simon Padbury",
-  "description": "GPS = Gulp Project Starter",
+  "description": "SWG for the Codebase CSS/JS library",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
