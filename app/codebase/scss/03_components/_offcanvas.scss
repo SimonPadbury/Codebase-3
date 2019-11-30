@@ -1,0 +1,138 @@
+// COMPONENTS MIXINS: OFFCANVAS SIDE PANELS
+// ========================================
+
+// Offcanvas Control (e.g. navicon)
+
+@mixin offcanvas-ctrl {
+  display: inline-block;
+  margin-top: 0;
+  z-index: $z-index-offcanvas;
+
+  &-left {
+    position: absolute;
+    left: 0;
+  }
+
+  &-right {
+    position: absolute;
+    right: 0;
+  }
+
+  &-fixed {
+    position: fixed !important;
+    // overrides the absolutes above
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Offcanvas Close
+
+@mixin offcanvas-close {
+  display: block;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-left {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  &-right {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+  }
+}
+
+// Offcanvas Content (sidebar or panel)
+// The extra 10% in the offcanvas position 100% will hide any Codebase box-shadow on the offcanvas.
+
+@mixin offcanvas-content-right {
+  right: -110%;
+  &.is-active {
+    right: 0;
+  }
+}
+
+@mixin offcanvas-content-left {
+  left: -110%;
+  &.is-active {
+    left: 0;
+  }
+}
+
+@mixin offcanvas-content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  max-height: 100vh;
+  z-index: $z-index-offcanvas;
+  overflow: auto;
+  transition: $offcanvas-transition;
+}
+
+@mixin offcanvas-content-override {
+  position: static;
+  top: auto;
+  bottom: auto;
+  right: 0 !important;
+  left: 0 !important;
+  height: auto;
+  max-height: auto;
+  z-index: 0;
+  overflow: inherit;
+  transition: none;
+}
+
+// CLASS-BUILDER: Offcanvas
+// =========================
+
+@mixin components-offcanvas {
+  // Offcanvas Control
+  .offcanvas-ctrl {
+    @include offcanvas-ctrl;
+  }
+
+  // Offcanvas Content
+  .offcanvas-content {
+    max-width: 100%;
+
+    @include offcanvas-content;
+
+    &.offcanvas-content-right {
+      @include offcanvas-content-right;
+    }
+    &.offcanvas-content-left {
+      @include offcanvas-content-left;
+    }
+
+    &-sm {
+      @include break-min($mq-md) {
+        @include offcanvas-content-override;
+      }
+    }
+    &-md {
+      @include break-min($mq-lg) {
+        @include offcanvas-content-override;
+      }
+    }
+    // &-lg {} (operates all viewport widths; therefore is unrequired)
+  }
+
+  // Offcanvas Close
+
+  .offcanvas-close {
+    @include offcanvas-close;
+  }
+}
+
+@if $include-css-offcanvas == true {
+  @include components-offcanvas;
+}

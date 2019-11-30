@@ -1,0 +1,59 @@
+// UTILITIES: MARGINS
+// ==================
+
+@mixin margin-utilities {
+  @each $key, $value in $spacing {
+
+    // All
+    .m-#{$key} {
+      margin: $value;
+    }
+
+    // Top
+    .mt-#{$key} {
+      margin-top: $value;
+    }
+
+    // Right
+    .mr-#{$key} {
+      margin-right: $value;
+    }
+
+    // Bottom
+    .mb-#{$key} {
+      margin-bottom: $value;
+    }
+
+    // Left
+    .ml-#{$key} {
+      margin-left: $value;
+    }
+
+    // Vertical (Top and Bottom)
+    .my-#{$key} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+
+    // Horizontal (Right and Left)
+    .mx-#{$key} {
+      margin-right: $value;
+      margin-left: $value;
+    }
+  }
+
+  // Horizontal Centering by `margin: auto`
+
+  .mx-auto {
+    display: block !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+// INCLUDE CLASSES: MARGINS
+// ========================
+
+@if $include-css-utilities == true {
+  @include margin-utilities;
+}

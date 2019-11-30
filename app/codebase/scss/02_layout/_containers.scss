@@ -1,0 +1,32 @@
+// LAYOUT MIXINS: CONTAINER
+// ========================
+
+@mixin layout-container {
+  max-width: $container-max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Class builder
+
+@mixin container {
+  .container {
+    @include layout-container;
+    &-xl {
+      max-width: $container-xl-width;
+    }
+    &-lg {
+      max-width: $container-lg-width;
+    }
+    &-md {
+      max-width: $container-md-width;
+    }
+    &-sm {
+      max-width: $container-sm-width;
+    }
+  }
+}
+
+@if $include-css-container == true {
+  @include container;
+}

@@ -1,0 +1,126 @@
+// COMPONENTS MIXINS: CSS ICONS
+// ============================
+
+@mixin icon-caret-right {
+  &:after {
+      position: relative;
+      display: inline-block;
+      content: '';
+      margin-left: 0.3em;
+      margin-bottom: 0.1em;
+      width: 0;
+      height: 0;
+      border-left: 0.3em solid;
+      border-top: 0.3em solid transparent;
+      border-bottom: 0.3em solid transparent;
+  }
+  [dir="rtl"] & {
+      &:after {
+          display: none;
+      }
+      &:before {
+          position: relative;
+          display: inline-block;
+          content: '';
+          margin-left: 0.3em;
+          margin-bottom: 0.1em;
+          width: 0;
+          height: 0;
+          border-left: 0.3em solid;
+          border-top: 0.3em solid transparent;
+          border-bottom: 0.3em solid transparent;
+      }
+  }
+}
+
+@mixin icon-caret-down {
+  &:after {
+      position: relative;
+      display: inline-block;
+      content: '';
+      bottom: 0.4em;
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      width: 0;
+      height: 0;
+      border-left: 0.3em solid transparent;
+      border-right: 0.3em solid transparent;
+      border-top: 0.3em solid;
+  }
+  [dir="rtl"] & {
+      &:after {
+          margin-left: 0;
+          margin-right: 0.25em;
+      }
+  }
+}
+
+@mixin icon-caret-left {
+  &:before {
+      position: relative;
+      display: inline-block;
+      content: '';
+      margin-right: 0.3em;
+      margin-bottom: 0.1em;
+      width: 0;
+      height: 0;
+      border-right: 0.3em solid;
+      border-top: 0.3em solid transparent;
+      border-bottom: 0.3em solid transparent;
+  }
+  [dir="rtl"] & {
+      &:before {
+          display: none;
+      }
+      &:after {
+          position: relative;
+          display: inline-block;
+          content: "";
+          margin-right: 0.3em;
+          margin-bottom: 0.1em;
+          width: 0;
+          height: 0;
+          border-right: 0.4em solid;
+          border-top: 0.4em solid transparent;
+          border-bottom: 0.4em solid transparent;
+      }
+  }
+}
+
+@mixin icon-caret-up {
+  &:after {
+      position: relative;
+      display: inline-block;
+      content: '';
+      bottom: 0.4em;
+      margin-left: 0.25em;
+      margin-right: 0.25em;
+      width: 0;
+      height: 0;
+      border-left: 0.3em solid transparent;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0.3em solid;
+  }
+  [dir="rtl"] & {
+      &:after {
+          margin-left: 0;
+          margin-right: 0.25em;
+      }
+  }
+}
+
+.caret-right {
+  @include icon-caret-right;
+}
+
+.caret-down {
+  @include icon-caret-down;
+}
+
+.caret-left {
+  @include icon-caret-left;
+}
+
+.caret-up {
+  @include icon-caret-up;
+}

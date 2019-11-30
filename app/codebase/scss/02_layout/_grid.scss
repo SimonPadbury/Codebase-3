@@ -1,0 +1,145 @@
+// LAYOUT MIXINS: GRID
+// ===================
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin grid-gap {
+  &-gap {
+    grid-gap: $grid-gap-width;
+  }
+}
+
+@mixin grid-equalize {
+  &-equalize {
+    @for $i from 1 through $grid-max-cols {
+      &-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+      }
+    }
+  }
+}
+
+@mixin grid-setup {
+  @include grid-equalize;
+  &-md {
+    @include break-min($mq-md) {
+      @include grid-equalize;
+    }
+  }
+  &-lg {
+    @include break-min($mq-md) {
+      @include grid-equalize;
+    }
+  }
+}
+
+// Columns and rows
+
+@mixin columns {
+  @for $i from 1 through $grid-max-cols {
+    @if $i <= $grid-max-cols {
+      &-#{$i} {
+        $j: $i + 1;
+        @for $j from 1 through ($grid-max-cols + 1) {
+          @if $j > $i {
+            // Single column units
+            grid-column: $i;
+            // Spans
+            &-#{$j} {
+              grid-column: $i / span $j;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin rows {
+  @for $i from 1 through $grid-max-rows {
+    @if $i <= $grid-max-rows {
+      &-#{$i} {
+        $j: $i + 1;
+        @for $j from 1 through ($grid-max-rows + 1) {
+          @if $j > $i {
+            // Single row units
+            grid-row: $i;
+            // Spans
+            &-#{$j} {
+              grid-row: $i / span $j
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Justification and alignment
+
+@mixin justify {
+  &-left {
+    justify-self: start;
+    [dir="rtl"] & {
+      justify-self: end;
+    }
+  }
+  &-center {justify-self: center;}
+  &-right {
+    justify-self: end;
+    [dir="rtl"] & {
+      justify-self: start;
+    }
+  }
+  &-stretch {justify-self: stretch;}
+}
+
+@mixin align {
+  &-top {align-self: start;}
+  &-center {align-self: center;}
+  &-bottom {align-self: end;}
+  &-stretch {align-self: stretch;}
+}
+
+// CLASS BUILDER: GRID
+// ===================
+
+@mixin layout-grid-system {
+  .grid {
+    @include grid;
+    @include grid-gap;
+    @include grid-setup;
+  }
+  .col {@include columns;}
+  .row {@include rows;}
+  .justify {@include justify;}
+  .align {@include align;}
+
+  @include break-min($mq-md) {
+    .grid-md {
+      @include grid;
+      @include grid-setup;
+    }
+    .col-md {@include columns;}
+    .row-md {@include rows;}
+    .justify-md {@include justify;}
+    .align-md {@include align;}
+  }
+
+  @include break-min($mq-lg) {
+    .grid-lg {
+      @include grid;
+      @include grid-setup;
+    }
+    .col-lg {@include columns;}
+    .row-lg {@include rows;}
+    .justify-lg {@include justify;}
+    .align-lg {@include align;}
+  }
+}
+
+@if $include-css-grid == true {
+  @include layout-grid-system;
+}

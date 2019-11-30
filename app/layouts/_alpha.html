@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% if title %}{{title}} | {% endif %}{{siteName}}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="/css/codebase.css">
+    <link rel="stylesheet" href="/css/codebase-docs.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+
+<body class="codebase-docs">
+
+  {% include "header.njk" %}
+
+  <main class="container">
+    <div id="sidebar" class="offcanvas">
+      <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
+        <div class="offcanvas-close offcanvas-close-right hide-lg-up">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <p class="small hide-lg-up"><a id="theme-toggle">Theme</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase">GitHub</a></p>
+
+        {% include "docs-toc.njk" %}
+
+      </div>
+    </div>
+
+    <article id="mainbody">
+      <div class="mainbody-prose mt-9e px-2e">
+        <h1 class="big thin">{{ title }}</h1>

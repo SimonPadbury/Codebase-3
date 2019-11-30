@@ -1,0 +1,31 @@
+// BASICS MIXINS: BADGES
+// =====================
+
+@mixin badge {
+  position: relative;
+  display: inline-block;
+  top: -0.4em;
+  min-width: 1.2em;
+  height: 1.2em;
+  border-radius: 2em;
+  padding: 0.1em 0.2em 0.3em;
+  font-size: 0.86em;
+  line-height: 0.9em;
+  text-align: center;
+  white-space: nowrap;
+  @include t-color($color-text-ui, $color-text-ui-dark);
+  @include bg-color($color-default, $color-default-dark);
+}
+
+// CLASS BUILDER: BADGES
+// =====================
+
+@mixin basics-badges {
+  .badge {
+    @include badge;
+  }
+}
+
+@if $include-css-badges == true {
+  @include basics-badges;
+}

@@ -1,0 +1,127 @@
+// COMPONENTS MIXINS: CARDS
+// ========================
+
+@mixin card {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 24px;
+  overflow: hidden;
+  min-height: 1px;
+}
+
+@mixin card-vertical {
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin card-header {
+  width: 100%;
+}
+
+@mixin card-body {
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+
+@mixin card-section {
+  width: 100%;
+}
+
+@mixin card-footer {
+  order: 9999;
+  width: 100%;
+}
+
+@mixin card-image {
+  display: block;
+
+  & > img,
+  & > svg, {
+      display: block;
+  }
+}
+
+@mixin card-image-first {
+  order: 0;
+}
+
+@mixin card-image-last {
+  order: 1;
+}
+
+@mixin card-overlay {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  &-top {
+    align-items: flex-start;
+  }
+
+  &-middle {
+    align-items: center;
+  }
+
+  &-bottom {
+    align-items: flex-end;
+  }
+}
+
+// CLASS BUILDER: CARD
+// ===================
+
+@mixin component-card {
+  .card {
+    @include card;
+  }
+
+  .card-vertical {
+    @include card-vertical;
+  }
+
+  .card-header {
+    @include card-header;
+  }
+
+  .card-image {
+    @include card-image;
+
+    &-left,
+    &-top {
+      @include card-image-first;
+    }
+
+    &-right,
+    &-bottom {
+      @include card-image-last;
+    }
+  }
+
+  .card-body {
+    @include card-body;
+  }
+
+  .card-section {
+    @include card-section;
+  }
+
+  .card-overlay {
+    @include card-overlay;
+  }
+
+  .card-footer {
+    @include card-footer;
+  }
+}
+
+// End of class builder mixin
+
+@if $include-css-cards == true {
+  @include component-card;
+}

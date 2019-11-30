@@ -1,0 +1,360 @@
+// BASICS: DEFAULT VARIABLES
+// =========================
+
+// INDEX
+// ==================================================================
+
+// (1.) Colors
+// (2.) Decoration
+// (3.) Layout
+// (4.) Basics and Typography
+// (5.) Components
+// (6.) @includes for CSS Classes (Basics, Components, Layout, Decoration)
+
+// ==================================================================
+// (1.) Colors
+// ==================================================================
+
+// Color Swatches
+
+// Codebase uses the following color variables in its onboard decoration
+// (mixins and classes). You can override these, assigning your own colors.
+
+$color-primary:              #2680eb !default;
+$color-primary-dark:         lighten($color-primary, 5%) !default;
+
+$color-secondary:            #33cdf7 !default;
+$color-secondary-dark:       lighten($color-secondary, 5%) !default;
+
+$color-success:              #6bd130 !default;
+$color-success-dark:         lighten($color-success, 5%) !default;
+
+$color-warning:              #f7c736 !default;
+$color-warning-dark:         lighten($color-warning, 5%) !default;
+
+$color-danger:               #ff4f23 !default;
+$color-danger-dark:          lighten($color-danger, 5%) !default;
+
+// Grayscale
+
+// Background
+$color-theme-1:              #ffffff !default;
+$color-theme-1-dark:         #282828 !default;
+
+// Pale panel
+$color-theme-2:              #f5f5f5 !default;
+$color-theme-2-dark:         #3c3c3c !default;
+
+// Detail
+$color-theme-3:              #dddddd !default;
+$color-theme-3-dark:         #555555 !default;
+
+// Default UI
+$color-theme-4:              #989898 !default;
+$color-theme-4-dark:         #777777 !default;
+
+// Text
+$color-theme-5:              #555555 !default;
+$color-theme-5-dark:         #c0c0c0 !default;
+
+// Headings
+$color-theme-6:              #111111 !default;
+$color-theme-6-dark:         #dddddd !default;
+
+// Aliases
+
+$color-background-base:            $color-theme-1 !default;
+$color-background-base-dark:       $color-theme-1-dark !default;
+
+$color-background-alt:             $color-theme-2 !default;
+$color-background-alt-dark:        $color-theme-2-dark !default;
+
+$color-detail:                     $color-theme-3 !default;
+$color-detail-dark:                $color-theme-3-dark !default;
+
+$color-default:                    $color-theme-4 !default;
+$color-default-dark:               $color-theme-4-dark !default;
+
+$color-text-base:                  $color-theme-5 !default;
+$color-text-base-dark:             $color-theme-5-dark !default;
+
+$color-heading:                    $color-theme-6 !default;
+$color-heading-dark:               $color-theme-6-dark !default;
+
+$color-text-ui:                    $color-theme-1 !default;
+$color-text-ui-dark:               $color-theme-1 !default;
+
+$color-text-ui-hover:              darken($color-theme-1, 10%) !default;
+$color-text-ui-dark-hover:         darken($color-theme-1, 10%) !default;
+
+$color-anchor-inside-ui:           $color-theme-1 !default;
+$color-anchor-inside-ui-dark:      $color-theme-1 !default;
+
+$color-hyperlink:                  $color-primary !default; 
+$color-hyperlink-dark:             $color-primary-dark !default; 
+
+$color-hyperlink-hover:            darken($color-primary, 15%);
+$color-hyperlink-dark-hover:       darken($color-primary-dark, 15%);
+
+// The color of the selected text highlight
+$color-selection:                  rgba(50,205,50,0.5) !default;
+
+// See also: `01_basics/__color-mixins.scss`
+
+// UI Color Map (for utility classes)
+
+$color-ui: () !default;
+$color-ui: map-merge((
+  "default":     $color-default,
+  "primary":     $color-primary,
+  "secondary":   $color-secondary,
+  "success":     $color-success,
+  "warning":     $color-warning,
+  "danger":      $color-danger
+), $color-ui);
+
+// ==================================================================
+// (2.) Decoration
+// ==================================================================
+
+// Codebase component decoration is all controlled by the following 
+// set of decoration variables. These same variables are used 
+// throughout Codebase typography, components and utilities.
+
+// Element grid
+
+// Throughout the Codebase SCSS, a 0.5rem element grid has been used
+// wherever possible. In other words, line-heights, margins and 
+// paddings have been set at increments of 0.5rem.
+
+// In addition, a set of margin and padding decoration utility 
+// classes are generated with increments of 0.5rem.
+
+// In some situations, a half element-grid unit is useful too.
+
+// SCSS map for decoration margins and paddings
+
+$spacing: () !default;
+$spacing: map-merge((
+  "0":          0,
+  "He":         0.25rem,
+  "1e":         0.5rem,
+  "2e":         1rem,
+  "3e":         1.5rem,
+  "6e":         3rem,
+  "9e":         4.5rem,
+), $spacing);
+
+// Other Spacing
+
+$spacing-block: 0.5rem 1rem !default; // E.g. menu links (see also $table-padding)
+
+// Borders
+
+$spacing-thin:         0.0625rem !default; // 1px
+$spacing-thick:        0.25rem !default; // 4px
+$spacing-1e:           0.5rem !default; // 8px
+
+$border-thin:          $spacing-thin solid !default;
+$border-thick:         $spacing-thick solid !default;
+
+$border-radius:        0.5rem !default; // 8px
+$border-radius-pill:   10em !default;
+$border-radius-circle: 50% !default;
+
+$button-radius:        0.25rem !default; // 4px
+$code-radius:          0.25rem !default; // 4px
+$dropdown-radius:      0.25rem !default; // 4px
+$form-radius:          0.25rem !default; // 4px
+
+// ==================================================================
+// (3.) Layout
+// ==================================================================
+
+// Breakpoints
+
+$mq-md: 768px !default;
+$mq-lg: 1024px !default;
+
+// Layout containers
+$container-max-width: 1280px !default;
+$container-xl-width:  calc(1280px - 5vw) !default;
+$container-lg-width:  calc(1024px - 5vw) !default;
+$container-md-width:  calc(768px - 5vw) !default; // e.g. long read articles
+$container-sm-width:  calc(580px - 5vw) !default; // e.g. small modals
+
+// Simple Flexbox system
+$flexbox-gap-width: 1.5rem !default; // same as for default line height, and same as for `margin-bottom` on headings, paragraphs and lists.
+
+// For flexbox, half of the gap (i.e. gutter) width is used as margin
+// on all four sides of grid items – and as a negative margin on all 
+// four sides of the flexbox wrapper itself.
+
+// CSS Grid System
+$grid-max-cols: 4 !default;
+$grid-max-rows: 4 !default;
+$grid-gap-width: 1.5rem !default; // same as for default line height, and same as for `margin-bottom` on headings, paragraphs and lists.
+
+// ==================================================================
+// (4.) Basics and Typography
+// ==================================================================
+
+$text-base-font-family: 
+  "SF Pro Text", 
+  -apple-system, 
+  BlinkMacSystemFont, 
+  "Segoe UI", 
+  "Roboto", 
+  "Oxygen-Sans", 
+  "Ubuntu", 
+  "Cantarell", 
+  sans-serif !default;
+
+$text-code-font-family:
+  SFMono-Regular,
+  Menlo,
+  Consolas,
+  Lucida Console,
+  Courier,
+  monospace !default;
+
+$text-base-font-size:              100% !default; // sets 1rem in the <html> tag
+$text-base-line-height:            1.5 !default;
+
+$text-bolder-font-weight:          900 !default;
+$text-bold-font-weight:            700 !default;
+$text-base-font-weight:            400 !default;
+$text-thin-font-weight:            200 !default;
+
+$text-big-font-size:               125% !default;
+$text-small-font-size:             85% !default;
+
+// Headings
+$headings-mq-alt:                  $mq-md !default;
+$headings-font-weight:             normal !default;
+
+// Hyperlinks
+$text-decoration-hyperlink:        none !default;
+$text-hyperlink-hover:             true;
+$text-decoration-hyperlink-hover:  underline !default;
+
+// Blockquotes
+$blockquotes-font-size:            $text-base-font-size !default;
+$blockquotes-side-padding:         2.5vw !default;
+
+// Lists
+$text-li-spacing:                  1rem !default;
+
+// Code (and preformatted code blocks)
+$text-base-code-rounded-corners:   true !default;
+$text-base-code-background:        true !default;
+
+// Forms
+$form-input-rounded-corners:  true !default;
+$form-outline-thickness:      0.0625rem !default;
+$form-focus-glow: true        !default;
+$form-focus-glow-style:       0 0 0 0.1875rem rgba(153,153,255,0.75) !default;
+
+// ==================================================================
+// (5.) Components
+// ==================================================================
+
+// Buttons
+$button-state-transition:          all 0.15s ease-in-out;
+$btn-rounded-corners:              true !default;
+$btn-padding-sm:                   0.25rem 0.75rem !default;
+$btn-padding-default:              0.5rem 1rem !default;
+$btn-padding-lg:                   0.75rem 1.25rem !default;
+$btn-padding-icon:                 0.5rem;
+
+// Dropdowns (and dropups)
+$drop-panel-border:                true !default;
+$drop-panel-rounded-corners:       true !default;
+
+// Tables
+$table-padding:                    $spacing-block;
+
+// Offcanvas panels and sidebars
+$offcanvas-transition:             all 0.45s ease-in-out !default;
+
+// Megamenu
+$megamenu-navbar-submenu-transition:  all 0.3s ease-in-out !default;
+$megamenu-mq:                      $mq-md !default;
+$megamenu-icon-margin:             0.5rem !default;
+$megamenu-icon-width:              2.5rem !default; // 40px touch-point
+$megamenu-icon-height:             2.5rem !default; // 40px touch-point
+$megamenu-offcanvas-width:         25rem !default;
+$megamenu-offcanvas-slideout:      105% !default; // the extra 5% is to hide the box-shadow
+$megamenu-offcanvas-padding-top:   3.5rem !default; // space for the offcanvas close icon
+$megamenu-offcanvas-transition:    all 0.45s ease-in-out !default;
+$megamenu-offcanvas-submenu-time:  0.6s !default;
+
+// Box Shadows (used by megamenu)
+$box-shadow-light:                 0 0.0625rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+$box-shadow-dark:                  0 0.0625rem 0.5rem 0 rgba(0, 0, 0, 0.7);
+
+// Modals
+$modal-backdrop-box-shadow:        0 0 0 1000px rgba(0, 0, 0, 0.75) !default;
+$modal-transition-backdrop:        all 0.3s ease-in-out !default;
+$modal-transition-content:         all 0.3s ease-in-out !default;
+$modal-narrow-min:                 300px !default;
+$modal-narrow-mq:                  $mq-md !default;
+$modal-narrow-max:                 600px !default;
+
+
+// z-index of components
+$z-index-megamenu-navicon-fixed:   100 !default;
+$z-index-megamenu-fixed:           100 !default;
+$z-index-megamenu-offcanvas:       101 !default;
+$z-index-offcanvas:                100 !default;
+$z-index-tables:                   1 !default;
+$z-index-modals:                   102 !default;
+
+// ==================================================================
+// (6.) Include CSS Classes (Basics, Components, Layout, Decoration)
+// ==================================================================
+
+// Codebase has most of its styles built as mixins, which are then
+// included in classes. Therefore:
+
+// * You can choose whether or not to include these CSS classes by 
+//   toggling the following `true/false` variables (i.e. by overriding 
+//   them in your own variables). Toggle `false` whatever you don’t 
+//   need, for generating smaller CSS.
+
+// * You can include these mixins in your own classes (with your own 
+//   choice of class names). This may be useful if you are combining 
+//   various frameworks and you need to have components etc. 
+//   differently namespaced to avoid clashes.
+
+// * You can include Codebase mixins at different media query 
+//   breakpoints.
+
+// * You can switch all these CSS classes off, and use Codebase 
+//   entirely as a mixin library while generaring your own classes.
+
+// Basics
+$include-css-color-dark-theme:       true !default;
+$include-css-color-ui:               true !default;
+$include-css-big-typography:         true !default;
+
+// Layout
+$include-css-container:              true !default;
+$include-css-flexbox:                true !default;
+$include-css-grid:                   true !default;
+
+// Components
+$include-css-buttons:                true !default;
+$include-css-badges:                 true !default;
+$include-css-labels:                 true !default;
+$include-css-cards:                  true !default;
+$include-css-dropdowns:              true !default;
+$include-css-menus:                  true !default;
+$include-css-megamenu:               true !default;
+$include-css-offcanvas:              true !default;
+$include-css-modals:                 true !default;
+$include-css-showhide:               true !default;
+$include-css-tables:                 true !default;
+
+// Utilities
+$include-css-utilities:              true !default;

@@ -1,0 +1,73 @@
+// COMPONENTS MIXINS: TABLES
+// =========================
+
+@mixin table {
+  &-wrap {
+    margin-bottom: $text-base-line-height * 1rem;
+    overflow-x: auto;
+  }
+
+  // The table
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding-bottom: 1.5rem;
+
+  &:not(.table-borderless) {
+    th, td {
+      border: $spacing-thin solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border: $spacing-thin solid $color-detail-dark;
+        }
+      }    
+    }
+  }
+
+  th, td {
+    padding: $table-padding;
+    vertical-align: top;
+    text-align: left;
+  }
+  [dir="rtl"] & {
+    th, td {
+      text-align: right;
+    }
+  }
+
+  // Table variations
+
+  &-striped {
+    thead,
+    tbody tr:nth-child(even) {
+      background: rgba(255,255,255, 0.05);
+    }
+    tbody tr:nth-child(odd) {
+      background: rgba(0,0,0, 0.05);
+
+    }
+  }
+  &-compact {
+    th, td {
+      padding: 0.25rem;
+    }
+  }
+  &-nowrap {
+    white-space: nowrap !important;
+  }
+}
+
+// CLASS BUILDER: TABLES
+// =====================
+
+@mixin components-table {
+  .table {
+    @include table;
+  }
+}
+
+@if $include-css-tables == true {
+  @include components-table;
+}

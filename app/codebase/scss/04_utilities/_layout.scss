@@ -1,0 +1,70 @@
+// UTILITIES: LAYOUT
+// =================
+
+
+// Floats
+
+@mixin float-right {
+  display: block;
+  float: right;
+}
+
+@mixin float-left {
+  display: block;
+  float: left;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Block and inline-block
+
+@mixin block {
+  display: block;
+  width: 100%;
+}
+
+@mixin inline-block {
+  display: inline-block;
+  width: auto;
+}
+
+// CLASS BUILDER: LAYOUT UTILITIES
+// ===============================
+
+@mixin layout-utilities {
+  .float {
+    &-left {
+      @include float-left;
+    }
+
+    &-right {
+      @include float-right;
+    }
+  }
+
+  .clearfix {
+    @include clearfix;
+  }
+
+  .block {
+    @include block;
+  }
+
+  .inline-block {
+    @include inline-block;
+  }
+}
+
+@if $include-css-utilities == true {
+  @include layout-utilities;
+}
