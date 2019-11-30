@@ -145,7 +145,7 @@ Example:
 * Default LTR and RTL modes, with `-right` and `-left` overrides for positioning the offcanvas sidebar, megamenu navicon, and/or navbar submenus.
 * Use of icons (e.g. Font Awesome) for offcanvas navicon, offcanvas submenu reveal toggle, and offcanvas close.
 * Automatic built-in carets for submenu parents in navbar mode.
-* Full-width megamenu panel for complex submenus, capable of containing a multi-column [grid](/3-layout/grid.html), [menus](/5-components/menus.html), [cards](/5-components/cards.html), [form elements](/2-basics/form-elements.html) and [buttons](/5-components/buttons.html) – whatever you require.
+* Full-width megamenu panel for complex submenus, capable of containing a multi-column [grid](../3-layout/grid.html), [menus](../5-components/menus.html), [cards](../5-components/cards.html), [form elements](../2-basics/form-elements.html) and [buttons](../5-components/buttons.html) – whatever you require.
 * Offcanvas mode uses JS to add/remove CSS classes to show or hide the navbar content. Navbar mode uses CSS hover for revealing submenus. Parent hyperlinks are followable.
 * “Click outside to dismiss” offcanvas sidebar (in addition to the offcanvas close icon).
 * Window-resize also dismisses the megamenu in offcanvas mode (e.g. rotating a phone or small tablet between portrait and landscape orientation).
@@ -166,7 +166,7 @@ You can position the megamenu wherever you want in your HTML.
 
 ## Megamenu Mode Breakpoint
 
-The viewport width at which the Codebase megamenu switches between offcanvas mode and navbar mode is controlled by the media query variable `$megamenu-mq` in `codebase/01-basics/__default-variables.scss`. By default, this is set at the same lower breakpoint width as is used by the [flexbox](/3-layout/flexbox.html) and [grid](/3-layout/grid.html) layouts: `$mq-md` = 768px.
+The viewport width at which the Codebase megamenu switches between offcanvas mode and navbar mode is controlled by the media query variable `$megamenu-mq` in `codebase/01-basics/__default-variables.scss`. By default, this is set at the same lower breakpoint width as is used by the [flexbox](../3-layout/flexbox.html) and [grid](../3-layout/grid.html) layouts: `$mq-md` = 768px.
 
 ## Megamenu in Offcanvas Mode
 
@@ -220,7 +220,7 @@ In offcanvas mode, the revealed megamenu can be dismissed in any of the followin
 
 In navbar mode by default, parent menu items are positioned inline left-aligned (LTR mode) or right-aligned (RTL mode).
 
-Add some [flexbox](/3-layout/flexbox.html) classes to control the position of the megamenu parent links (effective in navbar mode only).
+Add some [flexbox](../3-layout/flexbox.html) classes to control the position of the megamenu parent links (effective in navbar mode only).
 
 <div class="mb-3e p-2e bg-theme-2">You do not have to control the flexbox breakpoint for these top level (parent) links – the <code class="b-thin">.megamenu</code> class takes care of that for you. (You will, however, need to control the breakpoints for any grid or flexbox layout that you add into any <a href="#adding-full-width-megamenu-panels">full-width megamenu panel</a> that you may set up.</div>
 
@@ -391,7 +391,7 @@ Example 7 (background color added to aid navbar visibility):
 
 ## Adding an Internal Container to the Megamenu Wrapper
 
-What if you want to introduce a [container](/3-layout/containers.html) _within_ the megamenu wrapper, so that you can constrain the width of the content (while the wrapper itself is goes to the full width of the viewport)?
+What if you want to introduce a [container](../3-layout/containers.html) _within_ the megamenu wrapper, so that you can constrain the width of the content (while the wrapper itself is goes to the full width of the viewport)?
 
 This would mean that the brand, navicon and menubar are no longer direct children of `.megamenu-wrapper`, so they will no longer be influenced by its flexbox rules. No problem: your intervening `.container` will therefore need to have its own `.flexbox.flexbox-space-between` so that you can achieve the traditional navbar layout again.
 
@@ -458,7 +458,7 @@ This fixing only affects the megamenu wrapper (and the megamenu in navbar mode).
 
 ## Adding Form Elements and Buttons to the Navbar
 
-Simply place a `<form>` with a few [form elements](/2-basics/form-elements.html) (including an input button) within a megamenu parent list item `<li>`. In Codebase, form elements and buttons are inline elements by default.
+Simply place a `<form>` with a few [form elements](../2-basics/form-elements.html) (including an input button) within a megamenu parent list item `<li>`. In Codebase, form elements and buttons are inline elements by default.
 
 Use `.small` utility classes to make the form elements and buttons fit within the megamenu.
 
@@ -576,7 +576,7 @@ Submenu features:
 
 * In offcanvas mode, each submenu is revealed or hidden using a JavaScript toggle. Besides this toggle, submenus are also dismissed by closing the sidebar in offcanvas mode. Within the revealed submenu, all content is laid out in a single column vertically.
 * The navbar mode reveal of submenus is controlled entirely by CSS (and the parent link is followable). A “dropdown indicator” triangular caret is automatially added beside the parent link. A semi-transparent background color indicator appears on the parent link, so that that the (sighted) visitor remains aware of what parent the submenu belongs to (essential if the submenu has a lot of content). And a subtle CSS animation occurs during the showing and hiding of the submenu.
-* By default, submenus will be left-aligned for LTR mode and right-aligned [RTL mode](/1-getting-started/rtl-languages-support.html).
+* By default, submenus will be left-aligned for LTR mode and right-aligned [RTL mode](../1-getting-started/rtl-languages-support.html).
 
 Simple submenu dropdown-alignment can also be controlled by adding CSS classes `.has-submenu-left` or `.has-submenu-right` to the parent link wrapping `<li>`.
 
@@ -653,9 +653,9 @@ Full width submenu panels are set up in the same way as simple submenus, with th
 
 This will cause the submenu to be expanded to the full width of the `.megamenu` block element.
 
-Within the full-width submenu content panel, you can place anything: [menus](/5-components/menus.html), [cards](/5-components/cards.html), [form elements](/2-basics/form-elements.html) and [buttons](/5-components/buttons.html) – whatever you require.
+Within the full-width submenu content panel, you can place anything: [menus](../5-components/menus.html), [cards](../5-components/cards.html), [form elements](../2-basics/form-elements.html) and [buttons](../5-components/buttons.html) – whatever you require.
 
-You may need to set up a columnar multi-column [flexbox](/3-layout/flexbox.html) or [grid](/3-layout/grid.html) layout. _Be sure to give this layout the same breakpoint width as is set for the megamenu offcanvas/navbar mode switch_ – this is `-md` (768px) by default.
+You may need to set up a columnar multi-column [flexbox](../3-layout/flexbox.html) or [grid](../3-layout/grid.html) layout. _Be sure to give this layout the same breakpoint width as is set for the megamenu offcanvas/navbar mode switch_ – this is `-md` (768px) by default.
 
 Example 12 (background color added to aid navbar visibility):
 
@@ -724,7 +724,7 @@ Example 12 (background color added to aid navbar visibility):
 
 The Codebase megamenu offcanvas panel and navbar submenu panels are given the default `<body>` background color (for both light and dark themes), so that they can be seen over whatever they overlay. But in navbar mode the navbar itself is _transparent_.
 
-You can add colour using your own CSS or use Codebase [color UI or utility](/4-utilities/colors.html) classes.
+You can add colour using your own CSS or use Codebase [color UI or utility](../4-utilities/colors.html) classes.
 
 Above, you've seen the utility class `.bg-theme-2` being applied to a couple of the megamenus. You won't want to use `.bg-theme-3` or above without also adjusting the color of text and hyperlinks to aid readability.
 

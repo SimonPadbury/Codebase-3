@@ -28,7 +28,7 @@ nextLink: "/5-components/badges-and-labels.html"
 
 <a class="btn" href="#/">Hyperlink</a> – hyperlink `.btn`
 
-Block width button using the `.block` layout utility. See [layout utilities](/4-utilities/layout.html).
+Block width button using the `.block` layout utility. See [layout utilities](../4-utilities/layout.html).
 
 <button class="btn block">Block width button</button>
 
@@ -76,7 +76,7 @@ Normal / `:hover` `:focus` `:active` `.btn-active` / `:disabled` `.btn-disabled`
 
 ## Small, Default and Large Buttons
 
-Add `.small` for a smaller button, or `.big` for a bigger button. See [text utilities](/4-utilities/text.html).
+Add `.small` for a smaller button, or `.big` for a bigger button. See [text utilities](../4-utilities/text.html).
 
 <a class="btn primary small" href="#/">Small</a> <a class="btn primary" href="#/">Default</a> <a class="btn primary big" href="#/">Big</a>
 
@@ -165,7 +165,7 @@ Codebase buttons and form elements play well together:
   </button>
 </form>
 
-Use a `.small` search input and `.small` button for fitting a search form into a [navbar](/5-components/navbars.html#incorporating-inline-form-elements-and-buttons):
+Use a `.small` search input and `.small` button for fitting a search form into a [navbar](../5-components/navbars.html#incorporating-inline-form-elements-and-buttons):
 
 <form class="mb-3e">
   <input class="small" id="search-example-2" name="examplename" placeholder="Search..." type="search">
@@ -174,7 +174,7 @@ Use a `.small` search input and `.small` button for fitting a search form into a
   </button>
 </form>
 
-Both form element and buttons can have `.block` [layout utility](/3-layout/layout-utilities.html) so you can do things such as this:
+Both form element and buttons can have `.block` [layout utility](../3-layout/layout-utilities.html) so you can do things such as this:
 
 <div style="max-width: 300px; margin: 0 auto 1.5rem;">
   <form>
@@ -196,4 +196,4 @@ Both form element and buttons can have `.block` [layout utility](/3-layout/layou
 </form>
 ```
 
-In the example above, `.mb-1e` bottom padding has also been added to the form inputs. See [spacing utilities](/4-utilities/spacing.html).
+In the example above, `.mb-1e` bottom padding has also been added to the form inputs. See [spacing utilities](../4-utilities/spacing.html).

@@ -25,7 +25,7 @@ The `.container` class fluidly constrains a block to maximum width 1280px (defau
 
 ## Various Container Widths
 
-If you want to constrain a container width to something smaller than the maximum, Codebase has are several options. These are based on the [media query widths](/media-query-breakpoint-widths) with an inset of 5vw to allow for white-space right and left of the block:
+If you want to constrain a container width to something smaller than the maximum, Codebase has are several options. These are based on the [media query widths](../media-query-breakpoint-widths) with an inset of 5vw to allow for white-space right and left of the block:
 
 Example:
 
@@ -99,7 +99,7 @@ Or
 
 ## Containers and Grid Systems
 
-You can use a container as a wrapper for a Codebase [CSS grid](/3-layout/grid.html) layout system.
+You can use a container as a wrapper for a Codebase [CSS grid](../3-layout/grid.html) layout system.
 
 ```HTML
 <div class="container grid">

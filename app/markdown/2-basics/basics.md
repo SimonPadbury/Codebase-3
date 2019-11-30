@@ -42,7 +42,7 @@ Headings h1 to h5 are enlarged (and their line heights adjusted) for wider viewp
 
 Headings are set to `font-weight: normal` by default, so that you can use bold on particular words for emphasis.
 
-All these same styles are also available as `.h1` to `.h6` [block text utility classes](/4-utilities/utilities.html#block-text-utility-classes).
+All these same styles are also available as `.h1` to `.h6` [block text utility classes](../4-utilities/utilities.html#block-text-utility-classes).
 
 ## Paragraphs
 
@@ -131,7 +131,7 @@ Run</code></pre>
 
 ## Horizontal Rules
 
-The horizontal rule tag is simply styled with a thin _top border_, so that it looks the same as [border utilities](/4-utilities/utilities.html#border-utilities) and [`.table` borders](/5-components/tables.html).
+The horizontal rule tag is simply styled with a thin _top border_, so that it looks the same as [border utilities](../4-utilities/utilities.html#border-utilities) and [`.table` borders](../5-components/tables.html).
 
 <hr>
 

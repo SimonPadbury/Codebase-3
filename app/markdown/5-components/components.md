@@ -43,7 +43,7 @@ Toggler is not actually used for any Codebase component (but there are some exam
 
 Togglers are independent of each other, therefore multiple togglers can be toggled at any one time.
 
-Go to [Toggler &rarr;](/5-components/toggler.html)
+Go to [Toggler &rarr;](../5-components/toggler.html)
 
 ### Activator
 
@@ -53,25 +53,25 @@ Activator is used by showhide, dropdowns, menubars (for the collapsed state on s
 
 Only one activator component can be active at any one time – activating one will deactivate all others.
 
-Go to [Activator &rarr;](/5-components/activator.html)<br>
-&nbsp; – [Showhide &rarr;](/5-components/showhide.html)<br>
-&nbsp; – [Dropdowns &rarr;](/5-components/dropdowns.html)<br>
+Go to [Activator &rarr;](../5-components/activator.html)<br>
+&nbsp; – [Showhide &rarr;](../5-components/showhide.html)<br>
+&nbsp; – [Dropdowns &rarr;](../5-components/dropdowns.html)<br>
 &nbsp; – [Offcanvas &rarr;](http://localhost:3000/5-components/offcanvas.html)<br>
-&nbsp; – [Modals &rarr;](/5-components/modals.html)
+&nbsp; – [Modals &rarr;](../5-components/modals.html)
 
 ### Megamenus
 
 The Codebase megamenu is new with v.3.0. It is an all-in-one navigation system that shows as an offcanvas sidebar on small viewports and as a navbar on large viewports, capable of handling full-width dropdown panels.
 
-In offcanvas mode (not the same as [Activator Offcanvas](/5-components/offcanvas.html)), a JavaScript toggler (often with a “hamburger” navicon) opens and closes the hidden sidebar panel. The panel can also be dismissed by “clicking outside” and by resizing the viewport, e.g. in rotating between portrait and landscape orientations. Submenus within the sidebar are hidden by default and they can be individually revealed by their own toggler.
+In offcanvas mode (not the same as [Activator Offcanvas](../5-components/offcanvas.html)), a JavaScript toggler (often with a “hamburger” navicon) opens and closes the hidden sidebar panel. The panel can also be dismissed by “clicking outside” and by resizing the viewport, e.g. in rotating between portrait and landscape orientations. Submenus within the sidebar are hidden by default and they can be individually revealed by their own toggler.
 
 In navbar mode, submenu panels are revealed by tapping on touch screens or by hovering a pointing device (e.g. mouse).
 
-Go to [Megamenu &rarr;](/5-components/megamenus.html)
+Go to [Megamenu &rarr;](../5-components/megamenus.html)
 
 ### Responsive Tables
 
 Trying to display a wide tables on a narrow screens can be problematic. So a Codebase table script looks for every Codebase `.table` class and then double wraps it in two DIVs with related classes. The outer DIV wrapper constrains the overall width to the width of the available space while the inner DIV wrapper enables the table to overflow horizontally but invisibly – and it enables the visitor to horizontally-scroll the table so that they can see all the data.
 
-Go to [Responsive Tables &rarr;](/5-components/tables#codebase-tables-are-responsive.html)
+Go to [Responsive Tables &rarr;](../5-components/tables#codebase-tables-are-responsive.html)
 

@@ -92,7 +92,7 @@ For styling the two "states" of the toggler target element, you can use e.g.:
 
 <p class="bg-theme-2 p-2e"><b>Note:</b> You can’t put two classes in <code class="b-thin">data-toggle-class=""</code> separated by a space or a dot. And you can’t use more than one <code class="b-thin">data-toggle-class=""</code> in a Toggler.</p>
 
-That’s all there is to the Codebase toggler. Unlike the Codebase [activator](/5-components/activator.html), toggler has no “click outside to dismiss”, and no “toggling one causes un-toggling of others”. But you can toggle more than one toggler on a page at the same time. Example:
+That’s all there is to the Codebase toggler. Unlike the Codebase [activator](../5-components/activator.html), toggler has no “click outside to dismiss”, and no “toggling one causes un-toggling of others”. But you can toggle more than one toggler on a page at the same time. Example:
 
 <style>
   [data-toggle-id="ex-q1"],

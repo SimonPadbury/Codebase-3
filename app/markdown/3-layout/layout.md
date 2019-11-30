@@ -79,4 +79,4 @@ Where element grid units have been used in utility classes (e.g. margins and pad
   </tbody>
 </table>
 
-<sup>1</sup> This half element-grid spacer is also available in [margin and padding (i.e. spacing) utility classes](/4-utilities/spacing.html).
+<sup>1</sup> This half element-grid spacer is also available in [margin and padding (i.e. spacing) utility classes](../4-utilities/spacing.html).

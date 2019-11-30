@@ -294,9 +294,9 @@ For these it has been decided to drop the `.b-` prefix in order to avoid confuso
 
 Codebase’s default variable file contains five color swatches are that are used for the Codebase UI colors (i.e. <span class="label primary">primary</span>, <span class="label secondary">secondary</span>, <span class="label success">success</span>, <span class="label warning">warning</span>, and <span class="label danger">danger</span>.
 
-Codebase UI colors can be deployed by CSS classes of the same name: `.primary`, `.secondary`, `.success`, `.warning` and `.danger`. See [default colors](/1-getting-started/getting-started.html#default-colors).
+Codebase UI colors can be deployed by CSS classes of the same name: `.primary`, `.secondary`, `.success`, `.warning` and `.danger`. See [default colors](../1-getting-started/getting-started.html#default-colors).
 
-These UI colours can be used for [buttons](/buttons), [badges and labels](/badges-and-labels) – or anything else that you need to give UI colors to.
+These UI colours can be used for [buttons](../buttons), [badges and labels](../badges-and-labels) – or anything else that you need to give UI colors to.
 
 Example using buttons:
 
@@ -424,7 +424,7 @@ By overriding the color variables and the SCSS map in this way, you have complet
 * Change color class names
 * Change color values
 
-See [The Codebase SCSS Library](/1-getting-started/getting-started.html#the-codebase-scss-library).
+See [The Codebase SCSS Library](../1-getting-started/getting-started.html#the-codebase-scss-library).
 
 ## Text Utilities
 
@@ -552,7 +552,7 @@ Sizing using the `.small` and `.big` text utility classes. See [Text Utilities](
 
 ### Form Element Border Modifications
 
-Border modifications using [border utilities](/4-utilities/borders.html).
+Border modifications using [border utilities](../4-utilities/borders.html).
 
 `.b-thick`
 

@@ -19,7 +19,7 @@ nextLink: "/2-basics/basics.html"
 
 ## Simple Setup
 
-1. Add [codebase.css](/css/codebase.css) and [codebase.js](/js/codebase.js) to your project.
+1. Add [codebase.css](../css/codebase.css) and [codebase.js](../js/codebase.js) to your project.
 
 2. Create your first HTML page – e.g. using the starter example below.
 
@@ -167,7 +167,7 @@ $mq-md: 768px !default;
 $mq-lg: 1024px !default;
 ```
 
-Also note: the largest [container](/3-layout/containers.html) class has `max-width: 1280px`.
+Also note: the largest [container](../3-layout/containers.html) class has `max-width: 1280px`.
 
 These media query widths are intended to cover a wide range of screen devices, approximating as follows:
 
@@ -353,7 +353,7 @@ Codebase UI colors can be deployed by CSS classes of the same name: `.primary`, 
 
 Codebase also has utility classes for using these same colors for any element’s background, border, and/or text. The five theme colors (grayscale) also have utility classes for background, border, and text.
 
-See [color utilities](/4-utilities/utilities.html#color-utilities) for more information.
+See [color utilities](../4-utilities/utilities.html#color-utilities) for more information.
 
 ### Overriding Codebase Default Colors
 

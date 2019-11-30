@@ -73,7 +73,7 @@ Example:
 
 ## Menubars
 
-Simple menubars (i.e. horizontal navigation lists) can be built by adding [flexbox](/flexbox) to [menus](/menus).
+Simple menubars (i.e. horizontal navigation lists) can be built by adding [flexbox](../flexbox) to [menus](../menus).
 
 <ul class="menu flexbox mb-3e">
 	<li class="menu-item"><a href="#/">Link 1</a></li>
@@ -141,7 +141,7 @@ Menu-item positioning in menubars (borders added to aid visualization):
 
 ## Responsive Menubars
 
-There may be situations where you require a navigation list to display as a stacked menu on small viewports but as a menubar on wider viewports. You can also accomplish that using responsive [flexbox](/flexbox) classes.
+There may be situations where you require a navigation list to display as a stacked menu on small viewports but as a menubar on wider viewports. You can also accomplish that using responsive [flexbox](../flexbox) classes.
 
 Example using `.menu.flexbox-md.flexbox-md-center`:
 
@@ -180,4 +180,4 @@ The example above will switch from from a menu to a menubar at the Codebase `md`
   </tbody>
 </table>
 
-See also [flexbox](/5-components/menus.html) for use in setting up menubars.
+See also [flexbox](../5-components/menus.html) for use in setting up menubars.

@@ -154,9 +154,9 @@ Codebase modals come with (almost) no styling of their own – so you can do wha
 
 ## Integrating a CSS Grid System into a Modal
 
-You can also put a [grid](/3-layout/grid.html) into a modal (with or without incorporating it into a card).
+You can also put a [grid](../3-layout/grid.html) into a modal (with or without incorporating it into a card).
 
-Also, if you need to constrain the modal container width, you can do add a [container](/3-layout/containers.html) of your choice.
+Also, if you need to constrain the modal container width, you can do add a [container](../3-layout/containers.html) of your choice.
 
 <div class="modal">
   <div class="modal-content mx-2e b-thin rounded bg-theme-1 container container-xl card" id="modal-example-4">
