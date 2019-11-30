@@ -20,7 +20,7 @@ nextLink: "/5-components/megamenus.html"
 
 Adding `.flexbox` layout classes to menus enables a simple “menubar” layout – see [menubars](#menubars) and [responsive menubars](#responsive-menubars) further down this page.
 
-<div class="bg-theme-2 mb-3e p-2e"><strong>Note:</strong> If you are looking for a more complex navigation system, see the Codebase <a href="../codebase/5-components/megamenu.html">megamenu</a>.</div>
+<div class="bg-theme-2 mb-3e p-2e"><strong>Note:</strong> If you are looking for a more complex navigation system, see the Codebase <a href="/5-components/megamenu.html">megamenu</a>.</div>
 
 ## The Simplest Menu
 
@@ -95,7 +95,7 @@ Simple menubars (i.e. horizontal navigation lists) can be built by adding [flexb
 </ul>
 ```
 
-<div class="bg-theme-2 mb-3e p-2e"><strong>Note:</strong> You can’t have sub-menus in simple flexbox menubars. If you need something more complex, see the Codebase <a href="../codebase/5-components/megamenu.html">megamenu</a>.</div>
+<div class="bg-theme-2 mb-3e p-2e"><strong>Note:</strong> You can’t have sub-menus in simple flexbox menubars. If you need something more complex, see the Codebase <a href="/5-components/megamenu.html">megamenu</a>.</div>
 
 Menu-item positioning in menubars (borders added to aid visualization):
 

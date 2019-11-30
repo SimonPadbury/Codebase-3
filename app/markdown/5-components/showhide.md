@@ -13,7 +13,7 @@ nextLink: "/5-components/dropdowns.html"
   </ul>
 </div>
 
-<p class="h4 thin">Codebase showhides are simple <a href="../codebase/5-components/activator.html">activator</a> components.</p>
+<p class="h4 thin">Codebase showhides are simple <a href="/5-components/activator.html">activator</a> components.</p>
 
 ## The Simplest Showhide
 

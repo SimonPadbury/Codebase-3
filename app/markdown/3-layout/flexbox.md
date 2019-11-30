@@ -20,7 +20,7 @@ nextLink: "/3-layout/grid.html"
 <p class="h4 thin">In Codebase, <code>.flexbox</code> is used for positioning and stretching items relative to their container.</p>
 
 <div class="mb-3e p-2e bg-theme-2">
-Codebase has no “old fashioned” grid system using flexbox or floats. If you want a real <em>grid</em> system, then use the <a href="../codebase/3-layout/grid.html">Codebase CSS grid</a>.
+Codebase has no “old fashioned” grid system using flexbox or floats. If you want a real <em>grid</em> system, then use the <a href="/3-layout/grid.html">Codebase CSS grid</a>.
 </div>
 
 ## The Flexbox Wrapper
@@ -271,7 +271,7 @@ E.g. This won’t be centered on medium viewports (but it is centered on large v
 </div>
 ```
 
-<div class="mb-3e p-2e bg-theme-2"><b>Tip:</b> Codebase flexbox layout classes play well with Codebase <a href="../codebase/menus">menus</a> to create <a href="../codebase/menubars-simple">menubars</a>.</div>
+<div class="mb-3e p-2e bg-theme-2"><b>Tip:</b> Codebase flexbox layout classes play well with Codebase <a href="/menus">menus</a> to create <a href="/menubars-simple">menubars</a>.</div>
 
 ## Flexbox Classes
 

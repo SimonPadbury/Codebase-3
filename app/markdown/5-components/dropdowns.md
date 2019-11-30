@@ -14,7 +14,7 @@ nextLink: "/5-components/buttons.html"
   </ul>
 </div>
 
-<p class="h4 thin">Codebase dropdowns are simple <a href="../codebase/5-components/activator.html">activator</a> components.</p>
+<p class="h4 thin">Codebase dropdowns are simple <a href="/5-components/activator.html">activator</a> components.</p>
 
 ## The Simplest Dropdown
 
