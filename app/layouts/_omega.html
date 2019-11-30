@@ -1,0 +1,31 @@
+      <hr>
+
+      <div class="flexbox flexbox-grow-auto mb-6e">
+      {% if prev %}
+      <div class="left"><a href="{{prevLink}}"><i class="fas fa-arrow-left"></i> {{prev}}</a></div>
+      {% endif %}
+
+      {% if next %}
+      <div class="right"><a href="{{nextLink}}">{{next}} <i class="fas fa-arrow-right"></i></a></div>
+      {% endif %}
+      </div>
+
+    </article><!-- /#mainbody -->
+  </main>
+
+  <div class="b-thin rounded px-He bg-theme-2 center" style="position: fixed; right: 0.5rem; bottom: 0.5rem; z-index: 999;">Width: <span id="vp"></span> <span class="hide-md-up">[-sm]</span><span class="hide-sm-down hide-lg-up">[-md &rarr; -lg]</span><span class="hide-md-down">[-lg]</span></div>
+
+<script src="/js/codebase.js"></script>
+<script src="/js/prism.js"></script>
+<script>
+  var vp = document.body.querySelector('#vp');
+  var viewportWidth = window.innerWidth + 'px';
+  vp.innerHTML = viewportWidth;
+  window.addEventListener('resize', function () {
+    viewportWidth = window.innerWidth + 'px';
+    vp.innerHTML = viewportWidth;
+  });
+
+</script>
+</body>
+</html>

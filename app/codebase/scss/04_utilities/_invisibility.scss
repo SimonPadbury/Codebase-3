@@ -1,0 +1,57 @@
+// LAYOUT MIXINS: INVISIBILITY
+// ===========================
+
+// Hide down
+
+@mixin hide-sm-down {
+  @media screen and (max-width: $mq-md - 1) {
+    display: none !important;
+  }
+}
+
+@mixin hide-md-down {
+  @media screen and (max-width: $mq-lg - 1) {
+    display: none !important;
+  }
+}
+
+// Hide up
+
+@mixin hide-md-up {
+  @media screen and (min-width: $mq-md) {
+    display: none !important;
+  }
+}
+
+@mixin hide-lg-up {
+  @media screen and (min-width: $mq-lg) {
+    display: none !important;
+  }
+}
+
+// CLASS BUILDER: INVISIBILITY
+// ===========================
+
+@mixin layout-invisibility {
+  .hide-sm-down {
+    @include hide-sm-down;
+  }
+
+  .hide-md-down {
+    @include hide-md-down;
+  }
+
+  .hide-md-up {
+    @include hide-md-up;
+  }
+
+  .hide-lg-up {
+    @include hide-lg-up;
+  }
+}
+
+// End of class builder mixin
+
+@if $include-css-utilities==true {
+  @include layout-invisibility;
+}

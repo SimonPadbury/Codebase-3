@@ -1,0 +1,62 @@
+// UTILITIES: PADDINGS
+// ===================
+
+@mixin padding-utilities {
+
+  @each $key, $value in $spacing {
+
+    // All
+    .p-#{$key} {
+      padding: $value;
+    }
+
+    // Top
+    .pt-#{$key} {
+      padding-top: $value;
+    }
+
+    // Right
+    .pr-#{$key} {
+      padding-right: $value;
+    }
+
+    // Bottom
+    .pb-#{$key} {
+      padding-bottom: $value;
+    }
+
+    // Left
+    .pl-#{$key} {
+      padding-left: $value;
+    }
+
+    // Vertical (Top and Bottom)
+    .py-#{$key} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+
+    // Horizontal (Right and Left)
+    .px-#{$key} {
+      padding-right: $value;
+      padding-left: $value;
+    }
+
+  }
+
+  // Block Padding
+  // (Same as $spacing-block in menu items, navbar items, tab labels and
+  // table cells.)
+
+  .p-block {
+    padding: $spacing-block;
+  }
+
+}
+
+// INCLUDE CLASSES: PADDINGS
+// =========================
+
+@if $include-css-utilities == true {
+  @include padding-utilities;
+}

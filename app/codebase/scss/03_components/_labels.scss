@@ -1,0 +1,25 @@
+// BASICS MIXINS: LABELS
+// =====================
+
+@mixin label {
+  position: relative;
+  display: inline block;
+  padding: 0.1em 0.4em;
+  line-height: 1;
+  white-space: nowrap;
+  @include t-color($color-text-ui, $color-text-ui-dark);
+  @include bg-color($color-default, $color-default-dark);
+}
+
+// CLASS BUILDER: LABELS
+// =====================
+
+@mixin basics-labels {
+  .label {
+    @include label;
+  }
+}
+
+@if $include-css-labels == true {
+  @include basics-labels;
+}

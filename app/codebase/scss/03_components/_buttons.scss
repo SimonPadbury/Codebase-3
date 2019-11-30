@@ -1,0 +1,141 @@
+// BASICS MIXINS: BUTTONS
+// ======================
+
+@mixin btn {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  text-decoration: none;
+  white-space: nowrap;
+  @include t-color($color-text-ui, $color-text-ui-dark);
+  @include bg-color($color-default, $color-default-dark);
+  transition: $button-state-transition;
+
+  &[type="button"],
+  &[type="submit"] {
+    -webkit-appearance: none;
+  }
+
+  &:hover,
+  &:active,
+  &.btn-active {
+    cursor: pointer;
+    text-decoration: none;
+    background: darken($color-default, 10%);
+    @include t-color($color-text-ui-hover, $color-text-ui-dark-hover);
+    @if $include-css-color-dark-theme == true {
+      .dark & {
+        background: darken($color-default-dark, 10%);
+      }
+    }
+  }
+
+  &:disabled,
+  &.btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  @if $btn-rounded-corners == true {
+    border-radius: $button-radius;
+  }
+}
+
+@mixin btn-size {
+  &.small {
+    height: 2rem;
+    padding: 0 1rem;
+    line-height: 2rem;
+  }
+
+  & {
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  &.big {
+    height: 3rem;
+    padding: 0 2rem;
+    line-height: 3rem;
+  }
+}
+
+@mixin btn-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+
+  // @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  //   & > * {
+  //     // Because Safari is not obeying `justify-content: center`
+  //     // (This hack is required because IE 10,11 doesn’t like margins being altered.)
+  //     margin: auto;
+  //   }
+  // }
+
+  &.small {
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+  }
+
+  &.big {
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+  }
+}
+
+@mixin btn-block {
+  &-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@mixin btn-colors {
+  @each $key, $value in $color-ui {
+    .btn.#{$key} {
+
+      &:hover,
+      &:active,
+      &.btn-active {
+        background-color: darken($value, 10%);
+      }
+
+      &:disabled,
+      &.btn-disabled {
+        opacity: 0.6;
+        background-color: darken($value, 10%);
+      }
+    }
+  }
+}
+
+// CLASS BUILDER: BUTTONS
+// ======================
+
+@mixin components-buttons {
+  .btn {
+    @include btn;
+    @include btn-size;
+    @include btn-block;
+  }
+  .btn {
+    &-icon {
+      @include btn-icon;
+    }
+  }
+  @include btn-colors;
+}
+
+@if $include-css-buttons == true {
+  @include components-buttons;
+}

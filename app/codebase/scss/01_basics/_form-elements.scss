@@ -1,0 +1,99 @@
+// BASICS MIXINS: FORM ELEMENTS
+// ============================
+
+label {
+  display: inline-block;
+  padding: 0.1em 0;
+}
+
+@mixin form-input {
+  position: relative;
+  outline: 0 none;
+  border: $form-outline-thickness solid;
+  @include b-color($color-theme-3, $color-theme-3-dark);
+
+  @if $form-input-rounded-corners == true {
+    border-radius: $form-radius;
+  }
+  @else {
+    -webkit-border-radius: 0 !important;
+  }
+
+  padding: 0 0.5rem;
+  line-height: 2.5 - (2 * $form-outline-thickness);
+  &.small {
+    line-height: 2 - (2 * $form-outline-thickness);
+  }
+  &.big {
+    line-height: 3 - (2 * $form-outline-thickness);
+  }
+  vertical-align: baseline;
+  @include t-color($color-text-base, $color-text-base-dark);
+  @include bg-color($color-background-base, $color-background-base-dark);
+  transition: all 0.25s ease;
+}
+
+fieldset {
+  min-width: 0;
+}
+
+input,
+select {
+  @include form-input;
+}
+
+option {
+  padding: 0.25rem 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="password"],
+textarea,
+select {
+  -webkit-appearance: none;
+  @if $form-focus-glow == true {
+    &:focus {
+      box-shadow: $form-focus-glow-style;
+    }
+  }
+}
+
+input[type="number"] {
+  padding: 0;
+  padding-left: 0.125rem;
+}
+
+select {
+  @include t-color($color-text-base, $color-text-base-dark);
+  vertical-align: baseline;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  width: 2rem;
+  min-height: auto;
+  margin: 0;
+  padding: 0 0.25rem;
+  line-height: 1;
+}
+
+input[type="radio"] {
+  -webkit-appearance: radio;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+}
+
+textarea {
+  vertical-align: top;
+  overflow: auto;
+  @include form-input;
+}

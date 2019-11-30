@@ -1,0 +1,82 @@
+// LAYOUT MIXINS: FLEXBOX
+// ======================
+
+@mixin flexbox {
+  display: flex;
+  flex-flow: row wrap;
+
+  // Stretching
+  &-grow-equal {
+    > * {
+      flex: 1 !important;
+    }
+  }
+  &-grow-auto {
+    > * {
+      flex: auto !important;
+    }
+  }
+
+  // Spacing
+  &-gap {
+    margin: -($flexbox-gap-width / 2);
+    > * {
+      margin: $flexbox-gap-width / 2;
+    }
+  }
+  &-space-between {
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  // Positioning
+  &-left {
+    justify-content: flex-start;
+    // RTL supported by override
+    [dir="rtl"] & {
+      justify-content: flex-end;
+    }
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-right {
+    justify-content: flex-end;
+    // RTL supported by override
+    [dir="rtl"] & {
+      justify-content: flex-start;
+    }
+  }
+  &-top {
+    align-items: flex-start;
+  }
+  &-middle {
+    align-items: center;
+  }
+  &-bottom {
+    align-items: flex-end;
+  }
+}
+
+// CLASS BUILDER: FLEXBOX
+// ======================
+
+@mixin layout-flexbox-system {
+  .flexbox {
+    @include flexbox;
+    &-md {
+      @include break-min($mq-md) {
+        @include flexbox;
+      }
+    }
+    &-lg {
+      @include break-min($mq-lg) {
+        @include flexbox;
+      }
+    }
+  }
+}
+
+@if $include-css-flexbox == true {
+  @include layout-flexbox-system;
+}

@@ -1,0 +1,107 @@
+// COMPONENTS MIXINS: DROPDOWNS
+// ============================
+
+@mixin dropdown {
+  position: relative;
+}
+
+@mixin dropdown-ctrl {
+  &-left {
+    left: 0;
+  }
+  &-right {
+    right: 0;
+  }
+}
+
+@mixin drop-content {
+  padding: $spacing-block;
+  @include bg-color($color-background-base, $color-background-base-dark);
+  @if $drop-panel-border == true {
+    border: $border-thin;
+    @include b-color($color-detail, $color-detail-dark);
+  }
+  @if $drop-panel-rounded-corners == true {
+    border-radius: $dropdown-radius;
+  }
+}
+
+@mixin dropdown-content {
+  position: absolute;
+  display: none;
+  top: 100%;
+  z-index: 1;
+  cursor: default;
+  @include drop-content;
+  overflow: hidden;
+
+  &-above {
+    top: inherit;
+    bottom: 100%;
+  }
+
+  &-right {
+    right: 0;
+  }
+
+  &-left {
+    left: 0;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}
+
+@mixin dropup-content {
+  position: absolute;
+  display: none;
+  bottom: 100%;
+  cursor: default;
+  @include drop-content;
+  overflow: hidden;
+
+  &-right {
+    right: 0;
+  }
+
+  &-left {
+    left: 0;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}
+
+// CLASS BUILDER: DROPDOWNS
+// ========================
+
+@mixin components-dropdowns {
+  .dropdown,
+  .dropup {
+    @include dropdown;
+  }
+
+  .dropdown-ctrl {
+    @include dropdown-ctrl;
+    @include icon-caret-down;
+  }
+
+  .dropdown-content {
+    @include dropdown-content;
+  }
+
+  .dropup-ctrl {
+    @include dropdown-ctrl;
+    @include icon-caret-up;
+  }
+
+  .dropup-content {
+    @include dropup-content;
+  }
+}
+
+@if $include-css-dropdowns == true {
+  @include components-dropdowns;
+}

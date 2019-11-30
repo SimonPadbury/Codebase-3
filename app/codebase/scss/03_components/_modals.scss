@@ -1,0 +1,124 @@
+// COMPONENTS MIXINS: MODALS
+// =========================
+
+@mixin modal-ctrl {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// The modal container is used to hide the modal offcanvas
+@mixin modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  transition: height 0s ease-out 1s;
+  z-index: $z-index-modals;
+
+  &.is-active {
+    height: 100vh;
+    transition: height 0s ease-in 0s;
+  }
+}
+
+// The modal itself
+@mixin modal-content {
+  position: relative;
+  max-height: 90vh;
+  overflow: auto !important;
+  opacity: 0;
+
+  // Box-shadow backdrop, idea from: https://medium.com/@jotavejv/how-to-create-a-simple-overlay-that-works-anywhere-ae23456d3e8
+  box-shadow: $modal-backdrop-box-shadow;
+  transform: scale(0.8);
+  transition: $modal-transition-content;
+  transition: all 0.3s ease-in-out;
+
+  img, svg {
+    display: block;
+    max-height: 80vh !important;
+    width: auto !important;
+  }
+
+  &.is-active {
+    opacity: 1;
+    transform: none;
+  }
+
+  & > .card {
+    margin-bottom: 0;
+  }
+}
+
+@mixin modal-content-fix {
+  display: inline-flex;
+  overflow: inherit !important;
+}
+
+@mixin modal-content-cover {
+  display: block;
+  width: 100%;
+  top: 0;
+  min-height: 100%;
+  height: 100vh;
+  max-height: 100vh !important;
+  margin: 0 !important;
+  overflow: auto !important;
+
+  > * {
+    border-radius: 0;
+  }
+}
+
+@mixin modal-close {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// CLASS BUILDER: POPOVERS
+// =======================
+
+@mixin components-modals {
+  .modal {
+    @include modal;
+  }
+
+  .modal-ctrl {
+    @include modal-ctrl;
+  }
+
+  .modal-content {
+    @include modal-content;
+
+    &-fix {
+      @include modal-content-fix;
+    }
+
+    &-cover {
+      @include modal-content-cover;
+    }
+  }
+
+  .modal-body {
+    max-height: 85vh;
+    overflow: hidden;
+  }
+
+  .modal-close {
+    @include modal-close;
+  }
+}
+
+@if $include-css-modals == true {
+  @include components-modals;
+}

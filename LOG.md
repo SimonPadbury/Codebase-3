@@ -1,6 +1,18 @@
 # Codebase Version Log
 
-### v.2.0 -- 4 July 2018
+### v3.0 — 30 Nov 2019
+
+* Total rebuild of everything.
+* Simplification and big fixed thorughout.
+* Now Normalize not required.
+* Now only two media query breakpoint widths: 768px and 1024px.
+* BEM-style double hyphens and double underscores have been removed from mixin and class names in SCSS (and CSS).
+* CSS grid instead of a flexbox grid system.
+* Tabs removed because seldom used.
+* New megamenu (instead of a combining menu +  flexbox + dropdowns).
+* Now with its own build tool — a Gulp-based static website generator (was formerly using Codekit). Docs using Markdown instead of Pug. Templating using Nunkucks instead of Pug.
+
+### v2.0 — 4 July 2018
 
 * Normalize 7.0.0 is now actually onboard (and transformed into a SCSS file), instead of being an @import from a CDN.
 * Updated to Font Awesome 5.1 -- linked via Font Awesome's own CDN.* Removed Font Awesome (pseudo-element) styled radioboxes and checkboxes.
@@ -91,9 +103,9 @@ Several re-writes of components and basics, plus several additions, including:
 
 ### v.1.3 - 07 September 2016
 
-* Removed the `.img--*` left and right align classes as redundant. Use the `.float--` COMPONEMT classes instead.
+* Removed the `.img--*` left and right align classes as redundant. Use the `.float--` COMPONENT classes instead.
 * Removed the lightbox and modal styles and scripts. Simply use popovers in future.
-* Reverted to the simpler version of the dropdown COMPONEMT (v.1.1 that didn"t use data-content="" and data-icon=""), because this was easier to integrate with the navbar.
+* Reverted to the simpler version of the dropdown COMPONEMT (v.1.1 that didn’t use data-content="" and data-icon=""), because this was easier to integrate with the navbar.
 * Removed `.img--align-*` because `.float--*` does the same thing.
 * Added more deco box shadows (2x and 3x).
 * Simplified the typography.

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="650" height="400" viewBox="0, 0, 650, 400" style="background-color: #ffffff; padding: 0.5rem 0;">
+  <g id="Layer_1">
+    <path d="M60,48 L60,24" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M36,24 L360,24" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <text transform="matrix(1, 0, 0, 1, 216, 66)">
+      <tspan x="-144" y="13" font-family="sans-serif" font-size="48" fill="#000000">Lorem ipsum</tspan>
+    </text>
+    <path d="M36,168 L36,24" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,72 L60,72" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,48 L60,48" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,72 L12,48" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M60,96 L60,72" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,120 L36,120" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,96 L360,96" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,120 L12,96" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M60,144 L60,120" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,144 L60,144" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M36,120 L60,120" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,168 L360,168" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,168 L12,144" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <text transform="matrix(1, 0, 0, 1, 468, 69.5)">
+      <tspan x="-84" y="-10.5" font-family="sans-serif" font-size="12" fill="#000000">Paragraph line height 1.5rem </tspan>
+      <tspan x="-84" y="3.5" font-family="sans-serif" font-size="12" fill="#000000">(= 3 element grid units)</tspan>
+    </text>
+    <path d="M360,24 C368.987,24 356.987,60 372,60 C357.04,60 368.987,96 360,96" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M360,96 C368.987,96 356.987,132 372,132 C357.04,132 368.987,168 360,168" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <text transform="matrix(1, 0, 0, 1, 517, 126)">
+      <tspan x="-133" y="-7" font-family="sans-serif" font-size="12" fill="#000000">Paragraph and headings bottom margin 1.5rem</tspan>
+      <tspan x="-133" y="7" font-family="sans-serif" font-size="12" fill="#000000">(= 3 element grid units)</tspan>
+    </text>
+    <path d="M12,216 L408,216" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <text transform="matrix(1, 0, 0, 1, 216, 282)">
+      <tspan x="-144" y="13" font-family="sans-serif" font-size="48" fill="#000000">Lorem ipsum</tspan>
+    </text>
+    <path d="M12,336 L12,216" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,312 L36,312" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,240 L408,240" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M36,312 L60,312" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M12,336 L408,336" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <text transform="matrix(1, 0, 0, 1, 528, 228)">
+      <tspan x="-84" y="-1" font-family="sans-serif" font-size="12" fill="#000000">0.5rem (= 1 element grid unit)</tspan>
+    </text>
+    <path d="M420,216 C428.987,216 416.987,228 432,228 C417.04,228 428.987,240 420,240" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M420,312 C428.987,312 416.987,324 432,324 C417.04,324 428.987,336 420,336" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M12,312 L408,312" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M60,336 L60,216" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M360,336 L360,216" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M408,336 L408,216" fill-opacity="0" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+    <path d="M420,240 C428.987,240 416.987,276 432,276 C417.04,276 428.987,312 420,312" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M408,348 C408,356.987 384,344.987 384,360 C384,345.04 360,356.987 360,348" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <path d="M60,348 C60,356.987 36,344.987 36,360 C36,345.04 12,356.987 12,348" fill-opacity="0" stroke="#000000" stroke-width="1"/>
+    <text transform="matrix(1, 0, 0, 1, 528, 276)">
+      <tspan x="-84" y="-1" font-family="sans-serif" font-size="12" fill="#000000">1.5rem (= 3 element grid units)</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 528, 324)">
+      <tspan x="-84" y="-1" font-family="sans-serif" font-size="12" fill="#000000">0.5rem (= 1 element grid unit)</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 444, 384)">
+      <tspan x="-84" y="-1" font-family="sans-serif" font-size="12" fill="#000000">1rem (= 2 element grid units)</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 96, 384)">
+      <tspan x="-84" y="-1" font-family="sans-serif" font-size="12" fill="#000000">1rem (= 2 element grid units)</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 216, 204)">
+      <tspan x="-204" y="-1" font-family="sans-serif" font-size="12" fill="#000000">Padding for menu items, table cells, buttons, tab labels...</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 216, 12)">
+      <tspan x="-204" y="-1" font-family="sans-serif" font-size="12" fill="#000000">Paragraphs, list items...</tspan>
+    </text>
+  </g>
+</svg>

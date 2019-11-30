@@ -1,0 +1,45 @@
+// BASICS: THEME MIXINS
+// ====================
+
+
+// Text
+@mixin t-color($light, $dark) {
+  color: $light;
+
+  @if $include-css-color-dark-theme == true {
+    .dark & {
+      color: $dark;
+    }
+  }
+}
+
+// Background
+@mixin bg-color($light, $dark) {
+  background: $light;
+
+  @if $include-css-color-dark-theme == true {
+    .dark & {
+      background: $dark;
+    }
+  }
+}
+
+// Border
+@mixin b-color($light, $dark) {
+  border-color: $light;
+  @if $include-css-color-dark-theme == true {
+    .dark & {
+      border-color: $dark;
+    }
+  }
+}
+
+// Box Shadow
+@mixin bs-color($light, $dark) {
+  box-shadow: $light;
+  @if $include-css-color-dark-theme == true {
+    .dark & {
+      box-shadow: $dark;
+    }
+  }
+}

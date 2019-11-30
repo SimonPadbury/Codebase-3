@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Utilities | Codebase</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="/css/codebase.css">
+    <link rel="stylesheet" href="/css/codebase-docs.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+
+<body class="codebase-docs">
+
+  <div class="megamenu-wrapper megamenu-wrapper-fixed-top bg-theme-1 bb-thin py-1e">
+  <div class="codebase-brand p-block">
+    <a href="/index.html">
+      <!-- Codebase logo-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+        <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z" stroke-width="1" stroke-linecap="square" stroke-linejoin="square"/>
+      </svg>
+      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+    </a>
+  </div>
+
+  <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
+    Menu &nbsp;<span class="fas fa-bars"></span>
+  </span>
+
+  <nav class="megamenu hide-md-down">
+    <ul>
+      <li>
+        <a href="/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/1-getting-started/getting-started.html">Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
+      </li>
+      <li>
+        <a id="theme-toggle">Theme</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container">
+    <div id="sidebar" class="offcanvas">
+      <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
+        <div class="offcanvas-close offcanvas-close-right hide-lg-up">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <p class="small hide-lg-up"><a id="theme-toggle">Theme</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase">GitHub</a></p>
+
+        <div id="docs-toc" class="bg-theme-1">
+  <p class="my-2e bold t-theme-4">Documentation</p>
+  <ul class="menu">
+    <li class="menu-item"><strong><a href="/1-getting-started/getting-started.html">Getting Started</a></strong></li>
+    <li class="menu-item"><strong><a href="/2-basics/basics.html">Basics</a></strong></li>
+    <li class="menu-item"><strong><a href="/3-layout/layout.html">Layout</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="/3-layout/containers.html">Containers</a></li>
+        <li class="menu-item"><a href="/3-layout/flexbox.html">Flexbox</a></li>
+        <li class="menu-item"><a href="/3-layout/grid.html">Grid</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><strong><a href="/4-utilities/utilities.html">Utilities</a></strong></li>
+    <li class="menu-item"><strong><a href="/5-components/components.html">Components</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="/5-components/toggler.html">Toggler</a></li>
+        <li class="menu-item"><a href="/5-components/activator.html">Activator</a></li>
+        <li class="menu-item"><a href="/5-components/showhide.html">Showhide</a></li>
+        <li class="menu-item"><a href="/5-components/dropdowns.html">Dropdowns</a></li>
+        <li class="menu-item"><a href="/5-components/buttons.html">Buttons</a></li>
+        <li class="menu-item"><a href="/5-components/badges-and-labels.html">Badges and Labels</a></li>
+        <li class="menu-item"><a href="/5-components/menus.html">Menus</a></li>
+        <li class="menu-item"><a href="/5-components/megamenus.html">Megamenus</a></li>
+        <li class="menu-item"><a href="/5-components/offcanvas.html">Offcanvas</a></li>
+        <li class="menu-item"><a href="/5-components/cards.html">Cards</a></li>
+        <li class="menu-item"><a href="/5-components/tables.html">Tables</a></li>
+        <li class="menu-item"><a href="/5-components/modals.html">Modals</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <article id="mainbody">
+      <div class="mainbody-prose mt-9e px-2e">
+        <h1 class="big thin">Utilities</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <ul class="menu small">
+    <li class="menu-item"><a href="#layout-utilities">Layout</a></li>
+    <li class="menu-item"><a href="#spacing-utilities">Spacing</a></li>
+    <li class="menu-item"><a href="#border-utilities">Borders</a></li>
+    <li class="menu-item"><a href="#color-utilities">Color</a></li>
+    <li class="menu-item"><a href="#text-utilities">Text</a></li>
+    <li class="menu-item"><a href="#utilities-for-big-text">Big Text</a></li>
+    <li class="menu-item"><a href="#form-utilities">Forms</a></li>
+    <li class="menu-item"><a href="#invisibility-utilities">Invisibility</a></li>
+  </ul>
+</div>
+
+<p class="h4 thin">For consistency throughout Codebase, several decoration variables have been defined. These variables have also been incorporated into a set of simple utility classes that can be used to directly add consistent styling to your HTML. You can modify these variables and classes and/or add to them in accordance with the style guide or visual identity of your project.</p>
+
+<p class="bg-theme-2 p-2e"><b>Hat tip</b>: The idea for Codebase decoration utilities was inspired by <a href="https://basscss.com" target="_blank">BASCSS</a>, <a href="https://tachyons.io" target="_blank">Tachyons</a> and <a href="https://getbootstrap.com" target="_blank">Bootstrap&nbsp;4</a>’s utilities.</p>
+
+<p><strong>Notes:</strong></p>
+<ol>
+<li><p>If you know you will never use the decoration utility classes, then you can override the <code>$include-css-decoration-utilities</code> to false (see <code>codebase/scss/00_default-variables/_default-variables.scss</code>).</p>
+</li>
+<li><p>Codebase decoration utility classes are not responsive to viewport sizes.</p>
+</li>
+<li><p>CSS nesting can cause other styling (from Codebase or your own CSS) to override decoration utility classes.</p>
+<p> Example – this CSS rule will be overridden by the utility class on the <code>&lt;h4&gt;</code>:</p>
+<pre><code class="language-HTML"> &lt;style&gt;
+ h4 {
+   border: 0;
+ }
+ &lt;/style&gt;
+ &lt;h4 class=&quot;b-thick&quot;&gt;Example: this h4 has a thick border&lt;/h4&gt;</code></pre>
+ <h4 class="b-thick">Example: this h4 has a thick border</h4>
+
+<p> But this CSS rule will override the utility class on the <code>&lt;h4&gt;</code>:</p>
+<pre><code class="language-HTML"> &lt;style&gt;
+ .infobox h4 {
+   border: 0;
+ }
+ &lt;/style&gt;
+ &lt;div class=&quot;infobox&quot;&gt;
+   &lt;h4 class=&quot;b-thick&quot;&gt;Gotcha: this h4 has no border. Why?&lt;/h4&gt;
+ &lt;/div&gt;</code></pre>
+ <style>
+ .infobox h4 {
+   border: 0;
+ }
+ </style>
+
+ <div class="infobox">
+   <h4 class="b-thick">Gotcha: this h4 has no border. Why?</h4>
+ </div>
+
+</li>
+</ol>
+<h2 id="layout-utilities">Layout Utilities</h2>
+<h3 id="blocks">Blocks</h3>
+<p><code>.block</code> – makes any element behave as a block element.</p>
+<p><span class="block bg-theme-2 p-2e">This is a <code class="b-thin">span</code> element (normally an inline element).</span></p>
+<p><code>.inline-block</code> – makes any element behave as an inline-block element.
+This is a div element (normally a block element).</p>
+<div class="inline-block bg-theme-2 mb-3e p-2e">This is a <code class="b-thin">div</code> element (normally a block element).</div>
+
+<h3 id="floats">Floats</h3>
+<div class="float-right">
+  <div class="bg-theme-2 p-2e">This is an example of <code class="b-thin">.float-right</code></div>
+</div>
+<p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+
+<div class="float-left">
+  <div class="bg-theme-2 p-2e">This is an example of <code class="b-thin">.float-left</code></div>
+</div>
+<p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus. Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+
+<p><strong>Note:</strong> These outer blocks above have <code>.clearfix</code>.</p>
+<h2 id="spacing-utilities">Spacing Utilities</h2>
+<p>Codebase decoration utilities for margins and paddings have been set using a <code>$spacing</code> SCSS map, with values as follows:</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Spacing class suffix</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <body>
+    <tr>
+      <td><code>-0</code></td>
+      <td>0 (for removing margins or paddings</td>
+    </tr>
+    <tr>
+      <td><code>-He</code></td>
+      <td>0.25rem</td>
+    </tr>
+    <tr>
+      <td><code>-1e</code></td>
+      <td>0.5rem</td>
+    </tr>
+    <tr>
+      <td><code>-2e</code></td>
+      <td>1rem</td>
+    </tr>
+    <tr>
+      <td><code>-3e</code></td>
+      <td>1.5rem</td>
+    </tr>
+    <tr>
+      <td><code>-6e</code></td>
+      <td>3rem</td>
+    </tr>
+    <tr>
+      <td><code>-9e</code></td>
+      <td>4.5rem</td>
+    </tr>
+  </body>
+</table>
+
+<p>Margins and paddings utility class prefixes:</p>
+<div class="grid grid-gap grid-columns-2">
+  <div class="col-1 mb-3e">
+    <ul>
+      <li>Margins all: <code>m-*</code></li>
+      <li>Margin top: <code>mt-*</code></li>
+      <li>Margin right: <code>mr-*</code></li>
+      <li>Margin bottom: <code>mb-*</code></li>
+      <li>Margin left: <code>ml-*</code></li>
+      <li>Margins top and bottom: <code>my-*</code></li>
+      <li>Margins left and right: <code>mx-*</code></li>
+    </ul>
+    <p>Margin examples:</p>
+    <div class="mb-1e b-thin">
+      <div class="mr-0 bg-theme-2">.mr-0</div>
+    </div>
+    <div class="mb-1e b-thin">
+      <div class="mr-He bg-theme-2">.mr-He</div>
+    </div>
+    <div class="mb-1e b-thin">
+      <div class="mr-1e bg-theme-2">.mr-1e</div>
+    </div>
+    <div class="mb-1e b-thin">
+      <div class="mr-2e bg-theme-2">.mr-2e</div>
+    </div>
+    <div class="mb-1e b-thin">
+      <div class="mr-3e bg-theme-2">.mr-3e</div>
+    </div>
+    <div class="mb-1e b-thin">
+      <div class="mr-6e bg-theme-2">.mr-6e</div>
+    </div>
+    <div class="mb-1e b-thin">
+      <div class="mr-9e bg-theme-2">.mr-9e</div>
+    </div>
+  </div>
+  <div class="col-2 mb-3e">
+    <ul>
+      <li>Paddings all: <code>p-*</code></li>
+      <li>Padding top: <code>pt-*</code></li>
+      <li>Padding right: <code>pr-*</code></li>
+      <li>Padding bottom: <code>pb-*</code></li>
+      <li>Padding left: <code>pl-*</code></li>
+      <li>Paddings top and bottom: <code>py-*</code></li>
+      <li>Paddings left and right: <code>px-*</code></li>
+    </ul>
+    <p>Padding examples:</p>
+    <div class="mb-1e bg-theme-2 pl-0">
+      <div class="b-thin">.pl-0</div>
+    </div>
+    <div class="mb-1e bg-theme-2 pl-He">
+      <div class="b-thin">.pl-He</div>
+    </div>
+    <div class="mb-1e bg-theme-2 pl-1e">
+      <div class="b-thin">.pl-1e</div>
+    </div>
+    <div class="mb-1e bg-theme-2 pl-2e">
+      <div class="b-thin">.pl-2e</div>
+    </div>
+    <div class="mb-1e bg-theme-2 pl-3e">
+      <div class="b-thin">.pl-3e</div>
+    </div>
+    <div class="mb-1e bg-theme-2 pl-6e">
+      <div class="b-thin">.pl-6e</div>
+    </div>
+    <div class="mb-1e bg-theme-2 pl-9e">
+      <div class="b-thin">.pl-9e</div>
+    </div>
+  </div>
+</div>
+
+<h3 id="horizontal-centering">Horizontal Centering</h3>
+<p><code>.mx-auto</code></p>
+<p>This class applies <code>margin-right: auto, margin-left: auto</code> to push an item into the center. This class also sets the element to <code>display:block !important</code> – so, you can use it to make inline elements behave as block elements.</p>
+<div class="mb-3e b-thin">
+  <div class="mx-auto bg-theme-2" style="width:75%;">.mx-auto</div>
+</div>
+
+<h3 id="block-padding">Block Padding</h3>
+<p>Table cells (<code>th</code> and <code>td</code>), menu-item hyperlinks (<code>.menu-item a{}</code>) and megamenu parent hyperlinks already have built into them the same “block padding” – <code>padding: 0.5rem 1rem;</code>.</p>
+<p>This same block padding is available as the utility class <code>.p-block</code>:</p>
+<div class="mb-3e b-thin p-block">This has block padding supplied by the utility class <code>.p-block</code>.</div>
+
+<p>(Buttons also appear to have this same block padding but they do not. The height of the default button comes entirely from its line-height.)</p>
+<h3 id="extra-line-spacing">Extra Line Spacing</h3>
+<p>You may sometimes need to add extra spacing above or below an element equivalent to the spacing between paragraphs (i.e. one line height, or 1.5rem).</p>
+<p>This can be done by top or bottoms margin or padding, using the element grid suffix <code>-3e</code>:</p>
+<p>As margins:</p>
+<div class="mb-3e b-thin">
+  <div class="mt-3e bg-theme-2">.mt-3e</div>
+</div>
+
+<div class="mb-3e b-thin">
+  <div class="mb-3e bg-theme-2">.mb-3e</div>
+</div>
+
+<p>As paddings:</p>
+<div class="mb-3e bg-theme-2 pt-3e">
+  <div class="b-thin p--4">.pt-3e</div>
+</div>
+
+<div class="mb-3e bg-theme-2 pb-3e">
+  <div class="b-thin p--4">.pb-3e    </div>
+</div>
+
+<h2 id="border-utilities">Border Utilities</h2>
+<p>A few simple border styles.</p>
+<ul>
+<li>borders all <code>b-*</code></li>
+<li>border-top <code>bt-*</code></li>
+<li>border-right <code>br-*</code></li>
+<li>border-bottom <code>bb-*</code></li>
+<li>border-left <code>bl-*</code></li>
+</ul>
+<p>Examples:</p>
+<div class="mb-1e p-1e b-thin b-0"> <code>.b-0</code> (0px – for removing borders)</div>
+
+<div class="mb-1e p-1e b-thin"> <code>.b-thin</code> – 0.0625rem (1px default)</div>
+
+<div class="mb-1e p-1e b-thick mb-3e"> <code>.b-thick</code> – 0.25rem (4px default)</div>
+
+<p>By default, borders are light gray. Borders can be assigned other colors in the Codebase swatch using <code>b-{color}</code> classes. See <a href="#color-utilities">color utilities</a>.</p>
+<h3 id="border-enhancements">Border Enhancements</h3>
+<p>For these it has been decided to drop the <code>.b-</code> prefix in order to avoid confuson when applied to borderless elements, buttons and form elements.</p>
+<div class="grid-md grid-gap grid-md-equalize-3 center">
+  <div class="col-md-1 mb-3e">
+    <div class="mx-auto p-1e b-thin rounded" style="width:100px;height:100px;"></div>.rounded <br> <span class="t-theme-3">border-radius<br>= 0.25rem<br>(4px default)</span>
+  </div>
+  <div class="col-md-2 mb-3e">
+    <div class="mx-auto p-1e b-thin circle" style="width:100px;height:100px;"></div>.circle <br> <span class="t-theme-3">This will produce an ellipse if the block element is not a square.</span>
+  </div>
+  <div class="col-md-3 mb-3e">
+    <div class="mx-auto p-1e b-thin pill" style="width:100px;">&nbsp;</div>.pill <br> <span class="t-theme-3">This will round the left and right of buttons, form elements, etc. where the content width is greater then its height.</span>
+  </div>
+</div>
+
+<h2 id="color-utilities">Color Utilities</h2>
+<h3 id="ui-colors">UI Colors</h3>
+<p>Codebase’s default variable file contains five color swatches are that are used for the Codebase UI colors (i.e. <span class="label primary">primary</span>, <span class="label secondary">secondary</span>, <span class="label success">success</span>, <span class="label warning">warning</span>, and <span class="label danger">danger</span>.</p>
+<p>Codebase UI colors can be deployed by CSS classes of the same name: <code>.primary</code>, <code>.secondary</code>, <code>.success</code>, <code>.warning</code> and <code>.danger</code>. See <a href="/1-getting-started/getting-started.html#default-colors">default colors</a>.</p>
+<p>These UI colours can be used for <a href="/buttons">buttons</a>, <a href="/badges-and-labels">badges and labels</a> – or anything else that you need to give UI colors to.</p>
+<p>Example using buttons:</p>
+<pre><code class="language-HTML">&lt;button class=&quot;btn primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;btn secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button class=&quot;btn success&quot;&gt;Success&lt;/button&gt;
+&lt;button class=&quot;btn warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button class=&quot;btn danger&quot;&gt;Danger&lt;/button&gt;</code></pre>
+<div class="bg-theme-2 mb-3e p-2e">
+  If you simply use the UI color names as classes (see above), you will automatically get text colored white. <em>This includes any descendant hyperlink</em> within any element assigned one of these UI color classes. E.g. menu items within a menu will have white text.<br><br>
+  (However, the utility classes below do not automatically color the text white – their text will be its default color.)
+</div>
+
+<h3 id="ui-and-theme-color-utilities">UI and Theme Color Utilities</h3>
+<p>These five UI color swatches plus the theme colors (a grayscale) have also been used for the Codebase decoration utility classes:</p>
+<div class="flexbox mb-1e">
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="primary p-3e">&nbsp;</div>
+    <div class="m-1e center">primary</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="secondary p-3e">&nbsp;</div>
+    <div class="m-1e center">secondary</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="success p-3e">&nbsp;</div>
+    <div class="m-1e center">success</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="warning p-3e">&nbsp;</div>
+    <div class="m-1e center">warning</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width:116px">
+    <div class="danger p-3e">&nbsp;</div>
+    <div class="m-1e center">danger</div>
+  </div>
+</div>
+
+<p>The default ui colors are slightly lighter for dark mode.</p>
+<p>The primary color is also used for the default <a>hyperlink</a> color.</p>
+<div class="flexbox mb-3e">
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="bg-theme-1 p-3e">&nbsp;</div>
+    <div class="m-1e center">theme-1</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="bg-theme-2 p-3e">&nbsp;</div>
+    <div class="m-1e center">theme-2</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="bg-theme-3 p-3e">&nbsp;</div>
+    <div class="m-1e center">theme-3</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="bg-theme-4 p-3e">&nbsp;</div>
+    <div class="m-1e center">theme-4</div>
+  </div>
+  <div class="m-1e b-thin rounded" style="min-width: 116px">
+    <div class="bg-theme-5 p-3e">&nbsp;</div>
+    <div class="m-1e center">theme-5</div>
+  </div>
+</div>
+
+<h3 id="applying-color-utility-classes-to-elements">Applying Color Utility Classes to Elements</h3>
+<p>Codebase also has utility classes for background, border and text color.</p>
+<p>Backgrounds: <code>.bg-{colorname}</code>:</p>
+<p class="p-2e bg-primary"><code>.bg-primary</code></p>
+
+<p>Borders: <code>.b-{colorname}</code> (will only do someting if your element has a border):</p>
+<p class="p-2e b-thick b-danger"><code>.b-danger</code> (and here the border has also been thickened using <code>.b-thick</code>)</p>
+
+<p>Text <code>.t-{colorname}</code>:</p>
+<p class="t-success t-dark"><code>.t-success</code> Lorem ipsum dolor sit amet, vis in blandit singulis, an unum doming facilisi vim. Facete aliquam bonorum id quo, ex labore tincidunt mel, usu no quod liberavisse. Ex sea dolorum insolens assueverit, sed ut harum latine dignissim. Vis cibo vidit ea, eu duo debet platonem explicari, pro ex graece meliore. Illum graeci inciderint mei et, ei decore nostro vim.</p>
+
+<table class="table">
+  <thead>
+    <th>Class Prefix</th>
+    <th>Color Name</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="min-width: 160px">
+        <p><b>Background color</b> <code>.bg-</code></p>
+        <p><b>Text color</b> <code>.t-</code></p>
+        <p><b>Border color</b> <code>.b-</code></p>
+      </td>
+      <td>
+        <code>primary</code><br>
+        <code>secondary</code><br>
+        <code>success</code><br>
+        <code>warning</code><br>
+        <code>danger</code><br>
+        <code>theme-1</code><br>
+        <code>theme-2</code><br>
+        <code>theme-3</code><br>
+        <code>theme-4</code><br>
+        <code>theme-5</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="advanced-scss-users">Advanced (SCSS) Users</h3>
+<p>All Codebase color utilities are here simply to get you started. You can override and improve them in your own website design as you make progress.</p>
+<p>You need to copy (a.) the whole set of color variables and (b.) the SCSS map into your styles. Then during pre-processing, the class-builders in <code>codebase/scss/04_decoration/_colors.scss</code> will generate all the decoration utility classes for colored backgrounds, borders and text.</p>
+<p>By overriding the color variables and the SCSS map in this way, you have complete freedom to:</p>
+<ul>
+<li>Add more color classes</li>
+<li>Remove classes for colors that you never use</li>
+<li>Change color class names</li>
+<li>Change color values</li>
+</ul>
+<p>See <a href="/1-getting-started/getting-started.html#the-codebase-scss-library">The Codebase SCSS Library</a>.</p>
+<h2 id="text-utilities">Text Utilities</h2>
+<p>Codebase has several simple text utility classes.</p>
+<h3 id="inline-text-utility-classes">Inline Text Utility Classes</h3>
+<p><code>.bolder</code> <span class="bolder">Bolder text (default 900)</span></p>
+<p><code>.bold</code> <span class="bold">Bold text (default 700)</span> (same as <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code>)</p>
+<p><code>.normal</code> <span class="bold italics">Returns text to normal weight (default 400) and removes italicization. <span class="normal">Perhaps you may find this useful</span> in some circumstances.</span></p>
+<p><code>.thin</code> <span class="thin">Thin text (default 200)</span></p>
+<p><code>.italics</code> <span class="italics">Italics text</span> (same as <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code>)</p>
+<p><span class="bolder">Bolder • <span class="italics">Italics</span></span><br>
+<span class="bold">Bold • <span class="italics">Italics</span></span><br>
+<span class="normal">Normal • <span class="italics">Italics</span></span><br>
+<span class="thin">Thin • <span class="italics">Italics</span></span></p>
+<p><code>.uppercase</code> <span class="uppercase">Text in uppercase (all capitals)</span></p>
+<p><code>.big</code> Big text for making <span class="big">something</span> stand out. (This class works for both inline and block elements – see <a href="#utilities-for-big-text">Utilities for Big Text</a>.)</p>
+<p><code>.small</code>  Small text for <span class="small">small print</span>.</p>
+<h3 id="block-text-utility-classes">Block Text Utility Classes</h3>
+<div class="h1"><code>.h1</code> Heading level 1</div>
+
+<div class="h2"><code>.h2</code> Heading level 2</div>
+
+<div class="h3"><code>.h3</code> Heading level 3</div>
+
+<div class="h4"><code>.h4</code> Heading level 4</div>
+
+<div class="h5"><code>.h5</code> Heading level 5</div>
+
+<div class="h6"><code>.h6</code> Heading level 6</div>
+
+<p><code>.left</code></p>
+<p class="left">Lorem ipsum dolor sit amet...</p>
+
+<p><code>.center</code></p>
+<p class="center">Lorem ipsum dolor sit amet...</p>
+
+<p><code>.right</code></p>
+<p class="right">Lorem ipsum dolor sit amet...</p>
+
+<h2 id="utilities-for-big-text">Utilities for Big Text</h2>
+<p>Codebase big typography has been developed for long-read articles.</p>
+<p>There are two ways to deploy big typography in Codebase:</p>
+<h3 id="1-the-big-inline-element-class">(1.) The <code>.big</code> Inline Element Class</h3>
+<p>If you want to emphasize <span class="big">some inline text</span> by increasing the font size, Codebase can do this by applying <code>.big</code> to an inline tag (e.g. <code>&lt;span class=&quot;big&quot;&gt;</code>).</p>
+<p>When used inline, the <code>.big</code> class increases its inherited font size by 125%.</p>
+<h3 id="2-the-big-container-element-class">(2.) The <code>.big</code> Container Element Class</h3>
+<p>Codebase can render big typography simply by wrapping any HTML within a block element (e.g. <code>&lt;div&gt;</code>) that has class <code>.big</code>. Everything within the wrapper will have big typography applied.</p>
+<p>When used on a wrapper, the <code>.big</code> class increases its inheritable font size by 125% (good for paragraphs, list items, table cells etc.) and it increases heading sizes as exemplified below.</p>
+<p>Therefore, as the default font size (1rem) in Codebase is 16px, this makes the <code>.big</code> default font size to be 20px. (You can change either of these in <code>codebase/scss/01_basics/__default-variables.scss</code>.)</p>
+<div class="grid-md grid-equalize-2 grid-gap">
+  <div class="col-1">
+    <p>Normal typography sizes:</p>
+    <h1>Heading h1</h1>
+    <h2>Heading h2</h2>
+    <h3>Heading h3</h3>
+    <h4>Heading h4</h4>
+    <h5>Heading h5</h5>
+    <h6>Heading h6</h6>
+    <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</p>
+    <p>Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+  </div>
+  <div class="col-2">
+    <p>Big typography sizes:</p>
+    <div class="big">
+      <h1>Heading h1</h1>
+      <h2>Heading h2</h2>
+      <h3>Heading h3</h3>
+      <h4>Heading h4</h4>
+      <h5>Heading h5</h5>
+      <h6>Heading h6</h6>
+      <p>Lorem ipsum dolor sit amet, adipiscing honestatis ius ut, nisl consulatu pro in. Imperdiet evertitur no usu, his te suavitate salutatus.</p>
+      <p>Nullam ridens deterruisset an duo. Cum harum insolens ei, cum probo placerat praesent et.</p>
+    </div>
+  </div>
+</div>
+
+<p>You can also increase the font size of smaller elements <code>.h1</code> to <code>.h6</code> <a href="#block-text-utility-classes">block text utility classes</a>.</p>
+<h2 id="form-utilities">Form Utilities</h2>
+<h3 id="form-elements-as-full-width-blocks">Form Elements as Full-Width Blocks</h3>
+<p>Block width form element using the <code>.block</code> utility. See <a href="#layout-utilities">Layout Utilities</a>.</p>
+<p><label for="text-example">Text:</label>
+<input id="text-example" class="block" name="examplename" placeholder="Example text input field" type="text"></p>
+<p><label for="textarea-example">Textarea:</label>
+<textarea id="textarea-example" class="block" name="examplename" type="password" placeholder="Example textarea" rows="4"></textarea></p>
+<h3 id="form-element-sizing">Form Element Sizing</h3>
+<p>Sizing using the <code>.small</code> and <code>.big</code> text utility classes. See <a href="#text-utilities">Text Utilities</a>.</p>
+<p><code>.small</code> <input class="small" id="text-example" name="examplename" placeholder="Example text input field" type="text"></p>
+
+<p>(Default) <input id="text-example" name="examplename" placeholder="Example text input field" type="text"></p>
+
+<p><code>.big</code> <input class="big" id="text-example" name="examplename" placeholder="Example text input field" type="text"></p>
+
+<h3 id="form-element-border-modifications">Form Element Border Modifications</h3>
+<p>Border modifications using <a href="/4-utilities/borders.html">border utilities</a>.</p>
+<p><code>.b-thick</code></p>
+<p><input class="b-thick" id="text-example" name="examplename" placeholder="Example text input field" type="text"></p>
+
+<p><code>.pill</code></p>
+<p><input class="pill" id="text-example" name="examplename" placeholder="Example text input field" type="text"></p>
+
+<h2 id="invisibility-utilities">Invisibility Utilities</h2>
+<p>A range of invisibility mixins and classes have been built based on the Codebase media query breakpoint variables.</p>
+<p class="center"><i class="fas fa-times"></i> = invisible (hidden) &nbsp; <i class="fas fa-check"></i> = visible</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Mixin / Class</th>
+      <th>Example</th>
+      <th>sm<br><span class="normal">(&lt;= 767px)</span></th>
+      <th>md<br><span class="normal">(768px-1023px)</span></th>
+      <th>lg<br><span class="normal">(&gt;= 1024px)</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="bt-thick">
+      <td><code>hide-sm-down</code></td>
+      <td>
+        <div class="hide-sm-down p-block success white invisibility-example">Example</div>
+      </td>
+      <td><i class="fas fa-times"></i></td>
+      <td><i class="fas fa-check"></i></td>
+      <td><i class="fas fa-check"></i></td>
+    </tr>
+    <tr>
+      <td><code>hide-md-down</code></td>
+      <td>
+        <div class="hide-md-down p-block success white invisibility-example">Example</div>
+      </td>
+      <td><i class="fas fa-times"></i></td>
+      <td><i class="fas fa-times"></i></td>
+      <td><i class="fas fa-check"></i></td>
+    </tr>
+    <tr class="bt-thick">
+      <td><code>hide-md-up</code></td>
+      <td>
+        <div class="hide-md-up p-block success white invisibility-example">Example</div>
+      </td>
+      <td><i class="fas fa-check"></i></td>
+      <td><i class="fas fa-times"></i></td>
+      <td><i class="fas fa-times"></i></td>
+    </tr>
+    <tr>
+      <td><code>hide-lg-up</code></td>
+      <td>
+        <div class="hide-lg-up p-block success white invisibility-example">Example</div>
+      </td>
+      <td><i class="fas fa-check"></i></td>
+      <td><i class="fas fa-check"></i></td>
+      <td><i class="fas fa-times"></i></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Notes:</p>
+<ol>
+<li><p><strong>There are no Codebase</strong> <code>.show-</code> <strong>classes</strong>. Therefore, if you need something to be visible only at some viewport widths and not others, then what you need to do is use the appropriate <code>.hide-*</code> class so that it will not be visible at viewport widths where you don’t want it to be.</p>
+</li>
+<li><p>If you need something to be visible only at a mid-range viewport width, then use two <code>.hide-*</code> classes: one to hide the thing at lower viewport widths and one to hide it at higher viewport widths.</p>
+</li>
+</ol>
+<p>E.g.:</p>
+<pre><code class="language-HTML">// A div that is ONLY visible at medium viewport widths:
+
+&lt;div class=&quot;hide-md-down hide-lg-up&quot;&gt; ... &lt;/div&gt;</code></pre>
+<p class="bg-theme-2 p-2e">For an example of where this has been done, see the <b>viewport width indicator</b> (fixed to the bottom-right corner) in these docs.</p>
+      <hr>
+
+      <div class="flexbox flexbox-grow-auto mb-6e">
+      
+      <div class="left"><a href="/3-layout/grid.html"><i class="fas fa-arrow-left"></i> Grid</a></div>
+      
+
+      
+      <div class="right"><a href="/5-components/components.html">Components <i class="fas fa-arrow-right"></i></a></div>
+      
+      </div>
+
+    </article><!-- /#mainbody -->
+  </main>
+
+  <div class="b-thin rounded px-He bg-theme-2 center" style="position: fixed; right: 0.5rem; bottom: 0.5rem; z-index: 999;">Width: <span id="vp"></span> <span class="hide-md-up">[-sm]</span><span class="hide-sm-down hide-lg-up">[-md &rarr; -lg]</span><span class="hide-md-down">[-lg]</span></div>
+
+<script src="/js/codebase.js"></script>
+<script src="/js/prism.js"></script>
+<script>
+  var vp = document.body.querySelector('#vp');
+  var viewportWidth = window.innerWidth + 'px';
+  vp.innerHTML = viewportWidth;
+  window.addEventListener('resize', function () {
+    viewportWidth = window.innerWidth + 'px';
+    vp.innerHTML = viewportWidth;
+  });
+
+</script>
+</body>
+</html>

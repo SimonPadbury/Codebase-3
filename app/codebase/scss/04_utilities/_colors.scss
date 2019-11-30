@@ -1,0 +1,143 @@
+// UTILITIES: COLORS
+// =================
+
+// UI Colors
+
+@mixin color-ui {
+  .primary, .primary .submenu-content {
+    @include t-color($color-text-ui, $color-text-ui-dark);
+    @include bg-color($color-primary, $color-primary-dark)
+  }
+  .secondary, .secondary .submenu-content {
+    @include t-color($color-text-ui, $color-text-ui-dark);
+    @include bg-color($color-secondary, $color-secondary-dark)
+  }
+  .success, .success .submenu-content {
+    @include t-color($color-text-ui, $color-text-ui-dark);
+    @include bg-color($color-success, $color-success-dark)
+  }
+  .warning, .warning .submenu-content {
+    @include t-color($color-text-ui, $color-text-ui-dark);
+    @include bg-color($color-warning, $color-warning-dark)
+  }
+  .danger, .danger .submenu-content {
+    @include t-color($color-text-ui, $color-text-ui-dark);
+    @include bg-color($color-danger, $color-danger-dark)
+  }
+  .primary a,
+  .secondary a,
+  .success a,
+  .warning a,
+  .danger a {
+    @include t-color($color-anchor-inside-ui, $color-anchor-inside-ui-dark)
+  }
+}
+
+@mixin color-utilities {
+  //Borders
+  .b-primary {
+    @include b-color($color-primary, $color-primary-dark)
+  }
+  .b-info {
+    @include b-color($color-secondary, $color-secondary-dark)
+  }
+  .b-success {
+    @include b-color($color-success, $color-success-dark)
+  }
+  .b-warning {
+    @include b-color($color-warning, $color-warning-dark)
+  }
+  .b-danger {
+    @include b-color($color-danger, $color-danger-dark)
+  }
+  .b-theme-1 {
+    @include b-color($color-theme-1, $color-theme-1-dark)
+  }
+  .b-theme-2 {
+    @include b-color($color-theme-2, $color-theme-2-dark)
+  }
+  .b-theme-3 {
+    @include b-color($color-theme-3, $color-theme-3-dark)
+  }
+  .b-theme-4 {
+    @include b-color($color-theme-4, $color-theme-4-dark)
+  }
+  .b-theme-5 {
+    @include b-color($color-theme-5, $color-theme-5-dark)
+  }
+
+  // Text
+  .t-primary {
+    @include t-color($color-primary, $color-primary-dark)
+  }
+  .t-info {
+    @include t-color($color-secondary, $color-secondary-dark)
+  }
+  .t-success {
+    @include t-color($color-success, $color-success-dark)
+  }
+  .t-warning {
+    @include t-color($color-warning, $color-warning-dark)
+  }
+  .t-danger {
+    @include t-color($color-danger, $color-danger-dark)
+  }
+  .t-theme-1 {
+    @include t-color($color-theme-1, $color-theme-1-dark)
+  }
+  .t-theme-2 {
+    @include t-color($color-theme-2, $color-theme-2-dark)
+  }
+  .t-theme-3 {
+    @include t-color($color-theme-3, $color-theme-3-dark)
+  }
+  .t-theme-4 {
+    @include t-color($color-theme-4, $color-theme-4-dark)
+  }
+  .t-theme-5 {
+    @include t-color($color-theme-5, $color-theme-5-dark)
+  }
+
+  // Backgrounds
+  .bg-primary {
+    @include bg-color($color-primary, $color-primary-dark)
+  }
+  .bg-info {
+    @include bg-color($color-secondary, $color-secondary-dark)
+  }
+  .bg-success {
+    @include bg-color($color-success, $color-success-dark)
+  }
+  .bg-warning {
+    @include bg-color($color-warning, $color-warning-dark)
+  }
+  .bg-danger {
+    @include bg-color($color-danger, $color-danger-dark)
+  }
+  .bg-theme-1 {
+    @include bg-color($color-theme-1, $color-theme-1-dark)
+  }
+  .bg-theme-2 {
+    @include bg-color($color-theme-2, $color-theme-2-dark)
+  }
+  .bg-theme-3 {
+    @include bg-color($color-theme-3, $color-theme-3-dark)
+  }
+  .bg-theme-4 {
+    @include bg-color($color-theme-4, $color-theme-4-dark)
+  }
+  .bg-theme-5 {
+    @include bg-color($color-theme-5, $color-theme-5-dark)
+  }
+}
+
+// INCLUDE CLASSES: COLORS
+// =======================
+
+@if $include-css-color-ui==true {
+  @include color-ui;
+}
+
+@if $include-css-utilities==true {
+  @include color-utilities;
+}

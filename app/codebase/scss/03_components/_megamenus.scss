@@ -1,0 +1,270 @@
+// MEGANAV (navbar/ megamenu/ offcanvas combo)
+// ===========================================
+
+@mixin megamenu-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  &-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-index-megamenu-fixed;
+    width: 100%;
+  }
+}
+
+@mixin megamenu {
+  & > ul {
+    margin-bottom: 0;
+    padding: 0;
+    & > li {
+      margin-bottom: 0;
+      & > a {
+        display: block;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  backface-visibility: hidden;
+
+  // Offcanvas mode
+  // ==============
+  @media (max-width: ($megamenu-mq - 1px)) {
+    position: fixed;
+    display: block;
+    top: 0;
+    right: 0;
+    transform: translateX($megamenu-offcanvas-slideout);
+    [dir="rtl"] & {
+      right: auto;
+      left: 0;
+      transform: translateX(-$megamenu-offcanvas-slideout);
+      &-offcanvas-right {
+        right: 0;
+        left: auto;
+        transform: translateX($megamenu-offcanvas-slideout);      
+      }
+    }
+    &-offcanvas-left {
+      right: auto;
+      left: 0;
+      transform: translateX(-$megamenu-offcanvas-slideout);
+    }
+    z-index: $z-index-megamenu-offcanvas;
+    width: $megamenu-offcanvas-width;
+    max-width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: $megamenu-offcanvas-padding-top;
+    transition: $megamenu-offcanvas-transition;
+    @include bg-color($color-theme-1, $color-theme-1-dark);
+    @include bs-color($box-shadow-light, $box-shadow-dark);
+    ul {
+      display: block; // overrides .flexbox utility (required for navbar mode)
+    }
+    & > ul > li { // helps identify parent items
+      position: relative; // required by toggler (that has position: absolute)
+      border-top: 1px solid;
+      @include b-color($color-theme-3, $color-theme-3-dark);
+      & > a {
+        padding: 1rem;
+        font-weight: bold;
+      }
+    }
+    form {
+      padding: 1rem;
+    }
+    &.megamenu-offcanvas-is-open {
+      transform: translateX(0);
+    }
+  }
+  // Navbar mode
+  // ===========
+  @media (min-width: $megamenu-mq) {
+    position: relative; // constrains the megamenu panel to the “navbar” width
+    max-width: 100%;
+    & > ul {
+      list-style-type: none;
+      display: flex; // Sets up menubar
+    }
+
+    // Megamenu dropdown parent
+    .has-submenu {
+      transition: $megamenu-navbar-submenu-transition;
+      & > a {
+        padding-right: 0.75rem !important;
+        [dir="rtl"] & {
+          padding-left: 0.75rem !important;
+        }
+        @include icon-caret-down;
+      }
+      &:hover {
+        & > a {
+          position: relative;
+          z-index: 1;
+          @include t-color($color-hyperlink-hover, $color-hyperlink-dark-hover);
+        }
+      }
+    }
+    form {
+      padding: 0.25rem;
+    }
+  }  
+}
+
+@mixin submenu {
+  @media (min-width: $megamenu-mq) {
+    &:not(.mega) {
+      position: relative;
+      a {
+        white-space: nowrap;
+      }
+    }
+    &-left .submenu-content {
+      left: 50%;
+      margin-left: -50%;
+    }
+    &-right .submenu-content {
+      right: 50%;
+      margin-right: -50%;  
+    }
+  }
+}
+
+@mixin navbar-mode-submenu-content-hidden {
+  visibility: hidden;
+  margin-top: 0.75rem;
+  opacity: 0;
+  transition: $megamenu-navbar-submenu-transition;
+}
+
+@mixin navbar-mode-submenu-content-revealed {
+  visibility: visible;
+  margin-top: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+@mixin submenu-content {
+  // Offcanvas mode
+  // ==============
+  @media (max-width: ($megamenu-mq - 1px)) {
+    overflow-y: hidden;
+    max-height: 0;
+    transition: all $megamenu-offcanvas-submenu-time cubic-bezier(1, 1, 0, 0);
+    .submenu-content a {
+      padding-left: 30px !important;
+    }
+    .submenu-is-revealed & {
+      max-height: 150vh;
+      transition-timing-function: cubic-bezier(0, 0, 1, 1);
+      overflow-y: auto;
+    }
+  }
+  // Navbar mode
+  // ===========
+  @media (min-width: $megamenu-mq) {
+    position: absolute;
+    //display: none;
+    padding: 0;
+    @include bg-color($color-theme-1, $color-theme-1-dark);
+    @include bs-color($box-shadow-light, $box-shadow-dark);
+    @include navbar-mode-submenu-content-hidden;
+  }
+}
+
+@mixin mega-content {
+  @media (min-width: $megamenu-mq) {
+    left: 0;
+    width: 100%;
+    //padding-top: 0.5rem;
+  }  
+}
+
+@mixin megamenu-icons {
+  .megamenu-close,
+  .submenu-toggle {
+    position: absolute;
+    top: $megamenu-icon-margin;
+    right: $megamenu-icon-margin;
+    [dir="rtl"] & {
+      right: auto;
+      left: $megamenu-icon-margin;
+    }
+    width: $megamenu-icon-width;
+    height: $megamenu-icon-height;
+    line-height: $megamenu-icon-height !important;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+    @media (min-width: $megamenu-mq) {
+      display: none !important;
+    }
+  }
+  .megamenu-navicon {
+    &:hover {
+      cursor: pointer;
+    }
+    &-fixed {
+      &-left,
+      &-right {
+        position: fixed;
+        top: 0;
+        z-index: $z-index-megamenu-navicon-fixed;
+        margin: $megamenu-icon-margin;
+        width: $megamenu-icon-width;
+        height: $megamenu-icon-height;
+        line-height: $megamenu-icon-height !important;
+        text-align: center;  
+      }
+      &-left {
+        right: auto;
+        left: 0;
+      }
+      &-right {
+        left: auto;
+        right: 0;
+      }
+    }
+    @media (min-width: $megamenu-mq) {
+      display: none !important;
+    }
+  }
+}
+
+// CLASS BUILDER: MEGANAV
+// ======================
+
+@mixin components-megamenu {
+
+  @include megamenu-icons;
+
+  .megamenu-wrapper {
+    @include megamenu-wrapper;
+  }
+
+  .megamenu {
+    @include megamenu;
+  }
+
+  .has-submenu {
+    @include submenu;
+
+    &:hover > .submenu-content {
+      @include navbar-mode-submenu-content-revealed;
+    }
+  }
+
+  .submenu-content {
+    @include submenu-content;
+    .mega & {
+      @include mega-content;
+    }
+  }
+}
+
+@if $include-css-megamenu == true {
+  @include components-megamenu;
+}

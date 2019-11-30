@@ -1,0 +1,158 @@
+// UTILITIES: BORDERS
+// ==================
+
+@mixin border-utilities {
+  // Border All
+
+  .b {
+    &-0 {
+      border: 0 !important;
+    }
+
+    &-thin {
+      border: $spacing-thin solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border: $spacing-thin solid $color-detail-dark;
+        }
+      }
+    }
+
+    &-thick {
+      border: $spacing-thick solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border: $spacing-thick solid $color-detail-dark;
+        }
+      }
+    }
+  }
+
+  // Border Top
+
+  .bt {
+    &-0 {
+      border-top: 0 !important;
+    }
+
+    &-thin {
+      border-top: $spacing-thin solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-top: $spacing-thin solid $color-detail-dark;
+        }
+      }
+    }
+
+    &-thick {
+      border-top: $spacing-thick solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-top: $spacing-thick solid $color-detail-dark;
+        }
+      }
+    }
+  }
+
+  // Border Right
+
+  .br {
+    &-0 {
+      border-right: 0 !important;
+    }
+
+    &-thin {
+      border-right: $spacing-thin solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-right: $spacing-thin solid $color-detail-dark;
+        }
+      }
+    }
+
+    &-thick {
+      border-right: $spacing-thick solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-right: $spacing-thick solid $color-detail-dark;
+        }
+      }
+    }
+  }
+
+  // Border Bottom
+
+  .bb {
+    &-0 {
+      border-bottom: 0 !important;
+    }
+
+    &-thin {
+      border-bottom: $spacing-thin solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-bottom: $spacing-thin solid $color-detail-dark;
+        }
+      }
+    }
+
+    &-thick {
+      border-bottom: $spacing-thick solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-bottom: $spacing-thick solid $color-detail-dark;
+        }
+      }
+    }
+  }
+
+  // Border Left
+
+  .bl {
+    &-0 {
+      border-left: 0 !important;
+    }
+
+    &-thin {
+      border-left: $spacing-thin solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-left: $spacing-thin solid $color-detail-dark;
+        }
+      }
+    }
+
+    &-thick {
+      border-left: $spacing-thick solid $color-detail;
+      @if $include-css-color-dark-theme == true {
+        .dark & {
+          border-left: $spacing-thick solid $color-detail-dark;
+        }
+      }
+    }
+  }
+
+  // Other Enhancements
+
+  .rounded {
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  .pill {
+    border-radius: $border-radius-pill;
+    overflow: hidden;
+  }
+
+  .circle {
+    border-radius: $border-radius-circle;
+    overflow: hidden;
+  }
+}
+
+// INCLUDE CLASSES: BORDERS
+// ========================
+
+@if $include-css-utilities == true {
+  @include border-utilities;
+}

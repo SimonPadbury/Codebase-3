@@ -1,0 +1,26 @@
+// UTILITIES: SHADOWS
+// ==================
+
+@mixin box-shadow-utilities {
+  .bs {
+    &-1z {
+      box-shadow: $box-shadow-1z;
+    }
+    &-2z {
+      box-shadow: $box-shadow-2z;
+    }
+    &-3z {
+      box-shadow: $box-shadow-3z;
+    }
+  }
+  .bs-inset {
+    box-shadow: $box-shadow-inset;
+  }
+}
+
+// INCLUDE CLASSES: SHADOWS
+// ========================
+
+@if $include-css-utilities==true {
+  @include box-shadow-utilities;
+}
