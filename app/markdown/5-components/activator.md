@@ -59,7 +59,7 @@ It doesn’t matter whether the controller element comes before or after the con
 
 It is entirely up to you what styling you wish to add for the inactive and active states of the component, controller and content. But Codebase does contain a few examples.
 
-<p class="bg-theme-2 p-2e">Examples of simple Codebase activator components are <a href="5-components/showhide.html">showhide</a> and <a href="5-components/dropdowns.html">dropdowns</a>.</p>
+<p class="bg-theme-2 p-2e">Examples of simple Codebase activator components are <a href="../5-components/showhide.html">showhide</a> and <a href="../5-components/dropdowns.html">dropdowns</a>.</p>
 
 1. Click/tap an activator control `.thing-ctrl` to add class `.is-active` to all these:
     * Its `.thing` wrapper
@@ -130,13 +130,13 @@ This enables the controller to be located outside the component and yet still be
   <div>&nbsp;</div>
 </div>
 
-<p class="bg-theme-2 p-2e">Examples of activator components with added specificity in Codebase are <a href="5-components/modals.html">modals</a> and <a href="5-components/offcanvas.html">offcanvas</a> side panels.</p>
+<p class="bg-theme-2 p-2e">Examples of activator components with added specificity in Codebase are <a href="../5-components/modals.html">modals</a> and <a href="../5-components/offcanvas.html">offcanvas</a> side panels.</p>
 
 ## Closing From Within
 
 If for some reason you wish to have a "close" (or "dismiss") button inside your content element, you can do that. Simply add an element with class `.thing-close` inside your `.thing-content`. Clicking this element will cause the removal of is-active from the content element (and the control element, if you have one).
 
-<p class="bg-theme-2 p-2e">Codebase <a href="5-components/modals.html">modals</a> and <a href="5-components/offcanvas.html">offcanvas</a> side panels have "close" buttons.</p>
+<p class="bg-theme-2 p-2e">Codebase <a href="../5-components/modals.html">modals</a> and <a href="../5-components/offcanvas.html">offcanvas</a> side panels have "close" buttons.</p>
 
 ## Activator Classes
 

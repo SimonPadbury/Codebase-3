@@ -466,7 +466,7 @@ Example: a wide table that is horizontally scrollable at all screen widths:
     </tr>
     <tr>
       <td><code>.table-compact</code></td>
-      <td>Sets the table cell padding to 0.25rem (= &half; <a href="3-layout/element-grid.html">element grid unit</a>).</td>
+      <td>Sets the table cell padding to 0.25rem (= &half; <a href="../3-layout/element-grid.html">element grid unit</a>).</td>
     </tr>
     <tr>
       <td><code>.table-nowrap</code></td>
