@@ -35,7 +35,7 @@ nextLink: "/5-components/tables.html"
   </div>
 </div>
 
-<p class="bg-theme-2 p-2e"><b>Note:</b> Codebase cards have no decorative styling – you are free to add your own, or use Codebase <a href="../4-utilities/utilities.html">utility classes</a> for margin, border, padding, background color, etc.</p>
+<p class="bg-theme-2 p-2e"><b>Note:</b> Codebase cards have no decorative styling – you are free to add your own, or use Codebase <a href="../codebase/4-utilities/utilities.html">utility classes</a> for margin, border, padding, background color, etc.</p>
 
 ```HTML
 <div class="card">

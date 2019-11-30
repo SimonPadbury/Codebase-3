@@ -95,7 +95,7 @@ Or
   </tbody>
 </table>
 
-<div class="mb-3e p-2e bg-theme-2"><b>Note:</b> no padding is added by the <code>.container</code> class. If you need padding, add a <a href="../4-utilities/spacing.html">padding utility class</a> of your choice.</div>
+<div class="mb-3e p-2e bg-theme-2"><b>Note:</b> no padding is added by the <code>.container</code> class. If you need padding, add a <a href="../codebase/4-utilities/spacing.html">padding utility class</a> of your choice.</div>
 
 ## Containers and Grid Systems
 
