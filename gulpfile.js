@@ -45,11 +45,11 @@ const config = {
     partials: './app/partials/*.njk', // for the watcher
     html: ['./app/**/*.html', '!./app/layouts/*.html']
   },
-  docs: {
-    base: './docs/',
-    js: './docs/js/',
-    css: './docs/css/',
-    images: './docs/img/'
+  dist: {
+    base: './dist/',
+    js: './dist/js/',
+    css: './dist/css/',
+    images: './dist/img/'
   }
 }
 
@@ -65,7 +65,7 @@ function jsCodebaseTask() {
     .pipe(uglify())
     .pipe(lec())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest(config.docs.js))
+    .pipe(dest(config.dist.js))
 }
 
 function jsOtherTask() {
@@ -76,7 +76,7 @@ function jsOtherTask() {
     }))
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
-    .pipe(dest(config.docs.js))
+    .pipe(dest(config.dist.js))
 }
 
 function scssTask() {
@@ -85,22 +85,22 @@ function scssTask() {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) // or 'expanded'
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest(config.docs.css))
+    .pipe(dest(config.dist.css))
 }
 
 function cssTask() {
   return src(config.app.css)
-    .pipe(dest(config.docs.css))
+    .pipe(dest(config.dist.css))
 }
 
 function imagesTask() {
   return src(config.app.images)
-    .pipe(dest(config.docs.images))
+    .pipe(dest(config.dist.images))
 }
 
 function htmlTask() { // for tests and examples
   return src(config.app.html)
-    .pipe(dest(config.docs.base))
+    .pipe(dest(config.dist.base))
 }
 
 function markdownNjkTask() {
@@ -118,7 +118,7 @@ function markdownNjkTask() {
     .pipe(nunjucksRender( {
       path: ['./app/partials']
     }))
-    .pipe(dest(config.docs.base))
+    .pipe(dest(config.dist.base))
 }
 
 function nunjucksTask() {
@@ -129,7 +129,7 @@ function nunjucksTask() {
       .pipe(nunjucksRender( {
         path: ['./app/partials']
       }))
-      .pipe(dest(config.docs.base))
+      .pipe(dest(config.dist.base))
 }
 
 // Browser Sync
@@ -137,7 +137,7 @@ function nunjucksTask() {
 function liveReload(done) {
   browserSync.init({
     server: {
-      baseDir: config.docs.base
+      baseDir: config.dist.base
     },
   });
   done();
@@ -151,7 +151,7 @@ function reload(done) {
 // Pre-build `docs/` delete (cleanup)
 
 function cleanup() {
-  return del([config.docs.base]);
+  return del([config.dist.base]);
 }
 
 // Watchers
