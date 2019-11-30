@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tables | Codebase</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../css/codebase.css">
+    <link rel="stylesheet" href="../css/codebase-docs.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+
+<body class="codebase-docs">
+
+  <div class="megamenu-wrapper megamenu-wrapper-fixed-top bg-theme-1 bb-thin py-1e">
+  <div class="codebase-brand p-block">
+    <a href="index.html">
+      <!-- Codebase logo-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+        <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z" stroke-width="1" stroke-linecap="square" stroke-linejoin="square"/>
+      </svg>
+      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+    </a>
+  </div>
+
+  <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
+    Menu &nbsp;<span class="fas fa-bars"></span>
+  </span>
+
+  <nav class="megamenu hide-md-down">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="../1-getting-started/getting-started.html">Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
+      </li>
+      <li>
+        <a id="theme-toggle">Theme</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container">
+    <div id="sidebar" class="offcanvas">
+      <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
+        <div class="offcanvas-close offcanvas-close-right hide-lg-up">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <p class="small hide-lg-up"><a id="theme-toggle">Theme</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase">GitHub</a></p>
+
+        <div id="docs-toc" class="bg-theme-1">
+  <p class="my-2e bold t-theme-4">Documentation</p>
+  <ul class="menu">
+    <li class="menu-item"><strong><a href="../1-getting-started/getting-started.html">Getting Started</a></strong></li>
+    <li class="menu-item"><strong><a href="../2-basics/basics.html">Basics</a></strong></li>
+    <li class="menu-item"><strong><a href="../3-layout/layout.html">Layout</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="../3-layout/containers.html">Containers</a></li>
+        <li class="menu-item"><a href="../3-layout/flexbox.html">Flexbox</a></li>
+        <li class="menu-item"><a href="../3-layout/grid.html">Grid</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><strong><a href="../4-utilities/utilities.html">Utilities</a></strong></li>
+    <li class="menu-item"><strong><a href="../5-components/components.html">Components</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="../5-components/toggler.html">Toggler</a></li>
+        <li class="menu-item"><a href="../5-components/activator.html">Activator</a></li>
+        <li class="menu-item"><a href="../5-components/showhide.html">Showhide</a></li>
+        <li class="menu-item"><a href="../5-components/dropdowns.html">Dropdowns</a></li>
+        <li class="menu-item"><a href="../5-components/buttons.html">Buttons</a></li>
+        <li class="menu-item"><a href="../5-components/badges-and-labels.html">Badges and Labels</a></li>
+        <li class="menu-item"><a href="../5-components/menus.html">Menus</a></li>
+        <li class="menu-item"><a href="../5-components/megamenus.html">Megamenus</a></li>
+        <li class="menu-item"><a href="../5-components/offcanvas.html">Offcanvas</a></li>
+        <li class="menu-item"><a href="../5-components/cards.html">Cards</a></li>
+        <li class="menu-item"><a href="../5-components/tables.html">Tables</a></li>
+        <li class="menu-item"><a href="../5-components/modals.html">Modals</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <article id="mainbody">
+      <div class="mainbody-prose mt-9e px-2e">
+        <h1 class="big thin">Tables</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <ul class="menu small">
+    <li class="menu-item"><a href="#table-variations">Table Variations</a></li>
+    <li class="menu-item"><a href="#codebase-tables-are-responsive">Codebase Tables Are Responsive</a></li>
+    <li class="menu-item"><a href="#table-classes">Table Classes</a></li>
+  </ul>
+</div>
+
+<p class="h4 thin">The Codebase <code>.table</code> class expands tables to 100% width and adds some padding and a border around every table cell.</p>
+
+<p>Also, all table cells have their content vertical-aligned to the top, and aligned left for LTR or right for RTL.</p>
+<p><code>.table</code></p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Table Header 1
+      </th>
+      <th>Table Header 2
+      </th>
+      <th>Table Header 3
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table content 1.1
+      </td>
+      <td>Table content 2.1
+      </td>
+      <td>Table content 3.1
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.2
+      </td>
+      <td>Table content 2.2
+      </td>
+      <td>Table content 3.2
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.3
+      </td>
+      <td>Table content 2.3
+      </td>
+      <td>Table content 3.3
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.4
+      </td>
+      <td>Table content 2.4
+      </td>
+      <td>Table content 3.4
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="table-variations">Table Variations</h2>
+<p>The following table modifier classes can be used separately or in combination:</p>
+<p><code>.table.table-borderless</code> – removes all the borders (but you can put borders on cells of your choice by <a href="../4-utilities/borders.html">border utility classes</a>):</p>
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th>Table Header 1
+      </th>
+      <th>Table Header 2
+      </th>
+      <th>Table Header 3
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table content 1.1
+      </td>
+      <td>Table content 2.1
+      </td>
+      <td>Table content 3.1
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.2
+      </td>
+      <td>Table content 2.2
+      </td>
+      <td>Table content 3.2
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.3
+      </td>
+      <td>Table content 2.3
+      </td>
+      <td>Table content 3.3
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.4
+      </td>
+      <td>Table content 2.4
+      </td>
+      <td>Table content 3.4
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>.table.table-compact</code> – provides less padding in table cells:</p>
+<table class="table table-compact">
+  <thead>
+    <tr>
+      <th>Table Header 1
+      </th>
+      <th>Table Header 2
+      </th>
+      <th>Table Header 3
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table content 1.1
+      </td>
+      <td>Table content 2.1
+      </td>
+      <td>Table content 3.1
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.2
+      </td>
+      <td>Table content 2.2
+      </td>
+      <td>Table content 3.2
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.3
+      </td>
+      <td>Table content 2.3
+      </td>
+      <td>Table content 3.3
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.4
+      </td>
+      <td>Table content 2.4
+      </td>
+      <td>Table content 3.4
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>.table.table-striped</code> – applies a <strong>transparent white tint</strong> and a <strong>transparent black tint</strong> to alterating rows:</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Table Header 1
+      </th>
+      <th>Table Header 2
+      </th>
+      <th>Table Header 3
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table content 1.1
+      </td>
+      <td>Table content 2.1
+      </td>
+      <td>Table content 3.1
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.2
+      </td>
+      <td>Table content 2.2
+      </td>
+      <td>Table content 3.2
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.3
+      </td>
+      <td>Table content 2.3
+      </td>
+      <td>Table content 3.3
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.4
+      </td>
+      <td>Table content 2.4
+      </td>
+      <td>Table content 3.4
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code>.table.table-nowrap</code> – prevents table content wrapping in <em>every</em> table cell:</p>
+<table class="table table-nowrap">
+  <thead>
+    <tr>
+      <th>Table Header 1
+      </th>
+      <th>Table Header 2
+      </th>
+      <th>Table Header 3
+      </th>
+      <th>Table Header 4
+      </th>
+      <th>Table Header 5
+      </th>
+      <th>Table Header 6
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table content 1.1
+      </td>
+      <td>Table content 2.1
+      </td>
+      <td>Table content 3.1
+      </td>
+      <td>Table content 4.1
+      </td>
+      <td>Table content 5.1
+      </td>
+      <td>Table content 6.1
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.2
+      </td>
+      <td>Table content 2.2
+      </td>
+      <td>Table content 3.2
+      </td>
+      <td>Table content 4.2
+      </td>
+      <td>Table content 5.2
+      </td>
+      <td>Table content 6.2
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.3
+      </td>
+      <td>Table content 2.3
+      </td>
+      <td>Table content 3.3
+      </td>
+      <td>Table content 4.3
+      </td>
+      <td>Table content 5.3
+      </td>
+      <td>Table content 6.3
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.4
+      </td>
+      <td>Table content 2.4
+      </td>
+      <td>Table content 3.4
+      </td>
+      <td>Table content 4.4
+      </td>
+      <td>Table content 5.4
+      </td>
+      <td>Table content 6.4
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="codebase-tables-are-responsive">Codebase Tables Are Responsive</h2>
+<p>If you add class <code>.table</code> to a <code>&lt;table&gt;</code>, then <code>codebase.js</code> will add <code>&lt;div class=&quot;table-wrap&quot;&gt;</code> around the table. This wrapper’s CSS works to enable responsive overflow by horizontal scrolling – if required by a table being wider than the available width.</p>
+<p>Example: a wide table that is horizontally scrollable at all screen widths:</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Table Header 1
+      </th>
+      <th>Table Header 2
+      </th>
+      <th>Table Header 3
+      </th>
+      <th>Table Header 4
+      </th>
+      <th>Table Header 5
+      </th>
+      <th>Table Header 6
+      </th>
+      <th>Table Header 7
+      </th>
+      <th>Table Header 8
+      </th>
+      <th>Table Header 9
+      </th>
+      <th>Table Header 10
+      </th>
+      <th>Table Header 11
+      </th>
+      <th>Table Header 12
+      </th>
+      <th>Table Header 13
+      </th>
+      <th>Table Header 14
+      </th>
+      <th>Table Header 15
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Table content 1.1
+      </td>
+      <td>Table content 2.1
+      </td>
+      <td>Table content 3.1
+      </td>
+      <td>Table content 4.1
+      </td>
+      <td>Table content 5.1
+      </td>
+      <td>Table content 6.1
+      </td>
+      <td>Table content 7.1
+      </td>
+      <td>Table content 8.1
+      </td>
+      <td>Table content 9.1
+      </td>
+      <td>Table content 10.1
+      </td>
+      <td>Table content 11.1
+      </td>
+      <td>Table content 12.1
+      </td>
+      <td>Table content 13.1
+      </td>
+      <td>Table content 14.1
+      </td>
+      <td>Table content 15.1
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.2
+      </td>
+      <td>Table content 2.2
+      </td>
+      <td>Table content 3.2
+      </td>
+      <td>Table content 4.2
+      </td>
+      <td>Table content 5.2
+      </td>
+      <td>Table content 6.2
+      </td>
+      <td>Table content 7.2
+      </td>
+      <td>Table content 8.2
+      </td>
+      <td>Table content 9.2
+      </td>
+      <td>Table content 10.2
+      </td>
+      <td>Table content 11.2
+      </td>
+      <td>Table content 12.2
+      </td>
+      <td>Table content 13.2
+      </td>
+      <td>Table content 14.2
+      </td>
+      <td>Table content 15.2
+      </td>
+    </tr>
+    <tr>
+      <td>Table content 1.3
+      </td>
+      <td>Table content 2.3
+      </td>
+      <td>Table content 3.3
+      </td>
+      <td>Table content 4.3
+      </td>
+      <td>Table content 5.3
+      </td>
+      <td>Table content 6.3
+      </td>
+      <td>Table content 7.3
+      </td>
+      <td>Table content 8.3
+      </td>
+      <td>Table content 9.3
+      </td>
+      <td>Table content 10.3
+      </td>
+      <td>Table content 11.3
+      </td>
+      <td>Table content 12.3
+      </td>
+      <td>Table content 13.3
+      </td>
+      <td>Table content 14.3
+      </td>
+      <td>Table content 15.3
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="table-classes">Table Classes</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.table</code></td>
+      <td>The responsive table component block. Apply this class only to <code>&lt;table&gt;</code> tags.</td>
+    </tr>
+    <tr>
+      <td><code>.table-rows</code></td>
+      <td>Adds a top border to every table body row.</td>
+    </tr>
+    <tr>
+      <td><code>.table-grid</code></td>
+      <td>Adds a border around every table cell.</td>
+    </tr>
+    <tr>
+      <td class="nowrap"><code>.table-striped</code></td>
+      <td>Applies a white tint and a black tint to alternating rows.</td>
+    </tr>
+    <tr>
+      <td><code>.table-compact</code></td>
+      <td>Sets the table cell padding to 0.25rem (= &half; <a href="3-layout/element-grid.html">element grid unit</a>).</td>
+    </tr>
+    <tr>
+      <td><code>.table-nowrap</code></td>
+      <td>Prevents white-space wrapping (in every table cell).<sup>1</sup></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sup>1</sup> If you require nowrap only on some table cells and not others, you can use the text utility class <code>.nowrap</code> applied to the <code>th</code> or <code>td</code> where you need it.</p>
+      <hr>
+
+      <div class="flexbox flexbox-grow-auto mb-6e">
+      
+      <div class="left"><a href="/5-components/cards.html"><i class="fas fa-arrow-left"></i> Cards</a></div>
+      
+
+      
+      <div class="right"><a href="/5-components/modals.html">Modals <i class="fas fa-arrow-right"></i></a></div>
+      
+      </div>
+
+    </article><!-- /#mainbody -->
+  </main>
+
+  <div class="b-thin rounded px-He bg-theme-2 center" style="position: fixed; right: 0.5rem; bottom: 0.5rem; z-index: 999;">Width: <span id="vp"></span> <span class="hide-md-up">[-sm]</span><span class="hide-sm-down hide-lg-up">[-md &rarr; -lg]</span><span class="hide-md-down">[-lg]</span></div>
+
+<script src="../js/codebase.js"></script>
+<script src="../js/prism.js"></script>
+<script>
+  var vp = document.body.querySelector('#vp');
+  var viewportWidth = window.innerWidth + 'px';
+  vp.innerHTML = viewportWidth;
+  window.addEventListener('resize', function () {
+    viewportWidth = window.innerWidth + 'px';
+    vp.innerHTML = viewportWidth;
+  });
+
+</script>
+</body>
+</html>

@@ -130,7 +130,7 @@ Using `.btn-icon` together with `.pill` yields a circular button:
 
 ## Buttons with Dropdowns
 
-The dropdown component can be used with buttons. See the <a href="/dropdown/">dropdown component</a> for explanation.
+The dropdown component can be used with buttons. See the <a href="dropdown/">dropdown component</a> for explanation.
 
 <div class="dropdown mb-3e">
   <button class="btn dropdown-ctrl">Example</button><span class="dropdown-content">Example dropdown component content</span>

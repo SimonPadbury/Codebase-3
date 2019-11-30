@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout | Codebase</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../css/codebase.css">
+    <link rel="stylesheet" href="../css/codebase-docs.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+
+<body class="codebase-docs">
+
+  <div class="megamenu-wrapper megamenu-wrapper-fixed-top bg-theme-1 bb-thin py-1e">
+  <div class="codebase-brand p-block">
+    <a href="index.html">
+      <!-- Codebase logo-->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12">
+        <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z" stroke-width="1" stroke-linecap="square" stroke-linejoin="square"/>
+      </svg>
+      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+    </a>
+  </div>
+
+  <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
+    Menu &nbsp;<span class="fas fa-bars"></span>
+  </span>
+
+  <nav class="megamenu hide-md-down">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="../1-getting-started/getting-started.html">Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
+      </li>
+      <li>
+        <a id="theme-toggle">Theme</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container">
+    <div id="sidebar" class="offcanvas">
+      <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
+        <div class="offcanvas-close offcanvas-close-right hide-lg-up">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <p class="small hide-lg-up"><a id="theme-toggle">Theme</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase">GitHub</a></p>
+
+        <div id="docs-toc" class="bg-theme-1">
+  <p class="my-2e bold t-theme-4">Documentation</p>
+  <ul class="menu">
+    <li class="menu-item"><strong><a href="../1-getting-started/getting-started.html">Getting Started</a></strong></li>
+    <li class="menu-item"><strong><a href="../2-basics/basics.html">Basics</a></strong></li>
+    <li class="menu-item"><strong><a href="../3-layout/layout.html">Layout</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="../3-layout/containers.html">Containers</a></li>
+        <li class="menu-item"><a href="../3-layout/flexbox.html">Flexbox</a></li>
+        <li class="menu-item"><a href="../3-layout/grid.html">Grid</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><strong><a href="../4-utilities/utilities.html">Utilities</a></strong></li>
+    <li class="menu-item"><strong><a href="../5-components/components.html">Components</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="../5-components/toggler.html">Toggler</a></li>
+        <li class="menu-item"><a href="../5-components/activator.html">Activator</a></li>
+        <li class="menu-item"><a href="../5-components/showhide.html">Showhide</a></li>
+        <li class="menu-item"><a href="../5-components/dropdowns.html">Dropdowns</a></li>
+        <li class="menu-item"><a href="../5-components/buttons.html">Buttons</a></li>
+        <li class="menu-item"><a href="../5-components/badges-and-labels.html">Badges and Labels</a></li>
+        <li class="menu-item"><a href="../5-components/menus.html">Menus</a></li>
+        <li class="menu-item"><a href="../5-components/megamenus.html">Megamenus</a></li>
+        <li class="menu-item"><a href="../5-components/offcanvas.html">Offcanvas</a></li>
+        <li class="menu-item"><a href="../5-components/cards.html">Cards</a></li>
+        <li class="menu-item"><a href="../5-components/tables.html">Tables</a></li>
+        <li class="menu-item"><a href="../5-components/modals.html">Modals</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <article id="mainbody">
+      <div class="mainbody-prose mt-9e px-2e">
+        <h1 class="big thin">Layout</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <ul class="menu small">
+    <li class="menu-item"><a href="#the-codebase-element-grid">The Codebase Element Grid</a></li>
+    <li class="menu-item"><a href="#element-grid-unit-suffixes-in-utility-classes">Element Grid Unit Suffixes in Utility Classes</a></li>
+  </ul>
+</div>
+
+<p class="h4 thin">In Codebase, components and utility classes are built upon a <a href="#the-codebase-element-grid">0.5rem element grid</a>. Codebase also gives you a range of <a href="3-layout/containers.html">containers</a> of different sizes, simple columnar positioning by <a href="3-layout/flexbox.html">flexbox</a>, and complex layouts can be built using a real <a href="3-layout/grid.html">CSS grid system</a>. A few more things can be found in <a href="4-utilities/utilities.html#layout-utilities">layout utilities</a>.
+
+<h2 id="the-codebase-element-grid">The Codebase Element Grid</h2>
+<p>Codebase uses a “soft” <strong>0.5rem element grid</strong> for consistently positioning elements relative to each other.</p>
+<p>This is similar in principle to various 8px grids out there (also known as 8-point or 8dp [device pixel] grids). For example:</p>
+<ul>
+<li><a href="https://spec.fm/specifics/8-pt-grid">SpecFM’s 8-point grid</a></li>
+<li><a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632">Intro to The 8-Point Grid System</a> by Elliot Dahl</li>
+<li><a href="https://material.io/guidelines/layout/metrics-keylines.html">Material Design’s 4dp square baseline grid</a></li>
+</ul>
+<p>The Codebase element grid has been deployed a follows:</p>
+<ol>
+<li>Element grid increments of 0.5rem have been used for setting all line-heights, margins and paddings throughout Codebase.</li>
+<li>By default, the base typography vertical rhythm (line-height) is set at 1.5rem (= 3 element grid units). The line heights for headers have also been set using 0.5rem increments.</li>
+<li>The layout <code>.grid</code> and <code>.flexbox</code> gaps have been set at 1.5rem.</li>
+<li>Decoration utilities for margins and paddings have been set using values from the 0.5rem element grid.</li>
+</ol>
+<img src="/img/Codebase-element-grid.svg" class="mb-3e" />
+
+<div class="p-2e bg-theme-2">This <code class="b-thin">padding: 0.5rem 1rem;</code> is also available as the padding utility class <code class="b-thin">.p-block`.</code> See <a href="4-utilities/utilities.html#block-padding">block padding</a>.</div>
+
+<h3 id="element-grid-unit-suffixes-in-utility-classes">Element Grid Unit Suffixes in Utility Classes</h3>
+<p>For various utility classes, the element grid is set using “element grid units” of 0.5rem.</p>
+<p class="center bold">1 element grid unit = 1e = 0.5rem</p>
+
+<p>Where element grid units have been used in utility classes (e.g. margins and paddings), these have been given the unit <code>e</code> as follows:</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Element grid measure</th>
+      <th>Utility class suffix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.25rem</td>
+      <td><code>-He</code>*</td>
+    </tr>
+    <tr>
+      <td>0.5rem</td>
+      <td><code>-1e</code></td>
+    </tr>
+    <tr>
+      <td>1rem</td>
+      <td><code>-2e</code></td>
+    </tr>
+    <tr>
+      <td>1.5rem</td>
+      <td><code>-3e</code></td>
+    </tr>
+    <tr>
+      <td>3rem</td>
+      <td><code>-6e</code></td>
+    </tr>
+    <tr>
+      <td>4.5rem</td>
+      <td><code>-9e</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><sup>1</sup> This half element-grid spacer is also available in <a href="/4-utilities/spacing.html">margin and padding (i.e. spacing) utility classes</a>.</p>
+      <hr>
+
+      <div class="flexbox flexbox-grow-auto mb-6e">
+      
+      <div class="left"><a href="/2-basics/basics.html"><i class="fas fa-arrow-left"></i> Basics</a></div>
+      
+
+      
+      <div class="right"><a href="/3-layout/element-grid.html">Element Grid <i class="fas fa-arrow-right"></i></a></div>
+      
+      </div>
+
+    </article><!-- /#mainbody -->
+  </main>
+
+  <div class="b-thin rounded px-He bg-theme-2 center" style="position: fixed; right: 0.5rem; bottom: 0.5rem; z-index: 999;">Width: <span id="vp"></span> <span class="hide-md-up">[-sm]</span><span class="hide-sm-down hide-lg-up">[-md &rarr; -lg]</span><span class="hide-md-down">[-lg]</span></div>
+
+<script src="../js/codebase.js"></script>
+<script src="../js/prism.js"></script>
+<script>
+  var vp = document.body.querySelector('#vp');
+  var viewportWidth = window.innerWidth + 'px';
+  vp.innerHTML = viewportWidth;
+  window.addEventListener('resize', function () {
+    viewportWidth = window.innerWidth + 'px';
+    vp.innerHTML = viewportWidth;
+  });
+
+</script>
+</body>
+</html>

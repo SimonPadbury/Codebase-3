@@ -94,7 +94,7 @@ Example:
           </div>
         </div>
         <div class="m-2e bt-thin pt-2e">
-          A few examples of <a href="/5-components/menus.html">menus</a>, <a href="/5-components/cards.html">cards</a>, <a href="/2-basics/form-elements.html">forms elements</a> and <a href="/5-components/buttons.html">buttons</a> that can be placed within a Codebase megamenu panel. Control the panel layout using <a href="/3-layout/flexbox.html">flexbox</a> or <a href="/3-layout/grid.html">grid</a> classes.
+          A few examples of <a href="5-components/menus.html">menus</a>, <a href="5-components/cards.html">cards</a>, <a href="2-basics/form-elements.html">forms elements</a> and <a href="5-components/buttons.html">buttons</a> that can be placed within a Codebase megamenu panel. Control the panel layout using <a href="3-layout/flexbox.html">flexbox</a> or <a href="3-layout/grid.html">grid</a> classes.
         </div>
       </div>
     </li>
@@ -454,7 +454,7 @@ Use `.megamenu-wrapper.megamenu-wrapper-fixed-top` to fix the megamenu wrapper t
 This fixing only affects the megamenu wrapper (and the megamenu in navbar mode). In offvanvas mode the megamenu already has a fixed position.
 
 <div class="bg-theme-2 mb-3e p-2e">For an example of a fixed megamenu, see the one at the top of this page.<br><br>
-(However, in the layout for these docs the this megamenu has been <a href="/4-utilities/invisibility.html">hidden</a> in offcanvas mode, and the main sidebar has been used as a responsive <a href="/5-components/offcanvas.html">offcanvas</a> panel instead.</div>
+(However, in the layout for these docs the this megamenu has been <a href="4-utilities/invisibility.html">hidden</a> in offcanvas mode, and the main sidebar has been used as a responsive <a href="5-components/offcanvas.html">offcanvas</a> panel instead.</div>
 
 ## Adding Form Elements and Buttons to the Navbar
 
@@ -713,7 +713,7 @@ Example 12 (background color added to aid navbar visibility):
           </div>
         </div>
         <div class="m-2e bt-thin pt-2e">
-          A few examples of <a href="/5-components/menus.html">menus</a>, <a href="/5-components/cards.html">cards</a>, <a href="/2-basics/form-elements.html">forms elements</a> and <a href="/5-components/buttons.html">buttons</a> that can be placed within a Codebase megamenu panel. Control the panel layout using <a href="/3-layout/flexbox.html">flexbox</a> or <a href="/3-layout/grid.html">grid</a> classes.
+          A few examples of <a href="5-components/menus.html">menus</a>, <a href="5-components/cards.html">cards</a>, <a href="2-basics/form-elements.html">forms elements</a> and <a href="5-components/buttons.html">buttons</a> that can be placed within a Codebase megamenu panel. Control the panel layout using <a href="3-layout/flexbox.html">flexbox</a> or <a href="3-layout/grid.html">grid</a> classes.
         </div>
       </div>
     </li>
@@ -815,4 +815,4 @@ Example 13 using `.primary`:
   </tbody>
 </table>
 
-<div class="bg-theme-2 p-2e">Megamenu not big enough for you? Try a <a href="/5-components/modals.html#full-cover-modal">Full-Cover Modal</a>.</div>
+<div class="bg-theme-2 p-2e">Megamenu not big enough for you? Try a <a href="5-components/modals.html#full-cover-modal">Full-Cover Modal</a>.</div>
