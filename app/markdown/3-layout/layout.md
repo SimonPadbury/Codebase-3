@@ -13,7 +13,7 @@ nextLink: "/3-layout/element-grid.html"
   </ul>
 </div>
 
-<p class="h4 thin">In Codebase, components and utility classes are built upon a <a href="#the-codebase-element-grid">0.5rem element grid</a>. Codebase also gives you a range of <a href="/3-layout/containers.html">containers</a> of different sizes, simple columnar positioning by <a href="/3-layout/flexbox.html">flexbox</a>, and complex layouts can be built using a real <a href="/3-layout/grid.html">CSS grid system</a>. A few more things can be found in <a href="/4-utilities/utilities.html#layout-utilities">layout utilities</a>.
+<p class="h4 thin">In Codebase, components and utility classes are built upon a <a href="#the-codebase-element-grid">0.5rem element grid</a>. Codebase also gives you a range of <a href="../3-layout/containers.html">containers</a> of different sizes, simple columnar positioning by <a href="../3-layout/flexbox.html">flexbox</a>, and complex layouts can be built using a real <a href="../3-layout/grid.html">CSS grid system</a>. A few more things can be found in <a href="../4-utilities/utilities.html#layout-utilities">layout utilities</a>.
 
 ## The Codebase Element Grid
 
@@ -34,7 +34,7 @@ The Codebase element grid has been deployed a follows:
 
 <img src="/img/Codebase-element-grid.svg" class="mb-3e" />
 
-<div class="p-2e bg-theme-2">This <code class="b-thin">padding: 0.5rem 1rem;</code> is also available as the padding utility class <code class="b-thin">.p-block`.</code> See <a href="/4-utilities/utilities.html#block-padding">block padding</a>.</div>
+<div class="p-2e bg-theme-2">This <code class="b-thin">padding: 0.5rem 1rem;</code> is also available as the padding utility class <code class="b-thin">.p-block`.</code> See <a href="../4-utilities/utilities.html#block-padding">block padding</a>.</div>
 
 ### Element Grid Unit Suffixes in Utility Classes
 

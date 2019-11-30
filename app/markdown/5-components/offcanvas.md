@@ -15,7 +15,7 @@ nextLink: "/5-components/cards.html"
   </ul>
 </div>
 
-<p class="h4 thin">Codebase offcanvas panels are a <a href="/5-components/activator.html">activator</a> components using <code>data-content-id="{identifier}"</code> for specificity.</p>
+<p class="h4 thin">Codebase offcanvas panels are a <a href="../5-components/activator.html">activator</a> components using <code>data-content-id="{identifier}"</code> for specificity.</p>
 
 ## The Simplest Offcanvas
 

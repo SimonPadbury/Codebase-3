@@ -176,7 +176,7 @@ This is what a basic (classless) table looks like using Codebase:
 
 No styling is applied to the table tag, except for bottom margin below the entire table (same as for paragraphs and headings). So, there is probably nothing that will interfere with other frameworks or plugins if you use them.
 
-For more functionality and styling, see the Codebase <a href="/5-components/tables.html">table component</a>.
+For more functionality and styling, see the Codebase <a href="../5-components/tables.html">table component</a>.
 
 ## Form Elements
 
@@ -187,10 +187,10 @@ In Codebase, form elements and buttons are all, by default, inline elements.
 <div class="bg-theme-2 p-2e mb-3e">
 	<p>Various Codebase utility classes also work on form elements. See:</p>
 	<ul>
-		<li><a href="/4-utilities/utilities.html#form-utilities">Form utilities</a></li>
-		<li><a href="/4-utilities/utilities.html#layout-utilities">Layout utilities</a></li>
+		<li><a href="../4-utilities/utilities.html#form-utilities">Form utilities</a></li>
+		<li><a href="../4-utilities/utilities.html#layout-utilities">Layout utilities</a></li>
 	</ul>
-	<p class="mb-0">You’ll also want to see <a href="/5-components/buttons.html">buttons</a>, and see how to use <a href="/5-components/buttons.html#buttons-and-forms">buttons and forms</a> together.</p>
+	<p class="mb-0">You’ll also want to see <a href="../5-components/buttons.html">buttons</a>, and see how to use <a href="../5-components/buttons.html#buttons-and-forms">buttons and forms</a> together.</p>
 </div>
 
 <label for="text-example">Text:</label>
