@@ -27,7 +27,7 @@ Example 1 – click this button: <span class="offcanvas-ctrl" data-content-id="o
   </div>
   <h3>This is an Offcanvas Side Panel</h3>
   <p>In this simple example, no width has been specified. Therefore it will expand to the width required for its content (i.e. the text you are currently reading), up to <code class="b-thin">max-width: 1000px</code>.</p>
-  <p>Click the <span class="fas fa-times"></span> icon above-right to dismiss. Alternatively, if there is any of your screen not covered by this panel on your device, then you can "click outside to dismiss".</p>
+  <p>Click the <span class="fas fa-times"></span> icon above-right to dismiss. Alternatively, if there is any of your device screen not covered by this panel, then you can "click outside to dismiss".</p>
 </div>
 
 ```HTML
