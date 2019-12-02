@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Components | Codebase</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/codebase.css">
+    <link rel="stylesheet" href="css/codebase-docs.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+
+<body class="codebase-docs">
+
+  <div class="megamenu-wrapper megamenu-wrapper-fixed-top bg-theme-1 bb-thin py-1e">
+  <div class="codebase-brand p-block">
+    <a href="index.html">
+      <!-- Codebase logo-->
+      <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-miterlimit="2"><path d="M195.956 115.956c14.059-14.059 36.853-14.059 50.912 0 14.058 14.059 14.058 36.853 0 50.912L323.235 90.5l-76.367-76.368c14.058 14.059 14.058 36.853 0 50.912-14.059 14.059-36.853 14.059-50.912 0-14.059-14.059-36.853-14.059-50.912 0-14.059 14.059-14.059 36.853 0 50.912 14.059 14.059 36.853 14.059 50.912 0M17.765 90.5l76.367-76.368c-42.176 42.177-42.176 110.559 0 152.736L17.765 90.5z" fill-rule="nonzero" stroke="#000" stroke-width="10"/></svg>
+      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+    </a>
+  </div>
+
+  <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
+    Menu &nbsp;<span class="fas fa-bars"></span>
+  </span>
+
+  <nav class="megamenu hide-md-down">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="1-getting-started/getting-started.html">Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
+      </li>
+      <li>
+        <a id="theme-toggle">Theme</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container">
+    <div id="sidebar" class="offcanvas">
+      <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
+        <div class="offcanvas-close offcanvas-close-right hide-lg-up">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <p class="small hide-lg-up"><a id="theme-toggle">Theme</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase">GitHub</a></p>
+
+        <div id="docs-toc" class="pb-3e bg-theme-1">
+  <p class="my-2e bold t-theme-4">Documentation</p>
+  <ul class="menu">
+    <li class="menu-item"><strong><a href="1-getting-started.html">Getting Started</a></strong></li>
+    <li class="menu-item"><strong><a href="2-basics.html">Basics</a></strong></li>
+    <li class="menu-item"><strong><a href="3-layout.html">Layout</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="3-layout-containers.html">Containers</a></li>
+        <li class="menu-item"><a href="3-layout-flexbox.html">Flexbox</a></li>
+        <li class="menu-item"><a href="3-layout-grid.html">Grid</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><strong><a href="4-utilities.html">Utilities</a></strong></li>
+    <li class="menu-item"><strong><a href="5-components.html">Components</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="5-components-toggler.html">Toggler</a></li>
+        <li class="menu-item"><a href="5-components-activator.html">Activator</a></li>
+        <li class="menu-item"><a href="5-components-showhide.html">Showhide</a></li>
+        <li class="menu-item"><a href="5-components-dropdowns.html">Dropdowns</a></li>
+        <li class="menu-item"><a href="5-components-buttons.html">Buttons</a></li>
+        <li class="menu-item"><a href="5-components-badges-and-labels.html">Badges and Labels</a></li>
+        <li class="menu-item"><a href="5-components-menus.html">Menus</a></li>
+        <li class="menu-item"><a href="5-components-megamenus.html">Megamenus</a></li>
+        <li class="menu-item"><a href="5-components-offcanvas.html">Offcanvas</a></li>
+        <li class="menu-item"><a href="5-components-cards.html">Cards</a></li>
+        <li class="menu-item"><a href="5-components-tables.html">Tables</a></li>
+        <li class="menu-item"><a href="5-components-modals.html">Modals</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <article id="mainbody">
+      <div class="mainbody-prose mt-9e px-2e">
+        <h1 class="big thin">Components</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <ul class="menu small">
+    <li class="menu-item"><a href="#component-mixins-and-class-builders">Component Mixins and Class Builders</a></li>
+    <li class="menu-item"><a href="#components-that-use-javascript">Components That Use JavaScript</a></li>
+  </ul>
+</div>
+
+<p class="h4 thin">Codebase components are common HTML/CSS patterns. Some have added functionality from a tiny JavaScript that simply adds/removes CSS classes.</p>
+
+<h2 id="component-mixins-and-class-builders">Component Mixins and Class Builders</h2>
+<p>Almost everything in Codebase, including all components, has been created first as a set of SCSS mixins. These are then combined and included in their respective class builder mixins.</p>
+<p>These class builders are under the control of a set of true <code>!default</code> variables in <code>codebase/scss/00_default-variables/_default-variables.scss</code>.</p>
+<p>This means that SCSS users can:</p>
+<ol>
+<li>Toggle component classes for inclusion (true) or exclusion (false) in your advanced theme build by overriding these defaults.</li>
+<li>Include and combine and re-style (decorate) codebase components in your own theme SCSS.</li>
+<li>Combine various frameworks with similarly named CSS classes while avoiding clashes: toggle off Codebase CSS class names and create new (e.g. prefixed) classnames for Codebase mixins.</li>
+</ol>
+<h2 id="components-that-use-javascript">Components That Use JavaScript</h2>
+<p>Some components in Codebase use tiny, simple JavaScript scripts for their operation. These have all been bundled into <code>codebase.js</code>.</p>
+<p>Since Codebase v2.0, <code>codebase.js</code> has been totally refactored as “vanilla JavaScript” – it does not require jQuery or any other library.</p>
+<p>Most Codebase script functions simply add and remove CSS classes, in response to click/tap events or viewport resizes (e.g. rotating a phone from portrait to landscape orientation).</p>
+<h3 id="toggler">Toggler</h3>
+<p>Toggler responds responds to clicks/taps on a controller element (e.g. button) and it applies class <code>is-toggled</code> <em>or a class of your choice</em> to its target element. Click/tap the toggler controller again, and your class will be removed from the target.</p>
+<p>Toggler is not actually used for any Codebase component (but there are some examples in the docs). So, it has no styling in <code>codebase.css</code>. Toggler is there for you to use for your own situations that require toggling (class add/remove).</p>
+<p>Togglers are independent of each other, therefore multiple togglers can be toggled at any one time.</p>
+<p>Go to <a href="5-components-toggler.html">Toggler &rarr;</a></p>
+<h3 id="activator">Activator</h3>
+<p>The activator script responds to clicks/taps on a “controller” element (e.g. button) and it applies <code>.is-active</code> classes to the activated controller and to its component wrapper <em>and</em> target “content” element. Click/tap this controller element again and it will remove the <code>.is-active</code> classes – and deactivation can also be caused by “clicking outside” the active component or by clicking a &quot;close&quot; element (e.g. a <em>dismiss</em> button).</p>
+<p>Activator is used by showhide, dropdowns, menubars (for the collapsed state on small viewports), offcanvas panels, and modals. Plus you can create your own componends that need to use the activator functionality.</p>
+<p>Only one activator component can be active at any one time – activating one will deactivate all others.</p>
+<p>Go to <a href="5-components-activator.html">Activator &rarr;</a><br>
+&nbsp; – <a href="5-components-showhide.html">Showhide &rarr;</a><br>
+&nbsp; – <a href="5-components-dropdowns.html">Dropdowns &rarr;</a><br>
+&nbsp; – <a href="5-components-offcanvas.html">Offcanvas &rarr;</a><br>
+&nbsp; – <a href="5-components-modals.html">Modals &rarr;</a></p>
+<h3 id="megamenus">Megamenus</h3>
+<p>The Codebase megamenu is new with v.3.0. It is an all-in-one navigation system that shows as an offcanvas sidebar on small viewports and as a navbar on large viewports, capable of handling full-width dropdown panels.</p>
+<p>In offcanvas mode (not the same as <a href="5-components-offcanvas.html">offcanvas</a>) side panels, a JavaScript toggler (often with a “hamburger” navicon) opens and closes the hidden sidebar panel. The panel can also be dismissed by “clicking outside” and by resizing the viewport, e.g. in rotating between portrait and landscape orientations. Submenus within the sidebar are hidden by default and they can be individually revealed by their own toggler.</p>
+<p>In navbar mode, submenu panels are revealed by tapping on touch screens or by hovering a pointing device (e.g. mouse).</p>
+<p>Go to <a href="5-components-megamenus.html">Megamenu &rarr;</a></p>
+<h3 id="responsive-tables">Responsive Tables</h3>
+<p>Trying to display a wide tables on a narrow screens can be problematic. So a Codebase table script looks for every Codebase <code>.table</code> class and then double wraps it in two DIVs with related classes. The outer DIV wrapper constrains the overall width to the width of the available space while the inner DIV wrapper enables the table to overflow horizontally but invisibly – and it enables the visitor to horizontally-scroll the table so that they can see all the data.</p>
+<p>Go to <a href="5-components-tables.html#codebase-tables-are-responsive">Responsive Tables &rarr;</a></p>
+      <hr>
+
+      <div class="flexbox flexbox-grow-auto mb-6e">
+      
+      <div class="left"><a href="/4-utilities.html"><i class="fas fa-arrow-left"></i> Utilities</a></div>
+      
+
+      
+      <div class="right"><a href="/5-components-toggler.html">Toggler <i class="fas fa-arrow-right"></i></a></div>
+      
+      </div>
+
+    </article><!-- /#mainbody -->
+  </main>
+
+  <div class="b-thin rounded px-He bg-theme-2 center" style="position: fixed; right: 0.5rem; bottom: 0.5rem; z-index: 999;">Width: <span id="vp"></span> <span class="hide-md-up">[-sm]</span><span class="hide-sm-down hide-lg-up">[-md &rarr; -lg]</span><span class="hide-md-down">[-lg]</span></div>
+
+<script src="js/codebase.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  var vp = document.body.querySelector('#vp');
+  var viewportWidth = window.innerWidth + 'px';
+  vp.innerHTML = viewportWidth;
+  window.addEventListener('resize', function () {
+    viewportWidth = window.innerWidth + 'px';
+    vp.innerHTML = viewportWidth;
+  });
+
+</script>
+</body>
+</html>

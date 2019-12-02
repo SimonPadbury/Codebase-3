@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buttons | Codebase</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/codebase.css">
+    <link rel="stylesheet" href="css/codebase-docs.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+
+<body class="codebase-docs">
+
+  <div class="megamenu-wrapper megamenu-wrapper-fixed-top bg-theme-1 bb-thin py-1e">
+  <div class="codebase-brand p-block">
+    <a href="index.html">
+      <!-- Codebase logo-->
+      <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-miterlimit="2"><path d="M195.956 115.956c14.059-14.059 36.853-14.059 50.912 0 14.058 14.059 14.058 36.853 0 50.912L323.235 90.5l-76.367-76.368c14.058 14.059 14.058 36.853 0 50.912-14.059 14.059-36.853 14.059-50.912 0-14.059-14.059-36.853-14.059-50.912 0-14.059 14.059-14.059 36.853 0 50.912 14.059 14.059 36.853 14.059 50.912 0M17.765 90.5l76.367-76.368c-42.176 42.177-42.176 110.559 0 152.736L17.765 90.5z" fill-rule="nonzero" stroke="#000" stroke-width="10"/></svg>
+      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+    </a>
+  </div>
+
+  <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
+    Menu &nbsp;<span class="fas fa-bars"></span>
+  </span>
+
+  <nav class="megamenu hide-md-down">
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="1-getting-started/getting-started.html">Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
+      </li>
+      <li>
+        <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
+      </li>
+      <li>
+        <a id="theme-toggle">Theme</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <main class="container">
+    <div id="sidebar" class="offcanvas">
+      <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
+        <div class="offcanvas-close offcanvas-close-right hide-lg-up">
+          <i class="fas fa-times"></i>
+        </div>
+
+        <p class="small hide-lg-up"><a id="theme-toggle">Theme</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a></p>
+        <p class="small hide-lg-up"><a href="https://github.com/SimonPadbury/Codebase">GitHub</a></p>
+
+        <div id="docs-toc" class="pb-3e bg-theme-1">
+  <p class="my-2e bold t-theme-4">Documentation</p>
+  <ul class="menu">
+    <li class="menu-item"><strong><a href="1-getting-started.html">Getting Started</a></strong></li>
+    <li class="menu-item"><strong><a href="2-basics.html">Basics</a></strong></li>
+    <li class="menu-item"><strong><a href="3-layout.html">Layout</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="3-layout-containers.html">Containers</a></li>
+        <li class="menu-item"><a href="3-layout-flexbox.html">Flexbox</a></li>
+        <li class="menu-item"><a href="3-layout-grid.html">Grid</a></li>
+      </ul>
+    </li>
+    <li class="menu-item"><strong><a href="4-utilities.html">Utilities</a></strong></li>
+    <li class="menu-item"><strong><a href="5-components.html">Components</a></strong>
+      <ul class="menu">
+        <li class="menu-item"><a href="5-components-toggler.html">Toggler</a></li>
+        <li class="menu-item"><a href="5-components-activator.html">Activator</a></li>
+        <li class="menu-item"><a href="5-components-showhide.html">Showhide</a></li>
+        <li class="menu-item"><a href="5-components-dropdowns.html">Dropdowns</a></li>
+        <li class="menu-item"><a href="5-components-buttons.html">Buttons</a></li>
+        <li class="menu-item"><a href="5-components-badges-and-labels.html">Badges and Labels</a></li>
+        <li class="menu-item"><a href="5-components-menus.html">Menus</a></li>
+        <li class="menu-item"><a href="5-components-megamenus.html">Megamenus</a></li>
+        <li class="menu-item"><a href="5-components-offcanvas.html">Offcanvas</a></li>
+        <li class="menu-item"><a href="5-components-cards.html">Cards</a></li>
+        <li class="menu-item"><a href="5-components-tables.html">Tables</a></li>
+        <li class="menu-item"><a href="5-components-modals.html">Modals</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <article id="mainbody">
+      <div class="mainbody-prose mt-9e px-2e">
+        <h1 class="big thin">Buttons</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <ul class="menu small">
+    <li class="menu-item"><a href="#default-buttons">Default Buttons</a></li>
+    <li class="menu-item"><a href="#button-colors">Button Colors</a></li>
+    <li class="menu-item"><a href="#button-states">Button States</a></li>
+    <li class="menu-item"><a href="#small-default-and-large-buttons">Small, Default and Large Buttons</a></li>
+    <li class="menu-item"><a href="#buttons-with-icons">Buttons with Icons</a></li>
+    <li class="menu-item"><a href="#buttons-with-dropdowns">Buttons with Dropdowns</a></li>
+    <li class="menu-item"><a href="#buttons-and-forms">Buttons and Forms</a></li>
+  </ul>
+</div>
+
+<p class="h4 thin">Codebase button classes can be applied to button tags, input-button tags and hyperlink anchor tags.</p>
+
+<h2 id="default-buttons">Default Buttons</h2>
+<p><button class="btn" type="submit">Button</button> – button <code>.btn</code></p>
+<p><input class="btn" value="Input" type="submit"> – input button <code>.btn</code></p>
+<p><a class="btn" href="#/">Hyperlink</a> – hyperlink <code>.btn</code></p>
+<p>Block width button using the <code>.block</code> layout utility. See <a href="4-utilities.html#layout-utilities">layout utilities</a>.</p>
+<p><button class="btn block">Block width button</button></p>
+<h2 id="button-colors">Button Colors</h2>
+<p><button class="btn">Default</button> – <code>.btn</code></p>
+<p><button class="btn primary">Primary</button> – <code>.btn.primary</code></p>
+<p><button class="btn secondary">Secondary</button> – <code>.btn.secondary</code></p>
+<p><button class="btn warning">Warning</button> – <code>.btn.warning</code></p>
+<p><button class="btn success">Success</button> – <code>.btn.success</code></p>
+<p><button class="btn danger">Danger</button> – <code>.btn.danger</code></p>
+<h2 id="button-states">Button States</h2>
+<p>Normal / <code>:hover</code> <code>:focus</code> <code>:active</code> <code>.btn-active</code> / <code>:disabled</code> <code>.btn-disabled</code></p>
+<p><button class="btn">Default</button>
+<button class="btn btn-active">Default active</button>
+<button class="btn btn-disabled" aria-disabled="true">Default disabled</button></p>
+<p><button class="btn primary">Primary</button>
+<button class="btn primary btn-active">Primary active</button>
+<button class="btn primary btn-disabled" aria-disabled="true">Primary disabled</button></p>
+<p><button class="btn secondary">Secondary</button>
+<button class="btn secondary btn-active">Secondary active</button>
+<button class="btn secondary btn-disabled" aria-disabled="true">Secondary disabled</button></p>
+<p><button class="btn success">Success</button>
+<button class="btn success btn-active">Success active</button>
+<button class="btn success btn-disabled" aria-disabled="true">Success disabled</button></p>
+<p><button class="btn warning">Warning</button>
+<button class="btn warning btn-active">Warning active</button>
+<button class="btn warning btn-disabled" aria-disabled="true">Warning disabled</button></p>
+<p><button class="btn danger">Danger</button>
+<button class="btn danger btn-active">Danger active</button>
+<button class="btn danger btn-disabled" aria-disabled="true">Danger disabled</button></p>
+<h2 id="small-default-and-large-buttons">Small, Default and Large Buttons</h2>
+<p>Add <code>.small</code> for a smaller button, or <code>.big</code> for a bigger button. See <a href="4-utilities.html#text-utilities">text utilities</a>.</p>
+<p><a class="btn primary small" href="#/">Small</a> <a class="btn primary" href="#/">Default</a> <a class="btn primary big" href="#/">Big</a></p>
+<p class="mt-3e mr-2e bg-theme-2 p-2e">The smaller form button size has been designed for fitting within menus and menubars. In that context, give it a margin class <code>.m-1e</code> to position it correctly.</p>
+
+<h2 id="buttons-with-icons">Buttons with Icons</h2>
+<p>Icons (characters, pictograms or emojis) can be included in buttons:</p>
+<p><button class="btn success"><i class="fas fa-check"></i> OK</button>
+<button class="btn secondary"><i class="fas fa-folder"></i> Archive</button>
+<button class="btn primary">Go <i class="fas fa-arrow-right"></i></button>
+<button class="btn warning">Really <i class="fas fa-question-circle"></i></button>
+<button class="btn danger">Reset <i class="fas fa-times"></i></button>
+<button class="btn">Menu <i class="fas fa-bars"></i></button></p>
+<p><em>Examples in these docs use <a href="https://fontawesome.com">Font Awesome</a> icons.</em></p>
+<h3 id="square-icon-buttons">Square Icon Buttons</h3>
+<p><code>.btn-icon</code> – ensures you get square buttons when only a single character, symbol or icon is present within the button:</p>
+<p><button class="btn success btn-icon"><i class="fas fa-check"></i></button>
+<button class="btn secondary btn-icon"><i class="fas fa-folder"></i></button>
+<button class="btn primary btn-icon"><i class="fas fa-arrow-right"></i></button>
+<button class="btn warning btn-icon"><i class="fas fa-question-circle"></i></button>
+<button class="btn danger btn-icon"><i class="fas fa-times"></i></button>
+<button class="btn btn-icon"><i class="fas fa-bars"></i></button></p>
+<p>Add <code>.big</code> for a larger icon button (both the button and the icon are made big):</p>
+<p><button class="btn success btn-icon big"><i class="fas fa-check"></i></button>
+<button class="btn secondary btn-icon big"><i class="fas fa-folder"></i></button>
+<button class="btn primary btn-icon big"><i class="fas fa-arrow-right"></i></button>
+<button class="btn warning btn-icon big"><i class="fas fa-question-circle"></i></button>
+<button class="btn danger btn-icon big"><i class="fas fa-times"></i></button>
+<button class="btn btn-icon big"><i class="fas fa-bars"></i></button></p>
+<h3 id="rounded-icon-buttons">Rounded Icon Buttons</h3>
+<p><button class="btn pill">Example</button> <code>.btn.pill</code></p>
+<p>Using <code>.btn-icon</code> together with <code>.pill</code> yields a circular button:</p>
+<p><button class="btn pill success btn-icon"><i class="fas fa-check"></i></button>
+<button class="btn pill secondary btn-icon"><i class="fas fa-folder"></i></button>
+<button class="btn pill primary btn-icon"><i class="fas fa-arrow-right"></i></button>
+<button class="btn pill warning btn-icon"><i class="fas fa-question-circle"></i></button>
+<button class="btn pill danger btn-icon"><i class="fas fa-times"></i></button>
+<button class="btn pill btn-icon"><i class="fas fa-bars"></i></button></p>
+<h2 id="buttons-with-dropdowns">Buttons with Dropdowns</h2>
+<p>The dropdown component can be used with buttons. See the <a href="5-components-dropdowns.html">dropdown component</a> for explanation.</p>
+<div class="dropdown mb-3e">
+  <button class="btn dropdown-ctrl">Example</button><span class="dropdown-content">Example dropdown component content</span>
+</div>
+
+<h2 id="buttons-and-forms">Buttons and Forms</h2>
+<p>Codebase buttons and form elements play well together:</p>
+<form class="mb-3e">
+  <input id="signup-example-1" name="examplename" placeholder="Name" type="text">
+  <input id="signup-example-2" name="examplename" placeholder="Email" type="email">
+  <button class="btn" type="submit">
+    Signup
+  </button>
+</form>
+
+<pre><code class="language-HTML">&lt;form class=&quot;mb-3e&quot;&gt;
+  &lt;input id=&quot;signup-example-1&quot; name=&quot;examplename&quot; placeholder=&quot;Name&quot; type=&quot;text&quot;&gt;
+  &lt;input id=&quot;signup-example-2&quot; name=&quot;examplename&quot; placeholder=&quot;Email&quot; type=&quot;email&quot;&gt;
+  &lt;button class=&quot;btn&quot; type=&quot;submit&quot;&gt;
+    Signup
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<form class="mb-3e">
+  <input class="pill" id="search-example-1" name="examplename" placeholder="Search..." type="search">
+  <button class="btn btn-icon pill" type="submit">
+    <span class="fas fa-search"></span>
+  </button>
+</form>
+
+<p>Use a <code>.small</code> search input and <code>.small</code> button for fitting a search form into a <a href="5-components-megamenus.html#adding-form-elements-and-buttons-to-the-navbar">megamenu</a>:</p>
+<form class="mb-3e">
+  <input class="small" id="search-example-2" name="examplename" placeholder="Search..." type="search">
+  <button class="btn btn-icon small" type="submit">
+    <span class="fas fa-search"></span>
+  </button>
+</form>
+
+<p>Both form element and buttons can have <code>.block</code> <a href="4-utilities.html#layout-utilities">layout utility</a> so you can do things such as this:</p>
+<div style="max-width: 300px; margin: 0 auto 1.5rem;">
+  <form>
+    <input class="mb-1e block" id="signup-example-3" name="examplename" placeholder="Name" type="text">
+    <input class="mb-1e block"  id="signup-example-4" name="examplename" placeholder="Email" type="email">
+    <button class="btn block" type="submit">
+      Signup
+    </button>
+  </form>
+</div>
+
+<pre><code class="language-HTML">&lt;form&gt;
+  &lt;input class=&quot;mb-1e block&quot; id=&quot;signup-example-3&quot; name=&quot;examplename&quot; placeholder=&quot;Name&quot; type=&quot;text&quot;&gt;
+  &lt;input class=&quot;mb-1e block&quot;  id=&quot;signup-example-4&quot; name=&quot;examplename&quot; placeholder=&quot;Email&quot; type=&quot;email&quot;&gt;
+  &lt;button class=&quot;btn block&quot; type=&quot;submit&quot;&gt;
+    Signup
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+<p>In the example above, <code>.mb-1e</code> bottom padding has also been added to the form inputs. See <a href="4-utilities.html#spacing-utilities">spacing utilities</a>.</p>
+      <hr>
+
+      <div class="flexbox flexbox-grow-auto mb-6e">
+      
+      <div class="left"><a href="5-components-dropdowns.html"><i class="fas fa-arrow-left"></i> Dropdowns</a></div>
+      
+
+      
+      <div class="right"><a href="5-components-badges-and-labels.html">Badges and Labels <i class="fas fa-arrow-right"></i></a></div>
+      
+      </div>
+
+    </article><!-- /#mainbody -->
+  </main>
+
+  <div class="b-thin rounded px-He bg-theme-2 center" style="position: fixed; right: 0.5rem; bottom: 0.5rem; z-index: 999;">Width: <span id="vp"></span> <span class="hide-md-up">[-sm]</span><span class="hide-sm-down hide-lg-up">[-md &rarr; -lg]</span><span class="hide-md-down">[-lg]</span></div>
+
+<script src="js/codebase.js"></script>
+<script src="js/prism.js"></script>
+<script>
+  var vp = document.body.querySelector('#vp');
+  var viewportWidth = window.innerWidth + 'px';
+  vp.innerHTML = viewportWidth;
+  window.addEventListener('resize', function () {
+    viewportWidth = window.innerWidth + 'px';
+    vp.innerHTML = viewportWidth;
+  });
+
+</script>
+</body>
+</html>
