@@ -157,7 +157,7 @@ With `-equalize-*` columns will each equally expand to occupy the available grid
 
 E.g. `.grid.grid-md-equalize-4` sets a grid with 4 columns of equal span (constrained 25% each) that kicks in at 768px viewport width.
 
-<img src="/img/Codebase-CSS-grid-system.svg" class="mb-3e" />
+<img src="img/Codebase-CSS-grid-system.svg" class="mb-3e" />
 
 After you have populated the first row of the grid with item(s) that complete your required number of columns, you can sometimes get away with not specifying the positioning of subsequent grid items – the browser will figure out where to place them.
 
