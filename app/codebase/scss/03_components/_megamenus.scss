@@ -15,17 +15,17 @@
 }
 
 @mixin megamenu {
-  & > ul {
-    margin-bottom: 0;
-    padding: 0;
-    & > li {
-      margin-bottom: 0;
-      & > a {
-        display: block;
-        padding: 0.5rem 1rem;
-      }
-    }
-  }
+  // & > ul {
+  //   margin-bottom: 0;
+  //   padding: 0;
+  //   & > li {
+  //     margin-bottom: 0;
+  //     & > a {
+  //       display: block;
+  //       padding: 0.5rem 1rem;
+  //     }
+  //   }
+  // }
   backface-visibility: hidden;
 
   // Offcanvas mode
@@ -84,7 +84,7 @@
   @media (min-width: $megamenu-mq) {
     position: relative; // constrains the megamenu panel to the “navbar” width
     max-width: 100%;
-    & > ul {
+    & > .menu {
       list-style-type: none;
       display: flex; // Sets up menubar
     }

@@ -6,16 +6,17 @@ next: "Cards"
 nextLink: "5-components-cards.html"
 ---
 
+<p class="h4 thin">Codebase offcanvas panels are a <a href="5-components-activator.html">activator</a> components using <code>data-content-id="{identifier}"</code> for specificity.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-simplest-offcanvas">The Simplest Offcanvas</a></li>
     <li class="menu-item"><a href="#controlling-the-offcanvas-content-width">Controlling the Offcanvas Content Width</a></li>
     <li class="menu-item"><a href="#deactivating-an-offcanvas-component-above-a-media-query-viewport-width">Deactivating an Offcanvas Component Above a Media Query Viewport Width</a></li>
     <li class="menu-item"><a href="#offcanvas-classes">Offcanvas Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase offcanvas panels are a <a href="5-components-activator.html">activator</a> components using <code>data-content-id="{identifier}"</code> for specificity.</p>
 
 ## The Simplest Offcanvas
 

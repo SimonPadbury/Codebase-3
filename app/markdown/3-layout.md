@@ -6,14 +6,15 @@ next: "Containers"
 nextLink: "3-layout-containers.html"
 ---
 
+<p class="h4 thin">In Codebase, components and utility classes are built upon a <a href="#the-codebase-element-grid">0.5rem element grid</a>. Codebase also gives you a range of <a href="3-layout-containers.html">containers</a> of different sizes, simple columnar positioning by <a href="3-layout-flexbox.html">flexbox</a>, and complex layouts can be built using a real <a href="3-layout-grid.html">CSS grid system</a>. A few more things can be found in <a href="4-utilities.html#layout-utilities">layout utilities</a>.
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-codebase-element-grid">The Codebase Element Grid</a></li>
     <li class="menu-item"><a href="#element-grid-unit-suffixes-in-utility-classes">Element Grid Unit Suffixes in Utility Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">In Codebase, components and utility classes are built upon a <a href="#the-codebase-element-grid">0.5rem element grid</a>. Codebase also gives you a range of <a href="3-layout-containers.html">containers</a> of different sizes, simple columnar positioning by <a href="3-layout-flexbox.html">flexbox</a>, and complex layouts can be built using a real <a href="3-layout-grid.html">CSS grid system</a>. A few more things can be found in <a href="4-utilities.html#layout-utilities">layout utilities</a>.
 
 ## The Codebase Element Grid
 

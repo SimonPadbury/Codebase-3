@@ -6,16 +6,17 @@ next: "Showhide"
 nextLink: "5-components-showhide.html"
 ---
 
+<p class="h4 thin">Click a control (e.g. button), and a tiny JavaScript adds or removes some <code>.is-active</code> classes. That explains the operation of most things in Codebase.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#activator-operation">Activator Operation</a></li>
     <li class="menu-item"><a href="#adding-specificity">Adding specificity</a></li>
     <li class="menu-item"><a href="#closing-from-within">Closing From Within</a></li>
     <li class="menu-item"><a href="#activator-classes">Activator Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Click a control (e.g. button), and a tiny JavaScript adds or removes some <code>.is-active</code> classes. That explains the operation of most things in Codebase.</p>
 
 Since Codebase 2 the various showhides, dropdowns, modals and offcanvas sidebars are **all controlled by one script** named `_activator.js`, that has been included within `codebase.js`.
 

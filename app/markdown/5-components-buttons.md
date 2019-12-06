@@ -6,8 +6,11 @@ next: "Badges and Labels"
 nextLink: "5-components-badges-and-labels.html"
 ---
 
+<p class="h4 thin">Codebase button classes can be applied to button tags, input-button tags and hyperlink anchor tags.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#default-buttons">Default Buttons</a></li>
     <li class="menu-item"><a href="#button-colors">Button Colors</a></li>
     <li class="menu-item"><a href="#button-states">Button States</a></li>
@@ -17,8 +20,6 @@ nextLink: "5-components-badges-and-labels.html"
     <li class="menu-item"><a href="#buttons-and-forms">Buttons and Forms</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase button classes can be applied to button tags, input-button tags and hyperlink anchor tags.</p>
 
 ## Default Buttons
 

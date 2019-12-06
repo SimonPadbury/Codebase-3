@@ -4,8 +4,11 @@ prev: "Tables"
 prevLink: "5-components-tables.html"
 ---
 
+<p class="h4 thin">Codebase modals are a <a href="5-components-activator.html">activator</a> components using <code>data-content-id="{identifier}"</code> for specificity.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-simplest-modal">The Simplest Modal</a></li>
     <li class="menu-item"><a href="#modals-expand-to-fit-any-size-content">Modals Expand to Fit Any Size Content</a></li>
     <li class="menu-item"><a href="#integrating-a-card-into-a-modal">Integrating a Card into a Modal</a></li>
@@ -15,8 +18,6 @@ prevLink: "5-components-tables.html"
     <li class="menu-item"><a href="#modal-classes">Modal Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase modals are a <a href="5-components-activator.html">activator</a> components using <code>data-content-id="{identifier}"</code> for specificity.</p>
 
 The modal’s content has no styling of its own – style it how you want.** At minimum, give it a background color and some padding. Maybe incorporate a Codebase card, layout system or tab system. It’s all up to you.
 

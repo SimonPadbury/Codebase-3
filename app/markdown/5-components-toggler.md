@@ -6,14 +6,15 @@ next: "Activator"
 nextLink: "5-components-activator.html"
 ---
 
+<p class="h4 thin">The Codebase toggler is a simple JavaScript that adds/removes a CSS class of your choice from the toggler target element.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#form-elements-as-full-width-blocks">Setting Up a Toggler</a></li>
     <li class="menu-item"><a href="#toggler-attributes">Toggler Attributes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">The Codebase toggler is a simple JavaScript that adds/removes a CSS class of your choice from the toggler target element.</p>
 
 `codebase.css` carries no styling for the Toggler component. It’s all up to you.
 

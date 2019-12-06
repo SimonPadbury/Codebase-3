@@ -6,8 +6,11 @@ next: "Utilities"
 nextLink: "4-utilities.html"
 ---
 
+<p class="h4 thin">Since v3.0 Codebase has included a responsive, fluid, <em>real</em> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid</a> grid-system.
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#grid-system-features">Grid System Features</a></li>
     <li class="menu-item"><a href="#fluid-grid-wrapper-classes">Fluid Grid Wrapper Classes</a></li>
     <li class="menu-item"><a href="#grid-item-classes">Grid-Item Classes</a></li>
@@ -16,8 +19,6 @@ nextLink: "4-utilities.html"
     <li class="menu-item"><a href="#grid-css-classes">Grid CSS Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Since v3.0 Codebase has included a responsive, fluid, <em>real</em> <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid</a> grid-system.
 
 With the arrival of _grid_ to CSS, web developer thought leaders such as Rachel Andrew have argued persuasively that [there is no need for a CSS grid-based grid system](https://www.rachelandrew.co.uk/archives/2017/07/01/you-do-not-need-a-css-grid-based-grid-system/) – because you can create your own, directly in your CSS.
 

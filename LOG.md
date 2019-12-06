@@ -1,21 +1,27 @@
 # Codebase Version Log
 
+### v3.0.1 – 7 Dec 2019
+
+* Minor bugfix.
+* Docs improvements.
+
 ### v3.0 — 30 Nov 2019
 
 * Total rebuild of everything.
-* Simplification and big fixed thorughout.
-* Now Normalize not required.
-* Now only two media query breakpoint widths: 768px and 1024px.
-* BEM-style double hyphens and double underscores have been removed from mixin and class names in SCSS (and CSS).
+* Simplification and big fixed throughout.
+* Now Normalize is not required.
+* Now only two media query breakpoint widths: md = 768px and lg = 1024px.
+* BEM-style double hyphens and double underscores have been removed from mixin and class names in SCSS (and CSS), all replaced with single hyphens.
 * CSS grid instead of a flexbox grid system.
 * Tabs removed because seldom used.
-* New megamenu (instead of a combining menu +  flexbox + dropdowns).
-* Now with its own build tool — a Gulp-based static website generator (was formerly using Codekit). Docs using Markdown instead of Pug. Templating using Nunkucks instead of Pug.
+* New megamenu (instead of a combination menu +  flexbox + dropdowns, although that’s also still doable).
+* Now with its own build tool — a Gulp-based static website generator (was formerly using Codekit). Docs using Markdown instead of Pug. Templating using Nunjucks instead of Pug.
 
 ### v2.0 — 4 July 2018
 
 * Normalize 7.0.0 is now actually onboard (and transformed into a SCSS file), instead of being an @import from a CDN.
-* Updated to Font Awesome 5.1 -- linked via Font Awesome's own CDN.* Removed Font Awesome (pseudo-element) styled radioboxes and checkboxes.
+* Updated to Font Awesome 5.1 – linked via Font Awesome’s own CDN.
+* Removed Font Awesome (pseudo-element) styled radioboxes and checkboxes.
 * In the docs, placeholders are no longer provided by `holder.js` (by HolderJS.com) but via an SVG file in a Pug mixin.
 * Improved and simplified the color variables in UI elements (e.g. buttons) and decoration utility classes by using SCSS maps.
 * Improved the use of the element grid in throughout Codebase by simply adhering to multiples of 4px in the spacing, line-heights etc. wherever possible (instead of wasting time using a bunch of variables for element grid spacing units).
@@ -23,18 +29,18 @@
 * Renamed `.btn.btn--big-text` as `.btn.big`.
 * Many minor bug fixes and improvements.
 
-### v.2.0 Beta-3 -- 4 Nov 2017
+### v.2.0 Beta-3 – 4 Nov 2017
 
 * Minor bug fixes and improvements.
 
-### v.2.0 Beta 2 -- 16 Sep 2017
+### v.2.0 Beta 2 – 16 Sep 2017
 
 * Removed `pointer-events` in the popover, and added a CSS delay in the dismissal of the popover (now OK in Opera Mini, older IE).
 * Removed specific rounded-corner decoration utility classes.
 * Fixed the Docs secondary sidebar for Opera Mini.
 * Several minor bug fixes and improvements.
 
-### v.2.0 BETA -- 7 Sep 2017
+### v.2.0 BETA – 7 Sep 2017
 
 * Since v.2.0 both third-party stylesheets (Normalize and Font Awesome, from [https://cdnjs.com/](https://cdnjs.com/)) are incorporated directly into `codebase.css` itself _during pre-processing_ of the Codebase SCSS files. Now all you need is Codebase plus your own styles.
 * Since v.2.0 Codebase uses **JavaScript only** (no need for jQuery).
@@ -48,12 +54,12 @@
 * Renamed the flexbox layout system so that it doesn't mention "grid" -- to avoid confusion with the new CSS Grid.
 * Hundreds of minor tweeks and improvements.
 
-### v.2.0 PREVIEW 2 -- 13 Feb 2017
+### v.2.0 PREVIEW 2 – 13 Feb 2017
 
 * Removed `overflow-x: hidden` from the docs outermost container (`.body__inner`) because on iOS Safari this was preventing everything that required the reset-overlay from being layered in front of the overlay.
 * Added some form element styling to override iOS Safari search input to control its styling.
 
-### v.2.0 PREVIEW -- 11 Feb 2017
+### v.2.0 PREVIEW – 11 Feb 2017
 
 #### Major Changes between Codebase 1.x and 2.x
 
@@ -81,27 +87,27 @@ Several re-writes of components and basics, plus several additions, including:
 * Totally rebuilt navbars; now a derivative of menubars (using some of the same mixins).
 * Added `menubar__justify` option.
 
-### v.1.3.5 -- 5 Oct 2016
+### v.1.3.5 – 5 Oct 2016
 
 * Removed outer drop-shadow from buttons, so that form element/button combos look better together.
 
-### v.1.3.4 -- 30 September 2016
+### v.1.3.4 – 30 September 2016
 
 * Bug fixes.
 
-### v.1.3.3 -- 15 September 2016
+### v.1.3.3 – 15 September 2016
 
 * Bug fixes
 
-### v.1.3.2 - 13 September 2016
+### v.1.3.2 – 13 September 2016
 
 * Bug fixes.
 
-### v.1.3.1 - 10 September 2016
+### v.1.3.1 – 10 September 2016
 
 * Removed the `transform3d` movement/positioning from off-canvas sidebars and from popovers – because this was preventing Mac Safari **overflow scrolling** within popovers and sidebar layers. (But it was working OK for Firefox, Chrome, IE10, Edge, and iOS Safari).
 
-### v.1.3 - 07 September 2016
+### v.1.3 – 07 September 2016
 
 * Removed the `.img--*` left and right align classes as redundant. Use the `.float--` COMPONENT classes instead.
 * Removed the lightbox and modal styles and scripts. Simply use popovers in future.
@@ -113,7 +119,7 @@ Several re-writes of components and basics, plus several additions, including:
 * Various bug fixes.
 * Totally redesigned the docs.
 
-### v.1.2 - 26 August 2016
+### v.1.2 – 26 August 2016
 
 * Changed the default media query breakpoint widths to:
 	*	 xs = 568px

@@ -6,15 +6,16 @@ next: "Buttons"
 nextLink: "5-components-buttons.html"
 ---
 
+<p class="h4 thin">Codebase dropdowns are simple <a href="5-components-activator.html">activator</a> components.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-simplest-dropdowns">The Simplest Dropdown</a></li>
     <li class="menu-item"><a href="#alignment-of-dropdown-content">Alignment of Dropdown Content</a></li>
     <li class="menu-item"><a href="#dropdown-classes">Dropdown Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase dropdowns are simple <a href="5-components-activator.html">activator</a> components.</p>
 
 ## The Simplest Dropdown
 

@@ -3,7 +3,7 @@
 
 label {
   display: inline-block;
-  padding: 0.1em 0;
+  padding: 1px 0;
 }
 
 @mixin form-input {
@@ -19,7 +19,7 @@ label {
     -webkit-border-radius: 0 !important;
   }
 
-  padding: 0 0.5rem;
+  padding: 0 8px;
   line-height: 2.5 - (2 * $form-outline-thickness);
   &.small {
     line-height: 2 - (2 * $form-outline-thickness);
@@ -43,7 +43,7 @@ select {
 }
 
 option {
-  padding: 0.25rem 0;
+  padding: 4px 0;
 }
 
 input[type="text"],
@@ -66,7 +66,7 @@ select {
 
 input[type="number"] {
   padding: 0;
-  padding-left: 0.125rem;
+  padding-left: 2px;
 }
 
 select {

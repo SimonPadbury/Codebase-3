@@ -18,7 +18,7 @@
       <a href="index.html">
         <!-- Codebase logo-->
         <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-miterlimit="2"><path d="M195.956 115.956c14.059-14.059 36.853-14.059 50.912 0 14.058 14.059 14.058 36.853 0 50.912L323.235 90.5l-76.367-76.368c14.058 14.059 14.058 36.853 0 50.912-14.059 14.059-36.853 14.059-50.912 0-14.059-14.059-36.853-14.059-50.912 0-14.059 14.059-14.059 36.853 0 50.912 14.059 14.059 36.853 14.059 50.912 0M17.765 90.5l76.367-76.368c-42.176 42.177-42.176 110.559 0 152.736L17.765 90.5z" fill-rule="nonzero" stroke="#000" stroke-width="10"/></svg>
-        <strong>Codebase</strong>&nbsp;<span class="thin">3.0</span>
+        <strong>Codebase</strong>
       </a>
     </div>
 
@@ -27,20 +27,20 @@
     </span>
 
     <nav class="megamenu" id="homepage-megamenu">
-      <ul>
-        <li>
+      <ul class="menu">
+        <li class="menu-item">
           <a href="index.html">Home</a>
         </li>
-        <li>
+        <li class="menu-item">
           <a href="1-getting-started.html">Docs</a>
         </li>
-        <li>
+        <li class="menu-item">
           <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
         </li>
-        <li>
+        <li class="menu-item">
           <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
         </li>
-        <li>
+        <li class="menu-item">
           <a id="theme-toggle">Theme</a>
         </li>
       </ul>
@@ -49,14 +49,15 @@
 
   <main class="container container-md mt-9e px-2e ">
 
-    <h1 class="docs-front-h1 center thin big py-6e">
+    <h1 class="docs-front-h1 center thin big mb-0 pt-6e">
       <span class="t-primary">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 12" style="max-height: 7.5rem;">
           <path d="M1 6l5-5C3.2 3.7 3.2 8.2 6 11L1 6zM16 11c.9-.9.9-2.4 0-3.3-.9-.9-2.4-.9-3.3 0-.9.9-2.4.9-3.3 0-.9-.9-.9-2.4 0-3.3s2.4-.9 3.3 0 2.4.9 3.3 0c.9-.9.9-2.4 0-3.3l5 5-5 4.9z" stroke-width="1" stroke-linecap="square" stroke-linejoin="square" style="fill: currentColor; stroke: currentColor;"></path>
         </svg>
       </span><br>
-      Codebase <span class="t-theme-4">v3.0</span>
+      Codebase
     </h1>
+    <div class="mb-6e center t-theme-4 big thin">Version 3.0.1</div>
 
     <p class="h4 thin center">Codebase is a CSS and JS website component library,<br> with comprehensive documentation,<br> built on its own static website generator.</p>
 
@@ -75,8 +76,9 @@
     <h2 id="multiple-ways-of-using-codebase">Multiple ways of using Codebase</h2>
 
     <ol>
-      <li><a href="1-getting-started/getting-started.html">Simple setup</a> – just use <code>codebase.css</code> and <code>codebase.js</code> in your project.</li>
-      <li>The <a href="1-getting-started/getting-started.html#the-codebase-scss-library">Codebase SCSS</a> library has dozens of <code>!default</code> variables that you can override and mixins that you can use. Except for the base reset, everything has been built first using mixins and then deployed in CSS classes using overridable class-builder mixins – so you can rename CSS classes . You can toggle any of these class builders to <code>false</code> in order to remove any component that you would never use.</li>
+      <li><a href="1-getting-started.html">Simple setup</a> – just use <code>codebase.css</code> and <code>codebase.js</code> in your project.</li>
+      <li>The <a href="1-getting-started.html#the-codebase-scss-library">Codebase SCSS</a> library has dozens of <code>!default</code> variables that you can override and mixins that you can use. Except for the base reset, everything has been built first using mixins and then deployed in CSS classes using overridable class-builder mixins – so you can rename CSS classes. You can toggle any of these class builders to <code>false</code> in order to remove any component that you would never use.</li>
+      <li>You can copy the entire <code>codebase/</code> folder (from inside the <code>app/</code> folder) to your project – or you can build the Codebase CSS and JS using the Codebase Gulp-based <a href="1-getting-started.html#the-codebase-static-website-generator">static site generator</a> (as used for the Codebase libraries and docs).</li>
     </ol>
 
     <h2 id="browser-compatibility">Browser Compatibility</h2>

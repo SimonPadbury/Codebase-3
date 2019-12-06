@@ -20,36 +20,36 @@
     <a href="index.html">
       <!-- Codebase logo-->
       <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-miterlimit="2"><path d="M195.956 115.956c14.059-14.059 36.853-14.059 50.912 0 14.058 14.059 14.058 36.853 0 50.912L323.235 90.5l-76.367-76.368c14.058 14.059 14.058 36.853 0 50.912-14.059 14.059-36.853 14.059-50.912 0-14.059-14.059-36.853-14.059-50.912 0-14.059 14.059-14.059 36.853 0 50.912 14.059 14.059 36.853 14.059 50.912 0M17.765 90.5l76.367-76.368c-42.176 42.177-42.176 110.559 0 152.736L17.765 90.5z" fill-rule="nonzero" stroke="#000" stroke-width="10"/></svg>
-      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+      <strong>Codebase</strong>&nbsp;<span class="thin">3.0.1</span>
     </a>
   </div>
 
   <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
-    Menu &nbsp;<span class="fas fa-bars"></span>
+    Main  Menu &nbsp;<span class="fas fa-bars"></span>
   </span>
 
   <nav class="megamenu hide-md-down">
-    <ul>
-      <li>
+    <ul class="menu">
+      <li class="menu-item">
         <a href="index.html">Home</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a href="1-getting-started.html">Docs</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a id="theme-toggle">Theme</a>
       </li>
     </ul>
   </nav>
 </div>
 
-  <main class="container">
+  <main>
     <div id="sidebar" class="offcanvas">
       <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
         <div class="offcanvas-close offcanvas-close-right hide-lg-up">
@@ -63,18 +63,18 @@
         <div id="docs-toc" class="pb-3e bg-theme-1">
   <p class="my-2e bold t-theme-4">Documentation</p>
   <ul class="menu">
-    <li class="menu-item"><strong><a href="1-getting-started.html">Getting Started</a></strong></li>
-    <li class="menu-item"><strong><a href="2-basics.html">Basics</a></strong></li>
-    <li class="menu-item"><strong><a href="3-layout.html">Layout</a></strong>
-      <ul class="menu">
+    <li class="menu-item"><a href="1-getting-started.html"><strong>Getting Started</strong></a></li>
+    <li class="menu-item"><a href="2-basics.html"><strong>Basics</strong></a></li>
+    <li class="menu-item"><a href="3-layout.html"><strong>Layout</strong></a>
+      <ul class="menu pl-2e">
         <li class="menu-item"><a href="3-layout-containers.html">Containers</a></li>
         <li class="menu-item"><a href="3-layout-flexbox.html">Flexbox</a></li>
         <li class="menu-item"><a href="3-layout-grid.html">Grid</a></li>
       </ul>
     </li>
-    <li class="menu-item"><strong><a href="4-utilities.html">Utilities</a></strong></li>
-    <li class="menu-item"><strong><a href="5-components.html">Components</a></strong>
-      <ul class="menu">
+    <li class="menu-item"><a href="4-utilities.html"><strong>Utilities</strong></a></li>
+    <li class="menu-item"><a href="5-components.html"><strong>Components</strong></a>
+      <ul class="menu pl-2e">
         <li class="menu-item"><a href="5-components-toggler.html">Toggler</a></li>
         <li class="menu-item"><a href="5-components-activator.html">Activator</a></li>
         <li class="menu-item"><a href="5-components-showhide.html">Showhide</a></li>
@@ -97,15 +97,19 @@
 
     <article id="mainbody">
       <div class="mainbody-prose mt-9e px-2e">
-        <h1 class="big thin">Megamenus</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+        <h1 class="pt-6e big thin">Megamenus</h1><p class="h4 thin">An extension of the Codebase <a href="5-components-menus.html">menu</a>, the Codebase megamenu is an all-in-one responsive navigation system. It displays as an <a href="#megamenu-in-offcanvas-mode">offcanvas sidebar</a> on small viewports and as a <a href="#megamenu-in-navbar-mode">navbar</a> on medium viewports up.</p>
+
+<p>Example:</p>
+<div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#megamenu-features">Megamenu Features</a></li>
     <li class="menu-item"><a href="#setting-up-the-megamenu">Setting up the Megamenu</a></li>
     <li class="menu-item"><a href="#megamenu-mode-breakpoint">Megamenu Mode Breakpoint</a></li>
     <li class="menu-item"><a href="#megamenu-in-Offcanvas-Mode">Megamenu in Offcanvas Mode</a></li>
     <li class="menu-item"><a href="#megamenu-in-navbar-mode">Megamenu in Navbar Mode</a></li>
     <li class="menu-item"><a href="#adding-a-megamenu-wrapper-and-a-brand-link">Adding a Megamenu Wrapper and a Brand Link</a></li>
-    <li class="menu-item"><a href="#adding-an-internal-container-megamenu-wrapper">Adding an Internal Container to the Megamenu Wrapper</a></li>
+    <li class="menu-item"><a href="#adding-an-internal-container-to-the-megamenu-wrapper">Adding an Internal Container to the Megamenu Wrapper</a></li>
     <li class="menu-item"><a href="#fixing-the-megamenu-to-the-top-of-the-viewport">Fixing the Megamenu to the top of the Viewport</a></li>
     <li class="menu-item"><a href="#adding-form-elements-and-buttons-to-the-navbar">Adding Form Elements and Buttons to the Navbar</a></li>
     <li class="menu-item"><a href="#adding-simple-submenus">Adding Simple Submenus</a></li>
@@ -115,14 +119,12 @@
   </ul>
 </div>
 
-<p class="h4 thin">The Codebase megamenu is an all-in-one responsive navigation system, showing as an <a href="#megamenu-in-offcanvas-mode">offcanvas sidebar</a> on small viewports and as a <a href="#megamenu-in-navbar-mode">navbar</a> on medium viewports up.</p>
-
 <p>Example:</p>
 <nav id="megamenu-example-1" class="megamenu mb-3e">
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li class="has-submenu">
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item has-submenu">
       <a href="">Item 2 (simple)</a>
       <span class="submenu-toggle fas fa-plus"></span>
       <div class="submenu-content">
@@ -134,7 +136,7 @@
         </ul>
       </div>
     </li>
-    <li class="has-submenu mega">
+    <li class="menu-item has-submenu mega">
       <a href="">Item 3 (mega)</a>
       <span class="submenu-toggle fas fa-plus"></span>
       <div class="submenu-content">
@@ -187,8 +189,8 @@
         </div>
       </div>
     </li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
   </ul>
 </nav>
 
@@ -200,9 +202,9 @@
 
 &lt;nav id=&quot;megamenu-example-1&quot; class=&quot;megamenu&quot;&gt;
   &lt;i class=&quot;megamenu-close fas fa-times&quot;&gt;&lt;/i&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;has-submenu mega&quot;&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item has-submenu mega&quot;&gt;
       &lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;
       &lt;span class=&quot;submenu-toggle fas fa-plus&quot;&gt;&lt;/span&gt;
       &lt;div class=&quot;submenu-content&quot;&gt;
@@ -211,7 +213,7 @@
 
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;has-submenu&quot;&gt;
+    &lt;li class=&quot;menu-item has-submenu&quot;&gt;
       &lt;a href=&quot;&quot;&gt;Item 3&lt;/a&gt;
       &lt;span class=&quot;submenu-toggle fas fa-plus&quot;&gt;&lt;/span&gt;
       &lt;div class=&quot;submenu-content&quot;&gt;
@@ -220,8 +222,8 @@
 
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 5&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 <h2 id="megamenu-features">Megamenu Features</h2>
@@ -237,15 +239,17 @@
 <li>Window-resize also dismisses the megamenu in offcanvas mode (e.g. rotating a phone or small tablet between portrait and landscape orientation).</li>
 </ul>
 <h2 id="setting-up-the-megamenu">Setting up the Megamenu</h2>
-<p>The Codebase megamenu has the CSS class <code>.megamenu</code> on its outer wrapper, and it must have an ID to identify it for the offcanvas mode activity that is toggled by its respective <code>.megamenu-navicon</code> (see <a href="#megamenu-in-offcanvas-mode">Megamenu in Offcanvas Mode</a> for more information).</p>
+<p>Wrap a <code>.megamenu</code> around a <code>.menu</code>, add a few controls (at least <code>.megamenu-navicon</code> and <code>.megamenu-close</code>), and there you have it.</p>
+<p>The <code>.megamenu</code> element it must have an ID to identify it for the offcanvas mode activity that is toggled by its respective <code>.megamenu-navicon</code> (see <a href="#megamenu-in-offcanvas-mode">Megamenu in Offcanvas Mode</a> for more information).</p>
 <pre><code class="language-HTML">&lt;nav id=&quot;ex-1&quot; class=&quot;megamenu&quot;&gt;
   ...
 &lt;/nav&gt;
 
 &lt;span data-megamenu-id=&quot;ex-1&quot; class=&quot;megamenu-navicon&quot;&gt;MENU&lt;/span&gt;</code></pre>
-<p>You can position the megamenu wherever you want in your HTML.</p>
+<p>You can position the megamenu and its navicon controller wherever you want in your HTML.</p>
+<p>Use the class <code>.megamenu-navicon</code> whether or not you include an “hamburger” icon. (See how example above just has the word MENU.)</p>
 <h2 id="megamenu-mode-breakpoint">Megamenu Mode Breakpoint</h2>
-<p>The viewport width at which the Codebase megamenu switches between offcanvas mode and navbar mode is controlled by the media query variable <code>$megamenu-mq</code> in <code>codebase/01-basics/__default-variables.scss</code>. By default, this is set at the same lower breakpoint width as is used by the <a href="3-layout-flexbox.html">flexbox</a> and <a href="3-layout-grid.html">grid</a> layouts: <code>$mq-md</code> = 768px.</p>
+<p>The viewport width at which the Codebase megamenu switches between offcanvas mode and navbar mode is controlled by the media query variable <code>$megamenu-mq</code> in <code>codebase/01-basics/__default-variables.scss</code>. By default, this is set at the same lower breakpoint width as is used by the <a href="3-layout-flexbox.html">flexbox</a> and <a href="3-layout-grid.html">grid</a> layouts: <code>$mq-md = 768px</code>.</p>
 <h2 id="megamenu-in-offcanvas-mode">Megamenu in Offcanvas Mode</h2>
 <p>On small viewports (below the megamenu media query breakpoint width 768px (default)), the offcanvas panel slides in from the right for LTR mode and from the left for RTL mode.</p>
 <p>These presets can be overridden using the modifier classes <code>.megamenu-offcanvas-left</code> or <code>.megamenu-offcanvas-right</code> (examples not shown).</p>
@@ -287,12 +291,12 @@
   <p class="mx-2e hide-md-up">Example 2: Right-aligned in navbar mode</p>
   <i class="megamenu-close fas fa-times"></i>
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li><a href="">Item 3</a></li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item"><a href="">Item 3</a></li>
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
   </ul>
 </nav>
 
@@ -304,12 +308,12 @@
 <nav id="megamenu-example-3" class="megamenu mb-3e flexbox flexbox-left">
   <p class="mx-2e hide-md-up">Example 3: Left-aligned in navbar mode</p>
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li><a href="">Item 3</a></li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item"><a href="">Item 3</a></li>
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
   </ul>
 </nav>
 
@@ -321,12 +325,12 @@
 <nav id="megamenu-example-4" class="megamenu mb-3e flexbox flexbox-center">
   <p class="mx-2e hide-md-up">Example 4: Centered-aligned in navbar mode</p>
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li><a href="">Item 3</a></li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item"><a href="">Item 3</a></li>
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
   </ul>
 </nav>
 
@@ -338,18 +342,18 @@
 <nav id="megamenu-example-5" class="megamenu mb-3e">
   <p class="mx-2e hide-md-up">Example 5: Space-between in navbar mode</p>
   <i class="megamenu-close fas fa-times"></i>
-  <ul class="flexbox flexbox-space-between">
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li><a href="">Item 3</a></li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
+  <ul class="menu flexbox flexbox-space-between">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item"><a href="">Item 3</a></li>
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
   </ul>
 </nav>
 
 <pre><code class="language-HTML">&lt;nav id=&quot;megamenu-example-5&quot; class=&quot;megamenu&quot;&gt;
   ...
-  &lt;ul class=&quot;flexbox flexbox-space-between&quot;&gt;
+  &lt;ul class=&quot;menu flexbox flexbox-space-between&quot;&gt;
     ...
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
@@ -358,24 +362,24 @@
 <nav id="megamenu-example-6" class="megamenu mb-3e flexbox flexbox-space-between">
   <p class="mx-2e hide-md-up">Example 6: Dual menus in navbar mode</p>
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li><a href="">Item 3</a></li>
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item"><a href="">Item 3</a></li>
   </ul>
-  <ul>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
-    <li><a href="">Item 6</a></li>
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
+    <li class="menu-item"><a href="">Item 6</a></li>
   </ul>
 </nav>
 
 <pre><code class="language-HTML">&lt;nav id=&quot;megamenu-example-6&quot; class=&quot;megamenu flexbox flexbox-space-between&quot;&gt;
   ...
   &lt;!-- menu 1 --&gt;
-  &lt;ul&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
     ...
-  &lt;/ul&gt;
+  &lt;/ul class=&quot;menu&quot;&gt;
   &lt;!-- menu 2 --&gt;
   &lt;ul&gt;
     ...
@@ -392,12 +396,12 @@
   <nav id="megamenu-example-7" class="megamenu">
     <p class="mx-2e hide-md-up">Example 7</p>
     <i class="megamenu-close fas fa-times"></i>
-    <ul>
-      <li><a href="">Item 1</a></li>
-      <li><a href="">Item 2</a></li>
-      <li><a href="">Item 3</a></li>
-      <li><a href="">Item 4</a></li>
-      <li><a href="">Item 5</a></li>
+    <ul class="menu">
+      <li class="menu-item"><a href="">Item 1</a></li>
+      <li class="menu-item"><a href="">Item 2</a></li>
+      <li class="menu-item"><a href="">Item 3</a></li>
+      <li class="menu-item"><a href="">Item 4</a></li>
+      <li class="menu-item"><a href="">Item 5</a></li>
     </ul>
   </nav>
 </div>
@@ -415,7 +419,7 @@
 &lt;/div&gt;</code></pre>
 <h2 id="adding-an-internal-container-to-the-megamenu-wrapper">Adding an Internal Container to the Megamenu Wrapper</h2>
 <p>What if you want to introduce a <a href="3-layout-containers.html">container</a> <em>within</em> the megamenu wrapper, so that you can constrain the width of the content (while the wrapper itself is goes to the full width of the viewport)?</p>
-<p>This would mean that the brand, navicon and menubar are no longer direct children of <code>.megamenu-wrapper</code>, so they will no longer be influenced by its flexbox rules. No problem: your intervening <code>.container</code> will therefore need to have its own <code>.flexbox.flexbox-space-between</code> so that you can achieve the traditional navbar layout again.</p>
+<p>This would mean that the brand, navicon and menubar are no longer direct children of <code>.megamenu-wrapper</code>, so they will no longer be influenced by its flexbox rules. No problem: your intervening <code>.container</code> will therefore need to have its own <a href="3-layout-flexbox.html">flexbox</a> classes –<code>.flexbox.flexbox-space-between</code> so that you can achieve the traditional navbar layout again.</p>
 <p>Example 8 (background color added to aid navbar visibility):</p>
 <div class="megamenu-wrapper mb-3e bg-theme-2">
   <div class="container container-sm flexbox flexbox-space-between">
@@ -424,12 +428,10 @@
   <nav id="megamenu-example-8" class="megamenu">
     <p class="mx-2e hide-md-up">Example 8</p>
     <i class="megamenu-close fas fa-times"></i>
-    <ul>
-      <li><a href="">Item 1</a></li>
-      <li><a href="">Item 2</a></li>
-      <li><a href="">Item 3</a></li>
-      <li><a href="">Item 4</a></li>
-      <li><a href="">Item 5</a></li>
+    <ul class="menu">
+      <li class="menu-item"><a href="">Item 1</a></li>
+      <li class="menu-item"><a href="">Item 2</a></li>
+      <li class="menu-item"><a href="">Item 3</a></li>
     </ul>
   </nav>
   </div>
@@ -474,10 +476,10 @@
 <p><button data-megamenu-id="megamenu-example-9" class="megamenu-navicon btn">Maganav example 9 &nbsp;<i class="fas fa-bars"></i></button></p>
 <nav id="megamenu-example-9" class="megamenu mb-3e flexbox flexbox-right bg-theme-2">
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li>
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item">
       <form>
         <input class="small" id="search-example" name="examplename" placeholder="Search..." type="search">
         <button class="btn btn-icon small" type="submit">
@@ -490,10 +492,10 @@
 
 <pre><code class="language-HTML">&lt;nav id=&quot;megamenu-example-9&quot; class=&quot;megamenu flexbox flexbox-right&quot;&gt;
   &lt;i class=&quot;megamenu-close fas fa-times&quot;&gt;&lt;/i&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;
       &lt;form&gt;
         &lt;input class=&quot;small&quot; id=&quot;search-example&quot; name=&quot;examplename&quot; placeholder=&quot;Search...&quot; type=&quot;search&quot;&gt;
         &lt;button class=&quot;btn btn-icon small&quot; type=&quot;submit&quot;&gt;
@@ -520,10 +522,10 @@
 <p><button data-megamenu-id="megamenu-example-10" class="megamenu-navicon btn">Maganav example 10 &nbsp;<i class="fas fa-bars"></i></button></p>
 <nav id="megamenu-example-10" class="megamenu megamenu-offcanvas-right mb-3e">
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li class="has-submenu">
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item has-submenu">
       <a href="">Item 3</a>
       <span class="submenu-toggle fas fa-plus"></span>
       <div class="submenu-content">
@@ -535,8 +537,8 @@
         </ul>
       </div>
     </li>
-    <li><a href="">Item 4</a></li>
-    <li><a href="">Item 5</a></li>
+    <li class="menu-item"><a href="">Item 4</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
   </ul>
 </nav>
 
@@ -544,10 +546,10 @@
 
 &lt;nav id=&quot;megamenu-example-10&quot; class=&quot;megamenu megamenu-offcanvas-right mb-3e&quot;&gt;
   &lt;i class=&quot;megamenu-close fas fa-times&quot;&gt;&lt;/i&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;has-submenu&quot;&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item has-submenu&quot;&gt;
       &lt;a href=&quot;&quot;&gt;Item 3&lt;/a&gt;
       &lt;span class=&quot;submenu-toggle fas fa-plus&quot;&gt;&lt;/span&gt;
       &lt;div class=&quot;submenu-content&quot;&gt;
@@ -559,8 +561,8 @@
         &lt;/ul&gt;
       &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;&lt;a href=&quot;&quot;&gt;Item 5&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 <p>Submenu features:</p>
@@ -573,10 +575,10 @@
 <p><button data-megamenu-id="megamenu-example-11" class="megamenu-navicon btn">Maganav example 11 &nbsp;<i class="fas fa-bars"></i></button></p>
 <nav id="megamenu-example-11" class="megamenu megamenu-offcanvas-right mb-3e">
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li><a href="">Item 1</a></li>
-    <li><a href="">Item 2</a></li>
-    <li class="has-submenu has-submenu-left">
+  <ul class="menu">
+    <li class="menu-item"><a href="">Item 1</a></li>
+    <li class="menu-item"><a href="">Item 2</a></li>
+    <li class="menu-item has-submenu has-submenu-left">
       <a href="">Item 3 (Left)</a>
       <span class="submenu-toggle fas fa-plus"></span>
       <div class="submenu-content">
@@ -588,7 +590,7 @@
         </ul>
       </div>
     </li>
-    <li class="has-submenu has-submenu-right">
+    <li class="menu-item has-submenu has-submenu-right">
       <a href="">Item 4 (Right)</a>
       <span class="submenu-toggle fas fa-plus"></span>
       <div class="submenu-content">
@@ -600,13 +602,13 @@
         </ul>
       </div>
     </li>
-    <li><a href="">Item 5</a></li>
-    <li><a href="">Item 6</a></li>
+    <li class="menu-item"><a href="">Item 5</a></li>
+    <li class="menu-item"><a href="">Item 6</a></li>
   </ul>
 </nav>
 
 <pre><code class="language-HTML">...
-&lt;li class=&quot;has-submenu has-submenu-left&quot;&gt;
+&lt;li class=&quot;menu-item has-submenu has-submenu-left&quot;&gt;
   &lt;a href=&quot;&quot;&gt;Item 3 (Left)&lt;/a&gt;
   &lt;span class=&quot;submenu-toggle fas fa-plus&quot;&gt;&lt;/span&gt;
   &lt;div class=&quot;submenu-content&quot;&gt;
@@ -615,7 +617,7 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/li&gt;
-&lt;li class=&quot;has-submenu has-submenu-right&quot;&gt;
+&lt;li class=&quot;menu-item has-submenu has-submenu-right&quot;&gt;
   &lt;a href=&quot;&quot;&gt;Item 4 (Right)&lt;/a&gt;
   &lt;span class=&quot;submenu-toggle fas fa-plus&quot;&gt;&lt;/span&gt;
   &lt;div class=&quot;submenu-content&quot;&gt;
@@ -627,7 +629,7 @@
 ...</code></pre>
 <h2 id="adding-full-width-mega-submenu-panels">Adding Full-width “Mega” Submenu Panels</h2>
 <p>Full width submenu panels are set up in the same way as simple submenus, with the addition of the <code>.mega</code> class on the parent link wrapping <code>&lt;li&gt;</code>.</p>
-<pre><code class="language-HTML">&lt;li class=&quot;has-submenu mega&quot;&gt;
+<pre><code class="language-HTML">&lt;li class=&quot;menu-item has-submenu mega&quot;&gt;
   &lt;a href=&quot;&quot;&gt;Parent menu item&lt;/a&gt;
   &lt;span class=&quot;submenu-toggle fas fa-plus&quot;&gt;&lt;/span&gt;
   &lt;div class=&quot;submenu-content&quot;&gt; ... &lt;/div&gt;
@@ -639,8 +641,8 @@
 <p><button data-megamenu-id="megamenu-example-12" class="megamenu-navicon btn">Meganemu example 12 &nbsp;<i class="fas fa-bars"></i></button></p>
 <nav id="megamenu-example-12" class="megamenu mb-3e bg-theme-2">
   <i class="megamenu-close fas fa-times"></i>
-  <ul>
-    <li class="has-submenu mega">
+  <ul class="menu">
+    <li class="menu-item has-submenu mega">
       <a href="">Item 1</a>
       <span class="submenu-toggle fas fa-plus"></span>
       <div class="submenu-content">
@@ -711,10 +713,10 @@
   </span>
   <nav id="megamenu-example-13" class="megamenu flexbox flexbox-right primary">
     <i class="megamenu-close fas fa-times"></i>
-    <ul>
-      <li><a href="">Item 1</a></li>
-      <li><a href="">Item 2</a></li>
-      <li class="has-submenu">
+    <ul class="menu">
+      <li class="menu-item"><a href="">Item 1</a></li>
+      <li class="menu-item"><a href="">Item 2</a></li>
+      <li class="menu-item has-submenu">
         <a href="">Item 3 (Left)</a>
         <span class="submenu-toggle fas fa-plus"></span>
         <div class="submenu-content">
@@ -726,7 +728,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li class="menu-item">
         <form>
           <input class="small" id="search-example" name="examplename" placeholder="Search..." type="search">
           <button class="btn btn-icon small primary" type="submit">

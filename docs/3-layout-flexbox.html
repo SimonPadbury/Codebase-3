@@ -20,36 +20,36 @@
     <a href="index.html">
       <!-- Codebase logo-->
       <svg viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-miterlimit="2"><path d="M195.956 115.956c14.059-14.059 36.853-14.059 50.912 0 14.058 14.059 14.058 36.853 0 50.912L323.235 90.5l-76.367-76.368c14.058 14.059 14.058 36.853 0 50.912-14.059 14.059-36.853 14.059-50.912 0-14.059-14.059-36.853-14.059-50.912 0-14.059 14.059-14.059 36.853 0 50.912 14.059 14.059 36.853 14.059 50.912 0M17.765 90.5l76.367-76.368c-42.176 42.177-42.176 110.559 0 152.736L17.765 90.5z" fill-rule="nonzero" stroke="#000" stroke-width="10"/></svg>
-      <strong>Codebase</strong>&nbsp;<span class="lighter">3.0</span>
+      <strong>Codebase</strong>&nbsp;<span class="thin">3.0.1</span>
     </a>
   </div>
 
   <span data-content-id="docs" class="offcanvas-ctrl hide-lg-up float-right pt-1e px-3e">
-    Menu &nbsp;<span class="fas fa-bars"></span>
+    Main  Menu &nbsp;<span class="fas fa-bars"></span>
   </span>
 
   <nav class="megamenu hide-md-down">
-    <ul>
-      <li>
+    <ul class="menu">
+      <li class="menu-item">
         <a href="index.html">Home</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a href="1-getting-started.html">Docs</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a href="https://github.com/SimonPadbury/Codebase/archive/master.zip">Download</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a href="https://github.com/SimonPadbury/Codebase">GitHub</a>
       </li>
-      <li>
+      <li class="menu-item">
         <a id="theme-toggle">Theme</a>
       </li>
     </ul>
   </nav>
 </div>
 
-  <main class="container">
+  <main>
     <div id="sidebar" class="offcanvas">
       <div id="docs" class="offcanvas-content offcanvas-content-md offcanvas-content-right p-2e bg-theme-1">
         <div class="offcanvas-close offcanvas-close-right hide-lg-up">
@@ -63,18 +63,18 @@
         <div id="docs-toc" class="pb-3e bg-theme-1">
   <p class="my-2e bold t-theme-4">Documentation</p>
   <ul class="menu">
-    <li class="menu-item"><strong><a href="1-getting-started.html">Getting Started</a></strong></li>
-    <li class="menu-item"><strong><a href="2-basics.html">Basics</a></strong></li>
-    <li class="menu-item"><strong><a href="3-layout.html">Layout</a></strong>
-      <ul class="menu">
+    <li class="menu-item"><a href="1-getting-started.html"><strong>Getting Started</strong></a></li>
+    <li class="menu-item"><a href="2-basics.html"><strong>Basics</strong></a></li>
+    <li class="menu-item"><a href="3-layout.html"><strong>Layout</strong></a>
+      <ul class="menu pl-2e">
         <li class="menu-item"><a href="3-layout-containers.html">Containers</a></li>
         <li class="menu-item"><a href="3-layout-flexbox.html">Flexbox</a></li>
         <li class="menu-item"><a href="3-layout-grid.html">Grid</a></li>
       </ul>
     </li>
-    <li class="menu-item"><strong><a href="4-utilities.html">Utilities</a></strong></li>
-    <li class="menu-item"><strong><a href="5-components.html">Components</a></strong>
-      <ul class="menu">
+    <li class="menu-item"><a href="4-utilities.html"><strong>Utilities</strong></a></li>
+    <li class="menu-item"><a href="5-components.html"><strong>Components</strong></a>
+      <ul class="menu pl-2e">
         <li class="menu-item"><a href="5-components-toggler.html">Toggler</a></li>
         <li class="menu-item"><a href="5-components-activator.html">Activator</a></li>
         <li class="menu-item"><a href="5-components-showhide.html">Showhide</a></li>
@@ -97,8 +97,11 @@
 
     <article id="mainbody">
       <div class="mainbody-prose mt-9e px-2e">
-        <h1 class="big thin">Flexbox</h1><div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+        <h1 class="pt-6e big thin">Flexbox</h1><p class="h4 thin">In Codebase, <code>.flexbox</code> is used for positioning and stretching items relative to their container.</p>
+
+<div class="on-page-toc b-thin rounded mb-3e py-1e">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-flexbox-wrapper">The Flexbox Wrapper</a></li>
     <li class="menu-item"><a href="#flexbox-stretching">Flexbox Stretching</a></li>
     <li class="menu-item"><a href="#flexbox-spacing">Flexbox Spacing</a></li>
@@ -107,8 +110,6 @@
     <li class="menu-item"><a href="#flexbox-classes">Flexbox Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">In Codebase, <code>.flexbox</code> is used for positioning and stretching items relative to their container.</p>
 
 <div class="mb-3e p-2e bg-theme-2">
 Codebase has no old-fashioned grid system using flexbox or floats. If you want a real <em>grid</em> system, then use the <a href="3-layout-grid.html">Codebase CSS grid</a>.

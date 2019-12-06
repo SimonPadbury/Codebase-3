@@ -6,14 +6,15 @@ next: "Toggler"
 nextLink: "/5-components-toggler.html"
 ---
 
+<p class="h4 thin">Codebase components are common HTML/CSS patterns. Some have added functionality from a tiny JavaScript that simply adds/removes CSS classes.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#component-mixins-and-class-builders">Component Mixins and Class Builders</a></li>
     <li class="menu-item"><a href="#components-that-use-javascript">Components That Use JavaScript</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase components are common HTML/CSS patterns. Some have added functionality from a tiny JavaScript that simply adds/removes CSS classes.</p>
 
 ## Component Mixins and Class Builders
 
@@ -53,10 +54,14 @@ Activator is used by showhide, dropdowns, menubars (for the collapsed state on s
 
 Only one activator component can be active at any one time – activating one will deactivate all others.
 
-Go to [Activator &rarr;](5-components-activator.html)<br>
-&nbsp; – [Showhide &rarr;](5-components-showhide.html)<br>
-&nbsp; – [Dropdowns &rarr;](5-components-dropdowns.html)<br>
-&nbsp; – [Offcanvas &rarr;](5-components-offcanvas.html)<br>
+Go to [Activator &rarr;](5-components-activator.html)
+
+&nbsp; – [Showhide &rarr;](5-components-showhide.html)
+
+&nbsp; – [Dropdowns &rarr;](5-components-dropdowns.html)
+
+&nbsp; – [Offcanvas &rarr;](5-components-offcanvas.html)
+
 &nbsp; – [Modals &rarr;](5-components-modals.html)
 
 ### Megamenus
@@ -74,4 +79,3 @@ Go to [Megamenu &rarr;](5-components-megamenus.html)
 Trying to display a wide tables on a narrow screens can be problematic. So a Codebase table script looks for every Codebase `.table` class and then double wraps it in two DIVs with related classes. The outer DIV wrapper constrains the overall width to the width of the available space while the inner DIV wrapper enables the table to overflow horizontally but invisibly – and it enables the visitor to horizontally-scroll the table so that they can see all the data.
 
 Go to [Responsive Tables &rarr;](5-components-tables.html#codebase-tables-are-responsive)
-

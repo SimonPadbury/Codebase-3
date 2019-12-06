@@ -6,14 +6,15 @@ next: "Dropdowns"
 nextLink: "5-components-dropdowns.html"
 ---
 
+<p class="h4 thin">Codebase showhides are simple <a href="5-components-activator.html">activator</a> components.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-simplest-showhide">The Simplest Showhide</a></li>
     <li class="menu-item"><a href="#showhide-classes">Showhide Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase showhides are simple <a href="5-components-activator.html">activator</a> components.</p>
 
 ## The Simplest Showhide
 

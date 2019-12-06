@@ -7,7 +7,8 @@ nextLink: "5-components-menus.html"
 ---
 
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#badges">Badges</a></li>
     <li class="menu-item"><a href="#labels">Labels</a></li>
   </ul>

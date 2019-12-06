@@ -6,8 +6,11 @@ next: "Layout"
 nextLink: "3-layout.html"
 ---
 
+<p class="h4 thin">Codebase has a basic styling for various elements, applied to HTML tags directly (without CSS classes). Since v3.0 Codebase is built upon its own set of light-weight modern base styles. It no longer requires Normalize.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#headings"> Headings</a></li>
     <li class="menu-item"><a href="#paragraphs"> Paragraphs</a></li>
     <li class="menu-item"><a href="#simple-text-elements"> Simple Text Elements</a></li>
@@ -19,8 +22,6 @@ nextLink: "3-layout.html"
     <li class="menu-item"><a href="#images-and-other-embedded-media">Images and Other Embedded Media</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase has a basic styling for various elements, applied to HTML tags directly (without CSS classes). Since v3.0 Codebase is built upon its own set of light-weight modern base styles. It no longer requires Normalize.</p>
 
 ## Headings
 

@@ -6,15 +6,16 @@ next: "Modals"
 nextLink: "5-components-modals.html"
 ---
 
+<p class="h4 thin">The Codebase <code>.table</code> class expands tables to 100% width and adds some padding and a border around every table cell.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#table-variations">Table Variations</a></li>
     <li class="menu-item"><a href="#codebase-tables-are-responsive">Codebase Tables Are Responsive</a></li>
     <li class="menu-item"><a href="#table-classes">Table Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">The Codebase <code>.table</code> class expands tables to 100% width and adds some padding and a border around every table cell.</p>
 
 Also, all table cells have their content vertical-aligned to the top, and aligned left for LTR or right for RTL.
 

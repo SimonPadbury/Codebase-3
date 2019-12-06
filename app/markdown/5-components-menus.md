@@ -6,8 +6,11 @@ next: "Megamenus"
 nextLink: "5-components-megamenus.html"
 ---
 
+<p class="h4 thin">Codebase <code>.menu</code> classes set up a simple stacked menu. Adding <code>.flexbox</code> layout classes to menus enables a simple <a href="#menubars">menubar</a> or even a <a href="#responsive-menubars">responsive menubar</a> layout.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-simplest-modal">The Simplest Menu</a></li>
     <li class="menu-item"><a href="#sub-menus">Sub-Menus</a></li>
     <li class="menu-item"><a href="#menubars">Menubars</a></li>
@@ -15,8 +18,6 @@ nextLink: "5-components-megamenus.html"
     <li class="menu-item"><a href="#menu-classes">Menu Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase <code>.menu</code> classes set up a simple stacked menu. Adding <code>.flexbox</code> layout classes to menus enables a simple <a href="#menubars">menubar</a> or even a <a href="#responsive-menubars">responsive menubar</a> layout.</p>
 
 <div class="bg-theme-2 mb-3e p-2e"><strong>Note:</strong> If you are looking for a more complex navigation system, see the Codebase <a href="5-components-megamenus.html">megamenu</a>.</div>
 
@@ -48,16 +49,18 @@ Example:
 
 ## Sub-Menus
 
-`.menu` within `.menu` is given a margin to inset it (left margin for LTR, right margin for RTL).
+You are free to choose how to distinguish child menus from their parents any way you want. E.g. add some padding to inset the child menu, or give it a border or a different background color. (See [utilities](4-utilities.html).)
+
+Example using `.pl-2e` to inset sub-menus:
 
 <ul class="menu mb-3e">
   <li class="menu-item"><a href="#/">Link</a></li>
   <li class="menu-item"><a href="#/">Link</a></li>
   <li class="menu-item"><a href="#/">Link (parent)</a>
-    <ul class="menu">
+    <ul class="menu pl-2e">
       <li class="menu-item"><a href="#/">Link</a></li>
       <li class="menu-item"><a href="#/">Link (parent)</a>
-        <ul class="menu">
+        <ul class="menu pl-2e">
           <li class="menu-item"><a href="#/">Link</a></li>
           <li class="menu-item"><a href="#/">Link</a></li>
         </ul>

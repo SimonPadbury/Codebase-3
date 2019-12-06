@@ -4,8 +4,11 @@ next: "Basics"
 nextLink: "2-basics.html"
 ---
 
+<p class="h4 thin">Codebase is a modern website component library. You can use it as a basis for your website design projects. You can just use Codebase CSS and JS as-is, or you can reconfigure the SCSS variables and include only the parts you need.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#simple-setup">Simple Setup</a></li>
     <li class="menu-item"><a href="#the-codebase-scss-library">The Codebase SCSS Library</a></li>
     <li class="menu-item"><a href="#media-query-breakpoint-widths">Media-Query Breakpoint Widths</a></li>
@@ -15,8 +18,6 @@ nextLink: "2-basics.html"
     <li class="menu-item"><a href="#the-codebase-static-website-generator">The Codebase Static Website Generator</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase is a modern website component library. You can use it as a basis for your website design projects. You can just use Codebase CSS and JS as-is, or you can reconfigure the SCSS variables and include only the parts you need.</p>
 
 ## Simple Setup
 
@@ -244,19 +245,19 @@ Codebase’s default variable file `codebase/scss/01_basics/__default-variables.
 
 ```SCSS
 $color-primary:              #2680eb !default;
-$color-primary-dark:         lighten($color-primary, 5%) !default;
+$color-primary-dark:         darken($color-primary, 5%) !default;
 
 $color-secondary:            #33cdf7 !default;
-$color-secondary-dark:       lighten($color-secondary, 5%) !default;
+$color-secondary-dark:       darken($color-secondary, 5%) !default;
 
 $color-success:              #6bd130 !default;
-$color-success-dark:         lighten($color-success, 5%) !default;
+$color-success-dark:         darken($color-success, 5%) !default;
 
 $color-warning:              #f7c736 !default;
-$color-warning-dark:         lighten($color-warning, 5%) !default;
+$color-warning-dark:         darken($color-warning, 5%) !default;
 
 $color-danger:               #ff4f23 !default;
-$color-danger-dark:          lighten($color-danger, 5%) !default;
+$color-danger-dark:          darken($color-danger, 5%) !default;
 ```
 
 <div class="flexbox mb-1e">

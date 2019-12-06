@@ -6,8 +6,11 @@ next: "Components"
 nextLink: "5-components.html"
 ---
 
+<p class="h4 thin">For consistency throughout Codebase, several decoration variables have been defined. These variables have also been incorporated into a set of simple utility classes that can be used to directly add consistent styling to your HTML. You can modify these variables and classes and/or add to them in accordance with the style guide or visual identity of your project.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#layout-utilities">Layout</a></li>
     <li class="menu-item"><a href="#spacing-utilities">Spacing</a></li>
     <li class="menu-item"><a href="#border-utilities">Borders</a></li>
@@ -18,8 +21,6 @@ nextLink: "5-components.html"
     <li class="menu-item"><a href="#invisibility-utilities">Invisibility</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">For consistency throughout Codebase, several decoration variables have been defined. These variables have also been incorporated into a set of simple utility classes that can be used to directly add consistent styling to your HTML. You can modify these variables and classes and/or add to them in accordance with the style guide or visual identity of your project.</p>
 
 <p class="bg-theme-2 p-2e"><b>Hat tip</b>: The idea for Codebase decoration utilities was inspired by <a href="https://basscss.com" target="_blank">BASCSS</a>, <a href="https://tachyons.io" target="_blank">Tachyons</a> and <a href="https://getbootstrap.com" target="_blank">Bootstrap&nbsp;4</a>’s utilities.</p>
 

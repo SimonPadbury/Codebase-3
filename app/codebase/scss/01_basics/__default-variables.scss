@@ -21,19 +21,19 @@
 // (mixins and classes). You can override these, assigning your own colors.
 
 $color-primary:              #2680eb !default;
-$color-primary-dark:         lighten($color-primary, 5%) !default;
+$color-primary-dark:         darken($color-primary, 5%) !default;
 
 $color-secondary:            #33cdf7 !default;
-$color-secondary-dark:       lighten($color-secondary, 5%) !default;
+$color-secondary-dark:       darken($color-secondary, 5%) !default;
 
 $color-success:              #6bd130 !default;
-$color-success-dark:         lighten($color-success, 5%) !default;
+$color-success-dark:         darken($color-success, 5%) !default;
 
 $color-warning:              #f7c736 !default;
-$color-warning-dark:         lighten($color-warning, 5%) !default;
+$color-warning-dark:         darken($color-warning, 5%) !default;
 
 $color-danger:               #ff4f23 !default;
-$color-danger-dark:          lighten($color-danger, 5%) !default;
+$color-danger-dark:          darken($color-danger, 5%) !default;
 
 // Grayscale
 
@@ -252,7 +252,7 @@ $text-base-code-background:        true !default;
 // Forms
 $form-input-rounded-corners:  true !default;
 $form-outline-thickness:      0.0625rem !default;
-$form-focus-glow: true        !default;
+$form-focus-glow:             true !default;
 $form-focus-glow-style:       0 0 0 0.1875rem rgba(153,153,255,0.75) !default;
 
 // ==================================================================

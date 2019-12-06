@@ -6,8 +6,11 @@ next: "Tables"
 nextLink: "5-components-tables.html"
 ---
 
+<p class="h4 thin">Codebase cards are a flexbox implementation of Nicole Sullivan’s <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/" target="_blank">media objects</a>, with some added features for a wide range of applications.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-simplest-card">The Simplest Card</a></li>
     <li class="menu-item"><a href="#horizontal-or-vertical-cards">Horizontal or Vertical Cards</a></li>
     <li class="menu-item"><a href="#adding-a-header-footer-and-multiple-sections">Adding a Header, Footer, and Multiple Sections</a></li>
@@ -17,8 +20,6 @@ nextLink: "5-components-tables.html"
     <li class="menu-item"><a href="#card-classes">Card Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">Codebase cards are a flexbox implementation of Nicole Sullivan’s <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/" target="_blank">media objects</a>, with some added features for a wide range of applications.</p>
 
 ## The Simplest Card
 

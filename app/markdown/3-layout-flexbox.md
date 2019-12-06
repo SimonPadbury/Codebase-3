@@ -6,8 +6,11 @@ next: "Grid"
 nextLink: "3-layout-grid.html"
 ---
 
+<p class="h4 thin">In Codebase, <code>.flexbox</code> is used for positioning and stretching items relative to their container.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#the-flexbox-wrapper">The Flexbox Wrapper</a></li>
     <li class="menu-item"><a href="#flexbox-stretching">Flexbox Stretching</a></li>
     <li class="menu-item"><a href="#flexbox-spacing">Flexbox Spacing</a></li>
@@ -16,8 +19,6 @@ nextLink: "3-layout-grid.html"
     <li class="menu-item"><a href="#flexbox-classes">Flexbox Classes</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">In Codebase, <code>.flexbox</code> is used for positioning and stretching items relative to their container.</p>
 
 <div class="mb-3e p-2e bg-theme-2">
 Codebase has no old-fashioned grid system using flexbox or floats. If you want a real <em>grid</em> system, then use the <a href="3-layout-grid.html">Codebase CSS grid</a>.

@@ -6,14 +6,15 @@ next: "Flexbox"
 nextLink: "3-layout-flexbox.html"
 ---
 
+<p class="h4 thin">As people may visit your website using various devices with a range of screen sizes (e.g. small phones, large monitors), it can be helpful to set a maximum width for your page content. This can be done using Codebase containers.</p>
+
 <div class="on-page-toc b-thin rounded mb-3e py-1e">
-  <ul class="menu small">
+  <p class="mx-2e my-1e">On this page:</p>
+  <ul class="menu">
     <li class="menu-item"><a href="#various-container-widths">Various Container Widths</a></li>
     <li class="menu-item"><a href="#containers-and-grid-systems">Containers and Grid Systems</a></li>
   </ul>
 </div>
-
-<p class="h4 thin">As people may visit your website using various devices with a range of screen sizes (e.g. small phones, large monitors), it can be helpful to set a maximum width for your page content. This can be done using Codebase containers.</p>
 
 `.container`
 

@@ -14,38 +14,10 @@
     fill: currentColor;
     stroke: currentColor;
 }
-
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   #docs {
     width: 25rem;
     max-width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  .codebase-docs > .docs-menubar {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-  }
-  #mainbody {
-    margin-right: calc(30vw);
-    padding-top: 57px;
-  }
-  .on-page-toc {
-    position: fixed;
-    right: 0;
-    top: 57px;
-    z-index: 1;
-    width: 27.5vw;
-    max-height: calc(100vh - 100px);
-    margin: 1rem 1rem 1.5rem 0;
-    overflow-y: auto;
-  }
-}
-
-@media (max-width: 1023px) {
-  #docs {
     border-left: 0.0625rem solid #ddd;
   }
   .dark #docs {
@@ -55,21 +27,19 @@
 
 @media (min-width: 1024px) {
   #mainbody {
-    margin-right: calc(20vw + 1rem);
-    margin-left: calc(20vw + 1rem);
-  }
-  .on-page-toc {
-    width: 18.5vw;
+    //margin-right: calc(20% + 1rem);
+    margin-right: 1rem;
+    margin-left: 20%;
   }
   #sidebar {
     position: fixed;
     top: 0;
-    max-width: 20vw;
+    width: 18.5vw;
     overflow-y: auto;
   }
   #sidebar > * {
     margin-top: 57px;
-    max-height: calc(100vh - 57px);
+    height: calc(100vh - 57px);
   }
   #docs {
     border-right: 0.0625rem solid #ddd;
@@ -83,6 +53,23 @@
     display: block;
     height: 6rem; /* fixed header height*/
     margin: -6rem 0 0; /* negative fixed header height */
+  }
+}
+
+@media (min-width: 1280px) {
+  #mainbody {
+    margin-right: calc(20% + 1rem);
+    margin-left: calc(20% + 1rem);
+  }
+  .on-page-toc {
+    position: fixed;
+    right: 0;
+    top: 57px;
+    z-index: 1;
+    width: 17.5vw;
+    max-height: calc(100vh - 100px);
+    margin: 1rem 1rem 1.5rem 0;
+    overflow-y: auto;
   }
 }
 
