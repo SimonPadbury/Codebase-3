@@ -21,7 +21,7 @@ nextLink: "2-basics.html"
 
 ## Simple Setup
 
-1. Add [codebase.css](../css/codebase.css) and [codebase.js](../js/codebase.js) to your project.
+1. Add [codebase.css](css/codebase.css) and [codebase.js](js/codebase.js) to your project.
 
 2. Create your first HTML page – e.g. using the starter example below.
 
